@@ -5,7 +5,7 @@ sys.path.append("..")
 from pathlib import Path
 import torch.distributed as dist
 from MagicDec.Engine.utils import setup_seed, cuda_graph_for_sampling_argmax_batch, sampling_argmax_batch
-from MagicDec.Data.data_converter import convert_pg19_dataset
+from MagicDec.Data.data_converter import convert_pg19_dataset, convert_c4_dataset, convert_wiki_dataset, convert_cnn_dataset, convert_longbench_v2_dataset
 from transformers import AutoTokenizer
 from torch.utils.data.dataloader import DataLoader
 from tqdm import tqdm
@@ -35,7 +35,7 @@ parser.add_argument('--benchmark', action='store_true', help='Whether to compile
 args = parser.parse_args()
 assert args.prefix_len < args.max_len
 assert (args.prefix_len - args.window_size) % 128 == 0
-# assert args.max_len % 128 == 0
+assert args.max_len % 128 == 0
 assert (args.max_len + 127) // 128 == args.prefix_len // 128 + 1
 assert (args.draft_budget - 1) % 128 == 0
 
@@ -87,6 +87,14 @@ print(f"eot_1: {eot_1}, eot_2: {eot_2}")
 
 if args.dataset == "pg19":
     dataset = convert_pg19_dataset(tokenizer=tokenizer, seq_len=args.prefix_len)
+elif args.dataset == "c4":
+    dataset = convert_c4_dataset(tokenizer=tokenizer, seq_len=args.prefix_len)
+elif args.dataset == "wiki":
+    dataset = convert_wiki_dataset(tokenizer=tokenizer, seq_len=args.prefix_len)
+elif args.dataset == "cnn":
+    dataset = convert_cnn_dataset(tokenizer=tokenizer, seq_len=args.prefix_len)
+elif args.dataset == "longbenchv2":
+    dataset = convert_longbench_v2_dataset(tokenizer=tokenizer, seq_len=args.prefix_len)
 # elif args.dataset.startswith("ruler"):
 #     dataset = convert_ruler_dataset(tokenizer=tokenizer, task=args.dataset.split(":")[1], model_name=args.model_name, seq_len=args.prefix_len)
 else:
@@ -101,6 +109,10 @@ if benchmark:
     draft_time = 0.0
     target_time = 0.0
     verify_loop = 0.0
+
+# initialize global counters
+total_spec_tokens = 0
+total_acc_tokens  = 0
 
 for step, batch in tqdm(enumerate(dataloader), total=num_eval_steps):
     if step >= num_eval_steps:
@@ -156,6 +168,17 @@ for step, batch in tqdm(enumerate(dataloader), total=num_eval_steps):
         # Compute the number of accepted tokens
         accept_nums = accept_flags_matrix.sum(dim=1, keepdim=True) + 1  # shape: (BATCH_SIZE, 1)
 
+        #############################Added for acceptance rate#####################
+        # how many draft tokens _in total_ got fully accepted this iteration?
+        # accept_flags_matrix.sum() is the total across the batch
+        accepted_this_iter = int(accept_flags_matrix.sum().item())
+
+        # record total speculations: BATCH_SIZE * gamma
+        speculated_this_iter = BATCH_SIZE * args.gamma
+        total_spec_tokens += speculated_this_iter
+        total_acc_tokens  += accepted_this_iter
+        ##########################################################################
+        
         # Check for termination conditions
         condition = (eot_condition & accept_flags_matrix).any(dim=1, keepdim=True)
         if condition.any():
@@ -234,6 +257,30 @@ for step, batch in tqdm(enumerate(dataloader), total=num_eval_steps):
 
 print(f"Final tokens per second :{num_gen_tokens/total_time}")
 
+# print acceptance rate
+if total_spec_tokens > 0:
+    accept_rate = total_acc_tokens / total_spec_tokens
+    print(f"Draft acceptance rate: {accept_rate*100:.2f}% "
+          f"({total_acc_tokens} accepted of {total_spec_tokens} speculated)")
+
+import os, csv
+model_name = args.model_name.split("/", 1)[1]
+CSV_PATH = f"/home/juchanlee/MagicDec/output/{model_name}_{args.dataset}_acceptance_rates.csv"
+# if the file doesn't yet exist, write the header
+if not os.path.exists(CSV_PATH):
+    with open(CSV_PATH, "w", newline="") as f:
+        writer = csv.writer(f)
+        writer.writerow(["prefix_len", "draft_budget", "gamma", "accept_rate"])
+        
+# append to CSV
+with open(CSV_PATH, "a", newline="") as f:
+    writer = csv.writer(f)
+    writer.writerow([
+        args.prefix_len,
+        args.draft_budget,
+        args.gamma,
+        f"{accept_rate:.4f}"
+    ])
 # if rank == 0:
 #     with open("result.txt", "a") as file:
 #         file.write("total time :{:.5f}s, time per iter :{:.5f}s, decoding step: {}, large model step: {}, avg latency: {} \n".format(total_time, total_time / target_steps, num_gen_tokens, target_steps, total_time / num_gen_tokens * BATCH_SIZE))

@@ -7,8 +7,10 @@ from torch.utils.data import TensorDataset
 from tqdm import tqdm
 # from nemo.collections.asr.parts.utils.manifest_utils import read_manifest
 
-def convert_c4_dataset(tokenizer, file_path):
-    dataset = load_dataset("json", data_files=file_path, split="train")
+def convert_c4_dataset(tokenizer, file_path=None):
+    dataset = load_dataset("allenai/c4", "en")
+    # dataset = load_dataset("json", data_files="Data/c4_small.json", split="train")
+    # dataset = load_dataset("json", data_files=file_path, split="train")
     def tokenize_function(examples):
             input_ids = torch.Tensor(examples['input_ids'])
             labels = input_ids.clone()
@@ -31,13 +33,29 @@ def convert_wiki_dataset(tokenizer, seq_len = 256):
     dataset.set_format(type='torch', columns=['input_ids', 'attention_mask'])
     return dataset
 
+# def convert_cnn_dataset_old(tokenizer, seq_len = 256):
+#     breakpoint()
+#     dataset = load_dataset("cnn_dailymail", "1.0.0", split="test[0:2000]")
+#     def tokenize_function(examples):
+#             return tokenizer(examples["article"], return_tensors='pt',max_length=seq_len,padding=True,truncation=True)
+#     dataset = dataset.map(tokenize_function, batched=True, remove_columns=['article'])
+#     dataset.set_format(type='torch', columns=['input_ids', 'attention_mask'])
+#     return dataset
+
 def convert_cnn_dataset(tokenizer, seq_len = 256):
+    breakpoint()
     dataset = load_dataset("cnn_dailymail", "1.0.0", split="test[0:2000]")
-    def tokenize_function(examples):
-            return tokenizer(examples["article"], return_tensors='pt',max_length=seq_len,padding=True,truncation=True)
-    dataset = dataset.map(tokenize_function, batched=True, remove_columns=['article'])
-    dataset.set_format(type='torch', columns=['input_ids', 'attention_mask'])
-    return dataset
+    tokenized_prompts = []
+    for i in tqdm(range(0,50)):
+        prompt = dataset[i]['article']
+        tokenized_prompt = tokenizer.encode(prompt, return_tensors="pt")
+        tokenized_prompt = tokenized_prompt.split(seq_len, dim=-1)[:-1]
+        
+        for i in range(len(tokenized_prompt)):
+            tokenized_prompt[i][:, 0] = tokenizer.bos_token_id if tokenizer.bos_token_id is not None else tokenizer.eos_token_id
+            tokenized_prompts.append(tokenized_prompt[i])
+    data = torch.cat(tokenized_prompts, dim=0)
+    return TensorDataset(data)
 
 def convert_pg19_dataset(tokenizer, seq_len = 4096, end = 20):
     datasetparent = "Data/pg19/"
@@ -53,6 +71,21 @@ def convert_pg19_dataset(tokenizer, seq_len = 4096, end = 20):
             tokenized_prompt[i][:, 0] = tokenizer.bos_token_id if tokenizer.bos_token_id is not None else tokenizer.eos_token_id
             tokenized_prompts.append(tokenized_prompt[i])
     data = torch.cat(tokenized_prompts, dim=0).repeat(end,1)
+    return TensorDataset(data)
+
+def convert_longbench_v2_dataset(tokenizer, seq_len = 4096):
+    dataset = load_dataset('THUDM/LongBench-v2', split='train')
+    tokenized_prompts = []
+    breakpoint()
+    for i in tqdm(range(0,50)):
+        prompt = dataset[i]['text']
+        tokenized_prompt = tokenizer.encode(prompt, return_tensors="pt")[:,8000:]
+        tokenized_prompt = tokenized_prompt.split(seq_len, dim=-1)[:-1]
+        
+        for i in range(len(tokenized_prompt)):
+            tokenized_prompt[i][:, 0] = tokenizer.bos_token_id if tokenizer.bos_token_id is not None else tokenizer.eos_token_id
+            tokenized_prompts.append(tokenized_prompt[i])
+    data = torch.cat(tokenized_prompts, dim=0)
     return TensorDataset(data)
 
 # def convert_ruler_dataset(tokenizer, task, model_name, seq_len = 4096, subset = "validation"):

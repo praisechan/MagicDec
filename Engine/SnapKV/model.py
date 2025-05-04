@@ -44,6 +44,7 @@ class ModelArgs:
 
     @classmethod
     def from_name(cls, name: str):
+        print(name)
         if name in transformer_configs:
             return cls(**transformer_configs[name])
         # fuzzy search
