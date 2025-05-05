@@ -5,6 +5,8 @@ import importlib
 import yaml
 from torch.utils.data import TensorDataset
 from tqdm import tqdm
+import json
+from MagicDec.Data.preprocess_lbv2 import preprocess_longbenchv2
 # from nemo.collections.asr.parts.utils.manifest_utils import read_manifest
 
 def convert_c4_dataset(tokenizer, file_path=None):
@@ -74,17 +76,26 @@ def convert_pg19_dataset(tokenizer, seq_len = 4096, end = 20):
     return TensorDataset(data)
 
 def convert_longbench_v2_dataset(tokenizer, seq_len = 4096):
-    dataset = load_dataset('THUDM/LongBench-v2', split='train')
     tokenized_prompts = []
-    breakpoint()
-    for i in tqdm(range(0,50)):
-        prompt = dataset[i]['text']
-        tokenized_prompt = tokenizer.encode(prompt, return_tensors="pt")[:,8000:]
-        tokenized_prompt = tokenized_prompt.split(seq_len, dim=-1)[:-1]
-        
-        for i in range(len(tokenized_prompt)):
-            tokenized_prompt[i][:, 0] = tokenizer.bos_token_id if tokenizer.bos_token_id is not None else tokenizer.eos_token_id
-            tokenized_prompts.append(tokenized_prompt[i])
+
+    # split_list=["Single-Document QA","Multi-Document QA","Long In-context Learning"]
+    # split_tag=["SQA","MQA","LongICL"]
+    split_list=["Long In-context Learning"]
+    split_tag=["LongICL"]
+    for split, tag in zip(split_list, split_tag):
+        file_path = f"Data/longbenchv2/{tag}_over_64K.jsonl"
+        if not os.path.exists(file_path):
+            preprocess_longbenchv2(split, tag)
+        dataset = [json.loads(line) for line in open(file_path).readlines()]
+        for i in tqdm(range(0,50)):
+            prompt = dataset[i]['instruction']
+            tokenized_prompt = tokenizer.encode(prompt, return_tensors="pt")
+            tokenized_prompt = tokenized_prompt.split(seq_len, dim=-1)[:-1]
+            
+            for i in range(len(tokenized_prompt)):
+                tokenized_prompt[i][:, 0] = tokenizer.bos_token_id if tokenizer.bos_token_id is not None else tokenizer.eos_token_id
+                tokenized_prompts.append(tokenized_prompt[i])
+
     data = torch.cat(tokenized_prompts, dim=0)
     return TensorDataset(data)
 
