@@ -1,12 +1,12 @@
 import torch
 from datasets import load_dataset
-import os
+import os, math
 import importlib
 import yaml
 from torch.utils.data import TensorDataset
 from tqdm import tqdm
 import json
-from MagicDec.Data.preprocess_lbv2 import preprocess_longbenchv2
+from MagicDec.Data.preprocess_longbench import preprocess_longbenchv2, preprocess_longbenchv1
 # from nemo.collections.asr.parts.utils.manifest_utils import read_manifest
 
 def convert_c4_dataset(tokenizer, file_path=None):
@@ -74,6 +74,68 @@ def convert_pg19_dataset(tokenizer, seq_len = 4096, end = 20):
             tokenized_prompts.append(tokenized_prompt[i])
     data = torch.cat(tokenized_prompts, dim=0).repeat(end,1)
     return TensorDataset(data)
+
+def convert_longbench_v1_dataset(tokenizer, task=None, is_under_32k=False):
+    prompts = []
+    if task is None:
+        split_list = ["gov_report", "qmsum", "multi_news", "lcc", "repobench-p"]
+        split_tag = ["gov_report", "qmsum", "multi_news", "lcc", "repobench-p"]
+    else:
+        split_list = [task]
+        split_tag = [task]
+
+    for split, tag in zip(split_list, split_tag):
+        if is_under_32k:
+            file_path = f"Data/longbenchv1/{tag}_under_32K.jsonl"
+        else:
+            file_path = f"Data/longbenchv1/{tag}.jsonl"
+        if not os.path.exists(file_path):
+            preprocess_longbenchv1(split, tag)
+        dataset = [json.loads(line) for line in open(file_path).readlines()]
+
+        for i in tqdm(range(len(dataset))):
+            # prompts.append(dataset[i]['instruction'])
+            # 1) tokenize *without* padding
+            tokenized_prompt = tokenizer.encode(dataset[i]['instruction'], return_tensors="pt")
+            # calculate pad length to make prompt length = 128 x k + 32
+            # this satisfy assert (args.prefix_len - args.window_size) % 128 == 0 in selfspec_benchmark.py
+            L = tokenized_prompt.shape[1]
+            k = max((L - 32 + 127) // 128, 0)
+            target_len = 128 * k + 32
+            pad_len = target_len - L
+            # 2) left-pad
+            pad_id = tokenizer.pad_token_id
+            # padded_prompt = [pad_id] * pad_len + tokenized_prompt
+            padded_prompt = torch.nn.functional.pad(tokenized_prompt, (pad_len, 0), value=pad_id)
+            # 3) convert to tensors
+            prompts.append(padded_prompt)
+
+    return prompts
+
+    # breakpoint()
+    # # 1) first pass: encode *without* padding to get lengths
+    # tok_kwargs = dict(truncation=True, add_special_tokens=True)
+    # first = tokenizer(prompts, **tok_kwargs)
+    # lengths = [len(ids) for ids in first["input_ids"]]
+    # max_len = max(lengths)
+
+    # # 2) compute target = smallest (128 * k + 32) ≥ max_len
+    # if max_len <= 32:
+    #     target_len = 32
+    # else:
+    #     target_len = math.ceil((max_len - 32) / 128) * 128 + 32
+
+    # # 3) second pass: pad *on the left* up to target_len
+    # tokenizer.padding_side = "left"
+    # enc = tokenizer(
+    #     prompts,
+    #     padding="max_length",
+    #     max_length=target_len,
+    #     truncation=True,
+    #     return_tensors="pt",
+    # )
+
+    # return TensorDataset(enc["input_ids"])
 
 def convert_longbench_v2_dataset(tokenizer, seq_len = 4096):
     tokenized_prompts = []

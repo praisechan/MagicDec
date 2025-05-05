@@ -5,7 +5,7 @@ sys.path.append("..")
 from pathlib import Path
 import torch.distributed as dist
 from MagicDec.Engine.utils import setup_seed, cuda_graph_for_sampling_argmax_batch, sampling_argmax_batch
-from MagicDec.Data.data_converter import convert_pg19_dataset, convert_c4_dataset, convert_wiki_dataset, convert_cnn_dataset, convert_longbench_v2_dataset, convert_longbench_v2_sum_dataset
+from MagicDec.Data.data_converter import convert_pg19_dataset, convert_c4_dataset, convert_wiki_dataset, convert_cnn_dataset, convert_longbench_v2_dataset, convert_longbench_v2_sum_dataset, convert_longbench_v1_dataset
 from transformers import AutoTokenizer
 from torch.utils.data.dataloader import DataLoader
 from tqdm import tqdm
@@ -23,20 +23,21 @@ parser.add_argument('--compile', action='store_true', help='Whether to compile t
 parser.add_argument('--gamma', type=int, default=7, help='start')
 
 parser.add_argument('--B', type=int, default=45, help='Batch size.')
-parser.add_argument('--prefix_len', type=int, default=100000, help='Prefix length')
-parser.add_argument('--max_len', type=int, default=100096, help='Generate length')
+parser.add_argument('--prefix_len', type=int, default=32800, help='Prefix length')
+parser.add_argument('--max_len', type=int, default=32896, help='Generate length')
 parser.add_argument('--window_size', type=int, default=32, help='Generate length')
 
 parser.add_argument('--seed', type=int, default=123, help='Random seed.')
 
 parser.add_argument('--printoutput', action='store_true', help='Whether to compile the model.')
 parser.add_argument('--benchmark', action='store_true', help='Whether to compile the model.')
+parser.add_argument('--task', type=str, default=None, help='for longbenchv1.')
 
 args = parser.parse_args()
 assert args.prefix_len < args.max_len
 assert (args.prefix_len - args.window_size) % 128 == 0
 assert args.max_len % 128 == 0
-assert (args.max_len + 127) // 128 == args.prefix_len // 128 + 1
+# assert (args.max_len + 127) // 128 == args.prefix_len // 128 + 1
 assert (args.draft_budget - 1) % 128 == 0
 
 # Init model parallelism
@@ -59,6 +60,10 @@ setup_seed(args.seed)
 print(f"Using device={DEVICE}")
 
 MAX_LEN_TARGET = args.max_len
+if args.dataset == "longbenchv1": 
+    MAX_LEN_TARGET = 65664
+if args.dataset == "longbenchv1-32k":
+    MAX_LEN_TARGET = 49125
 DTYPE = torch.bfloat16
 BATCH_SIZE = args.B
 benchmark = args.benchmark
@@ -93,6 +98,10 @@ elif args.dataset == "wiki":
     dataset = convert_wiki_dataset(tokenizer=tokenizer, seq_len=args.prefix_len)
 elif args.dataset == "cnn":
     dataset = convert_cnn_dataset(tokenizer=tokenizer, seq_len=args.prefix_len)
+elif args.dataset == "longbenchv1":
+    dataset = convert_longbench_v1_dataset(tokenizer=tokenizer, task=args.task, is_under_32k=False)
+elif args.dataset == "longbenchv1-32k":
+    dataset = convert_longbench_v1_dataset(tokenizer=tokenizer, task=args.task, is_under_32k=True)
 elif args.dataset == "longbenchv2":
     dataset = convert_longbench_v2_dataset(tokenizer=tokenizer, seq_len=args.prefix_len)
 elif args.dataset == "longbenchv2_sum":
@@ -101,7 +110,9 @@ elif args.dataset == "longbenchv2_sum":
 #     dataset = convert_ruler_dataset(tokenizer=tokenizer, task=args.dataset.split(":")[1], model_name=args.model_name, seq_len=args.prefix_len)
 else:
     raise ValueError(f"Unknown dataset {args.dataset}")
+
 dataloader = DataLoader(dataset, batch_size=BATCH_SIZE, shuffle=False, drop_last=True)
+
 num_eval_steps = min(10, len(dataloader))
 
 total_time = 0.0
@@ -116,9 +127,10 @@ if benchmark:
 total_spec_tokens = 0
 total_acc_tokens  = 0
 
-for step, batch in tqdm(enumerate(dataloader), total=num_eval_steps):
-    if step >= num_eval_steps:
-        break
+for step, batch in tqdm(enumerate(dataloader)):
+# for step, batch in tqdm(enumerate(dataloader), total=num_eval_steps):
+#     if step >= num_eval_steps:
+#         break
     input_ids = batch[0].to(DEVICE)
     terminal = False
     tokens_buffer= torch.zeros((BATCH_SIZE, args.gamma+1), device=DEVICE).long()
@@ -126,7 +138,7 @@ for step, batch in tqdm(enumerate(dataloader), total=num_eval_steps):
     output[:, :input_ids.shape[1]] = input_ids
     num_nodes = torch.zeros(BATCH_SIZE,device=DEVICE).long()
     num_nodes += input_ids.shape[1]
-
+    input_len = num_nodes.max()
     tokens_buffer[:, :1] = engine.encode(input_ids=input_ids)[:,-1:]
 
     torch.cuda.synchronize()
@@ -156,7 +168,7 @@ for step, batch in tqdm(enumerate(dataloader), total=num_eval_steps):
 
         target_steps+=1
 
-    # Verification
+        # Verification
         # Vectorized Verify Loop
         draft_tokens = tokens_buffer[:, 1:args.gamma+1]
         flag_accept_matrix = (target_tokens[:, :args.gamma] == draft_tokens)  # shape: (BATCH_SIZE, gamma)
@@ -212,11 +224,18 @@ for step, batch in tqdm(enumerate(dataloader), total=num_eval_steps):
             terminal = True
         num_nodes += accept_nums.flatten()
 
-        # Check Number of Nodes + Bonus Token <= max_target_token
-        # if num_nodes.max() + 1 >= args.prefix_len + gen_len:
-        # if num_nodes.max() + 1 + args.gamma > MAX_LEN_TARGET:
-        if num_nodes.max() - args.prefix_len >= 80:
-            terminal = True
+        # Check for termination conditions with accepted token number
+        if args.dataset == "longbenchv1" or args.dataset == "longbenchv1-32k":
+            #longbenchv1 does not have fixed prefix len
+            if num_nodes.max() - input_len >= 80:
+                terminal = True
+        else:
+            # Check Number of Nodes + Bonus Token <= max_target_token
+            # if num_nodes.max() + 1 >= args.prefix_len + gen_len:
+            # if num_nodes.max() + 1 + args.gamma > MAX_LEN_TARGET:
+            if num_nodes.max() - args.prefix_len >= 80:
+                terminal = True
+
         # Put Bonus tokens to the tokens buffer, and prepare the variables for next itr
         if not terminal:
             tokens_buffer[:, :1] = bonus_tokens
@@ -272,7 +291,7 @@ CSV_PATH = f"/home/juchanlee/MagicDec/output/{model_name}_{args.dataset}_accepta
 if not os.path.exists(CSV_PATH):
     with open(CSV_PATH, "w", newline="") as f:
         writer = csv.writer(f)
-        writer.writerow(["prefix_len", "draft_budget", "gamma", "accept_rate"])
+        writer.writerow(["prefix_len", "draft_budget", "gamma", "task", "accept_rate"])
         
 # append to CSV
 with open(CSV_PATH, "a", newline="") as f:
@@ -281,6 +300,7 @@ with open(CSV_PATH, "a", newline="") as f:
         args.prefix_len,
         args.draft_budget,
         args.gamma,
+        args.task,
         f"{accept_rate:.4f}"
     ])
 # if rank == 0:
