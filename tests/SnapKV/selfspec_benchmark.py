@@ -5,7 +5,7 @@ sys.path.append("..")
 from pathlib import Path
 import torch.distributed as dist
 from MagicDec.Engine.utils import setup_seed, cuda_graph_for_sampling_argmax_batch, sampling_argmax_batch
-from MagicDec.Data.data_converter import convert_pg19_dataset, convert_c4_dataset, convert_wiki_dataset, convert_cnn_dataset, convert_longbench_v2_dataset
+from MagicDec.Data.data_converter import convert_pg19_dataset, convert_c4_dataset, convert_wiki_dataset, convert_cnn_dataset, convert_longbench_v2_dataset, convert_longbench_v2_sum_dataset
 from transformers import AutoTokenizer
 from torch.utils.data.dataloader import DataLoader
 from tqdm import tqdm
@@ -95,6 +95,8 @@ elif args.dataset == "cnn":
     dataset = convert_cnn_dataset(tokenizer=tokenizer, seq_len=args.prefix_len)
 elif args.dataset == "longbenchv2":
     dataset = convert_longbench_v2_dataset(tokenizer=tokenizer, seq_len=args.prefix_len)
+elif args.dataset == "longbenchv2_sum":
+    dataset = convert_longbench_v2_sum_dataset(tokenizer=tokenizer, seq_len=args.prefix_len)
 # elif args.dataset.startswith("ruler"):
 #     dataset = convert_ruler_dataset(tokenizer=tokenizer, task=args.dataset.split(":")[1], model_name=args.model_name, seq_len=args.prefix_len)
 else:

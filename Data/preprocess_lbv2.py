@@ -13,6 +13,11 @@ from tqdm import tqdm
 from transformers import AutoTokenizer, AutoModelForCausalLM
 from datasets import Dataset, load_dataset
 
+prompt_lbv2_sum ="""
+Please read the following text and write a one-page summary.
+{context}
+"""
+
 prompt_lbv2_nocot="""
 Please read the following text and answer the question below.
 
@@ -74,11 +79,12 @@ def construct_split(filtered_data,tag="MQA"):
         question=item['question']
         _id=item['_id']
         difficulty=item['difficulty']
-        instruction_cot=prompt_lbv2_cot.format(context=context, question=question,choice_A=item['choice_A'],choice_B=item['choice_B'],choice_C=item['choice_C'],choice_D=item['choice_D'])
+        instruction_cot=prompt_lbv2_sum.format(context=context)
+        # instruction_cot=prompt_lbv2_cot.format(context=context, question=question,choice_A=item['choice_A'],choice_B=item['choice_B'],choice_C=item['choice_C'],choice_D=item['choice_D'])
         new_cot_data_list.append({"id": id, "instruction": instruction_cot, "output": item['answer'], "id":_id,"difficulty":difficulty,"question":item['question'],"system": "You are a helpful assistant."})
 
     print(f"size of new_cot_data_list: {len(new_cot_data_list)}")
-    with jsonlines.open(f"longbenchv2/{tag}_over_64K.jsonl", 'w') as writer:
+    with jsonlines.open(f"longbenchv2/{tag}_over_64K_sum.jsonl", 'w') as writer:
         writer.write_all(new_cot_data_list)
 
 def load_jsonl_file(path_to_file: Union[str, Path]):

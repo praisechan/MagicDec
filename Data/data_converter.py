@@ -99,6 +99,30 @@ def convert_longbench_v2_dataset(tokenizer, seq_len = 4096):
     data = torch.cat(tokenized_prompts, dim=0)
     return TensorDataset(data)
 
+def convert_longbench_v2_sum_dataset(tokenizer, seq_len = 4096):
+    tokenized_prompts = []
+
+    # split_list=["Single-Document QA","Multi-Document QA","Long In-context Learning"]
+    # split_tag=["SQA","MQA","LongICL"]
+    split_list=["Long In-context Learning"]
+    split_tag=["LongICL"]
+    for split, tag in zip(split_list, split_tag):
+        file_path = f"Data/longbenchv2/{tag}_over_64K_sum.jsonl"
+        if not os.path.exists(file_path):
+            preprocess_longbenchv2(split, tag)
+        dataset = [json.loads(line) for line in open(file_path).readlines()]
+        for i in tqdm(range(0,50)):
+            prompt = dataset[i]['instruction']
+            tokenized_prompt = tokenizer.encode(prompt, return_tensors="pt")
+            tokenized_prompt = tokenized_prompt.split(seq_len, dim=-1)[:-1]
+            
+            for i in range(len(tokenized_prompt)):
+                tokenized_prompt[i][:, 0] = tokenizer.bos_token_id if tokenizer.bos_token_id is not None else tokenizer.eos_token_id
+                tokenized_prompts.append(tokenized_prompt[i])
+
+    data = torch.cat(tokenized_prompts, dim=0)
+    return TensorDataset(data)
+
 # def convert_ruler_dataset(tokenizer, task, model_name, seq_len = 4096, subset = "validation"):
 #     curr_folder = os.path.dirname(os.path.abspath(__file__))
 #     try:
