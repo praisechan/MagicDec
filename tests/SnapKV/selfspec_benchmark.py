@@ -227,15 +227,17 @@ for step, batch in tqdm(enumerate(dataloader)):
         num_nodes += accept_nums.flatten()
 
         # Check for termination conditions with accepted token number
+        num_gen_token_max = 16
+        # num_gen_token_max = 80
         if args.dataset == "longbenchv1" or args.dataset == "longbenchv1-32k":
             #longbenchv1 does not have fixed prefix len
-            if num_nodes.max() - input_len >= 80:
+            if num_nodes.max() - input_len >= num_gen_token_max:
                 terminal = True
         else:
             # Check Number of Nodes + Bonus Token <= max_target_token
             # if num_nodes.max() + 1 >= args.prefix_len + gen_len:
             # if num_nodes.max() + 1 + args.gamma > MAX_LEN_TARGET:
-            if num_nodes.max() - args.prefix_len >= 80:
+            if num_nodes.max() - args.prefix_len >= num_gen_token_max:
                 terminal = True
 
         # Put Bonus tokens to the tokens buffer, and prepare the variables for next itr
