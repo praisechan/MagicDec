@@ -90,52 +90,36 @@ def convert_longbench_v1_dataset(tokenizer, task=None, is_under_32k=False):
         else:
             file_path = f"Data/longbenchv1/{tag}.jsonl"
         if not os.path.exists(file_path):
-            preprocess_longbenchv1(split, tag)
+            preprocess_longbenchv1(split, tag, is_under_32k)
         dataset = [json.loads(line) for line in open(file_path).readlines()]
 
         for i in tqdm(range(len(dataset))):
-            # prompts.append(dataset[i]['instruction'])
-            # 1) tokenize *without* padding
+            # #1. padding
+            # # 1) tokenize *without* padding
+            # tokenized_prompt = tokenizer.encode(dataset[i]['instruction'], return_tensors="pt")
+            # # calculate pad length to make prompt length = 128 x k + 32
+            # # this satisfy assert (args.prefix_len - args.window_size) % 128 == 0 in selfspec_benchmark.py
+            # L = tokenized_prompt.shape[1]
+            # k = max((L - 32 + 127) // 128, 0)
+            # target_len = 128 * k + 32
+            # pad_len = target_len - L
+
+            # # 2) left-pad
+            # pad_id = tokenizer.pad_token_id
+            # padded_prompt = torch.nn.functional.pad(tokenized_prompt, (pad_len, 0), value=pad_id)
+
+            # # 3) convert to tensors
+            # prompts.append(padded_prompt)
+
+            #2. truncating
             tokenized_prompt = tokenizer.encode(dataset[i]['instruction'], return_tensors="pt")
-            # calculate pad length to make prompt length = 128 x k + 32
-            # this satisfy assert (args.prefix_len - args.window_size) % 128 == 0 in selfspec_benchmark.py
             L = tokenized_prompt.shape[1]
             k = max((L - 32 + 127) // 128, 0)
-            target_len = 128 * k + 32
-            pad_len = target_len - L
-            # 2) left-pad
-            pad_id = tokenizer.pad_token_id
-            # padded_prompt = [pad_id] * pad_len + tokenized_prompt
-            padded_prompt = torch.nn.functional.pad(tokenized_prompt, (pad_len, 0), value=pad_id)
-            # 3) convert to tensors
-            prompts.append(padded_prompt)
+            target_len = 128 * (k-1) + 32
+            prompts.append(tokenized_prompt[:,:target_len])
+
 
     return prompts
-
-    # breakpoint()
-    # # 1) first pass: encode *without* padding to get lengths
-    # tok_kwargs = dict(truncation=True, add_special_tokens=True)
-    # first = tokenizer(prompts, **tok_kwargs)
-    # lengths = [len(ids) for ids in first["input_ids"]]
-    # max_len = max(lengths)
-
-    # # 2) compute target = smallest (128 * k + 32) ≥ max_len
-    # if max_len <= 32:
-    #     target_len = 32
-    # else:
-    #     target_len = math.ceil((max_len - 32) / 128) * 128 + 32
-
-    # # 3) second pass: pad *on the left* up to target_len
-    # tokenizer.padding_side = "left"
-    # enc = tokenizer(
-    #     prompts,
-    #     padding="max_length",
-    #     max_length=target_len,
-    #     truncation=True,
-    #     return_tensors="pt",
-    # )
-
-    # return TensorDataset(enc["input_ids"])
 
 def convert_longbench_v2_dataset(tokenizer, seq_len = 4096):
     tokenized_prompts = []

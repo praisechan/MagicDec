@@ -117,6 +117,35 @@ dataset2prompt = {
     "gov_report": (
         "<s>system\nYou are a helpful assistant</s>\n"
         "<s>user\nYou are given a report by a government agency. Write a one-page summary of the report.\n\n"
+        "Report:\n{context}\n\n"
+    ),
+    "qmsum": (
+        "<s>system\nYou are a helpful assistant</s>\n"
+        "<s>user\nYou are given a meeting transcript and a query containing a question or instruction. "
+        "Answer the query in one or more sentences.\n\nQuery: {input}</s>\nTranscript:\n{context}\n\n"
+    ),
+    "multi_news": (
+        "<s>system\nYou are a helpful assistant</s>\n"
+        "<s>user\nYou are given several news passages. Write a one-page summary of all news. \n\n"
+        "News:\n{context}\n\nNow, write a one-page summary of all the news.</s>\n"
+        "<s>assistant\nSummary:"
+    ),
+    "lcc": (
+        "<s>system\nYou are a helpful assistant</s>\n"
+        "<s>user\nPlease complete the code given below. \n{context}Now, complete the code given.</s>\n"
+        "<s>assistant\n"
+    ),
+    "repobench-p": (
+        "<s>system\nYou are a helpful assistant</s>\n"
+        "<s>user\nPlease complete the code given below. \n{context}Now, complete the code given.</s>\n"
+        "<s>assistant\n"
+    ),
+}
+
+dataset2prompt_old = {
+    "gov_report": (
+        "<s>system\nYou are a helpful assistant</s>\n"
+        "<s>user\nYou are given a report by a government agency. Write a one-page summary of the report.\n\n"
         "Report:\n{context}\n\nNow, write a one-page summary of the report.</s>\n"
         "<s>assistant\nSummary:"
     ),
@@ -146,7 +175,7 @@ dataset2prompt = {
     ),
 }
 
-def write_jsonl_file_longbenchv1(filtered_data, tag):
+def write_jsonl_file_longbenchv1(filtered_data, tag, is_under_32k):
     new_data_list = []
 
     prompt_format = dataset2prompt[tag]
@@ -158,18 +187,25 @@ def write_jsonl_file_longbenchv1(filtered_data, tag):
 
     print(f"size of new_data_list: {len(new_data_list)}")
 
-    with jsonlines.open(f"{BASE_DIR}/longbenchv1/{tag}.jsonl", 'w') as writer:
-        writer.write_all(new_data_list)
+    if is_under_32k:
+        with jsonlines.open(f"{BASE_DIR}/longbenchv1/{tag}_under_32K.jsonl", 'w') as writer:
+            writer.write_all(new_data_list)
+    else:
+        with jsonlines.open(f"{BASE_DIR}/longbenchv1/{tag}.jsonl", 'w') as writer:
+            writer.write_all(new_data_list)
 
-def preprocess_longbenchv1(split, tag):
+def preprocess_longbenchv1(split, tag, is_under_32k=False):
     dataset = load_dataset('THUDM/LongBench',split, split='test')
     filter_data=[]
     print(f"filtering {tag} data\n")
     for data in tqdm(dataset):
-        # if data['dataset']==split and len(data['context'].split())<32*1024: #store short context(<32k) only
-        if data['dataset']==split:
-            filter_data.append(data)
-    write_jsonl_file_longbenchv1(filter_data,tag=tag)
+        if is_under_32k:
+            if data['dataset']==split and len(data['context'].split())<32*1024: #store short context(<32k) only
+                filter_data.append(data)
+        else:
+            if data['dataset']==split:
+                filter_data.append(data)
+    write_jsonl_file_longbenchv1(filter_data,tag,is_under_32k)
 
 if __name__ == "__main__":
     # longbenchv1
@@ -177,7 +213,7 @@ if __name__ == "__main__":
     split_tag = ["gov_report", "qmsum", "multi_news", "lcc", "repobench-p"]
 
     for (split,tag) in zip(split_list,split_tag):
-        preprocess_longbenchv1(split, tag)
+        preprocess_longbenchv1(split, tag,False)
 
     # # longbenchv2
     # split_list=["Single-Document QA","Multi-Document QA","Long In-context Learning"]

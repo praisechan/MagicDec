@@ -429,6 +429,8 @@ class Attention(nn.Module):
         attn_cache = rearrange(attn_cache, 'b (h r) s -> b h r s', h = self.n_local_heads)
         attn_cache = attn_cache.sum(dim=2)
 
+        if topk > attn_cache.shape[-1]:
+            topk = attn_cache.shape[-1]
         indices = attn_cache.topk(topk, dim=-1).indices
         indices = indices.unsqueeze(-1).expand(-1, -1, -1, self.head_dim)
         k_past_compress = key_states[:, :, :-self.window_size, :].gather(dim = 2, index = indices)
