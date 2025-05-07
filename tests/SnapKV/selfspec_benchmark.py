@@ -145,6 +145,7 @@ for step, batch in tqdm(enumerate(dataloader)):
 
     torch.cuda.synchronize()
     start = time.perf_counter()
+    breakpoint()
     while terminal == False:
 
         # Draft speculation

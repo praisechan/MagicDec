@@ -1,0 +1,3 @@
+[submodule "Engine/Quest"]
+	path = Engine/Quest
+	url = https://github.com/praisechan/Quest.git

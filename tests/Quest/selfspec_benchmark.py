@@ -27,6 +27,7 @@ parser.add_argument('--B', type=int, default=45, help='Batch size.')
 parser.add_argument('--prefix_len', type=int, default=32800, help='Prefix length')
 parser.add_argument('--max_len', type=int, default=32896, help='Generate length')
 parser.add_argument('--window_size', type=int, default=32, help='Generate length')
+parser.add_argument('--chunk_size', type=int, default=16, help='Chunk size')
 
 parser.add_argument('--seed', type=int, default=123, help='Random seed.')
 
@@ -76,6 +77,7 @@ draft_dec_len = 1
 # Load target model
 engine = LMBackend(dtype=DTYPE, device=DEVICE, dec_len=target_dec_len, draft_dec_len=draft_dec_len)
 engine.load_model(checkpoint_path, use_tp=use_tp, rank_group = args.rank_group, group=global_group)
+engine.load_draft_model(args.model_name, args.draft_budget, args.chunk_size, BATCH_SIZE, MAX_LEN_TARGET)
 vocab_size = engine.model.config.vocab_size
 if args.compile:
     engine.compile()
@@ -142,9 +144,6 @@ for step, batch in tqdm(enumerate(dataloader)):
     input_len = num_nodes.max()
     tokens_buffer[:, :1] = engine.encode(input_ids=input_ids)[:,-1:]
     
-    breakpoint()
-    past_key_values=None
-
     torch.cuda.synchronize()
     start = time.perf_counter()
     while terminal == False:
@@ -154,9 +153,9 @@ for step, batch in tqdm(enumerate(dataloader)):
             torch.cuda.synchronize()
             t1 = time.time()
 
-        for i in range(args.gamma):
+        # for i in range(args.gamma):
             # tokens_buffer[:,i+1:i+2] = engine.speculate(tokens_buffer[:, i].view(-1,1))
-            tokens_buffer[:,i+1:i+2], past_key_values = engine.speculate(tokens_buffer[:, i].view(-1,1), past_key_values)
+        tokens_buffer[:,1:1+args.gamma] = engine.speculate(tokens_buffer[:, 0].view(-1,1), BATCH_SIZE, args.gamma)
 
         if benchmark:
             torch.cuda.synchronize()
@@ -230,21 +229,28 @@ for step, batch in tqdm(enumerate(dataloader)):
         num_nodes += accept_nums.flatten()
 
         # Check for termination conditions with accepted token number
+        # num_gen_token_max = 16
+        num_gen_token_max = 80
         if args.dataset == "longbenchv1" or args.dataset == "longbenchv1-32k":
             #longbenchv1 does not have fixed prefix len
-            if num_nodes.max() - input_len >= 80:
+            if num_nodes.max() - input_len >= num_gen_token_max:
                 terminal = True
         else:
             # Check Number of Nodes + Bonus Token <= max_target_token
             # if num_nodes.max() + 1 >= args.prefix_len + gen_len:
             # if num_nodes.max() + 1 + args.gamma > MAX_LEN_TARGET:
-            if num_nodes.max() - args.prefix_len >= 80:
+            if num_nodes.max() - args.prefix_len >= num_gen_token_max:
                 terminal = True
-
         # Put Bonus tokens to the tokens buffer, and prepare the variables for next itr
         if not terminal:
             tokens_buffer[:, :1] = bonus_tokens
-        
+
+        if not terminal:
+            # get accepted token and re-decode to set draft cache (Quest)
+            accepted_tokens = tokens_buffer[mask_buffer].view(1,-1)
+            engine.draft_kv_update(accepted_tokens)
+
+
         if not terminal:
             if benchmark:
                 torch.cuda.synchronize()
