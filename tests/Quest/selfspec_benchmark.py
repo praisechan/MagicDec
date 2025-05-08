@@ -287,8 +287,6 @@ for step, batch in tqdm(enumerate(dataloader)):
     if use_tp:
         dist.barrier()
 
-print(f"Final tokens per second :{num_gen_tokens/total_time}")
-
 # print acceptance rate
 if total_spec_tokens > 0:
     accept_rate_total = total_acc_tokens / total_spec_tokens
@@ -336,6 +334,7 @@ if total_spec_tokens > 0:
     accept_rate_per_token = find_alpha(args.gamma, accept_rate_total)
     print(f"Found alpha = {accept_rate_per_token:.8f}")
 
+
 import os, csv
 model_name = args.model_name.split("/", 1)[1]
 CSV_PATH = f"/home/juchanlee/MagicDec/output/{model_name}_{args.dataset}_acceptance_rates.csv"
@@ -343,7 +342,7 @@ CSV_PATH = f"/home/juchanlee/MagicDec/output/{model_name}_{args.dataset}_accepta
 if not os.path.exists(CSV_PATH):
     with open(CSV_PATH, "w", newline="") as f:
         writer = csv.writer(f)
-        writer.writerow(["prefix_len", "draft_budget", "gamma", "task", "accept_rate"])
+        writer.writerow(["prefix_len", "draft_budget", "gamma", "task", "accept_rate_total", "accept_rate_per_token"])
         
 # append to CSV
 with open(CSV_PATH, "a", newline="") as f:
@@ -353,7 +352,8 @@ with open(CSV_PATH, "a", newline="") as f:
         args.draft_budget,
         args.gamma,
         args.task,
-        f"{accept_rate:.4f}"
+        f"{accept_rate_total:.4f}"
+        f"{accept_rate_per_token:.4f}"
     ])
 # if rank == 0:
 #     with open("result.txt", "a") as file:

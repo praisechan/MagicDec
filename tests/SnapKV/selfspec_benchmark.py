@@ -341,7 +341,7 @@ CSV_PATH = f"/home/juchanlee/MagicDec/output/{model_name}_{args.dataset}_accepta
 if not os.path.exists(CSV_PATH):
     with open(CSV_PATH, "w", newline="") as f:
         writer = csv.writer(f)
-        writer.writerow(["prefix_len", "draft_budget", "gamma", "task", "accept_rate_total"])
+        writer.writerow(["prefix_len", "draft_budget", "gamma", "task", "accept_rate_total", "accept_rate_per_token"])
         
 # append to CSV
 with open(CSV_PATH, "a", newline="") as f:
@@ -352,6 +352,7 @@ with open(CSV_PATH, "a", newline="") as f:
         args.gamma,
         args.task,
         f"{accept_rate_total:.4f}"
+        f"{accept_rate_per_token:.4f}"
     ])
 # if rank == 0:
 #     with open("result.txt", "a") as file:
