@@ -205,8 +205,8 @@ for step, batch in tqdm(enumerate(dataloader)):
         # Rollback the memory length
         engine.cachelens = engine.cachelens - args.gamma - 1
         engine.paged_kv_last_page_len = engine.paged_kv_last_page_len - args.gamma - 1
-        engine.draft_cachelens = engine.draft_cachelens - args.gamma -1
-        engine.draft_paged_kv_last_page_len = engine.draft_paged_kv_last_page_len - args.gamma -1
+        # engine.draft_cachelens = engine.draft_cachelens - args.gamma -1
+        # engine.draft_paged_kv_last_page_len = engine.draft_paged_kv_last_page_len - args.gamma -1
 
         # Put the accepted tokens to output
         positions = torch.arange(output.shape[1], device=DEVICE).view(1, -1).repeat(BATCH_SIZE, 1)
@@ -218,8 +218,8 @@ for step, batch in tqdm(enumerate(dataloader)):
         # Set the cache length to the accepted length
         engine.cachelens += accept_nums.flatten().to(torch.int32)
         engine.paged_kv_last_page_len += accept_nums.flatten().to(torch.int32)
-        engine.draft_cachelens += accept_nums.flatten().to(torch.int32)
-        engine.draft_paged_kv_last_page_len += accept_nums.flatten().to(torch.int32)
+        # engine.draft_cachelens += accept_nums.flatten().to(torch.int32)
+        # engine.draft_paged_kv_last_page_len += accept_nums.flatten().to(torch.int32)
         
         # Get the bonus tokens
         indices = accept_nums - 1

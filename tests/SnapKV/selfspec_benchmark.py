@@ -113,7 +113,12 @@ else:
 
 dataloader = DataLoader(dataset, batch_size=BATCH_SIZE, shuffle=False, drop_last=True)
 
-num_eval_steps = min(10, len(dataloader))
+
+if args.dataset == "pg19":
+  num_eval_steps = min(10, len(dataloader))
+else:
+  num_eval_steps = len(dataloader)
+  
 
 total_time = 0.0
 num_gen_tokens = 0
@@ -126,11 +131,10 @@ if benchmark:
 # initialize global counters
 total_spec_tokens = 0
 total_acc_tokens  = 0
-
-for step, batch in tqdm(enumerate(dataloader)):
-# for step, batch in tqdm(enumerate(dataloader), total=num_eval_steps):
-#     if step >= num_eval_steps:
-#         break
+# for step, batch in tqdm(enumerate(dataloader)):
+for step, batch in tqdm(enumerate(dataloader), total=num_eval_steps):
+    if step >= num_eval_steps:
+        break
     # if step == 35:
     #     breakpoint()
     input_ids = batch[0].to(DEVICE)
@@ -145,7 +149,6 @@ for step, batch in tqdm(enumerate(dataloader)):
 
     torch.cuda.synchronize()
     start = time.perf_counter()
-    breakpoint()
     while terminal == False:
 
         # Draft speculation
@@ -228,8 +231,8 @@ for step, batch in tqdm(enumerate(dataloader)):
         num_nodes += accept_nums.flatten()
 
         # Check for termination conditions with accepted token number
-        num_gen_token_max = 16
-        # num_gen_token_max = 80
+        # num_gen_token_max = 16
+        num_gen_token_max = 80
         if args.dataset == "longbenchv1" or args.dataset == "longbenchv1-32k":
             #longbenchv1 does not have fixed prefix len
             if num_nodes.max() - input_len >= num_gen_token_max:
