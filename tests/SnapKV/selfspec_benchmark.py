@@ -288,9 +288,51 @@ print(f"Final tokens per second :{num_gen_tokens/total_time}")
 
 # print acceptance rate
 if total_spec_tokens > 0:
-    accept_rate = total_acc_tokens / total_spec_tokens
-    print(f"Draft acceptance rate: {accept_rate*100:.2f}% "
+    accept_rate_total = total_acc_tokens / total_spec_tokens
+    print(f"Draft acceptance rate: {accept_rate_total*100:.2f}% "
           f"({total_acc_tokens} accepted of {total_spec_tokens} speculated)")
+    import math
+
+    def find_alpha(gamma, accept_rate_total, tol=1e-8, max_iter=100):
+        """
+        Solve for alpha in (0,1) such that
+            (1 - alpha^(gamma+1)) / (1 - alpha) == gamma * accept_rate_total
+        using the bisection method.
+        """
+        def f(alpha):
+            # avoid division by zero at alpha=1
+            return (1 - alpha**(gamma+1)) / (1 - alpha) - gamma * accept_rate_total
+
+        # initial bracket [low, high]
+        low, high = 0.0, 1.0 - 1e-15
+        f_low, f_high = f(low), f(high)
+
+        if f_low * f_high > 0:
+            raise ValueError(
+                "f(0) and f(1) have the same sign; no guaranteed root in (0,1). "
+                f"f(0)={f_low}, f(1-)={f_high}"
+            )
+
+        for i in range(max_iter):
+            mid = (low + high) / 2
+            f_mid = f(mid)
+
+            # Check for convergence
+            if abs(f_mid) < tol or (high - low)/2 < tol:
+                return mid
+
+            # Narrow the bracket
+            if f_low * f_mid <= 0:
+                high, f_high = mid, f_mid
+            else:
+                low, f_low = mid, f_mid
+
+        # return best estimate after max_iter
+        return (low + high) / 2
+
+    accept_rate_per_token = find_alpha(args.gamma, accept_rate_total)
+    print(f"Found alpha = {accept_rate_per_token:.8f}")
+
 
 import os, csv
 model_name = args.model_name.split("/", 1)[1]
@@ -299,7 +341,7 @@ CSV_PATH = f"/home/juchanlee/MagicDec/output/{model_name}_{args.dataset}_accepta
 if not os.path.exists(CSV_PATH):
     with open(CSV_PATH, "w", newline="") as f:
         writer = csv.writer(f)
-        writer.writerow(["prefix_len", "draft_budget", "gamma", "task", "accept_rate"])
+        writer.writerow(["prefix_len", "draft_budget", "gamma", "task", "accept_rate_total"])
         
 # append to CSV
 with open(CSV_PATH, "a", newline="") as f:
@@ -309,7 +351,7 @@ with open(CSV_PATH, "a", newline="") as f:
         args.draft_budget,
         args.gamma,
         args.task,
-        f"{accept_rate:.4f}"
+        f"{accept_rate_total:.4f}"
     ])
 # if rank == 0:
 #     with open("result.txt", "a") as file:
