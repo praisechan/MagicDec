@@ -116,7 +116,10 @@ else:
 
 dataloader = DataLoader(dataset, batch_size=BATCH_SIZE, shuffle=False, drop_last=True)
 
-num_eval_steps = min(10, len(dataloader))
+if args.dataset == "pg19":
+  num_eval_steps = min(10, len(dataloader))
+else:
+  num_eval_steps = len(dataloader)
 
 total_time = 0.0
 num_gen_tokens = 0
@@ -130,10 +133,10 @@ if benchmark:
 total_spec_tokens = 0
 total_acc_tokens  = 0
 
-for step, batch in tqdm(enumerate(dataloader)):
-# for step, batch in tqdm(enumerate(dataloader), total=num_eval_steps):
-#     if step >= num_eval_steps:
-#         break
+# for step, batch in tqdm(enumerate(dataloader)):
+for step, batch in tqdm(enumerate(dataloader), total=num_eval_steps):
+    if step >= num_eval_steps:
+        break
     input_ids = batch[0].to(DEVICE)
     terminal = False
     tokens_buffer= torch.zeros((BATCH_SIZE, args.gamma+1), device=DEVICE).long()
