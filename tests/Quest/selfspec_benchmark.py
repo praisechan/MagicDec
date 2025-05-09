@@ -305,7 +305,7 @@ if total_spec_tokens > 0:
         """
         def f(alpha):
             # avoid division by zero at alpha=1
-            return (1 - alpha**(gamma+1)) / (1 - alpha) - gamma * accept_rate_total
+            return (1 - alpha**(gamma+1)) / (1 - alpha) -1 - gamma * accept_rate_total
 
         # initial bracket [low, high]
         low, high = 0.0, 1.0 - 1e-15
