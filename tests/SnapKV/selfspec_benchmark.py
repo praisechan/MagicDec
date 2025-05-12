@@ -113,12 +113,10 @@ else:
 
 dataloader = DataLoader(dataset, batch_size=BATCH_SIZE, shuffle=False, drop_last=True)
 
-
 if args.dataset == "pg19":
   num_eval_steps = min(10, len(dataloader))
 else:
   num_eval_steps = len(dataloader)
-  
 
 total_time = 0.0
 num_gen_tokens = 0
@@ -131,6 +129,7 @@ if benchmark:
 # initialize global counters
 total_spec_tokens = 0
 total_acc_tokens  = 0
+
 # for step, batch in tqdm(enumerate(dataloader)):
 for step, batch in tqdm(enumerate(dataloader), total=num_eval_steps):
     if step >= num_eval_steps:
@@ -146,7 +145,6 @@ for step, batch in tqdm(enumerate(dataloader), total=num_eval_steps):
     num_nodes += input_ids.shape[1]
     input_len = num_nodes.max()
     tokens_buffer[:, :1] = engine.encode(input_ids=input_ids)[:,-1:]
-
     torch.cuda.synchronize()
     start = time.perf_counter()
     while terminal == False:
@@ -243,11 +241,9 @@ for step, batch in tqdm(enumerate(dataloader), total=num_eval_steps):
             # if num_nodes.max() + 1 + args.gamma > MAX_LEN_TARGET:
             if num_nodes.max() - args.prefix_len >= num_gen_token_max:
                 terminal = True
-
         # Put Bonus tokens to the tokens buffer, and prepare the variables for next itr
         if not terminal:
             tokens_buffer[:, :1] = bonus_tokens
-        
         if not terminal:
             if benchmark:
                 torch.cuda.synchronize()
@@ -301,7 +297,7 @@ if total_spec_tokens > 0:
         """
         def f(alpha):
             # avoid division by zero at alpha=1
-            return (1 - alpha**(gamma+1)) / (1 - alpha) - 1 - gamma * accept_rate_total
+            return (1 - alpha**(gamma+1)) / (1 - alpha) -1 - gamma * accept_rate_total
 
         # initial bracket [low, high]
         low, high = 0.0, 1.0 - 1e-15
