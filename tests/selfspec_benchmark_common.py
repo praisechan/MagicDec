@@ -28,6 +28,7 @@ parser.add_argument('--prefix_len', type=int, default=32800, help='Prefix length
 parser.add_argument('--max_len', type=int, default=32896, help='Generate length')
 parser.add_argument('--window_size', type=int, default=32, help='Generate length')
 parser.add_argument('--chunk_size', type=int, default=16, help='Chunk size')
+parser.add_argument('--latest_k', type=int, default=16, help='in Quest, force to see latest k tokens')
 
 parser.add_argument('--seed', type=int, default=123, help='Random seed.')
 
@@ -82,7 +83,7 @@ else:
     engine = LMBackend(dtype=DTYPE, device=DEVICE, dec_len=target_dec_len, draft_dec_len=draft_dec_len)
 engine.load_model(checkpoint_path, use_tp=use_tp, rank_group = args.rank_group, group=global_group)
 if args.quest:
-    engine.load_draft_model(args.model_name, args.draft_budget, args.chunk_size, BATCH_SIZE, MAX_LEN_TARGET)
+    engine.load_draft_model(args.model_name, args.draft_budget, args.chunk_size, BATCH_SIZE, MAX_LEN_TARGET, args.latest_k)
 vocab_size = engine.model.config.vocab_size
 if args.compile:
     engine.compile()
@@ -200,6 +201,7 @@ for step, batch in tqdm(enumerate(dataloader), total=num_eval_steps):
         #############################Added for acceptance rate#####################
         # how many draft tokens _in total_ got fully accepted this iteration?
         # accept_flags_matrix.sum() is the total across the batch
+        breakpoint()
         accepted_this_iter = int(accept_flags_matrix.sum().item())
 
         # record total speculations: BATCH_SIZE * gamma
