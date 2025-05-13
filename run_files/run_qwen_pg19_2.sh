@@ -1,0 +1,19 @@
+# python tests/SnapKV/selfspec_benchmark.py --model checkpoints/Qwen/Qwen2.5-14B/model.pth --model_name Qwen/Qwen2.5-14B --rank_group 0 --gamma 16 --B 1 --prefix_len 8224 --max_len 8320 --draft_budget 257 --benchmark --compile
+# python tests/SnapKV/selfspec_benchmark.py --model checkpoints/Qwen/Qwen2.5-14B/model.pth --model_name Qwen/Qwen2.5-14B --rank_group 0 --gamma 16 --B 1 --prefix_len 8224 --max_len 8320 --draft_budget 513 --benchmark --compile
+# python tests/SnapKV/selfspec_benchmark.py --model checkpoints/Qwen/Qwen2.5-14B/model.pth --model_name Qwen/Qwen2.5-14B --rank_group 0 --gamma 16 --B 1 --prefix_len 8224 --max_len 8320 --draft_budget 1025 --benchmark --compile
+# python tests/SnapKV/selfspec_benchmark.py --model checkpoints/Qwen/Qwen2.5-14B/model.pth --model_name Qwen/Qwen2.5-14B --rank_group 0 --gamma 16 --B 1 --prefix_len 8224 --max_len 8320 --draft_budget 2049 --benchmark --compile
+
+# python tests/SnapKV/selfspec_benchmark.py --model checkpoints/Qwen/Qwen2.5-14B/model.pth --model_name Qwen/Qwen2.5-14B --rank_group 0 --gamma 16 --B 1 --prefix_len 16416 --max_len 16512 --draft_budget 513 --benchmark --compile
+# python tests/SnapKV/selfspec_benchmark.py --model checkpoints/Qwen/Qwen2.5-14B/model.pth --model_name Qwen/Qwen2.5-14B --rank_group 0 --gamma 16 --B 1 --prefix_len 16416 --max_len 16512 --draft_budget 1025 --benchmark --compile
+# python tests/SnapKV/selfspec_benchmark.py --model checkpoints/Qwen/Qwen2.5-14B/model.pth --model_name Qwen/Qwen2.5-14B --rank_group 0 --gamma 16 --B 1 --prefix_len 16416 --max_len 16512 --draft_budget 2049 --benchmark --compile
+# python tests/SnapKV/selfspec_benchmark.py --model checkpoints/Qwen/Qwen2.5-14B/model.pth --model_name Qwen/Qwen2.5-14B --rank_group 0 --gamma 16 --B 1 --prefix_len 16416 --max_len 16512 --draft_budget 4097 --benchmark --compile
+
+python tests/SnapKV/selfspec_benchmark.py --model checkpoints/Qwen/Qwen2.5-14B/model.pth --model_name Qwen/Qwen2.5-14B --rank_group 0 --gamma 16 --B 1 --prefix_len 32800 --max_len 32896 --draft_budget 1025 --benchmark --compile
+python tests/SnapKV/selfspec_benchmark.py --model checkpoints/Qwen/Qwen2.5-14B/model.pth --model_name Qwen/Qwen2.5-14B --rank_group 0 --gamma 16 --B 1 --prefix_len 32800 --max_len 32896 --draft_budget 2049 --benchmark --compile
+python tests/SnapKV/selfspec_benchmark.py --model checkpoints/Qwen/Qwen2.5-14B/model.pth --model_name Qwen/Qwen2.5-14B --rank_group 0 --gamma 16 --B 1 --prefix_len 32800 --max_len 32896 --draft_budget 4097 --benchmark --compile
+python tests/SnapKV/selfspec_benchmark.py --model checkpoints/Qwen/Qwen2.5-14B/model.pth --model_name Qwen/Qwen2.5-14B --rank_group 0 --gamma 16 --B 1 --prefix_len 32800 --max_len 32896 --draft_budget 8193 --benchmark --compile
+
+python tests/SnapKV/selfspec_benchmark.py --model checkpoints/Qwen/Qwen2.5-14B/model.pth --model_name Qwen/Qwen2.5-14B --rank_group 0 --gamma 16 --B 1 --prefix_len 65568 --max_len 65664 --draft_budget 2049 --benchmark --compile
+python tests/SnapKV/selfspec_benchmark.py --model checkpoints/Qwen/Qwen2.5-14B/model.pth --model_name Qwen/Qwen2.5-14B --rank_group 0 --gamma 16 --B 1 --prefix_len 65568 --max_len 65664 --draft_budget 4097 --benchmark --compile
+python tests/SnapKV/selfspec_benchmark.py --model checkpoints/Qwen/Qwen2.5-14B/model.pth --model_name Qwen/Qwen2.5-14B --rank_group 0 --gamma 16 --B 1 --prefix_len 65568 --max_len 65664 --draft_budget 8193 --benchmark --compile
+python tests/SnapKV/selfspec_benchmark.py --model checkpoints/Qwen/Qwen2.5-14B/model.pth --model_name Qwen/Qwen2.5-14B --rank_group 0 --gamma 16 --B 1 --prefix_len 65568 --max_len 65664 --draft_budget 16385 --benchmark --compile

@@ -28,6 +28,7 @@ parser.add_argument('--prefix_len', type=int, default=32800, help='Prefix length
 parser.add_argument('--max_len', type=int, default=32896, help='Generate length')
 parser.add_argument('--window_size', type=int, default=32, help='Generate length')
 parser.add_argument('--chunk_size', type=int, default=16, help='Chunk size')
+parser.add_argument('--latest_k', type=int, default=16, help='in Quest, force to see latest k tokens')
 
 parser.add_argument('--seed', type=int, default=123, help='Random seed.')
 
@@ -76,17 +77,13 @@ target_dec_len = args.gamma + 1
 draft_dec_len = 1
 
 # Load target model
-if args.quest:
-    engine = LMBackend_Quest(dtype=DTYPE, device=DEVICE, dec_len=target_dec_len, draft_dec_len=draft_dec_len)
-else:
-    engine = LMBackend(dtype=DTYPE, device=DEVICE, dec_len=target_dec_len, draft_dec_len=draft_dec_len)
-engine.load_model(checkpoint_path, use_tp=use_tp, rank_group = args.rank_group, group=global_group)
-if args.quest:
-    engine.load_draft_model(args.model_name, args.draft_budget, args.chunk_size, BATCH_SIZE, MAX_LEN_TARGET)
+engine = LMBackend_Quest(dtype=DTYPE, device=DEVICE, dec_len=target_dec_len, draft_dec_len=draft_dec_len)
+engine.load_model(args.model_name)
+engine.load_draft_model(args.model_name, args.draft_budget, args.chunk_size, BATCH_SIZE, MAX_LEN_TARGET, args.latest_k)
 vocab_size = engine.model.config.vocab_size
 if args.compile:
     engine.compile()
-engine.setup_caches(max_batch_size=BATCH_SIZE, max_seq_length=MAX_LEN_TARGET, draft_budget=args.draft_budget, window_size=args.window_size)
+# engine.setup_caches(max_batch_size=BATCH_SIZE, max_seq_length=MAX_LEN_TARGET, draft_budget=args.draft_budget, window_size=args.window_size)
 
 # Load dataset
 tokenizer = AutoTokenizer.from_pretrained(args.model_name)
@@ -162,11 +159,7 @@ for step, batch in tqdm(enumerate(dataloader), total=num_eval_steps):
             torch.cuda.synchronize()
             t1 = time.time()
 
-        if args.quest:
-            tokens_buffer[:,1:1+args.gamma] = engine.speculate(tokens_buffer[:, 0].view(-1,1), BATCH_SIZE, args.gamma)
-        else:
-            for i in range(args.gamma):
-                tokens_buffer[:,i+1:i+2] = engine.speculate(tokens_buffer[:, i].view(-1,1))
+        tokens_buffer[:,1:1+args.gamma] = engine.speculate(tokens_buffer[:, 0].view(-1,1), BATCH_SIZE, args.gamma)
 
         if benchmark:
             torch.cuda.synchronize()
@@ -213,24 +206,24 @@ for step, batch in tqdm(enumerate(dataloader), total=num_eval_steps):
         if condition.any():
             terminal = True
         
-        # Rollback the memory length
-        engine.cachelens = engine.cachelens - args.gamma - 1
-        engine.paged_kv_last_page_len = engine.paged_kv_last_page_len - args.gamma - 1
-        engine.draft_cachelens = engine.draft_cachelens - args.gamma -1
-        engine.draft_paged_kv_last_page_len = engine.draft_paged_kv_last_page_len - args.gamma -1
+        # # Rollback the memory length
+        # engine.cachelens = engine.cachelens - args.gamma - 1
+        # engine.paged_kv_last_page_len = engine.paged_kv_last_page_len - args.gamma - 1
+        # engine.draft_cachelens = engine.draft_cachelens - args.gamma -1
+        # engine.draft_paged_kv_last_page_len = engine.draft_paged_kv_last_page_len - args.gamma -1
 
         # Put the accepted tokens to output
-        positions = torch.arange(output.shape[1], device=DEVICE).view(1, -1).repeat(BATCH_SIZE, 1)
-        mask = (positions < (engine.cachelens.view(-1,1) + accept_nums)) & (positions >= engine.cachelens.view(-1, 1))
+        # positions = torch.arange(output.shape[1], device=DEVICE).view(1, -1).repeat(BATCH_SIZE, 1)
+        # mask = (positions < (engine.cachelens.view(-1,1) + accept_nums)) & (positions >= engine.cachelens.view(-1, 1))
         positions_buffer = torch.arange(args.gamma+1, device=DEVICE).view(1, -1).repeat(BATCH_SIZE, 1)
         mask_buffer = positions_buffer<accept_nums.view(-1,1)
-        output[mask] = tokens_buffer[mask_buffer]
+        # output[mask] = tokens_buffer[mask_buffer]
 
-        # Set the cache length to the accepted length
-        engine.cachelens += accept_nums.flatten().to(torch.int32)
-        engine.paged_kv_last_page_len += accept_nums.flatten().to(torch.int32)
-        engine.draft_cachelens += accept_nums.flatten().to(torch.int32)
-        engine.draft_paged_kv_last_page_len += accept_nums.flatten().to(torch.int32)
+        # # Set the cache length to the accepted length
+        # engine.cachelens += accept_nums.flatten().to(torch.int32)
+        # engine.paged_kv_last_page_len += accept_nums.flatten().to(torch.int32)
+        # engine.draft_cachelens += accept_nums.flatten().to(torch.int32)
+        # engine.draft_paged_kv_last_page_len += accept_nums.flatten().to(torch.int32)
         
         # Get the bonus tokens
         indices = accept_nums - 1
@@ -257,10 +250,9 @@ for step, batch in tqdm(enumerate(dataloader), total=num_eval_steps):
             tokens_buffer[:, :1] = bonus_tokens
 
         if not terminal:
-            if args.quest:
-                # get accepted token and re-decode to set draft cache (Quest)
-                accepted_tokens = tokens_buffer[mask_buffer].view(1,-1)
-                engine.draft_kv_update(accepted_tokens)
+            # get accepted token and re-decode to set draft cache (Quest)
+            accepted_tokens = tokens_buffer[mask_buffer].view(1,-1)
+            engine.draft_kv_update(accepted_tokens)
 
 
         if not terminal:
@@ -269,8 +261,8 @@ for step, batch in tqdm(enumerate(dataloader), total=num_eval_steps):
                 t4 = time.time()
                 verify_loop += t4-t3
         else:
-            for i in range(BATCH_SIZE):
-                output[i, num_nodes[i]] = bonus_tokens[i]
+            # for i in range(BATCH_SIZE):
+            #     output[i, num_nodes[i]] = bonus_tokens[i]
             num_nodes += 1
             if benchmark:
                 torch.cuda.synchronize()
@@ -281,10 +273,10 @@ for step, batch in tqdm(enumerate(dataloader), total=num_eval_steps):
     end=time.perf_counter()
     total_time += end-start
     num_gen_tokens += (num_nodes.sum() - (input_ids.shape[1] + 1) * BATCH_SIZE)
-    if args.printoutput:
-        for i in range(BATCH_SIZE):
-            print("Sequence ", i)
-            print(tokenizer.decode(output[i, args.prefix_len:num_nodes[i]]))
+    # if args.printoutput:
+    #     for i in range(BATCH_SIZE):
+    #         print("Sequence ", i)
+    #         print(tokenizer.decode(output[i, args.prefix_len:num_nodes[i]]))
     print("total time :{:.5f}s, time per iter :{:.5f}s, decoding step: {}, large model step: {}".format(total_time, total_time / target_steps, num_gen_tokens, target_steps))
     if benchmark:
         print("target time :{:.5f}s, draft time :{:.5f}s, verify loop : {}, avg generate len per sentence: {}".format(target_time/target_steps, draft_time / target_steps, verify_loop/target_steps, num_gen_tokens/target_steps/BATCH_SIZE))
