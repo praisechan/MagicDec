@@ -35,7 +35,6 @@ parser.add_argument('--seed', type=int, default=123, help='Random seed.')
 parser.add_argument('--printoutput', action='store_true', help='Whether to compile the model.')
 parser.add_argument('--benchmark', action='store_true', help='Whether to compile the model.')
 parser.add_argument('--task', type=str, default=None, help='for longbenchv1.')
-parser.add_argument('--quest', action='store_true', help='Run Quest or not.')
 
 args = parser.parse_args()
 assert args.prefix_len < args.max_len
