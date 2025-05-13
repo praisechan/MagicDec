@@ -8,7 +8,7 @@
 # python tests/Quest/selfspec_benchmark.py --model checkpoints/meta-llama/Meta-Llama-3.1-8B/model.pth --model_name meta-llama/Meta-Llama-3.1-8B --latest_k 128 --rank_group 0 --gamma 16 --B 1 --prefix_len 16416 --max_len 16512 --draft_budget 2049 
 # python tests/Quest/selfspec_benchmark.py --model checkpoints/meta-llama/Meta-Llama-3.1-8B/model.pth --model_name meta-llama/Meta-Llama-3.1-8B --latest_k 128 --rank_group 0 --gamma 16 --B 1 --prefix_len 16416 --max_len 16512 --draft_budget 4097 
 
-python tests/Quest/selfspec_benchmark.py --model checkpoints/meta-llama/Meta-Llama-3.1-8B/model.pth --model_name meta-llama/Meta-Llama-3.1-8B --latest_k 128 --rank_group 0 --gamma 16 --B 1 --prefix_len 32800 --max_len 32896 --draft_budget 1025 
+# python tests/Quest/selfspec_benchmark.py --model checkpoints/meta-llama/Meta-Llama-3.1-8B/model.pth --model_name meta-llama/Meta-Llama-3.1-8B --latest_k 128 --rank_group 0 --gamma 16 --B 1 --prefix_len 32800 --max_len 32896 --draft_budget 1025 
 python tests/Quest/selfspec_benchmark.py --model checkpoints/meta-llama/Meta-Llama-3.1-8B/model.pth --model_name meta-llama/Meta-Llama-3.1-8B --latest_k 128 --rank_group 0 --gamma 16 --B 1 --prefix_len 32800 --max_len 32896 --draft_budget 2049 
 python tests/Quest/selfspec_benchmark.py --model checkpoints/meta-llama/Meta-Llama-3.1-8B/model.pth --model_name meta-llama/Meta-Llama-3.1-8B --latest_k 128 --rank_group 0 --gamma 16 --B 1 --prefix_len 32800 --max_len 32896 --draft_budget 4097 
 python tests/Quest/selfspec_benchmark.py --model checkpoints/meta-llama/Meta-Llama-3.1-8B/model.pth --model_name meta-llama/Meta-Llama-3.1-8B --latest_k 128 --rank_group 0 --gamma 16 --B 1 --prefix_len 32800 --max_len 32896 --draft_budget 8193 

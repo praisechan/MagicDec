@@ -10,7 +10,7 @@ from transformers import AutoTokenizer
 from torch.utils.data.dataloader import DataLoader
 from tqdm import tqdm
 import argparse
-from MagicDec.Engine.SnapKV.backend import LMBackend
+# from MagicDec.Engine.SnapKV.backend import LMBackend
 from MagicDec.Engine.Quest.backend import LMBackend_Quest
 
 parser = argparse.ArgumentParser(description='Process model configuration and partitions.')
