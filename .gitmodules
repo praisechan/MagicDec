@@ -1,3 +1,6 @@
 [submodule "Engine/Quest"]
 	path = Engine/Quest
 	url = https://github.com/praisechan/Quest.git
+[submodule "SqueezedAttention"]
+	path = SqueezedAttention
+	url = https://github.com/SqueezeAILab/SqueezedAttention.git
