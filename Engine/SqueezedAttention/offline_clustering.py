@@ -57,7 +57,8 @@ if __name__ == "__main__":
     config.return_qkv_states = True
     config._flash_attn_2_enabled = True
     config._attn_implementation = "flash_attention_2"
-    model = LlamaForCausalLM.from_pretrained(model_path, config=config, torch_dtype=torch.bfloat16)
+    # model = LlamaForCausalLM.from_pretrained(model_path, config=config, torch_dtype=torch.bfloat16)
+    model = LlamaForCausalLM.from_pretrained(model_path, config=config, torch_dtype=torch.bfloat16, device_map=DEV)
     model.eval()
     model = model.to(DEV)
 
@@ -88,7 +89,7 @@ if __name__ == "__main__":
         prompt_only = prompt_only_format.format(**data_all[i])
 
         # perform truncation and get truncated shared prefix length
-        prompt, truncated_shared_prefix_length = truncate_fn(prompt, prompt_only, tokenizer, max_length, dataset, DEV)
+        prompt, truncated_shared_prefix_length = truncate_fn(prompt, prompt_only, tokenizer, max_length, dataset, DEV, args.model)
         shared_prefix_length[i] = truncated_shared_prefix_length
         assert (truncated_shared_prefix_length > 0) # else, truncated part of input context as well
 
@@ -121,7 +122,7 @@ if __name__ == "__main__":
         prompt_only = prompt_only_format.format(**d)
 
         # get truncated input prompt
-        prompt, _ = truncate_fn(prompt, prompt_only, tokenizer, max_length, dataset, DEV)
+        prompt, _ = truncate_fn(prompt, prompt_only, tokenizer, max_length, dataset, DEV, args.model)
         input_ids = tokenizer(prompt, truncation=False, return_tensors="pt").input_ids.to(DEV)
 
         print(f"dataidx: {dataidx} | length of input_ids: {len(input_ids[0])}")

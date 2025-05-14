@@ -22,7 +22,7 @@ def build_chat(prompt, model_name, noquery=False):
             prompt = conv.get_prompt()
     return prompt
 
-def truncate_fn(prompt, prompt_noquery, tokenizer, max_length, dataset, device):
+def truncate_fn(prompt, prompt_noquery, tokenizer, max_length, dataset, device, model_name):
     # truncate to fit max_length (we suggest truncate in the middle, since the left and right side may contain crucial instructions)
     tokenized_prompt = tokenizer(prompt, truncation=False, return_tensors="pt").input_ids[0]
     tokenized_prompt_noquery = tokenizer(prompt_noquery, truncation=False, return_tensors="pt").input_ids[0]

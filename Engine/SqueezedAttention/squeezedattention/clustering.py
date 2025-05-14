@@ -2,7 +2,7 @@ import torch
 import torch.nn.functional as F
 import numpy as np
 from sklearn.preprocessing import normalize
-import cupy as cp
+# import cupy as cp
 from cuml.cluster import KMeans
 from torch.utils.dlpack import to_dlpack
 from cupy import fromDlpack
