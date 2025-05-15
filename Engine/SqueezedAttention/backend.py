@@ -47,7 +47,7 @@ class LMBackend_Squeeze:
         # for Quest
         self.draft_past_key_values = None
         self.input_tokens = None
-        self.draft_cachelength = 0
+        self.verified_cachelength = 0
 
     # def load_model(self, checkpoints: str, use_tp: bool, rank_group=None, group = None):
     #     self.model: Transformer = load_model_snapKV(checkpoint_path=checkpoints, device=self.device, precision=self.dtype, use_tp=use_tp, rank_group=rank_group, group=group)        
@@ -124,11 +124,12 @@ class LMBackend_Squeeze:
     # Only used for target verification
     @torch.inference_mode()
     def verify(self, input_ids: torch.LongTensor, benchmark = False):
+            input_from_prefill = torch.concat((self.input_tokens[:, :self.verified_cachelength], input_ids), dim=1)
             dec_len = input_ids.shape[1]
             # self.pre_verify(dec_len=dec_len)
             outputs = self.model(
-                input_ids,
-                past_key_values=self.draft_past_key_values,
+                input_from_prefill,
+                # past_key_values=self.draft_past_key_values,
                 use_cache=True,
                 output_all_token=True
             )
@@ -138,17 +139,22 @@ class LMBackend_Squeeze:
                 # If benchmarking the latency, don't update the cachelens and page table
                 self.cachelens -= dec_len
                 self.paged_kv_last_page_len -= dec_len
-            return torch.argmax(outputs.logits, dim=-1)
+            #TODO: verify가 필요한 length만큼 잘라야함
+            verified_logits = outputs.logits[-input_ids.shape[-1]:]
+
+            return torch.argmax(verified_logits, dim=-1)
 
     @torch.inference_mode()
-    def speculate(self, input_ids: torch.LongTensor, bsz, gamma, benchmark = False):
+    def speculate(self, input_ids: torch.LongTensor, bsz, gamma, truncated_shared_prefix_length, different_prefix_index):
+      self.draft_model.model.shared_prefix_length = truncated_shared_prefix_length
+      self.draft_model.model.different_prefix_index = different_prefix_index
       tokens_buffer= torch.zeros((bsz, gamma), device="cuda").long()
-      draft_past_key_values = self.draft_past_key_values
+      # draft_past_key_values = self.draft_past_key_values
       next_input_token = input_ids
       for i in range(gamma):
         outputs = self.draft_model(
             next_input_token,
-            past_key_values=draft_past_key_values,
+            # past_key_values=draft_past_key_values,
             use_cache=True,
         )
         
@@ -160,15 +166,15 @@ class LMBackend_Squeeze:
     
     @torch.inference_mode()
     def draft_kv_update(self, input_ids: torch.LongTensor):
-        input_from_prefill = torch.concat((self.input_tokens[:, :self.draft_cachelength], input_ids), dim=1)
-        outputs = self.draft_model(
-            input_from_prefill,
-            past_key_values=None,
-            use_cache=True,
-        )
-        self.draft_cachelength += input_ids.shape[1]
-        self.input_tokens[:,:self.draft_cachelength] = input_from_prefill
-        self.draft_past_key_values = outputs.past_key_values
+        input_from_prefill = torch.concat((self.input_tokens[:, :self.verified_cachelength], input_ids), dim=1)
+        # outputs = self.draft_model(
+        #     input_from_prefill,
+        #     past_key_values=None,
+        #     use_cache=True,
+        # )
+        self.verified_cachelength += input_ids.shape[1]
+        self.input_tokens[:,:self.verified_cachelength] = input_from_prefill
+        # self.draft_past_key_values = outputs.past_key_values
 
     @torch.inference_mode()
     def encode(self, input_ids: torch.LongTensor, benchmark = False):        
@@ -176,12 +182,11 @@ class LMBackend_Squeeze:
         outputs = self.model(
             input_ids,
             past_key_values=None,
-            use_cache=True,
+            # use_cache=True,
         )
-        self.draft_past_key_values = outputs.past_key_values
-        self.use_verified_kv = True
+        # self.draft_past_key_values = outputs.past_key_values
         self.input_tokens[:,:input_ids.shape[1]] = input_ids
-        self.draft_cachelength = input_ids.shape[1]
+        self.verified_cachelength = input_ids.shape[1]
         self.cachelens = input_ids.shape[1]
         
         return torch.argmax(outputs.logits, dim=-1)

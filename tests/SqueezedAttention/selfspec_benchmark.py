@@ -13,6 +13,7 @@ import argparse
 # from MagicDec.Engine.SnapKV.backend import LMBackend
 from MagicDec.Engine.SqueezedAttention.backend import LMBackend_Squeeze
 from squeezedattention.utils import build_chat, truncate_fn
+from datasets import load_dataset
 
 parser = argparse.ArgumentParser(description='Process model configuration and partitions.')
 parser.add_argument('--model', type=Path, default=Path("/scratch/models/meta-llama/Meta-Llama-3.1-8B/model.pth"), help='model')
@@ -119,6 +120,12 @@ print(f"eot_1: {eot_1}, eot_2: {eot_2}")
 #     dataset = convert_ruler_dataset(tokenizer=tokenizer, task=args.dataset.split(":")[1], model_name=args.model_name, seq_len=args.prefix_len)
 if args.dataset == "longbenchv1":
     # dataset = convert_longbench_v1_dataset(tokenizer=tokenizer, task=args.task, is_under_32k=False)
+    # dataset = load_longbench_v1_dataset(tokenizer=tokenizer, task=args.task, is_under_32k=False)
+    dataset = load_dataset('THUDM/LongBench', args.task, split='test')
+    dataset = [data_sample for data_sample in dataset]
+
+    for i in range(len(dataset)):
+        dataset[i]['different_prefix_index'] = i
 else:
     raise ValueError(f"Unknown dataset {args.dataset}")
 
@@ -141,70 +148,38 @@ if benchmark:
 total_spec_tokens = 0
 total_acc_tokens  = 0
 
-def load_longbench_v1_dataset():
-    import json
-    # we design specific prompt format and max generation length for each task, feel free to modify them to optimize model output
-    dataset2prompt = json.load(open("config/dataset2prompt.json", "r"))
-    dataset2maxlen = json.load(open("config/dataset2maxlen.json", "r"))
 
-def get_pred(rank, world_size, data, max_length, max_gen, prompt_format, prompt_only_format, dataset, device, model_name, model2path, out_path, config_params):
-    # device = torch.device(f'cuda:{rank}')
-    # torch.cuda.set_device(rank)
-    # model, tokenizer = load_model_and_tokenizer(model2path[model_name], model_name, device, config_params)
+# for dataset
+import json
+# we design specific prompt format and max generation length for each task, feel free to modify them to optimize model output
+dataset2prompt = json.load(open("config/dataset2prompt.json", "r"))
+dataset2maxlen = json.load(open("config/dataset2maxlen.json", "r"))
+model2path = json.load(open("config/model2path.json", "r"))
+model2maxlen = json.load(open("config/model2maxlen.json", "r"))
+max_length = model2maxlen[args.model_name]
+prompt_format = dataset2prompt[args.task]
+prompt_only_format = dataset2prompt[args.task + '_prompt']
+max_gen = dataset2maxlen[args.task]
 
-    # iterate over longbench dataset
-    for json_obj in tqdm(data):
-        different_prefix_index = json_obj.pop('different_prefix_index')
-        prompt = prompt_format.format(**json_obj)
-        prompt_noquery = prompt_only_format.format(**json_obj)
+def preprocess_input(task, json_obj):
+    different_prefix_index = json_obj.pop('different_prefix_index')
+    prompt = prompt_format.format(**json_obj)
+    prompt_noquery = prompt_only_format.format(**json_obj)
 
-        # perform truncation
-        prompt, truncated_shared_prefix_length = truncate_fn(prompt, prompt_noquery, tokenizer, max_length, dataset, device)
-        model.model.shared_prefix_length = truncated_shared_prefix_length
-        model.model.different_prefix_index = different_prefix_index
+    # perform truncation
+    prompt, truncated_shared_prefix_length = truncate_fn(prompt, prompt_noquery, tokenizer, max_length, task, DEVICE)
 
-        # encode input
-        input = tokenizer(prompt, truncation=False, return_tensors="pt").to(device)
-
-        context_length = input.input_ids.shape[-1]
-        
-        if dataset == "samsum": # prevent illegal output on samsum (model endlessly repeat "\nDialogue"), might be a prompting issue
-            output = model.generate(
-                **input,
-                max_new_tokens=max_gen,
-                num_beams=1,
-                do_sample=False,
-                temperature=1.0,
-                min_length=context_length+1,
-                eos_token_id=[tokenizer.eos_token_id, tokenizer.encode("\n", add_special_tokens=False)[-1]],
-                use_cache=True
-            )[0]
-        else:
-            output = model.generate(
-                **input,
-                max_new_tokens=max_gen,
-                num_beams=1,
-                do_sample=False,
-                temperature=1.0,
-                use_cache=True
-            )[0]
-        pred = tokenizer.decode(output[context_length:], skip_special_tokens=True)
-        with open(out_path, "a", encoding="utf-8") as f:
-            json.dump({"pred": pred, "answers": json_obj["answers"], "all_classes": json_obj["all_classes"], "length": json_obj["length"]}, f, ensure_ascii=False)
-            f.write('\n')
-
-    if dist.is_initialized():
-        dist.destroy_process_group()
-
-
+    # encode input
+    input = tokenizer(prompt, truncation=False, return_tensors="pt").to(DEVICE)
+    
+    return input, truncated_shared_prefix_length, different_prefix_index
 
 # for step, batch in tqdm(enumerate(dataloader)):
 for step, batch in tqdm(enumerate(dataloader), total=num_eval_steps):
     if step >= num_eval_steps:
         break
-    # if step == 35:
-    #     breakpoint()
-    input_ids = batch[0].to(DEVICE)
+    # input_ids = batch[0].to(DEVICE)
+    input_ids, truncated_shared_prefix_length, different_prefix_index = preprocess_input(args.task, batch)            
     terminal = False
     tokens_buffer= torch.zeros((BATCH_SIZE, args.gamma+1), device=DEVICE).long()
     output = torch.zeros(BATCH_SIZE, MAX_LEN_TARGET+1, device=DEVICE).long()
@@ -222,7 +197,8 @@ for step, batch in tqdm(enumerate(dataloader), total=num_eval_steps):
             torch.cuda.synchronize()
             t1 = time.time()
 
-        tokens_buffer[:,1:1+args.gamma] = engine.speculate(tokens_buffer[:, 0].view(-1,1), BATCH_SIZE, args.gamma)
+        # tokens_buffer[:,1:1+args.gamma] = engine.speculate(tokens_buffer[:, 0].view(-1,1), BATCH_SIZE, args.gamma)
+        tokens_buffer[:,1:1+args.gamma] = engine.speculate(tokens_buffer[:, 0].view(-1,1), BATCH_SIZE, args.gamma, truncated_shared_prefix_length, different_prefix_index)
 
         if benchmark:
             torch.cuda.synchronize()
