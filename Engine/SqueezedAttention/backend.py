@@ -52,9 +52,20 @@ class LMBackend_Squeeze:
     # def load_model(self, checkpoints: str, use_tp: bool, rank_group=None, group = None):
     #     self.model: Transformer = load_model_snapKV(checkpoint_path=checkpoints, device=self.device, precision=self.dtype, use_tp=use_tp, rank_group=rank_group, group=group)        
 
-    def load_model_and_tokenizer(path, model_name, device, config_params):
-        if "LLaMA-2-7B-32K" in model_name or "LWM" in model_name or "longchat" in model_name:
-            config = LlamaConfig.from_pretrained(path)
+    def load_model(self, model_path: str, path_to_clusters: str):
+        # config params
+        config_params = {}
+        config_params['path_to_clusters_cosine'] = path_to_clusters
+        config_params['use_centroids'] = False
+        config_params['hierarchical_lookup'] = False
+        config_params['percent_clusters'] = -1 #not used actually in target model
+        config_params['percent_clusters_l2'] = -1 #not used actually in target model
+        config_params['percentile'] = 0.5 #not used actually in target model
+        config_params['percentile_lower'] = 0.7 #not used actually in target model
+        config_params['obs_window'] = 100 #not used actually in target model
+
+        if "LLaMA-2-7B-32K" in model_path or "LWM" in model_path or "longchat" in model_path:
+            config = LlamaConfig.from_pretrained(model_path)
 
             # set attn implementation
             config._flash_attn_2_enabled = True
@@ -72,61 +83,43 @@ class LMBackend_Squeeze:
             config.obs_window = config_params['obs_window']
 
             # load model
-            model = LlamaForCausalLM.from_pretrained(path, config=config, torch_dtype=dtype)
+            model = LlamaForCausalLM.from_pretrained(model_path, config=config, torch_dtype=dtype)
             model = model.to(device)
-            tokenizer = LlamaTokenizer.from_pretrained(path)
+            tokenizer = LlamaTokenizer.from_pretrained(model_path)
 
         else:
             assert (False) # not implemented yet for other models
 
-        model = model.eval()
-        return model, tokenizer
-
-    def load_model(self, model_path: str):
-        if 'llama' in model_path.lower() or 'longchat' in model_path.lower():
-            enable_tuple_kv_cache_for_llama()
-        if 'mistral' in model_path.lower():
-            enable_tuple_kv_cache_for_mistral()
-      
-        self.tokenizer = AutoTokenizer.from_pretrained(model_path, trust_remote_code=True)
-        model = AutoModelForCausalLM.from_pretrained(
-            model_path, trust_remote_code=True, torch_dtype=torch.bfloat16, device_map="auto"
-        )
         self.model = model.eval()
-
 
     def load_draft_model(self, model_path: str, draft_budget, chunk_size, bsz, max_len, latest_k=0):
         self.input_tokens = torch.zeros(bsz, max_len+1, device="cuda").long()
         self.cachelens = torch.zeros(bsz, dtype=torch.int32, device=self.device)
-        args = argparse.Namespace(
-            quest=True,
-            token_budget=draft_budget,
-            chunk_size=chunk_size,
-            latest_k=latest_k
-        )
-                
-        def load_model_and_tokenizer(model_path):
-            if 'llama' in model_path.lower() or 'longchat' in model_path.lower():
-                enable_tuple_kv_cache_for_llama()
-            if 'mistral' in model_path.lower():
-                enable_tuple_kv_cache_for_mistral()
-
-            model = AutoModelForCausalLM.from_pretrained(
-                model_path, trust_remote_code=True, torch_dtype=torch.bfloat16, device_map="auto"
-            )
-            model = model.eval()
-
-            enable_quest_attention_eval(model, args)
-
-            return model
-
         if not hasattr(self, "model"):
             self.load_model(model_path)                
 
-        self.draft_model = copy.copy(self.model)
-        enable_quest_attention_eval(self.draft_model, args)
+        draft_config_params = {}
+        draft_config_params['use_centroids'] = True
+        draft_config_params['hierarchical_lookup'] = True
+        draft_config_params['percent_clusters'] = 5
+        draft_config_params['percent_clusters_l2'] = 5
+        draft_config_params['percentile'] = 0.9
+        draft_config_params['percentile_lower'] = 0.7
+        draft_config_params['obs_window'] = 100
 
-        # self.draft_model = load_model_and_tokenizer(model_path)
+        draft_cfg = copy.deepcopy(self.model.config)
+        for k,v in draft_config_params.items():
+            setattr(draft_cfg, k, v)
+
+        self.draft_model = copy.copy(self.model)
+        self.draft_model.config = draft_cfg
+        self.draft_model.model.config = draft_cfg
+        
+        self.draft_model.to(self.device).eval()
+        # draft_model = LlamaForCausalLM(draft_cfg)
+        # draft_model.model = self.model.model
+        # draft_model.lm_head = self.model.lm_head
+        # self.draft_model = draft_model
 
     # Only used for target verification
     @torch.inference_mode()

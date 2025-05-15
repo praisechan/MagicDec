@@ -12,6 +12,7 @@ from tqdm import tqdm
 import argparse
 # from MagicDec.Engine.SnapKV.backend import LMBackend
 from MagicDec.Engine.SqueezedAttention.backend import LMBackend_Squeeze
+from squeezedattention.utils import build_chat, truncate_fn
 
 parser = argparse.ArgumentParser(description='Process model configuration and partitions.')
 parser.add_argument('--model', type=Path, default=Path("/scratch/models/meta-llama/Meta-Llama-3.1-8B/model.pth"), help='model')
@@ -77,7 +78,11 @@ draft_dec_len = 1
 
 # Load target model
 engine = LMBackend_Squeeze(dtype=DTYPE, device=DEVICE, dec_len=target_dec_len, draft_dec_len=draft_dec_len)
-engine.load_model(args.model_name)
+
+MODEL = args.model_name.split("/")[-1]
+TASK = args.task
+path_to_clusters = "./fixed-prompt-clusters/${MODEL}/${TASK}/"
+engine.load_model(args.model_name, path_to_clusters)
 engine.load_draft_model(args.model_name, args.draft_budget, args.chunk_size, BATCH_SIZE, MAX_LEN_TARGET, args.latest_k)
 vocab_size = engine.model.config.vocab_size
 if args.compile:
@@ -94,24 +99,26 @@ else:
     eot_2 = tokenizer.encode("<|eot_id|>")[-1]
 print(f"eot_1: {eot_1}, eot_2: {eot_2}")
 
-if args.dataset == "pg19":
-    dataset = convert_pg19_dataset(tokenizer=tokenizer, seq_len=args.prefix_len)
-elif args.dataset == "c4":
-    dataset = convert_c4_dataset(tokenizer=tokenizer, seq_len=args.prefix_len)
-elif args.dataset == "wiki":
-    dataset = convert_wiki_dataset(tokenizer=tokenizer, seq_len=args.prefix_len)
-elif args.dataset == "cnn":
-    dataset = convert_cnn_dataset(tokenizer=tokenizer, seq_len=args.prefix_len)
-elif args.dataset == "longbenchv1":
-    dataset = convert_longbench_v1_dataset(tokenizer=tokenizer, task=args.task, is_under_32k=False)
-elif args.dataset == "longbenchv1-32k":
-    dataset = convert_longbench_v1_dataset(tokenizer=tokenizer, task=args.task, is_under_32k=True)
-elif args.dataset == "longbenchv2":
-    dataset = convert_longbench_v2_dataset(tokenizer=tokenizer, seq_len=args.prefix_len)
-elif args.dataset == "longbenchv2_sum":
-    dataset = convert_longbench_v2_sum_dataset(tokenizer=tokenizer, seq_len=args.prefix_len)
+# if args.dataset == "pg19":
+#     dataset = convert_pg19_dataset(tokenizer=tokenizer, seq_len=args.prefix_len)
+# elif args.dataset == "c4":
+#     dataset = convert_c4_dataset(tokenizer=tokenizer, seq_len=args.prefix_len)
+# elif args.dataset == "wiki":
+#     dataset = convert_wiki_dataset(tokenizer=tokenizer, seq_len=args.prefix_len)
+# elif args.dataset == "cnn":
+#     dataset = convert_cnn_dataset(tokenizer=tokenizer, seq_len=args.prefix_len)
+# elif args.dataset == "longbenchv1":
+#     dataset = convert_longbench_v1_dataset(tokenizer=tokenizer, task=args.task, is_under_32k=False)
+# elif args.dataset == "longbenchv1-32k":
+#     dataset = convert_longbench_v1_dataset(tokenizer=tokenizer, task=args.task, is_under_32k=True)
+# elif args.dataset == "longbenchv2":
+#     dataset = convert_longbench_v2_dataset(tokenizer=tokenizer, seq_len=args.prefix_len)
+# elif args.dataset == "longbenchv2_sum":
+#     dataset = convert_longbench_v2_sum_dataset(tokenizer=tokenizer, seq_len=args.prefix_len)
 # elif args.dataset.startswith("ruler"):
 #     dataset = convert_ruler_dataset(tokenizer=tokenizer, task=args.dataset.split(":")[1], model_name=args.model_name, seq_len=args.prefix_len)
+if args.dataset == "longbenchv1":
+    # dataset = convert_longbench_v1_dataset(tokenizer=tokenizer, task=args.task, is_under_32k=False)
 else:
     raise ValueError(f"Unknown dataset {args.dataset}")
 
@@ -133,6 +140,63 @@ if benchmark:
 # initialize global counters
 total_spec_tokens = 0
 total_acc_tokens  = 0
+
+def load_longbench_v1_dataset():
+    import json
+    # we design specific prompt format and max generation length for each task, feel free to modify them to optimize model output
+    dataset2prompt = json.load(open("config/dataset2prompt.json", "r"))
+    dataset2maxlen = json.load(open("config/dataset2maxlen.json", "r"))
+
+def get_pred(rank, world_size, data, max_length, max_gen, prompt_format, prompt_only_format, dataset, device, model_name, model2path, out_path, config_params):
+    # device = torch.device(f'cuda:{rank}')
+    # torch.cuda.set_device(rank)
+    # model, tokenizer = load_model_and_tokenizer(model2path[model_name], model_name, device, config_params)
+
+    # iterate over longbench dataset
+    for json_obj in tqdm(data):
+        different_prefix_index = json_obj.pop('different_prefix_index')
+        prompt = prompt_format.format(**json_obj)
+        prompt_noquery = prompt_only_format.format(**json_obj)
+
+        # perform truncation
+        prompt, truncated_shared_prefix_length = truncate_fn(prompt, prompt_noquery, tokenizer, max_length, dataset, device)
+        model.model.shared_prefix_length = truncated_shared_prefix_length
+        model.model.different_prefix_index = different_prefix_index
+
+        # encode input
+        input = tokenizer(prompt, truncation=False, return_tensors="pt").to(device)
+
+        context_length = input.input_ids.shape[-1]
+        
+        if dataset == "samsum": # prevent illegal output on samsum (model endlessly repeat "\nDialogue"), might be a prompting issue
+            output = model.generate(
+                **input,
+                max_new_tokens=max_gen,
+                num_beams=1,
+                do_sample=False,
+                temperature=1.0,
+                min_length=context_length+1,
+                eos_token_id=[tokenizer.eos_token_id, tokenizer.encode("\n", add_special_tokens=False)[-1]],
+                use_cache=True
+            )[0]
+        else:
+            output = model.generate(
+                **input,
+                max_new_tokens=max_gen,
+                num_beams=1,
+                do_sample=False,
+                temperature=1.0,
+                use_cache=True
+            )[0]
+        pred = tokenizer.decode(output[context_length:], skip_special_tokens=True)
+        with open(out_path, "a", encoding="utf-8") as f:
+            json.dump({"pred": pred, "answers": json_obj["answers"], "all_classes": json_obj["all_classes"], "length": json_obj["length"]}, f, ensure_ascii=False)
+            f.write('\n')
+
+    if dist.is_initialized():
+        dist.destroy_process_group()
+
+
 
 # for step, batch in tqdm(enumerate(dataloader)):
 for step, batch in tqdm(enumerate(dataloader), total=num_eval_steps):
