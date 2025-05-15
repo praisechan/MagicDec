@@ -101,9 +101,15 @@ if __name__ == "__main__":
         _, qkv, _ = out
         queries, keys, values = qkv
         sp_len = shared_prefix_length[dataidx]
+        
+        # due to OOM issue, detach to CPU and recall right before run_clustering
+        # queries = queries[:,:,:sp_len].detach().cpu()
+        # keys = keys[:,:,:sp_len].detach().cpu()
+        # values = values[:,:,:sp_len].detach().cpu()
         queries = queries[:,:,:sp_len]
         keys = keys[:,:,:sp_len]
         values = values[:,:,:sp_len]
+        
         all_queries_layers.append(queries)
         all_keys_layers.append(keys)
         all_values_layers.append(values)
@@ -114,6 +120,12 @@ if __name__ == "__main__":
 
     # load dataset format
     for dataidx, d in enumerate(tqdm(data)):
+        if args.dataset =="qmsum":
+          if dataidx < 27:
+            continue
+        if args.dataset =="gov_report":
+          if dataidx < 46:
+            continue
         all_queries_layers = []
         all_keys_layers = []
         all_values_layers = []
@@ -153,6 +165,10 @@ if __name__ == "__main__":
             num_centroids = 1
         if args.hierarchical_lookup:
             assert (num_centroids_l2 >= 1)
+
+
+        # move 
+
 
         # hierarchical
         if args.hierarchical_lookup:

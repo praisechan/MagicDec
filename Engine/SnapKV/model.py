@@ -61,6 +61,7 @@ class ModelArgs:
 transformer_configs = {
     "llama-2-7b": dict(block_size=4096, n_layer=32, n_head=32, dim=4096),
     'llama-2-7b-32k': dict(block_size=32768, n_layer=32, dim= 4096, vocab_size=32000, scaling_factor=8),
+    'longchat-7b-v1.5-32k': dict(block_size=32768, n_layer=32, dim= 4096, vocab_size=32000, scaling_factor=8),
     "llama-2-13b": dict(block_size=4096, n_layer=40, n_head=40, dim=5120),
     "llama-2-70b": dict(block_size=4096, n_layer=80, n_head=64, dim=8192, n_local_heads=8, intermediate_size=28672),
     "llama-3-8b": dict(block_size=8192, n_layer=32, n_head=32, n_local_heads=8, dim=4096, intermediate_size=14336, vocab_size=128256, rope_base=500000),
@@ -405,6 +406,8 @@ class Attention(nn.Module):
 
         window_size = self.window_size
         chunk_size = nrepeat * 8    # to support qwen
+        if nrepeat == 1:
+          chunk_size = 32    # for llama2 without gqa
         assert chunk_size % nrepeat == 0
         num_chunks = (L + chunk_size - 1) // chunk_size
         attn_weights_sum = torch.zeros(bsz, self.n_head, context_len - window_size, device=query_states.device, dtype=query_states.dtype) 

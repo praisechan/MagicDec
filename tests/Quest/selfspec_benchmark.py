@@ -70,7 +70,7 @@ if args.dataset == "longbenchv1-32k":
 DTYPE = torch.bfloat16
 BATCH_SIZE = args.B
 benchmark = args.benchmark
-checkpoint_path = args.model
+# checkpoint_path = args.model
 
 target_dec_len = args.gamma + 1
 draft_dec_len = 1
@@ -342,7 +342,7 @@ if total_spec_tokens > 0:
 
 import os, csv
 model_name = args.model_name.split("/", 1)[1]
-CSV_PATH = f"/home/juchanlee/MagicDec/output/{model_name}_{args.dataset}_acceptance_rates.csv"
+CSV_PATH = f"/home/juchanlee/MagicDec/output/Quest/{model_name}_{args.dataset}_acceptance_rates.csv"
 # if the file doesn't yet exist, write the header
 if not os.path.exists(CSV_PATH):
     with open(CSV_PATH, "w", newline="") as f:

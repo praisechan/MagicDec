@@ -60,7 +60,6 @@ def run_clustering(tdict, num_clusters, observation_window=100, print_log=False,
 
             dlpack_tensor = to_dlpack(data_normalized)
             data_cp = fromDlpack(dlpack_tensor)
-
             kmeans = KMeans(
                 n_clusters=K,
                 max_iter=300,
