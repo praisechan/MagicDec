@@ -130,16 +130,8 @@ dataset2prompt = {
         "News:\n{context}\n\nNow, write a one-page summary of all the news.</s>\n"
         "<s>assistant\nSummary:"
     ),
-    "lcc": (
-        "<s>system\nYou are a helpful assistant</s>\n"
-        "<s>user\nPlease complete the code given below. \n{context}Now, complete the code given.</s>\n"
-        "<s>assistant\n"
-    ),
-    "repobench-p": (
-        "<s>system\nYou are a helpful assistant</s>\n"
-        "<s>user\nPlease complete the code given below. \n{context}Now, complete the code given.</s>\n"
-        "<s>assistant\n"
-    ),
+    "lcc": ("Please complete the code given below. \n{context}Next line of code:\n"),
+    "repobench-p": ("Please complete the code given below. \n{context}{input}Next line of code:\n"),
 }
 
 dataset2prompt_old = {
