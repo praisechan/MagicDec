@@ -35,11 +35,14 @@ def run_clustering(tdict, num_clusters, observation_window=100, print_log=False,
 
     # loop over layers
     t1 = time.time()
+    tdict_gpu = [t.squeeze(0).float().to(device, non_blocking=True) for t in tdict]
+
     for layer_num in range(num_lyrs):
         if print_log:
             print('layer: ', layer_num)
 
-        keys = tdict[layer_num].squeeze(0).float().to(device)
+        # keys = tdict[layer_num].squeeze(0).float().to(device)
+        keys = tdict_gpu[layer_num]
 
         K = num_clusters
 
