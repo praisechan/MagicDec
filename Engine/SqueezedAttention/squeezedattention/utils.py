@@ -47,5 +47,5 @@ def truncate_fn(prompt, prompt_noquery, tokenizer, max_length, dataset, device, 
     # compute shared prefix length
     input_ids_prompt_only = tokenizer(prompt_noquery, truncation=False, return_tensors="pt").input_ids.to(device)
     shared_prefix_length = input_ids_prompt_only.shape[1]
-
+    
     return prompt, shared_prefix_length - tokens_removed
