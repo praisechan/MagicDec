@@ -98,8 +98,12 @@ if __name__ == "__main__":
     all_keys_layers = []
     all_values_layers = []
     def get_attention_scores(module, inp, out):
-        _, qkv, _ = out
-        queries, keys, values = qkv
+        # _, qkv, _ = out
+        queries = out[1][0].detach().cpu()
+        keys = out[1][1].detach().cpu()
+        values = out[1][2].detach().cpu()
+
+        # queries, keys, values = qkv
         sp_len = shared_prefix_length[dataidx]
         
         # due to OOM issue, detach to CPU and recall right before run_clustering
@@ -147,7 +151,8 @@ if __name__ == "__main__":
                 do_sample=True,
                 max_new_tokens=1,
                 use_cache=False,
-                output_attentions=True
+                # output_attentions=True
+                output_attentions=False
             )
 
         # write out data

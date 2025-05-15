@@ -16,5 +16,5 @@ for DATASET in "${DATASETS[@]}"; do
                                  --output_path $PATH_TO_SAVE_CLUSTERS \
                                  --percent_clusters $PERC_CLUSTERS \
                                  --observation_window 100 \
-                                 --device 0,1
+                                 --device 0
 done
