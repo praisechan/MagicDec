@@ -4,3 +4,9 @@
 [submodule "SqueezedAttention"]
 	path = SqueezedAttention
 	url = https://github.com/SqueezeAILab/SqueezedAttention.git
+[submodule "RetrievalAttention"]
+	path = RetrievalAttention
+	url = https://github.com/microsoft/RetrievalAttention.git
+[submodule "Engine/RetrievalAttention"]
+	path = Engine/RetrievalAttention
+	url = https://github.com/microsoft/RetrievalAttention.git

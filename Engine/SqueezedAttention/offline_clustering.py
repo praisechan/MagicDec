@@ -124,12 +124,6 @@ if __name__ == "__main__":
 
     # load dataset format
     for dataidx, d in enumerate(tqdm(data)):
-        if args.dataset =="qmsum":
-          if dataidx < 27:
-            continue
-        if args.dataset =="gov_report":
-          if dataidx < 46:
-            continue
         all_queries_layers = []
         all_keys_layers = []
         all_values_layers = []

@@ -82,7 +82,7 @@ engine = LMBackend_Squeeze(dtype=DTYPE, device=DEVICE, dec_len=target_dec_len, d
 
 MODEL = args.model_name.split("/")[-1]
 TASK = args.task
-path_to_clusters = "./fixed-prompt-clusters/${MODEL}/${TASK}/"
+path_to_clusters = f"./Engine/SqueezedAttention/fixed-prompt-clusters/{MODEL}/{TASK}/"
 engine.load_model(args.model_name, path_to_clusters)
 engine.load_draft_model(args.model_name, args.draft_budget, args.chunk_size, BATCH_SIZE, MAX_LEN_TARGET, args.latest_k)
 vocab_size = engine.model.config.vocab_size
@@ -119,8 +119,6 @@ print(f"eot_1: {eot_1}, eot_2: {eot_2}")
 # elif args.dataset.startswith("ruler"):
 #     dataset = convert_ruler_dataset(tokenizer=tokenizer, task=args.dataset.split(":")[1], model_name=args.model_name, seq_len=args.prefix_len)
 if args.dataset == "longbenchv1":
-    # dataset = convert_longbench_v1_dataset(tokenizer=tokenizer, task=args.task, is_under_32k=False)
-    # dataset = load_longbench_v1_dataset(tokenizer=tokenizer, task=args.task, is_under_32k=False)
     dataset = load_dataset('THUDM/LongBench', args.task, split='test')
     dataset = [data_sample for data_sample in dataset]
 
@@ -130,7 +128,6 @@ else:
     raise ValueError(f"Unknown dataset {args.dataset}")
 
 dataloader = DataLoader(dataset, batch_size=BATCH_SIZE, shuffle=False, drop_last=True)
-
 if args.dataset == "pg19":
   num_eval_steps = min(10, len(dataloader))
 else:
@@ -152,11 +149,12 @@ total_acc_tokens  = 0
 # for dataset
 import json
 # we design specific prompt format and max generation length for each task, feel free to modify them to optimize model output
-dataset2prompt = json.load(open("config/dataset2prompt.json", "r"))
-dataset2maxlen = json.load(open("config/dataset2maxlen.json", "r"))
-model2path = json.load(open("config/model2path.json", "r"))
-model2maxlen = json.load(open("config/model2maxlen.json", "r"))
-max_length = model2maxlen[args.model_name]
+dataset2prompt = json.load(open("./Engine/SqueezedAttention/LongBench/config/dataset2prompt.json", "r"))
+dataset2maxlen = json.load(open("./Engine/SqueezedAttention/LongBench/config/dataset2maxlen.json", "r"))
+model2path = json.load(open("./Engine/SqueezedAttention/LongBench/config/model2path.json", "r"))
+model2maxlen = json.load(open("./Engine/SqueezedAttention/LongBench/config/model2maxlen.json", "r"))
+
+max_length = model2maxlen[MODEL]
 prompt_format = dataset2prompt[args.task]
 prompt_only_format = dataset2prompt[args.task + '_prompt']
 max_gen = dataset2maxlen[args.task]
@@ -167,15 +165,16 @@ def preprocess_input(task, json_obj):
     prompt_noquery = prompt_only_format.format(**json_obj)
 
     # perform truncation
-    prompt, truncated_shared_prefix_length = truncate_fn(prompt, prompt_noquery, tokenizer, max_length, task, DEVICE)
+    prompt, truncated_shared_prefix_length = truncate_fn(prompt, prompt_noquery, tokenizer, max_length, task, DEVICE, MODEL)
 
     # encode input
     input = tokenizer(prompt, truncation=False, return_tensors="pt").to(DEVICE)
     
-    return input, truncated_shared_prefix_length, different_prefix_index
+    return input['input_ids'], truncated_shared_prefix_length, different_prefix_index
 
 # for step, batch in tqdm(enumerate(dataloader)):
-for step, batch in tqdm(enumerate(dataloader), total=num_eval_steps):
+# for step, batch in tqdm(enumerate(dataloader), total=num_eval_steps):
+for step, batch in tqdm(enumerate(dataset), total=num_eval_steps):
     if step >= num_eval_steps:
         break
     # input_ids = batch[0].to(DEVICE)
@@ -187,7 +186,7 @@ for step, batch in tqdm(enumerate(dataloader), total=num_eval_steps):
     num_nodes = torch.zeros(BATCH_SIZE,device=DEVICE).long()
     num_nodes += input_ids.shape[1]
     input_len = num_nodes.max()
-    tokens_buffer[:, :1] = engine.encode(input_ids=input_ids)[:,-1:]
+    tokens_buffer[:, :1] = engine.encode(input_ids, truncated_shared_prefix_length, different_prefix_index)[:,-1:]
     torch.cuda.synchronize()
     start = time.perf_counter()
     while terminal == False:
@@ -196,9 +195,9 @@ for step, batch in tqdm(enumerate(dataloader), total=num_eval_steps):
         if benchmark:
             torch.cuda.synchronize()
             t1 = time.time()
-
+        breakpoint()
         # tokens_buffer[:,1:1+args.gamma] = engine.speculate(tokens_buffer[:, 0].view(-1,1), BATCH_SIZE, args.gamma)
-        tokens_buffer[:,1:1+args.gamma] = engine.speculate(tokens_buffer[:, 0].view(-1,1), BATCH_SIZE, args.gamma, truncated_shared_prefix_length, different_prefix_index)
+        tokens_buffer[:,1:1+args.gamma] = engine.speculate(tokens_buffer[:, 0].view(-1,1), BATCH_SIZE, args.gamma)
 
         if benchmark:
             torch.cuda.synchronize()
@@ -381,8 +380,7 @@ if total_spec_tokens > 0:
 
 
 import os, csv
-model_name = args.model_name.split("/", 1)[1]
-CSV_PATH = f"/home/juchanlee/MagicDec/output/Quest/{model_name}_{args.dataset}_acceptance_rates.csv"
+CSV_PATH = f"/home/juchanlee/MagicDec/output/Quest/{MODEL}_{args.dataset}_acceptance_rates.csv"
 # if the file doesn't yet exist, write the header
 if not os.path.exists(CSV_PATH):
     with open(CSV_PATH, "w", newline="") as f:

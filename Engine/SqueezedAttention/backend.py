@@ -3,9 +3,9 @@ from torch.nn import CrossEntropyLoss
 
 device = "cuda"
 
-from MagicDec.Engine.SnapKV.model import Transformer
-from MagicDec.Engine.utils import load_model_snapKV
-import flashinfer
+# from MagicDec.Engine.SnapKV.model import Transformer
+# from MagicDec.Engine.utils import load_model_snapKV
+# import flashinfer
 
 import os
 from datasets import load_dataset
@@ -25,7 +25,7 @@ import random
 import argparse
 
 import copy
-from llama_flash_attn_monkey_patch import replace_llama_attn_with_flash_attn
+from MagicDec.Engine.SqueezedAttention.llama_flash_attn_monkey_patch import replace_llama_attn_with_flash_attn
 import torch.distributed as dist
 import torch.multiprocessing as mp
 
@@ -51,6 +51,9 @@ class LMBackend_Squeeze:
 
     # def load_model(self, checkpoints: str, use_tp: bool, rank_group=None, group = None):
     #     self.model: Transformer = load_model_snapKV(checkpoint_path=checkpoints, device=self.device, precision=self.dtype, use_tp=use_tp, rank_group=rank_group, group=group)        
+    def set_attrs(self, obj, attrs: dict):
+      for name, val in attrs.items():
+          setattr(obj, name, val)
 
     def load_model(self, model_path: str, path_to_clusters: str):
         # config params
@@ -91,6 +94,7 @@ class LMBackend_Squeeze:
             assert (False) # not implemented yet for other models
 
         self.model = model.eval()
+        self.target_cfg = config_params
 
     def load_draft_model(self, model_path: str, draft_budget, chunk_size, bsz, max_len, latest_k=0):
         self.input_tokens = torch.zeros(bsz, max_len+1, device="cuda").long()
@@ -100,7 +104,7 @@ class LMBackend_Squeeze:
 
         draft_config_params = {}
         draft_config_params['use_centroids'] = True
-        draft_config_params['hierarchical_lookup'] = True
+        draft_config_params['hierarchical_lookup'] = False
         draft_config_params['percent_clusters'] = 5
         draft_config_params['percent_clusters_l2'] = 5
         draft_config_params['percentile'] = 0.9
@@ -110,12 +114,23 @@ class LMBackend_Squeeze:
         draft_cfg = copy.deepcopy(self.model.config)
         for k,v in draft_config_params.items():
             setattr(draft_cfg, k, v)
-
-        self.draft_model = copy.copy(self.model)
-        self.draft_model.config = draft_cfg
-        self.draft_model.model.config = draft_cfg
         
-        self.draft_model.to(self.device).eval()
+        self.draft_cfg = draft_config_params
+        
+
+        # # 2) shallow‐copy your top‐level wrapper
+        # self.draft_model = copy.copy(self.model)
+
+        # # 3) shallow‐copy the inner LlamaModel so it can hold its own config
+        # inner_copy = copy.copy(self.model.model)
+        # inner_copy.config = draft_cfg            # only affects the draft copy
+
+        # # 4) re‐wire the draft wrapper
+        # self.draft_model.model  = inner_copy
+        # self.draft_model.config = draft_cfg     # so generate() sees it too
+        
+        # self.draft_model.to(self.device).eval()
+
         # draft_model = LlamaForCausalLM(draft_cfg)
         # draft_model.model = self.model.model
         # draft_model.lm_head = self.model.lm_head
@@ -127,11 +142,15 @@ class LMBackend_Squeeze:
             input_from_prefill = torch.concat((self.input_tokens[:, :self.verified_cachelength], input_ids), dim=1)
             dec_len = input_ids.shape[1]
             # self.pre_verify(dec_len=dec_len)
+            # self.model.config=self.target_cfg
+            # self.model.model.config=self.target_cfg
+            # self.set_attrs(self.model, self.target_cfg)
+            self.set_attrs(self.model.model, self.target_cfg)
             outputs = self.model(
                 input_from_prefill,
                 # past_key_values=self.draft_past_key_values,
                 use_cache=True,
-                output_all_token=True
+                # output_all_token=True
             )
             
             self.cachelens += dec_len
@@ -139,28 +158,29 @@ class LMBackend_Squeeze:
                 # If benchmarking the latency, don't update the cachelens and page table
                 self.cachelens -= dec_len
                 self.paged_kv_last_page_len -= dec_len
-            #TODO: verify가 필요한 length만큼 잘라야함
-            verified_logits = outputs.logits[-input_ids.shape[-1]:]
+            verified_logits = outputs.logits[:,-input_ids.shape[-1]:]
 
             return torch.argmax(verified_logits, dim=-1)
 
     @torch.inference_mode()
-    def speculate(self, input_ids: torch.LongTensor, bsz, gamma, truncated_shared_prefix_length, different_prefix_index):
-      self.draft_model.model.shared_prefix_length = truncated_shared_prefix_length
-      self.draft_model.model.different_prefix_index = different_prefix_index
+    def speculate(self, input_ids: torch.LongTensor, bsz, gamma):
       tokens_buffer= torch.zeros((bsz, gamma), device="cuda").long()
       # draft_past_key_values = self.draft_past_key_values
       next_input_token = input_ids
+
+      # self.set_attrs(self.model, self.draft_cfg)
+      self.set_attrs(self.model.model, self.draft_cfg)
       for i in range(gamma):
-        outputs = self.draft_model(
+        outputs = self.model(
             next_input_token,
             # past_key_values=draft_past_key_values,
             use_cache=True,
         )
         
-        next_input_token = torch.argmax(outputs.logits, dim=-1)
-        tokens_buffer[:, i:i+1] = next_input_token
-        draft_past_key_values = outputs.past_key_values
+        last_token = torch.argmax(outputs.logits[:,-1,:], dim=-1)
+        next_input_token = torch.concat((next_input_token, last_token.unsqueeze(-1)), dim=1)
+        tokens_buffer[:, i:i+1] = last_token
+        # draft_past_key_values = outputs.past_key_values
       
       return tokens_buffer
     
@@ -177,8 +197,8 @@ class LMBackend_Squeeze:
         # self.draft_past_key_values = outputs.past_key_values
 
     @torch.inference_mode()
-    def encode(self, input_ids: torch.LongTensor, benchmark = False):        
-        # for Quest
+    def encode(self, input_ids: torch.LongTensor, truncated_shared_prefix_length, different_prefix_index):        
+        self.set_attrs(self.model.model, self.target_cfg)
         outputs = self.model(
             input_ids,
             past_key_values=None,
@@ -188,6 +208,17 @@ class LMBackend_Squeeze:
         self.input_tokens[:,:input_ids.shape[1]] = input_ids
         self.verified_cachelength = input_ids.shape[1]
         self.cachelens = input_ids.shape[1]
+
+        # reset is needed for draft model
+        # find more info in modeling_llama.py/reset_context
+        self.set_attrs(self.model.model, self.draft_cfg)
+        self.model.model.shared_prefix_length = truncated_shared_prefix_length
+        self.model.model.different_prefix_index = different_prefix_index
+        outputs = self.model(
+            input_ids,
+            past_key_values=None,
+            # use_cache=True,
+        )
         
         return torch.argmax(outputs.logits, dim=-1)
     
