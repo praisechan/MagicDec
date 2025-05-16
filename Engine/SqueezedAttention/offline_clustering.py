@@ -52,7 +52,7 @@ if __name__ == "__main__":
     max_length = model2maxlen[args.model]
 
     # load model
-    tokenizer = AutoTokenizer.from_pretrained(model_path, use_fast=False)
+    tokenizer = AutoTokenizer.from_pretrained(model_path)
     config = LlamaConfig.from_pretrained(model_path)
     config.return_qkv_states = True
     config._flash_attn_2_enabled = True
