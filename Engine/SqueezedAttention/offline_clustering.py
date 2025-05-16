@@ -18,7 +18,7 @@ import textwrap
 import shutil
 import json
 from squeezedattention.clustering import run_clustering, run_global_threshold
-from squeezedattention.utils import build_chat, truncate_fn
+from squeezedattention.utils import truncate_fn
 from transformers import AutoTokenizer, LlamaForCausalLM, LlamaConfig
 
 if __name__ == "__main__":

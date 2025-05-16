@@ -12,7 +12,7 @@ from tqdm import tqdm
 import argparse
 # from MagicDec.Engine.SnapKV.backend import LMBackend
 from MagicDec.Engine.SqueezedAttention.backend import LMBackend_Squeeze
-from squeezedattention.utils import build_chat, truncate_fn
+from squeezedattention.utils import truncate_fn
 from datasets import load_dataset
 
 parser = argparse.ArgumentParser(description='Process model configuration and partitions.')
@@ -91,8 +91,8 @@ if args.compile:
 # engine.setup_caches(max_batch_size=BATCH_SIZE, max_seq_length=MAX_LEN_TARGET, draft_budget=args.draft_budget, window_size=args.window_size)
 
 # Load dataset
-tokenizer = AutoTokenizer.from_pretrained(args.model_name, use_fast=False)
-tokenizer.pad_token = tokenizer.eos_token
+tokenizer = AutoTokenizer.from_pretrained(args.model_name)
+# tokenizer.pad_token = tokenizer.eos_token
 eot_1 = tokenizer.eos_token_id
 if tokenizer.unk_token_id is not None:
     eot_2 = tokenizer.unk_token_id

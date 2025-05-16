@@ -1,26 +1,26 @@
 import os
 
-# This is the customized building prompt for chat models
-def build_chat(prompt, model_name, noquery=False):
-    if noquery:
-        if "LWM" in model_name:
-            prompt = f"You are a helpful assistant. USER: {prompt}"
-        elif "longchat" in model_name:
-            from fastchat.model import get_conversation_template
-            conv = get_conversation_template("vicuna")
-            conv.append_message(conv.roles[0], prompt)
-            prompt = conv.get_prompt()
+# # This is the customized building prompt for chat models
+# def build_chat(prompt, model_name, noquery=False):
+#     if noquery:
+#         if "LWM" in model_name:
+#             prompt = f"You are a helpful assistant. USER: {prompt}"
+#         elif "longchat" in model_name:
+#             from fastchat.model import get_conversation_template
+#             conv = get_conversation_template("vicuna")
+#             conv.append_message(conv.roles[0], prompt)
+#             prompt = conv.get_prompt()
 
-    else:
-        if "LWM" in model_name:
-            prompt = f"You are a helpful assistant. USER: {prompt} ASSISTANT: "
-        elif "longchat" in model_name:
-            from fastchat.model import get_conversation_template
-            conv = get_conversation_template("vicuna")
-            conv.append_message(conv.roles[0], prompt)
-            conv.append_message(conv.roles[1], None)
-            prompt = conv.get_prompt()
-    return prompt
+#     else:
+#         if "LWM" in model_name:
+#             prompt = f"You are a helpful assistant. USER: {prompt} ASSISTANT: "
+#         elif "longchat" in model_name:
+#             from fastchat.model import get_conversation_template
+#             conv = get_conversation_template("vicuna")
+#             conv.append_message(conv.roles[0], prompt)
+#             conv.append_message(conv.roles[1], None)
+#             prompt = conv.get_prompt()
+#     return prompt
 
 def truncate_fn(prompt, prompt_noquery, tokenizer, max_length, dataset, device, model_name):
     # truncate to fit max_length (we suggest truncate in the middle, since the left and right side may contain crucial instructions)
@@ -39,10 +39,10 @@ def truncate_fn(prompt, prompt_noquery, tokenizer, max_length, dataset, device, 
     else:
         tokens_removed = 0
 
-    # incorporate chat template for shared prefix length
-    if dataset not in ["trec", "triviaqa", "samsum", "lcc", "repobench-p"]: # chat models are better off without build prompts on these tasks
-        prompt = build_chat(prompt, model_name)
-        prompt_noquery = build_chat(prompt_noquery, model_name, noquery=True)
+    # # incorporate chat template for shared prefix length
+    # if dataset not in ["trec", "triviaqa", "samsum", "lcc", "repobench-p"]: # chat models are better off without build prompts on these tasks
+    #     prompt = build_chat(prompt, model_name)
+    #     prompt_noquery = build_chat(prompt_noquery, model_name, noquery=True)
 
     # compute shared prefix length
     input_ids_prompt_only = tokenizer(prompt_noquery, truncation=False, return_tensors="pt").input_ids.to(device)

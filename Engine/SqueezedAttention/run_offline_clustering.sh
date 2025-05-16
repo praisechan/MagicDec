@@ -4,7 +4,7 @@
 
 MODEL="longchat-7b-v1.5-32k"
 # MODEL="LLaMA-2-7B-32K"
-DATASETS=(qmsum)
+DATASETS=(gov_report qmsum)
 # DATASETS=(2wikimqa)
 PERC_CLUSTERS="5" # Percent Clusters
 
