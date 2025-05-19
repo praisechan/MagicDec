@@ -7,6 +7,11 @@ import torch.nn.functional as F
 import flashinfer
 from transformers import AutoTokenizer, LlamaForCausalLM, LlamaConfig
 from .LLM import LLM
+
+import sys
+PROJECT_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
+sys.path.append(PROJECT_ROOT)
+
 from cache_hub import flash_attn_cache, retroinfer_cache
 from attn_hub import prefill_full_flash_attn, decode_full_flash_attn, retroinfer_prefill_attn, retroinfer_decode_attn
 

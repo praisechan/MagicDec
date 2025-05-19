@@ -28,10 +28,10 @@ import copy
 import torch.distributed as dist
 import torch.multiprocessing as mp
 from MagicDec.Engine.RetrievalAttention.model_hub import LlamaModel, QwenModel
-
 import sys
+import os
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
-from config import generate_config, parse_attn_args
+from MagicDec.Engine.RetrievalAttention.benchmark.config import generate_config, parse_attn_args
 
 class LMBackend_Retro:
     def __init__(self, dtype = torch.bfloat16, device: str = "cuda:0", dec_len: int = 1, draft_dec_len: int = None) -> None:
@@ -71,16 +71,6 @@ class LMBackend_Retro:
         llm.tokenizer.padding_side = "left"
         
         self.model = llm
-        
-        attn_config = generate_config(
-            model2path[model_name], 
-            input_ids.shape[1], 
-            attn_type,
-            budget_ratio=args.budget_ratio,
-            estimate_ratio=args.estimate_ratio,
-        )        
-        
-        return llm
 
     def load_draft_model(self, model_path: str, bsz, max_len):
         self.input_tokens = torch.zeros(bsz, max_len+1, device="cuda").long()
@@ -105,6 +95,35 @@ class LMBackend_Retro:
         # draft_model.model = self.model.model
         # draft_model.lm_head = self.model.lm_head
         # self.draft_model = draft_model
+
+    def preprocess_input(self, json_obj, prompt_format, attn_type, model_path, budget_ratio, estimate_ratio):
+        # different_prefix_index = json_obj.pop('different_prefix_index')
+        # prompt = prompt_format.format(**json_obj)
+        # prompt_noquery = prompt_only_format.format(**json_obj)
+
+        # # perform truncation
+        # prompt, truncated_shared_prefix_length = truncate_fn(prompt, prompt_noquery, tokenizer, max_length, task, DEVICE, MODEL)
+
+        # # encode input
+        # input = tokenizer(prompt, truncation=False, return_tensors="pt").to(DEVICE)
+        
+        # return input['input_ids'], truncated_shared_prefix_length, different_prefix_index
+
+        prompt = prompt_format.format(**json_obj)
+
+        inputs = self.model.tokenizer([prompt], return_tensors="pt", padding=True)
+        input_ids = inputs.input_ids
+        attention_masks = inputs.attention_mask
+
+        attn_config = generate_config(
+            model_path, 
+            input_ids.shape[1], 
+            attn_type,
+            budget_ratio=budget_ratio,
+            estimate_ratio=estimate_ratio,
+        )
+        
+        return input_ids, attention_masks, attn_config
 
     # Only used for target verification
     @torch.inference_mode()
@@ -197,214 +216,3 @@ class LMBackend_Retro:
         self.model.model.use_centroids = False
         
         return torch.argmax(outputs.logits, dim=-1)
-    
-        
-    # def compile(self):
-    #     import torch._dynamo.config
-    #     import torch._inductor.config
-    #     torch._inductor.config.coordinate_descent_tuning = True
-    #     torch._inductor.config.triton.unique_kernel_names = True
-    #     torch._inductor.config.fx_graph_cache = True
-    #     torch._functorch.config.enable_autograd_cache = True
-    #     self.model_forward = torch.compile(self.model_forward, mode="max-autotune", fullgraph=True)
-    #     if self.is_spec:
-    #         self.draft_forward = torch.compile(self.draft_forward, mode="max-autotune", fullgraph=True)
-
-    # # Only used for baseline inference
-    # @torch.inference_mode()
-    # def inference(self, input_ids: torch.LongTensor, benchmark = False):
-    #         dec_len = input_ids.shape[1]
-    #         self.pre_decode(dec_len=dec_len)
-
-    #         logits = self.model_forward(
-    #             model=self.model, 
-    #             x=input_ids,
-    #             input_pos=self.cachelens, 
-    #             kv_append_indptr = self.qo_indptr*dec_len, kv_page_indices = self.paged_kv_indices, kv_page_indptr= self.paged_kv_indptr, kv_page_lastlen = self.paged_kv_last_page_len)
-            
-    #         self.cachelens += dec_len
-    #         if benchmark:
-    #             # If benchmarking the latency, don't update the cachelens and page table
-    #             self.cachelens -= dec_len
-    #             self.paged_kv_last_page_len -= dec_len
-    #         return logits
-    
-    # def pre_decode(self, dec_len):
-    #         self.paged_kv_last_page_len += dec_len
-    #         self.decode_wrapper.plan(
-    #             qo_indptr=self.qo_indptr*dec_len,
-    #             paged_kv_indptr=self.paged_kv_indptr,
-    #             paged_kv_indices=self.paged_kv_indices,
-    #             paged_kv_last_page_len=self.paged_kv_last_page_len,
-    #             num_qo_heads=self.model.config.n_head, 
-    #             num_kv_heads=self.model.config.n_local_heads, 
-    #             head_dim=self.model.config.head_dim, 
-    #             page_size=self.page_size, 
-    #             q_data_type=self.dtype, 
-    #             causal=True,
-    #         )
-    
-    # def pre_verify(self, dec_len):
-    #         self.paged_kv_last_page_len += dec_len
-    #         self.draft_paged_kv_last_page_len += 1
-    #         self.draft_cachelens += 1
-
-    #         self.decode_wrapper.plan(
-    #             qo_indptr=self.qo_indptr*dec_len,
-    #             paged_kv_indptr=self.paged_kv_indptr,
-    #             paged_kv_indices=self.paged_kv_indices,
-    #             paged_kv_last_page_len=self.paged_kv_last_page_len,
-    #             num_qo_heads=self.model.config.n_head, 
-    #             num_kv_heads=self.model.config.n_local_heads, 
-    #             head_dim=self.model.config.head_dim, 
-    #             page_size=self.page_size, 
-    #             q_data_type=self.dtype, 
-    #             causal=True,
-    #         )
-    
-    # def pre_spec(self, dec_len):
-    #         self.draft_paged_kv_last_page_len += dec_len
-    #         self.draft_wrapper.plan(
-    #             qo_indptr=self.qo_indptr*dec_len,
-    #             paged_kv_indptr=self.draft_paged_kv_indptr,
-    #             paged_kv_indices=self.draft_paged_kv_indices,
-    #             paged_kv_last_page_len=self.draft_paged_kv_last_page_len,
-    #             num_qo_heads=self.model.config.n_head, 
-    #             num_kv_heads=self.model.config.n_local_heads, 
-    #             head_dim=self.model.config.head_dim, 
-    #             page_size=self.page_size, 
-    #             q_data_type=self.dtype, 
-    #             causal=True,
-    #         )
-        
-    
-    # def pre_encode(self, dec_len):
-    #     self.num_pages_per_request+=1
-    #     qo_indptr = self.qo_indptr*dec_len
-    #     self.paged_kv_indices = torch.cat([torch.arange(i * self.max_num_pages_per_request, i * self.max_num_pages_per_request + self.num_pages_per_request[i], dtype=torch.int32, device=self.device) for i in range(self.batch_size)])
-    #     self.paged_kv_indptr[1:] = torch.cumsum(self.num_pages_per_request, dim=0, dtype=torch.int32)
-    #     self.paged_kv_last_page_len = torch.full((self.batch_size,), dec_len, dtype=torch.int32, device=self.device)
-    #     self.prefill_wrapper.plan(
-    #         qo_indptr=qo_indptr,
-    #         paged_kv_indptr=self.paged_kv_indptr,
-    #         paged_kv_indices=self.paged_kv_indices,
-    #         paged_kv_last_page_len=self.paged_kv_last_page_len,
-    #         num_qo_heads=self.model.config.n_head, 
-    #         num_kv_heads=self.model.config.n_local_heads, 
-    #         head_dim=self.model.config.head_dim, 
-    #         page_size=self.page_size, 
-    #         q_data_type=self.dtype, 
-    #         causal=True
-    #         )
-          
-    
-    # @torch.inference_mode()
-    # def clear_kv(self):
-    #     for b in self.model.layers:
-    #         b.attention.kv_cache.kv_cache.zero_()
-    #         if self.is_spec:
-    #             b.attention.kv_cache.draft_cache.zero_()
-    #     self.cachelens.zero_()
-    #     self.qo_indptr = torch.arange(self.batch_size+1, dtype=torch.int32, device=self.device)
-    #     self.paged_kv_indptr = torch.arange(self.batch_size+1, dtype=torch.int32, device=self.device)
-    #     self.paged_kv_indices = torch.empty(self.max_num_pages, dtype=torch.int32, device=self.device)
-    #     self.paged_kv_last_page_len = torch.zeros((self.batch_size), dtype=torch.int32, device=self.device)
-    #     self.num_pages_per_request = torch.zeros(self.batch_size, device=self.device, dtype=torch.int32)
-    #     if self.is_spec:
-    #         self.draft_cachelens.zero_()
-    #         self.draft_paged_kv_indptr = torch.arange(self.batch_size+1, dtype=torch.int32, device=self.device)*(self.draft_budget//self.page_size + 1)
-    #         self.draft_paged_kv_indices = torch.arange(self.draft_num_pages, dtype=torch.int32, device=self.device)
-    #         self.draft_paged_kv_last_page_len = torch.ones((self.batch_size), dtype=torch.int32, device=self.device)
-
-    
-    # @torch.inference_mode()
-    # def setup_caches(self, max_batch_size: int = 1, max_seq_length: int = 2048, draft_budget = 0, window_size = 32):
-    #     self.max_length = max_seq_length
-    #     self.batch_size = max_batch_size
-    #     self.cachelens = torch.zeros(max_batch_size, dtype=torch.int32, device=self.device)
-    #     # Prefill length should be devisible by 128 and plus 1 or window_size
-    #     # Max Length should be divisible by 128
-    #     page_size = 128
-    #     max_num_pages = max_batch_size * max_seq_length // page_size
-    #     if max_num_pages*page_size < max_batch_size*max_seq_length:
-    #         max_num_pages += max_batch_size
-    #     self.max_num_pages_per_request = max_num_pages // max_batch_size
-    #     self.num_pages_per_request = torch.zeros(max_batch_size, device=self.device, dtype=torch.int32)
-    #     self.page_size = 128
-    #     self.max_num_pages = max_num_pages
-
-
-    #     # Init Target Attention Backend(Flashinfer)
-    #     self.decode_buffer = torch.empty(128 * 1024 * 1024, dtype=torch.uint8, device=self.device)
-    #     self.prefill_buffer = torch.empty(128 * 1024 * 1024, dtype=torch.uint8, device=self.device)
-
-    #     self.qo_indptr = torch.arange(max_batch_size+1, dtype=torch.int32, device=self.device)
-    #     self.paged_kv_indptr = torch.arange(max_batch_size+1, dtype=torch.int32, device=self.device)
-    #     self.paged_kv_indices = torch.empty(max_num_pages, dtype=torch.int32, device=self.device)
-    #     self.paged_kv_last_page_len = torch.zeros((max_batch_size), dtype=torch.int32, device=self.device)
-    #     self.decode_wrapper = flashinfer.BatchPrefillWithPagedKVCacheWrapper(self.decode_buffer, "NHD", use_cuda_graph=True,
-    #                                                                           qo_indptr_buf=self.qo_indptr, 
-    #                                                                           paged_kv_indptr_buf=self.paged_kv_indptr, 
-    #                                                                           paged_kv_indices_buf=self.paged_kv_indices, 
-    #                                                                           paged_kv_last_page_len_buf=self.paged_kv_last_page_len)
-        
-    #     self.prefill_wrapper = flashinfer.BatchPrefillWithPagedKVCacheWrapper(self.prefill_buffer, "NHD")
-    #     torch.library.define(
-    #         "mylib::target_decode",
-    #         "(Tensor q, Tensor kv_cache) -> Tensor",
-    #     )
-    #     @torch.library.impl("mylib::target_decode", "cuda")
-    #     def target_decode(q, kv_cache):
-    #         return self.decode_wrapper.run(
-    #             q, kv_cache
-    #         )
-    #     @torch.library.register_fake("mylib::target_decode")
-    #     def target_decode_abstract(q, kv_cache):
-    #         return torch.empty_like(q)
-        
-    #     torch.library.define(
-    #         "mylib::target_prefill",
-    #         "(Tensor q, Tensor kv_cache) -> Tensor",
-    #     )
-    #     @torch.library.impl("mylib::target_prefill", "cuda")
-    #     def target_prefill(q, kv_cache):
-    #         return self.prefill_wrapper.run(
-    #             q, kv_cache
-    #         )
-    #     @torch.library.register_fake("mylib::target_prefill")
-    #     def target_prefill_abstract(q, kv_cache):
-    #         return torch.empty_like(q)
-
-    #     # If using speculative decoding, init draft attention backend
-    #     if self.is_spec:
-    #         self.draft_budget = draft_budget
-    #         self.draft_cachelens = torch.zeros(max_batch_size, dtype=torch.int32, device=self.device)
-    #         self.draft_buffer = torch.empty(128 * 1024 * 1024, dtype=torch.uint8, device=self.device)
-    #         self.draft_num_pages = (draft_budget//page_size + 1)*max_batch_size
-    #         self.draft_paged_kv_indptr = torch.arange(max_batch_size+1, dtype=torch.int32, device=self.device)*(draft_budget//page_size + 1)
-    #         self.draft_paged_kv_indices = torch.arange(self.draft_num_pages, dtype=torch.int32, device=self.device)
-    #         self.draft_paged_kv_last_page_len = torch.ones((max_batch_size), dtype=torch.int32, device=self.device)
-    #         self.draft_wrapper = flashinfer.BatchPrefillWithPagedKVCacheWrapper(self.draft_buffer, "NHD", use_cuda_graph=True,
-    #                                                                             qo_indptr_buf=self.qo_indptr, 
-    #                                                                             paged_kv_indptr_buf=self.draft_paged_kv_indptr, 
-    #                                                                             paged_kv_indices_buf=self.draft_paged_kv_indices, 
-    #                                                                             paged_kv_last_page_len_buf=self.draft_paged_kv_last_page_len)
-    #         torch.library.define(
-    #             "mylib::draft_decode",
-    #             "(Tensor q, Tensor kv_cache) -> Tensor",
-    #         )
-    #         @torch.library.impl("mylib::draft_decode", "cuda")
-    #         def draft_decode(q, kv_cache):
-    #             return self.draft_wrapper.run(
-    #                 q, kv_cache
-    #             )
-    #         @torch.library.register_fake("mylib::draft_decode")
-    #         def draft_decode_abstract(q, kv_cache):
-    #             return torch.empty_like(q)
-
-    #     if self.is_spec:
-    #         with torch.device(self.device):
-    #             self.model.setup_caches(num_pages=max_num_pages, page_size=page_size, spec=self.is_spec, draft_num_pages = self.draft_num_pages, draft_budget = draft_budget, window_size = window_size)
-    #     else:
-    #         with torch.device(self.device):
-    #             self.model.setup_caches(num_pages=max_num_pages, page_size=page_size)

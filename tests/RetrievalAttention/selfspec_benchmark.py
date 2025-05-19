@@ -14,6 +14,12 @@ import argparse
 from MagicDec.Engine.RetrievalAttention.backend import LMBackend_Retro
 from datasets import load_dataset
 
+import sys
+import os
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+from MagicDec.Engine.RetrievalAttention.benchmark.config import generate_config, parse_attn_args
+import json
+
 parser = argparse.ArgumentParser(description='Process model configuration and partitions.')
 parser.add_argument('--model', type=Path, default=Path("/scratch/models/meta-llama/Meta-Llama-3.1-8B/model.pth"), help='model')
 parser.add_argument('--model_name', type=str, default="meta-llama/Meta-Llama-3.1-8B", help='model name')
@@ -35,8 +41,15 @@ parser.add_argument('--seed', type=int, default=123, help='Random seed.')
 parser.add_argument('--printoutput', action='store_true', help='Whether to compile the model.')
 parser.add_argument('--benchmark', action='store_true', help='Whether to compile the model.')
 parser.add_argument('--task', type=str, default=None, help='for longbenchv1.')
+parser.add_argument("--num_examples", type=int, default=-1, help="num of example to evaluate. -1 for all.")
+parser.add_argument("--attn_type", type=str, default="Full_Flash_Attn",                                                     \
+                    choices=["Full_Flash_Attn", "RetroInfer"],                          \
+                    help="Attention method")
+parser.add_argument("--budget_ratio", type=float, default=0.018, help="ratio of budget")
+parser.add_argument("--estimate_ratio", type=float, default=0.25, help="ratio of estimated clusters for RetriveInfer")
 
 args = parser.parse_args()
+
 assert args.prefix_len < args.max_len
 assert (args.prefix_len - args.window_size) % 128 == 0
 assert args.max_len % 128 == 0
@@ -47,17 +60,13 @@ assert (args.draft_budget - 1) % 128 == 0
 DEVICE = 'cuda' if torch.cuda.is_available() else 'cpu'
 global print
 from MagicDec.Engine.tp import init_dist
-use_tp = len(args.rank_group) > 1
+# use_tp = len(args.rank_group) > 1
 global_group = None
 rank = 0
-if use_tp:
-    rank, global_group = init_dist()
-    if rank != args.rank_group[0]:
-        print = lambda *args, **kwargs: None
-
-# if rank == 0:
-#     with open("result.txt", "a") as file:
-#         file.write(f"SnapKV-Selfspec: Prefix:{args.prefix_len}; Bsz:{args.B}; Gamma:{args.gamma}; Draft budget:{args.draft_budget}\n")
+# if use_tp:
+#     rank, global_group = init_dist()
+#     if rank != args.rank_group[0]:
+#         print = lambda *args, **kwargs: None
 
 setup_seed(args.seed)
 print(f"Using device={DEVICE}")
@@ -78,11 +87,22 @@ draft_dec_len = 1
 # Load target model
 engine = LMBackend_Retro(dtype=DTYPE, device=DEVICE, dec_len=target_dec_len, draft_dec_len=draft_dec_len)
 
+model2path = json.load(open("/home/juchanlee/MagicDec/Engine/RetrievalAttention/benchmark/LongBench/config/model2path.json", "r"))
+model2maxlen = json.load(open("/home/juchanlee/MagicDec/Engine/RetrievalAttention/benchmark/LongBench/config/model2maxlen.json", "r"))
+dataset2prompt = json.load(open("/home/juchanlee/MagicDec/Engine/RetrievalAttention/benchmark/LongBench/config/dataset2prompt.json", "r"))
+dataset2maxlen = json.load(open("/home/juchanlee/MagicDec/Engine/RetrievalAttention/benchmark/LongBench/config/dataset2maxlen.json", "r"))
+
 MODEL = args.model_name.split("/")[-1]
 TASK = args.task
-path_to_clusters = f"./Engine/SqueezedAttention/fixed-prompt-clusters/{MODEL}/{TASK}/"
-engine.load_model(args.model_name, path_to_clusters, args.percentile)
-engine.load_draft_model(args.model_name, BATCH_SIZE, MAX_LEN_TARGET)
+
+num_examples = args.num_examples
+attn_type = args.attn_type
+device = "auto"
+dtype = torch.bfloat16
+max_length = model2maxlen[MODEL]
+
+engine.load_model(args.model_name, max_length, dtype, device)
+# engine.load_draft_model(args.model_name, BATCH_SIZE, MAX_LEN_TARGET)
 vocab_size = engine.model.config.vocab_size
 if args.compile:
     engine.compile()
@@ -143,32 +163,8 @@ if benchmark:
 total_spec_tokens = 0
 total_acc_tokens  = 0
 
-
-# for dataset
-import json
-# we design specific prompt format and max generation length for each task, feel free to modify them to optimize model output
-dataset2prompt = json.load(open("./Engine/SqueezedAttention/LongBench/config/dataset2prompt.json", "r"))
-dataset2maxlen = json.load(open("./Engine/SqueezedAttention/LongBench/config/dataset2maxlen.json", "r"))
-model2path = json.load(open("./Engine/SqueezedAttention/LongBench/config/model2path.json", "r"))
-model2maxlen = json.load(open("./Engine/SqueezedAttention/LongBench/config/model2maxlen.json", "r"))
-
-max_length = model2maxlen[MODEL]
 prompt_format = dataset2prompt[args.task]
-prompt_only_format = dataset2prompt[args.task + '_prompt']
 max_gen = dataset2maxlen[args.task]
-
-def preprocess_input(task, json_obj):
-    different_prefix_index = json_obj.pop('different_prefix_index')
-    prompt = prompt_format.format(**json_obj)
-    prompt_noquery = prompt_only_format.format(**json_obj)
-
-    # perform truncation
-    prompt, truncated_shared_prefix_length = truncate_fn(prompt, prompt_noquery, tokenizer, max_length, task, DEVICE, MODEL)
-
-    # encode input
-    input = tokenizer(prompt, truncation=False, return_tensors="pt").to(DEVICE)
-    
-    return input['input_ids'], truncated_shared_prefix_length, different_prefix_index
 
 # for step, batch in tqdm(enumerate(dataloader)):
 # for step, batch in tqdm(enumerate(dataloader), total=num_eval_steps):
@@ -176,7 +172,7 @@ for step, batch in tqdm(enumerate(dataset), total=num_eval_steps):
     if step >= num_eval_steps:
         break
     # input_ids = batch[0].to(DEVICE)
-    input_ids, truncated_shared_prefix_length, different_prefix_index = preprocess_input(args.task, batch)            
+    input_ids, attention_masks, attn_config  = engine.preprocess_input(batch, prompt_format, args.attn_type, args.model_name, args.budget_ratio, args.estimate_ratio)
     terminal = False
     tokens_buffer= torch.zeros((BATCH_SIZE, args.gamma+1), device=DEVICE).long()
     output = torch.zeros(BATCH_SIZE, MAX_LEN_TARGET+1, device=DEVICE).long()
@@ -184,9 +180,11 @@ for step, batch in tqdm(enumerate(dataset), total=num_eval_steps):
     num_nodes = torch.zeros(BATCH_SIZE,device=DEVICE).long()
     num_nodes += input_ids.shape[1]
     input_len = num_nodes.max()
+
     tokens_buffer[:, :1] = engine.encode(input_ids, truncated_shared_prefix_length, different_prefix_index)[:,-1:]
     torch.cuda.synchronize()
     start = time.perf_counter()
+
     while terminal == False:
 
         # Draft speculation
