@@ -430,8 +430,9 @@ class _centroid_lookup_simple(torch.autograd.Function):
         capability = torch.cuda.get_device_capability()
         if capability[0] < 8:
             raise RuntimeError("Flash attention currently only supported for compute capability >= 80")
-        BLOCK_N = 128
-        BLOCK_M = 128
+        # BLOCK_N = 128
+        BLOCK_N = 64 # halve block size due to shared memory constraint
+        BLOCK_M = 64
 
         # shape constraints
         Lq, Lk = q.shape[-1], k.shape[-1]
@@ -498,6 +499,8 @@ class _attention_qk(torch.autograd.Function):
             raise RuntimeError("Flash attention currently only supported for compute capability >= 80")
         BLOCK_N = 128
         BLOCK_M = 128
+        # BLOCK_N = 64
+        # BLOCK_M = 64
         BLOCK_KV = 2048
 
         # shape constraints
@@ -541,6 +544,11 @@ class _attention_qk(torch.autograd.Function):
 
         # Reduction Kernel
         grid2 = (triton.cdiv(q.shape[2], BLOCK_M), q.shape[0] * q.shape[1], 1)
+
+        print("Out_tmp.shape", o_tmp.shape, "strides", o_tmp.stride())
+        print("Out.shape", Out.shape,   "strides", Out.stride())
+        print("head_start_block:", head_start_block.tolist())
+        print("head_kv_len:", head_kv_len.tolist())
 
         # use output from causal step as input here
         _reduce_kernel_qk[grid2](

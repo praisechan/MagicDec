@@ -29,8 +29,7 @@ parser.add_argument('--B', type=int, default=45, help='Batch size.')
 parser.add_argument('--prefix_len', type=int, default=32800, help='Prefix length')
 parser.add_argument('--max_len', type=int, default=32896, help='Generate length')
 parser.add_argument('--window_size', type=int, default=32, help='Generate length')
-parser.add_argument('--chunk_size', type=int, default=16, help='Chunk size')
-parser.add_argument('--latest_k', type=int, default=16, help='in Quest, force to see latest k tokens')
+parser.add_argument('--percentile', type=float, default=0.9, help='Generate length')
 
 parser.add_argument('--seed', type=int, default=123, help='Random seed.')
 
@@ -83,8 +82,8 @@ engine = LMBackend_Squeeze(dtype=DTYPE, device=DEVICE, dec_len=target_dec_len, d
 MODEL = args.model_name.split("/")[-1]
 TASK = args.task
 path_to_clusters = f"./Engine/SqueezedAttention/fixed-prompt-clusters/{MODEL}/{TASK}/"
-engine.load_model(args.model_name, path_to_clusters)
-engine.load_draft_model(args.model_name, args.draft_budget, args.chunk_size, BATCH_SIZE, MAX_LEN_TARGET, args.latest_k)
+engine.load_model(args.model_name, path_to_clusters, args.percentile)
+engine.load_draft_model(args.model_name, BATCH_SIZE, MAX_LEN_TARGET)
 vocab_size = engine.model.config.vocab_size
 if args.compile:
     engine.compile()
@@ -195,7 +194,6 @@ for step, batch in tqdm(enumerate(dataset), total=num_eval_steps):
         if benchmark:
             torch.cuda.synchronize()
             t1 = time.time()
-        breakpoint()
         # tokens_buffer[:,1:1+args.gamma] = engine.speculate(tokens_buffer[:, 0].view(-1,1), BATCH_SIZE, args.gamma)
         tokens_buffer[:,1:1+args.gamma] = engine.speculate(tokens_buffer[:, 0].view(-1,1), BATCH_SIZE, args.gamma)
 

@@ -25,11 +25,15 @@ import random
 import argparse
 
 import copy
-from MagicDec.Engine.SqueezedAttention.llama_flash_attn_monkey_patch import replace_llama_attn_with_flash_attn
 import torch.distributed as dist
 import torch.multiprocessing as mp
+from MagicDec.Engine.RetrievalAttention.model_hub import LlamaModel, QwenModel
 
-class LMBackend_Squeeze:
+import sys
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+from config import generate_config, parse_attn_args
+
+class LMBackend_Retro:
     def __init__(self, dtype = torch.bfloat16, device: str = "cuda:0", dec_len: int = 1, draft_dec_len: int = None) -> None:
         self.dtype = dtype
         self.device = device
@@ -49,52 +53,34 @@ class LMBackend_Squeeze:
         self.input_tokens = None
         self.verified_cachelength = 0
 
-    # def load_model(self, checkpoints: str, use_tp: bool, rank_group=None, group = None):
-    #     self.model: Transformer = load_model_snapKV(checkpoint_path=checkpoints, device=self.device, precision=self.dtype, use_tp=use_tp, rank_group=rank_group, group=group)        
-    def set_attrs(self, obj, attrs: dict):
-      for name, val in attrs.items():
-          setattr(obj, name, val)
-
-    def load_model(self, model_path: str, path_to_clusters: str, percentile):
-        # config params
-        config_params = {}
-        config_params['path_to_clusters_cosine'] = path_to_clusters
-        config_params['use_centroids'] = False
-        config_params['hierarchical_lookup'] = False
-        config_params['percent_clusters'] = 5 #not used actually in target model
-        config_params['percent_clusters_l2'] = 5 #not used actually in target model
-        config_params['percentile'] = percentile #not used actually in target model
-        config_params['percentile_lower'] = 0.7 #not used actually in target model
-        config_params['obs_window'] = 100 #not used actually in target model
-
-        if "LLaMA-2-7B-32K" in model_path or "LWM" in model_path or "longchat" in model_path:
-            config = LlamaConfig.from_pretrained(model_path)
-
-            # set attn implementation
-            config._flash_attn_2_enabled = True
-            config._attn_implementation = "flash_attention_2"
-            dtype = torch.bfloat16
-
-            # clustering config parameters
-            config.path_to_clusters_cosine = config_params['path_to_clusters_cosine']
-            config.use_centroids = config_params['use_centroids']
-            config.hierarchical_lookup = config_params['hierarchical_lookup']
-            config.percent_clusters = config_params['percent_clusters']
-            config.percent_clusters_l2 = config_params['percent_clusters_l2']
-            config.percentile = config_params['percentile']
-            config.percentile_lower = config_params['percentile_lower']
-            config.obs_window = config_params['obs_window']
-
-            # load model
-            model = LlamaForCausalLM.from_pretrained(model_path, config=config, torch_dtype=dtype)
-            model = model.to(device)
-            tokenizer = LlamaTokenizer.from_pretrained(model_path)
-
+    def load_model(self, model_path, max_len, dtype, device):
+        if 'Llama' in model_path:
+            llm = LlamaModel(model_path,
+                max_length=max_len,
+                dtype=dtype,
+                device_map=device)
+        elif 'Qwen' in model_path:
+            llm = QwenModel(model_path,
+                max_length=max_len,
+                dtype=dtype,
+                device_map=device)
         else:
-            assert (False) # not implemented yet for other models
+            raise ValueError(f"Unsupported model: {model_path}")
 
-        self.model = model.eval()
-        self.target_cfg = config_params
+        llm.tokenizer.pad_token = llm.tokenizer.eos_token
+        llm.tokenizer.padding_side = "left"
+        
+        self.model = llm
+        
+        attn_config = generate_config(
+            model2path[model_name], 
+            input_ids.shape[1], 
+            attn_type,
+            budget_ratio=args.budget_ratio,
+            estimate_ratio=args.estimate_ratio,
+        )        
+        
+        return llm
 
     def load_draft_model(self, model_path: str, bsz, max_len):
         self.input_tokens = torch.zeros(bsz, max_len+1, device="cuda").long()
@@ -156,12 +142,11 @@ class LMBackend_Squeeze:
       for i in range(self.model.model.config.num_hidden_layers):
         self.model.model.layers[i].self_attn.use_centroids = True      
       for i in range(gamma):
-        with torch.autocast(device_type='cuda', dtype=torch.bfloat16):
-            outputs = self.model(
-                next_input_token,
-                # past_key_values=draft_past_key_values,
-                use_cache=False,
-            )
+        outputs = self.model(
+            next_input_token,
+            # past_key_values=draft_past_key_values,
+            use_cache=False,
+        )
         
         last_token = torch.argmax(outputs.logits[:,-1,:], dim=-1)
         next_input_token = torch.concat((next_input_token, last_token.unsqueeze(-1)), dim=1)

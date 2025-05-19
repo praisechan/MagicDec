@@ -1,0 +1,4 @@
+# ninja log v5
+0	17852	1747618626603721660	/home/juchanlee/MagicDec/Engine/RetrievalAttention/library/retroinfer/build/temp.linux-x86_64-cpython-310/retroinfer_kernels/src/wave_buffer_cpu.o	c008075847ebc846
+3	43608	1747618670531762502	/home/juchanlee/MagicDec/Engine/RetrievalAttention/library/retroinfer/build/temp.linux-x86_64-cpython-310/retroinfer_kernels/src/gather_copy.o	a84a462665862bf9
+4	52754	1747618723587807473	/home/juchanlee/MagicDec/Engine/RetrievalAttention/library/retroinfer/build/temp.linux-x86_64-cpython-310/retroinfer_kernels/src/batch_gemm_softmax.o	308d58c90a1cd5d8

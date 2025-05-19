@@ -22,11 +22,11 @@ import torch.multiprocessing as mp
 import pickle
 import textwrap
 import sys
-from squeezedattention.utils import build_chat, truncate_fn
+from squeezedattention.utils import truncate_fn
 
 def parse_args(args=None):
     parser = argparse.ArgumentParser()
-    parser.add_argument('--model', type=str, default=None, choices=["llama2-7b-chat-4k", "longchat-v1.5-7b-32k", "xgen-7b-8k",
+    parser.add_argument('--model', type=str, default=None, choices=["llama2-7b-chat-4k", "longchat-7b-v1.5-32k", "xgen-7b-8k",
                                                                     "internlm-7b-8k", "chatglm2-6b", "chatglm2-6b-32k",
                                                                     "chatglm3-6b-32k", "vicuna-v1.5-7b-16k", "LLaMA-2-7B-32K",
                                                                     "LWM-Text-Chat-1M"])
@@ -54,13 +54,13 @@ def get_pred(rank, world_size, data, max_length, max_gen, prompt_format, prompt_
         prompt_noquery = prompt_only_format.format(**json_obj)
 
         # perform truncation
-        prompt, truncated_shared_prefix_length = truncate_fn(prompt, prompt_noquery, tokenizer, max_length, dataset, device)
+        prompt, truncated_shared_prefix_length = truncate_fn(prompt, prompt_noquery, tokenizer, max_length, dataset, device, model_name)
         model.model.shared_prefix_length = truncated_shared_prefix_length
         model.model.different_prefix_index = different_prefix_index
 
         # encode input
         input = tokenizer(prompt, truncation=False, return_tensors="pt").to(device)
-
+        # breakpoint()
         context_length = input.input_ids.shape[-1]
         if dataset == "samsum": # prevent illegal output on samsum (model endlessly repeat "\nDialogue"), might be a prompting issue
             output = model.generate(
@@ -82,6 +82,7 @@ def get_pred(rank, world_size, data, max_length, max_gen, prompt_format, prompt_
                 temperature=1.0,
                 use_cache=True
             )[0]
+        # breakpoint()
         pred = tokenizer.decode(output[context_length:], skip_special_tokens=True)
         with open(out_path, "a", encoding="utf-8") as f:
             json.dump({"pred": pred, "answers": json_obj["answers"], "all_classes": json_obj["all_classes"], "length": json_obj["length"]}, f, ensure_ascii=False)
@@ -196,6 +197,8 @@ if __name__ == '__main__':
             data_all[i]['different_prefix_index'] = i
 
         data_subsets = [data_all[i::world_size] for i in range(world_size)]
+
+        # get_pred(0, world_size, data_subsets[0], max_length, max_gen, prompt_format, prompt_only_format, dataset, device, model_name, model2path, out_path, config_params)
 
         processes = []
         for rank in range(world_size):

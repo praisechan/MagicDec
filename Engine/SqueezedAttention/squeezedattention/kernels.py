@@ -44,6 +44,12 @@ def compact_indices_kernel(
     valid_mask = mask_values == 1
     tl.store(out_ptr + write_positions, offsets, mask=valid_mask)
 
+# from triton import Config
+# # pick a reasonable number of warps and stages
+# @triton.autotune(
+#     configs=[Config({},num_stages=2)],  # pipeline depth; try 1 or 2
+#     key=['BLOCK_M'],
+# )
 # simple centroid lookup kernel
 @triton.jit
 def _fwd_centroid_simple_kernel_qk(
