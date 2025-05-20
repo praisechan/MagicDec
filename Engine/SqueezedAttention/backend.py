@@ -136,15 +136,15 @@ class LMBackend_Squeeze:
                 use_cache=True,
                 # output_all_token=True
             )
-            outputs_2 = self.model.generate(input_from_prefill,max_new_tokens=1,num_beams=1,do_sample=False,temperature=1.0,use_cache=True)[0]
+            # outputs_2 = self.model.generate(input_from_prefill,max_new_tokens=1,num_beams=1,do_sample=False,temperature=1.0,use_cache=True)[0]
             
             verified_length = input_ids.shape[-1]
             verified_logits = outputs.logits[:,-verified_length:]
             
             verified_tokens = torch.argmax(verified_logits, dim=-1)
-            verified_tokens_2 = outputs_2[-verified_length:].unsqueeze(0)
+            # verified_tokens_2 = outputs_2[-verified_length:].unsqueeze(0)
 
-            return verified_tokens_2
+            return verified_tokens
 
     @torch.inference_mode()
     def speculate(self, input_ids: torch.LongTensor, bsz, gamma):

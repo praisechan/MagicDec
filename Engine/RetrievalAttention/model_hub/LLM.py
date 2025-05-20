@@ -187,11 +187,11 @@ class LLM:
             outputs_ids.append(output_ids)
 
         decode_end = time.time()
-        print(colored(
-            f"Decoding latency: {round((decode_end - decode_start) * 1000 / (self.max_new_length - 1), 2)} ms/step, "
-            f"Throughput: {round(self.batch_size * (self.max_new_length - 1) / (decode_end - decode_start), 2)} tokens/s\n",
-            'green'
-        ))
+        # print(colored(
+        #     f"Decoding latency: {round((decode_end - decode_start) * 1000 / (self.max_new_length - 1), 2)} ms/step, "
+        #     f"Throughput: {round(self.batch_size * (self.max_new_length - 1) / (decode_end - decode_start), 2)} tokens/s\n",
+        #     'green'
+        # ))
         
         outputs_ids = torch.cat(outputs_ids, dim=-1).tolist()
         

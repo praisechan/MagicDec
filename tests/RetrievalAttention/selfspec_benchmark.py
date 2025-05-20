@@ -34,7 +34,6 @@ parser.add_argument('--B', type=int, default=45, help='Batch size.')
 parser.add_argument('--prefix_len', type=int, default=32800, help='Prefix length')
 parser.add_argument('--max_len', type=int, default=32896, help='Generate length')
 parser.add_argument('--window_size', type=int, default=32, help='Generate length')
-parser.add_argument('--percentile', type=float, default=0.9, help='Generate length')
 
 parser.add_argument('--seed', type=int, default=123, help='Random seed.')
 
@@ -71,11 +70,11 @@ rank = 0
 setup_seed(args.seed)
 print(f"Using device={DEVICE}")
 
-MAX_LEN_TARGET = args.max_len
-if args.dataset == "longbenchv1": 
-    MAX_LEN_TARGET = 65664
-if args.dataset == "longbenchv1-32k":
-    MAX_LEN_TARGET = 49125
+# MAX_LEN_TARGET = args.max_len
+# if args.dataset == "longbenchv1": 
+#     MAX_LEN_TARGET = 65664
+# if args.dataset == "longbenchv1-32k":
+#     MAX_LEN_TARGET = 49125
 DTYPE = torch.bfloat16
 BATCH_SIZE = args.B
 benchmark = args.benchmark
@@ -100,8 +99,10 @@ attn_type = args.attn_type
 device = "auto"
 dtype = torch.bfloat16
 max_length = model2maxlen[MODEL]
+prompt_format = dataset2prompt[TASK]
+max_new_tokens = dataset2maxlen[TASK]
 
-engine.load_model(args.model_name, max_length, dtype, device)
+engine.load_model(args.model_name, max_length, dtype, device, BATCH_SIZE)
 # engine.load_draft_model(args.model_name, BATCH_SIZE, MAX_LEN_TARGET)
 vocab_size = engine.model.config.vocab_size
 if args.compile:
@@ -137,7 +138,7 @@ print(f"eot_1: {eot_1}, eot_2: {eot_2}")
 # elif args.dataset.startswith("ruler"):
 #     dataset = convert_ruler_dataset(tokenizer=tokenizer, task=args.dataset.split(":")[1], model_name=args.model_name, seq_len=args.prefix_len)
 if args.dataset == "longbenchv1":
-    dataset = load_dataset('THUDM/LongBench', args.task, split='test')
+    dataset = load_dataset('THUDM/LongBench', TASK, split='test')
     dataset = [data_sample for data_sample in dataset]
 
     for i in range(len(dataset)):
@@ -163,8 +164,6 @@ if benchmark:
 total_spec_tokens = 0
 total_acc_tokens  = 0
 
-prompt_format = dataset2prompt[args.task]
-max_gen = dataset2maxlen[args.task]
 
 # for step, batch in tqdm(enumerate(dataloader)):
 # for step, batch in tqdm(enumerate(dataloader), total=num_eval_steps):
@@ -172,16 +171,16 @@ for step, batch in tqdm(enumerate(dataset), total=num_eval_steps):
     if step >= num_eval_steps:
         break
     # input_ids = batch[0].to(DEVICE)
-    input_ids, attention_masks, attn_config  = engine.preprocess_input(batch, prompt_format, args.attn_type, args.model_name, args.budget_ratio, args.estimate_ratio)
+    input_ids = engine.preprocess_input(batch, prompt_format, args.attn_type, args.model_name, args.budget_ratio, args.estimate_ratio)
     terminal = False
     tokens_buffer= torch.zeros((BATCH_SIZE, args.gamma+1), device=DEVICE).long()
-    output = torch.zeros(BATCH_SIZE, MAX_LEN_TARGET+1, device=DEVICE).long()
-    output[:, :input_ids.shape[1]] = input_ids
+    verified_tokens = torch.zeros(BATCH_SIZE, max_length+1, device=DEVICE).long()
+    verified_tokens[:, :input_ids.shape[1]] = input_ids
     num_nodes = torch.zeros(BATCH_SIZE,device=DEVICE).long()
     num_nodes += input_ids.shape[1]
     input_len = num_nodes.max()
 
-    tokens_buffer[:, :1] = engine.encode(input_ids, truncated_shared_prefix_length, different_prefix_index)[:,-1:]
+    tokens_buffer[:, 0] = torch.LongTensor(engine.encode(input_ids, max_new_tokens)[0])
     torch.cuda.synchronize()
     start = time.perf_counter()
 
@@ -191,8 +190,8 @@ for step, batch in tqdm(enumerate(dataset), total=num_eval_steps):
         if benchmark:
             torch.cuda.synchronize()
             t1 = time.time()
-        # tokens_buffer[:,1:1+args.gamma] = engine.speculate(tokens_buffer[:, 0].view(-1,1), BATCH_SIZE, args.gamma)
-        tokens_buffer[:,1:1+args.gamma] = engine.speculate(tokens_buffer[:, 0].view(-1,1), BATCH_SIZE, args.gamma)
+        tokens_buffer[:,1:1+args.gamma] = torch.LongTensor(engine.speculate(tokens_buffer[:, 0].view(-1,1), args.gamma))
+        # tokens_buffer[:,1:1+args.gamma] = torch.LongTensor(engine.speculate(input_ids, args.gamma))
 
         if benchmark:
             torch.cuda.synchronize()
@@ -200,7 +199,8 @@ for step, batch in tqdm(enumerate(dataset), total=num_eval_steps):
             draft_time+=t2-t1
 
         # Target Verification
-        target_tokens = engine.verify(tokens_buffer)
+        # target_tokens = engine.verify(tokens_buffer)
+        target_tokens = torch.LongTensor(engine.verify(tokens_buffer[:, 0].view(-1,1), args.gamma+1)).to(DEVICE) #TODO: verify stage should be batch-fashion, but this verify() is auto-regressive. 
 
         if benchmark:
             torch.cuda.synchronize()
@@ -239,25 +239,9 @@ for step, batch in tqdm(enumerate(dataset), total=num_eval_steps):
         if condition.any():
             terminal = True
         
-        # # Rollback the memory length
-        # engine.cachelens = engine.cachelens - args.gamma - 1
-        # engine.paged_kv_last_page_len = engine.paged_kv_last_page_len - args.gamma - 1
-        # engine.draft_cachelens = engine.draft_cachelens - args.gamma -1
-        # engine.draft_paged_kv_last_page_len = engine.draft_paged_kv_last_page_len - args.gamma -1
-
-        # Put the accepted tokens to output
-        # positions = torch.arange(output.shape[1], device=DEVICE).view(1, -1).repeat(BATCH_SIZE, 1)
-        # mask = (positions < (engine.cachelens.view(-1,1) + accept_nums)) & (positions >= engine.cachelens.view(-1, 1))
         positions_buffer = torch.arange(args.gamma+1, device=DEVICE).view(1, -1).repeat(BATCH_SIZE, 1)
         mask_buffer = positions_buffer<accept_nums.view(-1,1)
-        # output[mask] = tokens_buffer[mask_buffer]
 
-        # # Set the cache length to the accepted length
-        # engine.cachelens += accept_nums.flatten().to(torch.int32)
-        # engine.paged_kv_last_page_len += accept_nums.flatten().to(torch.int32)
-        # engine.draft_cachelens += accept_nums.flatten().to(torch.int32)
-        # engine.draft_paged_kv_last_page_len += accept_nums.flatten().to(torch.int32)
-        
         # Get the bonus tokens
         indices = accept_nums - 1
         bonus_tokens = target_tokens.gather(1, indices)
@@ -266,7 +250,6 @@ for step, batch in tqdm(enumerate(dataset), total=num_eval_steps):
         num_nodes += accept_nums.flatten()
 
         # Check for termination conditions with accepted token number
-        # num_gen_token_max = 16
         num_gen_token_max = 80
         if args.dataset == "longbenchv1" or args.dataset == "longbenchv1-32k":
             #longbenchv1 does not have fixed prefix len
