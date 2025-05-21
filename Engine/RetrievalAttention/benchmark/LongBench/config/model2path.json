@@ -3,5 +3,5 @@
   "llama-3.1-8b": "meta-llama/Llama-3.1-8B-Instruct",
   "qwen2.5-7b": "Qwen/Qwen2.5-7B-Instruct",
   "qwen2.5-72b": "Qwen/Qwen2.5-72B-Instruct",
-  "llama-3.1-8b": "meta-llama/Meta-Llama-3.1-8B",
+  "Meta-Llama-3.1-8B": "meta-llama/Meta-Llama-3.1-8B"
 }

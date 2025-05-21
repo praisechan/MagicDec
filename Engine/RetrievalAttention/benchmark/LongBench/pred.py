@@ -28,7 +28,7 @@ def parse_args(args=None):
                         choices=["Full_Flash_Attn", "RetroInfer"],                          \
                         help="Attention method")
     parser.add_argument('--model', type=str, default=None, choices=
-                        ["llama-3-8b-1048k", "qwen2.5-7b", "llama-3.1-8b", "qwen2.5-72b"])
+                        ["llama-3-8b-1048k", "qwen2.5-7b", "llama-3.1-8b", "qwen2.5-72b","Meta-Llama-3.1-8B" ])
     parser.add_argument("--dtype", type=str, default="bf16", choices=["fp16", "bf16"], help="Dtype")
     parser.add_argument('--e', action='store_true', help="Evaluate on LongBench-E")
     parser.add_argument('--task', type=str, required=True, help="task name. work when --e is false")

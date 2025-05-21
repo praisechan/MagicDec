@@ -74,34 +74,17 @@ class LMBackend_Retro:
         self.input_tokens = torch.zeros(bsz, max_len+1, device="cuda").long()
         self.cachelens = torch.zeros(bsz, dtype=torch.int32, device=self.device)
 
-    # def load_draft_model(self, model_path: str, bsz, max_len):
-    #     if not hasattr(self, "model"):
-    #         self.load_model(model_path)                
+    def preprocess_input(self, data, prompt_format, attn_type, model_path, budget_ratio, estimate_ratio, dataset, prefix_len):
+        inputs = None
+        if dataset == "longbenchv1":
+          prompt = prompt_format.format(**data)
+          inputs = self.model.tokenizer([prompt], return_tensors="pt", padding=True)
+          input_ids = inputs.input_ids
+          self.attention_masks = inputs.attention_mask
 
-        # # 2) shallow‐copy your top‐level wrapper
-        # self.draft_model = copy.copy(self.model)
-
-        # # 3) shallow‐copy the inner LlamaModel so it can hold its own config
-        # inner_copy = copy.copy(self.model.model)
-        # inner_copy.config = draft_cfg            # only affects the draft copy
-
-        # # 4) re‐wire the draft wrapper
-        # self.draft_model.model  = inner_copy
-        # self.draft_model.config = draft_cfg     # so generate() sees it too
-        
-        # self.draft_model.to(self.device).eval()
-
-        # draft_model = LlamaForCausalLM(draft_cfg)
-        # draft_model.model = self.model.model
-        # draft_model.lm_head = self.model.lm_head
-        # self.draft_model = draft_model
-
-    def preprocess_input(self, json_obj, prompt_format, attn_type, model_path, budget_ratio, estimate_ratio):
-        prompt = prompt_format.format(**json_obj)
-
-        inputs = self.model.tokenizer([prompt], return_tensors="pt", padding=True)
-        input_ids = inputs.input_ids
-        self.attention_masks = inputs.attention_mask
+        if dataset == "pg19":
+          input_ids = data[0].unsqueeze(0) # already preprocessed in convert_pg19_dataset()
+          self.attention_masks = torch.ones_like(input_ids)
 
         self.attn_config = generate_config(
             model_path, 
@@ -115,79 +98,38 @@ class LMBackend_Retro:
     # Only used for target verification
     @torch.inference_mode()
     def verify(self, input_ids: torch.LongTensor, gamma):
-      input_from_prefill = torch.concat((self.input_tokens[:, :self.verified_cachelength], input_ids), dim=1)
-      # dec_len = input_ids.shape[1]
-      # self.pre_verify(dec_len=dec_len)
-      # self.model.config=self.target_cfg
-      # self.model.model.config=self.target_cfg
-      # self.set_attrs(self.model, self.target_cfg)
-      # self.set_attrs(self.model.model, self.target_cfg)
+      input_from_start = torch.concat((self.input_tokens[:, :self.verified_cachelength], input_ids), dim=1)
       outputs = self.model.generate(
           attention_type="Full_Flash_Attn",
-          inputs_ids = input_from_prefill.to(self.model.layers[0].device),
+          inputs_ids = input_from_start.to(self.model.layers[0].device),
           attention_masks = self.attention_masks.to(self.model.layers[0].device),
           max_new_length=gamma, 
           attn_config=None
       )
       
-      # verified_length = input_ids.shape[-1]
-      # verified_logits = outputs[:,-verified_length:]
-      
-      # verified_tokens = torch.argmax(verified_logits, dim=-1)
-
       return outputs
 
     @torch.inference_mode()
     def speculate(self, input_ids: torch.LongTensor, gamma):
-      # tokens_buffer= torch.zeros((bsz, gamma), device="cuda").long()
-      # draft_past_key_values = self.draft_past_key_values
-      # next_input_token = input_ids
-
-      # self.model.model.use_centroids = True
-      # for i in range(self.model.model.config.num_hidden_layers):
-      #   self.model.model.layers[i].self_attn.use_centroids = True      
-      # input_from_prefill = input_ids
-      # outputs = self.model.generate(
-      #     attention_type="Full_Flash_Attn",
-      #     inputs_ids = input_from_prefill.to(self.model.layers[0].device),
-      #     attention_masks = self.attention_masks.to(self.model.layers[0].device),
-      #     max_new_length=gamma, 
-      #     attn_config=None
-      # )
-
-      input_from_prefill = torch.concat((self.input_tokens[:, :self.verified_cachelength], input_ids), dim=1)
+      input_from_start = torch.concat((self.input_tokens[:, :self.verified_cachelength], input_ids), dim=1)
       outputs = self.model.generate(
           attention_type="RetroInfer",
-          inputs_ids = input_from_prefill.to(self.model.layers[0].device),
+          inputs_ids = input_from_start.to(self.model.layers[0].device),
           attention_masks = self.attention_masks.to(self.model.layers[0].device),
           max_new_length=gamma, 
           attn_config=self.attn_config
       )
-      # last_token = torch.argmax(outputs.logits[:,-1,:], dim=-1)
-      # next_input_token = torch.concat((next_input_token, last_token.unsqueeze(-1)), dim=1)
-      # tokens_buffer[:, i:i+1] = last_token
-      # draft_past_key_values = outputs.past_key_values
-
-      # self.model.model.use_centroids = False
-      # for i in range(self.model.model.config.num_hidden_layers):
-      #   self.model.model.layers[i].self_attn.use_centroids = False
 
       return outputs
     
     @torch.inference_mode()
     def draft_kv_update(self, input_ids: torch.LongTensor):
-        input_from_prefill = torch.concat((self.input_tokens[:, :self.verified_cachelength], input_ids), dim=1)
-        # outputs = self.draft_model(
-        #     input_from_prefill,
-        #     past_key_values=None,
-        #     use_cache=True,
-        # )
+        input_from_start = torch.concat((self.input_tokens[:, :self.verified_cachelength], input_ids), dim=1)
         self.verified_cachelength += input_ids.shape[1]
-        self.input_tokens[:,:self.verified_cachelength] = input_from_prefill
-        # self.draft_past_key_values = outputs.past_key_values
+        self.input_tokens[:,:self.verified_cachelength] = input_from_start
 
     @torch.inference_mode()
-    def encode(self, input_ids: torch.LongTensor, max_new_tokens):        
+    def encode(self, input_ids: torch.LongTensor):        
         outputs = self.model.generate(
             attention_type="Full_Flash_Attn",
             inputs_ids = input_ids.to(self.model.layers[0].device),

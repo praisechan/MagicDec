@@ -21,25 +21,20 @@ from MagicDec.Engine.RetrievalAttention.benchmark.config import generate_config,
 import json
 
 parser = argparse.ArgumentParser(description='Process model configuration and partitions.')
-parser.add_argument('--model', type=Path, default=Path("/scratch/models/meta-llama/Meta-Llama-3.1-8B/model.pth"), help='model')
-parser.add_argument('--model_name', type=str, default="meta-llama/Meta-Llama-3.1-8B", help='model name')
+parser.add_argument('--model_name', type=str, default="llama-3.1-8b", help='model name')
 parser.add_argument('--dataset', type=str, default="pg19", help='Dataset name.')
-parser.add_argument('--draft_budget', type=int, default=4097, help='Dataset end index.')
-parser.add_argument('--rank_group', nargs='+', type=int, help='Target group of ranks')
 parser.add_argument('--compile', action='store_true', help='Whether to compile the model.')
 
 parser.add_argument('--gamma', type=int, default=7, help='start')
 
 parser.add_argument('--B', type=int, default=45, help='Batch size.')
 parser.add_argument('--prefix_len', type=int, default=32800, help='Prefix length')
-parser.add_argument('--max_len', type=int, default=32896, help='Generate length')
-parser.add_argument('--window_size', type=int, default=32, help='Generate length')
 
 parser.add_argument('--seed', type=int, default=123, help='Random seed.')
 
 parser.add_argument('--printoutput', action='store_true', help='Whether to compile the model.')
 parser.add_argument('--benchmark', action='store_true', help='Whether to compile the model.')
-parser.add_argument('--task', type=str, default=None, help='for longbenchv1.')
+parser.add_argument('--task', type=str, default="gov_report", help='for longbenchv1.')
 parser.add_argument("--num_examples", type=int, default=-1, help="num of example to evaluate. -1 for all.")
 parser.add_argument("--attn_type", type=str, default="Full_Flash_Attn",                                                     \
                     choices=["Full_Flash_Attn", "RetroInfer"],                          \
@@ -49,36 +44,19 @@ parser.add_argument("--estimate_ratio", type=float, default=0.25, help="ratio of
 
 args = parser.parse_args()
 
-assert args.prefix_len < args.max_len
-assert (args.prefix_len - args.window_size) % 128 == 0
-assert args.max_len % 128 == 0
-# assert (args.max_len + 127) // 128 == args.prefix_len // 128 + 1
-assert (args.draft_budget - 1) % 128 == 0
-
 # Init model parallelism
 DEVICE = 'cuda' if torch.cuda.is_available() else 'cpu'
 global print
 from MagicDec.Engine.tp import init_dist
-# use_tp = len(args.rank_group) > 1
 global_group = None
 rank = 0
-# if use_tp:
-#     rank, global_group = init_dist()
-#     if rank != args.rank_group[0]:
-#         print = lambda *args, **kwargs: None
 
 setup_seed(args.seed)
 print(f"Using device={DEVICE}")
 
-# MAX_LEN_TARGET = args.max_len
-# if args.dataset == "longbenchv1": 
-#     MAX_LEN_TARGET = 65664
-# if args.dataset == "longbenchv1-32k":
-#     MAX_LEN_TARGET = 49125
 DTYPE = torch.bfloat16
 BATCH_SIZE = args.B
 benchmark = args.benchmark
-# checkpoint_path = args.model
 
 target_dec_len = args.gamma + 1
 draft_dec_len = 1
@@ -98,20 +76,18 @@ num_examples = args.num_examples
 attn_type = args.attn_type
 device = "auto"
 dtype = torch.bfloat16
+model_path = model2path[args.model_name]
 max_length = model2maxlen[MODEL]
 prompt_format = dataset2prompt[TASK]
-max_new_tokens = dataset2maxlen[TASK]
 
-engine.load_model(args.model_name, max_length, dtype, device, BATCH_SIZE)
-# engine.load_draft_model(args.model_name, BATCH_SIZE, MAX_LEN_TARGET)
+engine.load_model(model_path, max_length, dtype, device, BATCH_SIZE)
 vocab_size = engine.model.config.vocab_size
 if args.compile:
     engine.compile()
-# engine.setup_caches(max_batch_size=BATCH_SIZE, max_seq_length=MAX_LEN_TARGET, draft_budget=args.draft_budget, window_size=args.window_size)
 
 # Load dataset
-tokenizer = AutoTokenizer.from_pretrained(args.model_name)
-# tokenizer.pad_token = tokenizer.eos_token
+# tokenizer = AutoTokenizer.from_pretrained(model_path)
+tokenizer = engine.model.tokenizer
 eot_1 = tokenizer.eos_token_id
 if tokenizer.unk_token_id is not None:
     eot_2 = tokenizer.unk_token_id
@@ -119,8 +95,8 @@ else:
     eot_2 = tokenizer.encode("<|eot_id|>")[-1]
 print(f"eot_1: {eot_1}, eot_2: {eot_2}")
 
-# if args.dataset == "pg19":
-#     dataset = convert_pg19_dataset(tokenizer=tokenizer, seq_len=args.prefix_len)
+if args.dataset == "pg19":
+  dataset = convert_pg19_dataset(tokenizer=engine.model.tokenizer, seq_len=args.prefix_len)
 # elif args.dataset == "c4":
 #     dataset = convert_c4_dataset(tokenizer=tokenizer, seq_len=args.prefix_len)
 # elif args.dataset == "wiki":
@@ -137,12 +113,8 @@ print(f"eot_1: {eot_1}, eot_2: {eot_2}")
 #     dataset = convert_longbench_v2_sum_dataset(tokenizer=tokenizer, seq_len=args.prefix_len)
 # elif args.dataset.startswith("ruler"):
 #     dataset = convert_ruler_dataset(tokenizer=tokenizer, task=args.dataset.split(":")[1], model_name=args.model_name, seq_len=args.prefix_len)
-if args.dataset == "longbenchv1":
+elif args.dataset == "longbenchv1":
     dataset = load_dataset('THUDM/LongBench', TASK, split='test')
-    dataset = [data_sample for data_sample in dataset]
-
-    for i in range(len(dataset)):
-        dataset[i]['different_prefix_index'] = i
 else:
     raise ValueError(f"Unknown dataset {args.dataset}")
 
@@ -171,7 +143,7 @@ for step, batch in tqdm(enumerate(dataset), total=num_eval_steps):
     if step >= num_eval_steps:
         break
     # input_ids = batch[0].to(DEVICE)
-    input_ids = engine.preprocess_input(batch, prompt_format, args.attn_type, args.model_name, args.budget_ratio, args.estimate_ratio)
+    input_ids = engine.preprocess_input(batch, prompt_format, args.attn_type, model_path, args.budget_ratio, args.estimate_ratio, args.dataset, args.prefix_len)
     terminal = False
     tokens_buffer= torch.zeros((BATCH_SIZE, args.gamma+1), device=DEVICE).long()
     verified_tokens = torch.zeros(BATCH_SIZE, max_length+1, device=DEVICE).long()
@@ -180,7 +152,7 @@ for step, batch in tqdm(enumerate(dataset), total=num_eval_steps):
     num_nodes += input_ids.shape[1]
     input_len = num_nodes.max()
 
-    tokens_buffer[:, 0] = torch.LongTensor(engine.encode(input_ids, max_new_tokens)[0])
+    tokens_buffer[:, 0] = torch.LongTensor(engine.encode(input_ids)[0])
     torch.cuda.synchronize()
     start = time.perf_counter()
 
@@ -304,8 +276,8 @@ for step, batch in tqdm(enumerate(dataset), total=num_eval_steps):
             draft_time = 0.0
             target_time = 0.0
             verify_loop = 0.0
-    if use_tp:
-        dist.barrier()
+    # if use_tp:
+    #     dist.barrier()
 
 print(f"Final tokens per second :{num_gen_tokens/total_time}")
 
@@ -358,22 +330,23 @@ if total_spec_tokens > 0:
 
 
 import os, csv
-CSV_PATH = f"/home/juchanlee/MagicDec/output/Quest/{MODEL}_{args.dataset}_acceptance_rates.csv"
+CSV_PATH = f"/home/juchanlee/MagicDec/output/RetroInfer/{MODEL}_{args.dataset}_acceptance_rates.csv"
 # if the file doesn't yet exist, write the header
 if not os.path.exists(CSV_PATH):
     with open(CSV_PATH, "w", newline="") as f:
         writer = csv.writer(f)
-        writer.writerow(["prefix_len", "draft_budget", "gamma", "task", "accept_rate_total", "accept_rate_per_token"])
+        writer.writerow(["attn_type", "prefix_len","budget_ratio", "gamma", "task", "accept_rate_total", "accept_rate_per_token"])
         
 # append to CSV
 with open(CSV_PATH, "a", newline="") as f:
     writer = csv.writer(f)
     writer.writerow([
+        args.attn_type,
         args.prefix_len,
-        args.draft_budget,
+        args.budget_ratio,
         args.gamma,
         args.task,
-        f"{accept_rate_total:.4f}"
+        f"{accept_rate_total:.4f}",
         f"{accept_rate_per_token:.4f}"
     ])
 # if rank == 0:
