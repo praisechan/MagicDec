@@ -222,8 +222,7 @@ for step, batch in tqdm(enumerate(dataset), total=num_eval_steps):
         num_nodes += accept_nums.flatten()
 
         # Check for termination conditions with accepted token number
-        num_gen_token_max = 1024
-        # num_gen_token_max = 80
+        num_gen_token_max = 80
         if args.dataset == "longbenchv1" or args.dataset == "longbenchv1-32k":
             #longbenchv1 does not have fixed prefix len
             if num_nodes.max() - input_len >= num_gen_token_max:
