@@ -109,20 +109,10 @@ if args.dataset == "pg19":
 else:
   num_eval_steps = len(dataloader)
 
-total_time = 0.0
+num_gen_token_max = 128
 num_gen_tokens = 0
 verify_steps = 0
 settle_steps = 0
-
-if benchmark:
-    draft_time = 0.0
-    target_time = 0.0
-    verify_loop = 0.0
-
-# initialize global counters
-total_spec_tokens = 0
-total_acc_tokens  = 0
-
 
 for step, batch in tqdm(enumerate(dataset), total=num_eval_steps):
     if step >= num_eval_steps:
@@ -163,7 +153,7 @@ for step, batch in tqdm(enumerate(dataset), total=num_eval_steps):
             input_from_start = torch.concat((engine.input_tokens[:, :engine.verified_cachelength], tokens_buffer), dim=1)
             draft_tokens = input_from_start[:, -(num_unsettled_tokens+args.gamma1):]
             flag_accept_matrix = (target_tokens[:, :num_unsettled_tokens+args.gamma1] == draft_tokens)  # shape: (BATCH_SIZE, gamma)
-            breakpoint()
+
             eot_condition = ((draft_tokens == eot_1) | (draft_tokens == eot_2))  # shape: (BATCH_SIZE, gamma)
 
             # Compute accept_flags by considering both the acceptance condition and EOT tokens
@@ -180,7 +170,7 @@ for step, batch in tqdm(enumerate(dataset), total=num_eval_steps):
             # Get the bonus tokens
             indices = accept_nums
             bonus_tokens = target_tokens.gather(1, indices)
-            num_nodes += accept_nums.flatten()
+            num_nodes += (accept_nums.flatten() + 1)
             
             # Check for termination conditions
 
@@ -193,7 +183,6 @@ for step, batch in tqdm(enumerate(dataset), total=num_eval_steps):
                 terminal = True
 
             # 2: reach max tokens
-            num_gen_token_max = 80
             if args.dataset == "longbenchv1" or args.dataset == "longbenchv1-32k":
                 #longbenchv1 does not have fixed prefix len
                 if num_nodes.max() - input_len >= num_gen_token_max:
@@ -203,22 +192,27 @@ for step, batch in tqdm(enumerate(dataset), total=num_eval_steps):
                 if num_nodes.max() - args.prefix_len >= num_gen_token_max:
                     terminal = True
             # Put Bonus tokens to the tokens buffer, and prepare the variables for next itr
-            if not terminal:
-                
-                breakpoint()
-                accepted_tokens = torch.concat((cached_tokens_buffer, draft_tokens[mask_buffer].view(1,-1)), dim=1)
+        
 
-                engine.update_settled_kv(accepted_tokens)
+            accepted_tokens = torch.concat((cached_tokens_buffer.view(1,-1), draft_tokens[mask_buffer].view(1,-1)), dim=1)
+            engine.update_settled_kv(accepted_tokens)
 
-                tokens_buffer[:, :1] = bonus_tokens
+            tokens_buffer[:, :1] = bonus_tokens
 
             # reset counters
             num_unsettled_tokens = 0
             called_verify = 0
 
-            print(f"settlement accepted tokens: {accept_nums.flatten().item()}")
+            print(f"settlement accepted tokens: {accept_nums.flatten().item()} + 1 bonus_token")
             print(f"total unsettled tokens: {num_unsettled_tokens}")
-            print(f"num_nodes: {num_nodes.item()}")
+
+            eot_condition = ((target_tokens == eot_1) | (target_tokens == eot_2))
+
+            if True in eot_condition:
+                eot_index = (eot_condition.view(-1) == True).nonzero(as_tuple=True)[0].item()
+                engine.settled_cachelength = engine.settled_cachelength - accept_nums + eot_index
+
+                num_nodes = num_nodes - accept_nums + eot_index
             
         else:
 
@@ -263,7 +257,6 @@ for step, batch in tqdm(enumerate(dataset), total=num_eval_steps):
                 terminal = True
 
             # 2: reach max tokens
-            num_gen_token_max = 80
             if args.dataset == "longbenchv1" or args.dataset == "longbenchv1-32k":
                 #longbenchv1 does not have fixed prefix len
                 if num_nodes.max() - input_len >= num_gen_token_max:
@@ -275,118 +268,91 @@ for step, batch in tqdm(enumerate(dataset), total=num_eval_steps):
                 if num_nodes.max() - args.prefix_len >= num_gen_token_max:
                     terminal = True
             # Put Bonus tokens to the tokens buffer, and prepare the variables for next itr
-            if not terminal:
+
                 
-                # get accepted token and re-decode to set draft cache (Quest)
-                accepted_tokens = torch.concat((tokens_buffer[:, :1], draft_tokens[mask_buffer].view(1,-1)), dim=1)
-               
-                engine.update_verified_kv(accepted_tokens)
+            # get accepted token and re-decode to set draft cache (Quest)
+            accepted_tokens = torch.concat((tokens_buffer[:, :1], draft_tokens[mask_buffer].view(1,-1)), dim=1)
+            engine.update_verified_kv(accepted_tokens)
 
-                tokens_buffer[:, :1] = bonus_tokens
-
-                breakpoint()
+            tokens_buffer[:, :1] = bonus_tokens
 
             print(f"verification accepted tokens: {accept_nums.flatten().item()} + 1 bonus token")
             print(f"total unsettled tokens: {num_unsettled_tokens}")
-            print(f"num_nodes: {num_nodes.item()}")
 
-        if terminal:
-            num_nodes += 1
+            # if terminal -> fast track to settle
+            if terminal:
+                print("Terminal occured in verification: Fast Track to Settlement")
+                settled = True
 
+                target_tokens = torch.LongTensor(engine.settle(cached_tokens_buffer.view(-1,1), num_unsettled_tokens+1)).to(DEVICE) #TODO: verify stage should be batch-fashion, but this verify() is auto-regressive. 
+                settle_steps += 1
 
-    torch.cuda.synchronize()
-    end=time.perf_counter()
-    total_time += end-start
-    num_gen_tokens += (num_nodes.sum() - (input_ids.shape[1] + 1) * BATCH_SIZE)
-    # if args.printoutput:
-    #     for i in range(BATCH_SIZE):
-    #         print("Sequence ", i)
-    #         print(tokenizer.decode(output[i, args.prefix_len:num_nodes[i]]))
-    print("total time :{:.5f}s, time per iter :{:.5f}s, decoding step: {}, large model step: {}".format(total_time, total_time / target_steps, num_gen_tokens, target_steps))
-    if benchmark:
-        print("target time :{:.5f}s, draft time :{:.5f}s, verify loop : {}, avg generate len per sentence: {}".format(target_time/target_steps, draft_time / target_steps, verify_loop/target_steps, num_gen_tokens/target_steps/BATCH_SIZE))
-    if step < 5:   # TODO: revert to 10?
-        total_time = 0.0
-        num_gen_tokens = 0
-        target_steps = 0
-        if benchmark:
-            draft_time = 0.0
-            target_time = 0.0
-            verify_loop = 0.0
-    # if use_tp:
-    #     dist.barrier()
+                input_from_start = torch.concat((engine.input_tokens[:, :engine.verified_cachelength], tokens_buffer), dim=1)
+                draft_tokens = input_from_start[:, -(num_unsettled_tokens):]
+                flag_accept_matrix = (target_tokens[:, :num_unsettled_tokens] == draft_tokens)  # shape: (BATCH_SIZE, gamma)
 
-print(f"Final tokens per second :{num_gen_tokens/total_time}")
+                eot_condition = ((draft_tokens == eot_1) | (draft_tokens == eot_2))  # shape: (BATCH_SIZE, gamma)
 
-# print acceptance rate
-if total_spec_tokens > 0:
-    accept_rate_total = total_acc_tokens / total_spec_tokens
-    print(f"Draft acceptance rate: {accept_rate_total*100:.2f}% "
-          f"({total_acc_tokens} accepted of {total_spec_tokens} speculated)")
-    import math
+                # Compute accept_flags by considering both the acceptance condition and EOT tokens
+                accept_flags_int = (flag_accept_matrix & (~eot_condition)).int()
+                accept_flags_cumprod = torch.cumprod(accept_flags_int, dim=1)
+                accept_flags_matrix = accept_flags_cumprod.bool()
 
-    def find_alpha(gamma, accept_rate_total, tol=1e-8, max_iter=100):
-        """
-        Solve for alpha in (0,1) such that
-            (1 - alpha^(gamma+1)) / (1 - alpha) == gamma * accept_rate_total
-        using the bisection method.
-        """
-        def f(alpha):
-            # avoid division by zero at alpha=1
-            return (1 - alpha**(gamma+1)) / (1 - alpha) -1 - gamma * accept_rate_total
+                # Compute the number of accepted tokens
+                accept_nums = accept_flags_matrix.sum(dim=1, keepdim=True)  # shape: (BATCH_SIZE, 1)
+                
+                positions_buffer = torch.arange(num_unsettled_tokens, device=DEVICE).view(1, -1).repeat(BATCH_SIZE, 1)
+                mask_buffer = positions_buffer<accept_nums.view(-1,1)
 
-        # initial bracket [low, high]
-        low, high = 0.0, 1.0 - 1e-15
-        f_low, f_high = f(low), f(high)
+                # Get the bonus tokens
+                indices = accept_nums
+                bonus_tokens = target_tokens.gather(1, indices)
+                num_nodes += (accept_nums.flatten() + 1)
+                
+                # Check for termination conditions
 
-        if f_low * f_high > 0:
-            raise ValueError(
-                "f(0) and f(1) have the same sign; no guaranteed root in (0,1). "
-                f"f(0)={f_low}, f(1-)={f_high}"
-            )
+                # 1: eot in accepted tokens
+                condition = (eot_condition & accept_flags_matrix).any(dim=1, keepdim=True)
+                if condition.any():
+                    terminal = True
 
-        for i in range(max_iter):
-            mid = (low + high) / 2
-            f_mid = f(mid)
+                if (bonus_tokens == eot_1).any() or (bonus_tokens == eot_2).any():
+                    terminal = True
 
-            # Check for convergence
-            if abs(f_mid) < tol or (high - low)/2 < tol:
-                return mid
-
-            # Narrow the bracket
-            if f_low * f_mid <= 0:
-                high, f_high = mid, f_mid
-            else:
-                low, f_low = mid, f_mid
-
-        # return best estimate after max_iter
-        return (low + high) / 2
-
-    accept_rate_per_token = find_alpha(args.gamma, accept_rate_total)
-    print(f"Found alpha = {accept_rate_per_token:.8f}")
+                # 2: reach max tokens
+                if args.dataset == "longbenchv1" or args.dataset == "longbenchv1-32k":
+                    #longbenchv1 does not have fixed prefix len
+                    if num_nodes.max() - input_len >= num_gen_token_max:
+                        terminal = True
+                else:
+                    # Check Number of Nodes + Bonus Token <= max_target_token
+                    if num_nodes.max() - args.prefix_len >= num_gen_token_max:
+                        terminal = True
+                # Put Bonus tokens to the tokens buffer, and prepare the variables for next itr
 
 
-import os, csv
-CSV_PATH = f"MagicDec/output/RetroInfer/{MODEL}_{args.dataset}_acceptance_rates.csv"
-# if the file doesn't yet exist, write the header
-if not os.path.exists(CSV_PATH):
-    with open(CSV_PATH, "w", newline="") as f:
-        writer = csv.writer(f)
-        writer.writerow(["attn_type", "prefix_len","budget_ratio", "gamma", "task", "accept_rate_total", "accept_rate_per_token"])
-        
-# append to CSV
-with open(CSV_PATH, "a", newline="") as f:
-    writer = csv.writer(f)
-    writer.writerow([
-        args.attn_type,
-        args.prefix_len,
-        args.budget_ratio,
-        args.gamma,
-        args.task,
-        f"{accept_rate_total:.4f}",
-        f"{accept_rate_per_token:.4f}"
-    ])
-# if rank == 0:
-#     with open("result.txt", "a") as file:
-#         file.write("total time :{:.5f}s, time per iter :{:.5f}s, decoding step: {}, large model step: {}, avg latency: {} \n".format(total_time, total_time / target_steps, num_gen_tokens, target_steps, total_time / num_gen_tokens * BATCH_SIZE))
-#         file.write("target time :{:.5f}s, draft time :{:.5f}s, verify loop : {}, avg generate len per sentence: {} \n".format(target_time/target_steps, draft_time / target_steps, verify_loop/target_steps, num_gen_tokens/target_steps/BATCH_SIZE))
+                accepted_tokens = torch.concat((cached_tokens_buffer.view(1,-1), draft_tokens[mask_buffer].view(1,-1)), dim=1)
+                engine.update_settled_kv(accepted_tokens)
+
+                tokens_buffer[:, :1] = bonus_tokens
+
+                # reset counters
+                num_unsettled_tokens = 0
+                called_verify = 0
+
+                print(f"settlement accepted tokens: {accept_nums.flatten().item()} + 1 bonus_token")
+                print(f"total unsettled tokens: {num_unsettled_tokens}")
+
+                eot_condition = ((target_tokens == eot_1) | (target_tokens == eot_2))
+
+                if True in eot_condition:
+                    eot_index = (eot_condition.view(-1) == True).nonzero(as_tuple=True)[0].item()
+                    engine.settled_cachelength = engine.settled_cachelength - accept_nums + eot_index
+
+                    num_nodes = num_nodes - accept_nums + eot_index
+
+
+    num_gen_tokens = engine.settled_cachelength - input_len
+
+    output = engine.settled_input_tokens[:, input_len:engine.settled_cachelength][0]
+    decoded_output = engine.model.tokenizer.decode(output, skip_special_tokens=True)

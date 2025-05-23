@@ -98,7 +98,7 @@ class LMBackend_Retro:
             input_ids.shape[1], 
             attn_type,
             budget_ratio=budget1,
-            estimate_ratio=estimate_ratio,
+            estimate_ratio=0.0,
         )
 
         self.attn_config_verification = generate_config(

@@ -165,7 +165,7 @@ class LLM:
         outputs_ids = []    # multi iteration, multi request
         output_ids = []     # single iteration, multi request
         
-        print("Start prefilling ...")
+        #print("Start prefilling ...")
         torch.cuda.synchronize()
         prefill_start = time.time()
 
@@ -176,9 +176,9 @@ class LLM:
 
         torch.cuda.synchronize()
         prefill_end = time.time()
-        print(colored(f"Prefilling latency: {round((prefill_end - prefill_start), 4)} s\n", 'green'))
+        #print(colored(f"Prefilling latency: {round((prefill_end - prefill_start), 4)} s\n", 'green'))
 
-        print("Start decoding ...")
+        #print("Start decoding ...")
         decode_start = time.time()
 
         for _ in range(self.max_new_length-1):
@@ -220,7 +220,7 @@ class LLM:
         del attention_masks
         torch.cuda.empty_cache()
 
-        print("Allocate GPU buffers and CPU pin memory ...\n")
+        #print("Allocate GPU buffers and CPU pin memory ...\n")
         self.init_kv_cache(input_length, valid_start, attn_config)
 
         outputs = self.inference(inputs_ids)
