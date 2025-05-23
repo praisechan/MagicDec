@@ -54,7 +54,15 @@ class LLM:
         key_states = key_states.view(bsz, seq_len, self.num_key_value_heads, self.head_dim)
         value_states = value_states.view(bsz, seq_len, self.num_key_value_heads, self.head_dim)
 
+        import time
+
+        # start_time = time.time()
+        # torch.cuda.synchronize()
         key_states, value_states = self.kv_cache.prefill_update_kv_cache(query_states, key_states, value_states, layer_idx, start_bdx)
+        # torch.cuda.synchronize()
+        # end_time = time.time()
+        # print(f"kv clutering time: {end_time - start_time}s")
+
         torch.cuda.empty_cache()
 
         temp_attn_out = self.prefill_attention(query_states, key_states, value_states)
@@ -133,7 +141,13 @@ class LLM:
                 last_hidden_states[start_bdx:end_bdx] = hidden_states[:, -1:, :].to(self.layers[0].device)
             else:
                 for ldx in range(self.num_layers):
+                    # start_time = time.time()
+                    # torch.cuda.synchronize()
                     hidden_states = self.layer_prefill(ldx, start_bdx, hidden_states)
+                    # torch.cuda.synchronize()
+                    # end_time = time.time()
+                    # print(f"layer_prefill:{end_time - start_time}")
+
                     torch.cuda.empty_cache()
                 last_hidden_states[start_bdx:end_bdx] = hidden_states[:, -1:, :]
         
@@ -153,7 +167,12 @@ class LLM:
             hidden_states = hidden_states.to(self.layers[0].device)
         else:
             for ldx in range(self.num_layers):
+                # start_time = time.time()
+                # torch.cuda.synchronize()
                 hidden_states = self.layer_decode(ldx, hidden_states)
+                # torch.cuda.synchronize()
+                # end_time = time.time()
+                # print(f"layer_decode:{end_time - start_time}")
         
         hidden_states = self.layernorm(hidden_states[:, -1:, :], self.norm_variance_epsilon, self.norm_weight)
         logits = self.lm(hidden_states)
@@ -187,6 +206,8 @@ class LLM:
             outputs_ids.append(output_ids)
 
         decode_end = time.time()
+        print(colored(f"Decoding latency: {round((decode_end - decode_start), 8)} s\n", 'green'))
+
         # print(colored(
         #     f"Decoding latency: {round((decode_end - decode_start) * 1000 / (self.max_new_length - 1), 2)} ms/step, "
         #     f"Throughput: {round(self.batch_size * (self.max_new_length - 1) / (decode_end - decode_start), 2)} tokens/s\n",

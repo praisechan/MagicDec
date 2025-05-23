@@ -222,7 +222,8 @@ for step, batch in tqdm(enumerate(dataset), total=num_eval_steps):
         num_nodes += accept_nums.flatten()
 
         # Check for termination conditions with accepted token number
-        num_gen_token_max = 80
+        num_gen_token_max = 1024
+        # num_gen_token_max = 80
         if args.dataset == "longbenchv1" or args.dataset == "longbenchv1-32k":
             #longbenchv1 does not have fixed prefix len
             if num_nodes.max() - input_len >= num_gen_token_max:
@@ -233,15 +234,15 @@ for step, batch in tqdm(enumerate(dataset), total=num_eval_steps):
             # if num_nodes.max() + 1 + args.gamma > MAX_LEN_TARGET:
             if num_nodes.max() - args.prefix_len >= num_gen_token_max:
                 terminal = True
-        # Put Bonus tokens to the tokens buffer, and prepare the variables for next itr
-        if not terminal:
-            tokens_buffer[:, :1] = bonus_tokens
 
         if not terminal:
             # get accepted token and re-decode to set draft cache (Quest)
             accepted_tokens = tokens_buffer[mask_buffer].view(1,-1)
             engine.draft_kv_update(accepted_tokens)
 
+        # Put Bonus tokens to the tokens buffer, and prepare the variables for next itr
+        if not terminal:
+            tokens_buffer[:, :1] = bonus_tokens
 
         if not terminal:
             if benchmark:

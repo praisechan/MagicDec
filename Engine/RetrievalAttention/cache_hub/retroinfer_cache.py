@@ -397,12 +397,18 @@ class retroinfer_cache(KV_Cache):
         mean_key = torch.mean(self.temp_keys, dim=1, keepdim=True)
 
         # segmented k-means
+        # import time
+        # start_time = time.time()
+        # torch.cuda.synchronize()
         _centroids, _value_sum, _clusters, _cluster_size = segment_k_means(
             key=self.temp_keys-mean_key,    # centering to 0
             value=self.temp_values,
             num_centroids=self.n_centroids,
             num_segments=self.n_segment,
         )
+        # torch.cuda.synchronize()
+        # end_time = time.time()
+        # print(f"prefill clustering:{end_time - start_time}")
         # assert _centroids.shape[-2] == _value_sum.shape[-2] == _cluster_size.shape[-1] == _clusters.shape[-2] == self.n_centroids
 
         # copy meta index
@@ -462,12 +468,19 @@ class retroinfer_cache(KV_Cache):
             mean_key = torch.mean(update_keys, dim=1, keepdim=True)
             
             # segmented k-means
+            # import time
+            # start_time = time.time()
+            # torch.cuda.synchronize()            
             _centroids, _value_sum, _clusters, _cluster_size = segment_k_means(
                 key=update_keys-mean_key,   # centering to 0, (batch_size*group_num, THRESHOLD_LENGTH, dim)
                 value=update_values,        # (batch_size*group_num, THRESHOLD_LENGTH, dim)
                 num_centroids=self.n_centroids_per_update_segment,
                 num_segments=1,
             )
+            # torch.cuda.synchronize()
+            # end_time = time.time()
+            # print(f"decode clustering:{end_time - start_time}")
+
             _centroids += mean_key
             assert _centroids.shape[-2] == _value_sum.shape[-2] == _cluster_size.shape[-1] == _clusters.shape[-2] == self.n_centroids_per_update_segment
 
