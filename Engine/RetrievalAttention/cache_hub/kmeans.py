@@ -249,7 +249,9 @@ def segment_k_means(
     centroids = centroids.reshape((-1, num_centroids, head_dim))
     centroids, max_idx, max_cluster_size = _triton_k_means_train(data, centroids, normalize_centroids=False, return_indices=True)
 
-    value_sum = triton_index_add(value.reshape((-1, num_tokens, head_dim)), max_idx, num_centroids)
+    value_sum = None
+    if value is not None:
+      value_sum = triton_index_add(value.reshape((-1, num_tokens, head_dim)), max_idx, num_centroids)
     clusters, cluster_size = triton_reverse_index(max_idx, num_centroids, max_cluster_size)
 
     # centroids = centroids.reshape((batch_size*num_groups, num_centroids, head_dim))

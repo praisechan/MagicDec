@@ -112,7 +112,12 @@ class LLM:
         value_states = value_states.view(bsz, -1, self.num_key_value_heads, self.head_dim)
 
         key_states, value_states = self.kv_cache.decode_update_kv_cache(key_states, value_states, layer_idx)
+        # start_time = time.time()
+        # torch.cuda.synchronize()
         attn_out = self.decode_attention(query_states, key_states, value_states, layer_idx)
+        # torch.cuda.synchronize()
+        # end_time = time.time()
+        # print(f"attn_decode:{end_time - start_time}")
         hidden_states = self.wo(attn_out, layer, bsz, seq_len, dim)
         hidden_states = residual + hidden_states
 
