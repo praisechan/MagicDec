@@ -110,14 +110,15 @@ class LMBackend_Retro:
       return outputs
 
     @torch.inference_mode()
-    def speculate(self, input_ids: torch.LongTensor, gamma):
+    def speculate(self, input_ids: torch.LongTensor, gamma, profile_clustering=False):
       input_from_start = torch.concat((self.input_tokens[:, :self.verified_cachelength], input_ids), dim=1)
       outputs = self.model.generate(
           attention_type="RetroInfer",
           inputs_ids = input_from_start.to(self.model.layers[0].device),
           attention_masks = self.attention_masks.to(self.model.layers[0].device),
           max_new_length=gamma, 
-          attn_config=self.attn_config
+          attn_config=self.attn_config,
+          profile_clustering=profile_clustering          
       )
 
       return outputs

@@ -224,7 +224,7 @@ class LLM:
         return outputs_ids
 
 
-    def generate(self, attention_type, inputs_ids, attention_masks, max_new_length, attn_config=None):
+    def generate(self, attention_type, inputs_ids, attention_masks, max_new_length, attn_config=None, profile_clustering=False):
         """ LLM Inference.
         Args:
             attention_type: str,
@@ -247,7 +247,7 @@ class LLM:
         torch.cuda.empty_cache()
 
         print("Allocate GPU buffers and CPU pin memory ...\n")
-        self.init_kv_cache(input_length, valid_start, attn_config)
+        self.init_kv_cache(input_length, valid_start, attn_config, profile_clustering=profile_clustering)
 
         outputs = self.inference(inputs_ids)
 

@@ -41,6 +41,7 @@ parser.add_argument("--attn_type", type=str, default="Full_Flash_Attn",         
                     help="Attention method")
 parser.add_argument("--budget_ratio", type=float, default=0.018, help="ratio of budget")
 parser.add_argument("--estimate_ratio", type=float, default=0.25, help="ratio of estimated clusters for RetriveInfer")
+parser.add_argument("--profile_clustering", type=bool, default=False, help="profile ")
 
 args = parser.parse_args()
 
@@ -162,7 +163,7 @@ for step, batch in tqdm(enumerate(dataset), total=num_eval_steps):
         if benchmark:
             torch.cuda.synchronize()
             t1 = time.time()
-        tokens_buffer[:,1:1+args.gamma] = torch.LongTensor(engine.speculate(tokens_buffer[:, 0].view(-1,1), args.gamma))
+        tokens_buffer[:,1:1+args.gamma] = torch.LongTensor(engine.speculate(tokens_buffer[:, 0].view(-1,1), args.gamma, args.profile_clustering))
         # tokens_buffer[:,1:1+args.gamma] = torch.LongTensor(engine.speculate(input_ids, args.gamma))
 
         if benchmark:
