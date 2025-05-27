@@ -470,9 +470,9 @@ class retroinfer_cache(KV_Cache):
             torch.save(_centroids, f"/home/juchanlee/MagicDec/Engine/RetrievalAttention/profile/data/centroid_{layer_idx}.pt")
             torch.save(_cluster_size, f"/home/juchanlee/MagicDec/Engine/RetrievalAttention/profile/data/cluster_size_{layer_idx}.pt")
             torch.save(_clusters, f"/home/juchanlee/MagicDec/Engine/RetrievalAttention/profile/data/clusters_{layer_idx}.pt")
-            torch.save(_supercentroids, f"/home/juchanlee/MagicDec/Engine/RetrievalAttention/profile/data/_supercentroids_{layer_idx}.pt")
-            torch.save(_supercluster_size, f"/home/juchanlee/MagicDec/Engine/RetrievalAttention/profile/data/_supercluster_size_{layer_idx}.pt")
-            torch.save(_superclusters, f"/home/juchanlee/MagicDec/Engine/RetrievalAttention/profile/data/_superclusters_{layer_idx}.pt")
+            torch.save(_supercentroids, f"/home/juchanlee/MagicDec/Engine/RetrievalAttention/profile/data/supercentroids_{layer_idx}.pt")
+            torch.save(_supercluster_size, f"/home/juchanlee/MagicDec/Engine/RetrievalAttention/profile/data/supercluster_size_{layer_idx}.pt")
+            torch.save(_superclusters, f"/home/juchanlee/MagicDec/Engine/RetrievalAttention/profile/data/superclusters_{layer_idx}.pt")
                 
         return key_states[:, valid_start:, :, :], value_states[:, valid_start:, :, :]   # ignore mask tokens, shape: (bsz, seq_len, group_num, dim)
 
