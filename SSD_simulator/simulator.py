@@ -4,9 +4,13 @@ import os
 import torch
 from typing import List, Tuple, Union
 from SSD_internal import (
-    Plane, Chip,
+    Plane,
+    Chip,
     compute_pages_per_cluster,
-    LayerData, HeadData, ClusterData, SuperclusterData
+    LayerData,
+    HeadData,
+    ClusterData,
+    SuperclusterData
 )
 
 
@@ -21,7 +25,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument('--planes_per_die', type=int, required=True)
     parser.add_argument('--page_size_bytes', type=int, required=True)
     parser.add_argument('--vector_bytes', type=int, default=2)
-    parser.add_argument('--flash_read_latency_ns', type=int, default=30)
+    parser.add_argument('--flash_read_latency_us', type=int, default=30)
     parser.add_argument('--profiling_dir', type=str, required=True,
                         help='Directory with layer-wise profiling .pt files')
     parser.add_argument('--num_layers', type=int, default=32,
@@ -40,11 +44,15 @@ def load_profiling_layer(
     layer_idx: int,
     num_heads: int
 ) -> LayerData:
+    # Load per-layer profiling data from .pt files
     cluster_sizes = torch.load(
         os.path.join(profiling_dir, f"cluster_size_{layer_idx}.pt"), map_location='cpu'
     )
     superclusters_list = torch.load(
         os.path.join(profiling_dir, f"superclusters_{layer_idx}.pt"), map_location='cpu'
+    )
+    supercluster_size = torch.load(
+        os.path.join(profiling_dir, f"supercluster_size_{layer_idx}.pt"), map_location='cpu'
     )
     selected_list = torch.load(
         os.path.join(profiling_dir, f"selected_cI_{layer_idx}.pt"), map_location='cpu'
@@ -54,70 +62,80 @@ def load_profiling_layer(
     for head_idx in range(num_heads):
         clusters = [ClusterData(cid, int(size.item()))
                     for cid, size in enumerate(cluster_sizes[head_idx])]
-        superclusters = [SuperclusterData(sc_id, [int(cid.item()) for cid in ids])
+        superclusters = [SuperclusterData(sc_id, [int(cid.item()) for cid in ids], supercluster_size[head_idx][sc_id])
                          for sc_id, ids in enumerate(superclusters_list[head_idx])]
         selected = [int(cid.item()) for cid in selected_list[head_idx]]
         heads.append(HeadData(head_idx, clusters, superclusters, selected))
     return LayerData(layer_idx, heads)
 
 
-def layout_structures(
-    layer: LayerData,
-    args: argparse.Namespace
-) -> Union[List[Plane], List[Chip]]:
-    num_planes = (
-        args.num_channels * args.chips_per_channel *
-        args.dies_per_chip * args.planes_per_die
-    )
-    if args.mode == 'cluster_superblock':
-        total_chips = args.num_channels * args.chips_per_channel
-        planes_per_chip = args.dies_per_chip * args.planes_per_die
-        chips: List[Chip] = []
-        for chip_id in range(total_chips):
-            base = chip_id * planes_per_chip
-            planes = [Plane(pid, planes_per_chip)
-                      for pid in range(base, base + planes_per_chip)]
-            chip = Chip(chip_id, planes)
+def build_chips(args, layer: LayerData) -> List[Chip]:
+    chips: List[Chip] = []
+    for channel_id in range(args.num_channels):
+        for chip_id in range(args.chips_per_channel):
+            chip = Chip(
+                channel_id=channel_id,
+                chip_id=chip_id,
+                dies_per_chip=args.dies_per_chip,
+                planes_per_die=args.planes_per_die,
+                chips_per_channel = args.chips_per_channel,
+                num_channels = args.num_channels
+            )
             for head in layer.heads:
                 pages_map = compute_pages_per_cluster(
-                    head, args.page_size_bytes, args.vector_bytes, args.head_dim
+                    head,
+                    args.page_size_bytes,
+                    args.vector_bytes,
+                    args.head_dim
                 )
-                chip.assign_clusters(head.head_index, pages_map, head.superclusters)
+                chip.assign_clusters(
+                    head_idx=head.head_index,
+                    pages_per_cluster=pages_map,
+                    superclusters=head.superclusters,
+                    mode=args.mode
+                )
             chips.append(chip)
-        return chips
+    return chips
 
-    planes = [Plane(pid, num_planes) for pid in range(num_planes)]
+
+def simulate_layer(layer: LayerData, args) -> Tuple[int, int]:
+    # Build SSD hierarchy and assign clusters
+    chips = build_chips(args, layer)
+    head_latencies = []
     for head in layer.heads:
-        pages_map = compute_pages_per_cluster(
-            head, args.page_size_bytes, args.vector_bytes, args.head_dim
-        )
-        for pl in planes:
-            pl.assign_clusters(head.head_index, pages_map, head.superclusters, args.mode)
-    return planes
-
-
-def simulate_layer(
-    layer: LayerData,
-    structures: Union[List[Plane], List[Chip]],
-    mode: str,
-    flash_read_latency_ns: int
-) -> Tuple[int, int]:
-    head_latencies: List[int] = []
-    for head in layer.heads:
-        if mode == 'cluster_superblock':
-            chip_pages = [
-                c.simulate_access(head.head_index, head.selected_cluster_ids, mode)
-                for c in structures
+        if args.mode in ('baseline', 'cluster_independent'):
+            # sum per-plane page reads
+            # chip_pages = [
+            #     sum(
+            #         plane.simulate_access(
+            #             head.head_index,
+            #             head.selected_cluster_ids,
+            #             args.mode
+            #         ) for plane in chip.planes
+            #     ) for chip in chips
+            # ]
+            page_reads = [
+                [
+                    plane.simulate_access(
+                        head.head_index,
+                        head.selected_cluster_ids,
+                        args.mode
+                    ) for plane in chip.planes
+                 ] for chip in chips
             ]
-            latency = sum(p * flash_read_latency_ns for p in chip_pages)
+            latency_us = max(max(page_reads)) * args.flash_read_latency_us
         else:
-            total_pages = sum(
-                pl.simulate_access(head.head_index, head.selected_cluster_ids, mode)
-                for pl in structures
-            )
-            latency = total_pages * flash_read_latency_ns
-        head_latencies.append(latency)
-    return layer.layer_index, (max(head_latencies) if head_latencies else 0)
+            # supercluster_superblock: one read per superpage if any cluster selected
+            chip_pages = [
+                chip.simulate_access(
+                    head.head_index,
+                    head.selected_cluster_ids,
+                    args.mode
+                ) for chip in chips
+            ]
+            latency_us = max(chip_pages) * args.flash_read_latency_us
+        head_latencies.append(latency_us)
+    return layer.layer_index, max(head_latencies) if head_latencies else (layer.layer_index, 0)
 
 
 def main():
@@ -127,21 +145,19 @@ def main():
         layer = load_profiling_layer(
             args.profiling_dir, layer_idx, args.num_heads
         )
-        structures = layout_structures(layer, args)
-        idx, lat = simulate_layer(
-            layer, structures, args.mode, args.flash_read_latency_ns
-        )
+        idx, lat = simulate_layer(layer, args)
         results.append((idx, lat))
 
+    # Output results
     if args.output_csv:
         import csv
         with open(args.output_csv, 'w', newline='') as f:
             writer = csv.writer(f)
-            writer.writerow(['layer_index', 'latency_ns'])
+            writer.writerow(['layer_index', 'latency_us'])
             writer.writerows(results)
         print(f"Results saved to {args.output_csv}")
     else:
-        print('layer_index,latency_ns')
+        print('layer_index,latency_us')
         for idx, lat in results:
             print(f"{idx},{lat}")
 
