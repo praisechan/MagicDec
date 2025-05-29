@@ -72,7 +72,7 @@ class Plane:
                 offset += count
 
         # Supercluster modes: assign in supercluster order, round-robin like baseline
-        elif mode in ('cluster_independent', 'cluster_superblock'):
+        elif mode in ('cluster', 'cluster_superblock'):
             offset = 0
             for sc in sorted(superclusters, key=lambda x: x.supercluster_id):
                 # only consider actual clusters, ignore zero-padding
@@ -90,7 +90,7 @@ class Plane:
         else:
             # chip-level modes do not assign here
             pass
-        print(len(self.cluster_to_pages))
+        # print(len(self.cluster_to_pages))
 
     def simulate_access(
         self,
@@ -98,7 +98,7 @@ class Plane:
         selected_clusters: List[int],
         mode: str
     ) -> int:
-        if mode in ('baseline', 'cluster_independent'):
+        if mode in ('baseline', 'cluster'):
             sum_output = sum(
                 len(self.cluster_to_pages.get((head_idx, cid), []))
                 for cid in selected_clusters

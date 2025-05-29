@@ -2,7 +2,7 @@
 import argparse
 import os
 import torch
-from typing import List, Tuple, Union
+from typing import List
 from SSD_internal import (
     Plane,
     Chip,
@@ -12,13 +12,13 @@ from SSD_internal import (
     ClusterData,
     SuperclusterData
 )
+import matplotlib.pyplot as plt
 
 
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(
-        description="Analytical simulator for in-flash attention layer"
+        description="Compare baseline and cluster modes for layer 0"
     )
-    parser.add_argument('--mode', choices=['baseline', 'cluster_independent', 'cluster_superblock'], required=True)
     parser.add_argument('--num_channels', type=int, required=True)
     parser.add_argument('--chips_per_channel', type=int, required=True)
     parser.add_argument('--dies_per_chip', type=int, required=True)
@@ -28,14 +28,10 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument('--flash_read_latency_us', type=int, default=30)
     parser.add_argument('--profiling_dir', type=str, required=True,
                         help='Directory with layer-wise profiling .pt files')
-    parser.add_argument('--num_layers', type=int, default=32,
-                        help='Number of transformer layers')
     parser.add_argument('--num_heads', type=int, default=8,
                         help='KV heads per layer')
     parser.add_argument('--head_dim', type=int, default=128,
                         help='Dimension per KV head')
-    parser.add_argument('--output_csv', type=str, default=None,
-                        help='Path to save results as CSV')
     return parser.parse_args()
 
 
@@ -44,7 +40,7 @@ def load_profiling_layer(
     layer_idx: int,
     num_heads: int
 ) -> LayerData:
-    # Load per-layer profiling data from .pt files
+    # unchanged loader for .pt files
     cluster_sizes = torch.load(
         os.path.join(profiling_dir, f"cluster_size_{layer_idx}.pt"), map_location='cpu'
     )
@@ -62,14 +58,17 @@ def load_profiling_layer(
     for head_idx in range(num_heads):
         clusters = [ClusterData(cid, int(size.item()))
                     for cid, size in enumerate(cluster_sizes[head_idx])]
-        superclusters = [SuperclusterData(sc_id, [int(cid.item()) for cid in ids], supercluster_size[head_idx][sc_id])
-                         for sc_id, ids in enumerate(superclusters_list[head_idx])]
+        superclusters = [SuperclusterData(
+                             sc_id,
+                             [int(cid.item()) for cid in ids],
+                             supercluster_size[head_idx][sc_id]
+                         ) for sc_id, ids in enumerate(superclusters_list[head_idx])]
         selected = [int(cid.item()) for cid in selected_list[head_idx]]
         heads.append(HeadData(head_idx, clusters, superclusters, selected))
     return LayerData(layer_idx, heads)
 
 
-def build_chips(args, layer: LayerData) -> List[Chip]:
+def build_chips(args, layer: LayerData, mode: str) -> List[Chip]:
     chips: List[Chip] = []
     for channel_id in range(args.num_channels):
         for chip_id in range(args.chips_per_channel):
@@ -78,8 +77,8 @@ def build_chips(args, layer: LayerData) -> List[Chip]:
                 chip_id=chip_id,
                 dies_per_chip=args.dies_per_chip,
                 planes_per_die=args.planes_per_die,
-                chips_per_channel = args.chips_per_channel,
-                num_channels = args.num_channels
+                chips_per_channel=args.chips_per_channel,
+                num_channels=args.num_channels
             )
             for head in layer.heads:
                 pages_map = compute_pages_per_cluster(
@@ -92,74 +91,54 @@ def build_chips(args, layer: LayerData) -> List[Chip]:
                     head_idx=head.head_index,
                     pages_per_cluster=pages_map,
                     superclusters=head.superclusters,
-                    mode=args.mode
+                    mode=mode
                 )
             chips.append(chip)
     return chips
 
-
-def simulate_layer(layer: LayerData, args) -> Tuple[int, int]:
-    # Build SSD hierarchy and assign clusters
-    chips = build_chips(args, layer)
-    head_latencies = []
+def get_plane_reads(layer: LayerData, args, mode: str) -> List[int]:
+    chips = build_chips(args, layer, mode)
+    total_planes = sum(len(chip.planes) for chip in chips)
+    plane_reads = [0] * total_planes
+    # count per head, per plane
     for head in layer.heads:
-        if args.mode in ('baseline', 'cluster_independent'):
-            # sum per-plane page reads
-            # chip_pages = [
-            #     sum(
-            #         plane.simulate_access(
-            #             head.head_index,
-            #             head.selected_cluster_ids,
-            #             args.mode
-            #         ) for plane in chip.planes
-            #     ) for chip in chips
-            # ]
-            page_reads = [
-                [
-                    plane.simulate_access(
-                        head.head_index,
-                        head.selected_cluster_ids,
-                        args.mode
-                    ) for plane in chip.planes
-                 ] for chip in chips
-            ]
-            latency_us = max(max(page_reads)) * args.flash_read_latency_us
-        else:
-            # supercluster_superblock: one read per superpage if any cluster selected
-            chip_pages = [
-                chip.simulate_access(
+        idx = 0
+        for chip in chips:
+            for plane in chip.planes:
+                reads = plane.simulate_access(
                     head.head_index,
                     head.selected_cluster_ids,
-                    args.mode
-                ) for chip in chips
-            ]
-            latency_us = max(chip_pages) * args.flash_read_latency_us
-        head_latencies.append(latency_us)
-    return layer.layer_index, max(head_latencies) if head_latencies else (layer.layer_index, 0)
+                    mode
+                )
+                plane_reads[idx] += reads
+                idx += 1
+    return plane_reads
 
 
 def main():
     args = parse_args()
-    results: List[Tuple[int, int]] = []
-    for layer_idx in range(args.num_layers):
-        layer = load_profiling_layer(
-            args.profiling_dir, layer_idx, args.num_heads
-        )
-        idx, lat = simulate_layer(layer, args)
-        results.append((idx, lat))
+    layers_to_plot = [0, 10, 20]
+    modes = ['baseline', 'cluster']
+    data = []
+    labels = []
+    for layer_idx in layers_to_plot:
+        layer = load_profiling_layer(args.profiling_dir, layer_idx, args.num_heads)
+        for mode in modes:
+            reads = get_plane_reads(layer, args, mode)
+            data.append(reads)
+            labels.append(f"L{layer_idx}-{mode}")
 
-    # Output results
-    if args.output_csv:
-        import csv
-        with open(args.output_csv, 'w', newline='') as f:
-            writer = csv.writer(f)
-            writer.writerow(['layer_index', 'latency_us'])
-            writer.writerows(results)
-        print(f"Results saved to {args.output_csv}")
-    else:
-        print('layer_index,latency_us')
-        for idx, lat in results:
-            print(f"{idx},{lat}")
+    # violin plot for selected layers
+    plt.figure(figsize=(12, 6))
+    parts = plt.violinplot(data, showmeans=True)
+    plt.xticks(range(1, len(labels) + 1), labels, fontsize=14)
+    plt.ylabel('Total page reads per plane', fontsize=14)
+    plt.title('Page Reads per Plane (Layer 0, 10, 20)', fontsize=14)
+    plt.tight_layout()
+    violin_filename = 'layers0_10_20_violin.png'
+    plt.savefig(violin_filename)
+    plt.close()
+    print(f"Violin plot saved to {violin_filename}")
 
 if __name__ == '__main__':
     main()
