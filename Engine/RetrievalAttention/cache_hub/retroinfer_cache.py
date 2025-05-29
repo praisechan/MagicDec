@@ -92,7 +92,7 @@ class retroinfer_cache(KV_Cache):
         # index parameters
         self.n_centroids = n_centroids
         self.n_segment = n_segment
-        self.approx_supercluster_size = 16
+        self.approx_supercluster_size = 4
         self.n_super_centroids = int(n_centroids/self.approx_supercluster_size)
         self.nprobe = nprobe    # retrieve zone size
         self.max_compute_cluster_num = max_compute_cluster_num
@@ -280,6 +280,7 @@ class retroinfer_cache(KV_Cache):
         self.super_centroids   = []
         self.cluster_to_super  = []
         self.supercluster_size = []
+        self.super_centroids_mask = []
         max_supercluster_size = 300 # this is not fixed value. segment_kmeans is not constrained to fixed cluster size.
         for ldx in range(self.layer_num):
             self.super_centroids.append(
@@ -294,6 +295,10 @@ class retroinfer_cache(KV_Cache):
                 torch.zeros((self.batch_size*self.kv_head, self.n_super_centroids, max_supercluster_size), 
                             dtype=self.dtype, device=self.layer_mapping[str(ldx)]).contiguous().fill_(-1)
             ) # fill -1 to represent invalid value
+            self.super_centroids_mask.append(
+                torch.zeros((self.batch_size*self.kv_head, self.n_super_centroids), 
+                            dtype=torch.bool, device=self.layer_mapping[str(ldx)]).contiguous()
+            )
 
         self.profile_clustering = profile_clustering
 
@@ -337,6 +342,17 @@ class retroinfer_cache(KV_Cache):
                                          dtype=self.dtype, device=self.layer_mapping[str(0)]).contiguous()
         self.es_cluster_size = torch.zeros((self.batch_size*self.kv_head, 1, 1, self.es_cluster_num),
                                            dtype=self.dtype, device=self.layer_mapping[str(0)]).contiguous()
+
+        # allocate layer-share buffer for batch_gemm_softmax kernel
+        self.super_gemm_o = torch.zeros((self.batch_size, self.kv_head, self.group_size, self.n_super_centroids), 
+                                  device=self.layer_mapping[str(0)], dtype=self.dtype).contiguous()
+        self.super_softmax_o = torch.zeros((self.batch_size*self.kv_head, self.group_size, self.n_super_centroids),
+                                     device=self.layer_mapping[str(0)], dtype=self.dtype).contiguous()
+        self.super_norm = torch.zeros((self.batch_size*self.kv_head, self.group_size, (self.n_super_centroids+256-1)//256),
+                                 device=self.layer_mapping[str(0)], dtype=torch.float32).contiguous()
+        self.super_sum = torch.zeros((self.batch_size*self.kv_head, self.group_size, (self.n_super_centroids+256-1)//256),
+                                device=self.layer_mapping[str(0)], dtype=torch.float32).contiguous()
+
 
     def prepare_cache(self):
         # sync the last batch of the last layer
@@ -439,6 +455,7 @@ class retroinfer_cache(KV_Cache):
             key = _centroids-mean_centroid,
             value = None,
             num_centroids=self.n_super_centroids,
+            num_iters = 100,
             num_segments=1,
         )
         # super_centroids: [S×D]
@@ -446,6 +463,7 @@ class retroinfer_cache(KV_Cache):
         self.super_centroids[layer_idx]   = _supercentroids + mean_centroid
         self.cluster_to_super[layer_idx]  = _superclusters
         self.supercluster_size[layer_idx] = _supercluster_size
+        self.super_centroids_mask[layer_idx] = (_supercluster_size == 0)          # (group_num, n_super_centroids)
         
         # torch.cuda.synchronize()
         # end_time = time.time()
@@ -465,14 +483,14 @@ class retroinfer_cache(KV_Cache):
         if (layer_idx == self.layer_num - 1) and (batch_idx + bsz == self.batch_size):
             self.context += seq_len
 
-        # save cluster information for simulation
-        if self.profile_clustering:
-            torch.save(_centroids, f"/home/juchanlee/MagicDec/Engine/RetrievalAttention/profile/data/centroid_{layer_idx}.pt")
-            torch.save(_cluster_size, f"/home/juchanlee/MagicDec/Engine/RetrievalAttention/profile/data/cluster_size_{layer_idx}.pt")
-            torch.save(_clusters, f"/home/juchanlee/MagicDec/Engine/RetrievalAttention/profile/data/clusters_{layer_idx}.pt")
-            torch.save(_supercentroids, f"/home/juchanlee/MagicDec/Engine/RetrievalAttention/profile/data/supercentroids_{layer_idx}.pt")
-            torch.save(_supercluster_size, f"/home/juchanlee/MagicDec/Engine/RetrievalAttention/profile/data/supercluster_size_{layer_idx}.pt")
-            torch.save(_superclusters, f"/home/juchanlee/MagicDec/Engine/RetrievalAttention/profile/data/superclusters_{layer_idx}.pt")
+        # # save cluster information for simulation
+        # if self.profile_clustering:
+        #     torch.save(_centroids, f"/home/juchanlee/MagicDec/Engine/RetrievalAttention/profile/data/data_superclustersize_{self.approx_supercluster_size}/centroid_{layer_idx}.pt")
+        #     torch.save(_cluster_size, f"/home/juchanlee/MagicDec/Engine/RetrievalAttention/profile/data/data_superclustersize_{self.approx_supercluster_size}/cluster_size_{layer_idx}.pt")
+        #     torch.save(_clusters, f"/home/juchanlee/MagicDec/Engine/RetrievalAttention/profile/data/data_superclustersize_{self.approx_supercluster_size}/clusters_{layer_idx}.pt")
+        #     torch.save(_supercentroids, f"/home/juchanlee/MagicDec/Engine/RetrievalAttention/profile/data/data_superclustersize_{self.approx_supercluster_size}/supercentroids_{layer_idx}.pt")
+        #     torch.save(_supercluster_size, f"/home/juchanlee/MagicDec/Engine/RetrievalAttention/profile/data/data_superclustersize_{self.approx_supercluster_size}/supercluster_size_{layer_idx}.pt")
+        #     torch.save(_superclusters, f"/home/juchanlee/MagicDec/Engine/RetrievalAttention/profile/data/data_superclustersize_{self.approx_supercluster_size}/superclusters_{layer_idx}.pt")
                 
         return key_states[:, valid_start:, :, :], value_states[:, valid_start:, :, :]   # ignore mask tokens, shape: (bsz, seq_len, group_num, dim)
 
@@ -602,14 +620,27 @@ class retroinfer_cache(KV_Cache):
         # start_time = time.time()
         # torch.cuda.synchronize()
 
-        # search for TopK centroids
-        batch_gemm_softmax(queries, self.centroids[layer_idx], self.gemm_o, self.norm, self.sum, self.softmax_o,
-                           self.batch_groups, self.group_size, self.n_centroids, self.head_dim,
+        # # search for TopK centroids
+        # batch_gemm_softmax(queries, self.centroids[layer_idx], self.gemm_o, self.norm, self.sum, self.softmax_o,
+        #                    self.batch_groups, self.group_size, self.n_centroids, self.head_dim,
+        #                    self.RSQRT_DIM, 0)       # [batch_size*group_num, group_size, n_centroids]
+        # dist = torch.sum(self.softmax_o, dim=1)     # [batch_size*group_num, n_centroids]
+        # dist.masked_fill_(self.centroids_mask[layer_idx], self.DTYPE_MIN)
+        # cI = torch.topk(dist, self.max_compute_cluster_num, dim=-1, largest=True, sorted=True)[1] # [batch_size*group_num, max_consider_cluster]
+        # self.cluster_ids.copy_(cI[..., :self.nprobe])
+
+        #compare with supercluster entry and only select top
+        # search for TopK supercentroids
+        batch_gemm_softmax(queries, self.super_centroids[layer_idx], self.super_gemm_o, self.super_norm, self.super_sum, self.super_softmax_o,
+                           self.batch_groups, self.group_size, self.n_super_centroids, self.head_dim,
                            self.RSQRT_DIM, 0)       # [batch_size*group_num, group_size, n_centroids]
-        dist = torch.sum(self.softmax_o, dim=1)     # [batch_size*group_num, n_centroids]
-        dist.masked_fill_(self.centroids_mask[layer_idx], self.DTYPE_MIN)
-        cI = torch.topk(dist, self.max_compute_cluster_num, dim=-1, largest=True, sorted=True)[1] # [batch_size*group_num, max_consider_cluster]
-        self.cluster_ids.copy_(cI[..., :self.nprobe])
+        super_dist = torch.sum(self.super_softmax_o, dim=1)     # [batch_size*group_num, n_centroids]
+        super_dist.masked_fill_(self.super_centroids_mask[layer_idx], self.DTYPE_MIN)
+        super_cI = torch.topk(super_dist, int(self.max_compute_cluster_num/self.approx_supercluster_size), dim=-1, largest=True, sorted=True)[1] # [batch_size*group_num, max_consider_cluster]
+        # with super_cI, get selectd supercluster's clusters.
+        self.cluster_ids.copy_(super_cI[..., :self.nprobe])
+
+        # select only clusters from selected supercluster and see what happens
 
         # torch.cuda.synchronize()
         # end_time = time.time()
@@ -639,45 +670,45 @@ class retroinfer_cache(KV_Cache):
 
             # save cluster information for simulation
             if self.profile_clustering:
-                torch.save(selected_cI, f"/home/juchanlee/MagicDec/Engine/RetrievalAttention/profile/data/selected_cI_{layer_idx}.pt")
-                torch.save(selected_cluster_num, f"/home/juchanlee/MagicDec/Engine/RetrievalAttention/profile/data/selected_cluster_num_{layer_idx}.pt")
-                torch.save(selected_cluster_ratio, f"/home/juchanlee/MagicDec/Engine/RetrievalAttention/profile/data/selected_cluster_ratio_{layer_idx}.pt")
-                torch.save(selected_cluster_per_supercluster, f"/home/juchanlee/MagicDec/Engine/RetrievalAttention/profile/data/selected_cluster_per_supercluster_{layer_idx}.pt")
+                torch.save(selected_cI, f"/home/juchanlee/MagicDec/Engine/RetrievalAttention/profile/data/data_superclustersize_{self.approx_supercluster_size}/selected_cI_{layer_idx}.pt")
+                torch.save(selected_cluster_num, f"/home/juchanlee/MagicDec/Engine/RetrievalAttention/profile/data/data_superclustersize_{self.approx_supercluster_size}/selected_cluster_num_{layer_idx}.pt")
+                torch.save(selected_cluster_ratio, f"/home/juchanlee/MagicDec/Engine/RetrievalAttention/profile/data/data_superclustersize_{self.approx_supercluster_size}/selected_cluster_ratio_{layer_idx}.pt")
+                torch.save(selected_cluster_per_supercluster, f"/home/juchanlee/MagicDec/Engine/RetrievalAttention/profile/data/data_superclustersize_{self.approx_supercluster_size}/selected_cluster_per_supercluster_{layer_idx}.pt")
 
-            # import matplotlib.pyplot as plt
-            # import numpy as np
+            import matplotlib.pyplot as plt
+            import numpy as np
 
-            # # Assume `selected_cluster_ratio` is a torch.Tensor of shape [batch_size * kv_head, n_super_centroids]
-            # # Flatten to 1D numpy array of percentages
-            # ratios = selected_cluster_ratio.cpu().flatten().numpy()
+            # Assume `selected_cluster_ratio` is a torch.Tensor of shape [batch_size * kv_head, n_super_centroids]
+            # Flatten to 1D numpy array of percentages
+            ratios = selected_cluster_ratio.cpu().flatten().numpy()
 
-            # # Define bins for 0-100% in 10% increments
-            # bins = np.arange(0, 105, 5)
+            # Define bins for 0-100% in 10% increments
+            bins = np.arange(0, 105, 5)
 
-            # # plt.figure()
-            # # plt.hist(ratios, bins=bins, edgecolor='black')
-            # # plt.xlabel('Selected Cluster Ratio (%)')
-            # # plt.ylabel('Count')
-            # # plt.title('Histogram of Selected Cluster Ratios per Supercluster_4supercluster')
-            # # plt.xticks(bins)
-            # # # Save the figure to a PNG file
-            # # output_path = '/home/juchanlee/MagicDec/selected_cluster_ratio_hist_4supercluster.png'
-            # # plt.savefig(output_path)
-            # # plt.close()
-            # # plt.show()
+            plt.figure()
+            plt.hist(ratios, bins=bins, edgecolor='black')
+            plt.xlabel('Selected Cluster Ratio (%)')
+            plt.ylabel('Count')
+            plt.title('Histogram of Selected Cluster Ratios per Supercluster_4supercluster')
+            plt.xticks(bins)
+            # Save the figure to a PNG file
+            output_path = '/home/juchanlee/MagicDec/selected_cluster_ratio_hist_4supercluster_100iter.png'
+            plt.savefig(output_path)
+            plt.close()
+            plt.show()
 
-            # # nz_ratios = ratios[ratios > 0]  # Filter out zero values
-            # # plt.figure()
-            # # plt.hist(nz_ratios, bins=bins, edgecolor='black')
-            # # plt.xlabel('Selected Cluster Ratio (%)')
-            # # plt.ylabel('Count')
-            # # plt.title('Histogram of Selected Cluster Ratios per 4Supercluster')
-            # # plt.xticks(bins)
-            # # # Save the figure to a PNG file
-            # # output_path = '/home/juchanlee/MagicDec/selected_cluster_ratio_hist_wo_zero_4supercluster.png'
-            # # plt.savefig(output_path)
-            # # plt.close()
-            # # plt.show()
+            nz_ratios = ratios[ratios > 0]  # Filter out zero values
+            plt.figure()
+            plt.hist(nz_ratios, bins=bins, edgecolor='black')
+            plt.xlabel('Selected Cluster Ratio (%)')
+            plt.ylabel('Count')
+            plt.title('Histogram of Selected Cluster Ratios per 4Supercluster')
+            plt.xticks(bins)
+            # Save the figure to a PNG file
+            output_path = '/home/juchanlee/MagicDec/selected_cluster_ratio_hist_wo_zero_4supercluster_100iter.png'
+            plt.savefig(output_path)
+            plt.close()
+            plt.show()
 
         # estimation zone computation
         if self.es_cluster_num > 0:
