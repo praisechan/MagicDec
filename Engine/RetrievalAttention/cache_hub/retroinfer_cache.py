@@ -295,10 +295,10 @@ class retroinfer_cache(KV_Cache):
                 torch.zeros((self.batch_size*self.kv_head, self.n_super_centroids, max_supercluster_size), 
                             dtype=self.dtype, device=self.layer_mapping[str(ldx)]).contiguous().fill_(-1)
             ) # fill -1 to represent invalid value
-            self.super_centroids_mask.append(
-                torch.zeros((self.batch_size*self.kv_head, self.n_super_centroids), 
-                            dtype=torch.bool, device=self.layer_mapping[str(ldx)]).contiguous()
-            )
+            # self.super_centroids_mask.append(
+            #     torch.zeros((self.batch_size*self.kv_head, self.n_super_centroids), 
+            #                 dtype=torch.bool, device=self.layer_mapping[str(ldx)]).contiguous()
+            # )
 
         self.profile_clustering = profile_clustering
 
@@ -627,9 +627,9 @@ class retroinfer_cache(KV_Cache):
         dist = torch.sum(self.softmax_o, dim=1)     # [batch_size*group_num, n_centroids]
         dist.masked_fill_(self.centroids_mask[layer_idx], self.DTYPE_MIN)
         cI = torch.topk(dist, self.max_compute_cluster_num, dim=-1, largest=True, sorted=True)[1] # [batch_size*group_num, max_consider_cluster]
-        self.cluster_ids.copy_(cI[..., :self.nprobe])
+        # self.cluster_ids.copy_(cI[..., :self.nprobe])
 
-        # #compare with supercluster entry and only select top
+        # # compare with supercluster entry and only select top
         # # search for TopK supercentroids
         # batch_gemm_softmax(queries, self.super_centroids[layer_idx], self.super_gemm_o, self.super_norm, self.super_sum, self.super_softmax_o,
         #                    self.batch_groups, self.group_size, self.n_super_centroids, self.head_dim,
@@ -637,8 +637,22 @@ class retroinfer_cache(KV_Cache):
         # super_dist = torch.sum(self.super_softmax_o, dim=1)     # [batch_size*group_num, n_centroids]
         # super_dist.masked_fill_(self.super_centroids_mask[layer_idx], self.DTYPE_MIN)
         # super_cI = torch.topk(super_dist, int(self.max_compute_cluster_num/self.approx_supercluster_size), dim=-1, largest=True, sorted=True)[1] # [batch_size*group_num, max_consider_cluster]
+        
+        # cI_of_selected_superclusters = torch.zeros((super_cI.shape[0], self.max_compute_cluster_num*3))
+        # for head_idx in range(super_cI.shape[0]):
+        #   selected_cluster_counter_per_head = 0
+        #   for super_cid in super_cI[head_idx]:
+        #     supercluster_size = self.supercluster_size[layer_idx][head_idx][super_cid]
+            
+        #     start_idx = selected_cluster_counter_per_head
+        #     end_idx = selected_cluster_counter_per_head + supercluster_size
+            
+        #     cI_of_selected_superclusters[head_idx, start_idx:end_idx] = self.cluster_to_super[layer_idx][head_idx][super_cid][:supercluster_size]
+            
+        #     selected_cluster_counter_per_head += supercluster_size
+
         # # with super_cI, get selectd supercluster's clusters.
-        # self.cluster_ids.copy_(super_cI[..., :self.nprobe])
+        # self.cluster_ids.copy_(cI_of_selected_superclusters[..., :self.nprobe])
 
         # select only clusters from selected supercluster and see what happens
 
@@ -692,7 +706,7 @@ class retroinfer_cache(KV_Cache):
             plt.title('Selected Cluster Ratios per Supercluster')
             plt.xticks(bins)
             # Save the figure to a PNG file
-            output_path = '/home/juchanlee/MagicDec/selected_cluster_ratio_hist_supercluster.png'
+            output_path = '/home/juchanlee/MagicDec/selected_cluster_ratio_hist_4supercluster_100iter.png'
             plt.savefig(output_path)
             plt.close()
             plt.show()
