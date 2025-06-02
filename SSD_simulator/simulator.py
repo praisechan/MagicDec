@@ -32,6 +32,11 @@ def parse_args() -> argparse.Namespace:
                         help='KV heads per layer')
     parser.add_argument('--head_dim', type=int, default=128,
                         help='Dimension per KV head')
+    
+    # simulation config
+    parser.add_argument('--min_max_calculate', type=bool, default = False,
+                    help='whether accumulate pages_per_plane value for each layer or not')
+
     return parser.parse_args()
 
 
@@ -114,31 +119,103 @@ def get_plane_reads(layer: LayerData, args, mode: str) -> List[int]:
                 idx += 1
     return plane_reads
 
+def get_plane_reads_per_head(layer: LayerData, args, mode: str) -> List[List[int]]:
+    chips = build_chips(args, layer, mode)
+    reads_per_head = []
+    for head in layer.heads:
+        plane_reads = []
+        for chip in chips:
+            for plane in chip.planes:
+                r = plane.simulate_access(
+                    head.head_index,
+                    head.selected_cluster_ids,
+                    mode
+                )
+                plane_reads.append(r)
+        reads_per_head.append(plane_reads)
+    return reads_per_head
+
 
 def main():
     args = parse_args()
     layers_to_plot = [0, 10, 20]
-    modes = ['baseline', 'cluster']
-    data = []
-    labels = []
-    for layer_idx in layers_to_plot:
-        layer = load_profiling_layer(args.profiling_dir, layer_idx, args.num_heads)
-        for mode in modes:
-            reads = get_plane_reads(layer, args, mode)
-            data.append(reads)
-            labels.append(f"L{layer_idx}-{mode}")
+    # layers_to_plot = [0]
+    # modes = ['baseline', 'cluster']
+    modes = ['baseline']
+    if args.min_max_calculate:
+      data = []
+      labels = []
+      max_min_values = []
+      for layer_idx in layers_to_plot:
+          layer = load_profiling_layer(args.profiling_dir, layer_idx, args.num_heads)
+          for mode in modes:
+              reads_per_head = get_plane_reads_per_head(layer, args, mode)
+              # for each head, compute imbalance = max(reads) - min(reads)
+              for head_reads in reads_per_head:
+                  imbalance = max(head_reads) - min(head_reads)
+                  max_min_values.append(imbalance)    
 
-    # violin plot for selected layers
-    plt.figure(figsize=(12, 6))
-    parts = plt.violinplot(data, showmeans=True)
-    plt.xticks(range(1, len(labels) + 1), labels, fontsize=14)
-    plt.ylabel('Total page reads per plane', fontsize=14)
-    plt.title('Page Reads per Plane (Layer 0, 10, 20)', fontsize=14)
-    plt.tight_layout()
-    violin_filename = 'layers0_10_20_violin.png'
-    plt.savefig(violin_filename)
-    plt.close()
-    print(f"Violin plot saved to {violin_filename}")
+      plt.figure(figsize=(10,6))
+      # you can tweak bins= and range= to control the x‐axis units and limits
+      plt.hist(max_min_values, bins=30, edgecolor='black')
+      plt.xlabel('Max-Min page reads per head', fontsize=14)
+      plt.ylabel('Number of heads', fontsize=14)
+      plt.title('Distribution of per-head load imbalance', fontsize=16)
+      plt.tight_layout()
+      plt.savefig('head_load_imbalance_histogram.png')
+      plt.close()
+      print("Histogram saved to head_load_imbalance_histogram.png")
+      
+    else:          
+      data_per_head = []
+      data_per_layer = []
+      labels_per_head = []
+      labels_per_layer = []
+  
+      for layer_idx in layers_to_plot:
+          layer = load_profiling_layer(args.profiling_dir, layer_idx, args.num_heads)
+          for mode in modes:
+              import numpy as np
+              reads_per_head = np.array(get_plane_reads_per_head(layer, args, mode)).flatten().tolist()
+              data_per_head.append(reads_per_head)
+              labels_per_head.append(f"L{layer_idx}-{mode}")
+              
+
+              reads_per_layer = get_plane_reads(layer, args, mode)
+              data_per_layer.append(reads_per_layer)
+              labels_per_layer.append(f"L{layer_idx}-{mode}")
+
+      # violin plot for selected layers
+      plt.figure(figsize=(6, 6))
+      plt.violinplot(data_per_head, showmeans=True)
+      plt.xticks(range(1, len(labels_per_head) + 1), labels_per_head, fontsize=14)
+      plt.xlabel(f'CWDP {args.num_channels}-{args.chips_per_channel}-{args.dies_per_chip}-{args.planes_per_die}', fontsize=14)
+      plt.ylabel('Total page reads per plane', fontsize=14)
+      # plt.title('Page Reads per Plane (Layer 0, 10, 20)', fontsize=14)
+      plt.title('Page Reads per Plane (Head 0~7 in Layer 0, 10, 20)', fontsize=14)
+      plt.tight_layout()
+      # violin_filename = f'layers0_10_20_violin_CWDP{args.num_channels}-{args.chips_per_channel}-{args.dies_per_chip}-{args.planes_per_die}.png'
+      # violin_filename = f'layers0_10_20_violin_head0_CWDP{args.num_channels}-{args.chips_per_channel}-{args.dies_per_chip}-{args.planes_per_die}.png'
+      violin_filename = f'layers0_10_20_violin_allhead_CWDP{args.num_channels}-{args.chips_per_channel}-{args.dies_per_chip}-{args.planes_per_die}.png'
+      plt.savefig(violin_filename)
+      plt.close()
+      print(f"Violin plot saved to {violin_filename}")
+
+      # violin plot for selected layers
+      plt.figure(figsize=(6, 6))
+      plt.violinplot(data_per_layer, showmeans=True)
+      plt.xticks(range(1, len(labels_per_layer) + 1), labels_per_layer, fontsize=14)
+      plt.xlabel(f'CWDP {args.num_channels}-{args.chips_per_channel}-{args.dies_per_chip}-{args.planes_per_die}', fontsize=14)
+      plt.ylabel('Total page reads per plane', fontsize=14)
+      # plt.title('Page Reads per Plane (Layer 0, 10, 20)', fontsize=14)
+      plt.title('Page Reads per Plane (Layer 0, 10, 20)', fontsize=14)
+      plt.tight_layout()
+      # violin_filename = f'layers0_10_20_violin_CWDP{args.num_channels}-{args.chips_per_channel}-{args.dies_per_chip}-{args.planes_per_die}.png'
+      # violin_filename = f'layers0_10_20_violin_head0_CWDP{args.num_channels}-{args.chips_per_channel}-{args.dies_per_chip}-{args.planes_per_die}.png'
+      violin_filename = f'layers0_10_20_violin_layer_CWDP{args.num_channels}-{args.chips_per_channel}-{args.dies_per_chip}-{args.planes_per_die}.png'
+      plt.savefig(violin_filename)
+      plt.close()
+      print(f"Violin plot saved to {violin_filename}")
 
 if __name__ == '__main__':
     main()
