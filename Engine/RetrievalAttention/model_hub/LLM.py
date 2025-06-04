@@ -190,7 +190,7 @@ class LLM:
         output_ids = []     # single iteration, multi request
         
         outputs_logits = []
-        
+        top1_top2_diff = []
         print("Start prefilling ...")
         torch.cuda.synchronize()
         prefill_start = time.time()
@@ -198,10 +198,16 @@ class LLM:
         logits = self.prefill_forward(inputs_ids=inputs_ids)
         output_ids = logits.argmax(dim=-1)
         outputs_ids.append(output_ids)
-        
-        softmax_logits = torch.nn.functional.softmax(logits, dim=-1)
-        outputs_logits.append(softmax_logits.max())
 
+        # make a list of top3 softmax value and its token id
+        softmax_logits = torch.nn.functional.softmax(logits, dim=-1)
+        topk_vals, topk_indices = torch.topk(softmax_logits, k=3, dim=-1)  # each is [B, 3]
+        batch_top3 = []
+        for i in range(3):
+          batch_top3.append((topk_vals[0][:,i],topk_indices[0][:,i]))
+
+        outputs_logits.append(batch_top3)
+        top1_top2_diff.append(topk_vals[0][:,0]-topk_vals[0][:,1])
         self.move()
 
         torch.cuda.synchronize()
@@ -217,7 +223,13 @@ class LLM:
             outputs_ids.append(output_ids)
             
             softmax_logits = torch.nn.functional.softmax(logits, dim=-1)
-            outputs_logits.append(logits.max())
+            topk_vals, topk_indices = torch.topk(softmax_logits, k=3, dim=-1)  # each is [B, 3]
+            batch_top3 = []
+            for i in range(3):
+              batch_top3.append((topk_vals[0][:,i],topk_indices[0][:,i]))
+            
+            outputs_logits.append(batch_top3)
+            top1_top2_diff.append(topk_vals[0][:,0]-topk_vals[0][:,1])
 
         decode_end = time.time()
         print(colored(f"Decoding latency: {round((decode_end - decode_start), 8)} s\n", 'green'))
@@ -230,7 +242,7 @@ class LLM:
         
         outputs_ids = torch.cat(outputs_ids, dim=-1).tolist()
         
-        return outputs_ids, outputs_logits
+        return outputs_ids, outputs_logits, top1_top2_diff
 
 
     def generate(self, attention_type, inputs_ids, attention_masks, max_new_length, attn_config=None, profile_clustering=False):
@@ -258,6 +270,6 @@ class LLM:
         print("Allocate GPU buffers and CPU pin memory ...\n")
         self.init_kv_cache(input_length, valid_start, attn_config, profile_clustering=profile_clustering)
 
-        outputs, logits = self.inference(inputs_ids)
+        outputs, logits, top1_top2_diff = self.inference(inputs_ids)
 
-        return outputs, logits
+        return outputs, logits, top1_top2_diff

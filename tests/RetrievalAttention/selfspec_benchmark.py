@@ -164,8 +164,8 @@ for step, batch in tqdm(enumerate(dataset), total=num_eval_steps):
             torch.cuda.synchronize()
             t1 = time.time()
             
-        outputs, logits = engine.speculate(tokens_buffer[:, 0].view(-1,1), args.gamma, args.profile_clustering)
-        tokens_buffer[:,1:1+args.gamma] = torch.LongTensor(outputs)
+        draft_outputs, draft_logits, draft_top1_top2_diff = engine.speculate(tokens_buffer[:, 0].view(-1,1), args.gamma, args.profile_clustering)
+        tokens_buffer[:,1:1+args.gamma] = torch.LongTensor(draft_outputs)
         # tokens_buffer[:,1:1+args.gamma] = torch.LongTensor(engine.speculate(input_ids, args.gamma))
 
         if benchmark:
@@ -175,7 +175,9 @@ for step, batch in tqdm(enumerate(dataset), total=num_eval_steps):
 
         # Target Verification
         # target_tokens = engine.verify(tokens_buffer)
-        target_tokens = torch.LongTensor(engine.verify(tokens_buffer[:, 0].view(-1,1), args.gamma+1)).to(DEVICE) #TODO: verify stage should be batch-fashion, but this verify() is auto-regressive. 
+        target_outputs, target_logits = engine.verify(tokens_buffer[:, 0].view(-1,1), args.gamma+1)
+        target_tokens = torch.LongTensor(target_outputs).to(DEVICE) #TODO: verify stage should be batch-fashion, but this verify() is auto-regressive. 
+        # target_tokens = torch.LongTensor(engine.verify(tokens_buffer[:, 0].view(-1,1), args.gamma+1)).to(DEVICE) #TODO: verify stage should be batch-fashion, but this verify() is auto-regressive. 
 
         if benchmark:
             torch.cuda.synchronize()
@@ -207,6 +209,10 @@ for step, batch in tqdm(enumerate(dataset), total=num_eval_steps):
         speculated_this_iter = BATCH_SIZE * args.gamma
         total_spec_tokens += speculated_this_iter
         total_acc_tokens  += accepted_this_iter
+        
+        if accepted_this_iter != args.gamma:
+          print(draft_logits[accepted_this_iter])
+          print(target_logits[accepted_this_iter])
         ##########################################################################
         
         # Check for termination conditions
