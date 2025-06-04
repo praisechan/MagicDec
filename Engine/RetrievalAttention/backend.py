@@ -99,7 +99,7 @@ class LMBackend_Retro:
     @torch.inference_mode()
     def verify(self, input_ids: torch.LongTensor, gamma):
       input_from_start = torch.concat((self.input_tokens[:, :self.verified_cachelength], input_ids), dim=1)
-      outputs = self.model.generate(
+      outputs, _ = self.model.generate(
           attention_type="Full_Flash_Attn",
           inputs_ids = input_from_start.to(self.model.layers[0].device),
           attention_masks = self.attention_masks.to(self.model.layers[0].device),
@@ -112,7 +112,7 @@ class LMBackend_Retro:
     @torch.inference_mode()
     def speculate(self, input_ids: torch.LongTensor, gamma, profile_clustering=False):
       input_from_start = torch.concat((self.input_tokens[:, :self.verified_cachelength], input_ids), dim=1)
-      outputs = self.model.generate(
+      outputs, logits = self.model.generate(
           attention_type="RetroInfer",
           inputs_ids = input_from_start.to(self.model.layers[0].device),
           attention_masks = self.attention_masks.to(self.model.layers[0].device),
@@ -121,7 +121,7 @@ class LMBackend_Retro:
           profile_clustering=profile_clustering          
       )
 
-      return outputs
+      return outputs, logits
     
     @torch.inference_mode()
     def draft_kv_update(self, input_ids: torch.LongTensor):

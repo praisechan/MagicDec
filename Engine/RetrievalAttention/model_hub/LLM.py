@@ -189,6 +189,8 @@ class LLM:
         outputs_ids = []    # multi iteration, multi request
         output_ids = []     # single iteration, multi request
         
+        outputs_logits = []
+        
         print("Start prefilling ...")
         torch.cuda.synchronize()
         prefill_start = time.time()
@@ -196,6 +198,10 @@ class LLM:
         logits = self.prefill_forward(inputs_ids=inputs_ids)
         output_ids = logits.argmax(dim=-1)
         outputs_ids.append(output_ids)
+        
+        softmax_logits = torch.nn.functional.softmax(logits, dim=-1)
+        outputs_logits.append(softmax_logits.max())
+
         self.move()
 
         torch.cuda.synchronize()
@@ -209,6 +215,9 @@ class LLM:
             logits = self.decode_forward(inputs_ids=output_ids)
             output_ids = logits.argmax(dim=-1)
             outputs_ids.append(output_ids)
+            
+            softmax_logits = torch.nn.functional.softmax(logits, dim=-1)
+            outputs_logits.append(logits.max())
 
         decode_end = time.time()
         print(colored(f"Decoding latency: {round((decode_end - decode_start), 8)} s\n", 'green'))
@@ -221,7 +230,7 @@ class LLM:
         
         outputs_ids = torch.cat(outputs_ids, dim=-1).tolist()
         
-        return outputs_ids
+        return outputs_ids, outputs_logits
 
 
     def generate(self, attention_type, inputs_ids, attention_masks, max_new_length, attn_config=None, profile_clustering=False):
@@ -249,6 +258,6 @@ class LLM:
         print("Allocate GPU buffers and CPU pin memory ...\n")
         self.init_kv_cache(input_length, valid_start, attn_config, profile_clustering=profile_clustering)
 
-        outputs = self.inference(inputs_ids)
+        outputs, logits = self.inference(inputs_ids)
 
-        return outputs
+        return outputs, logits

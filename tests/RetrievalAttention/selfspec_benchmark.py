@@ -163,7 +163,9 @@ for step, batch in tqdm(enumerate(dataset), total=num_eval_steps):
         if benchmark:
             torch.cuda.synchronize()
             t1 = time.time()
-        tokens_buffer[:,1:1+args.gamma] = torch.LongTensor(engine.speculate(tokens_buffer[:, 0].view(-1,1), args.gamma, args.profile_clustering))
+            
+        outputs, logits = engine.speculate(tokens_buffer[:, 0].view(-1,1), args.gamma, args.profile_clustering)
+        tokens_buffer[:,1:1+args.gamma] = torch.LongTensor(outputs)
         # tokens_buffer[:,1:1+args.gamma] = torch.LongTensor(engine.speculate(input_ids, args.gamma))
 
         if benchmark:

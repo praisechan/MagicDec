@@ -92,7 +92,7 @@ class retroinfer_cache(KV_Cache):
         # index parameters
         self.n_centroids = n_centroids
         self.n_segment = n_segment
-        self.approx_supercluster_size = 4
+        self.approx_supercluster_size = 16
         self.n_super_centroids = int(n_centroids/self.approx_supercluster_size)
         self.nprobe = nprobe    # retrieve zone size
         self.max_compute_cluster_num = max_compute_cluster_num
@@ -295,10 +295,10 @@ class retroinfer_cache(KV_Cache):
                 torch.zeros((self.batch_size*self.kv_head, self.n_super_centroids, max_supercluster_size), 
                             dtype=self.dtype, device=self.layer_mapping[str(ldx)]).contiguous().fill_(-1)
             ) # fill -1 to represent invalid value
-            # self.super_centroids_mask.append(
-            #     torch.zeros((self.batch_size*self.kv_head, self.n_super_centroids), 
-            #                 dtype=torch.bool, device=self.layer_mapping[str(ldx)]).contiguous()
-            # )
+            self.super_centroids_mask.append(
+                torch.zeros((self.batch_size*self.kv_head, self.n_super_centroids), 
+                            dtype=torch.bool, device=self.layer_mapping[str(ldx)]).contiguous()
+            )
 
         self.profile_clustering = profile_clustering
 
@@ -483,14 +483,17 @@ class retroinfer_cache(KV_Cache):
         if (layer_idx == self.layer_num - 1) and (batch_idx + bsz == self.batch_size):
             self.context += seq_len
 
-        # # save cluster information for simulation
-        # if self.profile_clustering:
-        #     torch.save(_centroids, f"/home/juchanlee/MagicDec/Engine/RetrievalAttention/profile/data/data_superclustersize_{self.approx_supercluster_size}/centroid_{layer_idx}.pt")
-        #     torch.save(_cluster_size, f"/home/juchanlee/MagicDec/Engine/RetrievalAttention/profile/data/data_superclustersize_{self.approx_supercluster_size}/cluster_size_{layer_idx}.pt")
-        #     torch.save(_clusters, f"/home/juchanlee/MagicDec/Engine/RetrievalAttention/profile/data/data_superclustersize_{self.approx_supercluster_size}/clusters_{layer_idx}.pt")
-        #     torch.save(_supercentroids, f"/home/juchanlee/MagicDec/Engine/RetrievalAttention/profile/data/data_superclustersize_{self.approx_supercluster_size}/supercentroids_{layer_idx}.pt")
-        #     torch.save(_supercluster_size, f"/home/juchanlee/MagicDec/Engine/RetrievalAttention/profile/data/data_superclustersize_{self.approx_supercluster_size}/supercluster_size_{layer_idx}.pt")
-        #     torch.save(_superclusters, f"/home/juchanlee/MagicDec/Engine/RetrievalAttention/profile/data/data_superclustersize_{self.approx_supercluster_size}/superclusters_{layer_idx}.pt")
+        # save cluster information for simulation
+        if self.profile_clustering:
+            import os
+            self.outdir_path = f"/home/juchanlee/MagicDec/Engine/RetrievalAttention/profile/data/data_superclustersize_{self.approx_supercluster_size}_0.125KV"
+            os.makedirs(self.outdir_path, exist_ok=True)
+            torch.save(_centroids, f"{self.outdir_path}/centroid_{layer_idx}.pt")
+            torch.save(_cluster_size, f"{self.outdir_path}/cluster_size_{layer_idx}.pt")
+            torch.save(_clusters, f"{self.outdir_path}/clusters_{layer_idx}.pt")
+            torch.save(_supercentroids, f"{self.outdir_path}/supercentroids_{layer_idx}.pt")
+            torch.save(_supercluster_size, f"{self.outdir_path}/supercluster_size_{layer_idx}.pt")
+            torch.save(_superclusters, f"{self.outdir_path}/superclusters_{layer_idx}.pt")
                 
         return key_states[:, valid_start:, :, :], value_states[:, valid_start:, :, :]   # ignore mask tokens, shape: (bsz, seq_len, group_num, dim)
 
@@ -627,34 +630,42 @@ class retroinfer_cache(KV_Cache):
         dist = torch.sum(self.softmax_o, dim=1)     # [batch_size*group_num, n_centroids]
         dist.masked_fill_(self.centroids_mask[layer_idx], self.DTYPE_MIN)
         cI = torch.topk(dist, self.max_compute_cluster_num, dim=-1, largest=True, sorted=True)[1] # [batch_size*group_num, max_consider_cluster]
-        # self.cluster_ids.copy_(cI[..., :self.nprobe])
 
-        # # compare with supercluster entry and only select top
-        # # search for TopK supercentroids
-        # batch_gemm_softmax(queries, self.super_centroids[layer_idx], self.super_gemm_o, self.super_norm, self.super_sum, self.super_softmax_o,
-        #                    self.batch_groups, self.group_size, self.n_super_centroids, self.head_dim,
-        #                    self.RSQRT_DIM, 0)       # [batch_size*group_num, group_size, n_centroids]
-        # super_dist = torch.sum(self.super_softmax_o, dim=1)     # [batch_size*group_num, n_centroids]
-        # super_dist.masked_fill_(self.super_centroids_mask[layer_idx], self.DTYPE_MIN)
-        # super_cI = torch.topk(super_dist, int(self.max_compute_cluster_num/self.approx_supercluster_size), dim=-1, largest=True, sorted=True)[1] # [batch_size*group_num, max_consider_cluster]
-        
-        # cI_of_selected_superclusters = torch.zeros((super_cI.shape[0], self.max_compute_cluster_num*3))
-        # for head_idx in range(super_cI.shape[0]):
-        #   selected_cluster_counter_per_head = 0
-        #   for super_cid in super_cI[head_idx]:
-        #     supercluster_size = self.supercluster_size[layer_idx][head_idx][super_cid]
+        if self.profile_clustering:
+            # compare with supercluster entry and only select top
+            # search for TopK supercentroids
+            batch_gemm_softmax(queries, self.super_centroids[layer_idx], self.super_gemm_o, self.super_norm, self.super_sum, self.super_softmax_o,
+                            self.batch_groups, self.group_size, self.n_super_centroids, self.head_dim,
+                            self.RSQRT_DIM, 0)       # [batch_size*group_num, group_size, n_centroids]
+            super_dist = torch.sum(self.super_softmax_o, dim=1)     # [batch_size*group_num, n_centroids]
+            super_dist.masked_fill_(self.super_centroids_mask[layer_idx], self.DTYPE_MIN)
+            super_cI = torch.topk(super_dist, int(self.max_compute_cluster_num/self.approx_supercluster_size), dim=-1, largest=True, sorted=True)[1] # [batch_size*group_num, max_consider_cluster]
             
-        #     start_idx = selected_cluster_counter_per_head
-        #     end_idx = selected_cluster_counter_per_head + supercluster_size
-            
-        #     cI_of_selected_superclusters[head_idx, start_idx:end_idx] = self.cluster_to_super[layer_idx][head_idx][super_cid][:supercluster_size]
-            
-        #     selected_cluster_counter_per_head += supercluster_size
+            # select only clusters from selected supercluster and see what happens
+            cI_of_selected_superclusters = torch.zeros((super_cI.shape[0], self.max_compute_cluster_num), dtype=torch.int32, device=self.layer_mapping[str(layer_idx)])
+            for head_idx in range(super_cI.shape[0]):
+                selected_cluster_counter_per_head = 0
+                for super_cid in super_cI[head_idx]:
+                    supercluster_size = self.supercluster_size[layer_idx][head_idx][super_cid]
+                    
+                    start_idx = selected_cluster_counter_per_head
+                    end_idx = selected_cluster_counter_per_head + supercluster_size
+
+                    # sanity check for indexing error
+                    if end_idx > self.max_compute_cluster_num:
+                        break
+                    
+                    cI_of_selected_superclusters[head_idx, start_idx:end_idx] = self.cluster_to_super[layer_idx][head_idx][super_cid][:supercluster_size]
+                    
+                    selected_cluster_counter_per_head += supercluster_size
 
         # # with super_cI, get selectd supercluster's clusters.
-        # self.cluster_ids.copy_(cI_of_selected_superclusters[..., :self.nprobe])
+        selection_method = "fine-grained"
+        if selection_method == "fine-grained":
+          self.cluster_ids.copy_(cI[..., :self.nprobe])
+        elif selection_method == "coarse-grained":
+          self.cluster_ids.copy_(cI_of_selected_superclusters[..., :self.nprobe])
 
-        # select only clusters from selected supercluster and see what happens
 
         # torch.cuda.synchronize()
         # end_time = time.time()
@@ -665,6 +676,7 @@ class retroinfer_cache(KV_Cache):
             selected_cluster_num = torch.zeros((self.batch_size*self.kv_head, self.n_super_centroids))
             selected_cluster_per_supercluster = []
             selected_cI = cI[..., :self.nprobe]
+            cI_of_selected_superclusters = cI_of_selected_superclusters[..., :self.nprobe]
             for batch_idx in range(self.batch_size*self.kv_head):
                 selected_cluster_per_supercluster_tmp = [[] for _ in range(self.n_super_centroids)]
 
@@ -682,12 +694,13 @@ class retroinfer_cache(KV_Cache):
                 for supercluster_idx in range(self.n_super_centroids):
                     selected_cluster_ratio[batch_idx][supercluster_idx] =  selected_cluster_num[batch_idx][supercluster_idx] / self.supercluster_size[layer_idx][batch_idx][supercluster_idx] * 100
 
-            # save cluster information for simulation
-            if self.profile_clustering:
-                torch.save(selected_cI, f"/home/juchanlee/MagicDec/Engine/RetrievalAttention/profile/data/data_superclustersize_{self.approx_supercluster_size}/selected_cI_{layer_idx}.pt")
-                torch.save(selected_cluster_num, f"/home/juchanlee/MagicDec/Engine/RetrievalAttention/profile/data/data_superclustersize_{self.approx_supercluster_size}/selected_cluster_num_{layer_idx}.pt")
-                torch.save(selected_cluster_ratio, f"/home/juchanlee/MagicDec/Engine/RetrievalAttention/profile/data/data_superclustersize_{self.approx_supercluster_size}/selected_cluster_ratio_{layer_idx}.pt")
-                torch.save(selected_cluster_per_supercluster, f"/home/juchanlee/MagicDec/Engine/RetrievalAttention/profile/data/data_superclustersize_{self.approx_supercluster_size}/selected_cluster_per_supercluster_{layer_idx}.pt")
+            # # save cluster information for simulation
+            torch.save(selected_cI, f"{self.outdir_path}/selected_cI_{layer_idx}.pt")
+            torch.save(selected_cluster_num, f"{self.outdir_path}/selected_cluster_num_{layer_idx}.pt")
+            torch.save(selected_cluster_ratio, f"{self.outdir_path}/selected_cluster_ratio_{layer_idx}.pt")
+            torch.save(selected_cluster_per_supercluster, f"{self.outdir_path}/selected_cluster_per_supercluster_{layer_idx}.pt")
+            torch.save(selected_cluster_per_supercluster, f"{self.outdir_path}/selected_cluster_per_supercluster_{layer_idx}.pt")
+            torch.save(cI_of_selected_superclusters, f"{self.outdir_path}/cI_of_selected_superclusters_{layer_idx}.pt")
 
             import matplotlib.pyplot as plt
             import numpy as np
