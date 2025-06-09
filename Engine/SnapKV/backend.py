@@ -176,7 +176,19 @@ class LMBackend:
                 # If benchmarking the latency, don't update the cachelens and page table
                 self.cachelens -= dec_len
                 self.paged_kv_last_page_len -= dec_len
-            return logits
+
+            # calculate top3 softmax value and its token id
+            softmax_logits = torch.nn.functional.softmax(logits, dim=-1)
+            topk_vals, topk_indices = torch.topk(softmax_logits, k=3, dim=-1)  # each is [B, 3]
+
+            output_logit = [[[] for _ in range(topk_vals.shape[1])] for _ in range(topk_vals.shape[0])]
+            for i in range(topk_vals.shape[0]):
+              for j in range(topk_vals.shape[1]):
+                output_logit[i][j].append((topk_vals[i][j][0],topk_indices[i][j][0]))
+                output_logit[i][j].append((topk_vals[i][j][1],topk_indices[i][j][1]))
+                output_logit[i][j].append((topk_vals[i][j][2],topk_indices[i][j][2]))
+                
+            return torch.argmax(logits, dim=-1), output_logit
     
     def pre_verify(self, dec_len):
             self.paged_kv_last_page_len += dec_len
@@ -211,7 +223,19 @@ class LMBackend:
                 # If benchmarking the latency, don't update the cachelens and page table
                 self.draft_cachelens -= dec_len
                 self.draft_paged_kv_last_page_len -= dec_len
-            return logits
+
+            # calculate top3 softmax value and its token id
+            softmax_logits = torch.nn.functional.softmax(logits, dim=-1)
+            topk_vals, topk_indices = torch.topk(softmax_logits, k=3, dim=-1)  # each is [B, 3]
+            output_logit = [[] for _ in range(topk_vals.shape[0])]
+            for i in range(topk_vals.shape[0]):
+              output_logit[i].append((topk_vals[i][0][0],topk_indices[i][0][0]))
+              output_logit[i].append((topk_vals[i][0][1],topk_indices[i][0][1]))
+              output_logit[i].append((topk_vals[i][0][2],topk_indices[i][0][2]))
+
+            top1_top2_diff = topk_vals[0][:,0]-topk_vals[0][:,1]
+                
+            return torch.argmax(logits, dim=-1), output_logit, top1_top2_diff
     
     def pre_spec(self, dec_len):
             self.draft_paged_kv_last_page_len += dec_len

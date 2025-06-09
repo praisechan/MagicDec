@@ -224,9 +224,11 @@ class LLM:
             
             softmax_logits = torch.nn.functional.softmax(logits, dim=-1)
             topk_vals, topk_indices = torch.topk(softmax_logits, k=3, dim=-1)  # each is [B, 3]
-            batch_top3 = []
-            for i in range(3):
-              batch_top3.append((topk_vals[0][:,i],topk_indices[0][:,i]))
+            batch_top3 = [[] for _ in range(topk_vals.shape[-2])]
+            for i in range(topk_vals.shape[-2]):
+              batch_top3[i].append((topk_vals[0][i][0],topk_indices[0][i][0]))
+              batch_top3[i].append((topk_vals[0][i][1],topk_indices[0][i][1]))
+              batch_top3[i].append((topk_vals[0][i][2],topk_indices[0][i][2]))
             
             outputs_logits.append(batch_top3)
             top1_top2_diff.append(topk_vals[0][:,0]-topk_vals[0][:,1])

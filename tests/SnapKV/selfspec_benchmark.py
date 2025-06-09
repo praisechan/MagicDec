@@ -154,8 +154,12 @@ for step, batch in tqdm(enumerate(dataloader), total=num_eval_steps):
             torch.cuda.synchronize()
             t1 = time.time()
 
+        draft_logits =[None]*args.gamma
+        draft_top1_top2_diff =[None]*args.gamma
         for i in range(args.gamma):
-            tokens_buffer[:,i+1:i+2] = engine.speculate(tokens_buffer[:, i].view(-1,1))
+            draft_output, draft_logits[i], draft_top1_top2_diff[i] = engine.speculate(tokens_buffer[:, i].view(-1,1))
+            tokens_buffer[:,i+1:i+2] =  draft_output
+            # tokens_buffer[:,i+1:i+2] = engine.speculate(tokens_buffer[:, i].view(-1,1))
 
         if benchmark:
             torch.cuda.synchronize()
@@ -163,7 +167,10 @@ for step, batch in tqdm(enumerate(dataloader), total=num_eval_steps):
             draft_time+=t2-t1
 
         # Target Verification
-        target_tokens = engine.verify(tokens_buffer)
+        target_outputs, target_logits = engine.verify(tokens_buffer)
+        target_tokens = target_outputs
+        # target_tokens = engine.verify(tokens_buffer)
+
 
         if benchmark:
             torch.cuda.synchronize()
@@ -195,6 +202,10 @@ for step, batch in tqdm(enumerate(dataloader), total=num_eval_steps):
         speculated_this_iter = BATCH_SIZE * args.gamma
         total_spec_tokens += speculated_this_iter
         total_acc_tokens  += accepted_this_iter
+        
+        if accepted_this_iter != args.gamma:
+          print(draft_logits[accepted_this_iter][0])
+          print(target_logits[0][accepted_this_iter])
         ##########################################################################
         
         # Check for termination conditions

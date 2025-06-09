@@ -206,7 +206,9 @@ class Transformer(nn.Module):
             global_select_indices = torch.argmax(all_max_value, dim=-1)
             global_indices = torch.gather(all_max_indices, dim=-1, index=global_select_indices.unsqueeze(-1))
             return global_indices.squeeze(-1)
-        return torch.argmax(logits, dim=-1)
+
+        return logits
+        # return torch.argmax(logits, dim=-1)
     
     def draft_forward(self, idx: Tensor, input_pos: Tensor, kv_append_indptr: Tensor, kv_page_indices: Tensor, kv_page_indptr: Tensor, kv_page_lastlen: Tensor) -> Tensor:
         x = self.tok_embeddings(idx)
@@ -225,7 +227,9 @@ class Transformer(nn.Module):
             global_select_indices = torch.argmax(all_max_value, dim=-1)
             global_indices = torch.gather(all_max_indices, dim=-1, index=global_select_indices.unsqueeze(-1))
             return global_indices.squeeze(-1)
-        return torch.argmax(logits, dim=-1)
+          
+        return logits
+        # return torch.argmax(logits, dim=-1)
 
     def prefill(self, idx: Tensor, input_pos: Tensor, kv_append_indptr: Tensor, kv_page_indices: Tensor, kv_page_indptr: Tensor, kv_page_lastlen: Tensor, is_last = False, draft_paged_kv_indptr=None, draft_paged_kv_indices=None, draft_paged_kv_last_page_len=None) -> Tensor:
         x = self.tok_embeddings(idx)
