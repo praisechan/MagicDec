@@ -7,6 +7,7 @@ from .cache import KV_Cache
 from .kmeans import segment_k_means
 from weighted_flash_decoding import weighted_flash_decoding
 
+import os
 
 # update segment size
 THRESHOLD_LENGTH = 1024
@@ -92,8 +93,10 @@ class retroinfer_cache(KV_Cache):
         # index parameters
         self.n_centroids = n_centroids
         self.n_segment = n_segment
-        self.approx_supercluster_size = 16
+        self.approx_supercluster_size = 4
         self.n_super_centroids = int(n_centroids/self.approx_supercluster_size)
+        self.profile_clustering = profile_clustering
+
         self.nprobe = nprobe    # retrieve zone size
         self.max_compute_cluster_num = max_compute_cluster_num
         self.es_cluster_num = max_compute_cluster_num - nprobe  # estimation zone size
@@ -276,31 +279,30 @@ class retroinfer_cache(KV_Cache):
                 self.mainevents[device_idx] = torch.cuda.Event()
                 self.copyevents[device_idx] = torch.cuda.Event()
     
-        # allocate memory for supercluster
-        self.super_centroids   = []
-        self.cluster_to_super  = []
-        self.supercluster_size = []
-        self.super_centroids_mask = []
-        max_supercluster_size = 300 # this is not fixed value. segment_kmeans is not constrained to fixed cluster size.
-        for ldx in range(self.layer_num):
-            self.super_centroids.append(
-                torch.zeros((self.batch_size*self.kv_head, self.n_super_centroids, self.head_dim), 
-                            dtype=self.dtype, device=self.layer_mapping[str(ldx)]).contiguous()
-            )
-            self.supercluster_size.append(
-                torch.zeros((self.batch_size*self.kv_head, self.n_super_centroids),
-                            dtype=self.dtype, device=self.layer_mapping[str(ldx)]).contiguous()
-            )
-            self.cluster_to_super.append(
-                torch.zeros((self.batch_size*self.kv_head, self.n_super_centroids, max_supercluster_size), 
-                            dtype=self.dtype, device=self.layer_mapping[str(ldx)]).contiguous().fill_(-1)
-            ) # fill -1 to represent invalid value
-            self.super_centroids_mask.append(
-                torch.zeros((self.batch_size*self.kv_head, self.n_super_centroids), 
-                            dtype=torch.bool, device=self.layer_mapping[str(ldx)]).contiguous()
-            )
-
-        self.profile_clustering = profile_clustering
+        if self.profile_clustering:
+            # allocate memory for supercluster
+            self.super_centroids   = []
+            self.cluster_to_super  = []
+            self.supercluster_size = []
+            self.super_centroids_mask = []
+            max_supercluster_size = 300 # this is not fixed value. segment_kmeans is not constrained to fixed cluster size.
+            for ldx in range(self.layer_num):
+                self.super_centroids.append(
+                    torch.zeros((self.batch_size*self.kv_head, self.n_super_centroids, self.head_dim), 
+                                dtype=self.dtype, device=self.layer_mapping[str(ldx)]).contiguous()
+                )
+                self.supercluster_size.append(
+                    torch.zeros((self.batch_size*self.kv_head, self.n_super_centroids),
+                                dtype=self.dtype, device=self.layer_mapping[str(ldx)]).contiguous()
+                )
+                self.cluster_to_super.append(
+                    torch.zeros((self.batch_size*self.kv_head, self.n_super_centroids, max_supercluster_size), 
+                                dtype=self.dtype, device=self.layer_mapping[str(ldx)]).contiguous().fill_(-1)
+                ) # fill -1 to represent invalid value
+                self.super_centroids_mask.append(
+                    torch.zeros((self.batch_size*self.kv_head, self.n_super_centroids), 
+                                dtype=torch.bool, device=self.layer_mapping[str(ldx)]).contiguous()
+                )
 
     # decide whether to pre-allocate GPU memory before prefilling
     def pre_allocate_decision(self):
@@ -342,16 +344,16 @@ class retroinfer_cache(KV_Cache):
                                          dtype=self.dtype, device=self.layer_mapping[str(0)]).contiguous()
         self.es_cluster_size = torch.zeros((self.batch_size*self.kv_head, 1, 1, self.es_cluster_num),
                                            dtype=self.dtype, device=self.layer_mapping[str(0)]).contiguous()
-
-        # allocate layer-share buffer for batch_gemm_softmax kernel
-        self.super_gemm_o = torch.zeros((self.batch_size, self.kv_head, self.group_size, self.n_super_centroids), 
-                                  device=self.layer_mapping[str(0)], dtype=self.dtype).contiguous()
-        self.super_softmax_o = torch.zeros((self.batch_size*self.kv_head, self.group_size, self.n_super_centroids),
-                                     device=self.layer_mapping[str(0)], dtype=self.dtype).contiguous()
-        self.super_norm = torch.zeros((self.batch_size*self.kv_head, self.group_size, (self.n_super_centroids+256-1)//256),
-                                 device=self.layer_mapping[str(0)], dtype=torch.float32).contiguous()
-        self.super_sum = torch.zeros((self.batch_size*self.kv_head, self.group_size, (self.n_super_centroids+256-1)//256),
-                                device=self.layer_mapping[str(0)], dtype=torch.float32).contiguous()
+        if self.profile_clustering:
+            # allocate layer-share buffer for batch_gemm_softmax kernel
+            self.super_gemm_o = torch.zeros((self.batch_size, self.kv_head, self.group_size, self.n_super_centroids), 
+                                      device=self.layer_mapping[str(0)], dtype=self.dtype).contiguous()
+            self.super_softmax_o = torch.zeros((self.batch_size*self.kv_head, self.group_size, self.n_super_centroids),
+                                        device=self.layer_mapping[str(0)], dtype=self.dtype).contiguous()
+            self.super_norm = torch.zeros((self.batch_size*self.kv_head, self.group_size, (self.n_super_centroids+256-1)//256),
+                                    device=self.layer_mapping[str(0)], dtype=torch.float32).contiguous()
+            self.super_sum = torch.zeros((self.batch_size*self.kv_head, self.group_size, (self.n_super_centroids+256-1)//256),
+                                    device=self.layer_mapping[str(0)], dtype=torch.float32).contiguous()
 
 
     def prepare_cache(self):
@@ -440,30 +442,37 @@ class retroinfer_cache(KV_Cache):
         # import time
         # start_time = time.time()
         # torch.cuda.synchronize()
+        if "NUM_ITERS" in os.environ:
+            num_iters = int(os.environ["NUM_ITERS"])
+        else:
+            num_iters = 10 # default
+
         _centroids, _value_sum, _clusters, _cluster_size = segment_k_means(
             key=self.temp_keys-mean_key,    # centering to 0
             value=self.temp_values,
             num_centroids=self.n_centroids,
             num_segments=self.n_segment,
+            num_iters=num_iters
         )
 
         # compute key mean, shape (group_num, 1, head_dim)
         mean_centroid = torch.mean(_centroids, dim=1, keepdim=True)
 
-        # cluster those centroids into “superclusters”
-        _supercentroids, _, _superclusters, _supercluster_size = segment_k_means(
-            key = _centroids-mean_centroid,
-            value = None,
-            num_centroids=self.n_super_centroids,
-            num_iters = 100,
-            num_segments=1,
-        )
-        # super_centroids: [S×D]
-        # cluster_to_super: [K]   maps each of the K clusters → a supercluster id in [0..S-1]
-        self.super_centroids[layer_idx]   = _supercentroids + mean_centroid
-        self.cluster_to_super[layer_idx]  = _superclusters
-        self.supercluster_size[layer_idx] = _supercluster_size
-        self.super_centroids_mask[layer_idx] = (_supercluster_size == 0)          # (group_num, n_super_centroids)
+        if self.profile_clustering:
+            # cluster those centroids into “superclusters”
+            _supercentroids, _, _superclusters, _supercluster_size = segment_k_means(
+                key = _centroids-mean_centroid,
+                value = None,
+                num_centroids=self.n_super_centroids,
+                num_iters = 100,
+                num_segments=1,
+            )
+            # super_centroids: [S×D]
+            # cluster_to_super: [K]   maps each of the K clusters → a supercluster id in [0..S-1]
+            self.super_centroids[layer_idx]   = _supercentroids + mean_centroid
+            self.cluster_to_super[layer_idx]  = _superclusters
+            self.supercluster_size[layer_idx] = _supercluster_size
+            self.super_centroids_mask[layer_idx] = (_supercluster_size == 0)          # (group_num, n_super_centroids)
         
         # torch.cuda.synchronize()
         # end_time = time.time()
@@ -482,11 +491,10 @@ class retroinfer_cache(KV_Cache):
         
         if (layer_idx == self.layer_num - 1) and (batch_idx + bsz == self.batch_size):
             self.context += seq_len
-
         # save cluster information for simulation
         if self.profile_clustering:
-            import os
-            self.outdir_path = f"/home/juchanlee/MagicDec/Engine/RetrievalAttention/profile/data/data_superclustersize_{self.approx_supercluster_size}_0.125KV"
+            avg_cluster_size = (self.input_length - self.static_pattern_total) // self.n_centroids
+            self.outdir_path = f"/home/juchanlee/MagicDec/Engine/RetrievalAttention/profile/data/data_superclustersize_{self.approx_supercluster_size}_0.125KV_{seq_len}_clustersize_{avg_cluster_size}"
             os.makedirs(self.outdir_path, exist_ok=True)
             torch.save(_centroids, f"{self.outdir_path}/centroid_{layer_idx}.pt")
             torch.save(_cluster_size, f"{self.outdir_path}/cluster_size_{layer_idx}.pt")
@@ -616,7 +624,6 @@ class retroinfer_cache(KV_Cache):
         # assert queries.size(1) == 1
         # assert queries.size(2) == self.kv_head * self.group_size == self.num_heads
         # assert queries.size(3) == self.head_dim
-
         static_len = self.static_pattern_total if layer_idx == self.layer_num - 1 else self.static_pattern_total + 1
 
         # import time
@@ -736,7 +743,6 @@ class retroinfer_cache(KV_Cache):
             plt.savefig(output_path)
             plt.close()
             plt.show()
-
         # estimation zone computation
         if self.es_cluster_num > 0:
             gather_copy_vectors(self.centroids[layer_idx], self.es_centroids, 

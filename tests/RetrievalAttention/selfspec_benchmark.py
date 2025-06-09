@@ -344,7 +344,17 @@ CSV_PATH = f"/home/juchanlee/MagicDec/output/RetroInfer/{MODEL}_{args.dataset}_a
 if not os.path.exists(CSV_PATH):
     with open(CSV_PATH, "w", newline="") as f:
         writer = csv.writer(f)
-        writer.writerow(["attn_type", "prefix_len","budget_ratio", "gamma", "task", "accept_rate_total", "accept_rate_per_token"])
+        writer.writerow(["attn_type", "prefix_len","budget_ratio", "gamma", "task", "accept_rate_total", "accept_rate_per_token", "cluster_size", "num_iters"])
+
+# cluster information
+if "NUM_ITERS" in os.environ:
+    num_iters = int(os.environ["NUM_ITERS"])
+else:
+    num_iters = 10 # default
+if "CLUSTER_SIZE" in os.environ:
+    aprox_cluster_size = int(os.environ["CLUSTER_SIZE"])
+else:
+    aprox_cluster_size = 16 # default    
         
 # append to CSV
 with open(CSV_PATH, "a", newline="") as f:
@@ -356,7 +366,9 @@ with open(CSV_PATH, "a", newline="") as f:
         args.gamma,
         args.task,
         f"{accept_rate_total:.4f}",
-        f"{accept_rate_per_token:.4f}"
+        f"{accept_rate_per_token:.4f}",
+        aprox_cluster_size,
+        num_iters
     ])
 # if rank == 0:
 #     with open("result.txt", "a") as file:

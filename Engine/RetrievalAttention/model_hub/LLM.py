@@ -178,7 +178,6 @@ class LLM:
                 # torch.cuda.synchronize()
                 # end_time = time.time()
                 # print(f"layer_decode:{end_time - start_time}")
-        
         hidden_states = self.layernorm(hidden_states[:, -1:, :], self.norm_variance_epsilon, self.norm_weight)
         logits = self.lm(hidden_states)
         

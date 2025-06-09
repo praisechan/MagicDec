@@ -55,12 +55,13 @@ def load_profiling_layer(
     supercluster_size = torch.load(
         os.path.join(profiling_dir, f"supercluster_size_{layer_idx}.pt"), map_location='cpu'
     )
-    selected_list = torch.load(
-        os.path.join(profiling_dir, f"cI_of_selected_superclusters_{layer_idx}.pt"), map_location='cpu'
-    )
     # selected_list = torch.load(
-    #     os.path.join(profiling_dir, f"selected_cI_{layer_idx}.pt"), map_location='cpu'
+    #     os.path.join(profiling_dir, f"cI_of_selected_superclusters_{layer_idx}.pt"), map_location='cpu'
     # )
+    selected_list = torch.load(
+        os.path.join(profiling_dir, f"selected_cI_{layer_idx}.pt"), map_location='cpu'
+    )
+    breakpoint()
 
     heads: List[HeadData] = []
     for head_idx in range(num_heads):
@@ -141,10 +142,10 @@ def get_plane_reads_per_head(layer: LayerData, args, mode: str) -> List[List[int
 
 def main():
     args = parse_args()
-    layers_to_plot = [0, 10, 20]
+    layers_to_plot = [0, 5, 10, 15, 20]
     # layers_to_plot = [0]
-    modes = ['baseline', 'cluster']
-    # modes = ['baseline']
+    # modes = ['baseline', 'cluster']
+    modes = ['baseline']
     if args.min_max_calculate:
       data = []
       labels = []
@@ -188,6 +189,7 @@ def main():
               labels_per_layer.append(f"L{layer_idx}-{mode}")
 
       # violin plot
+      # plt.figure(figsize=(6, 6))
       plt.figure(figsize=(12, 6))
       plt.violinplot(data_per_head, showmeans=True)
       plt.xticks(range(1, len(labels_per_head) + 1), labels_per_head, fontsize=14)
@@ -195,10 +197,11 @@ def main():
       plt.ylabel('Total page reads per plane', fontsize=14)
       plt.title('Page Reads per Plane (Head 0~7 in Layer 0, 10, 20)', fontsize=14)
       plt.tight_layout()
-      violin_filename = f'layers0_10_20_violin_allhead_CWDP{args.num_channels}-{args.chips_per_channel}-{args.dies_per_chip}-{args.planes_per_die}.png'
+      violin_filename = f'cluster_64_allhead_CWDP{args.num_channels}-{args.chips_per_channel}-{args.dies_per_chip}-{args.planes_per_die}.png'
       plt.savefig(violin_filename)
       plt.close()
 
+      # plt.figure(figsize=(6, 6))
       plt.figure(figsize=(12, 6))
       plt.violinplot(data_per_layer, showmeans=True)
       plt.xticks(range(1, len(labels_per_layer) + 1), labels_per_layer, fontsize=14)
@@ -206,7 +209,7 @@ def main():
       plt.ylabel('Total page reads per plane', fontsize=14)
       plt.title('Page Reads per Plane (Layer 0, 10, 20)', fontsize=14)
       plt.tight_layout()
-      violin_filename = f'layers0_10_20_violin_layer_CWDP{args.num_channels}-{args.chips_per_channel}-{args.dies_per_chip}-{args.planes_per_die}.png'
+      violin_filename = f'cluster_64_layer_CWDP{args.num_channels}-{args.chips_per_channel}-{args.dies_per_chip}-{args.planes_per_die}.png'
       plt.savefig(violin_filename)
       plt.close()
 

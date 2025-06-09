@@ -23,7 +23,10 @@ def generate_config(
     # default retrieve infer configs
     n_segments=None,
 ):
-    aprox_cluster_size = 16
+    if "CLUSTER_SIZE" in os.environ:
+        aprox_cluster_size = int(os.environ["CLUSTER_SIZE"])
+    else:
+        aprox_cluster_size = 16 # default    
 
     CONFIG_DIR = os.path.join(PROJECT_ROOT, "config")
     MODEL_NAME = model_name.split("/")[-1]+'.json'
