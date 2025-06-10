@@ -176,10 +176,16 @@ def compute_pages_per_cluster(
     head: HeadData,
     page_size_bytes: int,
     vector_bytes: int,
-    head_dim: int
+    head_dim: int,
+    constrained: bool,
 ) -> Dict[int, int]:
-    return {
-        c.cluster_id:
-        math.ceil(c.cluster_size_vectors * head_dim * vector_bytes / page_size_bytes)
-        for c in head.clusters
-    }
+    if constrained:
+        pages = {c.cluster_id: 8 for c in head.clusters}  
+    else:
+        pages = {
+            c.cluster_id:
+            math.ceil(c.cluster_size_vectors * head_dim * vector_bytes / page_size_bytes)
+            for c in head.clusters
+        }  
+  
+    return pages

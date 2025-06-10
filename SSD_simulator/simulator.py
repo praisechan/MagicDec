@@ -32,6 +32,8 @@ def parse_args() -> argparse.Namespace:
                         help='KV heads per layer')
     parser.add_argument('--head_dim', type=int, default=128,
                         help='Dimension per KV head')
+    parser.add_argument('--constrained', type=bool, default=False,
+                        help='Constrain cluster size to certain value')
     
     # simulation config
     parser.add_argument('--min_max_calculate', type=bool, default = False,
@@ -61,7 +63,6 @@ def load_profiling_layer(
     selected_list = torch.load(
         os.path.join(profiling_dir, f"selected_cI_{layer_idx}.pt"), map_location='cpu'
     )
-    breakpoint()
 
     heads: List[HeadData] = []
     for head_idx in range(num_heads):
@@ -94,7 +95,8 @@ def build_chips(args, layer: LayerData, mode: str) -> List[Chip]:
                     head,
                     args.page_size_bytes,
                     args.vector_bytes,
-                    args.head_dim
+                    args.head_dim,
+                    args.constrained
                 )
                 chip.assign_clusters(
                     head_idx=head.head_index,
@@ -197,7 +199,7 @@ def main():
       plt.ylabel('Total page reads per plane', fontsize=14)
       plt.title('Page Reads per Plane (Head 0~7 in Layer 0, 10, 20)', fontsize=14)
       plt.tight_layout()
-      violin_filename = f'cluster_64_allhead_CWDP{args.num_channels}-{args.chips_per_channel}-{args.dies_per_chip}-{args.planes_per_die}.png'
+      violin_filename = f'cluster_16_allhead_CWDP{args.num_channels}-{args.chips_per_channel}-{args.dies_per_chip}-{args.planes_per_die}.png'
       plt.savefig(violin_filename)
       plt.close()
 
@@ -209,7 +211,7 @@ def main():
       plt.ylabel('Total page reads per plane', fontsize=14)
       plt.title('Page Reads per Plane (Layer 0, 10, 20)', fontsize=14)
       plt.tight_layout()
-      violin_filename = f'cluster_64_layer_CWDP{args.num_channels}-{args.chips_per_channel}-{args.dies_per_chip}-{args.planes_per_die}.png'
+      violin_filename = f'cluster_16_layer_CWDP{args.num_channels}-{args.chips_per_channel}-{args.dies_per_chip}-{args.planes_per_die}.png'
       plt.savefig(violin_filename)
       plt.close()
 
