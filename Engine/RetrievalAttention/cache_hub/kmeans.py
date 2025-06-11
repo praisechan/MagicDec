@@ -376,26 +376,33 @@ def segment_k_means(
         sys.path.insert(0, CACHEHUB_ROOT)
 
     from torch_kmeans.src.torch_kmeans.clustering import ConstrainedKMeans
-    approx_supercluster_size = int(os.environ["CLUSTER_SIZE"])
-    breakpoint()
-    
+    if "CLUSTER_SIZE" in os.environ:
+      approx_supercluster_size = int(os.environ["CLUSTER_SIZE"])
+    else:
+      approx_supercluster_size = 16
+
+    import time
+    start_time = time.time()    
     # single head test
     clf = ConstrainedKMeans(
-        max_iter=1,
+        max_iter=20,
         n_clusters=num_centroids,
+        num_init=1
     )
-    M = approx_supercluster_size
-    weights = torch.ones((1, data.shape[1]), device=data.device) / M # ConstrainedKMeans enforce no cluster's total weight exceeds 1
-    result=clf(data[0].unsqueeze(dim=0), weights=weights)
-    breakpoint()
-
-
+    weights = torch.ones((2, data.shape[1]), device=data.device) / approx_supercluster_size # ConstrainedKMeans enforce no cluster's total weight exceeds 1
+    result=clf(data[0:2], weights=weights, centers=centroids[0:2].unsqueeze(dim=1))
+    # result=clf(data[0:2].unsqueeze(dim=0), weights=weights, centers=centroids[0:2].unsqueeze(dim=0).unsqueeze(dim=0))
+    end_time = time.time()    
+    print(f"constrained K means: {end_time-start_time} s")
+      
+    # # multiple head batch
     # clf = ConstrainedKMeans(
-    #     max_iter=1,
+    #     max_iter=20,
     #     n_clusters=num_centroids,
+    #     num_init=1
     # )
-    # M = approx_supercluster_size
-    # weights = torch.ones((data.shape[0], data.shape[1]), device=data.device) / M # ConstrainedKMeans enforce no cluster's total weight exceeds 1
+    # weights = torch.ones((data.shape[0], data.shape[1]), device=data.device) / approx_supercluster_size # ConstrainedKMeans enforce no cluster's total weight exceeds 1
+    # result=clf(data[0].unsqueeze(dim=0), weights=weights, centers=centroids[0].unsqueeze(dim=0).unsqueeze(dim=0))
     # result=clf(data[i], weights=weights)
     # centroids[i] = clf.cluster_centers_
     # max_idx[i]=clf.labels_

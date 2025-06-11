@@ -569,7 +569,7 @@ class KMeans(nn.Module):
             None,
         )
 
-    def _pairwise_distance_old(self, x: Tensor, centers: Tensor, **kwargs):
+    def _pairwise_distance(self, x: Tensor, centers: Tensor, **kwargs):
         """Calculate pairwise distances between samples in x and all centers."""
         # expand tensors to calculate pairwise distance over (d) dimensions
         # of each point (n) to each center (k_max)
@@ -584,7 +584,7 @@ class KMeans(nn.Module):
             bs, num_init, n, k_max
         )
         
-    def _pairwise_distance(self, x: Tensor, centers: Tensor, chunk: int = 128, **kwargs):
+    def _pairwise_distance_new(self, x: Tensor, centers: Tensor, chunk: int = 128, **kwargs):
         """
         Calculate pairwise distances between x (bs×n×d) and centers (bs×num_init×k_max×d),
         but only expand one init—and at most `chunk` centers—at a time.

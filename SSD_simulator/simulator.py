@@ -32,7 +32,7 @@ def parse_args() -> argparse.Namespace:
                         help='KV heads per layer')
     parser.add_argument('--head_dim', type=int, default=128,
                         help='Dimension per KV head')
-    parser.add_argument('--constrained', type=bool, default=False,
+    parser.add_argument('--constrained', type=bool, default=False, required=True
                         help='Constrain cluster size to certain value')
     
     # simulation config
