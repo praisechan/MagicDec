@@ -1,7 +1,7 @@
 import torch
 import triton
 import triton.language as tl
-
+import os
 
 @triton.jit
 def _triton_assign_kernel(
@@ -221,13 +221,14 @@ def triton_index_add(
     return value_sum.to(value.dtype)
 
 
-def segment_k_means(
+def segment_k_means_old(
     key: torch.Tensor,    # [batch_size(=1)*num_heads, num_tokens, head_dim]
     value: torch.Tensor,  # [batch_size(=1)*num_heads, num_tokens, head_dim]
     num_centroids: int,
     num_iters: int = 10,
     num_segments: int = 1
 ):
+    breakpoint()
     num_groups, num_tokens, head_dim = key.shape
 
     # initialize centroids uniformly
@@ -248,6 +249,63 @@ def segment_k_means(
     data = key.reshape((-1, num_tokens, head_dim))
     centroids = centroids.reshape((-1, num_centroids, head_dim))
     centroids, max_idx, max_cluster_size = _triton_k_means_train(data, centroids, normalize_centroids=False, return_indices=True)
+
+    value_sum = None
+    if value is not None:
+      value_sum = triton_index_add(value.reshape((-1, num_tokens, head_dim)), max_idx, num_centroids)
+    clusters, cluster_size = triton_reverse_index(max_idx, num_centroids, max_cluster_size)
+
+    # centroids = centroids.reshape((batch_size*num_groups, num_centroids, head_dim))
+    # value_sum = value_sum.reshape((batch_size*num_groups, num_centroids, head_dim))
+    # clusters = clusters.reshape((batch_size*num_groups, num_centroids, max_cluster_size))
+    # cluster_size = cluster_size.reshape((batch_size*num_groups, num_centroids))
+    return centroids, value_sum, clusters, cluster_size
+
+def segment_k_means(
+    key: torch.Tensor,    # [batch_size(=1)*num_heads, num_tokens, head_dim]
+    value: torch.Tensor,  # [batch_size(=1)*num_heads, num_tokens, head_dim]
+    num_centroids: int,
+    num_iters: int = 10,
+    num_segments: int = 1
+):
+    breakpoint()
+    num_groups, num_tokens, head_dim = key.shape
+
+    # initialize centroids uniformly
+    centroid_indices = torch.arange(num_centroids, dtype=torch.float32, device=key.device) * (num_tokens / num_centroids)
+    centroid_indices += num_tokens / num_centroids / 2
+    centroid_indices = centroid_indices.to(torch.int64)
+    centroids = torch.index_select(key, dim=1, index=centroid_indices)
+
+    assert num_centroids % num_segments == 0
+    num_tokens_per_segment = num_tokens // num_segments
+    num_centroids_per_segment = num_centroids // num_segments
+    data = key[:, :num_tokens_per_segment * num_segments].reshape((-1, num_tokens_per_segment, head_dim))
+    centroids = centroids.reshape((-1, num_centroids_per_segment, head_dim))
+    max_idx = torch.empty((data.shape[0], data.shape[1]), dtype=torch.int32, device=data.device)
+
+    for _ in range(num_iters - 1):
+        centroids = _triton_k_means_train(data, centroids, max_idx=max_idx, normalize_centroids=True, return_indices=False)
+
+    data = key.reshape((-1, num_tokens, head_dim))
+    centroids = centroids.reshape((-1, num_centroids, head_dim))
+
+    from k_means_constrained import KMeansConstrained
+    import numpy as np
+    approx_supercluster_size = int(os.environ["CLUSTER_SIZE"])
+    for i in range(data.shape[0]):
+        clf = KMeansConstrained(
+            n_clusters=num_centroids,
+            size_min=approx_supercluster_size-5,
+            size_max=approx_supercluster_size,
+            max_iter=num_iters,
+            random_state=0
+        )
+        clf.fit_predict(data[i].cpu().to(torch.float32).numpy())
+        centroids[i] = clf.cluster_centers_
+        max_idx[i]=clf.labels_
+
+    # centroids, max_idx, max_cluster_size = _triton_k_means_train(data, centroids, normalize_centroids=False, return_indices=True)
 
     value_sum = None
     if value is not None:
