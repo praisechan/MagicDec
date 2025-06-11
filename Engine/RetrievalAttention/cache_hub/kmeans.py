@@ -221,14 +221,13 @@ def triton_index_add(
     return value_sum.to(value.dtype)
 
 
-def segment_k_means_old(
+def segment_k_means(
     key: torch.Tensor,    # [batch_size(=1)*num_heads, num_tokens, head_dim]
     value: torch.Tensor,  # [batch_size(=1)*num_heads, num_tokens, head_dim]
     num_centroids: int,
     num_iters: int = 10,
     num_segments: int = 1
 ):
-    breakpoint()
     num_groups, num_tokens, head_dim = key.shape
 
     # initialize centroids uniformly
@@ -338,8 +337,8 @@ def segment_k_means_constrain_numpy(
     return centroids, value_sum, clusters, cluster_size
 
 
-# def segment_k_means_constrain_torch(
-def segment_k_means(
+def segment_k_means_constrain_torch(
+# def segment_k_means(
     key: torch.Tensor,    # [batch_size(=1)*num_heads, num_tokens, head_dim]
     value: torch.Tensor,  # [batch_size(=1)*num_heads, num_tokens, head_dim]
     num_centroids: int,
