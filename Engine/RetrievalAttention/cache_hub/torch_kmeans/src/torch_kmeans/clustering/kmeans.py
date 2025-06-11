@@ -569,7 +569,7 @@ class KMeans(nn.Module):
             None,
         )
 
-    def _pairwise_distance(self, x: Tensor, centers: Tensor, **kwargs):
+    def _pairwise_distance_old(self, x: Tensor, centers: Tensor, **kwargs):
         """Calculate pairwise distances between samples in x and all centers."""
         # expand tensors to calculate pairwise distance over (d) dimensions
         # of each point (n) to each center (k_max)
@@ -583,6 +583,47 @@ class KMeans(nn.Module):
         return self.distance.pairwise_distance(x, centers, **kwargs).view(
             bs, num_init, n, k_max
         )
+        
+    def _pairwise_distance(self, x: Tensor, centers: Tensor, chunk: int = 128, **kwargs):
+        """
+        Calculate pairwise distances between x (bs×n×d) and centers (bs×num_init×k_max×d),
+        but only expand one init—and at most `chunk` centers—at a time.
+        """
+        bs, n, d = x.size()
+        _, num_init, k_max, _ = centers.size()
+
+        # Pre‐allocate output: (bs, num_init, n, k_max)
+        dist_mat = x.new_empty(bs, num_init, n, k_max)
+
+        # For each random‐restart…
+        for i in range(num_init):
+            c_i = centers[:, i]              # (bs, k_max, d)
+            dist_i_chunks = []
+
+            # Split the k_max centers into blocks of size `chunk`
+            for start in range(0, k_max, chunk):
+                end = min(start + chunk, k_max)
+                c_chunk = c_i[:, start:end]  # (bs, chunk, d)
+
+                # Broadcast x and c_chunk to (bs, n, chunk, d)
+                x_exp = x.unsqueeze(2).expand(bs, n, c_chunk.size(1), d)
+                c_exp = c_chunk.unsqueeze(1).expand(bs, n, c_chunk.size(1), d)
+
+                # Flatten to (bs*n*chunk, d)
+                x_flat = x_exp.reshape(-1, d)
+                c_flat = c_exp.reshape(-1, d)
+
+                # Compute distances on the flattened tensors
+                dist_flat = self.distance.pairwise_distance(x_flat, c_flat, **kwargs)
+
+                # Reshape back to (bs, n, chunk)
+                dist_chunk = dist_flat.view(bs, n, c_chunk.size(1))
+                dist_i_chunks.append(dist_chunk)
+
+            # Concatenate all the chunks along the k_max dimension
+            dist_mat[:, i] = torch.cat(dist_i_chunks, dim=2)
+
+        return dist_mat
 
     def _assign(self, x: Tensor, centers: Tensor, **kwargs) -> LongTensor:
         """Infer cluster assignment for each sample in x."""
