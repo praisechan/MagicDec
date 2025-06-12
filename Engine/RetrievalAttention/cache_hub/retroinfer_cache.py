@@ -304,6 +304,20 @@ class retroinfer_cache(KV_Cache):
                                 dtype=torch.bool, device=self.layer_mapping[str(ldx)]).contiguous()
                 )
 
+        # for hot cluster selection
+        self.window_size = 16
+        self.hot_cluster_ratio = 0.01
+        self.num_hot_cluster = int(self.n_centroids * self.hot_cluster_ratio)
+        self.hot_cluster_hit_ratio=torch.zeros((self.layer_num),dtype=torch.float16, device=self.layer_mapping[str(ldx)])
+        self.hot_cluster =[]
+        self.avg_cluster_size = math.ceil((self.input_length - self.static_pattern_total) / self.n_centroids)
+        for ldx in range(self.layer_num):
+            self.hot_cluster.append(
+                torch.zeros((self.batch_size*self.kv_head, self.num_hot_cluster), 
+                            dtype=int, device=self.layer_mapping[str(ldx)]).contiguous()
+            )
+
+
     # decide whether to pre-allocate GPU memory before prefilling
     def pre_allocate_decision(self):
         # estimate the KV Cache GPU memory consumption
@@ -491,11 +505,11 @@ class retroinfer_cache(KV_Cache):
         
         if (layer_idx == self.layer_num - 1) and (batch_idx + bsz == self.batch_size):
             self.context += seq_len
+        
         # save cluster information for simulation
         if self.profile_clustering:
-            avg_cluster_size = (self.input_length - self.static_pattern_total) // self.n_centroids
             selection_ratio = self.nprobe /self.n_centroids
-            self.outdir_path = f"/home/juchanlee/MagicDec/Engine/RetrievalAttention/profile/data/data_superclustersize_{self.approx_supercluster_size}_{selection_ratio:.2f}KV_{seq_len}_clustersize_{avg_cluster_size}"
+            self.outdir_path = f"/home/juchanlee/MagicDec/Engine/RetrievalAttention/profile/data/data_superclustersize_{self.approx_supercluster_size}_{selection_ratio:.2f}KV_{seq_len}_clustersize_{self.avg_cluster_size}"
             os.makedirs(self.outdir_path, exist_ok=True)
           
             torch.save(_centroids, f"{self.outdir_path}/centroid_{layer_idx}.pt")
@@ -504,7 +518,23 @@ class retroinfer_cache(KV_Cache):
             torch.save(_supercentroids, f"{self.outdir_path}/supercentroids_{layer_idx}.pt")
             torch.save(_supercluster_size, f"{self.outdir_path}/supercluster_size_{layer_idx}.pt")
             torch.save(_superclusters, f"{self.outdir_path}/superclusters_{layer_idx}.pt")
-                
+            
+        # search for hot cluster with last window
+        softmax_sum = torch.zeros((self.batch_size*self.kv_head, self.n_centroids),
+                                    device=self.layer_mapping[str(0)], dtype=self.dtype).contiguous()
+
+        observation_window = query_states[:,-self.window_size:,:,:] # select last tokens as a observation window
+        for i in range(self.window_size):
+          queries = observation_window[:,i]
+          batch_gemm_softmax(queries, self.centroids[layer_idx], self.gemm_o, self.norm, self.sum, self.softmax_o,
+                            self.batch_groups, self.group_size, self.n_centroids, self.head_dim,
+                            self.RSQRT_DIM, 0)       # [batch_size*group_num, group_size, n_centroids]
+          dist = torch.sum(self.softmax_o, dim=1)     # [batch_size*group_num, n_centroids]
+          dist.masked_fill_(self.centroids_mask[layer_idx], self.DTYPE_MIN)
+          softmax_sum += dist
+
+        cI = torch.topk(softmax_sum, self.num_hot_cluster, dim=-1, largest=True, sorted=True)[1] # [batch_size*group_num, max_consider_cluster]
+        self.hot_cluster[layer_idx] = cI              
         return key_states[:, valid_start:, :, :], value_states[:, valid_start:, :, :]   # ignore mask tokens, shape: (bsz, seq_len, group_num, dim)
 
     def sync(
@@ -640,6 +670,14 @@ class retroinfer_cache(KV_Cache):
         dist.masked_fill_(self.centroids_mask[layer_idx], self.DTYPE_MIN)
         cI = torch.topk(dist, self.max_compute_cluster_num, dim=-1, largest=True, sorted=True)[1] # [batch_size*group_num, max_consider_cluster]
 
+        # check how many hot clusters are selected actually
+        selected_cI = cI[..., :self.nprobe]
+        masks = [torch.isin(self.hot_cluster[layer_idx][i], selected_cI[i]) for i in range(cI.shape[0])]
+        counts = [m.sum() for m in masks]
+        self.hot_cluster_hit_ratio[layer_idx] = sum(counts) / (self.hot_cluster[layer_idx].shape[0] * self.hot_cluster[layer_idx].shape[1])
+        # print(f"hot_cluster_hit_ratio of layer_{layer_idx}: {self.hot_cluster_hit_ratio}")
+        
+        
         if self.profile_clustering:
             # compare with supercluster entry and only select top
             # search for TopK supercentroids

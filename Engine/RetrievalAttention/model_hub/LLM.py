@@ -220,6 +220,9 @@ class LLM:
         print("Start decoding ...")
         decode_start = time.time()
 
+        hot_cluster_hit_ratio_per_layer = []
+        hot_cluster_hit_ratio_per_token = []
+        
         for _ in range(self.max_new_length-1):
             logits = self.decode_forward(inputs_ids=output_ids)
             output_ids = logits.argmax(dim=-1)
@@ -236,6 +239,11 @@ class LLM:
             outputs_logits.append(batch_top3)
             top1_top2_diff.append(topk_vals[0][:,0]-topk_vals[0][:,1])
 
+            if self.attention_type == "RetroInfer":      
+                # store hot cluster hit ratio
+                hot_cluster_hit_ratio_per_layer.append(self.kv_cache.hot_cluster_hit_ratio.clone())
+                hot_cluster_hit_ratio_per_layer.append(self.kv_cache.hot_cluster_hit_ratio.mean())
+
         decode_end = time.time()
         print(colored(f"Decoding latency: {round((decode_end - decode_start), 8)} s\n", 'green'))
 
@@ -247,10 +255,38 @@ class LLM:
         
         outputs_ids = torch.cat(outputs_ids, dim=-1).tolist()
         
+        if self.attention_type == "RetroInfer" and self.profile_hot_clustering:
+            window_size = self.kv_cache.window_size
+            hot_cluster_ratio = self.kv_cache.hot_cluster_ratio
+            cluster_size = self.kv_cache.avg_cluster_size
+            # hot cluster output
+            filename = f"hot_cluster_input_{inputs_ids.shape[1]}_hot{hot_cluster_ratio}_window{window_size}_cluster{cluster_size}.csv"
+            # Check whether the file already exists
+            import os
+            import csv
+            file_exists = os.path.isfile(filename)
+
+            # Open in append mode
+            with open(filename, 'a', newline='') as f:
+                writer = csv.writer(f)
+                # If the file is new, write the header
+                if not file_exists:
+                    writer.writerow(['token_num','layer_idx', 'hit_ratio'])
+
+                for token_idx, data in enumerate(hot_cluster_hit_ratio_per_token):
+                    v = data.item() if torch.is_tensor(data) else float(data)
+                    writer.writerow([token_idx, "total", v])     
+
+                for token_idx, data in enumerate(hot_cluster_hit_ratio_per_layer):
+                    # Append one row per layer
+                    for idx, val in enumerate(data):
+                        v = val.item() if torch.is_tensor(val) else float(val)
+                        writer.writerow([token_idx, idx, v])     
+        
         return outputs_ids, outputs_logits, top1_top2_diff
 
 
-    def generate(self, attention_type, inputs_ids, attention_masks, max_new_length, attn_config=None, profile_clustering=False):
+    def generate(self, attention_type, inputs_ids, attention_masks, max_new_length, attn_config=None, profile_clustering=False, profile_hot_clustering=False):
         """ LLM Inference.
         Args:
             attention_type: str,
@@ -268,6 +304,7 @@ class LLM:
         self.max_new_length = max_new_length
         self.attention_type = attention_type
         self.profile_clustering = profile_clustering
+        self.profile_hot_clustering = profile_hot_clustering
 
         valid_start = attention_masks.shape[1] - torch.sum(attention_masks, dim=-1).detach().cpu().numpy()
         del attention_masks

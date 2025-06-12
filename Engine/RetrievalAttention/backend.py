@@ -110,7 +110,7 @@ class LMBackend_Retro:
       return outputs, logits
 
     @torch.inference_mode()
-    def speculate(self, input_ids: torch.LongTensor, gamma, profile_clustering=False):
+    def speculate(self, input_ids: torch.LongTensor, gamma, profile_clustering=False, profile_hot_clustering=False):
       input_from_start = torch.concat((self.input_tokens[:, :self.verified_cachelength], input_ids), dim=1)
       outputs, logits, top1_top2_diff = self.model.generate(
           attention_type="RetroInfer",
@@ -118,7 +118,8 @@ class LMBackend_Retro:
           attention_masks = self.attention_masks.to(self.model.layers[0].device),
           max_new_length=gamma, 
           attn_config=self.attn_config,
-          profile_clustering=profile_clustering          
+          profile_clustering=profile_clustering,
+          profile_hot_clustering=profile_hot_clustering
       )
 
       return outputs, logits, top1_top2_diff
