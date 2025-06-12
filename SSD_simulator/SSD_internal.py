@@ -181,7 +181,7 @@ def compute_pages_per_cluster(
     cluster_size: int,
 ) -> Dict[int, int]:
     if constrained:
-        pages = {c.cluster_id: cluster_size * head_dim * vector_bytes / page_size_bytes for c in head.clusters}  
+        pages = {c.cluster_id: int(cluster_size * head_dim * vector_bytes / page_size_bytes) for c in head.clusters}  
     else:
         pages = {
             c.cluster_id:

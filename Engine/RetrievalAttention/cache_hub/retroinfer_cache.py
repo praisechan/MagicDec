@@ -494,8 +494,10 @@ class retroinfer_cache(KV_Cache):
         # save cluster information for simulation
         if self.profile_clustering:
             avg_cluster_size = (self.input_length - self.static_pattern_total) // self.n_centroids
-            self.outdir_path = f"/home/juchanlee/MagicDec/Engine/RetrievalAttention/profile/data/data_superclustersize_{self.approx_supercluster_size}_0.125KV_{seq_len}_clustersize_{avg_cluster_size}"
+            selection_ratio = self.nprobe /self.n_centroids
+            self.outdir_path = f"/home/juchanlee/MagicDec/Engine/RetrievalAttention/profile/data/data_superclustersize_{self.approx_supercluster_size}_{selection_ratio:.2f}KV_{seq_len}_clustersize_{avg_cluster_size}"
             os.makedirs(self.outdir_path, exist_ok=True)
+          
             torch.save(_centroids, f"{self.outdir_path}/centroid_{layer_idx}.pt")
             torch.save(_cluster_size, f"{self.outdir_path}/cluster_size_{layer_idx}.pt")
             torch.save(_clusters, f"{self.outdir_path}/clusters_{layer_idx}.pt")

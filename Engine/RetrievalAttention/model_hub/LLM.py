@@ -27,6 +27,7 @@ class LLM:
         self.max_length = max_length
         self.dtype = dtype
         self.device_map = device_map
+        self.profile_clustering=False
 
 
     def layer_prefill(self, layer_idx, start_bdx, hidden_states):
@@ -178,6 +179,9 @@ class LLM:
                 # torch.cuda.synchronize()
                 # end_time = time.time()
                 # print(f"layer_decode:{end_time - start_time}")
+        if self.profile_clustering:
+            # profile only for first decoding step
+            breakpoint()
         hidden_states = self.layernorm(hidden_states[:, -1:, :], self.norm_variance_epsilon, self.norm_weight)
         logits = self.lm(hidden_states)
         
@@ -263,6 +267,7 @@ class LLM:
         self.input_length = input_length
         self.max_new_length = max_new_length
         self.attention_type = attention_type
+        self.profile_clustering = profile_clustering
 
         valid_start = attention_masks.shape[1] - torch.sum(attention_masks, dim=-1).detach().cpu().numpy()
         del attention_masks

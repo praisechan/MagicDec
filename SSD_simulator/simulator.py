@@ -34,11 +34,11 @@ def parse_args() -> argparse.Namespace:
                         help='cluster size')
     parser.add_argument('--head_dim', type=int, default=128,
                         help='Dimension per KV head')
-    parser.add_argument('--constrained', type=bool, default=False, required=True,
+    parser.add_argument('--constrained', action='store_true',
                         help='Constrain cluster size to certain value')
     
     # simulation config
-    parser.add_argument('--min_max_calculate', type=bool, default = False,
+    parser.add_argument('--max_latency_calculate', action='store_true',
                     help='whether accumulate pages_per_plane value for each layer or not')
 
     return parser.parse_args()
@@ -141,40 +141,54 @@ def get_plane_reads_per_head(layer: LayerData, args, mode: str) -> List[List[int
                 )
                 plane_reads.append(r)
         reads_per_head.append(plane_reads)
-    breakpoint()
-    return reads_per_head
+    # calculate max "page read per plane" for each head
+    total_latency_per_layer=0
+    ideal_total_latency_per_layer=0
+    for i in range(len(reads_per_head)):
+      total_latency_per_layer += max(reads_per_head[i])
+      ideal_total_latency_per_layer += sum(reads_per_head[i]) / len(reads_per_head[i])
+          
+    return reads_per_head, total_latency_per_layer, ideal_total_latency_per_layer
 
 
 def main():
     args = parse_args()
-    layers_to_plot = [0, 5, 10, 15, 20]
+    layers_to_plot = range(32)
+    # layers_to_plot = [0, 5, 10, 15, 20]
     # layers_to_plot = [0]
     # modes = ['baseline', 'cluster']
     modes = ['baseline']
     # modes = ['cluster']
-    if args.min_max_calculate:
+    if args.max_latency_calculate:
       data = []
       labels = []
       max_min_values = []
+      max_min_values = []
+      total_latency = 0
+      ideal_total_latency =0 
       for layer_idx in layers_to_plot:
           layer = load_profiling_layer(args.profiling_dir, layer_idx, args.num_heads)
           for mode in modes:
-              reads_per_head = get_plane_reads_per_head(layer, args, mode)
+              reads_per_head, latency_per_layer, ideal_latency_per_layer = get_plane_reads_per_head(layer, args, mode)
+              data.append(latency_per_layer)
+              total_latency += latency_per_layer
+              ideal_total_latency +=ideal_latency_per_layer
               # for each head, compute imbalance = max(reads) - min(reads)
-              for head_reads in reads_per_head:
-                  imbalance = max(head_reads) - min(head_reads)
-                  max_min_values.append(imbalance)    
-
-      plt.figure(figsize=(10,6))
-      # you can tweak bins= and range= to control the x‐axis units and limits
-      plt.hist(max_min_values, bins=30, edgecolor='black')
-      plt.xlabel('Max-Min page reads per head', fontsize=14)
-      plt.ylabel('Number of heads', fontsize=14)
-      plt.title('Distribution of per-head load imbalance', fontsize=16)
-      plt.tight_layout()
-      plt.savefig('head_load_imbalance_histogram.png')
-      plt.close()
-      print("Histogram saved to head_load_imbalance_histogram.png")
+              # for head_reads in reads_per_head:
+              #     imbalance = max(head_reads) - min(head_reads)
+              #     max_min_values.append(imbalance)    
+      print(f"total latency: {total_latency}")
+      print(f"ideal total latency: {ideal_total_latency}")
+      # plt.figure(figsize=(10,6))
+      # # you can tweak bins= and range= to control the x‐axis units and limits
+      # plt.hist(max_min_values, bins=30, edgecolor='black')
+      # plt.xlabel('Max-Min page reads per head', fontsize=14)
+      # plt.ylabel('Number of heads', fontsize=14)
+      # plt.title('Distribution of per-head load imbalance', fontsize=16)
+      # plt.tight_layout()
+      # plt.savefig('head_load_imbalance_histogram.png')
+      # plt.close()
+      # print("Histogram saved to head_load_imbalance_histogram.png")
       
     else:          
       data_per_head = []
@@ -186,8 +200,8 @@ def main():
           layer = load_profiling_layer(args.profiling_dir, layer_idx, args.num_heads)
           for mode in modes:
               import numpy as np
-              breakpoint()
-              reads_per_head = np.array(get_plane_reads_per_head(layer, args, mode)).flatten().tolist()
+              page_reads, _, _= get_plane_reads_per_head(layer, args, mode)
+              reads_per_head = np.array(page_reads).flatten().tolist()
               data_per_head.append(reads_per_head)
               labels_per_head.append(f"L{layer_idx}-{mode}")
 

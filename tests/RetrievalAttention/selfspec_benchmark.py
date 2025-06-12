@@ -41,7 +41,7 @@ parser.add_argument("--attn_type", type=str, default="Full_Flash_Attn",         
                     help="Attention method")
 parser.add_argument("--budget_ratio", type=float, default=0.018, help="ratio of budget")
 parser.add_argument("--estimate_ratio", type=float, default=0.25, help="ratio of estimated clusters for RetriveInfer")
-parser.add_argument("--profile_clustering", type=bool, default=False, help="profile ")
+parser.add_argument("--profile_clustering", action='store_true', help="profile ")
 
 args = parser.parse_args()
 
