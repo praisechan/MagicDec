@@ -242,7 +242,7 @@ class LLM:
             if self.attention_type == "RetroInfer":      
                 # store hot cluster hit ratio
                 hot_cluster_hit_ratio_per_layer.append(self.kv_cache.hot_cluster_hit_ratio.clone())
-                hot_cluster_hit_ratio_per_layer.append(self.kv_cache.hot_cluster_hit_ratio.mean())
+                hot_cluster_hit_ratio_per_token.append(self.kv_cache.hot_cluster_hit_ratio.mean())
 
         decode_end = time.time()
         print(colored(f"Decoding latency: {round((decode_end - decode_start), 8)} s\n", 'green'))
@@ -259,8 +259,9 @@ class LLM:
             window_size = self.kv_cache.window_size
             hot_cluster_ratio = self.kv_cache.hot_cluster_ratio
             cluster_size = self.kv_cache.avg_cluster_size
+            budget_ratio = self.kv_cache.nprobe / self.kv_cache.n_centroids
             # hot cluster output
-            filename = f"hot_cluster_input_{inputs_ids.shape[1]}_hot{hot_cluster_ratio}_window{window_size}_cluster{cluster_size}.csv"
+            filename = f"hot_cluster_input_{inputs_ids.shape[1]}_budget{budget_ratio}_hot{hot_cluster_ratio}_window{window_size}_cluster{cluster_size}.csv"
             # Check whether the file already exists
             import os
             import csv

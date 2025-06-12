@@ -505,20 +505,7 @@ class retroinfer_cache(KV_Cache):
         
         if (layer_idx == self.layer_num - 1) and (batch_idx + bsz == self.batch_size):
             self.context += seq_len
-        
-        # save cluster information for simulation
-        if self.profile_clustering:
-            selection_ratio = self.nprobe /self.n_centroids
-            self.outdir_path = f"/home/juchanlee/MagicDec/Engine/RetrievalAttention/profile/data/data_superclustersize_{self.approx_supercluster_size}_{selection_ratio:.2f}KV_{seq_len}_clustersize_{self.avg_cluster_size}"
-            os.makedirs(self.outdir_path, exist_ok=True)
-          
-            torch.save(_centroids, f"{self.outdir_path}/centroid_{layer_idx}.pt")
-            torch.save(_cluster_size, f"{self.outdir_path}/cluster_size_{layer_idx}.pt")
-            torch.save(_clusters, f"{self.outdir_path}/clusters_{layer_idx}.pt")
-            torch.save(_supercentroids, f"{self.outdir_path}/supercentroids_{layer_idx}.pt")
-            torch.save(_supercluster_size, f"{self.outdir_path}/supercluster_size_{layer_idx}.pt")
-            torch.save(_superclusters, f"{self.outdir_path}/superclusters_{layer_idx}.pt")
-            
+
         # search for hot cluster with last window
         softmax_sum = torch.zeros((self.batch_size*self.kv_head, self.n_centroids),
                                     device=self.layer_mapping[str(0)], dtype=self.dtype).contiguous()
@@ -534,7 +521,22 @@ class retroinfer_cache(KV_Cache):
           softmax_sum += dist
 
         cI = torch.topk(softmax_sum, self.num_hot_cluster, dim=-1, largest=True, sorted=True)[1] # [batch_size*group_num, max_consider_cluster]
-        self.hot_cluster[layer_idx] = cI              
+        self.hot_cluster[layer_idx] = cI
+        
+        # save cluster information for simulation
+        if self.profile_clustering:
+            selection_ratio = self.nprobe /self.n_centroids
+            self.outdir_path = f"/home/juchanlee/MagicDec/Engine/RetrievalAttention/profile/data/data_superclustersize_{self.approx_supercluster_size}_{selection_ratio:.2f}KV_{seq_len}_clustersize_{self.avg_cluster_size}"
+            os.makedirs(self.outdir_path, exist_ok=True)
+          
+            torch.save(_centroids, f"{self.outdir_path}/centroid_{layer_idx}.pt")
+            torch.save(_cluster_size, f"{self.outdir_path}/cluster_size_{layer_idx}.pt")
+            torch.save(_clusters, f"{self.outdir_path}/clusters_{layer_idx}.pt")
+            torch.save(_supercentroids, f"{self.outdir_path}/supercentroids_{layer_idx}.pt")
+            torch.save(_supercluster_size, f"{self.outdir_path}/supercluster_size_{layer_idx}.pt")
+            torch.save(_superclusters, f"{self.outdir_path}/superclusters_{layer_idx}.pt")
+            torch.save(self.hot_cluster[layer_idx], f"{self.outdir_path}/hot_cluster_{self.hot_cluster_ratio}_{layer_idx}.pt")
+
         return key_states[:, valid_start:, :, :], value_states[:, valid_start:, :, :]   # ignore mask tokens, shape: (bsz, seq_len, group_num, dim)
 
     def sync(
