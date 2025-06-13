@@ -179,10 +179,9 @@ class LLM:
                 # torch.cuda.synchronize()
                 # end_time = time.time()
                 # print(f"layer_decode:{end_time - start_time}")
-        if self.profile_clustering:
-            # profile only for first decoding step
-            raise ValueError("profile only for first decoding step")
-            breakpoint()
+        # if self.profile_clustering:
+        #     # profile only for first decoding step
+        #     raise ValueError("profile only for first decoding step")
         hidden_states = self.layernorm(hidden_states[:, -1:, :], self.norm_variance_epsilon, self.norm_weight)
         logits = self.lm(hidden_states)
         
@@ -223,8 +222,14 @@ class LLM:
 
         hot_cluster_hit_ratio_per_layer = []
         hot_cluster_hit_ratio_per_token = []
-        
-        for _ in range(self.max_new_length-1):
+
+        profile_decoding_steps = [0, 128, 256, 512, 1022]
+        for step in range(self.max_new_length-1):          
+            # flag kv_cache to store profile data
+            if step in profile_decoding_steps:
+                self.kv_cache.store_decoding_data = True
+                self.kv_cache.decoding_step = step
+                      
             logits = self.decode_forward(inputs_ids=output_ids)
             output_ids = logits.argmax(dim=-1)
             outputs_ids.append(output_ids)

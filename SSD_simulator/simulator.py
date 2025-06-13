@@ -66,17 +66,17 @@ def load_profiling_layer(
     cluster_sizes = torch.load(
         os.path.join(profiling_dir, f"cluster_size_{layer_idx}.pt"), map_location='cpu'
     )
-    superclusters_list = torch.load(
-        os.path.join(profiling_dir, f"superclusters_{layer_idx}.pt"), map_location='cpu'
-    )
-    supercluster_size = torch.load(
-        os.path.join(profiling_dir, f"supercluster_size_{layer_idx}.pt"), map_location='cpu'
-    )
+    # superclusters_list = torch.load(
+    #     os.path.join(profiling_dir, f"superclusters_{layer_idx}.pt"), map_location='cpu'
+    # )
+    # supercluster_size = torch.load(
+    #     os.path.join(profiling_dir, f"supercluster_size_{layer_idx}.pt"), map_location='cpu'
+    # )
     # selected_list = torch.load(
     #     os.path.join(profiling_dir, f"cI_of_selected_superclusters_{layer_idx}.pt"), map_location='cpu'
     # )
     selected_list = torch.load(
-        os.path.join(profiling_dir, f"selected_cI_{layer_idx}.pt"), map_location='cpu'
+        os.path.join(profiling_dir, f"selected_cI_step0_layer{layer_idx}.pt"), map_location='cpu'
     )
     softmax_sum = torch.load(
         os.path.join(profiling_dir, f"softmax_sum_{layer_idx}.pt"), map_location='cpu'
@@ -88,21 +88,21 @@ def load_profiling_layer(
         )
     else:    
         hot_cluster_list = None
-        softmax_sum = None
     
     heads: List[HeadData] = []
     for head_idx in range(num_heads):
         clusters = [ClusterData(cid, int(size.item()))
                     for cid, size in enumerate(cluster_sizes[head_idx])]
-        superclusters = [SuperclusterData(
-                             sc_id,
-                             [int(cid.item()) for cid in ids],
-                             supercluster_size[head_idx][sc_id]
-                         ) for sc_id, ids in enumerate(superclusters_list[head_idx])]
+        # superclusters = [SuperclusterData(
+        #                      sc_id,
+        #                      [int(cid.item()) for cid in ids],
+        #                      supercluster_size[head_idx][sc_id]
+        #                  ) for sc_id, ids in enumerate(superclusters_list[head_idx])]
+        superclusters=None
         selected = [int(cid.item()) for cid in selected_list[head_idx]]
         hot_cluster = [int(cid.item()) for cid in hot_cluster_list[head_idx]] if hot_cluster_duplicate else None
         
-        heads.append(HeadData(head_idx, clusters, superclusters, selected, hot_cluster, softmax_sum))
+        heads.append(HeadData(head_idx, clusters, superclusters, selected, hot_cluster, softmax_sum[head_idx]))
     return LayerData(layer_idx, heads)
 
 
@@ -163,6 +163,7 @@ def get_plane_reads_per_layer(layer: LayerData, args, mode: str) -> List[int]:
 def get_plane_reads_per_head(layer: LayerData, args, mode: str) -> List[List[int]]:
     chips = build_chips(args, layer, mode)
     reads_per_head = []
+
     for head in layer.heads:
         plane_reads = []
         for chip in chips:
@@ -186,9 +187,7 @@ def get_plane_reads_per_head(layer: LayerData, args, mode: str) -> List[List[int
                 num_selected_hot_cluster_pages += math.ceil(head.clusters[cid].cluster_size_vectors * args.head_dim * args.vector_bytes / args.page_size_bytes)
 
             plane_reads = balance_values(plane_reads, num_selected_hot_cluster_pages)
-        
-        reads_per_head.append(plane_reads)
-        
+        reads_per_head.append(plane_reads)        
         
     # calculate max "page read per plane" for each head
     total_latency_per_layer=0

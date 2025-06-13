@@ -49,8 +49,8 @@ class Plane:
         self.channel_id = channel_id
         self.chip_id = chip_id
         self.die_id = die_id
-        self.plane_id = plane_id
-        self.total_plane_id = plane_id + die_id * planes_per_die \
+        self.local_plane_id = plane_id # plane id in a chip
+        self.global_plane_id = plane_id + die_id * planes_per_die \
                               + chip_id * dies_per_chip * planes_per_die \
                               + channel_id * chips_per_channel * dies_per_chip * planes_per_die # plane index in total planes
         self.total_planes = total_planes
@@ -66,72 +66,90 @@ class Plane:
         pages_per_cluster: Dict[int, int],
         superclusters: List[SuperclusterData],
         hot_cluster_ids: List[int],
-        softmax_sum,        
+        sorted_cids,        
         mode: str
     ) -> None:
         cluster_cnt = 0
         # Baseline: serial assign by cluster index ordering
+        # Hotness-aware layout: water-falling algorithm based on hotness
         if mode == 'baseline':
-            # water-falling algorithm based on hotness
-            if self.hotness_aware_layout:              
-                # Sort cluster IDs by descending hotness score
-                sorted_cids = sorted(
-                    pages_per_cluster.keys(),
-                    key=lambda cid: softmax_sum[head_idx, cid],
-                    reverse=True
-                )
+            cluster_list = sorted_cids if self.hotness_aware_layout else sorted(pages_per_cluster)
+            assign_strategy = "round-robin"
+            if assign_strategy == "round-robin":
+                # round-robin layout based on cluster id
                 offset = 0
-                for cid in sorted_cids:
-                    count = pages_per_cluster[cid]
-                    pages = [i - offset for i in range(offset, offset + count)
-                            if i % self.total_planes == self.total_plane_id]
+                for cid in cluster_list:
+                    if self.hot_cluster_duplicate:
+                        if cid in hot_cluster_ids:
+                            continue # if hot cluster, do not have to assign to plane, because every plane has the same hot clusters.
 
-                    if pages != []:
-                        if self.hot_cluster_duplicate:
-                            if cid in hot_cluster_ids:
-                                pass # if hot cluster, do not have to assign to plane, because every plane has the same hot clusters.
-                            else:
-                                self.cluster_to_pages[(head_idx, cid)] = pages
-                        else:
-                            self.cluster_to_pages[(head_idx, cid)] = pages
+                    count = pages_per_cluster[cid]
+
+                    # compute the window of 'count' pages starting at 'offset'
+                    start = offset % self.total_planes
+                    end   = (offset + count) % self.total_planes
+                    plane_id = self.global_plane_id
+
+                    included = False
+                    if start < end:
+                        # simple contiguous range
+                        if start <= plane_id < end:
+                            included = True
+                    else:
+                        # wrapped-around range
+                        if plane_id >= start or plane_id < end:
+                            included = True
+
+                    if included:
+                        self.cluster_to_pages[(head_idx, cid)] = [True]
+
                     offset += count
- 
-            # round-robin layout based on cluster id
-            else:
+
+            elif assign_strategy == "zigzag":
+                # Snake(zig-zag) assignment
+                def zigzag(offset, total_planes):
+                    multiple = offset // total_planes
+                    # if offset is even mutiple of total_planes, forward
+                    if multiple % 2 == 0:
+                        return offset % total_planes
+                    else:
+                        return total_planes - 1 - offset % total_planes
+                
                 offset = 0
-                for cid in sorted(pages_per_cluster):
-                    count = pages_per_cluster[cid]
-                    pages = [i - offset for i in range(offset, offset + count)
-                            if i % self.total_planes == self.total_plane_id]
+                for cid in cluster_list:
+                    if self.hot_cluster_duplicate:
+                        if cid in hot_cluster_ids:
+                            continue # if hot cluster, do not have to assign to plane, because every plane has the same hot clusters.
 
-                    if pages != []:
-                        if self.hot_cluster_duplicate:
-                            if cid in hot_cluster_ids:
-                                pass # if hot cluster, do not have to assign to plane, because every plane has the same hot clusters.
-                            else:
-                                self.cluster_to_pages[(head_idx, cid)] = pages
-                        else:
-                            self.cluster_to_pages[(head_idx, cid)] = pages
+                    count = pages_per_cluster[cid]
+                    included = False
+                    for i in range(offset, offset+count):
+                        if zigzag(i, self.total_planes) == self.global_plane_id:
+                            included = True
+
+                    if included:
+                        self.cluster_to_pages[(head_idx, cid)] = [True]
+
                     offset += count
 
-        # Supercluster modes: assign in supercluster order, round-robin like baseline
-        elif mode == 'supercluster':
-            offset = 0
-            for sc in sorted(superclusters, key=lambda x: x.supercluster_id):
-                # only consider actual clusters, ignore zero-padding
-                valid_cids = sc.cluster_ids[:sc.supercluster_size]
-                for cid in valid_cids:
-                    count = pages_per_cluster[cid]
-                    # round-robin distribution across planes
-                    pages = [i - offset
-                             for i in range(offset, offset + count)
-                             if i % self.total_planes == self.total_plane_id]
-                    if pages != []:
-                        self.cluster_to_pages[(head_idx, cid)] = pages
-                    offset += count
-                cluster_cnt += sc.supercluster_size
-        else:
-            pass
+        # # Supercluster modes: assign in supercluster order, round-robin like baseline
+        # elif mode == 'supercluster':
+        #     offset = 0
+        #     for sc in sorted(superclusters, key=lambda x: x.supercluster_id):
+        #         # only consider actual clusters, ignore zero-padding
+        #         valid_cids = sc.cluster_ids[:sc.supercluster_size]
+        #         for cid in valid_cids:
+        #             count = pages_per_cluster[cid]
+        #             # round-robin distribution across planes
+        #             pages = [i - offset
+        #                      for i in range(offset, offset + count)
+        #                      if i % self.total_planes == self.global_plane_id]
+        #             if pages != []:
+        #                 self.cluster_to_pages[(head_idx, cid)] = pages
+        #             offset += count
+        #         cluster_cnt += sc.supercluster_size
+        # else:
+        #     pass
 
     def simulate_access(
         self,
@@ -191,6 +209,16 @@ class Chip:
         softmax_sum,
         mode: str
     ) -> None:
+        
+        sorted_cids = None
+        if self.hotness_aware_layout:
+            # Sort cluster IDs by descending hotness score
+            sorted_cids = sorted(
+                pages_per_cluster.keys(),
+                key=lambda cid: softmax_sum[cid],
+                reverse=True
+            )
+
         # delegate to planes for baseline and independent layouts
         for plane in self.planes:
-            plane.assign_clusters(head_idx, pages_per_cluster, superclusters, hot_cluster_ids, softmax_sum, mode)
+            plane.assign_clusters(head_idx, pages_per_cluster, superclusters, hot_cluster_ids, sorted_cids, mode)
