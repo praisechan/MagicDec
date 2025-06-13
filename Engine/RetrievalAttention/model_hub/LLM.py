@@ -181,6 +181,7 @@ class LLM:
                 # print(f"layer_decode:{end_time - start_time}")
         if self.profile_clustering:
             # profile only for first decoding step
+            raise ValueError("profile only for first decoding step")
             breakpoint()
         hidden_states = self.layernorm(hidden_states[:, -1:, :], self.norm_variance_epsilon, self.norm_weight)
         logits = self.lm(hidden_states)
@@ -261,7 +262,7 @@ class LLM:
             cluster_size = self.kv_cache.avg_cluster_size
             budget_ratio = self.kv_cache.nprobe / self.kv_cache.n_centroids
             # hot cluster output
-            filename = f"hot_cluster_input_{inputs_ids.shape[1]}_budget{budget_ratio}_hot{hot_cluster_ratio}_window{window_size}_cluster{cluster_size}.csv"
+            filename = f"output/hot_cluster_input_{inputs_ids.shape[1]}_budget{budget_ratio}_hot{hot_cluster_ratio}_window{window_size}_cluster{cluster_size}.csv"
             # Check whether the file already exists
             import os
             import csv
@@ -278,11 +279,11 @@ class LLM:
                     v = data.item() if torch.is_tensor(data) else float(data)
                     writer.writerow([token_idx, "total", v])     
 
-                for token_idx, data in enumerate(hot_cluster_hit_ratio_per_layer):
-                    # Append one row per layer
-                    for idx, val in enumerate(data):
-                        v = val.item() if torch.is_tensor(val) else float(val)
-                        writer.writerow([token_idx, idx, v])     
+                # for token_idx, data in enumerate(hot_cluster_hit_ratio_per_layer):
+                #     # Append one row per layer
+                #     for idx, val in enumerate(data):
+                #         v = val.item() if torch.is_tensor(val) else float(val)
+                #         writer.writerow([token_idx, idx, v])     
         
         return outputs_ids, outputs_logits, top1_top2_diff
 

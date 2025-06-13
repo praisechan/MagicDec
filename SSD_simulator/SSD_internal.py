@@ -1,11 +1,12 @@
 import math
 from dataclasses import dataclass
 from typing import List, Dict, Tuple
+import torch
 
 @dataclass
 class ClusterData:
     cluster_id: int
-    cluster_size_vectors: int
+    cluster_size_vectors: int # how many tokens are included in a cluster
 
 @dataclass
 class SuperclusterData:
@@ -19,6 +20,8 @@ class HeadData:
     clusters: List[ClusterData]
     superclusters: List[SuperclusterData]
     selected_cluster_ids: List[int]
+    hot_cluster_ids: List[int]
+    softmax_sum: torch.Tensor
 
 @dataclass
 class LayerData:
@@ -39,7 +42,9 @@ class Plane:
         dies_per_chip: int, 
         planes_per_die: int, 
         chips_per_channel: int, 
-        num_channels: int
+        num_channels: int,
+        hotness_aware_layout,
+        hot_cluster_duplicate,
     ):
         self.channel_id = channel_id
         self.chip_id = chip_id
@@ -51,28 +56,66 @@ class Plane:
         self.total_planes = total_planes
         # maps (head_idx, cluster_id) -> list of page indices on this plane
         self.cluster_to_pages: Dict[Tuple[int, int], List[int]] = {}
+        self.hot_cluster_to_pages: Dict[Tuple[int, int], List[int]] = {}
+        self.hotness_aware_layout = hotness_aware_layout
+        self.hot_cluster_duplicate = hot_cluster_duplicate
 
     def assign_clusters(
         self,
         head_idx: int,
         pages_per_cluster: Dict[int, int],
         superclusters: List[SuperclusterData],
+        hot_cluster_ids: List[int],
+        softmax_sum,        
         mode: str
     ) -> None:
         cluster_cnt = 0
         # Baseline: serial assign by cluster index ordering
         if mode == 'baseline':
-            offset = 0
-            for cid in sorted(pages_per_cluster):
-                count = pages_per_cluster[cid]
-                pages = [i - offset for i in range(offset, offset + count)
-                         if i % self.total_planes == self.total_plane_id]
-                if pages != []:
-                    self.cluster_to_pages[(head_idx, cid)] = pages
-                offset += count
+            # water-falling algorithm based on hotness
+            if self.hotness_aware_layout:              
+                # Sort cluster IDs by descending hotness score
+                sorted_cids = sorted(
+                    pages_per_cluster.keys(),
+                    key=lambda cid: softmax_sum[head_idx, cid],
+                    reverse=True
+                )
+                offset = 0
+                for cid in sorted_cids:
+                    count = pages_per_cluster[cid]
+                    pages = [i - offset for i in range(offset, offset + count)
+                            if i % self.total_planes == self.total_plane_id]
+
+                    if pages != []:
+                        if self.hot_cluster_duplicate:
+                            if cid in hot_cluster_ids:
+                                pass # if hot cluster, do not have to assign to plane, because every plane has the same hot clusters.
+                            else:
+                                self.cluster_to_pages[(head_idx, cid)] = pages
+                        else:
+                            self.cluster_to_pages[(head_idx, cid)] = pages
+                    offset += count
+ 
+            # round-robin layout based on cluster id
+            else:
+                offset = 0
+                for cid in sorted(pages_per_cluster):
+                    count = pages_per_cluster[cid]
+                    pages = [i - offset for i in range(offset, offset + count)
+                            if i % self.total_planes == self.total_plane_id]
+
+                    if pages != []:
+                        if self.hot_cluster_duplicate:
+                            if cid in hot_cluster_ids:
+                                pass # if hot cluster, do not have to assign to plane, because every plane has the same hot clusters.
+                            else:
+                                self.cluster_to_pages[(head_idx, cid)] = pages
+                        else:
+                            self.cluster_to_pages[(head_idx, cid)] = pages
+                    offset += count
 
         # Supercluster modes: assign in supercluster order, round-robin like baseline
-        elif mode in ('cluster', 'cluster_superblock'):
+        elif mode == 'supercluster':
             offset = 0
             for sc in sorted(superclusters, key=lambda x: x.supercluster_id):
                 # only consider actual clusters, ignore zero-padding
@@ -88,23 +131,28 @@ class Plane:
                     offset += count
                 cluster_cnt += sc.supercluster_size
         else:
-            # chip-level modes do not assign here
             pass
-        # print(len(self.cluster_to_pages))
 
     def simulate_access(
         self,
         head_idx: int,
         selected_clusters: List[int],
+        hot_cluster_ids,
         mode: str
     ) -> int:
-        if mode in ('baseline', 'cluster'):
-            sum_output = sum(
-                len(self.cluster_to_pages.get((head_idx, cid), []))
-                for cid in selected_clusters
-            )
-            return sum_output
-        raise ValueError(f"Plane cannot simulate mode {mode}")
+        sum_output = 0
+        for cid in selected_clusters:
+            if self.hot_cluster_duplicate:
+                if cid not in hot_cluster_ids:
+                    sum_output += len(self.cluster_to_pages.get((head_idx, cid), []))
+            else:
+                sum_output += len(self.cluster_to_pages.get((head_idx, cid), []))
+
+        # sum_output = sum(
+        #     len(self.cluster_to_pages.get((head_idx, cid), []))
+        #     for cid in selected_clusters
+        # )
+        return sum_output
 
 class Chip:
     """
@@ -118,6 +166,8 @@ class Chip:
         planes_per_die: int,
         chips_per_channel: int,
         num_channels: int,
+        hotness_aware_layout,
+        hot_cluster_duplicate,
     ):
         self.channel_id = channel_id
         self.chip_id = chip_id
@@ -125,68 +175,22 @@ class Chip:
         self.planes_per_die = planes_per_die
         self.total_planes = dies_per_chip * planes_per_die * chips_per_channel * num_channels
         self.planes: List[Plane] = [
-            Plane(channel_id, chip_id, die, plane, self.total_planes, dies_per_chip, planes_per_die, chips_per_channel, num_channels)
+            Plane(channel_id, chip_id, die, plane, self.total_planes, dies_per_chip, planes_per_die, chips_per_channel, num_channels, hotness_aware_layout, hot_cluster_duplicate)
             for die in range(dies_per_chip)
             for plane in range(planes_per_die)
         ]
-        # maps (head_idx, supercluster_id) -> pages per plane for each supercluster
-        self.supercluster_to_pages_per_plane: Dict[Tuple[int, int], int] = {}
-        # maps (head_idx, cluster_id) -> supercluster_id
-        self.cluster_to_super: Dict[Tuple[int, int], int] = {}
+        self.hotness_aware_layout = hotness_aware_layout
+        self.hot_cluster_duplicate = hot_cluster_duplicate
 
     def assign_clusters(
         self,
         head_idx: int,
         pages_per_cluster: Dict[int, int],
         superclusters: List[SuperclusterData],
+        hot_cluster_ids: List[int],
+        softmax_sum,
         mode: str
     ) -> None:
-        # record supercluster to plane page counts and map clusters
-        for sc in superclusters:
-            valid_cids = sc.cluster_ids[:sc.supercluster_size]
-            total = sum(pages_per_cluster[cid] for cid in valid_cids)
-            per_plane = math.ceil(total / self.total_planes)
-            self.supercluster_to_pages_per_plane[(head_idx, sc.supercluster_id)] = per_plane
-            for cid in valid_cids:
-                self.cluster_to_super[(head_idx, cid)] = sc.supercluster_id
         # delegate to planes for baseline and independent layouts
         for plane in self.planes:
-            plane.assign_clusters(head_idx, pages_per_cluster, superclusters, mode)
-
-    def simulate_access(
-        self,
-        head_idx: int,
-        selected_clusters: List[int],
-        mode: str
-    ) -> int:
-        if mode == 'cluster_superblock':
-            touched = {
-                self.cluster_to_super[(head_idx, cid)]
-                for cid in selected_clusters
-                if (head_idx, cid) in self.cluster_to_super
-            }
-            return sum(
-                self.supercluster_to_pages_per_plane[(head_idx, sc)]
-                for sc in touched
-            )
-        raise ValueError(f"Chip cannot simulate mode {mode}")
-
-
-def compute_pages_per_cluster(
-    head: HeadData,
-    page_size_bytes: int,
-    vector_bytes: int,
-    head_dim: int,
-    constrained: bool,
-    cluster_size: int,
-) -> Dict[int, int]:
-    if constrained:
-        pages = {c.cluster_id: int(cluster_size * head_dim * vector_bytes / page_size_bytes) for c in head.clusters}  
-    else:
-        pages = {
-            c.cluster_id:
-            math.ceil(c.cluster_size_vectors * head_dim * vector_bytes / page_size_bytes)
-            for c in head.clusters
-        }  
-  
-    return pages
+            plane.assign_clusters(head_idx, pages_per_cluster, superclusters, hot_cluster_ids, softmax_sum, mode)

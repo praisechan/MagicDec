@@ -1,19 +1,24 @@
 #!/usr/bin/env python
 import argparse
 import os
+import math
 import torch
 from typing import List
 from SSD_internal import (
     Plane,
     Chip,
-    compute_pages_per_cluster,
     LayerData,
     HeadData,
     ClusterData,
     SuperclusterData
 )
+from utils import (
+    compute_pages_per_cluster,
+    balance_values
+)
+from tqdm import tqdm
 import matplotlib.pyplot as plt
-
+import os, csv
 
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(
@@ -32,8 +37,14 @@ def parse_args() -> argparse.Namespace:
                         help='KV heads per layer')
     parser.add_argument('--cluster_size', type=int, default=16, required=True,
                         help='cluster size')
+    parser.add_argument('--hot_cluster_ratio', type=float, default=0.01, required=True,
+                        help='hot cluster ratio')
     parser.add_argument('--head_dim', type=int, default=128,
                         help='Dimension per KV head')
+    parser.add_argument('--hot_cluster_duplicate', action='store_true',
+                        help='Duplicate hot cluster and reduce load imbalance by balance_values')
+    parser.add_argument('--hotness_aware_layout', action='store_true',
+                        help='Sort in hotness order and layout')
     parser.add_argument('--constrained', action='store_true',
                         help='Constrain cluster size to certain value')
     
@@ -47,7 +58,9 @@ def parse_args() -> argparse.Namespace:
 def load_profiling_layer(
     profiling_dir: str,
     layer_idx: int,
-    num_heads: int
+    num_heads: int,
+    hot_cluster_duplicate,
+    hot_cluster_ratio
 ) -> LayerData:
     # unchanged loader for .pt files
     cluster_sizes = torch.load(
@@ -65,6 +78,18 @@ def load_profiling_layer(
     selected_list = torch.load(
         os.path.join(profiling_dir, f"selected_cI_{layer_idx}.pt"), map_location='cpu'
     )
+    softmax_sum = torch.load(
+        os.path.join(profiling_dir, f"softmax_sum_{layer_idx}.pt"), map_location='cpu'
+    )
+
+    if hot_cluster_duplicate:
+        hot_cluster_list = torch.load(
+            os.path.join(profiling_dir, f"hot_cluster_{hot_cluster_ratio}_{layer_idx}.pt"), map_location='cpu'
+        )
+    else:    
+        hot_cluster_list = None
+        softmax_sum = None
+    
     heads: List[HeadData] = []
     for head_idx in range(num_heads):
         clusters = [ClusterData(cid, int(size.item()))
@@ -75,7 +100,9 @@ def load_profiling_layer(
                              supercluster_size[head_idx][sc_id]
                          ) for sc_id, ids in enumerate(superclusters_list[head_idx])]
         selected = [int(cid.item()) for cid in selected_list[head_idx]]
-        heads.append(HeadData(head_idx, clusters, superclusters, selected))
+        hot_cluster = [int(cid.item()) for cid in hot_cluster_list[head_idx]] if hot_cluster_duplicate else None
+        
+        heads.append(HeadData(head_idx, clusters, superclusters, selected, hot_cluster, softmax_sum))
     return LayerData(layer_idx, heads)
 
 
@@ -89,7 +116,9 @@ def build_chips(args, layer: LayerData, mode: str) -> List[Chip]:
                 dies_per_chip=args.dies_per_chip,
                 planes_per_die=args.planes_per_die,
                 chips_per_channel=args.chips_per_channel,
-                num_channels=args.num_channels
+                num_channels=args.num_channels,
+                hotness_aware_layout = args.hotness_aware_layout,
+                hot_cluster_duplicate = args.hot_cluster_duplicate
             )
             for head in layer.heads:
                 pages_map = compute_pages_per_cluster(
@@ -104,12 +133,14 @@ def build_chips(args, layer: LayerData, mode: str) -> List[Chip]:
                     head_idx=head.head_index,
                     pages_per_cluster=pages_map,
                     superclusters=head.superclusters,
+                    hot_cluster_ids=head.hot_cluster_ids,
+                    softmax_sum=head.softmax_sum,
                     mode=mode
                 )
             chips.append(chip)
     return chips
 
-def get_plane_reads(layer: LayerData, args, mode: str) -> List[int]:
+def get_plane_reads_per_layer(layer: LayerData, args, mode: str) -> List[int]:
     chips = build_chips(args, layer, mode)
     total_planes = sum(len(chip.planes) for chip in chips)
     plane_reads = [0] * total_planes
@@ -121,10 +152,12 @@ def get_plane_reads(layer: LayerData, args, mode: str) -> List[int]:
                 reads = plane.simulate_access(
                     head.head_index,
                     head.selected_cluster_ids,
-                    mode
+                    hot_cluster_ids=head.hot_cluster_ids,
+                    mode=mode
                 )
                 plane_reads[idx] += reads
                 idx += 1
+        
     return plane_reads
 
 def get_plane_reads_per_head(layer: LayerData, args, mode: str) -> List[List[int]]:
@@ -137,28 +170,49 @@ def get_plane_reads_per_head(layer: LayerData, args, mode: str) -> List[List[int
                 r = plane.simulate_access(
                     head.head_index,
                     head.selected_cluster_ids,
-                    mode
+                    hot_cluster_ids=head.hot_cluster_ids,
+                    mode=mode
                 )
-                plane_reads.append(r)
+                plane_reads.append(r)    
+        # reduce load imbalance with hot cluster pages
+        if args.hot_cluster_duplicate:
+            selected_hot_cluster = []
+            for hot_cid in head.hot_cluster_ids:
+              if hot_cid in head.selected_cluster_ids: 
+                  selected_hot_cluster.append(hot_cid)
+            # calculate number of pages of selected hot clusters
+            num_selected_hot_cluster_pages = 0
+            for cid in selected_hot_cluster:
+                num_selected_hot_cluster_pages += math.ceil(head.clusters[cid].cluster_size_vectors * args.head_dim * args.vector_bytes / args.page_size_bytes)
+
+            plane_reads = balance_values(plane_reads, num_selected_hot_cluster_pages)
+        
         reads_per_head.append(plane_reads)
+        
+        
     # calculate max "page read per plane" for each head
     total_latency_per_layer=0
     ideal_total_latency_per_layer=0
     for i in range(len(reads_per_head)):
       total_latency_per_layer += max(reads_per_head[i])
       ideal_total_latency_per_layer += sum(reads_per_head[i]) / len(reads_per_head[i])
-          
+
     return reads_per_head, total_latency_per_layer, ideal_total_latency_per_layer
 
 
 def main():
-    args = parse_args()
+    args = parse_args() 
+    if args.num_channels != 1 or args.chips_per_channel != 1 or args.dies_per_chip != 1:
+      raise ValueError("Hot cluster calculation only support single chip distribution yet")
+  
     layers_to_plot = range(32)
     # layers_to_plot = [0, 5, 10, 15, 20]
     # layers_to_plot = [0]
-    # modes = ['baseline', 'cluster']
+    # modes = ['baseline', 'supercluster']
     modes = ['baseline']
-    # modes = ['cluster']
+    if 'supercluster' in modes:
+      raise ValueError("supercluster does not support hot cluster mode yet")
+    
     if args.max_latency_calculate:
       data = []
       labels = []
@@ -166,8 +220,8 @@ def main():
       max_min_values = []
       total_latency = 0
       ideal_total_latency =0 
-      for layer_idx in layers_to_plot:
-          layer = load_profiling_layer(args.profiling_dir, layer_idx, args.num_heads)
+      for layer_idx in tqdm(layers_to_plot):
+          layer = load_profiling_layer(args.profiling_dir, layer_idx, args.num_heads, args.hot_cluster_duplicate, args.hot_cluster_ratio)
           for mode in modes:
               reads_per_head, latency_per_layer, ideal_latency_per_layer = get_plane_reads_per_head(layer, args, mode)
               data.append(latency_per_layer)
@@ -179,16 +233,31 @@ def main():
               #     max_min_values.append(imbalance)    
       print(f"total latency: {total_latency}")
       print(f"ideal total latency: {ideal_total_latency}")
-      # plt.figure(figsize=(10,6))
-      # # you can tweak bins= and range= to control the x‐axis units and limits
-      # plt.hist(max_min_values, bins=30, edgecolor='black')
-      # plt.xlabel('Max-Min page reads per head', fontsize=14)
-      # plt.ylabel('Number of heads', fontsize=14)
-      # plt.title('Distribution of per-head load imbalance', fontsize=16)
-      # plt.tight_layout()
-      # plt.savefig('head_load_imbalance_histogram.png')
-      # plt.close()
-      # print("Histogram saved to head_load_imbalance_histogram.png")
+      
+      import re
+      prefix_len = re.search(r'KV_(\d+)', args.profiling_dir).group(1)
+      budget_ratio = re.search(r'_(\d+\.\d+)KV_', args.profiling_dir).group(1)
+      CSV_PATH = f"/home/juchanlee/MagicDec/SSD_simulator/output/latency_hotness_aware_layout.csv"
+      # if the file doesn't yet exist, write the header
+      if not os.path.exists(CSV_PATH):
+          with open(CSV_PATH, "w", newline="") as f:
+              writer = csv.writer(f)
+              writer.writerow(["prefix_len", "plane_num", "budget_ratio", "cluster_size", "hot_cluster_ratio", "hot_cluster_duplication", "hotness_aware_layout", "total latency", "ideal latency"])
+
+      # append to CSV
+      with open(CSV_PATH, "a", newline="") as f:
+          writer = csv.writer(f)
+          writer.writerow([
+              prefix_len,
+              args.planes_per_die,
+              budget_ratio,
+              args.cluster_size,
+              args.hot_cluster_ratio,
+              args.hot_cluster_duplicate,
+              args.hotness_aware_layout,
+              total_latency,
+              ideal_total_latency,
+          ])      
       
     else:          
       data_per_head = []
@@ -197,7 +266,7 @@ def main():
       labels_per_layer = []
   
       for layer_idx in layers_to_plot:
-          layer = load_profiling_layer(args.profiling_dir, layer_idx, args.num_heads)
+          layer = load_profiling_layer(args.profiling_dir, layer_idx, args.num_heads, args.hot_cluster_duplicate, args.hot_cluster_ratio)
           for mode in modes:
               import numpy as np
               page_reads, _, _= get_plane_reads_per_head(layer, args, mode)
@@ -205,7 +274,7 @@ def main():
               data_per_head.append(reads_per_head)
               labels_per_head.append(f"L{layer_idx}-{mode}")
 
-              reads_per_layer = get_plane_reads(layer, args, mode)
+              reads_per_layer = get_plane_reads_per_layer(layer, args, mode)
               data_per_layer.append(reads_per_layer)
               labels_per_layer.append(f"L{layer_idx}-{mode}")
 

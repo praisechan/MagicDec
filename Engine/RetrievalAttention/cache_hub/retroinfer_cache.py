@@ -305,7 +305,12 @@ class retroinfer_cache(KV_Cache):
                 )
 
         # for hot cluster selection
-        self.window_size = 16
+        if "WINDOW_SIZE" in os.environ:
+            self.window_size = int(os.environ["WINDOW_SIZE"])
+        else:
+            self.window_size = 16 # default
+
+        # self.window_size = 16
         self.hot_cluster_ratio = 0.01
         self.num_hot_cluster = int(self.n_centroids * self.hot_cluster_ratio)
         self.hot_cluster_hit_ratio=torch.zeros((self.layer_num),dtype=torch.float16, device=self.layer_mapping[str(ldx)])
@@ -536,6 +541,7 @@ class retroinfer_cache(KV_Cache):
             torch.save(_supercluster_size, f"{self.outdir_path}/supercluster_size_{layer_idx}.pt")
             torch.save(_superclusters, f"{self.outdir_path}/superclusters_{layer_idx}.pt")
             torch.save(self.hot_cluster[layer_idx], f"{self.outdir_path}/hot_cluster_{self.hot_cluster_ratio}_{layer_idx}.pt")
+            torch.save(softmax_sum, f"{self.outdir_path}/softmax_sum_{layer_idx}.pt")
 
         return key_states[:, valid_start:, :, :], value_states[:, valid_start:, :, :]   # ignore mask tokens, shape: (bsz, seq_len, group_num, dim)
 
