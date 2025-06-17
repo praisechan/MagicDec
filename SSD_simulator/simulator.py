@@ -154,59 +154,53 @@ def build_chips(args, layer: LayerData, mode: str) -> List[Chip]:
 def get_plane_reads_per_layer(layer: LayerData, args, mode: str) -> List[int]:
     chips = build_chips(args, layer, mode)
     total_planes = sum(len(chip.planes) for chip in chips)
-    plane_reads = [0] * total_planes
-    # count per head, per plane
+
+    # plane_reads = [0] * total_planes
+    # # count per head, per plane
+    # for head in layer.heads:
+    #     for chip in chips:
+    #         for plane in chip.planes:
+    #             reads,_ = plane.simulate_access(
+    #                 head.head_index,
+    #                 head.selected_cluster_ids,
+    #                 hot_cluster_ids=head.hot_cluster_ids,
+    #                 mode=mode
+    #             )
+    #             plane_reads[plane.global_plane_id] += reads
+
+    # plane_reads = [0] * total_planes
+
+    reads_per_head = []
     for head in layer.heads:
-        idx = 0
         for chip in chips:
-            for plane in chip.planes:
-                reads = plane.simulate_access(
+            plane_reads = chip.simulate_access(
                     head.head_index,
                     head.selected_cluster_ids,
                     hot_cluster_ids=head.hot_cluster_ids,
                     mode=mode
-                )
-                plane_reads[idx] += reads
-                idx += 1
-        
-    return plane_reads
+            )
+        reads_per_head.append(plane_reads)
+
+    # calculate max "page read per plane" for each head
+    reads_per_layer = [sum(col) for col in zip(*reads_per_head)]
+    total_latency = max(reads_per_layer)
+    ideal_total_latency = sum(reads_per_layer) / len(reads_per_layer)
+
+    return reads_per_layer, total_latency, ideal_total_latency
+
 
 def get_plane_reads_per_head(layer: LayerData, args, mode: str) -> List[List[int]]:
     chips = build_chips(args, layer, mode)
     reads_per_head = []
 
     for head in layer.heads:
-        plane_reads = []
         for chip in chips:
-            for plane in chip.planes:
-                r = plane.simulate_access(
+            plane_reads = chip.simulate_access(
                     head.head_index,
                     head.selected_cluster_ids,
                     hot_cluster_ids=head.hot_cluster_ids,
                     mode=mode
-                )
-                plane_reads.append(r)
-
-        ###### Ideal duplicate ######
-        # if every plane shares all hot clusters
-        # # reduce load imbalance with hot cluster pages
-        # if args.hot_cluster_duplicate:
-        #     selected_hot_cluster = []
-        #     for hot_cid in head.hot_cluster_ids:
-        #       if hot_cid in head.selected_cluster_ids: 
-        #           selected_hot_cluster.append(hot_cid)
-        #     # calculate number of pages of selected hot clusters
-        #     num_selected_hot_cluster_pages = 0
-        #     for cid in selected_hot_cluster:
-        #         num_selected_hot_cluster_pages += math.ceil(head.clusters[cid].cluster_size_vectors * args.head_dim * args.vector_bytes / args.page_size_bytes)
-
-        #     plane_reads = balance_values(plane_reads, num_selected_hot_cluster_pages)
-
-        ###### Practical duplicate ######
-        if args.hot_cluster_duplicate:
-            for chip_idx, chip in enumerate(chips):
-                planes_per_chip = chip.planes_per_die * chip.dies_per_chip
-                plane_reads[chip_idx*planes_per_chip:(chip_idx+1)*planes_per_chip] = chip.simulate_hot_cluster_access(head.head_index, head.selected_cluster_ids, head.hot_cluster_ids, plane_reads[chip_idx*planes_per_chip:(chip_idx+1)*planes_per_chip])
+            )
 
         reads_per_head.append(plane_reads)        
         
@@ -224,6 +218,8 @@ def main():
     args = parse_args() 
     if args.num_channels != 1 or args.chips_per_channel != 1 or args.dies_per_chip != 1:
       raise ValueError("Hot cluster calculation only support single chip distribution yet")
+    if args.hot_cluster_duplicate and args.num_replica is None:
+      raise ValueError("num_replica should be given")
   
     layers_to_plot = range(32)
     # layers_to_plot = [0, 5, 10, 15, 20]
@@ -239,19 +235,23 @@ def main():
       max_min_values = []
       max_min_values = []
       total_latency = 0
+      overlap_total_latency = 0
       ideal_total_latency =0 
       for layer_idx in tqdm(layers_to_plot):
           layer = load_profiling_layer(args.profiling_dir, layer_idx, args.num_heads, args.hot_cluster_duplicate, args.hot_cluster_ratio, args.window_size)
           for mode in modes:
+              plane_reads_overlap, overlap_latency_per_layer, overlap_ideal_latency_per_layer = get_plane_reads_per_layer(layer, args, mode)
               reads_per_head, latency_per_layer, ideal_latency_per_layer = get_plane_reads_per_head(layer, args, mode)
               data.append(latency_per_layer)
               total_latency += latency_per_layer
+              overlap_total_latency += overlap_latency_per_layer
               ideal_total_latency +=ideal_latency_per_layer
               # for each head, compute imbalance = max(reads) - min(reads)
               # for head_reads in reads_per_head:
               #     imbalance = max(head_reads) - min(head_reads)
               #     max_min_values.append(imbalance)    
       print(f"total latency: {total_latency}")
+      print(f"total latency(head overlap): {overlap_total_latency}")
       print(f"ideal total latency: {ideal_total_latency}")
       
       import re

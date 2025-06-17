@@ -59,6 +59,7 @@ class Plane:
         self.hot_cluster_to_pages: Dict[Tuple[int, int], List[int]] = {}
         self.hotness_aware_layout = hotness_aware_layout
         self.hot_cluster_duplicate = hot_cluster_duplicate
+        self.softmax_sum = []
 
     def layout_clusters(
         self,
@@ -67,8 +68,10 @@ class Plane:
         superclusters: List[SuperclusterData],
         hot_cluster_ids: List[int],
         sorted_cids,        
-        mode: str
+        mode: str,
+        softmax_sum
     ) -> None:
+        self.softmax_sum.append(softmax_sum)
         cluster_cnt = 0
         # Baseline: serial assign by cluster index ordering
         # Hotness-aware layout: water-falling algorithm based on hotness
@@ -225,18 +228,24 @@ class Plane:
         mode: str
     ) -> int:
         sum_output = 0
+        softmax_aggregation = 0
         for cid in selected_clusters:
-            if self.hot_cluster_duplicate:
+            if self.hot_cluster_duplicate: 
                 if cid not in hot_cluster_ids:
+                    # in hot cluster duplcate mode, we handle hot cluster separately
                     sum_output += len(self.cluster_to_pages.get((head_idx, cid), []))
             else:
                 sum_output += len(self.cluster_to_pages.get((head_idx, cid), []))
+                
+                if self.cluster_to_pages.get((head_idx, cid), []):
+                  softmax_aggregation += self.softmax_sum[head_idx][cid]
+                  
 
         # sum_output = sum(
         #     len(self.cluster_to_pages.get((head_idx, cid), []))
         #     for cid in selected_clusters
         # )
-        return sum_output
+        return sum_output, softmax_aggregation
 
 class Chip:
     """
@@ -266,7 +275,8 @@ class Chip:
         self.hotness_aware_layout = hotness_aware_layout
         self.hot_cluster_duplicate = hot_cluster_duplicate
         self.pages_per_cluster = [] # each head has its own pages_per_cluster
-
+        self.softmax_sum = []
+        
     def layout_clusters(
         self,
         head_idx: int,
@@ -289,11 +299,51 @@ class Chip:
 
         # delegate to planes for baseline and independent layouts
         for plane in self.planes:
-            plane.layout_clusters(head_idx, pages_per_cluster, superclusters, hot_cluster_ids, sorted_cids, mode)
+            plane.layout_clusters(head_idx, pages_per_cluster, superclusters, hot_cluster_ids, sorted_cids, mode, softmax_sum)
             if self.hot_cluster_duplicate:
                 plane.layout_hot_clusters(head_idx, pages_per_cluster, superclusters, hot_cluster_ids, sorted_cids, mode, num_replica)
         
         self.pages_per_cluster.append(pages_per_cluster)
+        self.softmax_sum.append(softmax_sum)
+
+    def simulate_access(
+        self,
+        head_idx: int,
+        selected_clusters: List[int],
+        hot_cluster_ids,
+        mode: str
+    ) -> int:
+        plane_reads = []      
+        for plane in self.planes:
+          r, _ = plane.simulate_access(
+              head_idx,
+              selected_clusters,
+              hot_cluster_ids=hot_cluster_ids,
+              mode=mode
+          )                    
+          plane_reads.append(r)
+
+        ###### All-to-All duplicate ######
+        # if every plane shares all hot clusters
+        # # reduce load imbalance with hot cluster pages
+        # if args.hot_cluster_duplicate:
+        #     selected_hot_cluster = []
+        #     for hot_cid in head.hot_cluster_ids:
+        #       if hot_cid in head.selected_cluster_ids: 
+        #           selected_hot_cluster.append(hot_cid)
+        #     # calculate number of pages of selected hot clusters
+        #     num_selected_hot_cluster_pages = 0
+        #     for cid in selected_hot_cluster:
+        #         num_selected_hot_cluster_pages += math.ceil(head.clusters[cid].cluster_size_vectors * args.head_dim * args.vector_bytes / args.page_size_bytes)
+
+        #     plane_reads = balance_values(plane_reads, num_selected_hot_cluster_pages)
+        
+        ###### Practical duplicate ######
+        if self.hot_cluster_duplicate:
+            plane_reads = self.simulate_hot_cluster_access(head_idx, selected_clusters, hot_cluster_ids, plane_reads)
+                
+        return plane_reads
+
       
     def simulate_hot_cluster_access(
         self,
