@@ -165,60 +165,64 @@ class Plane:
     ) -> None:
         # Baseline: serial assign by cluster index ordering
         # Hotness-aware layout: water-falling algorithm based on hotness
-            layout_strategy = "zigzag"
-            # if layout_strategy == "round-robin":
-            #     # round-robin layout based on cluster id
-            #     offset = 0
-            #     for cid in cluster_list:
-            #         if self.hot_cluster_duplicate:
-            #             if cid in hot_cluster_ids:
-            #                 continue # if hot cluster, do not have to assign to plane, because every plane has the same hot clusters.
-
-            #         count = pages_per_cluster[cid]
-
-            #         # compute the window of 'count' pages starting at 'offset'
-            #         start = offset % self.total_planes
-            #         end   = (offset + count) % self.total_planes
-            #         plane_id = self.global_plane_id
-
-            #         included = False
-            #         if start < end:
-            #             # simple contiguous range
-            #             if start <= plane_id < end:
-            #                 included = True
-            #         else:
-            #             # wrapped-around range
-            #             if plane_id >= start or plane_id < end:
-            #                 included = True
-
-            #         if included:
-            #             self.cluster_to_pages[(head_idx, cid)] = [True]
-
-            #         offset += count
-            if layout_strategy == "zigzag":
-                # Snake(zig-zag) assignment
-                def zigzag(offset, total_planes):
-                    multiple = offset // total_planes
-                    # if offset is even mutiple of total_planes, forward
-                    if multiple % 2 == 0:
-                        return offset % total_planes
-                    else:
-                        return total_planes - 1 - offset % total_planes
-                
-                for i in range(num_replica):
-                  offset = int(i * self.total_planes / num_replica)
+            layout_strategy = "round-robin"
+            if layout_strategy == "round-robin":
+                # round-robin layout based on cluster id
+                for replica_set_idx in range(num_replica):
+                  offset = int(replica_set_idx * self.total_planes / num_replica)
                   for cid in hot_cluster_ids:
                       count = pages_per_cluster[cid]
+                      pages=[]
+
+                      # compute the window of 'count' pages starting at 'offset'
+                      start = offset % self.total_planes
+                      end   = (offset + count) % self.total_planes
+                      plane_id = self.global_plane_id
+
                       included = False
-                      for i in range(offset, offset+count):
-                          if zigzag(i, self.total_planes) == self.global_plane_id:
+                      if start < end:
+                          # simple contiguous range
+                          if start <= plane_id < end:
                               included = True
-                              page = i - offset
+                              pages.append(plane_id - start)
+                      else:
+                          # wrapped-around range
+                          if plane_id >= start:
+                              included = True
+                              pages.append(plane_id - start)
+                          if plane_id < end:
+                              included = True
+                              pages.append(count - (end - plane_id))
 
                       if included:
-                          self.hot_cluster_to_pages[(head_idx, cid)] = [page]
+                          self.hot_cluster_to_pages[(head_idx, cid)] = pages
 
                       offset += count
+            # if layout_strategy == "zigzag":
+            #     # Snake(zig-zag) assignment
+            #     def zigzag(offset, total_planes):
+            #         multiple = offset // total_planes
+            #         # if offset is even mutiple of total_planes, forward
+            #         if multiple % 2 == 0:
+            #             return offset % total_planes
+            #         else:
+            #             return total_planes - 1 - offset % total_planes
+                
+            #     for replica_set_idx in range(num_replica):
+            #       offset = int(replica_set_idx * self.total_planes / num_replica)
+            #       for cid in hot_cluster_ids:
+            #           count = pages_per_cluster[cid]
+            #           pages=[]
+            #           included = False
+            #           for i in range(offset, offset+count):
+            #               if zigzag(i, self.total_planes) == self.global_plane_id:
+            #                   included = True
+            #                   pages.append(i - offset)
+            #               if included:
+            #                   self.hot_cluster_to_pages[(head_idx, cid)] = pages
+
+
+            #           offset += count
 
     def simulate_access(
         self,
@@ -359,7 +363,7 @@ class Chip:
         the maximum reads across all planes (i.e. the worst-case plane load).
         """
         # 1. restrict to just the “hot” ones
-        selected_hot = [c for c in selected_clusters if c in hot_cluster_ids]
+        selected_hot = [c for c in hot_cluster_ids if c in selected_clusters]
 
         for cluster in selected_hot:
             num_pages = self.pages_per_cluster[head_idx][cluster]

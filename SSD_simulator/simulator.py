@@ -230,10 +230,6 @@ def main():
       raise ValueError("supercluster does not support hot cluster mode yet")
     
     if args.max_latency_calculate:
-      data = []
-      labels = []
-      max_min_values = []
-      max_min_values = []
       total_latency = 0
       overlap_total_latency = 0
       ideal_total_latency =0 
@@ -242,7 +238,6 @@ def main():
           for mode in modes:
               plane_reads_overlap, overlap_latency_per_layer, overlap_ideal_latency_per_layer = get_plane_reads_per_layer(layer, args, mode)
               reads_per_head, latency_per_layer, ideal_latency_per_layer = get_plane_reads_per_head(layer, args, mode)
-              data.append(latency_per_layer)
               total_latency += latency_per_layer
               overlap_total_latency += overlap_latency_per_layer
               ideal_total_latency +=ideal_latency_per_layer
