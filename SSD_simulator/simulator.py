@@ -48,6 +48,8 @@ def parse_args() -> argparse.Namespace:
                         help='observation window size')
     parser.add_argument('--head_dim', type=int, default=128,
                         help='Dimension per KV head')
+    parser.add_argument('--csv_path', type=str,
+                        help='csv path')
     parser.add_argument('--hot_cluster_duplicate', action='store_true',
                         help='Duplicate hot cluster and reduce load imbalance by balance_values')
     parser.add_argument('--hotness_aware_layout', action='store_true',
@@ -252,7 +254,10 @@ def main():
       import re
       # prefix_len = re.search(r'KV_(\d+)', args.profiling_dir).group(1)
       # budget_ratio = re.search(r'_(\d+\.\d+)KV_', args.profiling_dir).group(1)
-      CSV_PATH = f"/home/juchanlee/MagicDec/SSD_simulator/output/latency_budget{args.budget_ratio}_replica{args.num_replica}.csv"
+      if args.csv_path:
+        CSV_PATH = args.csv_path +".csv"
+      else:
+        CSV_PATH = f"/home/juchanlee/MagicDec/SSD_simulator/output/latency_budget{args.budget_ratio}_replica{args.num_replica}.csv"
       # if the file doesn't yet exist, write the header
       if not os.path.exists(CSV_PATH):
           with open(CSV_PATH, "w", newline="") as f:

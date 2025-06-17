@@ -168,7 +168,7 @@ class Plane:
             layout_strategy = "round-robin"
             if layout_strategy == "round-robin":
                 # round-robin layout based on cluster id
-                for replica_set_idx in range(num_replica):
+                for replica_set_idx in range(num_replica + 1): # num_replica = 1 means no replication
                   offset = int(replica_set_idx * self.total_planes / num_replica)
                   for cid in hot_cluster_ids:
                       count = pages_per_cluster[cid]

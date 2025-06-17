@@ -18,9 +18,11 @@ fixed_option_values = {
 
 # Define variable options and their possible values
 option_values = {
-    "--num_replica": [8],
-    "--prefix_len": [16385],
-    "--budget_ratio": [0.25],
+    "--num_replica": [1,2,4,8],
+    # "--num_replica": [8],
+    # "--prefix_len": [8193, 16385, 32769, 65537],
+    "--prefix_len": [8193],
+    "--budget_ratio": [0.12],
     "--hot_cluster_ratio": [0.01, 0.02, 0.04, 0.08, 0.16],
     "--planes_per_die": [32],
 }
@@ -35,12 +37,14 @@ def make_script_filename(var_vals):
         if len(vals) == 1:
             clean = opt.lstrip('-').replace('-', '_')
             parts.append(f"{clean}_{vals[0]}")
-    return "_".join(parts) + ".sh"
+    return "_".join(parts)
 
 # Build a command line including fixed options, variable options, and flags
 def build_command(var_keys, var_tuple, flags):
     cmd = ["python simulator.py"]
     cmd.append("--max_latency_calculate")
+    script_name = make_script_filename(option_values)
+    cmd.append(f"--csv_path {script_name}")
     # include all fixed options
     for key, vals in fixed_option_values.items():
         cmd.append(f"{key} {vals[0]}")
@@ -69,9 +73,10 @@ for combo in combinations:
 # Assemble script content
 template = "#!/bin/bash\n\n" + "\n\n".join(generated_scripts)
 
+
 # Write to a file named for the single-valued variable options only
 script_name = make_script_filename(option_values)
-with open(script_name, "w") as f:
+with open(script_name + ".sh", "w") as f:
     f.write(template)
 
 print(f"Generated {script_name} with {len(generated_scripts)} commands.")
