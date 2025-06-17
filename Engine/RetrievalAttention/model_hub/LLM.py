@@ -163,7 +163,7 @@ class LLM:
         return logits
         
 
-    def decode_forward(self, inputs_ids):
+    def decode_forward(self, inputs_ids, intermediate_output):
         hidden_states = self.word_embedding(inputs_ids)
 
         if self.num_gpus > 1:
@@ -175,13 +175,15 @@ class LLM:
             for ldx in range(self.num_layers):
                 # start_time = time.time()
                 # torch.cuda.synchronize()
+                if intermediate_output:
+                    self.kv_cache.store_decoding_data=True
                 hidden_states = self.layer_decode(ldx, hidden_states)
                 # torch.cuda.synchronize()
                 # end_time = time.time()
                 # print(f"layer_decode:{end_time - start_time}")
-        # if self.profile_clustering:
-        #     # profile only for first decoding step
-        #     raise ValueError("profile only for first decoding step")
+        if self.profile_clustering:
+            # profile only for first decoding step
+            raise ValueError("profile only for first decoding step")
         hidden_states = self.layernorm(hidden_states[:, -1:, :], self.norm_variance_epsilon, self.norm_weight)
         logits = self.lm(hidden_states)
         
@@ -226,14 +228,16 @@ class LLM:
         profile_decoding_steps = [0, 128, 256, 512, 1022]
         for step in range(self.max_new_length-1):          
             # flag kv_cache to store profile data
+            intermediate_output = False
             if step in profile_decoding_steps:
-                self.kv_cache.store_decoding_data = True
+                intermediate_output = True
                 self.kv_cache.decoding_step = step
                       
-            logits = self.decode_forward(inputs_ids=output_ids)
+            logits = self.decode_forward(inputs_ids=output_ids, intermediate_output=intermediate_output)
             output_ids = logits.argmax(dim=-1)
             outputs_ids.append(output_ids)
             
+            # for output token probabiltiy profile
             softmax_logits = torch.nn.functional.softmax(logits, dim=-1)
             topk_vals, topk_indices = torch.topk(softmax_logits, k=3, dim=-1)  # each is [B, 3]
             batch_top3 = [[] for _ in range(topk_vals.shape[-2])]
@@ -245,8 +249,8 @@ class LLM:
             outputs_logits.append(batch_top3)
             top1_top2_diff.append(topk_vals[0][:,0]-topk_vals[0][:,1])
 
-            if self.attention_type == "RetroInfer":      
-                # store hot cluster hit ratio
+            # store hot cluster hit ratio
+            if self.attention_type == "RetroInfer":
                 hot_cluster_hit_ratio_per_layer.append(self.kv_cache.hot_cluster_hit_ratio.clone())
                 hot_cluster_hit_ratio_per_token.append(self.kv_cache.hot_cluster_hit_ratio.mean())
 
@@ -261,7 +265,7 @@ class LLM:
         
         outputs_ids = torch.cat(outputs_ids, dim=-1).tolist()
         
-        if self.attention_type == "RetroInfer" and self.profile_hot_clustering:
+        if self.attention_type == "RetroInfer" and self.profile_hot_cluster_selection_ratio:
             window_size = self.kv_cache.window_size
             hot_cluster_ratio = self.kv_cache.hot_cluster_ratio
             cluster_size = self.kv_cache.avg_cluster_size
@@ -293,7 +297,7 @@ class LLM:
         return outputs_ids, outputs_logits, top1_top2_diff
 
 
-    def generate(self, attention_type, inputs_ids, attention_masks, max_new_length, attn_config=None, profile_clustering=False, profile_hot_clustering=False):
+    def generate(self, attention_type, inputs_ids, attention_masks, max_new_length, attn_config=None, profile_clustering=False, profile_hot_cluster_selection_ratio=False):
         """ LLM Inference.
         Args:
             attention_type: str,
@@ -311,7 +315,7 @@ class LLM:
         self.max_new_length = max_new_length
         self.attention_type = attention_type
         self.profile_clustering = profile_clustering
-        self.profile_hot_clustering = profile_hot_clustering
+        self.profile_hot_cluster_selection_ratio = profile_hot_cluster_selection_ratio
 
         valid_start = attention_masks.shape[1] - torch.sum(attention_masks, dim=-1).detach().cpu().numpy()
         del attention_masks

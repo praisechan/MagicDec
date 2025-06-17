@@ -157,4 +157,4 @@ for step, batch in tqdm(enumerate(dataset), total=num_eval_steps):
     torch.cuda.synchronize()
     start = time.perf_counter()
                     
-    draft_outputs, draft_logits, draft_top1_top2_diff = engine.speculate(tokens_buffer[:, 0].view(-1,1), args.gamma, profile_clustering=args.profile_clustering, profile_hot_clustering=True)
+    draft_outputs, draft_logits, draft_top1_top2_diff = engine.speculate(tokens_buffer[:, 0].view(-1,1), args.gamma, profile_clustering=args.profile_clustering, profile_hot_cluster_selection_ratio=True)
