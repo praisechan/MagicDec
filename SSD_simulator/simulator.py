@@ -39,6 +39,9 @@ def parse_args() -> argparse.Namespace:
                         help='cluster size')
     parser.add_argument('--hot_cluster_ratio', type=float, default=0.01, required=True,
                         help='hot cluster ratio')
+    parser.add_argument('--budget_ratio', type=str, default=0.25, required=True,
+                        help='hot cluster ratio')
+    parser.add_argument('--prefix_len', type=str, default=16385, required=True)
     parser.add_argument('--window_size', type=int, default=16, required=True,
                         help='observation window size')
     parser.add_argument('--num_replica', type=int, default=4, required=True,
@@ -60,13 +63,10 @@ def parse_args() -> argparse.Namespace:
 
 
 def load_profiling_layer(
-    profiling_dir: str,
+    args,
     layer_idx: int,
-    num_heads: int,
-    hot_cluster_duplicate,
-    hot_cluster_ratio,
-    window_size
 ) -> LayerData:
+    profiling_dir = args.profiling_dir + f"data_superclustersize_4_{args.budget_ratio}KV_{args.prefix_len}_clustersize_16"
     # unchanged loader for .pt files
     cluster_sizes = torch.load(
         os.path.join(profiling_dir, f"cluster_size_{layer_idx}.pt"), map_location='cpu'
@@ -87,20 +87,20 @@ def load_profiling_layer(
         os.path.join(profiling_dir, f"softmax_sum_{layer_idx}.pt"), map_location='cpu'
     )
 
-    if hot_cluster_duplicate:
+    if args.hot_cluster_duplicate:
         # if window_size==16:
         #     hot_cluster_list = torch.load(
         #         os.path.join(profiling_dir, f"hot_cluster_{hot_cluster_ratio}_{layer_idx}.pt"), map_location='cpu'
         #     )
         # else:
             hot_cluster_list = torch.load(
-                os.path.join(profiling_dir, f"hot_cluster_window{window_size}_{hot_cluster_ratio}_{layer_idx}.pt"), map_location='cpu'
+                os.path.join(profiling_dir, f"hot_cluster_window{args.window_size}_{args.hot_cluster_ratio}_{layer_idx}.pt"), map_location='cpu'
             )
     else:    
         hot_cluster_list = None
     
     heads: List[HeadData] = []
-    for head_idx in range(num_heads):
+    for head_idx in range(args.num_heads):
         clusters = [ClusterData(cid, int(size.item()))
                     for cid, size in enumerate(cluster_sizes[head_idx])]
         # superclusters = [SuperclusterData(
@@ -110,7 +110,7 @@ def load_profiling_layer(
         #                  ) for sc_id, ids in enumerate(superclusters_list[head_idx])]
         superclusters=None
         selected = [int(cid.item()) for cid in selected_list[head_idx]]
-        hot_cluster = [int(cid.item()) for cid in hot_cluster_list[head_idx]] if hot_cluster_duplicate else None
+        hot_cluster = [int(cid.item()) for cid in hot_cluster_list[head_idx]] if args.hot_cluster_duplicate else None
         
         heads.append(HeadData(head_idx, clusters, superclusters, selected, hot_cluster, softmax_sum[head_idx]))
     return LayerData(layer_idx, heads)
@@ -234,7 +234,7 @@ def main():
       overlap_total_latency = 0
       ideal_total_latency =0 
       for layer_idx in tqdm(layers_to_plot):
-          layer = load_profiling_layer(args.profiling_dir, layer_idx, args.num_heads, args.hot_cluster_duplicate, args.hot_cluster_ratio, args.window_size)
+          layer = load_profiling_layer(args, layer_idx)
           for mode in modes:
               plane_reads_overlap, overlap_latency_per_layer, overlap_ideal_latency_per_layer = get_plane_reads_per_layer(layer, args, mode)
               reads_per_head, latency_per_layer, ideal_latency_per_layer = get_plane_reads_per_head(layer, args, mode)
@@ -250,22 +250,22 @@ def main():
       print(f"ideal total latency: {ideal_total_latency}")
       
       import re
-      prefix_len = re.search(r'KV_(\d+)', args.profiling_dir).group(1)
-      budget_ratio = re.search(r'_(\d+\.\d+)KV_', args.profiling_dir).group(1)
-      CSV_PATH = f"/home/juchanlee/MagicDec/SSD_simulator/output/latency_hotness_aware_layout_num_replica.csv"
+      # prefix_len = re.search(r'KV_(\d+)', args.profiling_dir).group(1)
+      # budget_ratio = re.search(r'_(\d+\.\d+)KV_', args.profiling_dir).group(1)
+      CSV_PATH = f"/home/juchanlee/MagicDec/SSD_simulator/output/latency_budget{args.budget_ratio}_replica{args.num_replica}.csv"
       # if the file doesn't yet exist, write the header
       if not os.path.exists(CSV_PATH):
           with open(CSV_PATH, "w", newline="") as f:
               writer = csv.writer(f)
-              writer.writerow(["prefix_len", "plane_num", "budget_ratio", "cluster_size", "window_size", "num_replica", "hot_cluster_ratio", "hot_cluster_duplication", "hotness_aware_layout", "total latency", "ideal latency"])
+              writer.writerow(["prefix_len", "plane_num", "budget_ratio", "cluster_size", "window_size", "num_replica", "hot_cluster_ratio", "hot_cluster_duplication", "hotness_aware_layout", "total latency", "total latency(overlap)", "ideal latency"])
 
       # append to CSV
       with open(CSV_PATH, "a", newline="") as f:
           writer = csv.writer(f)
           writer.writerow([
-              prefix_len,
+              args.prefix_len,
               args.planes_per_die,
-              budget_ratio,
+              args.budget_ratio,
               args.cluster_size,
               args.window_size,
               args.num_replica,
@@ -273,6 +273,7 @@ def main():
               args.hot_cluster_duplicate,
               args.hotness_aware_layout,
               total_latency,
+              overlap_total_latency,
               ideal_total_latency,
           ])      
       
@@ -283,7 +284,7 @@ def main():
       labels_per_layer = []
   
       for layer_idx in layers_to_plot:
-          layer = load_profiling_layer(args.profiling_dir, layer_idx, args.num_heads, args.hot_cluster_duplicate, args.hot_cluster_ratio)
+          layer = load_profiling_layer(args, layer_idx)
           for mode in modes:
               import numpy as np
               page_reads, _, _= get_plane_reads_per_head(layer, args, mode)
