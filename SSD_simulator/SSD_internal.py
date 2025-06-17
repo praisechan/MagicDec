@@ -60,7 +60,7 @@ class Plane:
         self.hotness_aware_layout = hotness_aware_layout
         self.hot_cluster_duplicate = hot_cluster_duplicate
 
-    def assign_clusters(
+    def layout_clusters(
         self,
         head_idx: int,
         pages_per_cluster: Dict[int, int],
@@ -74,8 +74,8 @@ class Plane:
         # Hotness-aware layout: water-falling algorithm based on hotness
         if mode == 'baseline':
             cluster_list = sorted_cids if self.hotness_aware_layout else sorted(pages_per_cluster)
-            assign_strategy = "round-robin"
-            if assign_strategy == "round-robin":
+            layout_strategy = "round-robin"
+            if layout_strategy == "round-robin":
                 # round-robin layout based on cluster id
                 offset = 0
                 for cid in cluster_list:
@@ -105,7 +105,7 @@ class Plane:
 
                     offset += count
 
-            elif assign_strategy == "zigzag":
+            elif layout_strategy == "zigzag":
                 # Snake(zig-zag) assignment
                 def zigzag(offset, total_planes):
                     multiple = offset // total_planes
@@ -150,6 +150,72 @@ class Plane:
         #         cluster_cnt += sc.supercluster_size
         # else:
         #     pass
+    def layout_hot_clusters(
+        self,
+        head_idx: int,
+        pages_per_cluster: Dict[int, int],
+        superclusters: List[SuperclusterData],
+        hot_cluster_ids: List[int],
+        sorted_cids,
+        mode,
+        num_replica:int = 4
+    ) -> None:
+        # Baseline: serial assign by cluster index ordering
+        # Hotness-aware layout: water-falling algorithm based on hotness
+            layout_strategy = "zigzag"
+            # if layout_strategy == "round-robin":
+            #     # round-robin layout based on cluster id
+            #     offset = 0
+            #     for cid in cluster_list:
+            #         if self.hot_cluster_duplicate:
+            #             if cid in hot_cluster_ids:
+            #                 continue # if hot cluster, do not have to assign to plane, because every plane has the same hot clusters.
+
+            #         count = pages_per_cluster[cid]
+
+            #         # compute the window of 'count' pages starting at 'offset'
+            #         start = offset % self.total_planes
+            #         end   = (offset + count) % self.total_planes
+            #         plane_id = self.global_plane_id
+
+            #         included = False
+            #         if start < end:
+            #             # simple contiguous range
+            #             if start <= plane_id < end:
+            #                 included = True
+            #         else:
+            #             # wrapped-around range
+            #             if plane_id >= start or plane_id < end:
+            #                 included = True
+
+            #         if included:
+            #             self.cluster_to_pages[(head_idx, cid)] = [True]
+
+            #         offset += count
+            if layout_strategy == "zigzag":
+                # Snake(zig-zag) assignment
+                def zigzag(offset, total_planes):
+                    multiple = offset // total_planes
+                    # if offset is even mutiple of total_planes, forward
+                    if multiple % 2 == 0:
+                        return offset % total_planes
+                    else:
+                        return total_planes - 1 - offset % total_planes
+                
+                for i in range(num_replica):
+                  offset = int(i * self.total_planes / num_replica)
+                  for cid in hot_cluster_ids:
+                      count = pages_per_cluster[cid]
+                      included = False
+                      for i in range(offset, offset+count):
+                          if zigzag(i, self.total_planes) == self.global_plane_id:
+                              included = True
+                              page = i - offset
+
+                      if included:
+                          self.hot_cluster_to_pages[(head_idx, cid)] = [page]
+
+                      offset += count
 
     def simulate_access(
         self,
@@ -199,15 +265,17 @@ class Chip:
         ]
         self.hotness_aware_layout = hotness_aware_layout
         self.hot_cluster_duplicate = hot_cluster_duplicate
+        self.pages_per_cluster = [] # each head has its own pages_per_cluster
 
-    def assign_clusters(
+    def layout_clusters(
         self,
         head_idx: int,
         pages_per_cluster: Dict[int, int],
         superclusters: List[SuperclusterData],
         hot_cluster_ids: List[int],
         softmax_sum,
-        mode: str
+        mode: str,
+        num_replica
     ) -> None:
         
         sorted_cids = None
@@ -221,4 +289,47 @@ class Chip:
 
         # delegate to planes for baseline and independent layouts
         for plane in self.planes:
-            plane.assign_clusters(head_idx, pages_per_cluster, superclusters, hot_cluster_ids, sorted_cids, mode)
+            plane.layout_clusters(head_idx, pages_per_cluster, superclusters, hot_cluster_ids, sorted_cids, mode)
+            if self.hot_cluster_duplicate:
+                plane.layout_hot_clusters(head_idx, pages_per_cluster, superclusters, hot_cluster_ids, sorted_cids, mode, num_replica)
+        
+        self.pages_per_cluster.append(pages_per_cluster)
+      
+    def simulate_hot_cluster_access(
+        self,
+        head_idx: int,
+        selected_clusters: List[int],
+        hot_cluster_ids,
+        plane_reads: List[int],
+    ) -> int:
+        """
+        For each hot cluster in selected_clusters, allocate its pages one by one
+        to the plane (among those that hold that cluster) which currently has the
+        fewest reads, bumping that plane's read-count each time. Finally return
+        the maximum reads across all planes (i.e. the worst-case plane load).
+        """
+        # 1. restrict to just the “hot” ones
+        selected_hot = [c for c in selected_clusters if c in hot_cluster_ids]
+
+        for cluster in selected_hot:
+            num_pages = self.pages_per_cluster[head_idx][cluster]
+            
+            # for each page‐offset in this cluster
+            for offset in range(num_pages):
+                # gather planes that have this cluster at this offset
+                candidate_planes = []
+                for i, plane in enumerate(self.planes):
+                    # plane.hot_cluster_to_pages[cluster] is the list of offsets it stores
+                    pages_on_plane = plane.hot_cluster_to_pages.get((head_idx, cluster), [])
+                    if offset in pages_on_plane:
+                        candidate_planes.append(i)
+
+                if not candidate_planes:
+                    # cluster not on any plane? skip or raise depending on your policy
+                    continue
+
+                # pick the least‐loaded plane among those
+                best = min(candidate_planes, key=lambda p: plane_reads[p])
+                plane_reads[best] += 1
+
+        return plane_reads

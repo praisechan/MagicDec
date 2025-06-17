@@ -39,6 +39,10 @@ def parse_args() -> argparse.Namespace:
                         help='cluster size')
     parser.add_argument('--hot_cluster_ratio', type=float, default=0.01, required=True,
                         help='hot cluster ratio')
+    parser.add_argument('--window_size', type=int, default=16, required=True,
+                        help='observation window size')
+    parser.add_argument('--num_replica', type=int, default=4, required=True,
+                        help='observation window size')
     parser.add_argument('--head_dim', type=int, default=128,
                         help='Dimension per KV head')
     parser.add_argument('--hot_cluster_duplicate', action='store_true',
@@ -60,7 +64,8 @@ def load_profiling_layer(
     layer_idx: int,
     num_heads: int,
     hot_cluster_duplicate,
-    hot_cluster_ratio
+    hot_cluster_ratio,
+    window_size
 ) -> LayerData:
     # unchanged loader for .pt files
     cluster_sizes = torch.load(
@@ -83,9 +88,14 @@ def load_profiling_layer(
     )
 
     if hot_cluster_duplicate:
-        hot_cluster_list = torch.load(
-            os.path.join(profiling_dir, f"hot_cluster_{hot_cluster_ratio}_{layer_idx}.pt"), map_location='cpu'
-        )
+        if window_size==16:
+            hot_cluster_list = torch.load(
+                os.path.join(profiling_dir, f"hot_cluster_{hot_cluster_ratio}_{layer_idx}.pt"), map_location='cpu'
+            )
+        else:
+            hot_cluster_list = torch.load(
+                os.path.join(profiling_dir, f"hot_cluster_window{window_size}_{hot_cluster_ratio}_{layer_idx}.pt"), map_location='cpu'
+            )
     else:    
         hot_cluster_list = None
     
@@ -129,13 +139,14 @@ def build_chips(args, layer: LayerData, mode: str) -> List[Chip]:
                     args.constrained,
                     args.cluster_size
                 )
-                chip.assign_clusters(
+                chip.layout_clusters(
                     head_idx=head.head_index,
                     pages_per_cluster=pages_map,
                     superclusters=head.superclusters,
                     hot_cluster_ids=head.hot_cluster_ids,
                     softmax_sum=head.softmax_sum,
-                    mode=mode
+                    mode=mode,
+                    num_replica=args.num_replica
                 )
             chips.append(chip)
     return chips
@@ -174,19 +185,29 @@ def get_plane_reads_per_head(layer: LayerData, args, mode: str) -> List[List[int
                     hot_cluster_ids=head.hot_cluster_ids,
                     mode=mode
                 )
-                plane_reads.append(r)    
-        # reduce load imbalance with hot cluster pages
-        if args.hot_cluster_duplicate:
-            selected_hot_cluster = []
-            for hot_cid in head.hot_cluster_ids:
-              if hot_cid in head.selected_cluster_ids: 
-                  selected_hot_cluster.append(hot_cid)
-            # calculate number of pages of selected hot clusters
-            num_selected_hot_cluster_pages = 0
-            for cid in selected_hot_cluster:
-                num_selected_hot_cluster_pages += math.ceil(head.clusters[cid].cluster_size_vectors * args.head_dim * args.vector_bytes / args.page_size_bytes)
+                plane_reads.append(r)
 
-            plane_reads = balance_values(plane_reads, num_selected_hot_cluster_pages)
+        ###### Ideal duplicate ######
+        # if every plane shares all hot clusters
+        # # reduce load imbalance with hot cluster pages
+        # if args.hot_cluster_duplicate:
+        #     selected_hot_cluster = []
+        #     for hot_cid in head.hot_cluster_ids:
+        #       if hot_cid in head.selected_cluster_ids: 
+        #           selected_hot_cluster.append(hot_cid)
+        #     # calculate number of pages of selected hot clusters
+        #     num_selected_hot_cluster_pages = 0
+        #     for cid in selected_hot_cluster:
+        #         num_selected_hot_cluster_pages += math.ceil(head.clusters[cid].cluster_size_vectors * args.head_dim * args.vector_bytes / args.page_size_bytes)
+
+        #     plane_reads = balance_values(plane_reads, num_selected_hot_cluster_pages)
+
+        ###### Practical duplicate ######
+        if args.hot_cluster_duplicate:
+            for chip_idx, chip in enumerate(chips):
+                planes_per_chip = chip.planes_per_die * chip.dies_per_chip
+                plane_reads[chip_idx*planes_per_chip:(chip_idx+1)*planes_per_chip] = chip.simulate_hot_cluster_access(head.head_index, head.selected_cluster_ids, head.hot_cluster_ids, plane_reads[chip_idx*planes_per_chip:(chip_idx+1)*planes_per_chip])
+
         reads_per_head.append(plane_reads)        
         
     # calculate max "page read per plane" for each head
@@ -220,7 +241,7 @@ def main():
       total_latency = 0
       ideal_total_latency =0 
       for layer_idx in tqdm(layers_to_plot):
-          layer = load_profiling_layer(args.profiling_dir, layer_idx, args.num_heads, args.hot_cluster_duplicate, args.hot_cluster_ratio)
+          layer = load_profiling_layer(args.profiling_dir, layer_idx, args.num_heads, args.hot_cluster_duplicate, args.hot_cluster_ratio, args.window_size)
           for mode in modes:
               reads_per_head, latency_per_layer, ideal_latency_per_layer = get_plane_reads_per_head(layer, args, mode)
               data.append(latency_per_layer)
@@ -236,12 +257,12 @@ def main():
       import re
       prefix_len = re.search(r'KV_(\d+)', args.profiling_dir).group(1)
       budget_ratio = re.search(r'_(\d+\.\d+)KV_', args.profiling_dir).group(1)
-      CSV_PATH = f"/home/juchanlee/MagicDec/SSD_simulator/output/latency_hotness_aware_layout.csv"
+      CSV_PATH = f"/home/juchanlee/MagicDec/SSD_simulator/output/latency_hotness_aware_layout_num_replica.csv"
       # if the file doesn't yet exist, write the header
       if not os.path.exists(CSV_PATH):
           with open(CSV_PATH, "w", newline="") as f:
               writer = csv.writer(f)
-              writer.writerow(["prefix_len", "plane_num", "budget_ratio", "cluster_size", "hot_cluster_ratio", "hot_cluster_duplication", "hotness_aware_layout", "total latency", "ideal latency"])
+              writer.writerow(["prefix_len", "plane_num", "budget_ratio", "cluster_size", "window_size", "num_replica", "hot_cluster_ratio", "hot_cluster_duplication", "hotness_aware_layout", "total latency", "ideal latency"])
 
       # append to CSV
       with open(CSV_PATH, "a", newline="") as f:
@@ -251,6 +272,8 @@ def main():
               args.planes_per_die,
               budget_ratio,
               args.cluster_size,
+              args.window_size,
+              args.num_replica,
               args.hot_cluster_ratio,
               args.hot_cluster_duplicate,
               args.hotness_aware_layout,

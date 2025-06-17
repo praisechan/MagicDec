@@ -11,10 +11,12 @@ option_values = {
     "--flash_read_latency_us": [50],
     "--num_heads": [8],
     "--cluster_size": [16],
-    "--hot_cluster_ratio": [0.01],
+    "--window_size": [16],
 
     # variables
-    "--planes_per_die": [64, 32, 16, 8],
+    "--hot_cluster_ratio": [0.01,0.02,0.04,0.08],
+    # "--planes_per_die": [64, 32, 16, 8],
+    "--planes_per_die": [32],
     "--profiling_dir": [
         "/home/juchanlee/MagicDec/Engine/RetrievalAttention/profile/data/data_superclustersize_4_0.25KV_16385_clustersize_16",
         "/home/juchanlee/MagicDec/Engine/RetrievalAttention/profile/data/data_superclustersize_4_0.12KV_16385_clustersize_16",
@@ -33,7 +35,8 @@ option_values = {
 }
 
 # Boolean flags
-store_true_flags = ["--hot_cluster_duplicate", "--hotness_aware_layout"]
+# store_true_flags = ["--hot_cluster_duplicate", "--hotness_aware_layout"]
+store_true_flags = ["--hot_cluster_duplicate"]
 
 # Generate all combinations of non-boolean options
 keys, values = zip(*option_values.items())
