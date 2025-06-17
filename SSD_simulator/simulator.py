@@ -88,11 +88,11 @@ def load_profiling_layer(
     )
 
     if hot_cluster_duplicate:
-        if window_size==16:
-            hot_cluster_list = torch.load(
-                os.path.join(profiling_dir, f"hot_cluster_{hot_cluster_ratio}_{layer_idx}.pt"), map_location='cpu'
-            )
-        else:
+        # if window_size==16:
+        #     hot_cluster_list = torch.load(
+        #         os.path.join(profiling_dir, f"hot_cluster_{hot_cluster_ratio}_{layer_idx}.pt"), map_location='cpu'
+        #     )
+        # else:
             hot_cluster_list = torch.load(
                 os.path.join(profiling_dir, f"hot_cluster_window{window_size}_{hot_cluster_ratio}_{layer_idx}.pt"), map_location='cpu'
             )

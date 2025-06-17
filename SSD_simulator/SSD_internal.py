@@ -195,7 +195,7 @@ class Plane:
                               pages.append(count - (end - plane_id))
 
                       if included:
-                          self.hot_cluster_to_pages[(head_idx, cid)] = pages
+                          self.hot_cluster_to_pages.setdefault((head_idx, cid), []).extend(pages)
 
                       offset += count
             # if layout_strategy == "zigzag":
