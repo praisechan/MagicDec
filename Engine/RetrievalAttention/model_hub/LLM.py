@@ -229,9 +229,10 @@ class LLM:
         for step in range(self.max_new_length-1):          
             # flag kv_cache to store profile data
             intermediate_output = False
+            self.kv_cache.decoding_step = step
+
             if step in profile_decoding_steps:
                 intermediate_output = True
-                self.kv_cache.decoding_step = step
                       
             logits = self.decode_forward(inputs_ids=output_ids, intermediate_output=intermediate_output)
             output_ids = logits.argmax(dim=-1)
