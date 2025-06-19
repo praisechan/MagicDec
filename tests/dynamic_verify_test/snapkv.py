@@ -11,6 +11,48 @@ from torch.utils.data.dataloader import DataLoader
 from tqdm import tqdm
 import argparse
 from MagicDec.Engine.SnapKV.backend import LMBackend
+import numpy as np
+import pandas as pd
+import os
+
+# Process histogram data
+def create_histogram_data(data, bins=50, range_min=None, range_max=None):
+    """Create histogram data from a list of values"""
+    if not data:
+        return np.zeros(bins), []
+    
+    # Flatten the data if it contains nested lists
+    flat_data = []
+    for item in data:
+        if isinstance(item, (list, tuple)):
+            # Handle list/tuple of tensors or values
+            for sub_item in item:
+                if torch.is_tensor(sub_item):
+                    flat_data.extend(sub_item.cpu().float().numpy().flatten())
+                else:
+                    flat_data.append(float(sub_item))
+        elif torch.is_tensor(item):
+            flat_data.extend(item.cpu().float().numpy().flatten())
+        else:
+            flat_data.append(float(item))
+    
+    flat_data = np.array(flat_data)
+    
+    # Set range if not provided
+    if range_min is None:
+        range_min = float(np.min(flat_data))
+    if range_max is None:
+        range_max = float(np.max(flat_data))
+    
+    # Create histogram
+    hist, bin_edges = np.histogram(flat_data, bins=bins, range=(range_min, range_max))
+    
+    # Create range labels for column headers
+    range_labels = []
+    for i in range(len(bin_edges)-1):
+        range_labels.append(f"{bin_edges[i]:.2f}-{bin_edges[i+1]:.2f}")
+    
+    return hist, range_labels
 
 parser = argparse.ArgumentParser(description='Process model configuration and partitions.')
 parser.add_argument('--model', type=Path, default=Path("/scratch/models/meta-llama/Meta-Llama-3.1-8B/model.pth"), help='model')
@@ -22,7 +64,7 @@ parser.add_argument('--compile', action='store_true', help='Whether to compile t
 
 parser.add_argument('--gamma', type=int, default=7, help='start')
 
-parser.add_argument('--B', type=int, default=45, help='Batch size.')
+parser.add_argument('--B', type=int, default=1, help='Batch size.')
 parser.add_argument('--prefix_len', type=int, default=32800, help='Prefix length')
 parser.add_argument('--max_len', type=int, default=32896, help='Generate length')
 parser.add_argument('--window_size', type=int, default=32, help='Generate length')
@@ -65,7 +107,10 @@ if args.dataset == "longbenchv1":
 if args.dataset == "longbenchv1-32k":
     MAX_LEN_TARGET = 49125
 DTYPE = torch.bfloat16
-BATCH_SIZE = args.B
+BATCH_SIZE = args.B # only support 1 for now
+if BATCH_SIZE > 1:
+    print("Warning: BATCH_SIZE > 1 is not supported in this script, setting BATCH_SIZE to 1.")
+    BATCH_SIZE = 1
 benchmark = args.benchmark
 checkpoint_path = args.model
 
@@ -126,14 +171,22 @@ if benchmark:
     target_time = 0.0
     verify_loop = 0.0
 
+# Initialize draft history storage
+draft_history = []
+
 # initialize global counters
 total_spec_tokens = 0
 total_acc_tokens  = 0
+
+
+draft_top1_top2_diff_data = []
+reject_token_top1_top2_diff_data = []
 
 # for step, batch in tqdm(enumerate(dataloader)):
 for step, batch in tqdm(enumerate(dataloader), total=num_eval_steps):
     if step >= num_eval_steps:
         break
+
     # if step == 35:
     #     breakpoint()
     input_ids = batch[0].to(DEVICE)
@@ -147,6 +200,19 @@ for step, batch in tqdm(enumerate(dataloader), total=num_eval_steps):
     tokens_buffer[:, :1] = engine.encode(input_ids=input_ids)[:,-1:]
     torch.cuda.synchronize()
     start = time.perf_counter()
+
+    # Initialize trace for this step
+    step_trace = {
+        'step': step,
+        'input_ids': None,
+        'draft_iter': {
+            'draft_tokens': [],
+            'accept_flags_matrix': [],
+            'draft_top1_top2_diff': []
+        }
+    }    
+    step_trace['input_ids'] = input_ids.clone().detach().cpu()  # Store on CPU to save memory
+    
     while terminal == False:
 
         # Draft speculation
@@ -159,8 +225,8 @@ for step, batch in tqdm(enumerate(dataloader), total=num_eval_steps):
         for i in range(args.gamma):
             draft_output, draft_logits[i], draft_top1_top2_diff[i] = engine.speculate(tokens_buffer[:, i].view(-1,1))
             tokens_buffer[:,i+1:i+2] =  draft_output
-            # tokens_buffer[:,i+1:i+2] = engine.speculate(tokens_buffer[:, i].view(-1,1))
-
+            # tokens_buffer[:,i+1:i+2] = engine.speculate(tokens_buffer[:, i].view(-1,1))        
+        
         if benchmark:
             torch.cuda.synchronize()
             t2 = time.time()
@@ -203,9 +269,9 @@ for step, batch in tqdm(enumerate(dataloader), total=num_eval_steps):
         total_spec_tokens += speculated_this_iter
         total_acc_tokens  += accepted_this_iter
         
-        if accepted_this_iter != args.gamma:
-          print(draft_logits[accepted_this_iter][0])
-          print(target_logits[0][accepted_this_iter])
+        # if accepted_this_iter != args.gamma:
+        #   print(draft_logits[accepted_this_iter][0])
+        #   print(target_logits[0][accepted_this_iter])
         ##########################################################################
         
         # Check for termination conditions
@@ -238,6 +304,21 @@ for step, batch in tqdm(enumerate(dataloader), total=num_eval_steps):
         if (bonus_tokens == eot_1).any() or (bonus_tokens == eot_2).any():
             terminal = True
         num_nodes += accept_nums.flatten()
+        
+        # record reject token's probabilty
+        reject_token_idx = accept_nums - 1
+        if reject_token_idx < args.gamma:
+            # if all accepted, no reject token
+            reject_token_top1_top2_diff = draft_top1_top2_diff[reject_token_idx]
+            reject_token_top1_top2_diff_data.append(reject_token_top1_top2_diff)
+        # Get the draft top1-top2 difference
+        draft_top1_top2_diff_data.append(draft_top1_top2_diff[:reject_token_idx+1])
+
+        # Record the draft tokens, accept flags, and top1-top2 diff for this step
+        step_trace['draft_iter']['draft_tokens'].append(draft_tokens.clone().detach().cpu())
+        step_trace['draft_iter']['accept_flags_matrix'].append(accept_flags_matrix.clone().detach().cpu())
+        step_trace['draft_iter']['draft_top1_top2_diff'].append([x.clone().detach().cpu() if torch.is_tensor(x) else x for x in draft_top1_top2_diff])
+   
 
         # Check for termination conditions with accepted token number
         # num_gen_token_max = 16
@@ -269,6 +350,9 @@ for step, batch in tqdm(enumerate(dataloader), total=num_eval_steps):
                 t4 = time.time()
                 verify_loop += t4-t3
 
+    # Add the step trace to draft history
+    draft_history.append(step_trace)
+    
     torch.cuda.synchronize()
     end=time.perf_counter()
     total_time += end-start
@@ -291,7 +375,7 @@ for step, batch in tqdm(enumerate(dataloader), total=num_eval_steps):
     if use_tp:
         dist.barrier()
 
-print(f"Final tokens per second :{num_gen_tokens/total_time}")
+# print(f"Final tokens per second :{num_gen_tokens/total_time}")
 
 # print acceptance rate
 if total_spec_tokens > 0:
@@ -341,27 +425,139 @@ if total_spec_tokens > 0:
     print(f"Found alpha = {accept_rate_per_token:.8f}")
 
 
-import os, csv
-model_name = args.model_name.split("/", 1)[1]
-CSV_PATH = f"/home/juchanlee/MagicDec/output/{model_name}_{args.dataset}_acceptance_rates.csv"
-# if the file doesn't yet exist, write the header
-if not os.path.exists(CSV_PATH):
-    with open(CSV_PATH, "w", newline="") as f:
-        writer = csv.writer(f)
-        writer.writerow(["prefix_len", "draft_budget", "gamma", "task", "accept_rate_total", "accept_rate_per_token"])
+# import os, csv
+# model_name = args.model_name.split("/", 1)[1]
+# CSV_PATH = f"/home/juchanlee/MagicDec/output/{model_name}_{args.dataset}_acceptance_rates.csv"
+# # if the file doesn't yet exist, write the header
+# if not os.path.exists(CSV_PATH):
+#     with open(CSV_PATH, "w", newline="") as f:
+#         writer = csv.writer(f)
+#         writer.writerow(["prefix_len", "draft_budget", "gamma", "task", "accept_rate_total", "accept_rate_per_token"])
         
-# append to CSV
-with open(CSV_PATH, "a", newline="") as f:
-    writer = csv.writer(f)
-    writer.writerow([
-        args.prefix_len,
-        args.draft_budget,
-        args.gamma,
-        args.task,
-        f"{accept_rate_total:.4f}"
-        f"{accept_rate_per_token:.4f}"
-    ])
+# # append to CSV
+# with open(CSV_PATH, "a", newline="") as f:
+#     writer = csv.writer(f)
+#     writer.writerow([
+#         args.prefix_len,
+#         args.draft_budget,
+#         args.gamma,
+#         args.task,
+#         f"{accept_rate_total:.4f}"
+#         f"{accept_rate_per_token:.4f}"
+#     ])
 # if rank == 0:
 #     with open("result.txt", "a") as file:
 #         file.write("total time :{:.5f}s, time per iter :{:.5f}s, decoding step: {}, large model step: {}, avg latency: {} \n".format(total_time, total_time / target_steps, num_gen_tokens, target_steps, total_time / num_gen_tokens * BATCH_SIZE))
 #         file.write("target time :{:.5f}s, draft time :{:.5f}s, verify loop : {}, avg generate len per sentence: {} \n".format(target_time/target_steps, draft_time / target_steps, verify_loop/target_steps, num_gen_tokens/target_steps/BATCH_SIZE))
+
+# Set histogram parameters
+HIST_BINS = 10  # Reduced for readability, adjust as needed
+HIST_RANGE_MIN = 0
+HIST_RANGE_MAX = 1
+
+print(f"Creating histograms for draft_top1_top2_diff_data (length: {len(draft_top1_top2_diff_data)})")
+print(f"Creating histograms for reject_token_top1_top2_diff_data (length: {len(reject_token_top1_top2_diff_data)})")
+
+# Create histogram data
+draft_hist, range_labels = create_histogram_data(
+    draft_top1_top2_diff_data, 
+    bins=HIST_BINS, 
+    range_min=HIST_RANGE_MIN, 
+    range_max=HIST_RANGE_MAX
+)
+
+reject_hist, _ = create_histogram_data(
+    reject_token_top1_top2_diff_data, 
+    bins=HIST_BINS, 
+    range_min=HIST_RANGE_MIN, 
+    range_max=HIST_RANGE_MAX
+)
+
+# Prepare experiment identifier
+experiment_info = f"snapkv_{args.model_name.split('/', 1)[1]}_{args.dataset}_prefix{args.prefix_len}_gamma{args.gamma}_budget{args.draft_budget}"
+if args.task:
+    experiment_info += f"_task{args.task}"
+
+# Create data for CSV - Draft histogram
+draft_row = {'experiment': f"{experiment_info}_draft"}
+for i, range_label in enumerate(range_labels):
+    draft_row[range_label] = draft_hist[i]
+
+# Create data for CSV - Reject histogram  
+reject_row = {'experiment': f"{experiment_info}_reject"}
+for i, range_label in enumerate(range_labels):
+    reject_row[range_label] = reject_hist[i]
+
+# Create DataFrame
+df_new = pd.DataFrame([draft_row, reject_row])
+
+# Save histogram data to CSV (append mode)
+model_name = args.model_name.split("/", 1)[1]
+HISTOGRAM_CSV_PATH = f"/home/juchanlee/MagicDec/output/snapkv_{model_name}_{args.dataset}_histogram_data.csv"
+
+# Create output directory if it doesn't exist
+os.makedirs(os.path.dirname(HISTOGRAM_CSV_PATH), exist_ok=True)
+
+# Check if file exists to determine if we need headers
+file_exists = os.path.exists(HISTOGRAM_CSV_PATH)
+
+# If file exists, read it and append new data
+if file_exists:
+    df_existing = pd.read_csv(HISTOGRAM_CSV_PATH)
+    # Ensure all columns are present in both dataframes
+    all_columns = list(set(df_existing.columns) | set(df_new.columns))
+    df_existing = df_existing.reindex(columns=all_columns, fill_value=0)
+    df_new = df_new.reindex(columns=all_columns, fill_value=0)
+    df_combined = pd.concat([df_existing, df_new], ignore_index=True)
+else:
+    df_combined = df_new
+
+# Save the combined data
+df_combined.to_csv(HISTOGRAM_CSV_PATH, index=False)
+print(f"Histogram data saved to: {HISTOGRAM_CSV_PATH}")
+
+# Print summary
+print(f"\nAdded 2 rows (draft and reject) to CSV")
+print(f"Draft total count: {draft_hist.sum()}")
+print(f"Reject total count: {reject_hist.sum()}")
+print(f"Column headers: {range_labels}")
+
+
+# Save draft history to .pt file
+model_name = args.model_name.split("/", 1)[1]
+experiment_info = f"{model_name}_{args.dataset}_prefix{args.prefix_len}_gamma{args.gamma}_budget{args.draft_budget}"
+if args.task:
+    experiment_info += f"_task{args.task}"
+
+# Create output directory if it doesn't exist
+output_dir = f"/home/juchanlee/MagicDec/output/draft_histories"
+os.makedirs(output_dir, exist_ok=True)
+
+draft_history_path = f"{output_dir}/{experiment_info}_draft_history.pt"
+
+# Save the complete draft history
+torch.save(draft_history, draft_history_path)
+print(f"Draft history saved to: {draft_history_path}")
+
+# Optional: Save metadata separately
+metadata = {
+    'experiment_config': {
+        'model_name': args.model_name,
+        'dataset': args.dataset,
+        'prefix_len': args.prefix_len,
+        'gamma': args.gamma,
+        'draft_budget': args.draft_budget,
+        'task': args.task,
+        'batch_size': args.B,
+        'max_len': args.max_len,
+        'window_size': args.window_size,
+        'seed': args.seed
+    },
+    'total_steps': len(draft_history),
+    'total_spec_tokens': total_spec_tokens,
+    'total_acc_tokens': total_acc_tokens
+}
+
+metadata_path = f"{output_dir}/{experiment_info}_metadata.pt"
+torch.save(metadata, metadata_path)
+print(f"Metadata saved to: {metadata_path}")
