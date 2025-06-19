@@ -512,6 +512,14 @@ if file_exists:
 else:
     df_combined = df_new
 
+# Define desired order once
+desired_columns = ['experiment'] + sorted(range_labels, key=lambda x: float(x.split('-')[0]))
+
+# Apply this order to ALL DataFrames
+df_new = df_new.reindex(columns=desired_columns, fill_value=0)
+df_existing = df_existing.reindex(columns=desired_columns, fill_value=0) 
+df_combined = df_combined.reindex(columns=desired_columns, fill_value=0)
+
 # Save the combined data
 df_combined.to_csv(HISTOGRAM_CSV_PATH, index=False)
 print(f"Histogram data saved to: {HISTOGRAM_CSV_PATH}")
