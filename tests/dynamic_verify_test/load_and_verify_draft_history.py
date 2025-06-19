@@ -177,15 +177,23 @@ def preprocess_input_for_retroinfer(input_ids, prompt_format, attn_type, model_p
     return input_ids
 
 # Process each step in draft history
+BUDGET_RATIOS = [0.2, 0.1]  # High and low budget ratios
+
+# Initialize storage for analysis results
+similarity_results = []
+bonus_token_comparison_results = []
+first_reject_analysis = []
+
 for step_idx, step_data in enumerate(draft_history):
     concatenated_accepted_tokens = None
     if step_idx >= num_eval_steps:
         break
     print(f"Processing step {step_idx + 1}/{len(draft_history)}")
     
-    # Get original input_ids
     original_input_ids = step_data['input_ids'].to(DEVICE)
-    # Process the input through RetroInfer preprocessing
+    first_token = step_data['first_token'].to(DEVICE)
+    original_input_ids = torch.cat((original_input_ids, first_token), dim=1)
+
     try:
         processed_input_ids = preprocess_input_for_retroinfer(
             original_input_ids,
@@ -209,114 +217,194 @@ for step_idx, step_data in enumerate(draft_history):
         original_accepted_tokens = step_data['draft_iter']['accepted_tokens'][iter_idx].to(DEVICE)
         original_top1_top2_diff = step_data['draft_iter']['draft_top1_top2_diff'][iter_idx]
 
-        # Run RetroInfer speculation for each draft token position
-        retroinfer_top1_top2_diffs = []
-        
-        # Start with the first token from draft_tokens
-        current_token = draft_tokens[:, 0].view(-1, 1)  # First draft token
-        
-        try:
-            current_token = torch.concat((concatenated_accepted_tokens, draft_tokens), dim=1)
-            
-            # Run RetroInfer speculation
-            draft_outputs, draft_logits, retroinfer_top1_top2_diff = engine.speculate(
-                current_token, 
-                args.gamma, 
-                profile_clustering=args.profile_clustering, 
+        accept_matrix_results = {}
+        predicted_outputs_results = {}
+        target_outputs_results = {}
+        rejected_info_results = {}
+
+        for budget_idx, budget_ratio in enumerate(BUDGET_RATIOS):
+            # Update engine config for each budget_ratio
+            engine.attn_config = generate_config(
+                model_path, 
+                processed_input_ids.shape[1], 
+                args.attn_type,
+                budget_ratio=budget_ratio,
+                estimate_ratio=args.estimate_ratio,
             )
-            
-            # Store RetroInfer top1-top2 differences
-            if isinstance(retroinfer_top1_top2_diff, list):
-                retroinfer_top1_top2_diffs.extend(retroinfer_top1_top2_diff)
-            else:
-                retroinfer_top1_top2_diffs.append(retroinfer_top1_top2_diff)
-            
-            # Compare predictions (optional analysis)
-            if draft_outputs.shape[1] >= draft_tokens.shape[1]:
-                predicted_tokens = draft_outputs[:, :draft_tokens.shape[1]]
-                matches = (predicted_tokens == draft_tokens).sum().item()
-                total_tokens = draft_tokens.numel()
-                matching_predictions += matches
-                total_comparisons += total_tokens
+            try:
+                # Get both predicted outputs and target outputs for bonus token comparison
+                predicted_outputs, predicted_logits, retroinfer_top1_top2_diff = engine.speculate(
+                    concatenated_accepted_tokens, 
+                    args.gamma, 
+                    profile_clustering=args.profile_clustering, 
+                )
                 
-                print(f"    Token prediction match rate: {matches}/{total_tokens} = {matches/total_tokens*100:.1f}%")
+                # For bonus token, we need target verification (similar to snapkv.py)
+                tokens_buffer = torch.zeros((BATCH_SIZE, args.gamma+1), device=DEVICE).long()
+                tokens_buffer[:, 0] = concatenated_accepted_tokens[:, -1]  # Last accepted token
+                tokens_buffer[:, 1:] = predicted_outputs[:, :args.gamma]
+                
+                target_outputs, target_logits = engine.verify(tokens_buffer)
+                
+                predicted_tokens = predicted_outputs[:, :draft_tokens.shape[1]]
+                predicted_outputs_results[budget_ratio] = predicted_tokens
+                target_outputs_results[budget_ratio] = target_outputs
+                
+                # Build accept_matrix: 1 if predicted == draft, else 0
+                accept_matrix = (predicted_tokens == draft_tokens).int().cpu().tolist()[0]
+                accept_matrix_results[budget_ratio] = accept_matrix
+
+                # Find rejected tokens and record info
+                rejected_indices = [i for i, accepted in enumerate(accept_matrix) if not accepted]
+                rejected_info = []
+                for idx in rejected_indices:
+                    info = {
+                        'index': idx,
+                        'original_top1_top2_diff': float(original_top1_top2_diff[idx]),
+                        'retroinfer_top1_top2_diff': float(retroinfer_top1_top2_diff[idx]) if isinstance(retroinfer_top1_top2_diff, (list, np.ndarray)) else float(retroinfer_top1_top2_diff)
+                    }
+                    rejected_info.append(info)
+                rejected_info_results[budget_ratio] = rejected_info
+
+            except Exception as e:
+                print(f"    Warning: Error during speculation for budget_ratio={budget_ratio}: {e}")
+                accept_matrix_results[budget_ratio] = [0] * args.gamma
+                predicted_outputs_results[budget_ratio] = torch.zeros((1, args.gamma), device=DEVICE, dtype=torch.long)
+                target_outputs_results[budget_ratio] = torch.zeros((1, args.gamma), device=DEVICE, dtype=torch.long)
+                rejected_info_results[budget_ratio] = []
+
+        # 1. Calculate similarity between accept_matrix_results
+        if len(BUDGET_RATIOS) == 2:
+            budget_1, budget_2 = BUDGET_RATIOS
+            accept_matrix_1 = accept_matrix_results[budget_1]
+            accept_matrix_2 = accept_matrix_results[budget_2]
             
-        except Exception as e:
-            print(f"    Warning: Error during speculation for step {step_idx}, iter {iter_idx}: {e}")
-            # Use placeholder data if speculation fails
-            retroinfer_top1_top2_diffs = [0.0] * args.gamma
-        
-        # Store the RetroInfer results
-        retroinfer_draft_top1_top2_diff_data.append(retroinfer_top1_top2_diffs)
-        
-        # Prepare the next iteration
-        concatenated_accepted_tokens = torch.concat((processed_input_ids, original_accepted_tokens), dim=1)
+            equal_decisions = sum(1 for a1, a2 in zip(accept_matrix_1, accept_matrix_2) if a1 == a2)
+            total_decisions = len(accept_matrix_1)
+            similarity = equal_decisions / total_decisions if total_decisions > 0 else 0
+            
+            similarity_results.append({
+                'step': step_idx,
+                'iter': iter_idx,
+                'budget_1': budget_1,
+                'budget_2': budget_2,
+                'equal_decisions': equal_decisions,
+                'total_decisions': total_decisions,
+                'similarity': similarity
+            })
 
+        # 2. For reject cases, find first reject and compare bonus tokens
+        for budget_ratio in BUDGET_RATIOS:
+            accept_matrix = accept_matrix_results[budget_ratio]
+            predicted_tokens = predicted_outputs_results[budget_ratio]
+            target_outputs = target_outputs_results[budget_ratio]
+            
+            # Find first reject index
+            first_reject_idx = None
+            for i, accepted in enumerate(accept_matrix):
+                if not accepted:
+                    first_reject_idx = i
+                    break
+            
+            if first_reject_idx is not None:
+                # Get bonus token (from target verification)
+                bonus_token = target_outputs[0, first_reject_idx].item()
+                
+                first_reject_analysis.append({
+                    'step': step_idx,
+                    'iter': iter_idx,
+                    'budget_ratio': budget_ratio,
+                    'first_reject_idx': first_reject_idx,
+                    'bonus_token': bonus_token,
+                    'original_top1_top2_diff': float(original_top1_top2_diff[first_reject_idx])
+                })
 
-print(f"\nCompleted processing all draft history steps.")
-if total_comparisons > 0:
-    overall_match_rate = matching_predictions / total_comparisons
-    print(f"Overall token prediction match rate: {matching_predictions}/{total_comparisons} = {overall_match_rate*100:.2f}%")
+        # 3. Compare bonus tokens between budget ratios for reject cases
+        if len(BUDGET_RATIOS) == 2:
+            budget_1, budget_2 = BUDGET_RATIOS
+            
+            # Get first reject analysis for both budgets
+            budget_1_reject = None
+            budget_2_reject = None
+            
+            for analysis in first_reject_analysis:
+                if (analysis['step'] == step_idx and analysis['iter'] == iter_idx):
+                    if analysis['budget_ratio'] == budget_1:
+                        budget_1_reject = analysis
+                    elif analysis['budget_ratio'] == budget_2:
+                        budget_2_reject = analysis
+            
+            # If both have rejects, compare bonus tokens
+            if budget_1_reject and budget_2_reject:
+                same_bonus_token = budget_1_reject['bonus_token'] == budget_2_reject['bonus_token']
+                
+                bonus_token_comparison_results.append({
+                    'step': step_idx,
+                    'iter': iter_idx,
+                    'budget_1': budget_1,
+                    'budget_2': budget_2,
+                    'budget_1_reject_idx': budget_1_reject['first_reject_idx'],
+                    'budget_2_reject_idx': budget_2_reject['first_reject_idx'],
+                    'budget_1_bonus_token': budget_1_reject['bonus_token'],
+                    'budget_2_bonus_token': budget_2_reject['bonus_token'],
+                    'same_bonus_token': same_bonus_token,
+                    'budget_1_original_top1_top2_diff': budget_1_reject['original_top1_top2_diff'],
+                    'budget_2_original_top1_top2_diff': budget_2_reject['original_top1_top2_diff']
+                })
 
-# Create histogram data for RetroInfer results
-HIST_BINS = 10
-HIST_RANGE_MIN = 0
-HIST_RANGE_MAX = 1
+        concatenated_accepted_tokens = torch.cat((processed_input_ids, original_accepted_tokens), dim=1)
 
-print(f"Creating histogram for RetroInfer draft_top1_top2_diff_data (length: {len(retroinfer_draft_top1_top2_diff_data)})")
+# Print analysis results
+print(f"\n=== ANALYSIS RESULTS ===")
 
-retroinfer_draft_hist, range_labels = create_histogram_data(
-    retroinfer_draft_top1_top2_diff_data, 
-    bins=HIST_BINS, 
-    range_min=HIST_RANGE_MIN, 
-    range_max=HIST_RANGE_MAX
-)
+# Similarity analysis
+if similarity_results:
+    total_similarity = sum(r['similarity'] for r in similarity_results)
+    avg_similarity = total_similarity / len(similarity_results)
+    print(f"Average accept_matrix similarity between budget {BUDGET_RATIOS[0]} and {BUDGET_RATIOS[1]}: {avg_similarity:.4f}")
+    
+    print(f"Similarity details:")
+    for result in similarity_results[:5]:  # Show first 5 as example
+        print(f"  Step {result['step']}, Iter {result['iter']}: {result['equal_decisions']}/{result['total_decisions']} = {result['similarity']:.4f}")
 
-# Prepare experiment identifier
-base_name = os.path.basename(args.draft_history_path).replace('_draft_history.pt', '')
-experiment_info = f"retroinfer_{base_name}"
+# First reject analysis
+reject_count_by_budget = {}
+for budget_ratio in BUDGET_RATIOS:
+    count = sum(1 for r in first_reject_analysis if r['budget_ratio'] == budget_ratio)
+    reject_count_by_budget[budget_ratio] = count
+    print(f"Budget {budget_ratio}: {count} first rejects")
 
-# Create data for CSV
-retroinfer_row = {'experiment': f"{experiment_info}_draft"}
-for i, range_label in enumerate(range_labels):
-    retroinfer_row[range_label] = retroinfer_draft_hist[i]
+# Bonus token comparison
+if bonus_token_comparison_results:
+    same_bonus_count = sum(1 for r in bonus_token_comparison_results if r['same_bonus_token'])
+    total_comparisons = len(bonus_token_comparison_results)
+    print(f"Bonus token matches: {same_bonus_count}/{total_comparisons} = {same_bonus_count/total_comparisons:.4f}")
+    
+    print(f"Bonus token comparison details:")
+    for result in bonus_token_comparison_results[:5]:  # Show first 5 as example
+        print(f"  Step {result['step']}, Iter {result['iter']}: Budget {result['budget_1']} token {result['budget_1_bonus_token']} vs Budget {result['budget_2']} token {result['budget_2_bonus_token']} - Same: {result['same_bonus_token']}")
 
-# Create DataFrame
-df_new = pd.DataFrame([retroinfer_row])
+# Save detailed results
+output_dir = "/home/juchanlee/MagicDec/output/budget_comparison"
+os.makedirs(output_dir, exist_ok=True)
 
-# Define the desired column order: experiment first, then sorted range labels
-desired_columns = ['experiment'] + sorted(range_labels, key=lambda x: float(x.split('-')[0]))
+# Save similarity results
+similarity_df = pd.DataFrame(similarity_results)
+similarity_path = f"{output_dir}/similarity_results.csv"
+similarity_df.to_csv(similarity_path, index=False)
+print(f"Similarity results saved to: {similarity_path}")
 
-# Apply consistent ordering
-df_new = df_new.reindex(columns=desired_columns, fill_value=0)
+# Save first reject analysis
+first_reject_df = pd.DataFrame(first_reject_analysis)
+first_reject_path = f"{output_dir}/first_reject_analysis.csv"
+first_reject_df.to_csv(first_reject_path, index=False)
+print(f"First reject analysis saved to: {first_reject_path}")
 
-# Save histogram data to CSV
-model_name = args.model_name.split("/", 1)[1]
-HISTOGRAM_CSV_PATH = f"/home/juchanlee/MagicDec/output/retroinfer_{model_name}_{args.dataset}_histogram_data.csv"
+# Save bonus token comparison
+if bonus_token_comparison_results:
+    bonus_comparison_df = pd.DataFrame(bonus_token_comparison_results)
+    bonus_comparison_path = f"{output_dir}/bonus_token_comparison.csv"
+    bonus_comparison_df.to_csv(bonus_comparison_path, index=False)
+    print(f"Bonus token comparison saved to: {bonus_comparison_path}")
 
-# Create output directory if it doesn't exist
-os.makedirs(os.path.dirname(HISTOGRAM_CSV_PATH), exist_ok=True)
-
-# Check if file exists to determine if we need headers
-file_exists = os.path.exists(HISTOGRAM_CSV_PATH)
-
-# If file exists, read it and append new data
-if file_exists:
-    df_existing = pd.read_csv(HISTOGRAM_CSV_PATH)
-    # Ensure consistent column order for both dataframes
-    df_existing = df_existing.reindex(columns=desired_columns, fill_value=0)
-    df_combined = pd.concat([df_existing, df_new], ignore_index=True)
-else:
-    df_combined = df_new
-
-# Ensure final DataFrame has the correct column order
-df_combined = df_combined.reindex(columns=desired_columns, fill_value=0)
-
-# Save the combined data
-df_combined.to_csv(HISTOGRAM_CSV_PATH, index=False)
-print(f"RetroInfer histogram data saved to: {HISTOGRAM_CSV_PATH}")
-
-# Print summary
-print(f"\nAdded 1 row (RetroInfer draft) to CSV")
-print(f"RetroInfer draft total count: {retroinfer_draft_hist.sum()}")
-print(f"Column headers: {range_labels}")
+# ...existing code...
