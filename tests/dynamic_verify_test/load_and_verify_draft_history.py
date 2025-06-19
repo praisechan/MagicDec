@@ -96,7 +96,7 @@ dataset2prompt = json.load(open("/home/juchanlee/MagicDec/Engine/RetrievalAttent
 MODEL = args.model_name.split("/")[-1]
 TASK = args.task
 
-model_path = model2path[args.model_name]
+model_path = model2path[MODEL]
 max_length = model2maxlen[MODEL]
 prompt_format = dataset2prompt[TASK]
 
@@ -122,8 +122,6 @@ if tokenizer.unk_token_id is not None:
 else:
     eot_2 = tokenizer.encode("<|eot_id|>")[-1]
 print(f"eot_1: {eot_1}, eot_2: {eot_2}")
-
-print(f"Processing {len(draft_history)} steps from draft history...")
 
 # Initialize storage for RetroInfer results
 retroinfer_draft_top1_top2_diff_data = []
@@ -151,8 +149,12 @@ if args.dataset == "pg19":
 elif args.dataset == "longbenchv1":
     dataset = load_dataset('THUDM/LongBench', TASK, split='test')
 
+if args.dataset == "pg19":
+  num_eval_steps = min(10, len(dataset))
+else:
+  num_eval_steps = len(dataset)
 
-def preprocess_input_for_retroinfer(self, input_ids, prompt_format, attn_type, model_path, budget_ratio, estimate_ratio, dataset):
+def preprocess_input_for_retroinfer(input_ids, prompt_format, attn_type, model_path, budget_ratio, estimate_ratio, dataset):
     # inputs = None
     # if dataset == "longbenchv1":
     #   # prompt = prompt_format.format(**data)
@@ -163,8 +165,9 @@ def preprocess_input_for_retroinfer(self, input_ids, prompt_format, attn_type, m
     # if dataset == "pg19":
     #   input_ids = data[0].unsqueeze(0) # already preprocessed in convert_pg19_dataset()
     #   self.attention_masks = torch.ones_like(input_ids)
-    self.attention_masks = torch.ones_like(input_ids)
-    self.attn_config = generate_config(
+    breakpoint()
+    engine.attention_masks = torch.ones_like(input_ids)
+    engine.attn_config = generate_config(
         model_path, 
         input_ids.shape[1], 
         attn_type,
@@ -173,21 +176,19 @@ def preprocess_input_for_retroinfer(self, input_ids, prompt_format, attn_type, m
     )
     return input_ids
 
-input_ids=[None]*10
-for step, batch in tqdm(enumerate(dataset), total=10):
-    input_ids[step] = engine.preprocess_input(batch, prompt_format, args.attn_type, model_path, args.budget_ratio, args.estimate_ratio, args.dataset, args.prefix_len)
-
 # Process each step in draft history
 for step_idx, step_data in enumerate(draft_history):
+    concatenated_accepted_tokens = None
+    if step_idx >= num_eval_steps:
+        break
     print(f"Processing step {step_idx + 1}/{len(draft_history)}")
     
     # Get original input_ids
     original_input_ids = step_data['input_ids'].to(DEVICE)
-    
     # Process the input through RetroInfer preprocessing
     try:
-        processed_input_ids = engine.preprocess_input_for_retroinfer(
-            {'input_ids': original_input_ids.squeeze(0)},  # Remove batch dimension for preprocessing
+        processed_input_ids = preprocess_input_for_retroinfer(
+            original_input_ids,
             prompt_format, 
             args.attn_type, 
             model_path, 
@@ -205,8 +206,9 @@ for step_idx, step_data in enumerate(draft_history):
         
         draft_tokens = draft_iter.to(DEVICE)  # Shape: (batch_size, gamma)
         original_accept_flags = step_data['draft_iter']['accept_flags_matrix'][iter_idx].to(DEVICE)
+        original_accepted_tokens = step_data['draft_iter']['accepted_tokens'][iter_idx].to(DEVICE)
         original_top1_top2_diff = step_data['draft_iter']['draft_top1_top2_diff'][iter_idx]
-        
+
         # Run RetroInfer speculation for each draft token position
         retroinfer_top1_top2_diffs = []
         
@@ -214,12 +216,13 @@ for step_idx, step_data in enumerate(draft_history):
         current_token = draft_tokens[:, 0].view(-1, 1)  # First draft token
         
         try:
+            current_token = torch.concat((concatenated_accepted_tokens, draft_tokens), dim=1)
+            
             # Run RetroInfer speculation
             draft_outputs, draft_logits, retroinfer_top1_top2_diff = engine.speculate(
                 current_token, 
                 args.gamma, 
                 profile_clustering=args.profile_clustering, 
-                profile_hot_cluster_selection_ratio=True
             )
             
             # Store RetroInfer top1-top2 differences
@@ -245,6 +248,10 @@ for step_idx, step_data in enumerate(draft_history):
         
         # Store the RetroInfer results
         retroinfer_draft_top1_top2_diff_data.append(retroinfer_top1_top2_diffs)
+        
+        # Prepare the next iteration
+        concatenated_accepted_tokens = torch.concat((processed_input_ids, original_accepted_tokens), dim=1)
+
 
 print(f"\nCompleted processing all draft history steps.")
 if total_comparisons > 0:

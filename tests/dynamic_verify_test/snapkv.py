@@ -207,6 +207,7 @@ for step, batch in tqdm(enumerate(dataloader), total=num_eval_steps):
         'input_ids': None,
         'draft_iter': {
             'draft_tokens': [],
+            'accepted_tokens': [],
             'accept_flags_matrix': [],
             'draft_top1_top2_diff': []
         }
@@ -314,8 +315,12 @@ for step, batch in tqdm(enumerate(dataloader), total=num_eval_steps):
         # Get the draft top1-top2 difference
         draft_top1_top2_diff_data.append(draft_top1_top2_diff[:reject_token_idx+1])
 
+        # Prepare the next iteration
+        accepted_tokens = tokens_buffer[mask_buffer].view(1,-1)
+        
         # Record the draft tokens, accept flags, and top1-top2 diff for this step
         step_trace['draft_iter']['draft_tokens'].append(draft_tokens.clone().detach().cpu())
+        step_trace['draft_iter']['accepted_tokens'].append(accepted_tokens.clone().detach().cpu())
         step_trace['draft_iter']['accept_flags_matrix'].append(accept_flags_matrix.clone().detach().cpu())
         step_trace['draft_iter']['draft_top1_top2_diff'].append([x.clone().detach().cpu() if torch.is_tensor(x) else x for x in draft_top1_top2_diff])
    
