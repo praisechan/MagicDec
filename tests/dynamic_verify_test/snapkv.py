@@ -203,15 +203,15 @@ for step, batch in tqdm(enumerate(dataloader), total=num_eval_steps):
 
     # Initialize trace for this step
     step_trace = {
-        'step': step,
-        'input_ids': None,
-        'first_token': tokens_buffer[:, :1],
-        'draft_iter': {
-            'draft_tokens': [],
-            'accepted_tokens': [],
-            'accept_flags_matrix': [],
-            'draft_top1_top2_diff': []
-        }
+      'step': step,
+      'input_ids': None,
+      'first_token': tokens_buffer[:, :1].clone().detach().cpu(),
+      'draft_iter': {
+        'draft_tokens': [],
+        'accepted_tokens': [],
+        'accept_flags_matrix': [],
+        'draft_top1_top2_diff': []
+      }
     }    
     step_trace['input_ids'] = input_ids.clone().detach().cpu()  # Store on CPU to save memory
     
