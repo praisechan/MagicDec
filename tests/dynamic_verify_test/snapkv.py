@@ -205,6 +205,7 @@ for step, batch in tqdm(enumerate(dataloader), total=num_eval_steps):
     step_trace = {
         'step': step,
         'input_ids': None,
+        'first_token': tokens_buffer[:, :1],
         'draft_iter': {
             'draft_tokens': [],
             'accepted_tokens': [],
@@ -316,7 +317,7 @@ for step, batch in tqdm(enumerate(dataloader), total=num_eval_steps):
         draft_top1_top2_diff_data.append(draft_top1_top2_diff[:reject_token_idx+1])
 
         # Prepare the next iteration
-        accepted_tokens = tokens_buffer[mask_buffer].view(1,-1)
+        accepted_tokens = torch.concat((tokens_buffer[mask_buffer].view(1,-1)[:,1:],bonus_tokens), dim=1)
         
         # Record the draft tokens, accept flags, and top1-top2 diff for this step
         step_trace['draft_iter']['draft_tokens'].append(draft_tokens.clone().detach().cpu())
@@ -380,197 +381,126 @@ for step, batch in tqdm(enumerate(dataloader), total=num_eval_steps):
     if use_tp:
         dist.barrier()
 
-# print(f"Final tokens per second :{num_gen_tokens/total_time}")
+save_histogram_history=False
+if save_histogram_history:
+    # Set histogram parameters
+    HIST_BINS = 10  # Reduced for readability, adjust as needed
+    HIST_RANGE_MIN = 0
+    HIST_RANGE_MAX = 1
 
-# print acceptance rate
-if total_spec_tokens > 0:
-    accept_rate_total = total_acc_tokens / total_spec_tokens
-    print(f"Draft acceptance rate: {accept_rate_total*100:.2f}% "
-          f"({total_acc_tokens} accepted of {total_spec_tokens} speculated)")
-    import math
+    print(f"Creating histograms for draft_top1_top2_diff_data (length: {len(draft_top1_top2_diff_data)})")
+    print(f"Creating histograms for reject_token_top1_top2_diff_data (length: {len(reject_token_top1_top2_diff_data)})")
 
-    def find_alpha(gamma, accept_rate_total, tol=1e-8, max_iter=100):
-        """
-        Solve for alpha in (0,1) such that
-            (1 - alpha^(gamma+1)) / (1 - alpha) == gamma * accept_rate_total
-        using the bisection method.
-        """
-        def f(alpha):
-            # avoid division by zero at alpha=1
-            return (1 - alpha**(gamma+1)) / (1 - alpha) -1 - gamma * accept_rate_total
+    # Create histogram data
+    draft_hist, range_labels = create_histogram_data(
+        draft_top1_top2_diff_data, 
+        bins=HIST_BINS, 
+        range_min=HIST_RANGE_MIN, 
+        range_max=HIST_RANGE_MAX
+    )
 
-        # initial bracket [low, high]
-        low, high = 0.0, 1.0 - 1e-15
-        f_low, f_high = f(low), f(high)
+    reject_hist, _ = create_histogram_data(
+        reject_token_top1_top2_diff_data, 
+        bins=HIST_BINS, 
+        range_min=HIST_RANGE_MIN, 
+        range_max=HIST_RANGE_MAX
+    )
 
-        if f_low * f_high > 0:
-            raise ValueError(
-                "f(0) and f(1) have the same sign; no guaranteed root in (0,1). "
-                f"f(0)={f_low}, f(1-)={f_high}"
-            )
+    # Prepare experiment identifier
+    experiment_info = f"snapkv_{args.model_name.split('/', 1)[1]}_{args.dataset}_prefix{args.prefix_len}_gamma{args.gamma}_budget{args.draft_budget}"
+    if args.task:
+        experiment_info += f"_task{args.task}"
 
-        for i in range(max_iter):
-            mid = (low + high) / 2
-            f_mid = f(mid)
+    # Create data for CSV - Draft histogram
+    draft_row = {'experiment': f"{experiment_info}_draft"}
+    for i, range_label in enumerate(range_labels):
+        draft_row[range_label] = draft_hist[i]
 
-            # Check for convergence
-            if abs(f_mid) < tol or (high - low)/2 < tol:
-                return mid
+    # Create data for CSV - Reject histogram  
+    reject_row = {'experiment': f"{experiment_info}_reject"}
+    for i, range_label in enumerate(range_labels):
+        reject_row[range_label] = reject_hist[i]
 
-            # Narrow the bracket
-            if f_low * f_mid <= 0:
-                high, f_high = mid, f_mid
-            else:
-                low, f_low = mid, f_mid
+    # Create DataFrame
+    df_new = pd.DataFrame([draft_row, reject_row])
 
-        # return best estimate after max_iter
-        return (low + high) / 2
+    # Save histogram data to CSV (append mode)
+    model_name = args.model_name.split("/", 1)[1]
+    HISTOGRAM_CSV_PATH = f"/home/juchanlee/MagicDec/output/snapkv_{model_name}_{args.dataset}_histogram_data.csv"
 
-    accept_rate_per_token = find_alpha(args.gamma, accept_rate_total)
-    print(f"Found alpha = {accept_rate_per_token:.8f}")
+    # Create output directory if it doesn't exist
+    os.makedirs(os.path.dirname(HISTOGRAM_CSV_PATH), exist_ok=True)
 
+    # Check if file exists to determine if we need headers
+    file_exists = os.path.exists(HISTOGRAM_CSV_PATH)
 
-# import os, csv
-# model_name = args.model_name.split("/", 1)[1]
-# CSV_PATH = f"/home/juchanlee/MagicDec/output/{model_name}_{args.dataset}_acceptance_rates.csv"
-# # if the file doesn't yet exist, write the header
-# if not os.path.exists(CSV_PATH):
-#     with open(CSV_PATH, "w", newline="") as f:
-#         writer = csv.writer(f)
-#         writer.writerow(["prefix_len", "draft_budget", "gamma", "task", "accept_rate_total", "accept_rate_per_token"])
-        
-# # append to CSV
-# with open(CSV_PATH, "a", newline="") as f:
-#     writer = csv.writer(f)
-#     writer.writerow([
-#         args.prefix_len,
-#         args.draft_budget,
-#         args.gamma,
-#         args.task,
-#         f"{accept_rate_total:.4f}"
-#         f"{accept_rate_per_token:.4f}"
-#     ])
-# if rank == 0:
-#     with open("result.txt", "a") as file:
-#         file.write("total time :{:.5f}s, time per iter :{:.5f}s, decoding step: {}, large model step: {}, avg latency: {} \n".format(total_time, total_time / target_steps, num_gen_tokens, target_steps, total_time / num_gen_tokens * BATCH_SIZE))
-#         file.write("target time :{:.5f}s, draft time :{:.5f}s, verify loop : {}, avg generate len per sentence: {} \n".format(target_time/target_steps, draft_time / target_steps, verify_loop/target_steps, num_gen_tokens/target_steps/BATCH_SIZE))
+    # If file exists, read it and append new data
+    if file_exists:
+        df_existing = pd.read_csv(HISTOGRAM_CSV_PATH)
+        # Ensure all columns are present in both dataframes
+        all_columns = list(set(df_existing.columns) | set(df_new.columns))
+        df_existing = df_existing.reindex(columns=all_columns, fill_value=0)
+        df_new = df_new.reindex(columns=all_columns, fill_value=0)
+        df_combined = pd.concat([df_existing, df_new], ignore_index=True)
+    else:
+        df_combined = df_new
 
-# Set histogram parameters
-HIST_BINS = 10  # Reduced for readability, adjust as needed
-HIST_RANGE_MIN = 0
-HIST_RANGE_MAX = 1
+    # Define desired order once
+    desired_columns = ['experiment'] + sorted(range_labels, key=lambda x: float(x.split('-')[0]))
 
-print(f"Creating histograms for draft_top1_top2_diff_data (length: {len(draft_top1_top2_diff_data)})")
-print(f"Creating histograms for reject_token_top1_top2_diff_data (length: {len(reject_token_top1_top2_diff_data)})")
+    # Apply this order to ALL DataFrames
+    df_new = df_new.reindex(columns=desired_columns, fill_value=0)
+    df_existing = df_existing.reindex(columns=desired_columns, fill_value=0) 
+    df_combined = df_combined.reindex(columns=desired_columns, fill_value=0)
 
-# Create histogram data
-draft_hist, range_labels = create_histogram_data(
-    draft_top1_top2_diff_data, 
-    bins=HIST_BINS, 
-    range_min=HIST_RANGE_MIN, 
-    range_max=HIST_RANGE_MAX
-)
+    # Save the combined data
+    df_combined.to_csv(HISTOGRAM_CSV_PATH, index=False)
+    print(f"Histogram data saved to: {HISTOGRAM_CSV_PATH}")
 
-reject_hist, _ = create_histogram_data(
-    reject_token_top1_top2_diff_data, 
-    bins=HIST_BINS, 
-    range_min=HIST_RANGE_MIN, 
-    range_max=HIST_RANGE_MAX
-)
-
-# Prepare experiment identifier
-experiment_info = f"snapkv_{args.model_name.split('/', 1)[1]}_{args.dataset}_prefix{args.prefix_len}_gamma{args.gamma}_budget{args.draft_budget}"
-if args.task:
-    experiment_info += f"_task{args.task}"
-
-# Create data for CSV - Draft histogram
-draft_row = {'experiment': f"{experiment_info}_draft"}
-for i, range_label in enumerate(range_labels):
-    draft_row[range_label] = draft_hist[i]
-
-# Create data for CSV - Reject histogram  
-reject_row = {'experiment': f"{experiment_info}_reject"}
-for i, range_label in enumerate(range_labels):
-    reject_row[range_label] = reject_hist[i]
-
-# Create DataFrame
-df_new = pd.DataFrame([draft_row, reject_row])
-
-# Save histogram data to CSV (append mode)
-model_name = args.model_name.split("/", 1)[1]
-HISTOGRAM_CSV_PATH = f"/home/juchanlee/MagicDec/output/snapkv_{model_name}_{args.dataset}_histogram_data.csv"
-
-# Create output directory if it doesn't exist
-os.makedirs(os.path.dirname(HISTOGRAM_CSV_PATH), exist_ok=True)
-
-# Check if file exists to determine if we need headers
-file_exists = os.path.exists(HISTOGRAM_CSV_PATH)
-
-# If file exists, read it and append new data
-if file_exists:
-    df_existing = pd.read_csv(HISTOGRAM_CSV_PATH)
-    # Ensure all columns are present in both dataframes
-    all_columns = list(set(df_existing.columns) | set(df_new.columns))
-    df_existing = df_existing.reindex(columns=all_columns, fill_value=0)
-    df_new = df_new.reindex(columns=all_columns, fill_value=0)
-    df_combined = pd.concat([df_existing, df_new], ignore_index=True)
-else:
-    df_combined = df_new
-
-# Define desired order once
-desired_columns = ['experiment'] + sorted(range_labels, key=lambda x: float(x.split('-')[0]))
-
-# Apply this order to ALL DataFrames
-df_new = df_new.reindex(columns=desired_columns, fill_value=0)
-df_existing = df_existing.reindex(columns=desired_columns, fill_value=0) 
-df_combined = df_combined.reindex(columns=desired_columns, fill_value=0)
-
-# Save the combined data
-df_combined.to_csv(HISTOGRAM_CSV_PATH, index=False)
-print(f"Histogram data saved to: {HISTOGRAM_CSV_PATH}")
-
-# Print summary
-print(f"\nAdded 2 rows (draft and reject) to CSV")
-print(f"Draft total count: {draft_hist.sum()}")
-print(f"Reject total count: {reject_hist.sum()}")
-print(f"Column headers: {range_labels}")
+    # Print summary
+    print(f"\nAdded 2 rows (draft and reject) to CSV")
+    print(f"Draft total count: {draft_hist.sum()}")
+    print(f"Reject total count: {reject_hist.sum()}")
+    print(f"Column headers: {range_labels}")
 
 
 # Save draft history to .pt file
-model_name = args.model_name.split("/", 1)[1]
-experiment_info = f"{model_name}_{args.dataset}_prefix{args.prefix_len}_gamma{args.gamma}_budget{args.draft_budget}"
-if args.task:
-    experiment_info += f"_task{args.task}"
+save_draft_history = True
+if save_draft_history:
+    model_name = args.model_name.split("/", 1)[1]
+    experiment_info = f"{model_name}_{args.dataset}_prefix{args.prefix_len}_gamma{args.gamma}_budget{args.draft_budget}"
+    if args.task:
+        experiment_info += f"_task{args.task}"
 
-# Create output directory if it doesn't exist
-output_dir = f"/home/juchanlee/MagicDec/output/draft_histories"
-os.makedirs(output_dir, exist_ok=True)
+    # Create output directory if it doesn't exist
+    output_dir = f"/home/juchanlee/MagicDec/output/draft_histories"
+    os.makedirs(output_dir, exist_ok=True)
 
-draft_history_path = f"{output_dir}/{experiment_info}_draft_history.pt"
+    draft_history_path = f"{output_dir}/{experiment_info}_draft_history.pt"
 
-# Save the complete draft history
-torch.save(draft_history, draft_history_path)
-print(f"Draft history saved to: {draft_history_path}")
+    # Save the complete draft history
+    torch.save(draft_history, draft_history_path)
+    print(f"Draft history saved to: {draft_history_path}")
 
-# Optional: Save metadata separately
-metadata = {
-    'experiment_config': {
-        'model_name': args.model_name,
-        'dataset': args.dataset,
-        'prefix_len': args.prefix_len,
-        'gamma': args.gamma,
-        'draft_budget': args.draft_budget,
-        'task': args.task,
-        'batch_size': args.B,
-        'max_len': args.max_len,
-        'window_size': args.window_size,
-        'seed': args.seed
-    },
-    'total_steps': len(draft_history),
-    'total_spec_tokens': total_spec_tokens,
-    'total_acc_tokens': total_acc_tokens
-}
+    # Optional: Save metadata separately
+    metadata = {
+        'experiment_config': {
+            'model_name': args.model_name,
+            'dataset': args.dataset,
+            'prefix_len': args.prefix_len,
+            'gamma': args.gamma,
+            'draft_budget': args.draft_budget,
+            'task': args.task,
+            'batch_size': args.B,
+            'max_len': args.max_len,
+            'window_size': args.window_size,
+            'seed': args.seed
+        },
+        'total_steps': len(draft_history),
+        'total_spec_tokens': total_spec_tokens,
+        'total_acc_tokens': total_acc_tokens
+    }
 
-metadata_path = f"{output_dir}/{experiment_info}_metadata.pt"
-torch.save(metadata, metadata_path)
-print(f"Metadata saved to: {metadata_path}")
+    metadata_path = f"{output_dir}/{experiment_info}_metadata.pt"
+    torch.save(metadata, metadata_path)
+    print(f"Metadata saved to: {metadata_path}")
