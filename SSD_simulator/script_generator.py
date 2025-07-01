@@ -18,11 +18,11 @@ fixed_option_values = {
 
 # Define variable options and their possible values
 option_values = {
-    "--num_replica": [1,2,4,8],
+    "--num_replica": [4],
     # "--num_replica": [8],
-    # "--prefix_len": [8193, 16385, 32769, 65537],
-    "--prefix_len": [8193],
-    "--budget_ratio": [0.12],
+    "--prefix_len": [8193, 16385, 32769, 65537],
+    # "--prefix_len": [8193],
+    "--budget_ratio": [0.06],
     "--hot_cluster_ratio": [0.01, 0.02, 0.04, 0.08, 0.16],
     "--planes_per_die": [32],
 }
