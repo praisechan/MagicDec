@@ -81,7 +81,7 @@ num_examples = args.num_examples
 attn_type = args.attn_type
 device = "auto"
 dtype = torch.bfloat16
-model_path = model2path[args.model_name]
+model_path = model2path[MODEL]
 max_length = model2maxlen[MODEL]
 prompt_format = dataset2prompt[TASK]
 
@@ -109,13 +109,11 @@ else:
 
 dataloader = DataLoader(dataset, batch_size=BATCH_SIZE, shuffle=False, drop_last=True)
 if args.dataset == "pg19":
-  # num_eval_steps = min(10, len(dataloader))
-  num_eval_steps = 2
+  num_eval_steps = min(10, len(dataloader))
 else:
   num_eval_steps = len(dataloader)
 
-# num_gen_token_max = 128
-num_gen_token_max = 6
+num_gen_token_max = 80
 num_gen_tokens = 0
 verify_steps = 0
 settle_steps = 0
@@ -210,6 +208,8 @@ for step, batch in tqdm(enumerate(dataset), total=num_eval_steps):
         # Dynamic budget adjustment based on confidence
         # If all tokens have high confidence (top1_top2_diff > threshold), use lower budget
         current_budget = args.budget2  # default budget
+        budget_switched = False  # Track if budget was switched for this speculation
+        
         if args.enable_dynamic_budget and top1_top2_diff is not None and len(top1_top2_diff) > 0:
             min_confidence = torch.min(torch.tensor(top1_top2_diff))
             avg_confidence = torch.mean(torch.tensor(top1_top2_diff))
@@ -219,6 +219,7 @@ for step, batch in tqdm(enumerate(dataset), total=num_eval_steps):
             if min_confidence > args.confidence_threshold:
                 # High confidence: use lower budget for verification
                 current_budget = args.budget2_low
+                budget_switched = True
                 engine.update_verification_budget(
                     budget_ratio=current_budget, 
                     estimate_ratio=args.estimate_ratio,
@@ -227,7 +228,6 @@ for step, batch in tqdm(enumerate(dataset), total=num_eval_steps):
                     attn_type=current_attn_type
                 )
                 print(f"High confidence detected (min_diff={min_confidence:.3f}), using lower verification budget: {current_budget}")
-                step_budget_switches += 1
             else:
                 # Low confidence: use original budget for verification
                 engine.update_verification_budget(
@@ -257,9 +257,9 @@ for step, batch in tqdm(enumerate(dataset), total=num_eval_steps):
                 attn_type=current_attn_type
             )
 
-
+        # Check if we can settle or verify
         if (num_unsettled_tokens + args.gamma1 >= args.gamma2) or (called_verify > 5):
-            
+            # If we have enough unsettled tokens or have called verify too many times, settle
             settled = True
 
             target_tokens = torch.LongTensor(engine.settle(cached_tokens_buffer.view(-1,1), num_unsettled_tokens+args.gamma1+1)).to(DEVICE) #TODO: verify stage should be batch-fashion, but this verify() is auto-regressive. 
@@ -331,7 +331,7 @@ for step, batch in tqdm(enumerate(dataset), total=num_eval_steps):
                 num_nodes = num_nodes - accept_nums + eot_index
             
         else:
-
+            # If not settled, we need to verify
             verified = True
 
             if called_verify == 0:
@@ -340,6 +340,10 @@ for step, batch in tqdm(enumerate(dataset), total=num_eval_steps):
             target_tokens = torch.LongTensor(engine.verify(tokens_buffer[:, 0].view(-1,1), args.gamma1+1)).to(DEVICE) #TODO: verify stage should be batch-fashion, but this verify() is auto-regressive. 
             step_verify_calls += 1
             called_verify += 1
+            
+            # Count budget switches only when verify is executed with switched budget
+            if budget_switched:
+                step_budget_switches += 1
 
             draft_tokens = tokens_buffer[:, 1:args.gamma1+1]
             flag_accept_matrix = (target_tokens[:, :args.gamma1] == draft_tokens)  # shape: (BATCH_SIZE, gamma)
@@ -518,42 +522,12 @@ for step, batch in tqdm(enumerate(dataset), total=num_eval_steps):
         print(f"Generated output: {decoded_output}")
 
 # After all steps are completed, store the final accumulated data
-# Read previous accumulated totals from CSV file if it exists
-prev_total_speculate = 0
-prev_total_verify = 0
-prev_total_settle = 0
-prev_total_budget_switches = 0
-prev_total_tokens = 0
-
-# Read the last line of accumulated log to get previous totals
-try:
-    with open(accumulated_log_file, mode='r', newline='') as file:
-        reader = csv.reader(file)
-        rows = list(reader)
-        if len(rows) > 1:  # If there are data rows (beyond header)
-            last_row = rows[-1]
-            prev_total_speculate = int(last_row[10])  # total_speculate_calls column
-            prev_total_verify = int(last_row[11])     # total_verify_calls column
-            prev_total_settle = int(last_row[12])     # total_settle_calls column
-            prev_total_budget_switches = int(last_row[13])  # total_budget_switches column
-            prev_total_tokens = int(last_row[14])     # total_tokens_generated column
-except (FileNotFoundError, IndexError, ValueError):
-    # If file doesn't exist or has issues, start from 0
-    pass
-
-# Calculate final cumulative totals
-final_cumulative_speculate = prev_total_speculate + total_speculate_calls
-final_cumulative_verify = prev_total_verify + total_verify_calls
-final_cumulative_settle = prev_total_settle + total_settle_calls
-final_cumulative_budget_switches = prev_total_budget_switches + total_budget_switches
-final_cumulative_tokens = prev_total_tokens + total_tokens_generated
-
-# Log final accumulated data
+# Accumulated output should aggregate across all steps in this run only
 final_accumulated_data = [
     step, args.dataset, args.prefix_len, args.gamma1, args.gamma2,
     args.budget1, args.budget2, args.budget2_low, args.confidence_threshold, args.enable_dynamic_budget,
-    final_cumulative_speculate, final_cumulative_verify, final_cumulative_settle,
-    final_cumulative_budget_switches, final_cumulative_tokens
+    total_speculate_calls, total_verify_calls, total_settle_calls,
+    total_budget_switches, total_tokens_generated
 ]
 
 with open(accumulated_log_file, mode='a', newline='') as file:
@@ -561,8 +535,8 @@ with open(accumulated_log_file, mode='a', newline='') as file:
     writer.writerow(final_accumulated_data)
 
 print(f"\n=== Final Accumulated Statistics ===")
-print(f"Total speculate calls: {final_cumulative_speculate}")
-print(f"Total verify calls: {final_cumulative_verify}")
-print(f"Total settle calls: {final_cumulative_settle}")
-print(f"Total budget switches: {final_cumulative_budget_switches}")
-print(f"Total tokens generated: {final_cumulative_tokens}")
+print(f"Total speculate calls: {total_speculate_calls}")
+print(f"Total verify calls: {total_verify_calls}")
+print(f"Total settle calls: {total_settle_calls}")
+print(f"Total budget switches: {total_budget_switches}")
+print(f"Total tokens generated: {total_tokens_generated}")

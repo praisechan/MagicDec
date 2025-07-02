@@ -251,7 +251,7 @@ class LLM:
             top1_top2_diff.append(topk_vals[0][:,0]-topk_vals[0][:,1])
 
             # store hot cluster hit ratio
-            if self.attention_type == "RetroInfer":
+            if self.attention_type == "RetroInfer" and self.profile_hot_cluster_selection_ratio:
                 hot_cluster_hit_ratio_per_layer.append(self.kv_cache.hot_cluster_hit_ratio.clone())
                 hot_cluster_hit_ratio_per_token.append(self.kv_cache.hot_cluster_hit_ratio.mean())
 
