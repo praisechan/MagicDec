@@ -1,0 +1,5 @@
+############Longbench#############
+python tests/dynamic_verify_test/run_3step.py --model_name meta-llama/Meta-Llama-3.1-8B --gamma1 5 --gamma2 32 --budget1 0.02 --budget2 0.25 --enable_dynamic_budget --budget2_low 0.1 --confidence_threshold 0.5 --dataset longbenchv1 --task qmsum
+python tests/dynamic_verify_test/run_3step.py --model_name meta-llama/Meta-Llama-3.1-8B --gamma1 5 --gamma2 32 --budget1 0.02 --budget2 0.25 --dataset longbenchv1 --task qmsum
+python tests/dynamic_verify_test/run_3step.py --model_name meta-llama/Meta-Llama-3.1-8B --gamma1 5 --gamma2 32 --budget1 0.02 --budget2 0.25 --enable_dynamic_budget --budget2_low 0.1 --confidence_threshold 0.5 --dataset longbenchv1 --task gov_report
+python tests/dynamic_verify_test/run_3step.py --model_name meta-llama/Meta-Llama-3.1-8B --gamma1 5 --gamma2 32 --budget1 0.02 --budget2 0.25 --dataset longbenchv1 --task gov_report
