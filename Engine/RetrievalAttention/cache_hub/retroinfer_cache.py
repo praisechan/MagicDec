@@ -341,6 +341,8 @@ class retroinfer_cache(KV_Cache):
         self.cI_first_kv=[]
         self.is_first_token = torch.zeros((self.layer_num), dtype=torch.bool, device=self.layer_mapping[str(0)]).contiguous()
         self.is_first_token.fill_(True)
+        # Add counter for every 5 tokens update
+        self.token_counter = torch.zeros((self.layer_num), dtype=torch.int32, device=self.layer_mapping[str(0)]).contiguous()
         for ldx in range(self.layer_num):
             self.cI_first_kv.append(
                 torch.zeros((self.batch_size*self.kv_head, self.nprobe), 
@@ -832,13 +834,17 @@ class retroinfer_cache(KV_Cache):
         #   self.cluster_ids.copy_(cI_of_selected_superclusters[..., :self.nprobe])
         
         if self.use_first_kv:
-          if self.is_first_token[layer_idx]: # store the selected cluster ids for later use
-            self.cI_first_kv[layer_idx] = cI.clone().detach()  # [batch_size*group_num, nprobe]
-            self.is_first_token[layer_idx] = False
-          else: # use the first kv cache cluster ids
-            self.cluster_ids.copy_(self.cI_first_kv[layer_idx][..., :self.nprobe])  # use the first kv cache cluster ids
-            cI.copy_(self.cI_first_kv[layer_idx])  # use the first kv cache cluster ids
-
+          # Update cluster IDs every 5 tokens
+          if self.token_counter[layer_idx] % 5 == 0:
+            # Store new cluster IDs every 5 tokens
+            self.cI_first_kv[layer_idx] = cI[..., :self.nprobe].clone().detach()
+          
+          # Always use the stored cluster IDs
+          self.cluster_ids.copy_(self.cI_first_kv[layer_idx])
+          cI.copy_(self.cI_first_kv[layer_idx])
+          
+          # Increment token counter
+          self.token_counter[layer_idx] += 1
         # estimation zone computation
         if self.es_cluster_num > 0:
             gather_copy_vectors(self.centroids[layer_idx], self.es_centroids, 

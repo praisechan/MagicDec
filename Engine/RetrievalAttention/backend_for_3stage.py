@@ -114,7 +114,7 @@ class LMBackend_Retro:
     @torch.inference_mode()
     def verify(self, input_ids: torch.LongTensor, gamma):
       input_from_start = torch.concat((self.input_tokens[:, :self.verified_cachelength], input_ids), dim=1)
-      outputs, _, _ = self.model.generate(
+      outputs, logits, top1_top2_diff = self.model.generate(
           attention_type="RetroInfer",
           inputs_ids = input_from_start.to(self.model.layers[0].device),
           attention_masks = self.attention_masks.to(self.model.layers[0].device),
@@ -122,7 +122,7 @@ class LMBackend_Retro:
           attn_config=self.attn_config_verification
       )
       
-      return outputs
+      return outputs, logits, top1_top2_diff
 
     @torch.inference_mode()
     def speculate(self, input_ids: torch.LongTensor, gamma):
@@ -144,7 +144,7 @@ class LMBackend_Retro:
       print("[Settlement]")
       input_from_start = torch.concat((self.settled_input_tokens[:, :self.settled_cachelength], input_ids), dim=1)
 
-      outputs, _, _ = self.model.generate(
+      outputs, logits, top1_top2_diff = self.model.generate(
           attention_type="Full_Flash_Attn",
           inputs_ids = input_from_start.to(self.model.layers[0].device),
           attention_masks = self.attention_masks.to(self.model.layers[0].device),
@@ -152,7 +152,7 @@ class LMBackend_Retro:
           attn_config=None
       )
       
-      return outputs
+      return outputs, logits, top1_top2_diff
     
     @torch.inference_mode()
     def update_verified_kv(self, input_ids: torch.LongTensor):
