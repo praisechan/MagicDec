@@ -41,7 +41,8 @@ class retroinfer_cache(KV_Cache):
         cache_cluster_num: int,
         num_gpus: int,
         model_size: int,
-        profile_clustering: bool
+        profile_clustering: bool,
+        use_first_kv: bool = False,
     ) -> None:
         super().__init__(layer_num, batch_size, max_length, num_key_value_heads, num_heads, head_dim, dtype, layer_mapping, num_gpus, model_size)
         self.valid_start = valid_start
@@ -335,6 +336,16 @@ class retroinfer_cache(KV_Cache):
                             dtype=int, device=self.layer_mapping[str(ldx)]).contiguous()
             )
 
+        # for sharing first token's kv cache       
+        self.use_first_kv = use_first_kv
+        self.cI_first_kv=[]
+        self.is_first_token = torch.zeros((self.layer_num), dtype=torch.bool, device=self.layer_mapping[str(0)]).contiguous()
+        self.is_first_token.fill_(True)
+        for ldx in range(self.layer_num):
+            self.cI_first_kv.append(
+                torch.zeros((self.batch_size*self.kv_head, self.nprobe), 
+                            dtype=int, device=self.layer_mapping[str(ldx)]).contiguous()
+            )
 
     # decide whether to pre-allocate GPU memory before prefilling
     def pre_allocate_decision(self):
@@ -813,12 +824,20 @@ class retroinfer_cache(KV_Cache):
             # plt.close()
             # plt.show()
 
-        # # with super_cI, get selectd supercluster's clusters.
+        # with super_cI, get selectd supercluster's clusters.
         selection_method = "fine-grained"
         if selection_method == "fine-grained":
           self.cluster_ids.copy_(cI[..., :self.nprobe])
         # elif selection_method == "coarse-grained":
         #   self.cluster_ids.copy_(cI_of_selected_superclusters[..., :self.nprobe])
+        
+        if self.use_first_kv:
+          if self.is_first_token[layer_idx]: # store the selected cluster ids for later use
+            self.cI_first_kv[layer_idx] = cI.clone().detach()  # [batch_size*group_num, nprobe]
+            self.is_first_token[layer_idx] = False
+          else: # use the first kv cache cluster ids
+            self.cluster_ids.copy_(self.cI_first_kv[layer_idx][..., :self.nprobe])  # use the first kv cache cluster ids
+            cI.copy_(self.cI_first_kv[layer_idx])  # use the first kv cache cluster ids
 
         # estimation zone computation
         if self.es_cluster_num > 0:

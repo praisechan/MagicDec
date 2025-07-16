@@ -298,7 +298,7 @@ class LLM:
         return outputs_ids, outputs_logits, top1_top2_diff
 
 
-    def generate(self, attention_type, inputs_ids, attention_masks, max_new_length, attn_config=None, profile_clustering=False, profile_hot_cluster_selection_ratio=False):
+    def generate(self, attention_type, inputs_ids, attention_masks, max_new_length, attn_config=None, profile_clustering=False, profile_hot_cluster_selection_ratio=False, use_first_kv=False):
         """ LLM Inference.
         Args:
             attention_type: str,
@@ -323,7 +323,7 @@ class LLM:
         torch.cuda.empty_cache()
 
         print("Allocate GPU buffers and CPU pin memory ...\n")
-        self.init_kv_cache(input_length, valid_start, attn_config, profile_clustering=profile_clustering)
+        self.init_kv_cache(input_length, valid_start, attn_config, profile_clustering=profile_clustering, use_first_kv=use_first_kv)
 
         outputs, logits, top1_top2_diff = self.inference(inputs_ids)
 
