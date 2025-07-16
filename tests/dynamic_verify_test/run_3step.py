@@ -258,7 +258,8 @@ for step, batch in tqdm(enumerate(dataset), total=num_eval_steps):
             )
 
         # Check if we can settle or verify
-        if (num_unsettled_tokens + args.gamma1 >= args.gamma2) or (called_verify > 5):
+        # if (num_unsettled_tokens + args.gamma1 >= args.gamma2) or (called_verify > 5):
+        if num_unsettled_tokens + args.gamma1 >= args.gamma2:
             # If we have enough unsettled tokens or have called verify too many times, settle
             settled = True
 
