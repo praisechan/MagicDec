@@ -115,9 +115,6 @@ else:
 
 num_gen_token_max = 80
 num_gen_tokens = 0
-verify_steps = 0
-settle_steps = 0
-budget_switches = 0  # Track how many times we switch budget
 
 # Store these for dynamic budget adjustment
 current_model_path = model_path
@@ -195,8 +192,7 @@ for step, batch in tqdm(enumerate(dataset), total=num_eval_steps):
     # record unsettled_tokens
     num_unsettled_tokens = 0
     called_verify = 0
-    while terminal == False:
-
+    while not terminal:
         settled = False
         verified = False
 
@@ -220,6 +216,7 @@ for step, batch in tqdm(enumerate(dataset), total=num_eval_steps):
                 # High confidence: use lower budget for verification
                 current_budget = args.budget2_low
                 budget_switched = True
+                step_budget_switches += 1
                 engine.update_verification_budget(
                     budget_ratio=current_budget, 
                     estimate_ratio=args.estimate_ratio,
@@ -257,63 +254,84 @@ for step, batch in tqdm(enumerate(dataset), total=num_eval_steps):
                 attn_type=current_attn_type
             )
 
-        # Check if we can settle or verify
-        # if (num_unsettled_tokens + args.gamma1 >= args.gamma2) or (called_verify > 5):
-        if num_unsettled_tokens + args.gamma1 >= args.gamma2:
-            # If we have enough unsettled tokens or have called verify too many times, settle
-            settled = True
+        # Always call verify after speculate
+        if called_verify == 0:
+            cached_tokens_buffer = tokens_buffer[:, 0].clone()
 
-            target_tokens = torch.LongTensor(engine.settle(cached_tokens_buffer.view(-1,1), num_unsettled_tokens+args.gamma1+1)).to(DEVICE) #TODO: verify stage should be batch-fashion, but this verify() is auto-regressive. 
+        target_tokens = torch.LongTensor(engine.verify(tokens_buffer[:, 0].view(-1,1), args.gamma1+1)).to(DEVICE)
+        step_verify_calls += 1
+        called_verify += 1
+
+        draft_tokens = tokens_buffer[:, 1:args.gamma1+1]
+        flag_accept_matrix = (target_tokens[:, :args.gamma1] == draft_tokens)
+        eot_condition = ((draft_tokens == eot_1) | (draft_tokens == eot_2))
+
+        accept_flags_int = (flag_accept_matrix & (~eot_condition)).int()
+        accept_flags_cumprod = torch.cumprod(accept_flags_int, dim=1)
+        accept_flags_matrix = accept_flags_cumprod.bool()
+        accept_nums = accept_flags_matrix.sum(dim=1, keepdim=True)
+        num_unsettled_tokens += accept_nums.flatten().item() + 1
+
+        positions_buffer = torch.arange(args.gamma1, device=DEVICE).view(1, -1).repeat(BATCH_SIZE, 1)
+        mask_buffer = positions_buffer < accept_nums.view(-1,1)
+        indices = accept_nums
+        bonus_tokens = target_tokens.gather(1, indices)
+
+        # Check for termination conditions
+        condition = (eot_condition & accept_flags_matrix).any(dim=1, keepdim=True)
+        if condition.any() or (bonus_tokens == eot_1).any() or (bonus_tokens == eot_2).any():
+            terminal = True
+
+        if args.dataset == "longbenchv1" or args.dataset == "longbenchv1-32k":
+            if num_nodes.max() - input_len >= num_gen_token_max:
+                terminal = True
+        else:
+            if num_nodes.max() - args.prefix_len >= num_gen_token_max:
+                terminal = True
+
+        # get accepted token and re-decode to set draft cache (Quest)
+        accepted_tokens = torch.concat((tokens_buffer[:, :1], draft_tokens[mask_buffer].view(1,-1)), dim=1)
+        engine.update_verified_kv(accepted_tokens)
+        tokens_buffer[:, :1] = bonus_tokens
+
+        print(f"verification accepted tokens: {accept_nums.flatten().item()} + 1 bonus token")
+        print(f"total unsettled tokens: {num_unsettled_tokens}")
+
+        # Now, after verify, check if we need to settle
+        if num_unsettled_tokens >= args.gamma2 or called_verify > 2 * (args.gamma2 / args.gamma1) or terminal:
+            # Settle
+            settled = True
+            target_tokens = torch.LongTensor(engine.settle(cached_tokens_buffer.view(-1,1), num_unsettled_tokens+1)).to(DEVICE)
             step_settle_calls += 1
-    
 
             input_from_start = torch.concat((engine.input_tokens[:, :engine.verified_cachelength], tokens_buffer), dim=1)
-            draft_tokens = input_from_start[:, -(num_unsettled_tokens+args.gamma1):]
-            flag_accept_matrix = (target_tokens[:, :num_unsettled_tokens+args.gamma1] == draft_tokens)  # shape: (BATCH_SIZE, gamma)
-
-            eot_condition = ((draft_tokens == eot_1) | (draft_tokens == eot_2))  # shape: (BATCH_SIZE, gamma)
-
-            # Compute accept_flags by considering both the acceptance condition and EOT tokens
+            draft_tokens = input_from_start[:, -(num_unsettled_tokens):]
+            flag_accept_matrix = (target_tokens[:, :num_unsettled_tokens] == draft_tokens)
+            eot_condition = ((draft_tokens == eot_1) | (draft_tokens == eot_2))
             accept_flags_int = (flag_accept_matrix & (~eot_condition)).int()
             accept_flags_cumprod = torch.cumprod(accept_flags_int, dim=1)
             accept_flags_matrix = accept_flags_cumprod.bool()
-
-             # Compute the number of accepted tokens
-            accept_nums = accept_flags_matrix.sum(dim=1, keepdim=True)  # shape: (BATCH_SIZE, 1)
-            
-            positions_buffer = torch.arange(num_unsettled_tokens + args.gamma1, device=DEVICE).view(1, -1).repeat(BATCH_SIZE, 1)
-            mask_buffer = positions_buffer<accept_nums.view(-1,1)
-
-            # Get the bonus tokens
+            accept_nums = accept_flags_matrix.sum(dim=1, keepdim=True)
+            positions_buffer = torch.arange(num_unsettled_tokens, device=DEVICE).view(1, -1).repeat(BATCH_SIZE, 1)
+            mask_buffer = positions_buffer < accept_nums.view(-1,1)
             indices = accept_nums
             bonus_tokens = target_tokens.gather(1, indices)
             num_nodes += (accept_nums.flatten() + 1)
-            
-            # Check for termination conditions
 
-            # 1: eot in accepted tokens
+            # Check for termination conditions again
             condition = (eot_condition & accept_flags_matrix).any(dim=1, keepdim=True)
-            if condition.any():
+            if condition.any() or (bonus_tokens == eot_1).any() or (bonus_tokens == eot_2).any():
                 terminal = True
 
-            if (bonus_tokens == eot_1).any() or (bonus_tokens == eot_2).any():
-                terminal = True
-
-            # 2: reach max tokens
             if args.dataset == "longbenchv1" or args.dataset == "longbenchv1-32k":
-                #longbenchv1 does not have fixed prefix len
                 if num_nodes.max() - input_len >= num_gen_token_max:
                     terminal = True
             else:
-                # Check Number of Nodes + Bonus Token <= max_target_token
                 if num_nodes.max() - args.prefix_len >= num_gen_token_max:
                     terminal = True
-            # Put Bonus tokens to the tokens buffer, and prepare the variables for next itr
-        
 
             accepted_tokens = torch.concat((cached_tokens_buffer.view(1,-1), draft_tokens[mask_buffer].view(1,-1)), dim=1)
             engine.update_settled_kv(accepted_tokens)
-
             tokens_buffer[:, :1] = bonus_tokens
 
             # reset counters
@@ -324,154 +342,10 @@ for step, batch in tqdm(enumerate(dataset), total=num_eval_steps):
             print(f"total unsettled tokens: {num_unsettled_tokens}")
 
             eot_condition = ((target_tokens == eot_1) | (target_tokens == eot_2))
-
             if True in eot_condition:
                 eot_index = (eot_condition.view(-1) == True).nonzero(as_tuple=True)[0].item()
                 engine.settled_cachelength = engine.settled_cachelength - accept_nums + eot_index
-
                 num_nodes = num_nodes - accept_nums + eot_index
-            
-        else:
-            # If not settled, we need to verify
-            verified = True
-
-            if called_verify == 0:
-                cached_tokens_buffer = tokens_buffer[:, 0].clone()
-
-            target_tokens = torch.LongTensor(engine.verify(tokens_buffer[:, 0].view(-1,1), args.gamma1+1)).to(DEVICE) #TODO: verify stage should be batch-fashion, but this verify() is auto-regressive. 
-            step_verify_calls += 1
-            called_verify += 1
-            
-            # Count budget switches only when verify is executed with switched budget
-            if budget_switched:
-                step_budget_switches += 1
-
-            draft_tokens = tokens_buffer[:, 1:args.gamma1+1]
-            flag_accept_matrix = (target_tokens[:, :args.gamma1] == draft_tokens)  # shape: (BATCH_SIZE, gamma)
-
-            eot_condition = ((draft_tokens == eot_1) | (draft_tokens == eot_2))  # shape: (BATCH_SIZE, gamma)
-
-            # Compute accept_flags by considering both the acceptance condition and EOT tokens
-            accept_flags_int = (flag_accept_matrix & (~eot_condition)).int()
-            accept_flags_cumprod = torch.cumprod(accept_flags_int, dim=1)
-            accept_flags_matrix = accept_flags_cumprod.bool()
-
-            # Compute the number of accepted tokens
-            accept_nums = accept_flags_matrix.sum(dim=1, keepdim=True)  # shape: (BATCH_SIZE, 1)
-            num_unsettled_tokens += accept_nums.flatten().item() + 1 # consider bonus tokens
-            
-            positions_buffer = torch.arange(args.gamma1, device=DEVICE).view(1, -1).repeat(BATCH_SIZE, 1)
-            mask_buffer = positions_buffer<accept_nums.view(-1,1)
-
-            # Get the bonus tokens
-            indices = accept_nums
-            bonus_tokens = target_tokens.gather(1, indices)
-
-            # Check for termination conditions
-
-            # 1: eot in accepted tokens
-            condition = (eot_condition & accept_flags_matrix).any(dim=1, keepdim=True)
-            if condition.any():
-                terminal = True
-
-            if (bonus_tokens == eot_1).any() or (bonus_tokens == eot_2).any():
-                terminal = True
-
-            # 2: reach max tokens
-            if args.dataset == "longbenchv1" or args.dataset == "longbenchv1-32k":
-                #longbenchv1 does not have fixed prefix len
-                if num_nodes.max() - input_len >= num_gen_token_max:
-                    terminal = True
-            else:
-                # Check Number of Nodes + Bonus Token <= max_target_token
-                # if num_nodes.max() + 1 >= args.prefix_len + gen_len:
-                # if num_nodes.max() + 1 + args.gamma > MAX_LEN_TARGET:
-                if num_nodes.max() - args.prefix_len >= num_gen_token_max:
-                    terminal = True
-            # Put Bonus tokens to the tokens buffer, and prepare the variables for next itr
-
-                
-            # get accepted token and re-decode to set draft cache (Quest)
-            accepted_tokens = torch.concat((tokens_buffer[:, :1], draft_tokens[mask_buffer].view(1,-1)), dim=1)
-            engine.update_verified_kv(accepted_tokens)
-
-            tokens_buffer[:, :1] = bonus_tokens
-
-            print(f"verification accepted tokens: {accept_nums.flatten().item()} + 1 bonus token")
-            print(f"total unsettled tokens: {num_unsettled_tokens}")
-
-            # if terminal -> fast track to settle
-            if terminal:
-                print("Terminal occured in verification: Fast Track to Settlement")
-                settled = True
-
-                target_tokens = torch.LongTensor(engine.settle(cached_tokens_buffer.view(-1,1), num_unsettled_tokens+1)).to(DEVICE) #TODO: verify stage should be batch-fashion, but this verify() is auto-regressive. 
-                step_settle_calls += 1
-
-                input_from_start = torch.concat((engine.input_tokens[:, :engine.verified_cachelength], tokens_buffer), dim=1)
-                draft_tokens = input_from_start[:, -(num_unsettled_tokens):]
-                flag_accept_matrix = (target_tokens[:, :num_unsettled_tokens] == draft_tokens)  # shape: (BATCH_SIZE, gamma)
-
-                eot_condition = ((draft_tokens == eot_1) | (draft_tokens == eot_2))  # shape: (BATCH_SIZE, gamma)
-
-                # Compute accept_flags by considering both the acceptance condition and EOT tokens
-                accept_flags_int = (flag_accept_matrix & (~eot_condition)).int()
-                accept_flags_cumprod = torch.cumprod(accept_flags_int, dim=1)
-                accept_flags_matrix = accept_flags_cumprod.bool()
-
-                # Compute the number of accepted tokens
-                accept_nums = accept_flags_matrix.sum(dim=1, keepdim=True)  # shape: (BATCH_SIZE, 1)
-                
-                positions_buffer = torch.arange(num_unsettled_tokens, device=DEVICE).view(1, -1).repeat(BATCH_SIZE, 1)
-                mask_buffer = positions_buffer<accept_nums.view(-1,1)
-
-                # Get the bonus tokens
-                indices = accept_nums
-                bonus_tokens = target_tokens.gather(1, indices)
-                num_nodes += (accept_nums.flatten() + 1)
-                
-                # Check for termination conditions
-
-                # 1: eot in accepted tokens
-                condition = (eot_condition & accept_flags_matrix).any(dim=1, keepdim=True)
-                if condition.any():
-                    terminal = True
-
-                if (bonus_tokens == eot_1).any() or (bonus_tokens == eot_2).any():
-                    terminal = True
-
-                # 2: reach max tokens
-                if args.dataset == "longbenchv1" or args.dataset == "longbenchv1-32k":
-                    #longbenchv1 does not have fixed prefix len
-                    if num_nodes.max() - input_len >= num_gen_token_max:
-                        terminal = True
-                else:
-                    # Check Number of Nodes + Bonus Token <= max_target_token
-                    if num_nodes.max() - args.prefix_len >= num_gen_token_max:
-                        terminal = True
-                # Put Bonus tokens to the tokens buffer, and prepare the variables for next itr
-
-
-                accepted_tokens = torch.concat((cached_tokens_buffer.view(1,-1), draft_tokens[mask_buffer].view(1,-1)), dim=1)
-                engine.update_settled_kv(accepted_tokens)
-
-                tokens_buffer[:, :1] = bonus_tokens
-
-                # reset counters
-                num_unsettled_tokens = 0
-                called_verify = 0
-
-                print(f"settlement accepted tokens: {accept_nums.flatten().item()} + 1 bonus_token")
-                print(f"total unsettled tokens: {num_unsettled_tokens}")
-
-                eot_condition = ((target_tokens == eot_1) | (target_tokens == eot_2))
-
-                if True in eot_condition:
-                    eot_index = (eot_condition.view(-1) == True).nonzero(as_tuple=True)[0].item()
-                    engine.settled_cachelength = engine.settled_cachelength - accept_nums + eot_index
-
-                    num_nodes = num_nodes - accept_nums + eot_index
-
 
     num_gen_tokens = engine.settled_cachelength - input_len
 

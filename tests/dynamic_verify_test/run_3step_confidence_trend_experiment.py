@@ -162,27 +162,31 @@ def record_confidence_changes(draft_confidences, verify_confidences, accept_mask
         # but need to identify which ones were rejected
         accept_mask = np.array(accept_mask[:min_len])
         
+        # Find the first rejected token index
+        first_reject_idx = None
+        if not accept_mask.all():
+            first_reject_idx = np.where(~accept_mask)[0][0]
+        
         if is_rejected_only:
-            # Find the first rejected token and only process up to that point
-            if not accept_mask.all():
-                first_reject_idx = np.where(~accept_mask)[0][0]
-                # Only record the rejected token itself
-                if first_reject_idx < len(draft_conf):
-                    draft_val = float(draft_conf[first_reject_idx])
-                    verify_val = float(verify_conf[first_reject_idx])
-                    confidence_change = draft_val - verify_val
-                    
-                    range_key = get_confidence_range_key(draft_val)
-                    rejected_confidence_changes_by_range[range_key].append(confidence_change)
-                    print(f"Rejected token - Draft conf: {draft_val:.3f}, Verify conf: {verify_val:.3f}, Change: {confidence_change:.3f}")
+            # Only record the first rejected token itself
+            if first_reject_idx is not None and first_reject_idx < len(draft_conf):
+                draft_val = float(draft_conf[first_reject_idx])
+                verify_val = float(verify_conf[first_reject_idx])
+                confidence_change = draft_val - verify_val
+                
+                range_key = get_confidence_range_key(draft_val)
+                rejected_confidence_changes_by_range[range_key].append(confidence_change)
+                print(f"Rejected token - Draft conf: {draft_val:.3f}, Verify conf: {verify_val:.3f}, Change: {confidence_change:.3f}")
         else:
-            # For all tokens, record up to the first rejected token (excluding it)
-            if not accept_mask.all():
-                first_reject_idx = np.where(~accept_mask)[0][0]
-                valid_tokens = min_len if first_reject_idx == 0 else first_reject_idx
+            # For all tokens, record only accepted tokens (up to but not including the first rejected token)
+            if first_reject_idx is not None:
+                # Only process tokens before the first rejection
+                valid_tokens = first_reject_idx
             else:
+                # All tokens are accepted
                 valid_tokens = min_len
             
+            # Record only the valid (accepted) tokens
             for i in range(valid_tokens):
                 draft_val = float(draft_conf[i])
                 verify_val = float(verify_conf[i])
@@ -190,6 +194,7 @@ def record_confidence_changes(draft_confidences, verify_confidences, accept_mask
                 
                 range_key = get_confidence_range_key(draft_val)
                 confidence_changes_by_range[range_key].append(confidence_change)
+                print(f"Accepted token {i} - Draft conf: {draft_val:.3f}, Verify conf: {verify_val:.3f}, Change: {confidence_change:.3f}")
     else:
         # No accept mask provided, record all tokens
         for i in range(min_len):
@@ -276,6 +281,10 @@ for step, batch in tqdm(enumerate(dataset), total=num_eval_steps):
     # Store draft confidences for comparison with verify confidences
     stored_draft_confidences = None
     
+    # For settlement: store accumulated confidence values from multiple cycles
+    accumulated_draft_confidences = []  # Store all draft confidences since last settlement
+    accumulated_verify_confidences = []  # Store all verify confidences since last settlement
+    
     while terminal == False:
 
         settled = False
@@ -288,6 +297,10 @@ for step, batch in tqdm(enumerate(dataset), total=num_eval_steps):
         
         # Store draft confidences for later comparison
         stored_draft_confidences = top1_top2_diff.copy() if top1_top2_diff is not None else None
+        
+        # Accumulate draft confidences for settlement tracking
+        if stored_draft_confidences is not None:
+            accumulated_draft_confidences.extend(stored_draft_confidences)
         
         # Dynamic budget adjustment based on confidence
         # If all tokens have high confidence (top1_top2_diff > threshold), use lower budget
@@ -350,13 +363,6 @@ for step, batch in tqdm(enumerate(dataset), total=num_eval_steps):
             settle_outputs, settle_logits, settle_top1_top2_diff = engine.settle(cached_tokens_buffer.view(-1,1), num_unsettled_tokens+args.gamma1+1)
             target_tokens = torch.LongTensor(settle_outputs).to(DEVICE) #TODO: verify stage should be batch-fashion, but this verify() is auto-regressive.
             step_settle_calls += 1
-            
-            # Record confidence changes for settlement (use cached draft confidences vs settle confidences)
-            if stored_draft_confidences is not None and settle_top1_top2_diff is not None:
-                # For settlement, we need to compare with the original draft confidences from when tokens were first speculated
-                # This is more complex as we need to track which tokens correspond to which speculation
-                print(f"Settlement - comparing draft vs settle confidences")
-    
 
             input_from_start = torch.concat((engine.input_tokens[:, :engine.verified_cachelength], tokens_buffer), dim=1)
             draft_tokens = input_from_start[:, -(num_unsettled_tokens+args.gamma1):]
@@ -371,6 +377,36 @@ for step, batch in tqdm(enumerate(dataset), total=num_eval_steps):
 
              # Compute the number of accepted tokens
             accept_nums = accept_flags_matrix.sum(dim=1, keepdim=True)  # shape: (BATCH_SIZE, 1)
+            
+            # Record confidence changes for settlement with accept/reject information
+            if len(accumulated_draft_confidences) > 0 and settle_top1_top2_diff is not None:
+                # Convert accept_flags_matrix to numpy boolean array for the first batch
+                accept_mask = accept_flags_matrix[0].cpu().numpy()  # Shape: (num_unsettled_tokens+gamma1,)
+                
+                print(f"Settlement - comparing accumulated draft vs settle confidences")
+                print(f"Accumulated draft confidences: {len(accumulated_draft_confidences)}, Settle confidences: {len(settle_top1_top2_diff)}")
+                print(f"Settlement accept mask: {accept_mask}")
+                
+                # Use the most recent accumulated confidences
+                expected_tokens = num_unsettled_tokens + args.gamma1
+                relevant_draft_conf = accumulated_draft_confidences[-expected_tokens:] if len(accumulated_draft_confidences) >= expected_tokens else accumulated_draft_confidences
+                
+                # For settlement, we compare accumulated draft confidences with settle confidences
+                # Record all token confidence changes (up to first rejection, excluding tokens after rejection)
+                record_confidence_changes(
+                    relevant_draft_conf, 
+                    settle_top1_top2_diff[:len(relevant_draft_conf)] if settle_top1_top2_diff else None, 
+                    accept_mask[:len(relevant_draft_conf)], 
+                    is_rejected_only=False
+                )
+                
+                # Record rejected token confidence changes for settlement
+                record_confidence_changes(
+                    relevant_draft_conf, 
+                    settle_top1_top2_diff[:len(relevant_draft_conf)] if settle_top1_top2_diff else None, 
+                    accept_mask[:len(relevant_draft_conf)], 
+                    is_rejected_only=True
+                )
             
             positions_buffer = torch.arange(num_unsettled_tokens + args.gamma1, device=DEVICE).view(1, -1).repeat(BATCH_SIZE, 1)
             mask_buffer = positions_buffer<accept_nums.view(-1,1)
@@ -407,9 +443,11 @@ for step, batch in tqdm(enumerate(dataset), total=num_eval_steps):
 
             tokens_buffer[:, :1] = bonus_tokens
 
-            # reset counters
+            # reset counters and clear accumulated confidences after settlement
             num_unsettled_tokens = 0
             called_verify = 0
+            accumulated_draft_confidences = []  # Clear after settlement
+            accumulated_verify_confidences = []  # Clear after settlement
 
             print(f"settlement accepted tokens: {accept_nums.flatten().item()} + 1 bonus_token")
             print(f"total unsettled tokens: {num_unsettled_tokens}")
@@ -433,6 +471,11 @@ for step, batch in tqdm(enumerate(dataset), total=num_eval_steps):
             target_tokens = torch.LongTensor(verify_outputs).to(DEVICE) #TODO: verify stage should be batch-fashion, but this verify() is auto-regressive.
             step_verify_calls += 1
             called_verify += 1
+            
+            # Accumulate verify confidences for settlement tracking
+            if verify_top1_top2_diff is not None:
+                # Only accumulate the first gamma1 tokens (excluding bonus token)
+                accumulated_verify_confidences.extend(verify_top1_top2_diff[:args.gamma1])
             
             # Count budget switches only when verify is executed with switched budget
             if budget_switched:
@@ -462,7 +505,7 @@ for step, batch in tqdm(enumerate(dataset), total=num_eval_steps):
                 # Record all token confidence changes (up to first rejection)
                 record_confidence_changes(
                     stored_draft_confidences, 
-                    verify_top1_top2_diff, 
+                    verify_top1_top2_diff[:args.gamma1], 
                     accept_mask, 
                     is_rejected_only=False
                 )
@@ -470,7 +513,7 @@ for step, batch in tqdm(enumerate(dataset), total=num_eval_steps):
                 # Record rejected token confidence changes
                 record_confidence_changes(
                     stored_draft_confidences, 
-                    verify_top1_top2_diff, 
+                    verify_top1_top2_diff[:args.gamma1], 
                     accept_mask, 
                     is_rejected_only=True
                 )
@@ -522,8 +565,17 @@ for step, batch in tqdm(enumerate(dataset), total=num_eval_steps):
                 print("Terminal occured in verification: Fast Track to Settlement")
                 settled = True
 
-                target_tokens = torch.LongTensor(engine.settle(cached_tokens_buffer.view(-1,1), num_unsettled_tokens+1)).to(DEVICE) #TODO: verify stage should be batch-fashion, but this verify() is auto-regressive. 
+                settle_outputs_terminal, settle_logits_terminal, settle_top1_top2_diff_terminal = engine.settle(cached_tokens_buffer.view(-1,1), num_unsettled_tokens+1)
+                target_tokens = torch.LongTensor(settle_outputs_terminal).to(DEVICE) #TODO: verify stage should be batch-fashion, but this verify() is auto-regressive. 
                 step_settle_calls += 1
+                
+                # Record confidence changes for terminal settlement
+                if len(accumulated_draft_confidences) > 0 and settle_top1_top2_diff_terminal is not None:
+                    print(f"Terminal Settlement - comparing accumulated draft vs settle confidences")
+                    
+                    # For terminal settlement, we compare the accumulated confidences
+                    expected_tokens = num_unsettled_tokens
+                    relevant_draft_conf = accumulated_draft_confidences[-expected_tokens:] if len(accumulated_draft_confidences) >= expected_tokens else accumulated_draft_confidences
 
                 input_from_start = torch.concat((engine.input_tokens[:, :engine.verified_cachelength], tokens_buffer), dim=1)
                 draft_tokens = input_from_start[:, -(num_unsettled_tokens):]
@@ -539,6 +591,34 @@ for step, batch in tqdm(enumerate(dataset), total=num_eval_steps):
                 # Compute the number of accepted tokens
                 accept_nums = accept_flags_matrix.sum(dim=1, keepdim=True)  # shape: (BATCH_SIZE, 1)
                 
+                # Record confidence changes for terminal settlement with accept/reject information
+                if len(accumulated_draft_confidences) > 0 and settle_top1_top2_diff_terminal is not None:
+                    # Convert accept_flags_matrix to numpy boolean array for the first batch
+                    accept_mask = accept_flags_matrix[0].cpu().numpy()  # Shape: (num_unsettled_tokens,)
+                    
+                    print(f"Terminal Settlement - comparing accumulated draft vs settle confidences")
+                    print(f"Terminal Settlement accept mask: {accept_mask}")
+                    
+                    # Use the most recent accumulated confidences
+                    expected_tokens = num_unsettled_tokens
+                    relevant_draft_conf = accumulated_draft_confidences[-expected_tokens:] if len(accumulated_draft_confidences) >= expected_tokens else accumulated_draft_confidences
+                    
+                    # Record all token confidence changes (up to first rejection, excluding tokens after rejection)
+                    record_confidence_changes(
+                        relevant_draft_conf, 
+                        settle_top1_top2_diff_terminal[:len(relevant_draft_conf)] if settle_top1_top2_diff_terminal else None, 
+                        accept_mask[:len(relevant_draft_conf)], 
+                        is_rejected_only=False
+                    )
+                    
+                    # Record rejected token confidence changes for terminal settlement
+                    record_confidence_changes(
+                        relevant_draft_conf, 
+                        settle_top1_top2_diff_terminal[:len(relevant_draft_conf)] if settle_top1_top2_diff_terminal else None, 
+                        accept_mask[:len(relevant_draft_conf)], 
+                        is_rejected_only=True
+                    )
+
                 positions_buffer = torch.arange(num_unsettled_tokens, device=DEVICE).view(1, -1).repeat(BATCH_SIZE, 1)
                 mask_buffer = positions_buffer<accept_nums.view(-1,1)
 
@@ -574,9 +654,11 @@ for step, batch in tqdm(enumerate(dataset), total=num_eval_steps):
 
                 tokens_buffer[:, :1] = bonus_tokens
 
-                # reset counters
+                # reset counters and clear accumulated confidences after terminal settlement
                 num_unsettled_tokens = 0
                 called_verify = 0
+                accumulated_draft_confidences = []  # Clear after settlement
+                accumulated_verify_confidences = []  # Clear after settlement
 
                 print(f"settlement accepted tokens: {accept_nums.flatten().item()} + 1 bonus_token")
                 print(f"total unsettled tokens: {num_unsettled_tokens}")
