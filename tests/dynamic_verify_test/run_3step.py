@@ -22,6 +22,170 @@ import os
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 from MagicDec.Engine.RetrievalAttention.benchmark.config import generate_config, parse_attn_args
 import json
+import numpy as np
+import matplotlib.pyplot as plt
+
+# Add confidence analysis class
+class ConfidenceAnalyzer:
+    def __init__(self, num_bins=10):
+        self.num_bins = num_bins
+        self.bin_ranges = [(i/num_bins, (i+1)/num_bins) for i in range(num_bins)]
+        
+        # For all tokens
+        self.all_tokens_data = {f"bin_{i}": [] for i in range(num_bins)}
+        
+        # For rejected tokens only
+        self.rejected_tokens_data = {f"bin_{i}": [] for i in range(num_bins)}
+        
+        # Temporary storage for current speculation cycle
+        self.current_draft_confidences = None
+        self.current_verify_confidences = None
+        
+    def get_bin_index(self, confidence):
+        """Get the bin index for a given confidence value"""
+        bin_idx = min(int(confidence * self.num_bins), self.num_bins - 1)
+        return bin_idx
+    
+    def store_draft_confidences(self, draft_top1_top2_diff):
+        """Store confidences from speculation"""
+        if draft_top1_top2_diff is not None:
+            self.current_draft_confidences = [float(x) for x in draft_top1_top2_diff]
+        else:
+            self.current_draft_confidences = None
+    
+    def store_verify_confidences(self, verify_top1_top2_diff):
+        """Store confidences from verification"""
+        if verify_top1_top2_diff is not None:
+            self.current_verify_confidences = [float(x) for x in verify_top1_top2_diff]
+        else:
+            self.current_verify_confidences = None
+    
+    def analyze_all_tokens(self, num_accepted_tokens):
+        """Analyze confidence changes for all tokens up to accepted position"""
+        if (self.current_draft_confidences is None or 
+            self.current_verify_confidences is None):
+            return
+        
+        # Only analyze tokens up to the number of accepted tokens
+        min_len = min(len(self.current_draft_confidences), 
+                     len(self.current_verify_confidences),
+                     num_accepted_tokens)
+        
+        for i in range(min_len):
+            draft_conf = self.current_draft_confidences[i]
+            verify_conf = self.current_verify_confidences[i]
+            
+            # Get bin based on draft confidence
+            bin_idx = self.get_bin_index(draft_conf)
+            
+            # Calculate confidence change (draft - verify)
+            conf_change = draft_conf - verify_conf
+            
+            self.all_tokens_data[f"bin_{bin_idx}"].append(conf_change)
+    
+    def analyze_rejected_tokens(self, num_accepted_tokens):
+        """Analyze confidence changes for rejected tokens only"""
+        if (self.current_draft_confidences is None or 
+            self.current_verify_confidences is None):
+            return
+        
+        # Find the first rejected token (if any)
+        max_tokens = min(len(self.current_draft_confidences), 
+                        len(self.current_verify_confidences))
+        
+        if num_accepted_tokens < max_tokens:
+            # There is a rejected token at position num_accepted_tokens
+            rejected_idx = num_accepted_tokens
+            
+            draft_conf = self.current_draft_confidences[rejected_idx]
+            verify_conf = self.current_verify_confidences[rejected_idx]
+            
+            # Get bin based on draft confidence
+            bin_idx = self.get_bin_index(draft_conf)
+            
+            # Calculate confidence change (draft - verify)
+            conf_change = draft_conf - verify_conf
+            
+            self.rejected_tokens_data[f"bin_{bin_idx}"].append(conf_change)
+    
+    def reset_current_data(self):
+        """Reset temporary storage after settlement"""
+        self.current_draft_confidences = None
+        self.current_verify_confidences = None
+    
+    def save_histograms(self, output_dir="confidence_analysis"):
+        """Save histograms for each bin"""
+        os.makedirs(output_dir, exist_ok=True)
+        
+        # Save all tokens histograms
+        for i, (bin_key, data) in enumerate(self.all_tokens_data.items()):
+            if len(data) > 0:
+                plt.figure(figsize=(10, 6))
+                plt.hist(data, bins=50, alpha=0.7, edgecolor='black')
+                plt.title(f'All Tokens - Confidence Change Distribution\nBin {i}: [{self.bin_ranges[i][0]:.1f}, {self.bin_ranges[i][1]:.1f})')
+                plt.xlabel('Draft Confidence - Verify Confidence')
+                plt.ylabel('Frequency')
+                plt.grid(True, alpha=0.3)
+                plt.axvline(x=0, color='red', linestyle='--', alpha=0.7, label='No Change')
+                plt.legend()
+                plt.savefig(os.path.join(output_dir, f'all_tokens_bin_{i}.png'), dpi=300, bbox_inches='tight')
+                plt.close()
+        
+        # Save rejected tokens histograms
+        for i, (bin_key, data) in enumerate(self.rejected_tokens_data.items()):
+            if len(data) > 0:
+                plt.figure(figsize=(10, 6))
+                plt.hist(data, bins=50, alpha=0.7, edgecolor='black', color='orange')
+                plt.title(f'Rejected Tokens - Confidence Change Distribution\nBin {i}: [{self.bin_ranges[i][0]:.1f}, {self.bin_ranges[i][1]:.1f})')
+                plt.xlabel('Draft Confidence - Verify Confidence')
+                plt.ylabel('Frequency')
+                plt.grid(True, alpha=0.3)
+                plt.axvline(x=0, color='red', linestyle='--', alpha=0.7, label='No Change')
+                plt.legend()
+                plt.savefig(os.path.join(output_dir, f'rejected_tokens_bin_{i}.png'), dpi=300, bbox_inches='tight')
+                plt.close()
+    
+    def save_statistics(self, output_dir="confidence_analysis"):
+        """Save detailed statistics to CSV"""
+        os.makedirs(output_dir, exist_ok=True)
+        
+        # All tokens statistics
+        with open(os.path.join(output_dir, 'all_tokens_stats.csv'), 'w', newline='') as f:
+            writer = csv.writer(f)
+            writer.writerow(['Bin', 'Range', 'Count', 'Mean', 'Std', 'Min', 'Max'])
+            
+            for i, (bin_key, data) in enumerate(self.all_tokens_data.items()):
+                if len(data) > 0:
+                    data_array = np.array(data)
+                    writer.writerow([
+                        i, f"[{self.bin_ranges[i][0]:.1f}, {self.bin_ranges[i][1]:.1f})",
+                        len(data), np.mean(data_array), np.std(data_array),
+                        np.min(data_array), np.max(data_array)
+                    ])
+                else:
+                    writer.writerow([
+                        i, f"[{self.bin_ranges[i][0]:.1f}, {self.bin_ranges[i][1]:.1f})",
+                        0, 0, 0, 0, 0
+                    ])
+        
+        # Rejected tokens statistics
+        with open(os.path.join(output_dir, 'rejected_tokens_stats.csv'), 'w', newline='') as f:
+            writer = csv.writer(f)
+            writer.writerow(['Bin', 'Range', 'Count', 'Mean', 'Std', 'Min', 'Max'])
+            
+            for i, (bin_key, data) in enumerate(self.rejected_tokens_data.items()):
+                if len(data) > 0:
+                    data_array = np.array(data)
+                    writer.writerow([
+                        i, f"[{self.bin_ranges[i][0]:.1f}, {self.bin_ranges[i][1]:.1f})",
+                        len(data), np.mean(data_array), np.std(data_array),
+                        np.min(data_array), np.max(data_array)
+                    ])
+                else:
+                    writer.writerow([
+                        i, f"[{self.bin_ranges[i][0]:.1f}, {self.bin_ranges[i][1]:.1f})",
+                        0, 0, 0, 0, 0
+                    ])
 
 parser = argparse.ArgumentParser(description='Process model configuration and partitions.')
 parser.add_argument('--model_name', type=str, default="llama-3.1-8b", help='model name')
@@ -48,6 +212,9 @@ parser.add_argument("--enable_dynamic_budget", action='store_true', help="enable
 parser.add_argument("--estimate_ratio", type=float, default=0.25, help="ratio of estimated clusters for RetriveInfer")
 
 args = parser.parse_args()
+
+# Initialize confidence analyzer
+confidence_analyzer = ConfidenceAnalyzer(num_bins=10)
 
 # Init model parallelism
 DEVICE = 'cuda' if torch.cuda.is_available() else 'cpu'
@@ -201,6 +368,9 @@ for step, batch in tqdm(enumerate(dataset), total=num_eval_steps):
         tokens_buffer[:,1:1+args.gamma1] = torch.LongTensor(draft_outputs)
         step_speculate_calls += args.gamma1
         
+        # Store draft confidences for analysis
+        confidence_analyzer.store_draft_confidences(top1_top2_diff)
+        
         # Dynamic budget adjustment based on confidence
         # If all tokens have high confidence (top1_top2_diff > threshold), use lower budget
         current_budget = args.budget2  # default budget
@@ -263,6 +433,9 @@ for step, batch in tqdm(enumerate(dataset), total=num_eval_steps):
 
         step_verify_calls += 1
         called_verify += 1
+        
+        # Store verify confidences for analysis
+        confidence_analyzer.store_verify_confidences(verify_top1_top2_diff)
 
         draft_tokens = tokens_buffer[:, 1:args.gamma1+1]
         flag_accept_matrix = (target_tokens[:, :args.gamma1] == draft_tokens)
@@ -274,6 +447,11 @@ for step, batch in tqdm(enumerate(dataset), total=num_eval_steps):
         accept_nums = accept_flags_matrix.sum(dim=1, keepdim=True)
         num_unsettled_tokens += accept_nums.flatten().item() + 1
 
+        # Analyze confidence changes for verify stage
+        num_accepted = accept_nums.flatten().item()
+        confidence_analyzer.analyze_all_tokens(num_accepted)
+        confidence_analyzer.analyze_rejected_tokens(num_accepted)
+
         positions_buffer = torch.arange(args.gamma1, device=DEVICE).view(1, -1).repeat(BATCH_SIZE, 1)
         mask_buffer = positions_buffer < accept_nums.view(-1,1)
         indices = accept_nums
@@ -284,12 +462,12 @@ for step, batch in tqdm(enumerate(dataset), total=num_eval_steps):
         if condition.any() or (bonus_tokens == eot_1).any() or (bonus_tokens == eot_2).any():
             terminal = True
 
-        if args.dataset == "longbenchv1" or args.dataset == "longbenchv1-32k":
-            if num_nodes.max() - input_len >= num_gen_token_max:
-                terminal = True
-        else:
-            if num_nodes.max() - args.prefix_len >= num_gen_token_max:
-                terminal = True
+        # if args.dataset == "longbenchv1" or args.dataset == "longbenchv1-32k":
+        #     if num_nodes.max() - input_len >= num_gen_token_max:
+        #         terminal = True
+        # else:
+        #     if num_nodes.max() - args.prefix_len >= num_gen_token_max:
+        #         terminal = True
 
         # get accepted token and re-decode to set draft cache
         accepted_tokens = torch.concat((tokens_buffer[:, :1], draft_tokens[mask_buffer].view(1,-1)), dim=1)
@@ -324,6 +502,13 @@ for step, batch in tqdm(enumerate(dataset), total=num_eval_steps):
             accept_flags_cumprod = torch.cumprod(accept_flags_int, dim=1)
             accept_flags_matrix = accept_flags_cumprod.bool()
             accept_nums = accept_flags_matrix.sum(dim=1, keepdim=True)
+            
+            # For settlement, we need to analyze confidence changes for rejected tokens
+            # We use the stored draft and verify confidences from the speculation cycle
+            settle_accepted = accept_nums.flatten().item()
+            # Note: For settle stage, we don't update the analysis because we want to keep 
+            # the comparison between draft and verify, not draft and settle
+            
             positions_buffer = torch.arange(num_unsettled_tokens, device=DEVICE).view(1, -1).repeat(BATCH_SIZE, 1)
             mask_buffer = positions_buffer < accept_nums.view(-1,1)
             indices = accept_nums
@@ -349,6 +534,9 @@ for step, batch in tqdm(enumerate(dataset), total=num_eval_steps):
             # reset counters
             num_unsettled_tokens = 0
             called_verify = 0
+            
+            # Reset confidence analyzer data after settlement
+            confidence_analyzer.reset_current_data()
 
             print(f"settlement accepted tokens: {accept_nums.flatten().item()} + 1 bonus_token")
             print(f"total unsettled tokens: {num_unsettled_tokens}")
@@ -427,3 +615,21 @@ print(f"Total verify calls: {total_verify_calls}")
 print(f"Total settle calls: {total_settle_calls}")
 print(f"Total budget switches: {total_budget_switches}")
 print(f"Total tokens generated: {total_tokens_generated}")
+
+# Save confidence analysis results
+print(f"\n=== Saving Confidence Analysis Results ===")
+confidence_analyzer.save_histograms("confidence_analysis")
+confidence_analyzer.save_statistics("confidence_analysis")
+print(f"Confidence analysis saved to 'confidence_analysis' directory")
+
+# Print summary of collected data
+print(f"\n=== Confidence Analysis Summary ===")
+total_all_tokens = sum(len(data) for data in confidence_analyzer.all_tokens_data.values())
+total_rejected_tokens = sum(len(data) for data in confidence_analyzer.rejected_tokens_data.values())
+print(f"Total tokens analyzed: {total_all_tokens}")
+print(f"Total rejected tokens analyzed: {total_rejected_tokens}")
+
+for i in range(10):
+    all_count = len(confidence_analyzer.all_tokens_data[f"bin_{i}"])
+    rejected_count = len(confidence_analyzer.rejected_tokens_data[f"bin_{i}"])
+    print(f"Bin {i} ([{i/10:.1f}, {(i+1)/10:.1f})): All tokens: {all_count}, Rejected tokens: {rejected_count}")

@@ -108,6 +108,9 @@ class LMBackend_Retro:
             budget_ratio=budget2,
             estimate_ratio=estimate_ratio,
         )
+        
+        self.static_pattern_end_after_settle = self.attn_config_verification["RetroInfer"]["static_pattern_end"]
+        
         return input_ids
 
     # Only used for target verification
@@ -159,6 +162,10 @@ class LMBackend_Retro:
         input_from_start = torch.concat((self.input_tokens[:, :self.verified_cachelength], input_ids), dim=1)
         self.verified_cachelength += input_ids.shape[1]
         self.input_tokens[:,:self.verified_cachelength] = input_from_start
+        
+        # update for sharing cluster information
+        self.attn_config_speculation["RetroInfer"]["static_pattern_end"] = self.attn_config_speculation["RetroInfer"]["static_pattern_end"] + input_ids.shape[1]
+        self.attn_config_verification["RetroInfer"]["static_pattern_end"] = self.attn_config_verification["RetroInfer"]["static_pattern_end"] + input_ids.shape[1]
 
     @torch.inference_mode()
     def update_settled_kv(self, input_ids: torch.LongTensor):
@@ -168,6 +175,11 @@ class LMBackend_Retro:
 
         self.verified_cachelength = self.settled_cachelength
         self.input_tokens[:,:self.verified_cachelength] = input_from_start
+
+        # update for sharing cluster information
+        self.static_pattern_end_after_settle = self.static_pattern_end_after_settle + input_ids.shape[1]
+        self.attn_config_speculation["RetroInfer"]["static_pattern_end"] = self.static_pattern_end_after_settle
+        self.attn_config_verification["RetroInfer"]["static_pattern_end"] = self.static_pattern_end_after_settle
 
     @torch.inference_mode()
     def encode(self, input_ids: torch.LongTensor):        
