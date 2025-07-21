@@ -14,3 +14,12 @@ python tests/RetrievalAttention/selfspec_benchmark.py --model_name Meta-Llama-3.
 python tests/RetrievalAttention/selfspec_benchmark.py --model_name Meta-Llama-3.1-8B  --gamma 64 --B 1 --attn_type RetroInfer --budget_ratio 0.12 --dataset pg19 --prefix_len 65568
 python tests/RetrievalAttention/selfspec_benchmark.py --model_name Meta-Llama-3.1-8B  --gamma 64 --B 1 --attn_type RetroInfer --budget_ratio 0.06 --dataset pg19 --prefix_len 65568
 python tests/RetrievalAttention/selfspec_benchmark.py --model_name Meta-Llama-3.1-8B  --gamma 64 --B 1 --attn_type RetroInfer --budget_ratio 0.03 --dataset pg19 --prefix_len 65568
+
+python tests/RetrievalAttention/selfspec_benchmark.py --model_name Meta-Llama-3.1-8B  --gamma 64 --B 1 --attn_type RetroInfer --budget_ratio 0.25 --dataset longbenchv1 --task qmsum
+python tests/RetrievalAttention/selfspec_benchmark.py --model_name Meta-Llama-3.1-8B  --gamma 64 --B 1 --attn_type RetroInfer --budget_ratio 0.12 --dataset longbenchv1 --task qmsum
+python tests/RetrievalAttention/selfspec_benchmark.py --model_name Meta-Llama-3.1-8B  --gamma 64 --B 1 --attn_type RetroInfer --budget_ratio 0.06 --dataset longbenchv1 --task qmsum
+python tests/RetrievalAttention/selfspec_benchmark.py --model_name Meta-Llama-3.1-8B  --gamma 64 --B 1 --attn_type RetroInfer --budget_ratio 0.03 --dataset longbenchv1 --task qmsum
+python tests/RetrievalAttention/selfspec_benchmark.py --model_name Meta-Llama-3.1-8B  --gamma 64 --B 1 --attn_type RetroInfer --budget_ratio 0.25 --dataset longbenchv1 --task gov_report
+python tests/RetrievalAttention/selfspec_benchmark.py --model_name Meta-Llama-3.1-8B  --gamma 64 --B 1 --attn_type RetroInfer --budget_ratio 0.12 --dataset longbenchv1 --task gov_report
+python tests/RetrievalAttention/selfspec_benchmark.py --model_name Meta-Llama-3.1-8B  --gamma 64 --B 1 --attn_type RetroInfer --budget_ratio 0.06 --dataset longbenchv1 --task gov_report
+python tests/RetrievalAttention/selfspec_benchmark.py --model_name Meta-Llama-3.1-8B  --gamma 64 --B 1 --attn_type RetroInfer --budget_ratio 0.03 --dataset longbenchv1 --task gov_report

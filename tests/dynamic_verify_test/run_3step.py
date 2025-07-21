@@ -27,9 +27,24 @@ import matplotlib.pyplot as plt
 
 # Add confidence analysis class
 class ConfidenceAnalyzer:
-    def __init__(self, num_bins=10):
+    def __init__(self, num_bins=10, bin_width=0.1, center=0.0):
         self.num_bins = num_bins
-        self.bin_ranges = [(i/num_bins, (i+1)/num_bins) for i in range(num_bins)]
+        self.bin_width = bin_width
+        self.center = center
+        
+        # Calculate bin ranges centered around the center value
+        # For example, with center=0.0, bin_width=0.1, num_bins=20:
+        # Bins will be: [-1.0, -0.9), [-0.9, -0.8), ..., [0.9, 1.0)
+        half_bins = num_bins // 2
+        start_value = center - half_bins * bin_width
+        
+        self.bin_ranges = []
+        self.bin_centers = []
+        for i in range(num_bins):
+            bin_start = start_value + i * bin_width
+            bin_end = bin_start + bin_width
+            self.bin_ranges.append((bin_start, bin_end))
+            self.bin_centers.append((bin_start + bin_end) / 2)
         
         # For all tokens
         self.all_tokens_data = {f"bin_{i}": [] for i in range(num_bins)}
@@ -41,10 +56,22 @@ class ConfidenceAnalyzer:
         self.current_draft_confidences = None
         self.current_verify_confidences = None
         
+        # Storage for accumulated unsettled tokens (between settlement cycles)
+        self.accumulated_draft_confidences = []
+        self.accumulated_verify_confidences = []
+        
     def get_bin_index(self, confidence):
         """Get the bin index for a given confidence value"""
-        bin_idx = min(int(confidence * self.num_bins), self.num_bins - 1)
-        return bin_idx
+        # Find which bin this confidence value falls into
+        for i, (bin_start, bin_end) in enumerate(self.bin_ranges):
+            if bin_start <= confidence < bin_end:
+                return i
+        
+        # Handle edge cases: values outside the range
+        if confidence < self.bin_ranges[0][0]:
+            return 0  # Put in first bin
+        else:
+            return self.num_bins - 1  # Put in last bin
     
     def store_draft_confidences(self, draft_top1_top2_diff):
         """Store confidences from speculation"""
@@ -59,6 +86,28 @@ class ConfidenceAnalyzer:
             self.current_verify_confidences = [float(x) for x in verify_top1_top2_diff]
         else:
             self.current_verify_confidences = None
+    
+    def accumulate_confidences_after_verify(self, num_accepted_tokens):
+        """Accumulate draft and verify confidences after each verify call for later settle analysis"""
+        if (self.current_draft_confidences is None or 
+            self.current_verify_confidences is None):
+            return
+        
+        # Only accumulate tokens up to accepted position (plus one for the bonus token)
+        # We include the bonus token because it will be part of the unsettled tokens
+        max_tokens_to_accumulate = num_accepted_tokens + 1
+        # max_available = min(len(self.current_draft_confidences), 
+        #                    len(self.current_verify_confidences))
+        # tokens_to_accumulate = min(max_tokens_to_accumulate, len(self.current_verify_confidences))
+        
+        # Add accepted tokens + bonus token to accumulated storage
+        for i in range(max_tokens_to_accumulate):
+            if i >= len(self.current_draft_confidences):
+                self.accumulated_draft_confidences.append(None)
+                self.accumulated_verify_confidences.append(self.current_verify_confidences[i])
+            else:
+                self.accumulated_draft_confidences.append(self.current_draft_confidences[i])
+                self.accumulated_verify_confidences.append(self.current_verify_confidences[i])
     
     def analyze_all_tokens(self, num_accepted_tokens):
         """Analyze confidence changes for all tokens up to accepted position"""
@@ -83,22 +132,26 @@ class ConfidenceAnalyzer:
             
             self.all_tokens_data[f"bin_{bin_idx}"].append(conf_change)
     
-    def analyze_rejected_tokens(self, num_accepted_tokens):
-        """Analyze confidence changes for rejected tokens only"""
-        if (self.current_draft_confidences is None or 
-            self.current_verify_confidences is None):
+    def analyze_rejected_tokens_settle(self, num_accepted_tokens):
+        """Analyze confidence changes for rejected tokens in settle stage using accumulated data"""
+        if (len(self.accumulated_draft_confidences) == 0 or 
+            len(self.accumulated_verify_confidences) == 0):
             return
         
         # Find the first rejected token (if any)
-        max_tokens = min(len(self.current_draft_confidences), 
-                        len(self.current_verify_confidences))
+        max_tokens = min(len(self.accumulated_draft_confidences), 
+                        len(self.accumulated_verify_confidences))
         
         if num_accepted_tokens < max_tokens:
             # There is a rejected token at position num_accepted_tokens
             rejected_idx = num_accepted_tokens
             
-            draft_conf = self.current_draft_confidences[rejected_idx]
-            verify_conf = self.current_verify_confidences[rejected_idx]
+            draft_conf = self.accumulated_draft_confidences[rejected_idx]
+            verify_conf = self.accumulated_verify_confidences[rejected_idx]
+            
+            if draft_conf is None:
+                # If draft confidence is None, we cannot analyze this token
+                return
             
             # Get bin based on draft confidence
             bin_idx = self.get_bin_index(draft_conf)
@@ -107,13 +160,25 @@ class ConfidenceAnalyzer:
             conf_change = draft_conf - verify_conf
             
             self.rejected_tokens_data[f"bin_{bin_idx}"].append(conf_change)
-    
-    def reset_current_data(self):
-        """Reset temporary storage after settlement"""
+        
+    def get_accumulated_stats(self):
+        """Get statistics about accumulated data for debugging"""
+        return {
+            'draft_count': len(self.accumulated_draft_confidences),
+            'verify_count': len(self.accumulated_verify_confidences),
+            'current_draft_count': len(self.current_draft_confidences) if self.current_draft_confidences else 0,
+            'current_verify_count': len(self.current_verify_confidences) if self.current_verify_confidences else 0
+        }
+        
+    def reset_accumulated_data(self):
+        """Reset accumulated storage after settlement"""
         self.current_draft_confidences = None
         self.current_verify_confidences = None
+
+        self.accumulated_draft_confidences = []
+        self.accumulated_verify_confidences = []
     
-    def save_histograms(self, output_dir="confidence_analysis"):
+    def save_histograms(self, output_dir="confidence_analysis", filename_prefix=""):
         """Save histograms for each bin"""
         os.makedirs(output_dir, exist_ok=True)
         
@@ -122,13 +187,14 @@ class ConfidenceAnalyzer:
             if len(data) > 0:
                 plt.figure(figsize=(10, 6))
                 plt.hist(data, bins=50, alpha=0.7, edgecolor='black')
-                plt.title(f'All Tokens - Confidence Change Distribution\nBin {i}: [{self.bin_ranges[i][0]:.1f}, {self.bin_ranges[i][1]:.1f})')
+                plt.title(f'All Tokens - Confidence Change Distribution\nBin {i}: [{self.bin_ranges[i][0]:.2f}, {self.bin_ranges[i][1]:.2f})')
                 plt.xlabel('Draft Confidence - Verify Confidence')
                 plt.ylabel('Frequency')
                 plt.grid(True, alpha=0.3)
                 plt.axvline(x=0, color='red', linestyle='--', alpha=0.7, label='No Change')
                 plt.legend()
-                plt.savefig(os.path.join(output_dir, f'all_tokens_bin_{i}.png'), dpi=300, bbox_inches='tight')
+                filename = f"{filename_prefix}_all_tokens_bin_{i}.png" if filename_prefix else f'all_tokens_bin_{i}.png'
+                plt.savefig(os.path.join(output_dir, filename), dpi=300, bbox_inches='tight')
                 plt.close()
         
         # Save rejected tokens histograms
@@ -136,55 +202,106 @@ class ConfidenceAnalyzer:
             if len(data) > 0:
                 plt.figure(figsize=(10, 6))
                 plt.hist(data, bins=50, alpha=0.7, edgecolor='black', color='orange')
-                plt.title(f'Rejected Tokens - Confidence Change Distribution\nBin {i}: [{self.bin_ranges[i][0]:.1f}, {self.bin_ranges[i][1]:.1f})')
+                plt.title(f'Rejected Tokens - Confidence Change Distribution\nBin {i}: [{self.bin_ranges[i][0]:.2f}, {self.bin_ranges[i][1]:.2f})')
                 plt.xlabel('Draft Confidence - Verify Confidence')
                 plt.ylabel('Frequency')
                 plt.grid(True, alpha=0.3)
                 plt.axvline(x=0, color='red', linestyle='--', alpha=0.7, label='No Change')
                 plt.legend()
-                plt.savefig(os.path.join(output_dir, f'rejected_tokens_bin_{i}.png'), dpi=300, bbox_inches='tight')
+                filename = f"{filename_prefix}_rejected_tokens_bin_{i}.png" if filename_prefix else f'rejected_tokens_bin_{i}.png'
+                plt.savefig(os.path.join(output_dir, filename), dpi=300, bbox_inches='tight')
                 plt.close()
     
-    def save_statistics(self, output_dir="confidence_analysis"):
-        """Save detailed statistics to CSV"""
+    def save_statistics(self, output_dir="confidence_analysis", filename_prefix="", num_histogram_bins=50):
+        """Save detailed statistics including histogram data to CSV"""
         os.makedirs(output_dir, exist_ok=True)
         
-        # All tokens statistics
-        with open(os.path.join(output_dir, 'all_tokens_stats.csv'), 'w', newline='') as f:
+        # All tokens statistics with histogram data for each bin
+        for i, (bin_key, data) in enumerate(self.all_tokens_data.items()):
+            if len(data) > 0:
+                # Create histogram data
+                hist_counts, hist_edges = np.histogram(data, bins=num_histogram_bins)
+                hist_centers = (hist_edges[:-1] + hist_edges[1:]) / 2
+                
+                # Save individual bin histogram data
+                bin_filename = f"{filename_prefix}_all_tokens_bin_{i}_histogram.csv" if filename_prefix else f'all_tokens_bin_{i}_histogram.csv'
+                with open(os.path.join(output_dir, bin_filename), 'w', newline='') as f:
+                    writer = csv.writer(f)
+                    writer.writerow(['Bin_Center', 'Count', 'Bin_Start', 'Bin_End'])
+                    for j in range(len(hist_counts)):
+                        writer.writerow([hist_centers[j], hist_counts[j], hist_edges[j], hist_edges[j+1]])
+                
+                # Save raw data for this bin
+                raw_filename = f"{filename_prefix}_all_tokens_bin_{i}_raw.csv" if filename_prefix else f'all_tokens_bin_{i}_raw.csv'
+                with open(os.path.join(output_dir, raw_filename), 'w', newline='') as f:
+                    writer = csv.writer(f)
+                    writer.writerow(['Confidence_Change'])
+                    for value in data:
+                        writer.writerow([value])
+        
+        # All tokens summary statistics
+        all_tokens_filename = f"{filename_prefix}_all_tokens_stats.csv" if filename_prefix else 'all_tokens_stats.csv'
+        with open(os.path.join(output_dir, all_tokens_filename), 'w', newline='') as f:
             writer = csv.writer(f)
-            writer.writerow(['Bin', 'Range', 'Count', 'Mean', 'Std', 'Min', 'Max'])
+            writer.writerow(['Bin', 'Range', 'Count', 'Mean', 'Std', 'Min', 'Max', 'Percentile_25', 'Percentile_50', 'Percentile_75'])
             
             for i, (bin_key, data) in enumerate(self.all_tokens_data.items()):
                 if len(data) > 0:
                     data_array = np.array(data)
                     writer.writerow([
-                        i, f"[{self.bin_ranges[i][0]:.1f}, {self.bin_ranges[i][1]:.1f})",
+                        i, f"[{self.bin_ranges[i][0]:.2f}, {self.bin_ranges[i][1]:.2f})",
                         len(data), np.mean(data_array), np.std(data_array),
-                        np.min(data_array), np.max(data_array)
+                        np.min(data_array), np.max(data_array),
+                        np.percentile(data_array, 25), np.percentile(data_array, 50), np.percentile(data_array, 75)
                     ])
                 else:
                     writer.writerow([
-                        i, f"[{self.bin_ranges[i][0]:.1f}, {self.bin_ranges[i][1]:.1f})",
-                        0, 0, 0, 0, 0
+                        i, f"[{self.bin_ranges[i][0]:.2f}, {self.bin_ranges[i][1]:.2f})",
+                        0, 0, 0, 0, 0, 0, 0, 0
                     ])
         
-        # Rejected tokens statistics
-        with open(os.path.join(output_dir, 'rejected_tokens_stats.csv'), 'w', newline='') as f:
+        # Rejected tokens statistics with histogram data for each bin
+        for i, (bin_key, data) in enumerate(self.rejected_tokens_data.items()):
+            if len(data) > 0:
+                # Create histogram data
+                hist_counts, hist_edges = np.histogram(data, bins=num_histogram_bins)
+                hist_centers = (hist_edges[:-1] + hist_edges[1:]) / 2
+                
+                # Save individual bin histogram data
+                bin_filename = f"{filename_prefix}_rejected_tokens_bin_{i}_histogram.csv" if filename_prefix else f'rejected_tokens_bin_{i}_histogram.csv'
+                with open(os.path.join(output_dir, bin_filename), 'w', newline='') as f:
+                    writer = csv.writer(f)
+                    writer.writerow(['Bin_Center', 'Count', 'Bin_Start', 'Bin_End'])
+                    for j in range(len(hist_counts)):
+                        writer.writerow([hist_centers[j], hist_counts[j], hist_edges[j], hist_edges[j+1]])
+                
+                # Save raw data for this bin
+                raw_filename = f"{filename_prefix}_rejected_tokens_bin_{i}_raw.csv" if filename_prefix else f'rejected_tokens_bin_{i}_raw.csv'
+                with open(os.path.join(output_dir, raw_filename), 'w', newline='') as f:
+                    writer = csv.writer(f)
+                    writer.writerow(['Confidence_Change'])
+                    for value in data:
+                        writer.writerow([value])
+        
+        # Rejected tokens summary statistics
+        rejected_tokens_filename = f"{filename_prefix}_rejected_tokens_stats.csv" if filename_prefix else 'rejected_tokens_stats.csv'
+        with open(os.path.join(output_dir, rejected_tokens_filename), 'w', newline='') as f:
             writer = csv.writer(f)
-            writer.writerow(['Bin', 'Range', 'Count', 'Mean', 'Std', 'Min', 'Max'])
+            writer.writerow(['Bin', 'Range', 'Count', 'Mean', 'Std', 'Min', 'Max', 'Percentile_25', 'Percentile_50', 'Percentile_75'])
             
             for i, (bin_key, data) in enumerate(self.rejected_tokens_data.items()):
                 if len(data) > 0:
                     data_array = np.array(data)
                     writer.writerow([
-                        i, f"[{self.bin_ranges[i][0]:.1f}, {self.bin_ranges[i][1]:.1f})",
+                        i, f"[{self.bin_ranges[i][0]:.2f}, {self.bin_ranges[i][1]:.2f})",
                         len(data), np.mean(data_array), np.std(data_array),
-                        np.min(data_array), np.max(data_array)
+                        np.min(data_array), np.max(data_array),
+                        np.percentile(data_array, 25), np.percentile(data_array, 50), np.percentile(data_array, 75)
                     ])
                 else:
                     writer.writerow([
-                        i, f"[{self.bin_ranges[i][0]:.1f}, {self.bin_ranges[i][1]:.1f})",
-                        0, 0, 0, 0, 0
+                        i, f"[{self.bin_ranges[i][0]:.2f}, {self.bin_ranges[i][1]:.2f})",
+                        0, 0, 0, 0, 0, 0, 0, 0
                     ])
 
 parser = argparse.ArgumentParser(description='Process model configuration and partitions.')
@@ -211,10 +328,20 @@ parser.add_argument("--confidence_threshold", type=float, default=0.5, help="thr
 parser.add_argument("--enable_dynamic_budget", action='store_true', help="enable dynamic budget adjustment based on confidence")
 parser.add_argument("--estimate_ratio", type=float, default=0.25, help="ratio of estimated clusters for RetriveInfer")
 
+# Histogram configuration parameters
+parser.add_argument("--hist_num_bins", type=int, default=10, help="number of bins for confidence change histogram")
+parser.add_argument("--hist_bin_width", type=float, default=0.1, help="width of each bin for confidence change histogram")
+parser.add_argument("--hist_center", type=float, default=0.5, help="center value for histogram ranges (typically 0.0)")
+parser.add_argument("--hist_statistics_bins", type=int, default=50, help="number of bins for histogram data in statistics CSV files")
+
 args = parser.parse_args()
 
-# Initialize confidence analyzer
-confidence_analyzer = ConfidenceAnalyzer(num_bins=10)
+# Initialize confidence analyzer with configurable histogram parameters
+confidence_analyzer = ConfidenceAnalyzer(
+    num_bins=args.hist_num_bins, 
+    bin_width=args.hist_bin_width, 
+    center=args.hist_center
+)
 
 # Init model parallelism
 DEVICE = 'cuda' if torch.cuda.is_available() else 'cpu'
@@ -280,7 +407,7 @@ if args.dataset == "pg19":
 else:
   num_eval_steps = len(dataloader)
 
-num_gen_token_max = 200
+num_gen_token_max = 100
 num_gen_tokens = 0
 
 # Store these for dynamic budget adjustment
@@ -335,7 +462,7 @@ total_tokens_generated = 0
 for step, batch in tqdm(enumerate(dataset), total=num_eval_steps):
     if step >= num_eval_steps:
         break
-    
+
     # Initialize step-wise counters
     step_speculate_calls = 0
     step_verify_calls = 0
@@ -449,8 +576,13 @@ for step, batch in tqdm(enumerate(dataset), total=num_eval_steps):
 
         # Analyze confidence changes for verify stage
         num_accepted = accept_nums.flatten().item()
+        print(f"Verify analysis: {num_accepted} tokens accepted, draft_conf_len={len(confidence_analyzer.current_draft_confidences) if confidence_analyzer.current_draft_confidences else 0}, verify_conf_len={len(confidence_analyzer.current_verify_confidences) if confidence_analyzer.current_verify_confidences else 0}")
+        
         confidence_analyzer.analyze_all_tokens(num_accepted)
-        confidence_analyzer.analyze_rejected_tokens(num_accepted)
+        
+        # Accumulate confidences for later settle analysis
+        confidence_analyzer.accumulate_confidences_after_verify(num_accepted)
+        print(f"Accumulated confidences now: {len(confidence_analyzer.accumulated_draft_confidences)} tokens")
 
         positions_buffer = torch.arange(args.gamma1, device=DEVICE).view(1, -1).repeat(BATCH_SIZE, 1)
         mask_buffer = positions_buffer < accept_nums.view(-1,1)
@@ -504,10 +636,13 @@ for step, batch in tqdm(enumerate(dataset), total=num_eval_steps):
             accept_nums = accept_flags_matrix.sum(dim=1, keepdim=True)
             
             # For settlement, we need to analyze confidence changes for rejected tokens
-            # We use the stored draft and verify confidences from the speculation cycle
+            # We use the accumulated draft and verify confidences from the speculation cycles
             settle_accepted = accept_nums.flatten().item()
-            # Note: For settle stage, we don't update the analysis because we want to keep 
-            # the comparison between draft and verify, not draft and settle
+            
+            # Analyze all tokens and rejected tokens in settle stage using accumulated data
+            confidence_analyzer.analyze_rejected_tokens_settle(settle_accepted)
+            
+            print(f"Settle analysis: {settle_accepted} tokens accepted out of {len(confidence_analyzer.accumulated_draft_confidences)} accumulated tokens")
             
             positions_buffer = torch.arange(num_unsettled_tokens, device=DEVICE).view(1, -1).repeat(BATCH_SIZE, 1)
             mask_buffer = positions_buffer < accept_nums.view(-1,1)
@@ -536,7 +671,7 @@ for step, batch in tqdm(enumerate(dataset), total=num_eval_steps):
             called_verify = 0
             
             # Reset confidence analyzer data after settlement
-            confidence_analyzer.reset_current_data()
+            confidence_analyzer.reset_accumulated_data()
 
             print(f"settlement accepted tokens: {accept_nums.flatten().item()} + 1 bonus_token")
             print(f"total unsettled tokens: {num_unsettled_tokens}")
@@ -618,18 +753,28 @@ print(f"Total tokens generated: {total_tokens_generated}")
 
 # Save confidence analysis results
 print(f"\n=== Saving Confidence Analysis Results ===")
-confidence_analyzer.save_histograms("confidence_analysis")
-confidence_analyzer.save_statistics("confidence_analysis")
-print(f"Confidence analysis saved to 'confidence_analysis' directory")
+
+# Create filename prefix with model configuration
+filename_prefix = f"{MODEL}_{args.dataset}_prefix{args.prefix_len}_gamma1{args.gamma1}_budget1{args.budget1}_budget2{args.budget2}"
+
+confidence_analyzer.save_histograms("confidence_analysis", filename_prefix)
+confidence_analyzer.save_statistics("confidence_analysis", filename_prefix, args.hist_statistics_bins)
+print(f"Confidence analysis saved to 'confidence_analysis' directory with prefix: {filename_prefix}")
 
 # Print summary of collected data
 print(f"\n=== Confidence Analysis Summary ===")
+print(f"Histogram configuration: {args.hist_num_bins} bins, width={args.hist_bin_width}, center={args.hist_center}")
+print(f"Bin range: [{confidence_analyzer.bin_ranges[0][0]:.2f}, {confidence_analyzer.bin_ranges[-1][1]:.2f})")
 total_all_tokens = sum(len(data) for data in confidence_analyzer.all_tokens_data.values())
 total_rejected_tokens = sum(len(data) for data in confidence_analyzer.rejected_tokens_data.values())
 print(f"Total tokens analyzed: {total_all_tokens}")
 print(f"Total rejected tokens analyzed: {total_rejected_tokens}")
 
-for i in range(10):
+for i in range(min(args.hist_num_bins, 20)):  # Limit output to first 20 bins for readability
     all_count = len(confidence_analyzer.all_tokens_data[f"bin_{i}"])
     rejected_count = len(confidence_analyzer.rejected_tokens_data[f"bin_{i}"])
-    print(f"Bin {i} ([{i/10:.1f}, {(i+1)/10:.1f})): All tokens: {all_count}, Rejected tokens: {rejected_count}")
+    bin_start, bin_end = confidence_analyzer.bin_ranges[i]
+    print(f"Bin {i} ([{bin_start:.2f}, {bin_end:.2f})): All tokens: {all_count}, Rejected tokens: {rejected_count}")
+
+if args.hist_num_bins > 20:
+    print(f"... (showing first 20 bins out of {args.hist_num_bins} total bins)")
