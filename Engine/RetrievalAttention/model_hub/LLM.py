@@ -215,7 +215,7 @@ class LLM:
 
         top3_logits.append(batch_top3)
         top1_top2_diff.append(topk_vals[0][:,0]-topk_vals[0][:,1])
-        logit_list.append(softmax_logits)
+        logit_list.append(logits)
         self.move()
 
         torch.cuda.synchronize()
@@ -252,7 +252,7 @@ class LLM:
             
             top3_logits.append(batch_top3)
             top1_top2_diff.append(topk_vals[0][:,0]-topk_vals[0][:,1])
-            logit_list.append(softmax_logits)
+            logit_list.append(logits)
 
             # store hot cluster hit ratio
             if self.attention_type == "RetroInfer" and self.profile_hot_cluster_selection_ratio:
