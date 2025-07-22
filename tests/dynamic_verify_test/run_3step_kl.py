@@ -29,37 +29,25 @@ import matplotlib.pyplot as plt
 # Add KL divergence analysis class
 class KLAnalyzer:
     def __init__(self, num_bins=10, bin_width=0.1, center=0.0):
+        # Keep parameters for compatibility but won't use bins
         self.num_bins = num_bins
         self.bin_width = bin_width
         self.center = center
         
-        # Calculate bin ranges centered around the center value
-        # For KL divergence, we expect positive values, so center should be adjusted accordingly
-        half_bins = num_bins // 2
-        start_value = center - half_bins * bin_width
-        
-        self.bin_ranges = []
-        self.bin_centers = []
-        for i in range(num_bins):
-            bin_start = start_value + i * bin_width
-            bin_end = bin_start + bin_width
-            self.bin_ranges.append((bin_start, bin_end))
-            self.bin_centers.append((bin_start + bin_end) / 2)
-        
+        # Store KL divergences without binning
         # For all tokens
-        self.all_tokens_data = {f"bin_{i}": [] for i in range(num_bins)}
+        self.all_tokens_data = []
         
         # For rejected tokens only
-        self.rejected_tokens_data = {f"bin_{i}": [] for i in range(num_bins)}
+        self.rejected_tokens_data = []
         
         # Temporary storage for current speculation cycle
         self.current_draft_logits = None
         self.current_verify_logits = None
-        self.current_draft_kl_divergences = None
         
         # Storage for accumulated unsettled tokens (between settlement cycles)
-        self.accumulated_draft_kl_divergences = []
-        self.accumulated_verify_kl_divergences = []
+        self.accumulated_draft_logits = []
+        self.accumulated_verify_logits = []
         
     def compute_kl_divergence(self, logits_p, logits_q):
         """
@@ -72,49 +60,22 @@ class KLAnalyzer:
         Returns:
             KL divergence value (scalar)
         """
-        # Convert logits to probabilities
-        p = F.softmax(logits_p.squeeze(), dim=-1)  # [vocab_size]
-        q = F.softmax(logits_q.squeeze(), dim=-1)  # [vocab_size]
+        # Convert logits to log probabilities for numerical stability
+        log_p = F.log_softmax(logits_p.squeeze(), dim=-1)  # [vocab_size]
+        log_q = F.log_softmax(logits_q.squeeze(), dim=-1)  # [vocab_size]
         
-        # Add small epsilon to avoid log(0)
-        eps = 1e-8
-        q = q + eps
-        
-        # Compute KL divergence: KL(P||Q) = sum(P * log(P/Q))
-        kl_div = torch.sum(p * torch.log(p / q))
+        # Use PyTorch's built-in KL divergence which is more numerically stable
+        # kl_div expects log probabilities for the first argument and log probabilities for the second
+        kl_div = F.kl_div(log_q, log_p, log_target=True, reduction='sum')
         
         return kl_div.item()
         
-    def get_bin_index(self, kl_value):
-        """Get the bin index for a given KL divergence value"""
-        # Find which bin this KL value falls into
-        for i, (bin_start, bin_end) in enumerate(self.bin_ranges):
-            if bin_start <= kl_value < bin_end:
-                return i
-        
-        # Handle edge cases: values outside the range
-        if kl_value < self.bin_ranges[0][0]:
-            return 0  # Put in first bin
-        else:
-            return self.num_bins - 1  # Put in last bin
-    
     def store_draft_logits(self, draft_logits):
         """Store logits from speculation"""
         if draft_logits is not None:
             self.current_draft_logits = draft_logits
-            # Compute KL divergences for binning purposes (using uniform distribution as reference)
-            kl_divs = []
-            vocab_size = draft_logits[0].shape[-1]
-            uniform_logits = torch.zeros_like(draft_logits[0])  # Uniform distribution in logit space
-            
-            for logit in draft_logits:
-                kl_div = self.compute_kl_divergence(logit, uniform_logits)
-                kl_divs.append(kl_div)
-            
-            self.current_draft_kl_divergences = kl_divs
         else:
             self.current_draft_logits = None
-            self.current_draft_kl_divergences = None
     
     def store_verify_logits(self, verify_logits):
         """Store logits from verification"""
@@ -124,26 +85,18 @@ class KLAnalyzer:
             self.current_verify_logits = None
     
     def accumulate_kl_after_verify(self, num_accepted_tokens):
-        """Accumulate KL divergences after each verify call for later settle analysis"""
+        """Accumulate logits after each verify call for later settle analysis"""
         if (self.current_draft_logits is None or 
             self.current_verify_logits is None):
             return
         
         # Only accumulate tokens up to accepted position (plus one for the bonus token)
         max_tokens_to_accumulate = num_accepted_tokens + 1
-        
-        # Compute KL divergences between draft and verify logits for each token
-        kl_divergences = []
         min_len = min(len(self.current_draft_logits), len(self.current_verify_logits))
         
-        for i in range(min_len):
-            if i < max_tokens_to_accumulate:
-                kl_div = self.compute_kl_divergence(self.current_draft_logits[i], self.current_verify_logits[i])
-                kl_divergences.append(kl_div)
-        
-        # Store the computed KL divergences
-        self.accumulated_draft_kl_divergences.extend(self.current_draft_kl_divergences[:max_tokens_to_accumulate] if self.current_draft_kl_divergences else [])
-        self.accumulated_verify_kl_divergences.extend(kl_divergences)
+        for i in range(min(min_len, max_tokens_to_accumulate)):
+            self.accumulated_draft_logits.append(self.current_draft_logits[i])
+            self.accumulated_verify_logits.append(self.current_verify_logits[i])
     
     def analyze_all_tokens(self, num_accepted_tokens):
         """Analyze KL divergences for all tokens up to accepted position"""
@@ -159,44 +112,34 @@ class KLAnalyzer:
         for i in range(min_len):
             # Compute KL divergence between draft and verify logits
             kl_div = self.compute_kl_divergence(self.current_draft_logits[i], self.current_verify_logits[i])
-            
-            # Get bin based on draft KL divergence with uniform distribution
-            draft_kl = self.current_draft_kl_divergences[i] if self.current_draft_kl_divergences else 0.0
-            bin_idx = self.get_bin_index(draft_kl)
-            
-            self.all_tokens_data[f"bin_{bin_idx}"].append(kl_div)
+            self.all_tokens_data.append(kl_div)
     
     def analyze_rejected_tokens_settle(self, num_accepted_tokens):
         """Analyze KL divergences for rejected tokens in settle stage using accumulated data"""
-        if (len(self.accumulated_draft_kl_divergences) == 0 or 
-            len(self.accumulated_verify_kl_divergences) == 0):
+        if (len(self.accumulated_draft_logits) == 0 or 
+            len(self.accumulated_verify_logits) == 0):
             return
         
         # Find the first rejected token (if any)
-        max_tokens = min(len(self.accumulated_draft_kl_divergences), 
-                        len(self.accumulated_verify_kl_divergences))
+        max_tokens = min(len(self.accumulated_draft_logits), 
+                        len(self.accumulated_verify_logits))
         
         if num_accepted_tokens < max_tokens:
             # There is a rejected token at position num_accepted_tokens
             rejected_idx = num_accepted_tokens
             
-            draft_kl = self.accumulated_draft_kl_divergences[rejected_idx]
-            verify_kl = self.accumulated_verify_kl_divergences[rejected_idx]
+            draft_logits = self.accumulated_draft_logits[rejected_idx]
+            verify_logits = self.accumulated_verify_logits[rejected_idx]
             
-            if draft_kl is None:
-                # If draft KL is None, we cannot analyze this token
-                return
-            
-            # Get bin based on draft KL divergence
-            bin_idx = self.get_bin_index(draft_kl)
-            
-            self.rejected_tokens_data[f"bin_{bin_idx}"].append(verify_kl)
+            # Compute KL divergence between draft and verify logits for rejected token
+            kl_div = self.compute_kl_divergence(draft_logits, verify_logits)
+            self.rejected_tokens_data.append(kl_div)
         
     def get_accumulated_stats(self):
         """Get statistics about accumulated data for debugging"""
         return {
-            'draft_kl_count': len(self.accumulated_draft_kl_divergences),
-            'verify_kl_count': len(self.accumulated_verify_kl_divergences),
+            'draft_logits_count': len(self.accumulated_draft_logits),
+            'verify_logits_count': len(self.accumulated_verify_logits),
             'current_draft_count': len(self.current_draft_logits) if self.current_draft_logits else 0,
             'current_verify_count': len(self.current_verify_logits) if self.current_verify_logits else 0
         }
@@ -205,134 +148,117 @@ class KLAnalyzer:
         """Reset accumulated storage after settlement"""
         self.current_draft_logits = None
         self.current_verify_logits = None
-        self.current_draft_kl_divergences = None
 
-        self.accumulated_draft_kl_divergences = []
-        self.accumulated_verify_kl_divergences = []
+        self.accumulated_draft_logits = []
+        self.accumulated_verify_logits = []
     
     def save_histograms(self, output_dir="kl_analysis", filename_prefix=""):
-        """Save histograms for each bin"""
+        """Save histograms for KL divergences"""
         os.makedirs(output_dir, exist_ok=True)
         
-        # Save all tokens histograms
-        for i, (bin_key, data) in enumerate(self.all_tokens_data.items()):
-            if len(data) > 0:
-                plt.figure(figsize=(10, 6))
-                plt.hist(data, bins=50, alpha=0.7, edgecolor='black')
-                plt.title(f'All Tokens - KL Divergence Distribution\nBin {i}: [{self.bin_ranges[i][0]:.2f}, {self.bin_ranges[i][1]:.2f})')
-                plt.xlabel('KL Divergence (Draft || Verify)')
-                plt.ylabel('Frequency')
-                plt.grid(True, alpha=0.3)
-                plt.legend()
-                filename = f"{filename_prefix}_all_tokens_bin_{i}.png" if filename_prefix else f'all_tokens_bin_{i}.png'
-                plt.savefig(os.path.join(output_dir, filename), dpi=300, bbox_inches='tight')
-                plt.close()
+        # Save all tokens histogram
+        if len(self.all_tokens_data) > 0:
+            plt.figure(figsize=(10, 6))
+            plt.hist(self.all_tokens_data, bins=50, alpha=0.7, edgecolor='black')
+            plt.title('All Tokens - KL Divergence Distribution')
+            plt.xlabel('KL Divergence (Draft || Verify)')
+            plt.ylabel('Frequency')
+            plt.grid(True, alpha=0.3)
+            filename = f"{filename_prefix}_all_tokens_kl.png" if filename_prefix else 'all_tokens_kl.png'
+            plt.savefig(os.path.join(output_dir, filename), dpi=300, bbox_inches='tight')
+            plt.close()
         
-        # Save rejected tokens histograms
-        for i, (bin_key, data) in enumerate(self.rejected_tokens_data.items()):
-            if len(data) > 0:
-                plt.figure(figsize=(10, 6))
-                plt.hist(data, bins=50, alpha=0.7, edgecolor='black', color='orange')
-                plt.title(f'Rejected Tokens - KL Divergence Distribution\nBin {i}: [{self.bin_ranges[i][0]:.2f}, {self.bin_ranges[i][1]:.2f})')
-                plt.xlabel('KL Divergence (Draft || Verify)')
-                plt.ylabel('Frequency')
-                plt.grid(True, alpha=0.3)
-                plt.legend()
-                filename = f"{filename_prefix}_rejected_tokens_bin_{i}.png" if filename_prefix else f'rejected_tokens_bin_{i}.png'
-                plt.savefig(os.path.join(output_dir, filename), dpi=300, bbox_inches='tight')
-                plt.close()
+        # Save rejected tokens histogram
+        if len(self.rejected_tokens_data) > 0:
+            plt.figure(figsize=(10, 6))
+            plt.hist(self.rejected_tokens_data, bins=50, alpha=0.7, edgecolor='black', color='orange')
+            plt.title('Rejected Tokens - KL Divergence Distribution')
+            plt.xlabel('KL Divergence (Draft || Verify)')
+            plt.ylabel('Frequency')
+            plt.grid(True, alpha=0.3)
+            filename = f"{filename_prefix}_rejected_tokens_kl.png" if filename_prefix else 'rejected_tokens_kl.png'
+            plt.savefig(os.path.join(output_dir, filename), dpi=300, bbox_inches='tight')
+            plt.close()
     
     def save_statistics(self, output_dir="kl_analysis", filename_prefix="", num_histogram_bins=50):
         """Save detailed statistics including histogram data to CSV"""
         os.makedirs(output_dir, exist_ok=True)
         
-        # All tokens statistics with histogram data for each bin
-        for i, (bin_key, data) in enumerate(self.all_tokens_data.items()):
-            if len(data) > 0:
-                # Create histogram data
-                hist_counts, hist_edges = np.histogram(data, bins=num_histogram_bins)
-                hist_centers = (hist_edges[:-1] + hist_edges[1:]) / 2
-                
-                # Save individual bin histogram data
-                bin_filename = f"{filename_prefix}_all_tokens_bin_{i}_histogram.csv" if filename_prefix else f'all_tokens_bin_{i}_histogram.csv'
-                with open(os.path.join(output_dir, bin_filename), 'w', newline='') as f:
-                    writer = csv.writer(f)
-                    writer.writerow(['Bin_Center', 'Count', 'Bin_Start', 'Bin_End'])
-                    for j in range(len(hist_counts)):
-                        writer.writerow([hist_centers[j], hist_counts[j], hist_edges[j], hist_edges[j+1]])
-                
-                # Save raw data for this bin
-                raw_filename = f"{filename_prefix}_all_tokens_bin_{i}_raw.csv" if filename_prefix else f'all_tokens_bin_{i}_raw.csv'
-                with open(os.path.join(output_dir, raw_filename), 'w', newline='') as f:
-                    writer = csv.writer(f)
-                    writer.writerow(['KL_Divergence'])
-                    for value in data:
-                        writer.writerow([value])
+        # All tokens statistics
+        if len(self.all_tokens_data) > 0:
+            # Create histogram data
+            hist_counts, hist_edges = np.histogram(self.all_tokens_data, bins=num_histogram_bins)
+            hist_centers = (hist_edges[:-1] + hist_edges[1:]) / 2
+            
+            # Save histogram data
+            hist_filename = f"{filename_prefix}_all_tokens_histogram.csv" if filename_prefix else 'all_tokens_histogram.csv'
+            with open(os.path.join(output_dir, hist_filename), 'w', newline='') as f:
+                writer = csv.writer(f)
+                writer.writerow(['Bin_Center', 'Count', 'Bin_Start', 'Bin_End'])
+                for j in range(len(hist_counts)):
+                    writer.writerow([hist_centers[j], hist_counts[j], hist_edges[j], hist_edges[j+1]])
+            
+            # Save raw data
+            raw_filename = f"{filename_prefix}_all_tokens_raw.csv" if filename_prefix else 'all_tokens_raw.csv'
+            with open(os.path.join(output_dir, raw_filename), 'w', newline='') as f:
+                writer = csv.writer(f)
+                writer.writerow(['KL_Divergence'])
+                for value in self.all_tokens_data:
+                    writer.writerow([value])
         
         # All tokens summary statistics
         all_tokens_filename = f"{filename_prefix}_all_tokens_stats.csv" if filename_prefix else 'all_tokens_stats.csv'
         with open(os.path.join(output_dir, all_tokens_filename), 'w', newline='') as f:
             writer = csv.writer(f)
-            writer.writerow(['Bin', 'Range', 'Count', 'Mean', 'Std', 'Min', 'Max', 'Percentile_25', 'Percentile_50', 'Percentile_75'])
+            writer.writerow(['Count', 'Mean', 'Std', 'Min', 'Max', 'Percentile_25', 'Percentile_50', 'Percentile_75'])
             
-            for i, (bin_key, data) in enumerate(self.all_tokens_data.items()):
-                if len(data) > 0:
-                    data_array = np.array(data)
-                    writer.writerow([
-                        i, f"[{self.bin_ranges[i][0]:.2f}, {self.bin_ranges[i][1]:.2f})",
-                        len(data), np.mean(data_array), np.std(data_array),
-                        np.min(data_array), np.max(data_array),
-                        np.percentile(data_array, 25), np.percentile(data_array, 50), np.percentile(data_array, 75)
-                    ])
-                else:
-                    writer.writerow([
-                        i, f"[{self.bin_ranges[i][0]:.2f}, {self.bin_ranges[i][1]:.2f})",
-                        0, 0, 0, 0, 0, 0, 0, 0
-                    ])
+            if len(self.all_tokens_data) > 0:
+                data_array = np.array(self.all_tokens_data)
+                writer.writerow([
+                    len(self.all_tokens_data), np.mean(data_array), np.std(data_array),
+                    np.min(data_array), np.max(data_array),
+                    np.percentile(data_array, 25), np.percentile(data_array, 50), np.percentile(data_array, 75)
+                ])
+            else:
+                writer.writerow([0, 0, 0, 0, 0, 0, 0, 0])
         
-        # Rejected tokens statistics with histogram data for each bin
-        for i, (bin_key, data) in enumerate(self.rejected_tokens_data.items()):
-            if len(data) > 0:
-                # Create histogram data
-                hist_counts, hist_edges = np.histogram(data, bins=num_histogram_bins)
-                hist_centers = (hist_edges[:-1] + hist_edges[1:]) / 2
-                
-                # Save individual bin histogram data
-                bin_filename = f"{filename_prefix}_rejected_tokens_bin_{i}_histogram.csv" if filename_prefix else f'rejected_tokens_bin_{i}_histogram.csv'
-                with open(os.path.join(output_dir, bin_filename), 'w', newline='') as f:
-                    writer = csv.writer(f)
-                    writer.writerow(['Bin_Center', 'Count', 'Bin_Start', 'Bin_End'])
-                    for j in range(len(hist_counts)):
-                        writer.writerow([hist_centers[j], hist_counts[j], hist_edges[j], hist_edges[j+1]])
-                
-                # Save raw data for this bin
-                raw_filename = f"{filename_prefix}_rejected_tokens_bin_{i}_raw.csv" if filename_prefix else f'rejected_tokens_bin_{i}_raw.csv'
-                with open(os.path.join(output_dir, raw_filename), 'w', newline='') as f:
-                    writer = csv.writer(f)
-                    writer.writerow(['KL_Divergence'])
-                    for value in data:
-                        writer.writerow([value])
+        # Rejected tokens statistics
+        if len(self.rejected_tokens_data) > 0:
+            # Create histogram data
+            hist_counts, hist_edges = np.histogram(self.rejected_tokens_data, bins=num_histogram_bins)
+            hist_centers = (hist_edges[:-1] + hist_edges[1:]) / 2
+            
+            # Save histogram data
+            hist_filename = f"{filename_prefix}_rejected_tokens_histogram.csv" if filename_prefix else 'rejected_tokens_histogram.csv'
+            with open(os.path.join(output_dir, hist_filename), 'w', newline='') as f:
+                writer = csv.writer(f)
+                writer.writerow(['Bin_Center', 'Count', 'Bin_Start', 'Bin_End'])
+                for j in range(len(hist_counts)):
+                    writer.writerow([hist_centers[j], hist_counts[j], hist_edges[j], hist_edges[j+1]])
+            
+            # Save raw data
+            raw_filename = f"{filename_prefix}_rejected_tokens_raw.csv" if filename_prefix else 'rejected_tokens_raw.csv'
+            with open(os.path.join(output_dir, raw_filename), 'w', newline='') as f:
+                writer = csv.writer(f)
+                writer.writerow(['KL_Divergence'])
+                for value in self.rejected_tokens_data:
+                    writer.writerow([value])
         
         # Rejected tokens summary statistics
         rejected_tokens_filename = f"{filename_prefix}_rejected_tokens_stats.csv" if filename_prefix else 'rejected_tokens_stats.csv'
         with open(os.path.join(output_dir, rejected_tokens_filename), 'w', newline='') as f:
             writer = csv.writer(f)
-            writer.writerow(['Bin', 'Range', 'Count', 'Mean', 'Std', 'Min', 'Max', 'Percentile_25', 'Percentile_50', 'Percentile_75'])
+            writer.writerow(['Count', 'Mean', 'Std', 'Min', 'Max', 'Percentile_25', 'Percentile_50', 'Percentile_75'])
             
-            for i, (bin_key, data) in enumerate(self.rejected_tokens_data.items()):
-                if len(data) > 0:
-                    data_array = np.array(data)
-                    writer.writerow([
-                        i, f"[{self.bin_ranges[i][0]:.2f}, {self.bin_ranges[i][1]:.2f})",
-                        len(data), np.mean(data_array), np.std(data_array),
-                        np.min(data_array), np.max(data_array),
-                        np.percentile(data_array, 25), np.percentile(data_array, 50), np.percentile(data_array, 75)
-                    ])
-                else:
-                    writer.writerow([
-                        i, f"[{self.bin_ranges[i][0]:.2f}, {self.bin_ranges[i][1]:.2f})",
-                        0, 0, 0, 0, 0, 0, 0, 0
-                    ])
+            if len(self.rejected_tokens_data) > 0:
+                data_array = np.array(self.rejected_tokens_data)
+                writer.writerow([
+                    len(self.rejected_tokens_data), np.mean(data_array), np.std(data_array),
+                    np.min(data_array), np.max(data_array),
+                    np.percentile(data_array, 25), np.percentile(data_array, 50), np.percentile(data_array, 75)
+                ])
+            else:
+                writer.writerow([0, 0, 0, 0, 0, 0, 0, 0])
 
 parser = argparse.ArgumentParser(description='Process model configuration and partitions.')
 parser.add_argument('--model_name', type=str, default="llama-3.1-8b", help='model name')
@@ -602,7 +528,7 @@ for step, batch in tqdm(enumerate(dataset), total=num_eval_steps):
         
         # Accumulate KL divergences for later settle analysis
         kl_analyzer.accumulate_kl_after_verify(num_accepted)
-        print(f"Accumulated KL divergences now: {len(kl_analyzer.accumulated_draft_kl_divergences)} tokens")
+        print(f"Accumulated logits now: {len(kl_analyzer.accumulated_draft_logits)} tokens")
 
         # Collect KL divergences for step statistics
         if kl_analyzer.current_draft_logits and kl_analyzer.current_verify_logits:
@@ -662,7 +588,7 @@ for step, batch in tqdm(enumerate(dataset), total=num_eval_steps):
             # Analyze rejected tokens in settle stage using accumulated data
             kl_analyzer.analyze_rejected_tokens_settle(settle_accepted)
             
-            print(f"Settle analysis: {settle_accepted} tokens accepted out of {len(kl_analyzer.accumulated_draft_kl_divergences)} accumulated tokens")
+            print(f"Settle analysis: {settle_accepted} tokens accepted out of {len(kl_analyzer.accumulated_draft_logits)} accumulated tokens")
             
             positions_buffer = torch.arange(num_unsettled_tokens, device=DEVICE).view(1, -1).repeat(BATCH_SIZE, 1)
             mask_buffer = positions_buffer < accept_nums.view(-1,1)
@@ -782,18 +708,16 @@ print(f"KL divergence analysis saved to 'kl_analysis' directory with prefix: {fi
 
 # Print summary of collected data
 print(f"\n=== KL Divergence Analysis Summary ===")
-print(f"Histogram configuration: {args.hist_num_bins} bins, width={args.hist_bin_width}, center={args.hist_center}")
-print(f"Bin range: [{kl_analyzer.bin_ranges[0][0]:.2f}, {kl_analyzer.bin_ranges[-1][1]:.2f})")
-total_all_tokens = sum(len(data) for data in kl_analyzer.all_tokens_data.values())
-total_rejected_tokens = sum(len(data) for data in kl_analyzer.rejected_tokens_data.values())
+print(f"Histogram configuration: {args.hist_num_bins} bins, width={args.hist_bin_width}, center={args.hist_center} (Note: No binning used)")
+total_all_tokens = len(kl_analyzer.all_tokens_data)
+total_rejected_tokens = len(kl_analyzer.rejected_tokens_data)
 print(f"Total tokens analyzed: {total_all_tokens}")
 print(f"Total rejected tokens analyzed: {total_rejected_tokens}")
 
-for i in range(min(args.hist_num_bins, 20)):  # Limit output to first 20 bins for readability
-    all_count = len(kl_analyzer.all_tokens_data[f"bin_{i}"])
-    rejected_count = len(kl_analyzer.rejected_tokens_data[f"bin_{i}"])
-    bin_start, bin_end = kl_analyzer.bin_ranges[i]
-    print(f"Bin {i} ([{bin_start:.2f}, {bin_end:.2f})): All tokens: {all_count}, Rejected tokens: {rejected_count}")
+if total_all_tokens > 0:
+    all_tokens_array = np.array(kl_analyzer.all_tokens_data)
+    print(f"All tokens KL divergence - Mean: {np.mean(all_tokens_array):.6f}, Std: {np.std(all_tokens_array):.6f}, Min: {np.min(all_tokens_array):.6f}, Max: {np.max(all_tokens_array):.6f}")
 
-if args.hist_num_bins > 20:
-    print(f"... (showing first 20 bins out of {args.hist_num_bins} total bins)")
+if total_rejected_tokens > 0:
+    rejected_tokens_array = np.array(kl_analyzer.rejected_tokens_data)
+    print(f"Rejected tokens KL divergence - Mean: {np.mean(rejected_tokens_array):.6f}, Std: {np.std(rejected_tokens_array):.6f}, Min: {np.min(rejected_tokens_array):.6f}, Max: {np.max(rejected_tokens_array):.6f}")
