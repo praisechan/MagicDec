@@ -91,12 +91,14 @@ class KLAnalyzer:
             return
         
         # Only accumulate tokens up to accepted position (plus one for the bonus token)
-        max_tokens_to_accumulate = num_accepted_tokens + 1
-        min_len = min(len(self.current_draft_logits), len(self.current_verify_logits))
-        
-        for i in range(min(min_len, max_tokens_to_accumulate)):
-            self.accumulated_draft_logits.append(self.current_draft_logits[i])
-            self.accumulated_verify_logits.append(self.current_verify_logits[i])
+        max_tokens_to_accumulate = num_accepted_tokens + 1        
+        for i in range(max_tokens_to_accumulate):
+            if i == max_tokens_to_accumulate-1:
+                self.accumulated_draft_logits.append(None)
+                self.accumulated_verify_logits.append(self.current_verify_logits[i])            
+            else:
+                self.accumulated_draft_logits.append(self.current_draft_logits[i])
+                self.accumulated_verify_logits.append(self.current_verify_logits[i])
     
     def analyze_all_tokens(self, num_accepted_tokens):
         """Analyze KL divergences for all tokens up to accepted position"""
@@ -131,6 +133,10 @@ class KLAnalyzer:
             draft_logits = self.accumulated_draft_logits[rejected_idx]
             verify_logits = self.accumulated_verify_logits[rejected_idx]
             
+            if draft_logits is None or verify_logits is None:
+                print(f"Warning: No logits available for rejected token at index {rejected_idx}")
+                return
+
             # Compute KL divergence between draft and verify logits for rejected token
             kl_div = self.compute_kl_divergence(draft_logits, verify_logits)
             self.rejected_tokens_data.append(kl_div)
@@ -426,7 +432,7 @@ for step, batch in tqdm(enumerate(dataset), total=num_eval_steps):
     step_verify_calls = 0
     step_settle_calls = 0
     step_budget_switches = 0
-    step_kl_divergences = []  # Store KL divergence values for this step
+    step_start_all_tokens_count = len(kl_analyzer.all_tokens_data)  # Track starting count for step statistics
     
     # input_ids = batch[0].to(DEVICE)
     input_ids = engine.preprocess_input(batch, prompt_format, args.attn_type, model_path, args.budget1, args.budget2, args.estimate_ratio, args.dataset, args.prefix_len)
@@ -530,13 +536,6 @@ for step, batch in tqdm(enumerate(dataset), total=num_eval_steps):
         kl_analyzer.accumulate_kl_after_verify(num_accepted)
         print(f"Accumulated logits now: {len(kl_analyzer.accumulated_draft_logits)} tokens")
 
-        # Collect KL divergences for step statistics
-        if kl_analyzer.current_draft_logits and kl_analyzer.current_verify_logits:
-            min_len = min(len(kl_analyzer.current_draft_logits), len(kl_analyzer.current_verify_logits), num_accepted)
-            for i in range(min_len):
-                kl_div = kl_analyzer.compute_kl_divergence(kl_analyzer.current_draft_logits[i], kl_analyzer.current_verify_logits[i])
-                step_kl_divergences.append(kl_div)
-
         positions_buffer = torch.arange(args.gamma1, device=DEVICE).view(1, -1).repeat(BATCH_SIZE, 1)
         mask_buffer = positions_buffer < accept_nums.view(-1,1)
         indices = accept_nums
@@ -633,9 +632,11 @@ for step, batch in tqdm(enumerate(dataset), total=num_eval_steps):
     output = engine.settled_input_tokens[:, input_len:engine.settled_cachelength][0]
     decoded_output = engine.model.tokenizer.decode(output, skip_special_tokens=True)
     
-    # Calculate KL divergence statistics for this step
-    min_kl_step = float(min(step_kl_divergences)) if step_kl_divergences else 0.0
-    avg_kl_step = float(sum(step_kl_divergences) / len(step_kl_divergences)) if step_kl_divergences else 0.0
+    # Calculate KL divergence statistics for this step using all_tokens_data
+    step_end_all_tokens_count = len(kl_analyzer.all_tokens_data)
+    step_kl_data = kl_analyzer.all_tokens_data[step_start_all_tokens_count:step_end_all_tokens_count]
+    min_kl_step = float(min(step_kl_data)) if step_kl_data else 0.0
+    avg_kl_step = float(sum(step_kl_data) / len(step_kl_data)) if step_kl_data else 0.0
     
     # Update global counters
     total_speculate_calls += step_speculate_calls
