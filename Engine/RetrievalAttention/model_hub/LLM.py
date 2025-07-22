@@ -194,8 +194,10 @@ class LLM:
         outputs_ids = []    # multi iteration, multi request
         output_ids = []     # single iteration, multi request
         
-        outputs_logits = []
+        top3_logits = []
         top1_top2_diff = []
+        logit_list = []
+
         print("Start prefilling ...")
         torch.cuda.synchronize()
         prefill_start = time.time()
@@ -211,8 +213,9 @@ class LLM:
         for i in range(3):
           batch_top3.append((topk_vals[0][:,i],topk_indices[0][:,i]))
 
-        outputs_logits.append(batch_top3)
+        top3_logits.append(batch_top3)
         top1_top2_diff.append(topk_vals[0][:,0]-topk_vals[0][:,1])
+        logit_list.append(softmax_logits)
         self.move()
 
         torch.cuda.synchronize()
@@ -247,8 +250,9 @@ class LLM:
               batch_top3[i].append((topk_vals[0][i][1],topk_indices[0][i][1]))
               batch_top3[i].append((topk_vals[0][i][2],topk_indices[0][i][2]))
             
-            outputs_logits.append(batch_top3)
+            top3_logits.append(batch_top3)
             top1_top2_diff.append(topk_vals[0][:,0]-topk_vals[0][:,1])
+            logit_list.append(softmax_logits)
 
             # store hot cluster hit ratio
             if self.attention_type == "RetroInfer" and self.profile_hot_cluster_selection_ratio:
@@ -295,7 +299,7 @@ class LLM:
                 #         v = val.item() if torch.is_tensor(val) else float(val)
                 #         writer.writerow([token_idx, idx, v])     
         
-        return outputs_ids, outputs_logits, top1_top2_diff
+        return outputs_ids, top3_logits, top1_top2_diff, logit_list
 
 
     def generate(self, attention_type, inputs_ids, attention_masks, max_new_length, attn_config=None, profile_clustering=False, profile_hot_cluster_selection_ratio=False, use_first_kv=False):
@@ -325,6 +329,6 @@ class LLM:
         print("Allocate GPU buffers and CPU pin memory ...\n")
         self.init_kv_cache(input_length, valid_start, attn_config, profile_clustering=profile_clustering, use_first_kv=use_first_kv)
 
-        outputs, logits, top1_top2_diff = self.inference(inputs_ids)
+        outputs, top3_logits, top1_top2_diff, logit_list = self.inference(inputs_ids)
 
-        return outputs, logits, top1_top2_diff
+        return outputs, logit_list, top1_top2_diff
