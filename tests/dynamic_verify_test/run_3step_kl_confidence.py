@@ -26,28 +26,45 @@ import json
 import numpy as np
 import matplotlib.pyplot as plt
 
-# Add KL divergence analysis class
-class KLAnalyzer:
+# Add KL divergence analysis class with confidence binning
+class KLConfidenceAnalyzer:
     def __init__(self, num_bins=10, bin_width=0.1, center=0.0):
-        # Keep parameters for compatibility but won't use bins
         self.num_bins = num_bins
         self.bin_width = bin_width
         self.center = center
         
-        # Store KL divergences without binning
-        # For all tokens
-        self.all_tokens_data = []
+        # Calculate bin ranges centered around the center value
+        # For example, with center=0.0, bin_width=0.1, num_bins=20:
+        # Bins will be: [-1.0, -0.9), [-0.9, -0.8), ..., [0.9, 1.0)
+        half_bins = num_bins // 2
+        start_value = center - half_bins * bin_width
         
-        # For rejected tokens only
-        self.rejected_tokens_data = []
+        self.bin_ranges = []
+        self.bin_centers = []
+        for i in range(num_bins):
+            bin_start = start_value + i * bin_width
+            bin_end = bin_start + bin_width
+            self.bin_ranges.append((bin_start, bin_end))
+            self.bin_centers.append((bin_start + bin_end) / 2)
+        
+        # For all tokens - KL divergences binned by confidence
+        self.all_tokens_kl_data = {f"bin_{i}": [] for i in range(num_bins)}
+        
+        # For rejected tokens only - store both KL divergence and confidence pairs
+        self.rejected_tokens_kl_data = {f"bin_{i}": [] for i in range(num_bins)}
+        self.rejected_tokens_pairs = []  # Store (kl_divergence, confidence) pairs
         
         # Temporary storage for current speculation cycle
         self.current_draft_logits = None
         self.current_verify_logits = None
+        self.current_draft_confidences = None
+        self.current_verify_confidences = None
         
         # Storage for accumulated unsettled tokens (between settlement cycles)
         self.accumulated_draft_logits = []
         self.accumulated_verify_logits = []
+        self.accumulated_draft_confidences = []
+        self.accumulated_verify_confidences = []
         
     def compute_kl_divergence(self, logits_p, logits_q):
         """
@@ -70,61 +87,110 @@ class KLAnalyzer:
         
         return kl_div.item()
         
-    def store_draft_logits(self, draft_logits):
-        """Store logits from speculation"""
+    def get_bin_index(self, confidence):
+        """Get the bin index for a given confidence value"""
+        # Find which bin this confidence value falls into
+        for i, (bin_start, bin_end) in enumerate(self.bin_ranges):
+            if bin_start <= confidence < bin_end:
+                return i
+        
+        # Handle edge cases: values outside the range
+        if confidence < self.bin_ranges[0][0]:
+            return 0  # Put in first bin
+        else:
+            return self.num_bins - 1  # Put in last bin
+    
+    def store_draft_data(self, draft_logits, draft_top1_top2_diff):
+        """Store logits and confidences from speculation"""
         if draft_logits is not None:
             self.current_draft_logits = draft_logits
         else:
             self.current_draft_logits = None
+            
+        if draft_top1_top2_diff is not None:
+            self.current_draft_confidences = [float(x) for x in draft_top1_top2_diff]
+        else:
+            self.current_draft_confidences = None
     
-    def store_verify_logits(self, verify_logits):
-        """Store logits from verification"""
+    def store_verify_data(self, verify_logits, verify_top1_top2_diff):
+        """Store logits and confidences from verification"""
         if verify_logits is not None:
             self.current_verify_logits = verify_logits
         else:
             self.current_verify_logits = None
+            
+        if verify_top1_top2_diff is not None:
+            self.current_verify_confidences = [float(x) for x in verify_top1_top2_diff]
+        else:
+            self.current_verify_confidences = None
     
-    def accumulate_kl_after_verify(self, num_accepted_tokens):
-        """Accumulate logits after each verify call for later settle analysis"""
+    def accumulate_data_after_verify(self, num_accepted_tokens):
+        """Accumulate data after each verify call for later settle analysis"""
         if (self.current_draft_logits is None or 
-            self.current_verify_logits is None):
+            self.current_verify_logits is None or
+            self.current_draft_confidences is None):
             return
         
         # Only accumulate tokens up to accepted position (plus one for the bonus token)
-        max_tokens_to_accumulate = num_accepted_tokens + 1        
+        # We include the bonus token because it will be part of the unsettled tokens
+        max_tokens_to_accumulate = num_accepted_tokens + 1
+        
+        # Add accepted tokens + bonus token to accumulated storage
         for i in range(max_tokens_to_accumulate):
-            if i == max_tokens_to_accumulate-1:
+            if i >= len(self.current_draft_confidences):
                 self.accumulated_draft_logits.append(None)
-                self.accumulated_verify_logits.append(self.current_verify_logits[i])            
+                self.accumulated_draft_confidences.append(None)
             else:
                 self.accumulated_draft_logits.append(self.current_draft_logits[i])
+                self.accumulated_draft_confidences.append(self.current_draft_confidences[i])
+            
+            if i < len(self.current_verify_logits):
                 self.accumulated_verify_logits.append(self.current_verify_logits[i])
+            else:
+                self.accumulated_verify_logits.append(None)
+                
+            if i < len(self.current_verify_confidences):
+                self.accumulated_verify_confidences.append(self.current_verify_confidences[i])
+            else:
+                self.accumulated_verify_confidences.append(None)
     
     def analyze_all_tokens(self, num_accepted_tokens):
-        """Analyze KL divergences for all tokens up to accepted position"""
+        """Analyze KL divergences for all tokens up to accepted position, binned by draft confidence"""
         if (self.current_draft_logits is None or 
-            self.current_verify_logits is None):
+            self.current_verify_logits is None or
+            self.current_draft_confidences is None):
             return
         
         # Only analyze tokens up to the number of accepted tokens
         min_len = min(len(self.current_draft_logits), 
                      len(self.current_verify_logits),
+                     len(self.current_draft_confidences),
                      num_accepted_tokens)
         
         for i in range(min_len):
+            draft_logits = self.current_draft_logits[i]
+            verify_logits = self.current_verify_logits[i]
+            draft_conf = self.current_draft_confidences[i]
+            
+            # Get bin based on draft confidence
+            bin_idx = self.get_bin_index(draft_conf)
+            
             # Compute KL divergence between draft and verify logits
-            kl_div = self.compute_kl_divergence(self.current_draft_logits[i], self.current_verify_logits[i])
-            self.all_tokens_data.append(kl_div)
+            kl_div = self.compute_kl_divergence(draft_logits, verify_logits)
+            
+            self.all_tokens_kl_data[f"bin_{bin_idx}"].append(kl_div)
     
     def analyze_rejected_tokens_settle(self, num_accepted_tokens):
         """Analyze KL divergences for rejected tokens in settle stage using accumulated data"""
         if (len(self.accumulated_draft_logits) == 0 or 
-            len(self.accumulated_verify_logits) == 0):
+            len(self.accumulated_verify_logits) == 0 or
+            len(self.accumulated_draft_confidences) == 0):
             return
         
         # Find the first rejected token (if any)
         max_tokens = min(len(self.accumulated_draft_logits), 
-                        len(self.accumulated_verify_logits))
+                        len(self.accumulated_verify_logits),
+                        len(self.accumulated_draft_confidences))
         
         if num_accepted_tokens < max_tokens:
             # There is a rejected token at position num_accepted_tokens
@@ -132,20 +198,30 @@ class KLAnalyzer:
             
             draft_logits = self.accumulated_draft_logits[rejected_idx]
             verify_logits = self.accumulated_verify_logits[rejected_idx]
+            draft_conf = self.accumulated_draft_confidences[rejected_idx]
             
-            if draft_logits is None or verify_logits is None:
-                print(f"Warning: No logits available for rejected token at index {rejected_idx}")
+            if draft_logits is None or verify_logits is None or draft_conf is None:
+                print(f"Warning: No data available for rejected token at index {rejected_idx}")
                 return
-
+            
+            # Get bin based on draft confidence
+            bin_idx = self.get_bin_index(draft_conf)
+            
             # Compute KL divergence between draft and verify logits for rejected token
             kl_div = self.compute_kl_divergence(draft_logits, verify_logits)
-            self.rejected_tokens_data.append(kl_div)
+            
+            self.rejected_tokens_kl_data[f"bin_{bin_idx}"].append(kl_div)
+            
+            # Store the pair for raw data output
+            self.rejected_tokens_pairs.append((kl_div, draft_conf))
         
     def get_accumulated_stats(self):
         """Get statistics about accumulated data for debugging"""
         return {
             'draft_logits_count': len(self.accumulated_draft_logits),
             'verify_logits_count': len(self.accumulated_verify_logits),
+            'draft_conf_count': len(self.accumulated_draft_confidences),
+            'verify_conf_count': len(self.accumulated_verify_confidences),
             'current_draft_count': len(self.current_draft_logits) if self.current_draft_logits else 0,
             'current_verify_count': len(self.current_verify_logits) if self.current_verify_logits else 0
         }
@@ -154,117 +230,144 @@ class KLAnalyzer:
         """Reset accumulated storage after settlement"""
         self.current_draft_logits = None
         self.current_verify_logits = None
+        self.current_draft_confidences = None
+        self.current_verify_confidences = None
 
         self.accumulated_draft_logits = []
         self.accumulated_verify_logits = []
+        self.accumulated_draft_confidences = []
+        self.accumulated_verify_confidences = []
     
-    def save_histograms(self, output_dir="kl_analysis", filename_prefix=""):
-        """Save histograms for KL divergences"""
+    def save_histograms(self, output_dir="kl_confidence_analysis", filename_prefix=""):
+        """Save histograms for each confidence bin"""
         os.makedirs(output_dir, exist_ok=True)
         
-        # Save all tokens histogram
-        if len(self.all_tokens_data) > 0:
-            plt.figure(figsize=(10, 6))
-            plt.hist(self.all_tokens_data, bins=50, alpha=0.7, edgecolor='black')
-            plt.title('All Tokens - KL Divergence Distribution')
-            plt.xlabel('KL Divergence (Draft || Verify)')
-            plt.ylabel('Frequency')
-            plt.grid(True, alpha=0.3)
-            filename = f"{filename_prefix}_all_tokens_kl.png" if filename_prefix else 'all_tokens_kl.png'
-            plt.savefig(os.path.join(output_dir, filename), dpi=300, bbox_inches='tight')
-            plt.close()
+        # Save all tokens histograms for each bin
+        for i, (bin_key, data) in enumerate(self.all_tokens_kl_data.items()):
+            if len(data) > 0:
+                plt.figure(figsize=(10, 6))
+                plt.hist(data, bins=50, alpha=0.7, edgecolor='black')
+                bin_start, bin_end = self.bin_ranges[i]
+                plt.title(f'All Tokens - KL Divergence Distribution\nConfidence Bin {i}: [{bin_start:.2f}, {bin_end:.2f})')
+                plt.xlabel('KL Divergence (Draft || Verify)')
+                plt.ylabel('Frequency')
+                plt.grid(True, alpha=0.3)
+                filename = f"{filename_prefix}_all_tokens_{bin_key}_kl.png" if filename_prefix else f'all_tokens_{bin_key}_kl.png'
+                plt.savefig(os.path.join(output_dir, filename), dpi=300, bbox_inches='tight')
+                plt.close()
         
-        # Save rejected tokens histogram
-        if len(self.rejected_tokens_data) > 0:
-            plt.figure(figsize=(10, 6))
-            plt.hist(self.rejected_tokens_data, bins=50, alpha=0.7, edgecolor='black', color='orange')
-            plt.title('Rejected Tokens - KL Divergence Distribution')
-            plt.xlabel('KL Divergence (Draft || Verify)')
-            plt.ylabel('Frequency')
-            plt.grid(True, alpha=0.3)
-            filename = f"{filename_prefix}_rejected_tokens_kl.png" if filename_prefix else 'rejected_tokens_kl.png'
-            plt.savefig(os.path.join(output_dir, filename), dpi=300, bbox_inches='tight')
-            plt.close()
+        # Save rejected tokens histograms for each bin
+        for i, (bin_key, data) in enumerate(self.rejected_tokens_kl_data.items()):
+            if len(data) > 0:
+                plt.figure(figsize=(10, 6))
+                plt.hist(data, bins=50, alpha=0.7, edgecolor='black', color='orange')
+                bin_start, bin_end = self.bin_ranges[i]
+                plt.title(f'Rejected Tokens - KL Divergence Distribution\nConfidence Bin {i}: [{bin_start:.2f}, {bin_end:.2f})')
+                plt.xlabel('KL Divergence (Draft || Verify)')
+                plt.ylabel('Frequency')
+                plt.grid(True, alpha=0.3)
+                filename = f"{filename_prefix}_rejected_tokens_{bin_key}_kl.png" if filename_prefix else f'rejected_tokens_{bin_key}_kl.png'
+                plt.savefig(os.path.join(output_dir, filename), dpi=300, bbox_inches='tight')
+                plt.close()
     
-    def save_statistics(self, output_dir="kl_analysis", filename_prefix="", num_histogram_bins=50):
+    def save_statistics(self, output_dir="kl_confidence_analysis", filename_prefix="", num_histogram_bins=50):
         """Save detailed statistics including histogram data to CSV"""
         os.makedirs(output_dir, exist_ok=True)
         
-        # All tokens statistics
-        if len(self.all_tokens_data) > 0:
-            # Create histogram data
-            hist_counts, hist_edges = np.histogram(self.all_tokens_data, bins=num_histogram_bins)
-            hist_centers = (hist_edges[:-1] + hist_edges[1:]) / 2
-            
-            # Save histogram data
-            hist_filename = f"{filename_prefix}_all_tokens_histogram.csv" if filename_prefix else 'all_tokens_histogram.csv'
-            with open(os.path.join(output_dir, hist_filename), 'w', newline='') as f:
-                writer = csv.writer(f)
-                writer.writerow(['Bin_Center', 'Count', 'Bin_Start', 'Bin_End'])
-                for j in range(len(hist_counts)):
-                    writer.writerow([hist_centers[j], hist_counts[j], hist_edges[j], hist_edges[j+1]])
-            
-            # Save raw data
-            raw_filename = f"{filename_prefix}_all_tokens_raw.csv" if filename_prefix else 'all_tokens_raw.csv'
-            with open(os.path.join(output_dir, raw_filename), 'w', newline='') as f:
-                writer = csv.writer(f)
-                writer.writerow(['KL_Divergence'])
-                for value in self.all_tokens_data:
-                    writer.writerow([value])
+        # All tokens statistics with histogram data for each bin
+        for i, (bin_key, data) in enumerate(self.all_tokens_kl_data.items()):
+            if len(data) > 0:
+                # Create histogram data
+                hist_counts, hist_edges = np.histogram(data, bins=num_histogram_bins)
+                hist_centers = (hist_edges[:-1] + hist_edges[1:]) / 2
+                
+                # Save histogram data
+                hist_filename = f"{filename_prefix}_all_tokens_{bin_key}_histogram.csv" if filename_prefix else f'all_tokens_{bin_key}_histogram.csv'
+                with open(os.path.join(output_dir, hist_filename), 'w', newline='') as f:
+                    writer = csv.writer(f)
+                    writer.writerow(['Bin_Center', 'Count', 'Bin_Start', 'Bin_End'])
+                    for j in range(len(hist_counts)):
+                        writer.writerow([hist_centers[j], hist_counts[j], hist_edges[j], hist_edges[j+1]])
+                
+                # Save raw data
+                raw_filename = f"{filename_prefix}_all_tokens_{bin_key}_raw.csv" if filename_prefix else f'all_tokens_{bin_key}_raw.csv'
+                with open(os.path.join(output_dir, raw_filename), 'w', newline='') as f:
+                    writer = csv.writer(f)
+                    writer.writerow(['KL_Divergence'])
+                    for value in data:
+                        writer.writerow([value])
         
         # All tokens summary statistics
         all_tokens_filename = f"{filename_prefix}_all_tokens_stats.csv" if filename_prefix else 'all_tokens_stats.csv'
         with open(os.path.join(output_dir, all_tokens_filename), 'w', newline='') as f:
             writer = csv.writer(f)
-            writer.writerow(['Count', 'Mean', 'Std', 'Min', 'Max', 'Percentile_25', 'Percentile_50', 'Percentile_75'])
+            writer.writerow(['Bin', 'Range', 'Count', 'Mean', 'Std', 'Min', 'Max', 'Percentile_25', 'Percentile_50', 'Percentile_75'])
             
-            if len(self.all_tokens_data) > 0:
-                data_array = np.array(self.all_tokens_data)
-                writer.writerow([
-                    len(self.all_tokens_data), np.mean(data_array), np.std(data_array),
-                    np.min(data_array), np.max(data_array),
-                    np.percentile(data_array, 25), np.percentile(data_array, 50), np.percentile(data_array, 75)
-                ])
-            else:
-                writer.writerow([0, 0, 0, 0, 0, 0, 0, 0])
+            for i, (bin_key, data) in enumerate(self.all_tokens_kl_data.items()):
+                bin_start, bin_end = self.bin_ranges[i]
+                bin_range_str = f"[{bin_start:.2f}, {bin_end:.2f})"
+                
+                if len(data) > 0:
+                    data_array = np.array(data)
+                    writer.writerow([
+                        i, bin_range_str, len(data), np.mean(data_array), np.std(data_array),
+                        np.min(data_array), np.max(data_array),
+                        np.percentile(data_array, 25), np.percentile(data_array, 50), np.percentile(data_array, 75)
+                    ])
+                else:
+                    writer.writerow([i, bin_range_str, 0, 0, 0, 0, 0, 0, 0, 0])
         
-        # Rejected tokens statistics
-        if len(self.rejected_tokens_data) > 0:
-            # Create histogram data
-            hist_counts, hist_edges = np.histogram(self.rejected_tokens_data, bins=num_histogram_bins)
-            hist_centers = (hist_edges[:-1] + hist_edges[1:]) / 2
-            
-            # Save histogram data
-            hist_filename = f"{filename_prefix}_rejected_tokens_histogram.csv" if filename_prefix else 'rejected_tokens_histogram.csv'
-            with open(os.path.join(output_dir, hist_filename), 'w', newline='') as f:
+        # Rejected tokens statistics with histogram data for each bin
+        for i, (bin_key, data) in enumerate(self.rejected_tokens_kl_data.items()):
+            if len(data) > 0:
+                # Create histogram data
+                hist_counts, hist_edges = np.histogram(data, bins=num_histogram_bins)
+                hist_centers = (hist_edges[:-1] + hist_edges[1:]) / 2
+                
+                # Save histogram data
+                hist_filename = f"{filename_prefix}_rejected_tokens_{bin_key}_histogram.csv" if filename_prefix else f'rejected_tokens_{bin_key}_histogram.csv'
+                with open(os.path.join(output_dir, hist_filename), 'w', newline='') as f:
+                    writer = csv.writer(f)
+                    writer.writerow(['Bin_Center', 'Count', 'Bin_Start', 'Bin_End'])
+                    for j in range(len(hist_counts)):
+                        writer.writerow([hist_centers[j], hist_counts[j], hist_edges[j], hist_edges[j+1]])
+                
+                # Save raw data
+                raw_filename = f"{filename_prefix}_rejected_tokens_{bin_key}_raw.csv" if filename_prefix else f'rejected_tokens_{bin_key}_raw.csv'
+                with open(os.path.join(output_dir, raw_filename), 'w', newline='') as f:
+                    writer = csv.writer(f)
+                    writer.writerow(['KL_Divergence'])
+                    for value in data:
+                        writer.writerow([value])
+        
+        # Save rejected tokens pairs (KL divergence, confidence) in a single file
+        if len(self.rejected_tokens_pairs) > 0:
+            pairs_filename = f"{filename_prefix}_rejected_tokens_raw.csv" if filename_prefix else 'rejected_tokens_raw.csv'
+            with open(os.path.join(output_dir, pairs_filename), 'w', newline='') as f:
                 writer = csv.writer(f)
-                writer.writerow(['Bin_Center', 'Count', 'Bin_Start', 'Bin_End'])
-                for j in range(len(hist_counts)):
-                    writer.writerow([hist_centers[j], hist_counts[j], hist_edges[j], hist_edges[j+1]])
-            
-            # Save raw data
-            raw_filename = f"{filename_prefix}_rejected_tokens_raw.csv" if filename_prefix else 'rejected_tokens_raw.csv'
-            with open(os.path.join(output_dir, raw_filename), 'w', newline='') as f:
-                writer = csv.writer(f)
-                writer.writerow(['KL_Divergence'])
-                for value in self.rejected_tokens_data:
-                    writer.writerow([value])
+                writer.writerow(['KL_Divergence', 'Draft_Confidence'])
+                for kl_div, confidence in self.rejected_tokens_pairs:
+                    writer.writerow([kl_div, confidence])
         
         # Rejected tokens summary statistics
         rejected_tokens_filename = f"{filename_prefix}_rejected_tokens_stats.csv" if filename_prefix else 'rejected_tokens_stats.csv'
         with open(os.path.join(output_dir, rejected_tokens_filename), 'w', newline='') as f:
             writer = csv.writer(f)
-            writer.writerow(['Count', 'Mean', 'Std', 'Min', 'Max', 'Percentile_25', 'Percentile_50', 'Percentile_75'])
+            writer.writerow(['Bin', 'Range', 'Count', 'Mean', 'Std', 'Min', 'Max', 'Percentile_25', 'Percentile_50', 'Percentile_75'])
             
-            if len(self.rejected_tokens_data) > 0:
-                data_array = np.array(self.rejected_tokens_data)
-                writer.writerow([
-                    len(self.rejected_tokens_data), np.mean(data_array), np.std(data_array),
-                    np.min(data_array), np.max(data_array),
-                    np.percentile(data_array, 25), np.percentile(data_array, 50), np.percentile(data_array, 75)
-                ])
-            else:
-                writer.writerow([0, 0, 0, 0, 0, 0, 0, 0])
+            for i, (bin_key, data) in enumerate(self.rejected_tokens_kl_data.items()):
+                bin_start, bin_end = self.bin_ranges[i]
+                bin_range_str = f"[{bin_start:.2f}, {bin_end:.2f})"
+                
+                if len(data) > 0:
+                    data_array = np.array(data)
+                    writer.writerow([
+                        i, bin_range_str, len(data), np.mean(data_array), np.std(data_array),
+                        np.min(data_array), np.max(data_array),
+                        np.percentile(data_array, 25), np.percentile(data_array, 50), np.percentile(data_array, 75)
+                    ])
+                else:
+                    writer.writerow([i, bin_range_str, 0, 0, 0, 0, 0, 0, 0, 0])
 
 parser = argparse.ArgumentParser(description='Process model configuration and partitions.')
 parser.add_argument('--model_name', type=str, default="llama-3.1-8b", help='model name')
@@ -290,16 +393,16 @@ parser.add_argument("--confidence_threshold", type=float, default=0.5, help="thr
 parser.add_argument("--enable_dynamic_budget", action='store_true', help="enable dynamic budget adjustment based on confidence")
 parser.add_argument("--estimate_ratio", type=float, default=0.25, help="ratio of estimated clusters for RetriveInfer")
 
-# Histogram configuration parameters for KL divergence
-parser.add_argument("--hist_num_bins", type=int, default=10, help="number of bins for KL divergence histogram")
-parser.add_argument("--hist_bin_width", type=float, default=0.1, help="width of each bin for KL divergence histogram")
-parser.add_argument("--hist_center", type=float, default=0.5, help="center value for histogram ranges (for KL divergence, typically positive)")
+# Histogram configuration parameters
+parser.add_argument("--hist_num_bins", type=int, default=10, help="number of bins for confidence change histogram")
+parser.add_argument("--hist_bin_width", type=float, default=0.1, help="width of each bin for confidence change histogram")
+parser.add_argument("--hist_center", type=float, default=0.5, help="center value for histogram ranges (typically 0.5 for confidence)")
 parser.add_argument("--hist_statistics_bins", type=int, default=50, help="number of bins for histogram data in statistics CSV files")
 
 args = parser.parse_args()
 
-# Initialize KL analyzer with configurable histogram parameters
-kl_analyzer = KLAnalyzer(
+# Initialize KL confidence analyzer with configurable histogram parameters
+kl_confidence_analyzer = KLConfidenceAnalyzer(
     num_bins=args.hist_num_bins, 
     bin_width=args.hist_bin_width, 
     center=args.hist_center
@@ -381,15 +484,15 @@ log_dir = "logs"
 os.makedirs(log_dir, exist_ok=True)
 
 # Simple filenames without timestamp/counter
-step_log_file = os.path.join(log_dir, "step_log_kl.csv")
-accumulated_log_file = os.path.join(log_dir, "accumulated_log_kl.csv")
+step_log_file = os.path.join(log_dir, "step_log_kl_confidence.csv")
+accumulated_log_file = os.path.join(log_dir, "accumulated_log_kl_confidence.csv")
 
 # Initialize step-wise CSV file with headers
 step_headers = [
     "step", "dataset", "prefix_len", "gamma1", "gamma2", "budget1", "budget2", 
     "budget2_low", "confidence_threshold", "enable_dynamic_budget", "speculate_calls", "verify_calls", 
-    "settle_calls", "budget_switches_step", "tokens_generated", "min_kl_divergence", 
-    "avg_kl_divergence"
+    "settle_calls", "budget_switches_step", "tokens_generated", "min_confidence", 
+    "avg_confidence"
 ]
 
 # Initialize accumulated CSV file with headers
@@ -424,12 +527,13 @@ total_tokens_generated = 0
 for step, batch in tqdm(enumerate(dataset), total=num_eval_steps):
     if step >= num_eval_steps:
         break
+
     # Initialize step-wise counters
     step_speculate_calls = 0
     step_verify_calls = 0
     step_settle_calls = 0
     step_budget_switches = 0
-    step_start_all_tokens_count = len(kl_analyzer.all_tokens_data)  # Track starting count for step statistics
+    step_confidences = []  # Store confidence values for this step
     
     # input_ids = batch[0].to(DEVICE)
     input_ids = engine.preprocess_input(batch, prompt_format, args.attn_type, model_path, args.budget1, args.budget2, args.estimate_ratio, args.dataset, args.prefix_len)
@@ -456,16 +560,19 @@ for step, batch in tqdm(enumerate(dataset), total=num_eval_steps):
         tokens_buffer[:,1:1+args.gamma1] = torch.LongTensor(draft_outputs)
         step_speculate_calls += args.gamma1
         
-        # Store draft logits for KL analysis
-        kl_analyzer.store_draft_logits(draft_logits)
+        # Store draft data for KL analysis
+        kl_confidence_analyzer.store_draft_data(draft_logits, top1_top2_diff)
         
-        # Dynamic budget adjustment based on confidence (keeping original logic)
+        # Dynamic budget adjustment based on confidence
+        # If all tokens have high confidence (top1_top2_diff > threshold), use lower budget
         current_budget = args.budget2  # default budget
         budget_switched = False  # Track if budget was switched for this speculation
         
         if args.enable_dynamic_budget and top1_top2_diff is not None and len(top1_top2_diff) > 0:
             min_confidence = torch.min(torch.tensor(top1_top2_diff))
             avg_confidence = torch.mean(torch.tensor(top1_top2_diff))
+            # Convert tensor values to floats for storage
+            step_confidences.extend([float(x) for x in top1_top2_diff])  # Store all confidence values as floats
             
             if min_confidence > args.confidence_threshold:
                 # High confidence: use lower budget for verification
@@ -492,6 +599,15 @@ for step, batch in tqdm(enumerate(dataset), total=num_eval_steps):
                 print(f"Low confidence detected (min_diff={min_confidence:.3f}), using original verification budget: {current_budget}")
         else:
             # Dynamic budget disabled or no confidence data available - use original budget
+            if args.enable_dynamic_budget:
+                print(f"Dynamic budget enabled but no confidence data available - using original budget: {current_budget}")
+            else:
+                print(f"Dynamic budget disabled - using original budget: {current_budget}")
+            
+            # Still collect confidence data for logging if available
+            if top1_top2_diff is not None and len(top1_top2_diff) > 0:
+                step_confidences.extend([float(x) for x in top1_top2_diff])
+            
             engine.update_verification_budget(
                 budget_ratio=current_budget, 
                 estimate_ratio=args.estimate_ratio,
@@ -510,8 +626,8 @@ for step, batch in tqdm(enumerate(dataset), total=num_eval_steps):
         step_verify_calls += 1
         called_verify += 1
         
-        # Store verify logits for KL analysis
-        kl_analyzer.store_verify_logits(verify_logits)
+        # Store verify data for KL analysis
+        kl_confidence_analyzer.store_verify_data(verify_logits, verify_top1_top2_diff)
 
         draft_tokens = tokens_buffer[:, 1:args.gamma1+1]
         flag_accept_matrix = (target_tokens[:, :args.gamma1] == draft_tokens)
@@ -525,13 +641,13 @@ for step, batch in tqdm(enumerate(dataset), total=num_eval_steps):
 
         # Analyze KL divergences for verify stage
         num_accepted = accept_nums.flatten().item()
-        print(f"Verify analysis: {num_accepted} tokens accepted, draft_logits_len={len(kl_analyzer.current_draft_logits) if kl_analyzer.current_draft_logits else 0}, verify_logits_len={len(kl_analyzer.current_verify_logits) if kl_analyzer.current_verify_logits else 0}")
+        print(f"Verify analysis: {num_accepted} tokens accepted, draft_logits_len={len(kl_confidence_analyzer.current_draft_logits) if kl_confidence_analyzer.current_draft_logits else 0}, verify_logits_len={len(kl_confidence_analyzer.current_verify_logits) if kl_confidence_analyzer.current_verify_logits else 0}")
         
-        kl_analyzer.analyze_all_tokens(num_accepted)
+        kl_confidence_analyzer.analyze_all_tokens(num_accepted)
         
-        # Accumulate KL divergences for later settle analysis
-        kl_analyzer.accumulate_kl_after_verify(num_accepted)
-        print(f"Accumulated logits now: {len(kl_analyzer.accumulated_draft_logits)} tokens")
+        # Accumulate data for later settle analysis
+        kl_confidence_analyzer.accumulate_data_after_verify(num_accepted)
+        print(f"Accumulated data now: {len(kl_confidence_analyzer.accumulated_draft_logits)} tokens")
 
         positions_buffer = torch.arange(args.gamma1, device=DEVICE).view(1, -1).repeat(BATCH_SIZE, 1)
         mask_buffer = positions_buffer < accept_nums.view(-1,1)
@@ -578,62 +694,49 @@ for step, batch in tqdm(enumerate(dataset), total=num_eval_steps):
             accept_nums = accept_flags_matrix.sum(dim=1, keepdim=True)
             
             # For settlement, we need to analyze KL divergences for rejected tokens
-            # We use the accumulated draft and verify KL divergences from the speculation cycles
+            # We use the accumulated draft and verify data from the speculation cycles
             settle_accepted = accept_nums.flatten().item()
             
             # Analyze rejected tokens in settle stage using accumulated data
-            kl_analyzer.analyze_rejected_tokens_settle(settle_accepted)
+            kl_confidence_analyzer.analyze_rejected_tokens_settle(settle_accepted)
             
-            print(f"Settle analysis: {settle_accepted} tokens accepted out of {len(kl_analyzer.accumulated_draft_logits)} accumulated tokens")
+            print(f"Settle analysis: {settle_accepted} tokens accepted out of {len(kl_confidence_analyzer.accumulated_draft_logits)} accumulated tokens")
             
             positions_buffer = torch.arange(num_unsettled_tokens, device=DEVICE).view(1, -1).repeat(BATCH_SIZE, 1)
             mask_buffer = positions_buffer < accept_nums.view(-1,1)
             indices = accept_nums
             bonus_tokens = target_tokens.gather(1, indices)
-            num_nodes += (accept_nums.flatten() + 1)
 
-            # Check for termination conditions again
+            # Check for termination conditions
             condition = (eot_condition & accept_flags_matrix).any(dim=1, keepdim=True)
             if condition.any() or (bonus_tokens == eot_1).any() or (bonus_tokens == eot_2).any():
                 terminal = True
 
-            if args.dataset == "longbenchv1" or args.dataset == "longbenchv1-32k":
-                if num_nodes.max() - input_len >= num_gen_token_max:
-                    terminal = True
-            else:
-                if num_nodes.max() - args.prefix_len >= num_gen_token_max:
-                    terminal = True
-
+            # get accepted token and re-decode to set draft cache
             accepted_tokens = torch.concat((cached_tokens_buffer.view(1,-1), draft_tokens[mask_buffer].view(1,-1)), dim=1)
+            bonus_tokens = target_tokens.gather(1, indices)
+            # load settled tokens to input cache.
             engine.update_settled_kv(accepted_tokens)
+            # after settle, the new start is the bonus tokens
             tokens_buffer[:, :1] = bonus_tokens
 
-            # reset counters
+            # Reset accumulated data after settlement
+            kl_confidence_analyzer.reset_accumulated_data()
+
+            print(f"settlement accepted tokens: {accept_nums.flatten().item()} + 1 bonus token")
+            
+            # record unsettled_tokens
             num_unsettled_tokens = 0
             called_verify = 0
-            
-            # Reset KL analyzer data after settlement
-            kl_analyzer.reset_accumulated_data()
-
-            print(f"settlement accepted tokens: {accept_nums.flatten().item()} + 1 bonus_token")
-            print(f"total unsettled tokens: {num_unsettled_tokens}")
-
-            eot_condition = ((target_tokens == eot_1) | (target_tokens == eot_2))
-            if True in eot_condition:
-                eot_index = (eot_condition.view(-1) == True).nonzero(as_tuple=True)[0].item()
-                engine.settled_cachelength = engine.settled_cachelength - accept_nums + eot_index
-                num_nodes = num_nodes - accept_nums + eot_index
 
     num_gen_tokens = engine.settled_cachelength - input_len
 
     output = engine.settled_input_tokens[:, input_len:engine.settled_cachelength][0]
     decoded_output = engine.model.tokenizer.decode(output, skip_special_tokens=True)
     
-    # Calculate KL divergence statistics for this step using all_tokens_data
-    step_end_all_tokens_count = len(kl_analyzer.all_tokens_data)
-    step_kl_data = kl_analyzer.all_tokens_data[step_start_all_tokens_count:step_end_all_tokens_count]
-    min_kl_step = float(min(step_kl_data)) if step_kl_data else 0.0
-    avg_kl_step = float(sum(step_kl_data) / len(step_kl_data)) if step_kl_data else 0.0
+    # Calculate confidence statistics for this step
+    min_confidence_step = float(min(step_confidences)) if step_confidences else 0.0
+    avg_confidence_step = float(sum(step_confidences) / len(step_confidences)) if step_confidences else 0.0
     
     # Update global counters
     total_speculate_calls += step_speculate_calls
@@ -647,7 +750,7 @@ for step, batch in tqdm(enumerate(dataset), total=num_eval_steps):
         step, args.dataset, args.prefix_len, args.gamma1, args.gamma2, 
         args.budget1, args.budget2, args.budget2_low, args.confidence_threshold, args.enable_dynamic_budget,
         step_speculate_calls, step_verify_calls, step_settle_calls, 
-        step_budget_switches, num_gen_tokens, min_kl_step, avg_kl_step
+        step_budget_switches, num_gen_tokens, min_confidence_step, avg_confidence_step
     ]
     
     with open(step_log_file, mode='a', newline='') as file:
@@ -662,8 +765,8 @@ for step, batch in tqdm(enumerate(dataset), total=num_eval_steps):
     print(f"Settle calls: {step_settle_calls}")
     print(f"Budget switches: {step_budget_switches}")
     print(f"Tokens generated: {num_gen_tokens}")
-    print(f"Min KL divergence: {min_kl_step:.6f}")
-    print(f"Avg KL divergence: {avg_kl_step:.6f}")
+    print(f"Min confidence: {min_confidence_step:.3f}")
+    print(f"Avg confidence: {avg_confidence_step:.3f}")
     
     print(f"\n=== Accumulated Statistics (up to step {step}) ===")
     print(f"Total speculate calls: {total_speculate_calls}")
@@ -676,6 +779,7 @@ for step, batch in tqdm(enumerate(dataset), total=num_eval_steps):
         print(f"Generated output: {decoded_output}")
 
 # After all steps are completed, store the final accumulated data
+# Accumulated output should aggregate across all steps in this run only
 final_accumulated_data = [
     step, args.dataset, args.prefix_len, args.gamma1, args.gamma2,
     args.budget1, args.budget2, args.budget2_low, args.confidence_threshold, args.enable_dynamic_budget,
@@ -694,28 +798,31 @@ print(f"Total settle calls: {total_settle_calls}")
 print(f"Total budget switches: {total_budget_switches}")
 print(f"Total tokens generated: {total_tokens_generated}")
 
-# Save KL divergence analysis results
-print(f"\n=== Saving KL Divergence Analysis Results ===")
+# Save KL confidence analysis results
+print(f"\n=== Saving KL Confidence Analysis Results ===")
 
 # Create filename prefix with model configuration
 filename_prefix = f"{MODEL}_{args.dataset}_prefix{args.prefix_len}_gamma1{args.gamma1}_budget1{args.budget1}_budget2{args.budget2}"
 
-kl_analyzer.save_histograms("kl_analysis", filename_prefix)
-kl_analyzer.save_statistics("kl_analysis", filename_prefix, args.hist_statistics_bins)
-print(f"KL divergence analysis saved to 'kl_analysis' directory with prefix: {filename_prefix}")
+kl_confidence_analyzer.save_histograms("kl_confidence_analysis", filename_prefix)
+kl_confidence_analyzer.save_statistics("kl_confidence_analysis", filename_prefix, args.hist_statistics_bins)
+print(f"KL confidence analysis saved to 'kl_confidence_analysis' directory with prefix: {filename_prefix}")
 
 # Print summary of collected data
-print(f"\n=== KL Divergence Analysis Summary ===")
-print(f"Histogram configuration: {args.hist_num_bins} bins, width={args.hist_bin_width}, center={args.hist_center} (Note: No binning used)")
-total_all_tokens = len(kl_analyzer.all_tokens_data)
-total_rejected_tokens = len(kl_analyzer.rejected_tokens_data)
+print(f"\n=== KL Confidence Analysis Summary ===")
+print(f"Histogram configuration: {args.hist_num_bins} bins, width={args.hist_bin_width}, center={args.hist_center}")
+print(f"Bin range: [{kl_confidence_analyzer.bin_ranges[0][0]:.2f}, {kl_confidence_analyzer.bin_ranges[-1][1]:.2f})")
+total_all_tokens = sum(len(data) for data in kl_confidence_analyzer.all_tokens_kl_data.values())
+total_rejected_tokens = sum(len(data) for data in kl_confidence_analyzer.rejected_tokens_kl_data.values())
 print(f"Total tokens analyzed: {total_all_tokens}")
 print(f"Total rejected tokens analyzed: {total_rejected_tokens}")
+print(f"Total rejected token pairs recorded: {len(kl_confidence_analyzer.rejected_tokens_pairs)}")
 
-if total_all_tokens > 0:
-    all_tokens_array = np.array(kl_analyzer.all_tokens_data)
-    print(f"All tokens KL divergence - Mean: {np.mean(all_tokens_array):.6f}, Std: {np.std(all_tokens_array):.6f}, Min: {np.min(all_tokens_array):.6f}, Max: {np.max(all_tokens_array):.6f}")
+for i in range(min(args.hist_num_bins, 20)):  # Limit output to first 20 bins for readability
+    all_count = len(kl_confidence_analyzer.all_tokens_kl_data[f"bin_{i}"])
+    rejected_count = len(kl_confidence_analyzer.rejected_tokens_kl_data[f"bin_{i}"])
+    bin_start, bin_end = kl_confidence_analyzer.bin_ranges[i]
+    print(f"Bin {i} ([{bin_start:.2f}, {bin_end:.2f})): All tokens: {all_count}, Rejected tokens: {rejected_count}")
 
-if total_rejected_tokens > 0:
-    rejected_tokens_array = np.array(kl_analyzer.rejected_tokens_data)
-    print(f"Rejected tokens KL divergence - Mean: {np.mean(rejected_tokens_array):.6f}, Std: {np.std(rejected_tokens_array):.6f}, Min: {np.min(rejected_tokens_array):.6f}, Max: {np.max(rejected_tokens_array):.6f}")
+if args.hist_num_bins > 20:
+    print(f"... (showing first 20 bins out of {args.hist_num_bins} total bins)")
