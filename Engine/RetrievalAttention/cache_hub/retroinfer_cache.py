@@ -560,7 +560,7 @@ class retroinfer_cache(KV_Cache):
         self.hot_cluster[layer_idx] = cI
         
         # self.outdir_path = f"/home/juchanlee/MagicDec/Engine/RetrievalAttention/profile/data/data_superclustersize_{self.approx_supercluster_size}_{self.selection_ratio:.2f}KV_{seq_len}_clustersize_{self.avg_cluster_size}"
-        self.outdir_path = f"/home/juchanlee/MagicDec/profile/data/{self.generate_name}/data_{self.selection_ratio:.2f}KV_clustersize_{self.avg_cluster_size}"
+        self.outdir_path = f"{self.generate_name}/data_{self.selection_ratio:.2f}KV_clustersize_{self.avg_cluster_size}"
         os.makedirs(self.outdir_path, exist_ok=True)
         self.seq_len = seq_len
 

@@ -415,7 +415,10 @@ current_model_path = model_path
 current_attn_type = args.attn_type
 
 # CSV logging setup
-log_dir = "logs"
+# log_dir = "logs"
+profile_dir = f"/home/juchanlee/MagicDec/profile/data/{MODEL}_{args.dataset}_{args.prefix_len}"
+log_dir = profile_dir
+
 os.makedirs(log_dir, exist_ok=True)
 
 # Simple filenames without timestamp/counter
@@ -491,7 +494,7 @@ for step, batch in tqdm(enumerate(dataset), total=num_eval_steps):
         verified = False
 
         # Draft speculation
-        draft_outputs, draft_logits, top1_top2_diff = engine.speculate(tokens_buffer[:, :1], args.gamma1, profile_clustering=True, profile_hot_cluster_selection_ratio=False, generate_name=f"{MODEL}_{args.dataset}_{args.prefix_len}_speculate_{step}_{step_speculate_calls}")
+        draft_outputs, draft_logits, top1_top2_diff = engine.speculate(tokens_buffer[:, :1], args.gamma1, profile_clustering=True, profile_hot_cluster_selection_ratio=False, generate_name=f"{profile_dir}/speculate_{step}_{step_speculate_calls}")
         tokens_buffer[:,1:1+args.gamma1] = torch.LongTensor(draft_outputs)
         step_speculate_calls += args.gamma1
         
@@ -555,7 +558,7 @@ for step, batch in tqdm(enumerate(dataset), total=num_eval_steps):
         if called_verify == 0:
             cached_tokens_buffer = tokens_buffer[:, 0].clone()
 
-        verify_outputs, verify_logits, verify_top1_top2_diff = engine.verify(tokens_buffer[:, :1], args.gamma1+1, profile_clustering=True, profile_hot_cluster_selection_ratio=False, generate_name=f"{MODEL}_{args.dataset}_{args.prefix_len}_verify_{step}_{step_verify_calls}")
+        verify_outputs, verify_logits, verify_top1_top2_diff = engine.verify(tokens_buffer[:, :1], args.gamma1+1, profile_clustering=True, profile_hot_cluster_selection_ratio=False, generate_name=f"{profile_dir}/verify_{step}_{step_verify_calls}")
         target_tokens = torch.LongTensor(verify_outputs).to(DEVICE) #TODO: verify stage should be batch-fashion, but this verify() is auto-regressive.
 
         step_verify_calls += 1
