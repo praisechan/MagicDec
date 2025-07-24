@@ -611,16 +611,16 @@ for step, batch in tqdm(enumerate(dataset), total=num_eval_steps):
         current_budget = args.budget2  # default budget
         budget_switched = False  # Track if budget was switched for this speculation
         
+        # Determine verification length and budget based on KL threshold from previous cycle
+        verify_length = args.gamma1 + 1  # Default verification length
+        verification_budget = current_budget  # Default budget
+
         if args.enable_dynamic_budget and top1_top2_diff is not None and len(top1_top2_diff) > 0:
             min_confidence = torch.min(torch.tensor(top1_top2_diff))
             avg_confidence = torch.mean(torch.tensor(top1_top2_diff))
             # Convert tensor values to floats for storage
             step_confidences.extend([float(x) for x in top1_top2_diff])  # Store all confidence values as floats
-            
-            # Determine verification length and budget based on KL threshold from previous cycle
-            verify_length = args.gamma1 + 1  # Default verification length
-            verification_budget = current_budget  # Default budget
-            
+                        
             if use_extended_verification:
                 # Use extended verification with accumulated tokens and higher budget
                 verify_length = min(accumulated_draft_tokens + args.gamma1 + 1, args.gamma1 * 2 + 1)  # Cap at 2x gamma1
