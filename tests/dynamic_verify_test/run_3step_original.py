@@ -113,7 +113,7 @@ if args.dataset == "pg19":
 else:
   num_eval_steps = len(dataloader)
 
-num_gen_token_max = 200
+num_gen_token_max = 100
 num_gen_tokens = 0
 
 # Store these for dynamic budget adjustment

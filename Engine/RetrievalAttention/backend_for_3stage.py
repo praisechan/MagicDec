@@ -116,27 +116,33 @@ class LMBackend_Retro:
 
     # Only used for target verification
     @torch.inference_mode()
-    def verify(self, input_ids: torch.LongTensor, gamma):
+    def verify(self, input_ids: torch.LongTensor, gamma, profile_clustering=False, profile_hot_cluster_selection_ratio=False, generate_name=None):
       input_from_start = torch.concat((self.input_tokens[:, :self.verified_cachelength], input_ids), dim=1)
       outputs, logits, top1_top2_diff = self.model.generate(
           attention_type="RetroInfer",
           inputs_ids = input_from_start.to(self.model.layers[0].device),
           attention_masks = self.attention_masks.to(self.model.layers[0].device),
           max_new_length=gamma, 
-          attn_config=self.attn_config_verification
+          attn_config=self.attn_config_verification,
+          profile_clustering=profile_clustering,
+          profile_hot_cluster_selection_ratio=profile_hot_cluster_selection_ratio,
+          generate_name=generate_name
       )
       
       return outputs, logits, top1_top2_diff
 
     @torch.inference_mode()
-    def speculate(self, input_ids: torch.LongTensor, gamma):
+    def speculate(self, input_ids: torch.LongTensor, gamma, profile_clustering=False, profile_hot_cluster_selection_ratio=False, generate_name=None):
       input_from_start = torch.concat((self.input_tokens_for_draft[:, :self.verified_cachelength], input_ids), dim=1)
       outputs, logits, top1_top2_diff = self.model.generate(
           attention_type="RetroInfer",
           inputs_ids = input_from_start.to(self.model.layers[0].device),
           attention_masks = self.attention_masks.to(self.model.layers[0].device),
           max_new_length=gamma, 
-          attn_config=self.attn_config_speculation
+          attn_config=self.attn_config_speculation,
+          profile_clustering=profile_clustering,
+          profile_hot_cluster_selection_ratio=profile_hot_cluster_selection_ratio,
+          generate_name=generate_name
       )
 
       return outputs, logits, top1_top2_diff

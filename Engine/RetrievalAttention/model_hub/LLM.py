@@ -181,9 +181,9 @@ class LLM:
                 # torch.cuda.synchronize()
                 # end_time = time.time()
                 # print(f"layer_decode:{end_time - start_time}")
-        if self.profile_clustering:
-            # profile only for first decoding step
-            raise ValueError("profile only for first decoding step")
+        # if self.profile_clustering:
+        #     # profile only for first decoding step
+        #     raise ValueError("profile only for first decoding step")
         hidden_states = self.layernorm(hidden_states[:, -1:, :], self.norm_variance_epsilon, self.norm_weight)
         logits = self.lm(hidden_states)
         
@@ -228,15 +228,27 @@ class LLM:
         hot_cluster_hit_ratio_per_layer = []
         hot_cluster_hit_ratio_per_token = []
 
-        profile_decoding_steps = [0, 128, 256, 512, 1022]
+        # profile_decoding_steps = [0, 128, 256, 512, 1022]
+        # intermediate_output = False
+  
         for step in range(self.max_new_length-1):          
             # flag kv_cache to store profile data
-            intermediate_output = False
             self.kv_cache.decoding_step = step
 
-            if step in profile_decoding_steps:
-                intermediate_output = True
-                      
+            # if step in profile_decoding_steps:
+            #     intermediate_output = True
+            if self.profile_clustering:
+                if self.generate_name and "verify" in self.generate_name:
+                    # verify stage only needs the first token's kv cache
+                    if step == 0:
+                        intermediate_output = True
+                    else:
+                        intermediate_output = False
+                else:
+                    intermediate_output = True
+            else:
+                intermediate_output = False
+                          
             logits = self.decode_forward(inputs_ids=output_ids, intermediate_output=intermediate_output)
             output_ids = logits.argmax(dim=-1)
             outputs_ids.append(output_ids)
@@ -302,7 +314,7 @@ class LLM:
         return outputs_ids, top3_logits, top1_top2_diff, logit_list
 
 
-    def generate(self, attention_type, inputs_ids, attention_masks, max_new_length, attn_config=None, profile_clustering=False, profile_hot_cluster_selection_ratio=False, use_first_kv=False):
+    def generate(self, attention_type, inputs_ids, attention_masks, max_new_length, attn_config=None, profile_clustering=False, profile_hot_cluster_selection_ratio=False, use_first_kv=False, gamma1=None, generate_name=None):
         """ LLM Inference.
         Args:
             attention_type: str,
@@ -321,13 +333,14 @@ class LLM:
         self.attention_type = attention_type
         self.profile_clustering = profile_clustering
         self.profile_hot_cluster_selection_ratio = profile_hot_cluster_selection_ratio
+        self.generate_name = generate_name
 
         valid_start = attention_masks.shape[1] - torch.sum(attention_masks, dim=-1).detach().cpu().numpy()
         del attention_masks
         torch.cuda.empty_cache()
 
         print("Allocate GPU buffers and CPU pin memory ...\n")
-        self.init_kv_cache(input_length, valid_start, attn_config, profile_clustering=profile_clustering, use_first_kv=use_first_kv)
+        self.init_kv_cache(input_length, valid_start, attn_config, profile_clustering=profile_clustering, use_first_kv=use_first_kv, gamma1=gamma1, generate_name=generate_name)
 
         outputs, top3_logits, top1_top2_diff, logit_list = self.inference(inputs_ids)
 

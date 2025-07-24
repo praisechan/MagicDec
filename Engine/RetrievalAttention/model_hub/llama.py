@@ -144,7 +144,7 @@ class LlamaModel(LLM):
         torch.cuda.empty_cache()
 
 
-    def init_kv_cache(self, real_input_length, valid_start, attn_config=None, profile_clustering=False, use_first_kv=False):
+    def init_kv_cache(self, real_input_length, valid_start, attn_config=None, profile_clustering=False, use_first_kv=False, gamma1=None, generate_name=None):
         if attn_config is None:
             CURRENT_DIR = os.path.dirname(os.path.abspath(__file__))
             PROJECT_ROOT = os.path.dirname(CURRENT_DIR)
@@ -198,7 +198,9 @@ class LlamaModel(LLM):
                 num_gpus = self.num_gpus,
                 model_size = int(re.search(r'(\d+)[B]', self.model_name).group(1)),
                 profile_clustering = profile_clustering,
-                use_first_kv = use_first_kv
+                use_first_kv = use_first_kv,
+                gamma1 = gamma1,
+                generate_name = generate_name
             )
         else:
             raise ValueError(f"Unsupported attention type: {self.attention_type}")
