@@ -117,35 +117,51 @@ class LMBackend_Retro:
     # Only used for target verification
     @torch.inference_mode()
     def verify(self, input_ids: torch.LongTensor, gamma, profile_clustering=False, profile_hot_cluster_selection_ratio=False, generate_name=None):
-      input_from_start = torch.concat((self.input_tokens[:, :self.verified_cachelength], input_ids), dim=1)
+      # input_from_start = torch.concat((self.input_tokens[:, :self.verifiesd_cachelength], input_ids), dim=1)
+
+      # NOTE: critical change! model.generate always do prefill, first token always use full kv cache. 
+      # To fix this, exclude bonus token from input_from_start and check it is the same as the first generated token for sanity check.
+      input_from_start = self.input_tokens[:, :self.verified_cachelength]
       outputs, logits, top1_top2_diff = self.model.generate(
           attention_type="RetroInfer",
           inputs_ids = input_from_start.to(self.model.layers[0].device),
           attention_masks = self.attention_masks.to(self.model.layers[0].device),
-          max_new_length=gamma, 
+          max_new_length=gamma+1, 
           attn_config=self.attn_config_verification,
           profile_clustering=profile_clustering,
           profile_hot_cluster_selection_ratio=profile_hot_cluster_selection_ratio,
           generate_name=generate_name
       )
-      
-      return outputs, logits, top1_top2_diff
+
+      # sanity check
+      if not outputs[0][0]==input_ids[0][0]:
+          raise ValueError("First token of generated output is not the same as the bonus token. This is unexpected behavior.")
+
+      return [outputs[0][1:]], logits[1:], top1_top2_diff[1:]
 
     @torch.inference_mode()
     def speculate(self, input_ids: torch.LongTensor, gamma, profile_clustering=False, profile_hot_cluster_selection_ratio=False, generate_name=None):
-      input_from_start = torch.concat((self.input_tokens_for_draft[:, :self.verified_cachelength], input_ids), dim=1)
+      # input_from_start = torch.concat((self.input_tokens_for_draft[:, :self.verified_cachelength], input_ids), dim=1)
+
+      # NOTE: critical change! model.generate always do prefill, first token always use full kv cache. 
+      # To fix this, exclude bonus token from input_from_start and check it is the same as the first generated token for sanity check.
+      input_from_start = self.input_tokens[:, :self.verified_cachelength]
       outputs, logits, top1_top2_diff = self.model.generate(
           attention_type="RetroInfer",
           inputs_ids = input_from_start.to(self.model.layers[0].device),
           attention_masks = self.attention_masks.to(self.model.layers[0].device),
-          max_new_length=gamma, 
+          max_new_length=gamma+1, 
           attn_config=self.attn_config_speculation,
           profile_clustering=profile_clustering,
           profile_hot_cluster_selection_ratio=profile_hot_cluster_selection_ratio,
           generate_name=generate_name
       )
 
-      return outputs, logits, top1_top2_diff
+      # sanity check
+      if not outputs[0][0]==input_ids[0][0]:
+          raise ValueError("First token of generated output is not the same as the bonus token. This is unexpected behavior.")
+
+      return [outputs[0][1:]], logits[1:], top1_top2_diff[1:]
     
     # Only used for target verification
     @torch.inference_mode()
