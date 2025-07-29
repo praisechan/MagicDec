@@ -1,58 +1,50 @@
 import gc
 import re
 import os
-import math
 import json
 import torch
 import torch.nn.functional as F
 import flashinfer
-from transformers import AutoTokenizer, Qwen2ForCausalLM, Qwen2Config
+from transformers import AutoTokenizer, LlamaForCausalLM, LlamaConfig
 from .LLM import LLM
 from cache_hub import flash_attn_cache, retroinfer_cache
 from attn_hub import prefill_full_flash_attn, decode_full_flash_attn, retroinfer_prefill_attn, retroinfer_decode_attn
 
-import sys
-PROJECT_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
-sys.path.append(PROJECT_ROOT)
 
 
-class QwenLayer:
+class LlamaLayer:
     """
-    A class representing the Qwen layer.
+    A class representing the Llama layer.
     """
 
     def __init__(self, layer_idx, device) -> None:
         self.layer_idx = layer_idx
         self.device = device
     
-    def init_layer(self, hf_qwen_layer):
-        self.wq = hf_qwen_layer.self_attn.q_proj.weight.detach()
-        self.wk = hf_qwen_layer.self_attn.k_proj.weight.detach()
-        self.wv = hf_qwen_layer.self_attn.v_proj.weight.detach()
-        self.bq = hf_qwen_layer.self_attn.q_proj.bias.detach()
-        self.bk = hf_qwen_layer.self_attn.k_proj.bias.detach()
-        self.bv = hf_qwen_layer.self_attn.v_proj.bias.detach()
+    def init_layer(self, hf_llama_layer):
+        self.wq = hf_llama_layer.self_attn.q_proj.weight.detach()
+        self.wk = hf_llama_layer.self_attn.k_proj.weight.detach()
+        self.wv = hf_llama_layer.self_attn.v_proj.weight.detach()
         self.wqkv = torch.cat((self.wq, self.wk, self.wv), dim=0).to(self.device, non_blocking=True)
-        self.bqkv = torch.cat((self.bq, self.bk, self.bv), dim=0).to(self.device, non_blocking=True)
-        self.wo = hf_qwen_layer.self_attn.o_proj.weight.detach().to(self.device, non_blocking=True)
-        
-        self.gate_proj = hf_qwen_layer.mlp.gate_proj.weight.detach()
-        self.up_proj = hf_qwen_layer.mlp.up_proj.weight.detach()
+        self.wo = hf_llama_layer.self_attn.o_proj.weight.detach().to(self.device, non_blocking=True)
+
+        self.gate_proj = hf_llama_layer.mlp.gate_proj.weight.detach()
+        self.up_proj = hf_llama_layer.mlp.up_proj.weight.detach()
         self.gate_up_proj = torch.cat((self.gate_proj, self.up_proj), dim=0).to(self.device, non_blocking=True)
-        self.down_proj = hf_qwen_layer.mlp.down_proj.weight.detach().to(self.device, non_blocking=True)
+        self.down_proj = hf_llama_layer.mlp.down_proj.weight.detach().to(self.device, non_blocking=True)
 
-        self.input_layernorm_weight = hf_qwen_layer.input_layernorm.weight.detach().to(self.device, non_blocking=True)
-        self.input_layernorm_variance_epsilon = hf_qwen_layer.input_layernorm.variance_epsilon
+        self.input_layernorm_weight = hf_llama_layer.input_layernorm.weight.detach().to(self.device, non_blocking=True)
+        self.input_layernorm_variance_epsilon = hf_llama_layer.input_layernorm.variance_epsilon
 
-        self.post_attention_layernorm_weight = hf_qwen_layer.post_attention_layernorm.weight.detach().to(self.device, non_blocking=True)
-        self.post_attention_layernorm_variance_epsilon = hf_qwen_layer.post_attention_layernorm.variance_epsilon
+        self.post_attention_layernorm_weight = hf_llama_layer.post_attention_layernorm.weight.detach().to(self.device, non_blocking=True)
+        self.post_attention_layernorm_variance_epsilon = hf_llama_layer.post_attention_layernorm.variance_epsilon
 
-        del self.wq, self.wk, self.wv, self.bq, self.bk, self.bv, self.gate_proj, self.up_proj
+        del self.wq, self.wk, self.wv, self.gate_proj, self.up_proj
 
 
-class QwenModel(LLM):
+class LlamaModel(LLM):
     """
-    A class representing the Qwen model.
+    A class representing the Llama model.
     """
 
     def __init__(
@@ -65,68 +57,28 @@ class QwenModel(LLM):
         super().__init__(model_name, max_length, dtype, device_map)
 
         self.tokenizer = AutoTokenizer.from_pretrained(model_name)
-        self.config = Qwen2Config.from_pretrained(model_name)
+        self.config = LlamaConfig.from_pretrained(model_name)
         self.num_layers = self.config.num_hidden_layers
         self.num_heads = self.config.num_attention_heads
         self.num_key_value_heads = self.config.num_key_value_heads
         self.num_key_value_groups = self.num_heads // self.num_key_value_heads
         self.hidden_size = self.config.hidden_size
         self.head_dim = self.hidden_size // self.num_heads
-        self.base = self.config.rope_theta
         self.max_position_embeddings = self.config.max_position_embeddings
-        self.yarn_factor = 4         # # qwen2.5 use yarn in context length larger than 32768
         self.vocab_size = self.config.vocab_size
         self.eos_tokens = [self.config.eos_token_id]
 
         self.init_model()
 
-    
+
     def _set_cos_sin_cache(self):
-        if self.max_length > 32768:
-            def find_correction_dim(num_rotations, dim, base, max_position_embeddings):
-                """Inverse dimension formula to find the dimension based on the number of rotations"""
-                return (dim * math.log(max_position_embeddings / (num_rotations * 2 * math.pi))) / (2 * math.log(base))
-
-            def find_correction_range(low_rot, high_rot, dim, base, max_position_embeddings):
-                """Find dimension range bounds based on rotations"""
-                low = math.floor(find_correction_dim(low_rot, dim, base, max_position_embeddings))
-                high = math.ceil(find_correction_dim(high_rot, dim, base, max_position_embeddings))
-                return max(low, 0), min(high, dim - 1)
-
-            def linear_ramp_factor(min, max, dim):
-                if min == max:
-                    max += 0.001  # Prevent singularity
-
-                linear_func = (torch.arange(dim, dtype=torch.float32) - min) / (max - min)
-                ramp_func = torch.clamp(linear_func, 0, 1)
-                return ramp_func
-            
-            attention_factor = 0.1 * math.log(self.yarn_factor) + 1.0
-            beta_fast = 32
-            beta_slow = 1
-
-            pos_freqs = self.base ** (torch.arange(0, self.head_dim, 2).float().to(self.inv_freq.device) / self.head_dim)
-            inv_freq_extrapolation = 1.0 / pos_freqs
-            inv_freq_interpolation = 1.0 / (self.yarn_factor * pos_freqs)
-
-            low, high = find_correction_range(beta_fast, beta_slow, self.head_dim, self.base, self.max_position_embeddings)
-
-            inv_freq_extrapolation_factor = 1 - linear_ramp_factor(low, high, self.head_dim // 2).float().to(self.inv_freq.device)
-            inv_freq = (
-                inv_freq_interpolation * (1 - inv_freq_extrapolation_factor)
-                + inv_freq_extrapolation * inv_freq_extrapolation_factor
-            )
-
-            self.inv_freq = inv_freq
-            self.attention_scaling = attention_factor
-
         t = torch.arange(self.max_length, device=self.inv_freq.device, dtype=self.inv_freq.dtype)
         freqs = torch.outer(t, self.inv_freq)
         return freqs.cos()*self.attention_scaling, freqs.sin()*self.attention_scaling
 
 
     def init_model(self):
-        hf_qwen = Qwen2ForCausalLM.from_pretrained(self.model_name, torch_dtype=self.dtype)
+        hf_llama = LlamaForCausalLM.from_pretrained(self.model_name, torch_dtype=self.dtype)
 
         self.num_gpus = torch.cuda.device_count() if self.device_map == 'auto' else 1
         if self.device_map == 'auto' and self.num_gpus == 1:
@@ -137,24 +89,24 @@ class QwenModel(LLM):
             for ldx in range(0, self.num_layers):
                 self.layer_mapping.update({str(ldx): self.device_map})
 
-            self.embed_tokens = hf_qwen.model.embed_tokens.weight.detach().to(self.device_map, non_blocking=True)
-            self.lm_head = hf_qwen.lm_head.weight.detach().to(self.device_map, non_blocking=True)
+            self.embed_tokens = hf_llama.model.embed_tokens.weight.detach().to(self.device_map, non_blocking=True)
+            self.lm_head = hf_llama.lm_head.weight.detach().to(self.device_map, non_blocking=True)
 
-            self.norm_weight = hf_qwen.model.norm.weight.detach().to(self.device_map, non_blocking=True)
-            self.norm_variance_epsilon = hf_qwen.model.norm.variance_epsilon
+            self.norm_weight = hf_llama.model.norm.weight.detach().to(self.device_map, non_blocking=True)
+            self.norm_variance_epsilon = hf_llama.model.norm.variance_epsilon
 
             self.position_ids = torch.arange(0, self.max_length).to(self.device_map, non_blocking=True)
-            self.inv_freq = hf_qwen.model.rotary_emb.inv_freq.detach().to(self.device_map, non_blocking=True)
-            self.attention_scaling = hf_qwen.model.rotary_emb.attention_scaling
+            self.inv_freq = hf_llama.model.rotary_emb.inv_freq.detach().to(self.device_map, non_blocking=True)
+            self.attention_scaling = hf_llama.model.rotary_emb.attention_scaling
             self.cos_cache, self.sin_cache = self._set_cos_sin_cache()
             self.cos_sin_cache = torch.cat((self.cos_cache, self.sin_cache), dim=-1)
 
             self.layers = []
-            for idx, hf_qwen_layer in enumerate(hf_qwen.model.layers):
-                qwen_layer = QwenLayer(idx, device=self.device_map)
-                qwen_layer.init_layer(hf_qwen_layer)
-                self.layers.append(qwen_layer)
-                hf_qwen.model.layers[idx] = None
+            for idx, hf_llama_layer in enumerate(hf_llama.model.layers):
+                llama_layer = LlamaLayer(idx, device=self.device_map)
+                llama_layer.init_layer(hf_llama_layer)
+                self.layers.append(llama_layer)
+                hf_llama.model.layers[idx] = None
 
         else:                         # multi GPUs
             self.gpu_ids = list(range(self.num_gpus))
@@ -163,32 +115,31 @@ class QwenModel(LLM):
             for ldx in range(0, self.num_layers):
                 self.layer_mapping.update({str(ldx): f'cuda:{ldx // self.layer_interval}'})
 
-            self.embed_tokens = hf_qwen.model.embed_tokens.weight.detach().to(f'cuda:{self.gpu_ids[0]}', non_blocking=True)
-            self.lm_head = hf_qwen.lm_head.weight.detach().to(f'cuda:{self.gpu_ids[0]}', non_blocking=True)
+            self.embed_tokens = hf_llama.model.embed_tokens.weight.detach().to(f'cuda:{self.gpu_ids[0]}', non_blocking=True)
+            self.lm_head = hf_llama.lm_head.weight.detach().to(f'cuda:{self.gpu_ids[0]}', non_blocking=True)
 
-            self.norm_weight = hf_qwen.model.norm.weight.detach().to(f'cuda:{self.gpu_ids[0]}', non_blocking=True)
-            self.norm_variance_epsilon = hf_qwen.model.norm.variance_epsilon
+            self.norm_weight = hf_llama.model.norm.weight.detach().to(f'cuda:{self.gpu_ids[0]}', non_blocking=True)
+            self.norm_variance_epsilon = hf_llama.model.norm.variance_epsilon
 
             self.position_ids = torch.arange(0, self.max_length).to(f'cuda:{self.gpu_ids[0]}', non_blocking=True)
-            self.inv_freq = hf_qwen.model.rotary_emb.inv_freq.detach().to(f'cuda:{self.gpu_ids[0]}', non_blocking=True)
-            self.attention_scaling = hf_qwen.model.rotary_emb.attention_scaling
+            self.inv_freq = hf_llama.model.rotary_emb.inv_freq.detach().to(f'cuda:{self.gpu_ids[0]}', non_blocking=True)
+            self.attention_scaling = hf_llama.model.rotary_emb.attention_scaling
             self.cos_cache, self.sin_cache = self._set_cos_sin_cache()
             self.cos_sin_cache = torch.cat((self.cos_cache, self.sin_cache), dim=-1)
 
             self.layers = []
-            for ldx, hf_qwen_layer in enumerate(hf_qwen.model.layers):
-                qwen_layer = QwenLayer(ldx, device=self.layer_mapping[str(ldx)])
-                qwen_layer.init_layer(hf_qwen_layer)
-                self.layers.append(qwen_layer)
-                hf_qwen.model.layers[ldx] = None
+            for ldx, hf_llama_layer in enumerate(hf_llama.model.layers):
+                llama_layer = LlamaLayer(ldx, device=self.layer_mapping[str(ldx)])
+                llama_layer.init_layer(hf_llama_layer)
+                self.layers.append(llama_layer)
+                hf_llama.model.layers[ldx] = None
 
         del self.inv_freq, self.cos_cache, self.sin_cache
         gc.collect()
         torch.cuda.empty_cache()
 
-    
-    def init_kv_cache(self, real_input_length, valid_start, attn_config=None, profile_clustering=False, use_first_kv=False, gamma1=None, generate_name=None):
 
+    def init_kv_cache(self, real_input_length, valid_start, attn_config=None):
         if attn_config is None:
             CURRENT_DIR = os.path.dirname(os.path.abspath(__file__))
             PROJECT_ROOT = os.path.dirname(CURRENT_DIR)
@@ -197,9 +148,9 @@ class QwenModel(LLM):
             CONFIG_FILE = os.path.join(CONFIG_DIR, MODEL_NAME)
 
             with open(CONFIG_FILE, "r") as f:
-                qwen_config = json.load(f)
+                llama_config = json.load(f)
         else:
-            qwen_config = attn_config
+            llama_config = attn_config
         
         # Init kv cache
         if self.attention_type == 'Full_Flash_Attn':
@@ -217,7 +168,7 @@ class QwenModel(LLM):
                 model_size = int(re.search(r'(\d+)[B]', self.model_name).group(1))
             )
         elif self.attention_type == 'RetroInfer':
-            retroinfer_config = qwen_config.get(self.attention_type)
+            retroinfer_config = llama_config.get(self.attention_type)
 
             self.kv_cache = retroinfer_cache(
                 valid_start = valid_start,
@@ -240,12 +191,7 @@ class QwenModel(LLM):
                 cache_unit_size = retroinfer_config["cache_unit_size"],
                 cache_cluster_num = retroinfer_config["cache_cluster_num"],
                 num_gpus = self.num_gpus,
-                model_size = int(re.search(r'(\d+)[B]', self.model_name).group(1)),
-                profile_clustering = profile_clustering,
-                use_first_kv = use_first_kv,
-                gamma1 = gamma1,
-                generate_name = generate_name                
-                
+                model_size = int(re.search(r'(\d+)[B]', self.model_name).group(1))
             )
         else:
             raise ValueError(f"Unsupported attention type: {self.attention_type}")
@@ -271,7 +217,7 @@ class QwenModel(LLM):
 
 
     def wqkv(self, hidden_states, layer):
-        qkv = F.linear(hidden_states, layer.wqkv, layer.bqkv)
+        qkv = F.linear(hidden_states, layer.wqkv)
         query_states, key_states, value_states = qkv.split([self.hidden_size, self.hidden_size//self.num_key_value_groups, self.hidden_size//self.num_key_value_groups], dim=-1)
         return query_states, key_states, value_states
 
@@ -366,3 +312,5 @@ class QwenModel(LLM):
         query_states, key_states = self.apply_rotary_pos_emb(query_states, key_states, position_ids)
 
         return query_states, key_states
+
+    
