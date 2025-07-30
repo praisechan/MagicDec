@@ -191,7 +191,7 @@ class LLM:
 
 
     def inference(self, inputs_ids):
-        outputs_ids = []    # multi iteration, multi request
+        output_ids_list = []    # multi iteration, multi request
         output_ids = []     # single iteration, multi request
         
         top3_logits = []
@@ -204,7 +204,7 @@ class LLM:
 
         logits = self.prefill_forward(inputs_ids=inputs_ids)
         output_ids = logits.argmax(dim=-1)
-        outputs_ids.append(output_ids)
+        output_ids_list.append(output_ids)
 
         # make a list of top3 softmax value and its token id
         softmax_logits = torch.nn.functional.softmax(logits, dim=-1)
@@ -237,21 +237,18 @@ class LLM:
 
             # if step in profile_decoding_steps:
             #     intermediate_output = True
+            intermediate_output = False
             if self.profile_clustering:
                 if self.generate_name and "verify" in self.generate_name:
                     # verify stage only needs the first token's kv cache
                     if step == 0:
                         intermediate_output = True
-                    else:
-                        intermediate_output = False
                 else:
                     intermediate_output = True
-            else:
-                intermediate_output = False
                           
             logits = self.decode_forward(inputs_ids=output_ids, intermediate_output=intermediate_output)
             output_ids = logits.argmax(dim=-1)
-            outputs_ids.append(output_ids)
+            output_ids_list.append(output_ids)
             
             # for output token probabiltiy profile
             softmax_logits = torch.nn.functional.softmax(logits, dim=-1)
@@ -280,7 +277,7 @@ class LLM:
         #     'green'
         # ))
         
-        outputs_ids = torch.cat(outputs_ids, dim=-1).tolist()
+        output_ids_list = torch.cat(output_ids_list, dim=-1).tolist()
         
         if self.attention_type == "RetroInfer" and self.profile_hot_cluster_selection_ratio:
             window_size = self.kv_cache.window_size
@@ -311,7 +308,118 @@ class LLM:
                 #         v = val.item() if torch.is_tensor(val) else float(val)
                 #         writer.writerow([token_idx, idx, v])     
         
-        return outputs_ids, top3_logits, top1_top2_diff, logit_list
+        return output_ids_list, top3_logits, top1_top2_diff, logit_list
+
+    def inference_without_prefill_token(self, inputs_ids, bonus_token):
+        if bonus_token is None:
+            raise ValueError("bonus_token must be provided for inference_without_prefill_token")
+
+        output_ids_list = []    # multi iteration, multi request
+        output_ids = []     # single iteration, multi request
+        
+        top3_logits = []
+        top1_top2_diff = []
+        logit_list = []
+
+        print("Start prefilling ...")
+        torch.cuda.synchronize()
+        prefill_start = time.time()
+
+        _ = self.prefill_forward(inputs_ids=inputs_ids)
+        self.move()
+
+        torch.cuda.synchronize()
+        prefill_end = time.time()
+        print(colored(f"Prefilling latency: {round((prefill_end - prefill_start), 4)} s\n", 'green'))
+
+        print("Start decoding ...")
+        decode_start = time.time()
+
+        hot_cluster_hit_ratio_per_layer = []
+        hot_cluster_hit_ratio_per_token = []
+
+        # profile_decoding_steps = [0, 128, 256, 512, 1022]
+        # intermediate_output = False
+  
+        for step in range(self.max_new_length-1):          
+            # flag kv_cache to store profile data
+            self.kv_cache.decoding_step = step
+
+            # if step in profile_decoding_steps:
+            #     intermediate_output = True
+
+            intermediate_output = False
+            if self.profile_clustering:
+                if self.generate_name and "verify" in self.generate_name:
+                    # verify stage only needs the first token's kv cache
+                    if step == 0:
+                        intermediate_output = True
+                else:
+                    intermediate_output = True
+                          
+            logits = self.decode_forward(inputs_ids=bonus_token, intermediate_output=intermediate_output) # use bonus token as the first token
+            output_ids = logits.argmax(dim=-1)
+            output_ids_list.append(output_ids)
+            
+            # for output token probabiltiy profile
+            softmax_logits = torch.nn.functional.softmax(logits, dim=-1)
+            topk_vals, topk_indices = torch.topk(softmax_logits, k=3, dim=-1)  # each is [B, 3]
+            batch_top3 = [[] for _ in range(topk_vals.shape[-2])]
+            for i in range(topk_vals.shape[-2]):
+              batch_top3[i].append((topk_vals[0][i][0],topk_indices[0][i][0]))
+              batch_top3[i].append((topk_vals[0][i][1],topk_indices[0][i][1]))
+              batch_top3[i].append((topk_vals[0][i][2],topk_indices[0][i][2]))
+            
+            top3_logits.append(batch_top3)
+            top1_top2_diff.append(topk_vals[0][:,0]-topk_vals[0][:,1])
+            logit_list.append(logits)
+
+            # store hot cluster hit ratio
+            if self.attention_type == "RetroInfer" and self.profile_hot_cluster_selection_ratio:
+                hot_cluster_hit_ratio_per_layer.append(self.kv_cache.hot_cluster_hit_ratio.clone())
+                hot_cluster_hit_ratio_per_token.append(self.kv_cache.hot_cluster_hit_ratio.mean())
+
+        decode_end = time.time()
+        print(colored(f"Decoding latency: {round((decode_end - decode_start), 8)} s\n", 'green'))
+
+        # print(colored(
+        #     f"Decoding latency: {round((decode_end - decode_start) * 1000 / (self.max_new_length - 1), 2)} ms/step, "
+        #     f"Throughput: {round(self.batch_size * (self.max_new_length - 1) / (decode_end - decode_start), 2)} tokens/s\n",
+        #     'green'
+        # ))
+        
+        output_ids_list = torch.cat(output_ids_list, dim=-1).tolist()
+        
+        if self.attention_type == "RetroInfer" and self.profile_hot_cluster_selection_ratio:
+            window_size = self.kv_cache.window_size
+            hot_cluster_ratio = self.kv_cache.hot_cluster_ratio
+            cluster_size = self.kv_cache.avg_cluster_size
+            budget_ratio = self.kv_cache.nprobe / self.kv_cache.n_centroids
+            # hot cluster output
+            filename = f"output/hot_cluster_input_{inputs_ids.shape[1]}_budget{budget_ratio}_hot{hot_cluster_ratio}_window{window_size}_cluster{cluster_size}.csv"
+            # Check whether the file already exists
+            import os
+            import csv
+            file_exists = os.path.isfile(filename)
+
+            # Open in append mode
+            with open(filename, 'a', newline='') as f:
+                writer = csv.writer(f)
+                # If the file is new, write the header
+                if not file_exists:
+                    writer.writerow(['token_num','layer_idx', 'hit_ratio'])
+
+                for token_idx, data in enumerate(hot_cluster_hit_ratio_per_token):
+                    v = data.item() if torch.is_tensor(data) else float(data)
+                    writer.writerow([token_idx, "total", v])     
+
+                # for token_idx, data in enumerate(hot_cluster_hit_ratio_per_layer):
+                #     # Append one row per layer
+                #     for idx, val in enumerate(data):
+                #         v = val.item() if torch.is_tensor(val) else float(val)
+                #         writer.writerow([token_idx, idx, v])     
+        
+        return output_ids_list, top3_logits, top1_top2_diff, logit_list
 
 
     def generate(self, attention_type, inputs_ids, attention_masks, max_new_length, attn_config=None, profile_clustering=False, profile_hot_cluster_selection_ratio=False, use_first_kv=False, gamma1=None, generate_name=None):
@@ -344,4 +452,37 @@ class LLM:
 
         outputs, top3_logits, top1_top2_diff, logit_list = self.inference(inputs_ids)
 
-        return outputs, logit_list, top1_top2_diff
+        return outputs, logit_list, top1_top2_diff, top3_logits
+
+    def generate_without_prefill_token(self, attention_type, inputs_ids, bonus_token, attention_masks, max_new_length, attn_config=None, profile_clustering=False, profile_hot_cluster_selection_ratio=False, use_first_kv=False, gamma1=None, generate_name=None):
+        """ LLM Inference.
+        Args:
+            attention_type: str,
+            input_ids (torch.tensor): The input of LLM. Different from generate(), this input does not include the bonus token.
+            bonus_token (torch.tensor): The bonus token to be used as the first token in the generation.
+            attention_masks (torch.tensor): The attention masks of LLM.
+            max_new_length (int): The maximum length of generated sequences.
+        """
+
+        bs, input_length = inputs_ids.shape
+        assert input_length + max_new_length <= self.max_length, \
+        f"Error: input_length({input_length}) + max_new_length({max_new_length}) exceeds max_length({self.max_length})"
+
+        self.batch_size = bs
+        self.input_length = input_length
+        self.max_new_length = max_new_length
+        self.attention_type = attention_type
+        self.profile_clustering = profile_clustering
+        self.profile_hot_cluster_selection_ratio = profile_hot_cluster_selection_ratio
+        self.generate_name = generate_name
+
+        valid_start = attention_masks.shape[1] - torch.sum(attention_masks, dim=-1).detach().cpu().numpy()
+        del attention_masks
+        torch.cuda.empty_cache()
+
+        print("Allocate GPU buffers and CPU pin memory ...\n")
+        self.init_kv_cache(input_length, valid_start, attn_config, profile_clustering=profile_clustering, use_first_kv=use_first_kv, gamma1=gamma1, generate_name=generate_name)
+
+        outputs, top3_logits, top1_top2_diff, logit_list = self.inference_without_prefill_token(inputs_ids, bonus_token=bonus_token)
+
+        return outputs, logit_list, top1_top2_diff, top3_logits

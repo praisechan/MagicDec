@@ -122,9 +122,10 @@ class LMBackend_Retro:
       # NOTE: critical change! model.generate always do prefill, first token always use full kv cache. 
       # To fix this, exclude bonus token from input_from_start and check it is the same as the first generated token for sanity check.
       input_from_start = self.input_tokens[:, :self.verified_cachelength]
-      outputs, logits, top1_top2_diff = self.model.generate(
+      outputs, logits, top1_top2_diff, _ = self.model.generate_without_prefill_token(
           attention_type="RetroInfer",
           inputs_ids = input_from_start.to(self.model.layers[0].device),
+          bonus_token=input_ids[:, :1].to(self.model.layers[0].device),
           attention_masks = self.attention_masks.to(self.model.layers[0].device),
           max_new_length=gamma+1, 
           attn_config=self.attn_config_verification,
@@ -133,11 +134,13 @@ class LMBackend_Retro:
           generate_name=generate_name
       )
 
-      # sanity check
-      if not outputs[0][0]==input_ids[0][0]:
-          raise ValueError("First token of generated output is not the same as the bonus token. This is unexpected behavior.")
+      return outputs, logits, top1_top2_diff
 
-      return [outputs[0][1:]], logits[1:], top1_top2_diff[1:]
+      # # sanity check
+      # if not outputs[0][0]==input_ids[0][0]:
+      #     raise ValueError("First token of generated output is not the same as the bonus token. This is unexpected behavior.")
+
+      # return [outputs[0][1:]], logits[1:], top1_top2_diff[1:]
 
     @torch.inference_mode()
     def speculate(self, input_ids: torch.LongTensor, gamma, profile_clustering=False, profile_hot_cluster_selection_ratio=False, generate_name=None):
@@ -145,10 +148,11 @@ class LMBackend_Retro:
 
       # NOTE: critical change! model.generate always do prefill, first token always use full kv cache. 
       # To fix this, exclude bonus token from input_from_start and check it is the same as the first generated token for sanity check.
-      input_from_start = self.input_tokens[:, :self.verified_cachelength]
-      outputs, logits, top1_top2_diff = self.model.generate(
+      input_from_start = self.input_tokens_for_draft[:, :self.verified_cachelength]
+      outputs, logits, top1_top2_diff, top3_logits = self.model.generate_without_prefill_token(
           attention_type="RetroInfer",
           inputs_ids = input_from_start.to(self.model.layers[0].device),
+          bonus_token=input_ids[:, :1].to(self.model.layers[0].device),
           attention_masks = self.attention_masks.to(self.model.layers[0].device),
           max_new_length=gamma+1, 
           attn_config=self.attn_config_speculation,
@@ -157,11 +161,13 @@ class LMBackend_Retro:
           generate_name=generate_name
       )
 
-      # sanity check
-      if not outputs[0][0]==input_ids[0][0]:
-          raise ValueError("First token of generated output is not the same as the bonus token. This is unexpected behavior.")
+      return outputs, logits, top1_top2_diff
 
-      return [outputs[0][1:]], logits[1:], top1_top2_diff[1:]
+      # # sanity check
+      # if not outputs[0][0]==input_ids[0][0]:
+      #     raise ValueError("First token of generated output is not the same as the bonus token. This is unexpected behavior.")
+
+      # return [outputs[0][1:]], logits[1:], top1_top2_diff[1:]
     
     # Only used for target verification
     @torch.inference_mode()
@@ -170,7 +176,7 @@ class LMBackend_Retro:
       print("[Settlement]")
       input_from_start = torch.concat((self.settled_input_tokens[:, :self.settled_cachelength], input_ids), dim=1)
 
-      outputs, logits, top1_top2_diff = self.model.generate(
+      outputs, logits, top1_top2_diff, _ = self.model.generate(
           attention_type="Full_Flash_Attn",
           inputs_ids = input_from_start.to(self.model.layers[0].device),
           attention_masks = self.attention_masks.to(self.model.layers[0].device),
@@ -184,7 +190,7 @@ class LMBackend_Retro:
     def update_draft_kv_only(self, input_ids: torch.LongTensor):
         input_from_start = torch.concat((self.input_tokens[:, :self.verified_cachelength], input_ids), dim=1)
         self.verified_cachelength += input_ids.shape[1]
-        self.input_tokens_for_draft[:,:self.verified_cachelength] = input_from_start
+        self.input_tokens_for_draft[:,:self.verified_cachelength] = input_from_start.clone()
         
     @torch.inference_mode()
     def update_verified_kv(self, input_ids: torch.LongTensor):
@@ -192,7 +198,7 @@ class LMBackend_Retro:
         self.verified_cachelength += input_ids.shape[1]
         self.input_tokens[:,:self.verified_cachelength] = input_from_start
         
-        self.input_tokens_for_draft = self.input_tokens
+        self.input_tokens_for_draft = self.input_tokens.clone()
 
         # update for sharing cluster information
         self.attn_config_speculation["RetroInfer"]["static_pattern_end"] = self.attn_config_speculation["RetroInfer"]["static_pattern_end"] + input_ids.shape[1]
@@ -206,6 +212,7 @@ class LMBackend_Retro:
 
         self.verified_cachelength = self.settled_cachelength
         self.input_tokens[:,:self.verified_cachelength] = input_from_start
+        self.input_tokens_for_draft = self.input_tokens.clone()
 
         # update for sharing cluster information
         self.static_pattern_end_after_settle = self.static_pattern_end_after_settle + input_ids.shape[1]
