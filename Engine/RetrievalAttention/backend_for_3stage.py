@@ -116,7 +116,9 @@ class LMBackend_Retro:
 
     # Only used for target verification
     @torch.inference_mode()
-    def verify(self, input_ids: torch.LongTensor, gamma, profile_clustering=False, profile_hot_cluster_selection_ratio=False, generate_name=None):
+    def verify(self, input_ids: torch.LongTensor, gamma, use_first_kv = False, profile_clustering=False, profile_hot_cluster_selection_ratio=False, generate_name=None):
+      if use_first_kv is None:
+          raise ValueError("use_first_kv must be specified for verification.")
       # input_from_start = torch.concat((self.input_tokens[:, :self.verifiesd_cachelength], input_ids), dim=1)
 
       # NOTE: critical change! model.generate always do prefill, first token always use full kv cache. 
@@ -131,7 +133,8 @@ class LMBackend_Retro:
           attn_config=self.attn_config_verification,
           profile_clustering=profile_clustering,
           profile_hot_cluster_selection_ratio=profile_hot_cluster_selection_ratio,
-          generate_name=generate_name
+          generate_name=generate_name,
+          use_first_kv=use_first_kv
       )
 
       return outputs, logits, top1_top2_diff
