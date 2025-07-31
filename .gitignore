@@ -5,5 +5,6 @@ checkpoints/*
 output/*
 Engine/RetrievalAttention/profile/data/*
 profile/data/*
+profile/*
 *.png
 *.csv
