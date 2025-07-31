@@ -340,7 +340,9 @@ class LLM:
 
         # profile_decoding_steps = [0, 128, 256, 512, 1022]
         # intermediate_output = False
-  
+
+        output_ids = bonus_token
+
         for step in range(self.max_new_length-1):          
             # flag kv_cache to store profile data
             self.kv_cache.decoding_step = step
@@ -357,7 +359,7 @@ class LLM:
                 else:
                     intermediate_output = True
                           
-            logits = self.decode_forward(inputs_ids=bonus_token, intermediate_output=intermediate_output) # use bonus token as the first token
+            logits = self.decode_forward(inputs_ids=output_ids, intermediate_output=intermediate_output) # use bonus token as the first token
             output_ids = logits.argmax(dim=-1)
             output_ids_list.append(output_ids)
             

@@ -134,7 +134,8 @@ class LMBackend_Retro:
           profile_clustering=profile_clustering,
           profile_hot_cluster_selection_ratio=profile_hot_cluster_selection_ratio,
           generate_name=generate_name,
-          use_first_kv=use_first_kv
+          use_first_kv=use_first_kv,
+          gamma1=gamma
       )
 
       return outputs, logits, top1_top2_diff
