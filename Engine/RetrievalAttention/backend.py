@@ -34,7 +34,10 @@ sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 from MagicDec.Engine.RetrievalAttention.benchmark.config import generate_config, parse_attn_args
 
 class LMBackend_Retro:
-    def __init__(self, dtype = torch.bfloat16, device: str = "cuda:0", dec_len: int = 1, draft_dec_len: int = None) -> None:
+    def __init__(self, dtype = torch.bfloat16, 
+                 device: str = "cuda:0", 
+                 dec_len: int = 1, 
+                 draft_dec_len: int = None) -> None:
         self.dtype = dtype
         self.device = device
         self.dec_len = dec_len
@@ -93,6 +96,8 @@ class LMBackend_Retro:
             budget_ratio=budget_ratio,
             estimate_ratio=estimate_ratio,
         )
+        
+        
         return input_ids
 
     # Only used for target verification
@@ -100,7 +105,7 @@ class LMBackend_Retro:
     def verify(self, input_ids: torch.LongTensor, gamma):
       input_from_start = torch.concat((self.input_tokens[:, :self.verified_cachelength], input_ids), dim=1)
 
-      outputs, logits, _ = self.model.generate(
+      outputs, logits, _, _ = self.model.generate(
           attention_type="Full_Flash_Attn",
           inputs_ids = input_from_start.to(self.model.layers[0].device),
           attention_masks = self.attention_masks.to(self.model.layers[0].device),
@@ -111,13 +116,13 @@ class LMBackend_Retro:
       return outputs, logits
 
     @torch.inference_mode()
-    def speculate(self, input_ids: torch.LongTensor, gamma, profile_clustering=False, profile_hot_cluster_selection_ratio=False):
+    def speculate(self, input_ids: torch.LongTensor, gamma, profile_clustering=False, profile_hot_cluster_selection_ratio=False, generate_name=None):
       # input_from_start = torch.concat((self.input_tokens[:, :self.verified_cachelength], input_ids), dim=1)
 
       # NOTE: critical change! model.generate always do prefill, first token always use full kv cache. 
       # To fix this, exclude bonus token from input_from_start and check it is the same as the first generated token for sanity check.
       input_from_start = self.input_tokens[:, :self.verified_cachelength]
-      outputs, logits, top1_top2_diff = self.model.generate_without_prefill_token(
+      outputs, logits, top1_top2_diff, top3_logits = self.model.generate_without_prefill_token(
           attention_type="RetroInfer",
           inputs_ids = input_from_start.to(self.model.layers[0].device),
           bonus_token=input_ids[:, :1].to(self.model.layers[0].device),
@@ -125,8 +130,10 @@ class LMBackend_Retro:
           max_new_length=gamma+1, 
           attn_config=self.attn_config,
           profile_clustering=profile_clustering,
-          profile_hot_cluster_selection_ratio=profile_hot_cluster_selection_ratio
+          profile_hot_cluster_selection_ratio=profile_hot_cluster_selection_ratio,
+          generate_name=generate_name
       )
+
 
       return outputs, logits, top1_top2_diff
     
@@ -137,8 +144,18 @@ class LMBackend_Retro:
         self.input_tokens[:,:self.verified_cachelength] = input_from_start
 
     @torch.inference_mode()
+    def update_verified_kv(self, input_ids: torch.LongTensor):
+        # same role with draft_kv_update, but added some features for run_2step_profile.py
+        input_from_start = torch.concat((self.input_tokens[:, :self.verified_cachelength], input_ids), dim=1)
+        self.verified_cachelength += input_ids.shape[1]
+        self.input_tokens[:,:self.verified_cachelength] = input_from_start
+
+        # update for sharing cluster information
+        self.attn_config["RetroInfer"]["static_pattern_end"] = self.attn_config["RetroInfer"]["static_pattern_end"] + input_ids.shape[1]
+
+    @torch.inference_mode()
     def encode(self, input_ids: torch.LongTensor):        
-        outputs, _, _ = self.model.generate(
+        outputs, _, _, _ = self.model.generate(
             attention_type="Full_Flash_Attn",
             inputs_ids = input_ids.to(self.model.layers[0].device),
             attention_masks = self.attention_masks.to(self.model.layers[0].device),

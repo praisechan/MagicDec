@@ -14,7 +14,7 @@ from torch.utils.data.dataloader import DataLoader
 from tqdm import tqdm
 import argparse
 # from MagicDec.Engine.SnapKV.backend import LMBackend
-from MagicDec.Engine.RetrievalAttention.backend_for_3stage import LMBackend_Retro
+from MagicDec.Engine.RetrievalAttention.backend import LMBackend_Retro
 from datasets import load_dataset
 
 import sys
@@ -202,7 +202,7 @@ for step, batch in tqdm(enumerate(dataset), total=num_eval_steps):
     step_confidences = []  # Store confidence values for this step
     
     # input_ids = batch[0].to(DEVICE)
-    input_ids = engine.preprocess_input(batch, prompt_format, args.attn_type, model_path, args.budget1, args.budget2, args.estimate_ratio, args.dataset, args.prefix_len)
+    input_ids = engine.preprocess_input(batch, prompt_format, args.attn_type, model_path, args.budget1, args.estimate_ratio, args.dataset, args.prefix_len)
     terminal = False
     tokens_buffer= torch.zeros((BATCH_SIZE, args.gamma1+1), device=DEVICE).long()
 
@@ -214,9 +214,6 @@ for step, batch in tqdm(enumerate(dataset), total=num_eval_steps):
     torch.cuda.synchronize()
     start = time.perf_counter()
 
-    # record unsettled_tokens
-    num_unsettled_tokens = 0
-    called_verify = 0
     while not terminal:
         settled = False
         verified = False
@@ -225,75 +222,72 @@ for step, batch in tqdm(enumerate(dataset), total=num_eval_steps):
         draft_outputs, draft_logits, top1_top2_diff = engine.speculate(tokens_buffer[:, :1], args.gamma1, profile_clustering=True, profile_hot_cluster_selection_ratio=False, generate_name=f"{profile_dir}/speculate_{step}_{step_speculate_calls}")
         tokens_buffer[:,1:1+args.gamma1] = torch.LongTensor(draft_outputs)
         step_speculate_calls += args.gamma1
-        
-        # Store draft confidences for analysis
-        confidence_analyzer.store_draft_confidences(top1_top2_diff)
-        
-        # Dynamic budget adjustment based on confidence
-        # If all tokens have high confidence (top1_top2_diff > threshold), use lower budget
-        current_budget = args.budget2  # default budget
-        budget_switched = False  # Track if budget was switched for this speculation
-        
-        # if args.enable_dynamic_budget and top1_top2_diff is not None and len(top1_top2_diff) > 0:
-        #     min_confidence = torch.min(torch.tensor(top1_top2_diff))
-        #     avg_confidence = torch.mean(torch.tensor(top1_top2_diff))
-        #     # Convert tensor values to floats for storage
-        #     step_confidences.extend([float(x) for x in top1_top2_diff])  # Store all confidence values as floats
-            
-        #     if min_confidence > args.confidence_threshold:
-        #         # High confidence: use lower budget for verification
-        #         current_budget = args.budget2_low
-        #         budget_switched = True
-        #         step_budget_switches += 1
-        #         engine.update_verification_budget(
-        #             budget_ratio=current_budget, 
-        #             estimate_ratio=args.estimate_ratio,
-        #             model_path=current_model_path,
-        #             seq_len=input_ids.shape[1],
-        #             attn_type=current_attn_type
-        #         )
-        #         print(f"High confidence detected (min_diff={min_confidence:.3f}), using lower verification budget: {current_budget}")
-        #     else:
-        #         # Low confidence: use original budget for verification
-        #         engine.update_verification_budget(
-        #             budget_ratio=current_budget, 
-        #             estimate_ratio=args.estimate_ratio,
-        #             model_path=current_model_path,
-        #             seq_len=input_ids.shape[1],
-        #             attn_type=current_attn_type
-        #         )
-        #         print(f"Low confidence detected (min_diff={min_confidence:.3f}), using original verification budget: {current_budget}")
-        # else:
-        #     # Dynamic budget disabled or no confidence data available - use original budget
-        #     if args.enable_dynamic_budget:
-        #         print("No confidence data available, using default budget")
-        #     else:
-        #         print("Dynamic budget disabled, using default budget")
-            
-        #     # Still collect confidence data for logging if available
-        #     if top1_top2_diff is not None and len(top1_top2_diff) > 0:
-        #         step_confidences.extend([float(x) for x in top1_top2_diff])
-            
-        #     engine.update_verification_budget(
-        #         budget_ratio=current_budget, 
-        #         estimate_ratio=args.estimate_ratio,
-        #         model_path=current_model_path,
-        #         seq_len=input_ids.shape[1],
-        #         attn_type=current_attn_type
-        #     )
+                
+        # verify_outputs, verify_logits, verify_top1_top2_diff = engine.verify(tokens_buffer[:, :1], args.gamma1+1, use_first_kv=True, profile_clustering=True, profile_hot_cluster_selection_ratio=False, generate_name=f"{profile_dir}/verify_{step}_{step_verify_calls}")
+        # target_tokens = torch.LongTensor(verify_outputs).to(DEVICE) #TODO: verify stage should be batch-fashion, but this verify() is auto-regressive.
 
-        # Always call verify after speculate
-        if called_verify == 0:
-            cached_tokens_buffer = tokens_buffer[:, 0].clone() # bonus token from settle
-
-        verify_outputs, verify_logits, verify_top1_top2_diff = engine.verify(tokens_buffer[:, :1], args.gamma1+1, use_first_kv=True, profile_clustering=True, profile_hot_cluster_selection_ratio=False, generate_name=f"{profile_dir}/verify_{step}_{step_verify_calls}")
-        target_tokens = torch.LongTensor(verify_outputs).to(DEVICE) #TODO: verify stage should be batch-fashion, but this verify() is auto-regressive.
-
-        step_verify_calls += 1
-        called_verify += 1
+        # step_verify_calls += 1
+        # called_verify += 1
         
-        # Store verify confidences for analysis
-        confidence_analyzer.store_verify_confidences(verify_top1_top2_diff)
+        # # Store verify confidences for analysis
+        # confidence_analyzer.store_verify_confidences(verify_top1_top2_diff)
+
+        # draft_tokens = tokens_buffer[:, 1:args.gamma1+1]
+        # flag_accept_matrix = (target_tokens[:, :args.gamma1] == draft_tokens)
+        # eot_condition = ((draft_tokens == eot_1) | (draft_tokens == eot_2))
+
+        # accept_flags_int = (flag_accept_matrix & (~eot_condition)).int()
+        # accept_flags_cumprod = torch.cumprod(accept_flags_int, dim=1)
+        # accept_flags_matrix = accept_flags_cumprod.bool()
+        # accept_nums = accept_flags_matrix.sum(dim=1, keepdim=True)
+        # num_unsettled_tokens += accept_nums.flatten().item() + 1
+
+        # # Analyze confidence changes for verify stage
+        # num_accepted = accept_nums.flatten().item()
+        # print(f"Verify analysis: {num_accepted} tokens accepted, draft_conf_len={len(confidence_analyzer.current_draft_confidences) if confidence_analyzer.current_draft_confidences else 0}, verify_conf_len={len(confidence_analyzer.current_verify_confidences) if confidence_analyzer.current_verify_confidences else 0}")
+        
+        # confidence_analyzer.analyze_all_tokens(num_accepted)
+        
+        # # Accumulate confidences for later settle analysis
+        # confidence_analyzer.accumulate_confidences_after_verify(num_accepted)
+        # print(f"Accumulated confidences now: {len(confidence_analyzer.accumulated_draft_confidences)} tokens")
+
+        # positions_buffer = torch.arange(args.gamma1, device=DEVICE).view(1, -1).repeat(BATCH_SIZE, 1)
+        # mask_buffer = positions_buffer < accept_nums.view(-1,1)
+        # indices = accept_nums
+        # bonus_tokens = target_tokens.gather(1, indices)
+
+        # # Check for termination conditions
+        # condition = (eot_condition & accept_flags_matrix).any(dim=1, keepdim=True)
+        # if condition.any() or (bonus_tokens == eot_1).any() or (bonus_tokens == eot_2).any():
+        #     terminal = True
+
+        # # if args.dataset == "longbenchv1" or args.dataset == "longbenchv1-32k":
+        # #     if num_nodes.max() - input_len >= num_gen_token_max:
+        # #         terminal = True
+        # # else:
+        # #     if num_nodes.max() - args.prefix_len >= num_gen_token_max:
+        # #         terminal = True
+
+        # # get accepted token and re-decode to set draft cache
+        # accepted_tokens = torch.concat((tokens_buffer[:, :1], draft_tokens[mask_buffer].view(1,-1)), dim=1)
+        # engine.update_verified_kv(accepted_tokens)
+        # tokens_buffer[:, :1] = bonus_tokens
+
+        # print(f"verification accepted tokens: {accept_nums.flatten().item()} + 1 bonus token")
+        # print(f"total unsettled tokens: {num_unsettled_tokens}")
+
+        # # Now, after verify, check if we need to settle
+        # if num_unsettled_tokens >= args.gamma2 or called_verify > 2 * (args.gamma2 / args.gamma1) or terminal:
+        
+        # Settle
+        # in run_2step, settle is always called after speculate
+        settled = True
+
+        settle_outputs, settle_logits = engine.verify(tokens_buffer[:, :1], args.gamma1+1)
+        target_tokens = torch.LongTensor(settle_outputs).to(DEVICE) #TODO: verify stage should be batch-fashion, but this verify() is auto-regressive.
+        
+        step_settle_calls += 1
 
         draft_tokens = tokens_buffer[:, 1:args.gamma1+1]
         flag_accept_matrix = (target_tokens[:, :args.gamma1] == draft_tokens)
@@ -303,122 +297,44 @@ for step, batch in tqdm(enumerate(dataset), total=num_eval_steps):
         accept_flags_cumprod = torch.cumprod(accept_flags_int, dim=1)
         accept_flags_matrix = accept_flags_cumprod.bool()
         accept_nums = accept_flags_matrix.sum(dim=1, keepdim=True)
-        num_unsettled_tokens += accept_nums.flatten().item() + 1
-
-        # Analyze confidence changes for verify stage
-        num_accepted = accept_nums.flatten().item()
-        print(f"Verify analysis: {num_accepted} tokens accepted, draft_conf_len={len(confidence_analyzer.current_draft_confidences) if confidence_analyzer.current_draft_confidences else 0}, verify_conf_len={len(confidence_analyzer.current_verify_confidences) if confidence_analyzer.current_verify_confidences else 0}")
-        
-        confidence_analyzer.analyze_all_tokens(num_accepted)
-        
-        # Accumulate confidences for later settle analysis
-        confidence_analyzer.accumulate_confidences_after_verify(num_accepted)
-        print(f"Accumulated confidences now: {len(confidence_analyzer.accumulated_draft_confidences)} tokens")
 
         positions_buffer = torch.arange(args.gamma1, device=DEVICE).view(1, -1).repeat(BATCH_SIZE, 1)
         mask_buffer = positions_buffer < accept_nums.view(-1,1)
         indices = accept_nums
         bonus_tokens = target_tokens.gather(1, indices)
+        num_nodes += (accept_nums.flatten() + 1)
 
         # Check for termination conditions
         condition = (eot_condition & accept_flags_matrix).any(dim=1, keepdim=True)
         if condition.any() or (bonus_tokens == eot_1).any() or (bonus_tokens == eot_2).any():
             terminal = True
 
-        # if args.dataset == "longbenchv1" or args.dataset == "longbenchv1-32k":
-        #     if num_nodes.max() - input_len >= num_gen_token_max:
-        #         terminal = True
-        # else:
-        #     if num_nodes.max() - args.prefix_len >= num_gen_token_max:
-        #         terminal = True
+        if args.dataset == "longbenchv1" or args.dataset == "longbenchv1-32k":
+            if num_nodes.max() - input_len >= num_gen_token_max:
+                terminal = True
+        else:
+            if num_nodes.max() - args.prefix_len >= num_gen_token_max:
+                terminal = True
 
         # get accepted token and re-decode to set draft cache
         accepted_tokens = torch.concat((tokens_buffer[:, :1], draft_tokens[mask_buffer].view(1,-1)), dim=1)
         engine.update_verified_kv(accepted_tokens)
-        tokens_buffer[:, :1] = bonus_tokens
+        tokens_buffer[:, :1] = bonus_tokens        
 
-        print(f"verification accepted tokens: {accept_nums.flatten().item()} + 1 bonus token")
-        print(f"total unsettled tokens: {num_unsettled_tokens}")
+        print(f"settlement accepted tokens: {accept_nums.flatten().item()} + 1 bonus_token")
 
-        # Now, after verify, check if we need to settle
-        if num_unsettled_tokens >= args.gamma2 or called_verify > 2 * (args.gamma2 / args.gamma1) or terminal:
-            # Settle
-            settled = True
+        eot_condition = ((target_tokens == eot_1) | (target_tokens == eot_2))
+        if True in eot_condition:
+            eot_index = (eot_condition.view(-1) == True).nonzero(as_tuple=True)[0].item()
+            engine.verified_cachelength = engine.verified_cachelength - accept_nums + eot_index
+            num_nodes = num_nodes - accept_nums + eot_index
 
-            if not terminal:
-                # bonus tokens is the last token from verify
-                engine.update_verified_kv(tokens_buffer[:,:1])
-            else:
-                print("Terminal")
+    num_gen_tokens = engine.verified_cachelength - input_len
 
-            settle_outputs, settle_logits, settle_top1_top2_diff = engine.settle(cached_tokens_buffer.view(-1,1), num_unsettled_tokens+1)
-            target_tokens = torch.LongTensor(settle_outputs).to(DEVICE) #TODO: verify stage should be batch-fashion, but this verify() is auto-regressive.
-            
-            step_settle_calls += 1
-
-            # input_from_start = torch.concat((engine.input_tokens[:, :engine.verified_cachelength], tokens_buffer), dim=1)
-            input_from_start = engine.input_tokens[:, :engine.verified_cachelength]
-            draft_tokens = input_from_start[:, -(num_unsettled_tokens):]
-            flag_accept_matrix = (target_tokens[:, :num_unsettled_tokens] == draft_tokens)
-            eot_condition = ((draft_tokens == eot_1) | (draft_tokens == eot_2))
-            accept_flags_int = (flag_accept_matrix & (~eot_condition)).int()
-            accept_flags_cumprod = torch.cumprod(accept_flags_int, dim=1)
-            accept_flags_matrix = accept_flags_cumprod.bool()
-            accept_nums = accept_flags_matrix.sum(dim=1, keepdim=True)
-            
-            # For settlement, we need to analyze confidence changes for rejected tokens
-            # We use the accumulated draft and verify confidences from the speculation cycles
-            settle_accepted = accept_nums.flatten().item()
-            
-            # Analyze all tokens and rejected tokens in settle stage using accumulated data
-            confidence_analyzer.analyze_rejected_tokens_settle(settle_accepted)
-            
-            print(f"Settle analysis: {settle_accepted} tokens accepted out of {len(confidence_analyzer.accumulated_draft_confidences)} accumulated tokens")
-            
-            positions_buffer = torch.arange(num_unsettled_tokens, device=DEVICE).view(1, -1).repeat(BATCH_SIZE, 1)
-            mask_buffer = positions_buffer < accept_nums.view(-1,1)
-            indices = accept_nums
-            bonus_tokens = target_tokens.gather(1, indices)
-            num_nodes += (accept_nums.flatten() + 1)
-
-            # Check for termination conditions again
-            condition = (eot_condition & accept_flags_matrix).any(dim=1, keepdim=True)
-            if condition.any() or (bonus_tokens == eot_1).any() or (bonus_tokens == eot_2).any():
-                terminal = True
-
-            if args.dataset == "longbenchv1" or args.dataset == "longbenchv1-32k":
-                if num_nodes.max() - input_len >= num_gen_token_max:
-                    terminal = True
-            else:
-                if num_nodes.max() - args.prefix_len >= num_gen_token_max:
-                    terminal = True
-
-            accepted_tokens = torch.concat((cached_tokens_buffer.view(1,-1), draft_tokens[mask_buffer].view(1,-1)), dim=1)
-            engine.update_settled_kv(accepted_tokens)
-            tokens_buffer[:, :1] = bonus_tokens
-
-            # reset counters
-            num_unsettled_tokens = 0
-            called_verify = 0
-            
-            # Reset confidence analyzer data after settlement
-            confidence_analyzer.reset_accumulated_data()
-
-            print(f"settlement accepted tokens: {accept_nums.flatten().item()} + 1 bonus_token")
-            print(f"total unsettled tokens: {num_unsettled_tokens}")
-
-            eot_condition = ((target_tokens == eot_1) | (target_tokens == eot_2))
-            if True in eot_condition:
-                eot_index = (eot_condition.view(-1) == True).nonzero(as_tuple=True)[0].item()
-                engine.settled_cachelength = engine.settled_cachelength - accept_nums + eot_index
-                num_nodes = num_nodes - accept_nums + eot_index
-
-    num_gen_tokens = engine.settled_cachelength - input_len
-
-    output = engine.settled_input_tokens[:, input_len:engine.settled_cachelength][0]
+    output = engine.input_tokens[:, input_len:engine.verified_cachelength][0]
     decoded_output = engine.model.tokenizer.decode(output, skip_special_tokens=True)
     
-    # Calculate confidence statistics for this step
+    # # Calculate confidence statistics for this step
     min_confidence_step = float(min(step_confidences)) if step_confidences else 0.0
     avg_confidence_step = float(sum(step_confidences) / len(step_confidences)) if step_confidences else 0.0
     
@@ -481,31 +397,3 @@ print(f"Total verify calls: {total_verify_calls}")
 print(f"Total settle calls: {total_settle_calls}")
 print(f"Total budget switches: {total_budget_switches}")
 print(f"Total tokens generated: {total_tokens_generated}")
-
-# Save confidence analysis results
-print(f"\n=== Saving Confidence Analysis Results ===")
-
-# Create filename prefix with model configuration
-filename_prefix = f"{MODEL}_{args.dataset}_2step_prefix{args.prefix_len}_gamma1{args.gamma1}_budget1{args.budget1}_budget2{args.budget2}"
-
-confidence_analyzer.save_histograms("confidence_analysis", filename_prefix)
-confidence_analyzer.save_statistics("confidence_analysis", filename_prefix, args.hist_statistics_bins)
-print(f"Confidence analysis saved to 'confidence_analysis' directory with prefix: {filename_prefix}")
-
-# Print summary of collected data
-print(f"\n=== Confidence Analysis Summary ===")
-print(f"Histogram configuration: {args.hist_num_bins} bins, width={args.hist_bin_width}, center={args.hist_center}")
-print(f"Bin range: [{confidence_analyzer.bin_ranges[0][0]:.2f}, {confidence_analyzer.bin_ranges[-1][1]:.2f})")
-total_all_tokens = sum(len(data) for data in confidence_analyzer.all_tokens_data.values())
-total_rejected_tokens = sum(len(data) for data in confidence_analyzer.rejected_tokens_data.values())
-print(f"Total tokens analyzed: {total_all_tokens}")
-print(f"Total rejected tokens analyzed: {total_rejected_tokens}")
-
-for i in range(min(args.hist_num_bins, 20)):  # Limit output to first 20 bins for readability
-    all_count = len(confidence_analyzer.all_tokens_data[f"bin_{i}"])
-    rejected_count = len(confidence_analyzer.rejected_tokens_data[f"bin_{i}"])
-    bin_start, bin_end = confidence_analyzer.bin_ranges[i]
-    print(f"Bin {i} ([{bin_start:.2f}, {bin_end:.2f})): All tokens: {all_count}, Rejected tokens: {rejected_count}")
-
-if args.hist_num_bins > 20:
-    print(f"... (showing first 20 bins out of {args.hist_num_bins} total bins)")
