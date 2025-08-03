@@ -358,7 +358,7 @@ with open(CSV_PATH, "a", newline="") as f:
         args.draft_budget,
         args.gamma,
         args.task,
-        f"{accept_rate_total:.4f}"
+        f"{accept_rate_total:.4f}",
         f"{accept_rate_per_token:.4f}"
     ])
 # if rank == 0:

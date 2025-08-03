@@ -368,6 +368,10 @@ class retroinfer_cache(KV_Cache):
     
     # allocate layer-share buffer for computation
     def allocate_computation_buffer(self):
+        # Check if buffers are already allocated
+        if hasattr(self, 'gemm_o') and self.gemm_o is not None:
+            return
+            
         # execution buffer to store keys & values used to compute attention, shared across layers
         self.execution_buffer_keys = torch.zeros((self.batch_size*self.kv_head, self.buffer_size*self.page_size+self.static_stride, 1, self.head_dim), 
                                                  dtype=self.dtype, device=self.layer_mapping[str(0)]).contiguous()
@@ -547,33 +551,40 @@ class retroinfer_cache(KV_Cache):
                                     device=self.layer_mapping[str(0)], dtype=self.dtype).contiguous()
 
         observation_window = query_states[:,-self.window_size:,:,:] # select last tokens as a observation window
-        for i in range(self.window_size):
-          queries = observation_window[:,i]
-          batch_gemm_softmax(queries, self.centroids[layer_idx], self.gemm_o, self.norm, self.sum, self.softmax_o,
-                            self.batch_groups, self.group_size, self.n_centroids, self.head_dim,
-                            self.RSQRT_DIM, 0)       # [batch_size*group_num, group_size, n_centroids]
-          dist = torch.sum(self.softmax_o, dim=1)     # [batch_size*group_num, n_centroids]
-          dist.masked_fill_(self.centroids_mask[layer_idx], self.DTYPE_MIN)
-          softmax_sum += dist
 
-        cI = torch.topk(softmax_sum, self.num_hot_cluster, dim=-1, largest=True, sorted=True)[1] # [batch_size*group_num, max_consider_cluster]
-        self.hot_cluster[layer_idx] = cI
-        
-        # self.outdir_path = f"/home/juchanlee/MagicDec/Engine/RetrievalAttention/profile/data/data_superclustersize_{self.approx_supercluster_size}_{self.selection_ratio:.2f}KV_{seq_len}_clustersize_{self.avg_cluster_size}"
-        self.outdir_path = f"{self.generate_name}/data_{self.selection_ratio:.2f}KV_clustersize_{self.avg_cluster_size}"
-        os.makedirs(self.outdir_path, exist_ok=True)
-        self.seq_len = seq_len
+        if self.profile_clustering:
+          #sanity check
+          if not self.allocated:
+              self.allocate_computation_buffer()
 
-        # save cluster information for simulation
-        if self.profile_clustering:          
-            # torch.save(_centroids, f"{self.outdir_path}/centroid_{layer_idx}.pt")
-            torch.save(_cluster_size, f"{self.outdir_path}/cluster_size_{layer_idx}.pt")
-            # torch.save(_clusters, f"{self.outdir_path}/clusters_{layer_idx}.pt")
-            # torch.save(_supercentroids, f"{self.outdir_path}/supercentroids_{layer_idx}.pt")
-            # torch.save(_supercluster_size, f"{self.outdir_path}/supercluster_size_{layer_idx}.pt")
-            # torch.save(_superclusters, f"{self.outdir_path}/superclusters_{layer_idx}.pt")
-            torch.save(self.hot_cluster[layer_idx], f"{self.outdir_path}/hot_cluster_window{self.window_size}_{self.hot_cluster_ratio}_{layer_idx}.pt")
-            torch.save(softmax_sum, f"{self.outdir_path}/softmax_sum_{layer_idx}.pt")
+          for i in range(self.window_size):
+            queries = observation_window[:,i]
+            batch_gemm_softmax(queries, self.centroids[layer_idx], self.gemm_o, self.norm, self.sum, self.softmax_o,
+                              self.batch_groups, self.group_size, self.n_centroids, self.head_dim,
+                              self.RSQRT_DIM, 0)       # [batch_size*group_num, group_size, n_centroids]
+            
+            torch.cuda.synchronize()  # wait for the computation to finish
+            dist = torch.sum(self.softmax_o, dim=1)     # [batch_size*group_num, n_centroids]
+            dist.masked_fill_(self.centroids_mask[layer_idx], self.DTYPE_MIN)
+            softmax_sum += dist
+
+          cI = torch.topk(softmax_sum, self.num_hot_cluster, dim=-1, largest=True, sorted=True)[1] # [batch_size*group_num, max_consider_cluster]
+          self.hot_cluster[layer_idx] = cI
+          
+          # self.outdir_path = f"/home/juchanlee/MagicDec/Engine/RetrievalAttention/profile/data/data_superclustersize_{self.approx_supercluster_size}_{self.selection_ratio:.2f}KV_{seq_len}_clustersize_{self.avg_cluster_size}"
+          self.outdir_path = f"{self.generate_name}/data_{self.selection_ratio:.2f}KV_clustersize_{self.avg_cluster_size}"
+          os.makedirs(self.outdir_path, exist_ok=True)
+          self.seq_len = seq_len
+
+          # save cluster information for simulation
+          # torch.save(_centroids, f"{self.outdir_path}/centroid_{layer_idx}.pt")
+          torch.save(_cluster_size, f"{self.outdir_path}/cluster_size_{layer_idx}.pt")
+          # torch.save(_clusters, f"{self.outdir_path}/clusters_{layer_idx}.pt")
+          # torch.save(_supercentroids, f"{self.outdir_path}/supercentroids_{layer_idx}.pt")
+          # torch.save(_supercluster_size, f"{self.outdir_path}/supercluster_size_{layer_idx}.pt")
+          # torch.save(_superclusters, f"{self.outdir_path}/superclusters_{layer_idx}.pt")
+          torch.save(self.hot_cluster[layer_idx], f"{self.outdir_path}/hot_cluster_window{self.window_size}_{self.hot_cluster_ratio}_{layer_idx}.pt")
+          torch.save(softmax_sum, f"{self.outdir_path}/softmax_sum_{layer_idx}.pt")
 
         return key_states[:, valid_start:, :, :], value_states[:, valid_start:, :, :]   # ignore mask tokens, shape: (bsz, seq_len, group_num, dim)
 
@@ -696,6 +707,11 @@ class retroinfer_cache(KV_Cache):
         # assert queries.size(1) == 1
         # assert queries.size(2) == self.kv_head * self.group_size == self.num_heads
         # assert queries.size(3) == self.head_dim
+        
+        # Ensure computation buffers are allocated
+        if not self.allocated:
+            self.allocate_computation_buffer()
+            
         static_len = self.static_pattern_total if layer_idx == self.layer_num - 1 else self.static_pattern_total + 1
 
         # search for TopK centroids

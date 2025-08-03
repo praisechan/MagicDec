@@ -173,7 +173,7 @@ def load_profiling_layer(
     return LayerData(layer_idx, heads)
 
 
-def build_chips(args, layer: LayerData, mode: str) -> List[Chip]:
+def build_chips(args, layer: LayerData, mode: str, pages_per_head_data: List = None) -> List[Chip]:
     chips: List[Chip] = []
     for channel_id in range(args.num_channels):
         for chip_id in range(args.chips_per_channel):
@@ -196,6 +196,15 @@ def build_chips(args, layer: LayerData, mode: str) -> List[Chip]:
                     args.constrained,
                     args.cluster_size
                 )
+                
+                # Calculate and print pages per head
+                pages_per_head = sum(pages_map.values())
+                # print(f"Layer {layer.layer_index}, Head {head.head_index}: {pages_per_head} pages")
+                
+                # Collect pages per head data if list is provided
+                if pages_per_head_data is not None:
+                    pages_per_head_data.append(pages_per_head)
+                
                 chip.layout_clusters(
                     head_idx=head.head_index,
                     pages_per_cluster=pages_map,
@@ -208,8 +217,8 @@ def build_chips(args, layer: LayerData, mode: str) -> List[Chip]:
             chips.append(chip)
     return chips
 
-def get_plane_reads_per_layer(layer: LayerData, args, mode: str) -> List[int]:
-    chips = build_chips(args, layer, mode)
+def get_plane_reads_per_layer(layer: LayerData, args, mode: str, pages_per_head_data: List = None) -> List[int]:
+    chips = build_chips(args, layer, mode, pages_per_head_data)
     total_planes = sum(len(chip.planes) for chip in chips)
 
     # plane_reads = [0] * total_planes
@@ -246,8 +255,8 @@ def get_plane_reads_per_layer(layer: LayerData, args, mode: str) -> List[int]:
     return reads_per_layer, total_latency, ideal_total_latency
 
 
-def get_plane_reads_per_head(layer: LayerData, args, mode: str) -> List[List[int]]:
-    chips = build_chips(args, layer, mode)
+def get_plane_reads_per_head(layer: LayerData, args, mode: str, pages_per_head_data: List = None) -> List[List[int]]:
+    chips = build_chips(args, layer, mode, pages_per_head_data)
     reads_per_head = []
 
     for head in layer.heads:
@@ -288,6 +297,9 @@ def main():
     if 'supercluster' in modes:
       raise ValueError("supercluster does not support hot cluster mode yet")
     
+    # List to collect all pages per head data
+    all_pages_per_head_data = []
+    
     if args.max_latency_calculate:
       # Determine the number of steps based on the generate_name pattern
       if "speculate" in args.generate_name:
@@ -309,8 +321,8 @@ def main():
           for layer_idx in tqdm(layers_to_plot, desc=f"Processing step {step_idx}"):
               layer = load_profiling_layer(args, layer_idx, args.generate_name, step_idx)
               mode = 'baseline'  # only baseline mode for max latency calculation
-              plane_reads_overlap, overlap_latency_per_layer, overlap_ideal_latency_per_layer = get_plane_reads_per_layer(layer, args, mode)
-              reads_per_head, latency_per_layer, ideal_latency_per_layer, max_head_latency = get_plane_reads_per_head(layer, args, mode)
+              plane_reads_overlap, overlap_latency_per_layer, overlap_ideal_latency_per_layer = get_plane_reads_per_layer(layer, args, mode, all_pages_per_head_data)
+              reads_per_head, latency_per_layer, ideal_latency_per_layer, max_head_latency = get_plane_reads_per_head(layer, args, mode, all_pages_per_head_data)
               step_total_latency += latency_per_layer
               step_overlap_total_latency += overlap_latency_per_layer
               step_ideal_total_latency += ideal_latency_per_layer
@@ -330,6 +342,7 @@ def main():
 
           # Write step-specific results to CSV
           import re
+
           if args.csv_path:
               CSV_PATH = args.csv_path + ".csv"
           else:
@@ -374,7 +387,23 @@ def main():
       
       print(f"Total accumulated latency: {total_latency}")
       print(f"Total accumulated latency(head overlap): {overlap_total_latency}")
-      print(f"Total accumulated ideal latency: {ideal_total_latency}")      
+      print(f"Total accumulated ideal latency: {ideal_total_latency}")
+      
+      # Calculate and print average pages per head across all heads and all layers
+      if all_pages_per_head_data:
+          # Remove duplicates that might occur due to calling both get_plane_reads_per_layer and get_plane_reads_per_head
+          # Since both functions call build_chips, we might have duplicates, so let's deduplicate by taking every other element
+          unique_pages_data = all_pages_per_head_data[::2] if len(all_pages_per_head_data) > len(layers_to_plot) * args.num_heads * max_steps else all_pages_per_head_data
+          
+          total_pages = sum(unique_pages_data)
+          average_pages_per_head = total_pages / len(unique_pages_data)
+          
+          print(f"\n=== PAGES PER HEAD SUMMARY ===")
+          print(f"Total heads processed: {len(unique_pages_data)}")
+          print(f"Total pages across all heads: {total_pages}")
+          print(f"Average pages per head: {average_pages_per_head:.2f}")
+          print(f"Min pages per head: {min(unique_pages_data)}")
+          print(f"Max pages per head: {max(unique_pages_data)}")
       
     # else:          
     #   data_per_head = []

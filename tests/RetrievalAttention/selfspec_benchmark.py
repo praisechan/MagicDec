@@ -164,8 +164,8 @@ for step, batch in tqdm(enumerate(dataset), total=num_eval_steps):
             torch.cuda.synchronize()
             t1 = time.time()
             
-        # draft_outputs, draft_logits, draft_top1_top2_diff = engine.speculate(tokens_buffer[:, 0].view(-1,1), args.gamma, args.profile_clustering)
-        draft_outputs, draft_logits, draft_top1_top2_diff = engine.speculate_with_first_kv(tokens_buffer[:, 0].view(-1,1), args.gamma, args.profile_clustering)
+        draft_outputs, draft_logits, draft_top1_top2_diff = engine.speculate(tokens_buffer[:, 0].view(-1,1), args.gamma, args.profile_clustering)
+        # draft_outputs, draft_logits, draft_top1_top2_diff = engine.speculate_with_first_kv(tokens_buffer[:, 0].view(-1,1), args.gamma, args.profile_clustering)
         tokens_buffer[:,1:1+args.gamma] = torch.LongTensor(draft_outputs)
         # tokens_buffer[:,1:1+args.gamma] = torch.LongTensor(engine.speculate(input_ids, args.gamma))
 
@@ -232,7 +232,7 @@ for step, batch in tqdm(enumerate(dataset), total=num_eval_steps):
         num_nodes += accept_nums.flatten()
 
         # Check for termination conditions with accepted token number
-        num_gen_token_max = 80
+        num_gen_token_max = 100
         if args.dataset == "longbenchv1" or args.dataset == "longbenchv1-32k":
             #longbenchv1 does not have fixed prefix len
             if num_nodes.max() - input_len >= num_gen_token_max:

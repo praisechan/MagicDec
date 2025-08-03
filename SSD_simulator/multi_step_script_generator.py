@@ -22,7 +22,7 @@ fixed_option_values = {
 # Define variable options and their possible values
 option_values = {
     "--num_replica": [4],
-    "--prefix_len": ["8224"],  # Based on the qwen2.5-14b_pg19_8224 directory
+    "--prefix_len": ["65568"],
     "--hot_cluster_ratio": [0.08],
     "--planes_per_die": [32],
     "--model_name": ["qwen2.5-14b"],
@@ -71,14 +71,14 @@ def discover_data_folders():
             speculate_dirs = sort_directories_numerically(speculate_dirs)
             verify_dirs = sort_directories_numerically(verify_dirs)
             
-            # for spec_dir in speculate_dirs:
-            #     if os.path.isdir(spec_dir):
-            #         spec_name = os.path.basename(spec_dir)
-            #         data_folders.append({
-            #             'model_dataset_dir': dir_name,
-            #             'generate_name': spec_name,
-            #             'type': 'speculate'
-            #         })
+            for spec_dir in speculate_dirs:
+                if os.path.isdir(spec_dir):
+                    spec_name = os.path.basename(spec_dir)
+                    data_folders.append({
+                        'model_dataset_dir': dir_name,
+                        'generate_name': spec_name,
+                        'type': 'speculate'
+                    })
             
             for ver_dir in verify_dirs:
                 if os.path.isdir(ver_dir):
@@ -151,17 +151,22 @@ def main():
     if len(data_folders) > 10:
         print(f"  ... and {len(data_folders) - 10} more")
     
-    # Filter to specific model and dataset for this example
+    # Filter to specific model and dataset based on option values
+    target_model_name = option_values["--model_name"][0]
+    target_dataset = option_values["--dataset"][0] 
+    target_prefix_len = option_values["--prefix_len"][0]
+    target_dir_pattern = f"{target_model_name}_{target_dataset}_{target_prefix_len}"
+    
     filtered_folders = []
     for folder in data_folders:
         model_dataset_dir = folder['model_dataset_dir']
-        if "qwen2.5-14b_pg19_8224" in model_dataset_dir:
+        if target_dir_pattern in model_dataset_dir:
             # Extract model, dataset, prefix_len from the directory name
             parts = model_dataset_dir.split('_')
             if len(parts) >= 3:
-                model_name = parts[0]  # qwen2.5-14b
-                dataset = parts[1]  # pg19
-                prefix_len = parts[2]  # 8224
+                model_name = parts[0]  # e.g., qwen2.5-14b
+                dataset = parts[1]  # e.g., pg19
+                prefix_len = parts[2]  # e.g., 8224
                 
                 filtered_folders.append({
                     'generate_name': folder['generate_name'],
@@ -172,10 +177,10 @@ def main():
                 })
     
     if not filtered_folders:
-        print("No qwen2.5-14b_pg19_8224 folders found!")
+        print(f"No {target_dir_pattern} folders found!")
         return
     
-    print(f"\nFiltered to {len(filtered_folders)} qwen2.5-14b_pg19_8224 folders")
+    print(f"\nFiltered to {len(filtered_folders)} {target_dir_pattern} folders")
     
     # Generate all combinations of variable options
     keys, values = zip(*option_values.items())
