@@ -10,6 +10,7 @@ from transformers import AutoTokenizer
 from torch.utils.data.dataloader import DataLoader
 from tqdm import tqdm
 import argparse
+from datasets import load_dataset
 from MagicDec.Engine.SnapKV.backend import LMBackend
 from MagicDec.Engine.Quest.backend import LMBackend_Quest
 
@@ -100,7 +101,7 @@ else:
 print(f"eot_1: {eot_1}, eot_2: {eot_2}")
 
 if args.dataset == "pg19":
-    dataset = convert_pg19_dataset(tokenizer=tokenizer, seq_len=args.prefix_len)
+    dataset = load_dataset('emozilla/pg19', split='test')
 elif args.dataset == "c4":
     dataset = convert_c4_dataset(tokenizer=tokenizer, seq_len=args.prefix_len)
 elif args.dataset == "wiki":

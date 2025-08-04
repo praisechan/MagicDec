@@ -97,7 +97,9 @@ else:
 print(f"eot_1: {eot_1}, eot_2: {eot_2}")
 
 if args.dataset == "pg19":
-  dataset = convert_pg19_dataset(tokenizer=engine.model.tokenizer, seq_len=args.prefix_len)
+  # dataset = convert_pg19_dataset(tokenizer=engine.model.tokenizer, seq_len=args.prefix_len)
+    dataset = load_dataset('emozilla/pg19', split='test')
+
 # elif args.dataset == "c4":
 #     dataset = convert_c4_dataset(tokenizer=tokenizer, seq_len=args.prefix_len)
 # elif args.dataset == "wiki":
@@ -140,11 +142,16 @@ total_acc_tokens  = 0
 
 # for step, batch in tqdm(enumerate(dataloader)):
 # for step, batch in tqdm(enumerate(dataloader), total=num_eval_steps):
+actual_step = 0
 for step, batch in tqdm(enumerate(dataset), total=num_eval_steps):
-    if step >= num_eval_steps:
+    if actual_step >= num_eval_steps:
         break
-    # input_ids = batch[0].to(DEVICE)
     input_ids = engine.preprocess_input(batch, prompt_format, args.attn_type, model_path, args.budget_ratio, args.estimate_ratio, args.dataset, args.prefix_len)
+    if input_ids is None:
+        print(f"Skipping step {step} due to empty input_ids.")
+        continue
+    actual_step += 1 # increment actual step count only if input_ids is valid
+    
     terminal = False
     tokens_buffer= torch.zeros((BATCH_SIZE, args.gamma+1), device=DEVICE).long()
     verified_tokens = torch.zeros(BATCH_SIZE, max_length+1, device=DEVICE).long()

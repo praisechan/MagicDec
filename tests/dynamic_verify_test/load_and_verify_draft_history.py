@@ -135,7 +135,7 @@ total_comparisons = 0
 matching_predictions = 0
 
 if args.dataset == "pg19":
-  dataset = convert_pg19_dataset(tokenizer=engine.model.tokenizer, seq_len=args.prefix_len)
+  dataset = load_dataset('emozilla/pg19', split='test')
 # elif args.dataset == "c4":
 #     dataset = convert_c4_dataset(tokenizer=tokenizer, seq_len=args.prefix_len)
 # elif args.dataset == "wiki":

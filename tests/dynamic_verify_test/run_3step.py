@@ -13,6 +13,7 @@ from transformers import AutoTokenizer
 from torch.utils.data.dataloader import DataLoader
 from tqdm import tqdm
 import argparse
+from datasets import load_dataset
 # from MagicDec.Engine.SnapKV.backend import LMBackend
 from MagicDec.Engine.RetrievalAttention.backend_for_3stage import LMBackend_Retro
 from datasets import load_dataset
@@ -395,7 +396,7 @@ else:
 print(f"eot_1: {eot_1}, eot_2: {eot_2}")
 
 if args.dataset == "pg19":
-  dataset = convert_pg19_dataset(tokenizer=engine.model.tokenizer, seq_len=args.prefix_len)
+  dataset = load_dataset('emozilla/pg19', split='test')
 elif args.dataset == "longbenchv1":
     dataset = load_dataset('THUDM/LongBench', TASK, split='test')
 else:
@@ -459,9 +460,15 @@ total_settle_calls = 0
 total_budget_switches = 0
 total_tokens_generated = 0
 
+actual_step = 0
 for step, batch in tqdm(enumerate(dataset), total=num_eval_steps):
-    if step >= num_eval_steps:
+    if actual_step >= num_eval_steps:
         break
+    input_ids = engine.preprocess_input(batch, prompt_format, args.attn_type, model_path, args.budget1, args.budget2, args.estimate_ratio, args.dataset, args.prefix_len)
+    if input_ids is None:
+        print(f"Skipping step {step} due to empty input_ids.")
+        continue
+    actual_step += 1 # increment actual step count only if input_ids is valid
 
     # Initialize step-wise counters
     step_speculate_calls = 0
@@ -471,7 +478,6 @@ for step, batch in tqdm(enumerate(dataset), total=num_eval_steps):
     step_confidences = []  # Store confidence values for this step
     
     # input_ids = batch[0].to(DEVICE)
-    input_ids = engine.preprocess_input(batch, prompt_format, args.attn_type, model_path, args.budget1, args.budget2, args.estimate_ratio, args.dataset, args.prefix_len)
     terminal = False
     tokens_buffer= torch.zeros((BATCH_SIZE, args.gamma1+1), device=DEVICE).long()
 

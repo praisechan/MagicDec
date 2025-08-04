@@ -10,10 +10,27 @@ from transformers import AutoTokenizer
 from torch.utils.data.dataloader import DataLoader
 from tqdm import tqdm
 import argparse
+from datasets import load_dataset
 from MagicDec.Engine.SnapKV.backend import LMBackend
 import numpy as np
 import pandas as pd
 import os
+
+def preprocess_input(self, data, prompt_format, dataset, prefix_len):
+    inputs = None
+    if dataset == "longbenchv1":
+      prompt = prompt_format.format(**data)
+      inputs = self.model.tokenizer([prompt], return_tensors="pt", padding=True)
+      input_ids = inputs.input_ids
+      self.attention_masks = inputs.attention_mask
+
+    if dataset == "pg19":
+      inputs = self.model.tokenizer(data['text'], return_tensors="pt", padding=True)
+      if inputs.input_ids.shape[1] > prefix_len: 
+        input_ids = inputs.input_ids.split(prefix_len, dim=-1)[0]
+        self.attention_masks = inputs.attention_mask.split(prefix_len, dim=-1)[0]
+      else:
+        return None
 
 # Process histogram data
 def create_histogram_data(data, bins=50, range_min=None, range_max=None):
@@ -136,7 +153,7 @@ else:
 print(f"eot_1: {eot_1}, eot_2: {eot_2}")
 
 if args.dataset == "pg19":
-    dataset = convert_pg19_dataset(tokenizer=tokenizer, seq_len=args.prefix_len)
+    dataset = load_dataset('emozilla/pg19', split='test')
 elif args.dataset == "c4":
     dataset = convert_c4_dataset(tokenizer=tokenizer, seq_len=args.prefix_len)
 elif args.dataset == "wiki":
@@ -157,6 +174,10 @@ else:
     raise ValueError(f"Unknown dataset {args.dataset}")
 
 dataloader = DataLoader(dataset, batch_size=BATCH_SIZE, shuffle=False, drop_last=True)
+
+import json
+dataset2prompt = json.load(open("Engine/RetrievalAttention/benchmark/LongBench/config/dataset2prompt.json", "r"))
+prompt_format = dataset2prompt[args.task]
 
 if args.dataset == "pg19":
   num_eval_steps = min(10, len(dataloader))
@@ -183,13 +204,18 @@ draft_top1_top2_diff_data = []
 reject_token_top1_top2_diff_data = []
 
 # for step, batch in tqdm(enumerate(dataloader)):
+actual_step = 0
 for step, batch in tqdm(enumerate(dataloader), total=num_eval_steps):
-    if step >= num_eval_steps:
+    if actual_step >= num_eval_steps:
         break
 
-    # if step == 35:
-    #     breakpoint()
-    input_ids = batch[0].to(DEVICE)
+    # input_ids = batch[0].to(DEVICE)
+    input_ids = preprocess_input(batch, prompt_format, args.dataset, args.prefix_len)
+    if input_ids is None:
+        print(f"Skipping step {step} due to empty input_ids.")
+        continue
+    actual_step += 1 # increment actual step count only if input_ids is valid
+    
     terminal = False
     tokens_buffer= torch.zeros((BATCH_SIZE, args.gamma+1), device=DEVICE).long()
     output = torch.zeros(BATCH_SIZE, MAX_LEN_TARGET+1, device=DEVICE).long()

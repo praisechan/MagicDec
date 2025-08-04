@@ -10,6 +10,7 @@ from transformers import AutoTokenizer
 from torch.utils.data.dataloader import DataLoader
 from tqdm import tqdm
 import argparse
+from datasets import load_dataset
 # from MagicDec.Engine.SnapKV.backend import LMBackend
 from MagicDec.Engine.SqueezedAttention.backend import LMBackend_Squeeze
 from squeezedattention.utils import truncate_fn
@@ -117,7 +118,9 @@ print(f"eot_1: {eot_1}, eot_2: {eot_2}")
 #     dataset = convert_longbench_v2_sum_dataset(tokenizer=tokenizer, seq_len=args.prefix_len)
 # elif args.dataset.startswith("ruler"):
 #     dataset = convert_ruler_dataset(tokenizer=tokenizer, task=args.dataset.split(":")[1], model_name=args.model_name, seq_len=args.prefix_len)
-if args.dataset == "longbenchv1":
+if args.dataset == "pg19":
+    dataset = load_dataset('emozilla/pg19', split='test')
+elif args.dataset == "longbenchv1":
     dataset = load_dataset('THUDM/LongBench', args.task, split='test')
     dataset = [data_sample for data_sample in dataset]
 
@@ -173,11 +176,16 @@ def preprocess_input(task, json_obj):
 
 # for step, batch in tqdm(enumerate(dataloader)):
 # for step, batch in tqdm(enumerate(dataloader), total=num_eval_steps):
+actual_step = 0
 for step, batch in tqdm(enumerate(dataset), total=num_eval_steps):
-    if step >= num_eval_steps:
+    if actual_step >= num_eval_steps:
         break
     # input_ids = batch[0].to(DEVICE)
-    input_ids, truncated_shared_prefix_length, different_prefix_index = preprocess_input(args.task, batch)            
+    input_ids, truncated_shared_prefix_length, different_prefix_index = preprocess_input(args.task, batch)
+    if input_ids is None:
+        print(f"Skipping step {step} due to empty input_ids.")
+        continue
+    actual_step += 1 # increment actual step count only if input_ids is valid            
     terminal = False
     tokens_buffer= torch.zeros((BATCH_SIZE, args.gamma+1), device=DEVICE).long()
     output = torch.zeros(BATCH_SIZE, MAX_LEN_TARGET+1, device=DEVICE).long()

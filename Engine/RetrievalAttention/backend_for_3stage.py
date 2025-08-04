@@ -91,8 +91,17 @@ class LMBackend_Retro:
           self.attention_masks = inputs.attention_mask
 
         if dataset == "pg19":
-          input_ids = data[0].unsqueeze(0) # already preprocessed in convert_pg19_dataset()
-          self.attention_masks = torch.ones_like(input_ids)
+          inputs = self.model.tokenizer(data['text'], return_tensors="pt", padding=True)
+          if inputs.input_ids.shape[1] > prefix_len: 
+            input_ids = inputs.input_ids.split(prefix_len, dim=-1)[0]
+            self.attention_masks = inputs.attention_mask.split(prefix_len, dim=-1)[0]
+          else:
+            return None
+
+        # Below code is for using Data/pg19 and convert_pg19_dataset() in data_converter.py
+        # if dataset == "pg19":
+        #   input_ids = data[0].unsqueeze(0) # already preprocessed in convert_pg19_dataset()
+        #   self.attention_masks = torch.ones_like(input_ids)
 
         self.attn_config_speculation = generate_config(
             model_path, 

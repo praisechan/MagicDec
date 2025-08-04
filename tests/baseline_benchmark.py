@@ -10,6 +10,7 @@ from transformers import AutoTokenizer
 from torch.utils.data.dataloader import DataLoader
 from tqdm import tqdm
 import argparse
+from datasets import load_dataset
 from MagicDec.Engine.SnapKV.backend import LMBackend
 
 parser = argparse.ArgumentParser(description='Process model configuration and partitions.')
@@ -64,7 +65,7 @@ else:
     eot_2 = tokenizer.encode("<|eot_id|>")[-1]
 print(f"eot_1: {eot_1}, eot_2: {eot_2}")
 
-dataset = convert_pg19_dataset(tokenizer=tokenizer, seq_len=args.prefix_len)
+dataset = load_dataset('emozilla/pg19', split='test')
 dataloader = DataLoader(dataset, batch_size=BATCH_SIZE, shuffle=False, drop_last=True)
 num_eval_steps = min(10, len(dataloader))
 
