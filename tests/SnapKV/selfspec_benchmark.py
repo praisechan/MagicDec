@@ -19,12 +19,14 @@ def preprocess_input(self, data, prompt_format, dataset, prefix_len):
       inputs = self.model.tokenizer([prompt], return_tensors="pt", padding=True)
       input_ids = inputs.input_ids
       self.attention_masks = inputs.attention_mask
+      return input_ids
 
     if dataset == "pg19":
       inputs = self.model.tokenizer(data['text'], return_tensors="pt", padding=True)
       if inputs.input_ids.shape[1] > prefix_len: 
         input_ids = inputs.input_ids.split(prefix_len, dim=-1)[0]
         self.attention_masks = inputs.attention_mask.split(prefix_len, dim=-1)[0]
+        return input_ids
       else:
         return None
 
