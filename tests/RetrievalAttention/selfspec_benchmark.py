@@ -218,6 +218,7 @@ for step, batch in tqdm(enumerate(dataset), total=num_eval_steps):
         total_spec_tokens += speculated_this_iter
         total_acc_tokens  += accepted_this_iter
         
+        print(f"accepted this iter: {accepted_this_iter}, speculated this iter: {speculated_this_iter}, total acc tokens: {total_acc_tokens}, total spec tokens: {total_spec_tokens}")
         if accepted_this_iter != args.gamma:
           print(draft_logits[accepted_this_iter])
           print(target_logits[accepted_this_iter])
