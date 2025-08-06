@@ -349,7 +349,7 @@ if total_spec_tokens > 0:
 
 import os, csv
 # CSV_PATH = f"/home/juchanlee/MagicDec/output/RetroInfer/{MODEL}_{args.dataset}_acceptance_rates.csv"
-CSV_PATH = f"/home/juchanlee/MagicDec/output/RetroInfer_use_first_kv/{MODEL}_{args.dataset}_acceptance_rates.csv"
+CSV_PATH = f"/home/juchanlee/MagicDec/output/RetroInfer_prompt_pg19/{MODEL}_{args.dataset}_acceptance_rates.csv"
 # if the file doesn't yet exist, write the header
 if not os.path.exists(CSV_PATH):
     with open(CSV_PATH, "w", newline="") as f:

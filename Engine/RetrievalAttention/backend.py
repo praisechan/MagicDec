@@ -86,11 +86,18 @@ class LMBackend_Retro:
           self.attention_masks = inputs.attention_mask
 
         if dataset == "pg19":
-          inputs = self.model.tokenizer(data['text'], return_tensors="pt", padding=True)
+          prompt_intro = "You are given an excerpt from a classic book published before 1919. Please provide a concise summary of the main events, characters, and themes in this passage.\n\nBook excerpt:\n"
+          prompt_outro = "\n\nNow, write a summary of this book excerpt.\n\nSummary:"
+          
+          inputs = self.model.tokenizer(data["text"], return_tensors="pt", padding=True)
           input_ids = inputs.input_ids[:,8000:]
-          if input_ids.shape[1] > prefix_len: 
-            input_ids = input_ids.split(prefix_len, dim=-1)[0]
-            self.attention_masks = inputs.attention_mask.split(prefix_len, dim=-1)[0]
+          self.attention_masks = inputs.attention_mask[:,8000:]
+          inputs_intro = self.model.tokenizer([prompt_intro], return_tensors="pt", padding=True)
+          inputs_outro = self.model.tokenizer([prompt_outro], return_tensors="pt", padding=True)
+          if input_ids.shape[1] > prefix_len - inputs_intro.input_ids.shape[1] - inputs_outro.input_ids.shape[1]:
+            actual_prefix_len = prefix_len - inputs_intro.input_ids.shape[1] - inputs_outro.input_ids.shape[1]
+            input_ids = torch.concat((inputs_intro.input_ids, input_ids.split(actual_prefix_len, dim=-1)[0], inputs_outro.input_ids), dim=-1)
+            self.attention_masks = torch.concat((inputs_intro.attention_mask, self.attention_masks.split(actual_prefix_len, dim=-1)[0], inputs_outro.attention_mask), dim=-1)
           else:
             return None
 
