@@ -565,7 +565,7 @@ class retroinfer_cache(KV_Cache):
             
             torch.cuda.synchronize()  # wait for the computation to finish
             dist = torch.sum(self.softmax_o, dim=1)     # [batch_size*group_num, n_centroids]
-            dist.masked_fill_(self.centroids_mask[layer_idx], self.DTYPE_MIN)
+            dist.masked_fill_(self.centroids_mask[layer_idx].to(dist.device), self.DTYPE_MIN)
             softmax_sum += dist
 
           cI = torch.topk(softmax_sum, self.num_hot_cluster, dim=-1, largest=True, sorted=True)[1] # [batch_size*group_num, max_consider_cluster]
@@ -719,12 +719,12 @@ class retroinfer_cache(KV_Cache):
                            self.batch_groups, self.group_size, self.n_centroids, self.head_dim,
                            self.RSQRT_DIM, 0)       # [batch_size*group_num, group_size, n_centroids]
         dist = torch.sum(self.softmax_o, dim=1)     # [batch_size*group_num, n_centroids]
-        dist.masked_fill_(self.centroids_mask[layer_idx], self.DTYPE_MIN)
+        dist.masked_fill_(self.centroids_mask[layer_idx].to(dist.device), self.DTYPE_MIN)
         cI = torch.topk(dist, self.max_compute_cluster_num, dim=-1, largest=True, sorted=True)[1] # [batch_size*group_num, max_consider_cluster]
 
         # check how many hot clusters are selected actually
         selected_cI = cI[..., :self.nprobe]
-        masks = [torch.isin(self.hot_cluster[layer_idx][i], selected_cI[i]) for i in range(cI.shape[0])]
+        masks = [torch.isin(self.hot_cluster[layer_idx][i].to(selected_cI.device), selected_cI[i]) for i in range(cI.shape[0])]
         counts = [m.sum() for m in masks]
         self.hot_cluster_hit_ratio[layer_idx] = sum(counts) / (self.hot_cluster[layer_idx].shape[0] * self.hot_cluster[layer_idx].shape[1])
 
@@ -741,7 +741,7 @@ class retroinfer_cache(KV_Cache):
                             self.batch_groups, self.group_size, self.n_super_centroids, self.head_dim,
                             self.RSQRT_DIM, 0)       # [batch_size*group_num, group_size, n_centroids]
             super_dist = torch.sum(self.super_softmax_o, dim=1)     # [batch_size*group_num, n_centroids]
-            super_dist.masked_fill_(self.super_centroids_mask[layer_idx], self.DTYPE_MIN)
+            super_dist.masked_fill_(self.super_centroids_mask[layer_idx].to(super_dist.device), self.DTYPE_MIN)
             super_cI = torch.topk(super_dist, int(self.max_compute_cluster_num/self.approx_supercluster_size), dim=-1, largest=True, sorted=True)[1] # [batch_size*group_num, max_consider_cluster]
             
             # select only clusters from selected supercluster and see what happens

@@ -218,6 +218,7 @@ for step, batch in tqdm(enumerate(dataset), total=num_eval_steps):
         total_spec_tokens += speculated_this_iter
         total_acc_tokens  += accepted_this_iter
         
+        print(f"accepted this iter: {accepted_this_iter}, speculated this iter: {speculated_this_iter}, total acc tokens: {total_acc_tokens}, total spec tokens: {total_spec_tokens}")
         if accepted_this_iter != args.gamma:
           print(draft_logits[accepted_this_iter])
           print(target_logits[accepted_this_iter])
@@ -348,7 +349,7 @@ if total_spec_tokens > 0:
 
 import os, csv
 # CSV_PATH = f"/home/juchanlee/MagicDec/output/RetroInfer/{MODEL}_{args.dataset}_acceptance_rates.csv"
-CSV_PATH = f"/home/juchanlee/MagicDec/output/RetroInfer_use_first_kv/{MODEL}_{args.dataset}_acceptance_rates.csv"
+CSV_PATH = f"/home/juchanlee/MagicDec/output/RetroInfer_prompt_pg19/{MODEL}_{args.dataset}_acceptance_rates.csv"
 # if the file doesn't yet exist, write the header
 if not os.path.exists(CSV_PATH):
     with open(CSV_PATH, "w", newline="") as f:
