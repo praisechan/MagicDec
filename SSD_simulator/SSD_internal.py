@@ -1,6 +1,6 @@
 import math
 from dataclasses import dataclass
-from typing import List, Dict, Tuple
+from typing import List, Dict, Tuple, Iterable
 import torch
 
 @dataclass
@@ -344,12 +344,13 @@ class Chip:
         
         ###### Practical duplicate ######
         if self.hot_cluster_duplicate:
-            plane_reads = self.simulate_hot_cluster_access(head_idx, selected_clusters, hot_cluster_ids, plane_reads)
+            plane_reads = self.simulate_hot_cluster_access_greedy(head_idx, selected_clusters, hot_cluster_ids, plane_reads)
+            # temp_plane_reads = plane_reads.copy()  # make a copy to avoid modifying original during greedy allocation
+            # plane_reads = self.simulate_hot_cluster_access_optimal(head_idx, selected_clusters, hot_cluster_ids, plane_reads)
                 
         return plane_reads
 
-      
-    def simulate_hot_cluster_access(
+    def simulate_hot_cluster_access_greedy(
         self,
         head_idx: int,
         selected_clusters: List[int],
@@ -385,5 +386,193 @@ class Chip:
                 # pick the least‐loaded plane among those
                 best = min(candidate_planes, key=lambda p: plane_reads[p])
                 plane_reads[best] += 1
+
+        return plane_reads
+
+    # pages_per_cluster and self.planes should be available in your class
+
+    def simulate_hot_cluster_access_optimal_old(
+        self,
+        head_idx: int,
+        selected_clusters: List[int],
+        hot_cluster_ids: List[int],
+        initial_plane_reads: List[int],
+    ) -> Tuple[List[int], int]:
+        """
+        Assign hot-cluster pages to planes so as to minimize the maximum
+        loaded reads on any plane (makespan), taking an existing starting load
+        into account. Uses binary search + feasibility ILP for optimality.
+
+        Returns:
+          plane_reads: List of final loads per plane (initial + assigned hot pages).
+          makespan: the minimized maximum load.
+        """
+        import pulp
+        from typing import List, Any, Tuple
+
+        # 1. Filter to selected hot clusters
+        selected_hot = [c for c in hot_cluster_ids if c in selected_clusters]
+
+        # 2. Build tasks: list of (cluster, offset)
+        tasks: List[Tuple[int, int]] = []
+        for cluster in selected_hot:
+            num_pages = self.pages_per_cluster[head_idx][cluster]
+            for offset in range(num_pages):
+                tasks.append((cluster, offset))
+
+        num_planes = len(initial_plane_reads)
+        total_hot = len(tasks)
+
+        # 3. Precompute candidate planes per task
+        candidate_planes = {
+            t_idx: [p_idx for p_idx, plane in enumerate(self.planes)
+                    if tasks[t_idx][1] in plane.hot_cluster_to_pages.get((head_idx, tasks[t_idx][0]), [])]
+            for t_idx in range(total_hot)
+        }
+
+        # 4. Bounds for makespan
+        base_max = max(initial_plane_reads)
+        avg_lb = (sum(initial_plane_reads) + total_hot + num_planes - 1) // num_planes
+        lower = max(base_max, avg_lb)
+        upper = base_max + total_hot
+
+        best_solution = None
+        # 5. Binary search on makespan
+        while lower < upper:
+            mid = (lower + upper) // 2
+            # Feasibility ILP: can we assign all tasks so plane_load <= mid?
+            prob = pulp.LpProblem("feasibility_check", pulp.LpStatusOptimal)
+            # decision vars x[t_idx][p_idx]
+            x = {
+                (t_idx, p_idx): pulp.LpVariable(f"x_{t_idx}_{p_idx}", cat="Binary")
+                for t_idx, planes_list in candidate_planes.items()
+                for p_idx in planes_list
+            }
+            # each task assigned exactly once
+            for t_idx, planes_list in candidate_planes.items():
+                prob += pulp.lpSum(x[(t_idx, p)] for p in planes_list) == 1, f"assign_{t_idx}"
+            # load constraints
+            for p_idx in range(num_planes):
+                prob += (
+                    pulp.lpSum(x[(t_idx, p_idx)]
+                              for t_idx in candidate_planes
+                              if (t_idx, p_idx) in x)
+                    + initial_plane_reads[p_idx]
+                    <= mid,
+                    f"load_{p_idx}"
+                )
+            prob.solve(pulp.PULP_CBC_CMD(msg=False))
+            if pulp.LpStatus[prob.status] == 'Optimal':
+                upper = mid
+                # save solution values
+                best_solution = {key: var.value() for key, var in x.items()}
+            else:
+                lower = mid + 1
+
+        # 6. Build final plane_reads from best_solution
+        plane_reads = initial_plane_reads.copy()
+        if best_solution:
+            for (t_idx, p_idx), val in best_solution.items():
+                if val > 0.5:
+                    plane_reads[p_idx] += 1
+
+        makespan = lower
+        return plane_reads
+
+    def simulate_hot_cluster_access_optimal(
+        self,
+        head_idx: int,
+        selected_clusters: List[int],
+        hot_cluster_ids: Iterable[int],
+        plane_reads: List[int],
+    ) -> List[int]:
+        """
+        Assign each hot-cluster page to one of its candidate planes
+        so as to minimize the maximum load (makespan) across all planes,
+        then return the final plane_reads distribution.
+        Uses a binary search over possible max-load T and a max-flow check
+        for feasibility under candidate-plane constraints.
+        After finding the minimal T, reconstructs the assignment to update
+        plane_reads and returns the resulting list.
+        """
+        import networkx as nx
+        from typing import List, Iterable
+        # 1. Filter only the hot clusters in the selection
+        selected_hot = [c for c in hot_cluster_ids if c in selected_clusters]
+
+        # 2. Build a list of tasks: for each page-offset, the eligible planes
+        tasks: List[List[int]] = []
+        for cluster in selected_hot:
+            num_pages = self.pages_per_cluster[head_idx][cluster]
+            for offset in range(num_pages):
+                eligible = []
+                for pi, plane in enumerate(self.planes):
+                    pages_on_plane = plane.hot_cluster_to_pages.get((head_idx, cluster), [])
+                    if offset in pages_on_plane:
+                        eligible.append(pi)
+                if eligible:
+                    tasks.append(eligible)
+        num_tasks = len(tasks)
+        # if no tasks, nothing to assign
+        if num_tasks == 0:
+            return plane_reads
+
+        # keep a copy of the original reads
+        initial_reads = list(plane_reads)
+
+        # 3. Binary search on the target makespan T
+        lo = max(initial_reads)
+        hi = lo + num_tasks  # worst case: all tasks to one plane
+        best_T = hi
+
+        while lo <= hi:
+            mid = (lo + hi) // 2
+            # build flow network
+            G = nx.DiGraph()
+            src, sink = 'src', 'sink'
+            G.add_node(src); G.add_node(sink)
+            # source -> task nodes
+            for ti in range(num_tasks):
+                tnode = f"t{ti}"
+                G.add_edge(src, tnode, capacity=1)
+                # task -> plane nodes
+                for p in tasks[ti]:
+                    G.add_edge(tnode, f"p{p}", capacity=1)
+            # plane -> sink with capacity = mid - initial_read
+            for p, base in enumerate(initial_reads):
+                cap = max(mid - base, 0)
+                G.add_edge(f"p{p}", sink, capacity=cap)
+
+            flow_val, _ = nx.maximum_flow(G, src, sink)
+            if flow_val == num_tasks:
+                best_T = mid
+                hi = mid - 1
+            else:
+                lo = mid + 1
+
+        # 4. Reconstruct assignment at best_T
+        # reset reads
+        plane_reads[:] = initial_reads
+        # build final flow network
+        G = nx.DiGraph()
+        src, sink = 'src', 'sink'
+        G.add_node(src); G.add_node(sink)
+        for ti in range(num_tasks):
+            tnode = f"t{ti}"
+            G.add_edge(src, tnode, capacity=1)
+            for p in tasks[ti]:
+                G.add_edge(tnode, f"p{p}", capacity=1)
+        for p, base in enumerate(initial_reads):
+            cap = max(best_T - base, 0)
+            G.add_edge(f"p{p}", sink, capacity=cap)
+
+        _, flow_dict = nx.maximum_flow(G, src, sink)
+        # for each task, find which plane got the flow
+        for ti in range(num_tasks):
+            tnode = f"t{ti}"
+            for p in tasks[ti]:
+                if flow_dict.get(tnode, {}).get(f"p{p}", 0) == 1:
+                    plane_reads[p] += 1
+                    break
 
         return plane_reads
