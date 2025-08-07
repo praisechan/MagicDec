@@ -777,13 +777,18 @@ class KLConfidenceAnalyzer_temp:
                     kl_div = self.compute_kl_divergence(draft_logits, verify_logits)
                     
                     self.all_tokens_kl_data[f"bin_{bin_idx}"].append(kl_div)
-
                     
                     kl_divergences.append(kl_div)
+                    if kl_div > self.kl_threshold:
+                        print(f"KL divergence exceeded threshold: {kl_div:.4f} > {self.kl_threshold:.4f} (draft_conf={draft_conf:.4f})")
                 
                 max_kl_divergence = max(kl_divergences)
                 kl_threshold_exceeded = max_kl_divergence > self.kl_threshold
                 print(f"KL divergence check: max={max_kl_divergence:.4f}, threshold={self.kl_threshold}, exceeded={kl_threshold_exceeded}")
+
+            #TODO: decide kl_threshold_exceeded based kl_divergence and draft confidence
+            #TODO: you should set each kl threshold for each bin
+            #TODO: this is done by calibration set
             
             return kl_threshold_exceeded
         else:

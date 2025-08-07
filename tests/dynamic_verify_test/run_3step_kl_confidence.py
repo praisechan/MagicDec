@@ -209,6 +209,8 @@ actual_step = 0
 for step, batch in tqdm(enumerate(dataset), total=num_eval_steps):
     if actual_step >= num_eval_steps:
         break
+    if step !=2:
+      continue
     input_ids = engine.preprocess_input(batch, prompt_format, args.attn_type, model_path, args.budget1, args.budget2, args.estimate_ratio, args.dataset, args.prefix_len)
     if input_ids is None:
         print(f"Skipping step {step} due to empty input_ids.")
@@ -245,7 +247,7 @@ for step, batch in tqdm(enumerate(dataset), total=num_eval_steps):
         verified = False
 
         # Draft speculation
-        draft_outputs, draft_logits, top1_top2_diff = engine.speculate(tokens_buffer[:, :1], args.gamma1, profile_clustering=True, profile_hot_cluster_selection_ratio=False, generate_name=f"{profile_dir}/speculate_{step}_{step_speculate_calls}")
+        draft_outputs, draft_logits, top1_top2_diff = engine.speculate(tokens_buffer[:, :1], args.gamma1, profile_clustering=False, profile_hot_cluster_selection_ratio=False, generate_name=f"{profile_dir}/speculate_{step}_{step_speculate_calls}")
         tokens_buffer[:,1:1+args.gamma1] = torch.LongTensor(draft_outputs)
         step_speculate_calls += args.gamma1
         
@@ -323,7 +325,7 @@ for step, batch in tqdm(enumerate(dataset), total=num_eval_steps):
         if called_verify == 0:
             cached_tokens_buffer = tokens_buffer[:, 0].clone() # bonus token from settle
 
-        verify_outputs, verify_logits, verify_top1_top2_diff = engine.verify_dynamic(tokens_buffer[:, :1], args.gamma1+1, use_first_kv=True, profile_clustering=True, profile_hot_cluster_selection_ratio=False, generate_name=f"{profile_dir}/verify_{step}_{step_verify_calls}", use_extended_verification=use_extended_verification, previous_num_accepted=previous_num_accepted)
+        verify_outputs, verify_logits, verify_top1_top2_diff = engine.verify_dynamic(tokens_buffer[:, :1], args.gamma1+1, use_first_kv=True, profile_clustering=False, profile_hot_cluster_selection_ratio=False, generate_name=f"{profile_dir}/verify_{step}_{step_verify_calls}", use_extended_verification=use_extended_verification, previous_num_accepted=previous_num_accepted)
         target_tokens = torch.LongTensor(verify_outputs).to(DEVICE) #TODO: verify stage should be batch-fashion, but this verify() is auto-regressive.
 
         step_verify_calls += 1
@@ -362,31 +364,6 @@ for step, batch in tqdm(enumerate(dataset), total=num_eval_steps):
         # print(f"Verify analysis: {num_accepted} tokens accepted, draft_logits_len={len(kl_confidence_analyzer.current_draft_logits) if kl_confidence_analyzer.current_draft_logits else 0}, verify_logits_len={len(kl_confidence_analyzer.current_verify_logits) if kl_confidence_analyzer.current_verify_logits else 0}")
 
         num_unsettled_tokens += accept_nums.flatten().item() + 1
-
-        kl_threshold_exceeded = kl_confidence_analyzer.analyze_all_tokens(num_accepted)
-        # kl_confidence_analyzer.accumulate_data_after_verify(num_accepted)
-        # print(f"Accumulated data now: {len(kl_confidence_analyzer.accumulated_draft_logits)} tokens")
-
-        # Update extended verification state for next cycle
-        if kl_threshold_exceeded and not terminal and args.enable_extended_verification:
-            # KL threshold exceeded, prepare for extended verification next time
-            if not use_extended_verification:
-                # First time exceeding threshold, start accumulating
-                use_extended_verification = True
-                print(f"KL threshold exceeded, enabling extended verification for next cycle")
-            else:
-                # Already in extended mode, continue accumulating but don't exceed buffer
-                use_extended_verification = False
-        else:
-            # KL threshold not exceeded, terminal condition, or extended verification disabled - reset extended verification
-            if use_extended_verification:
-                if not args.enable_extended_verification:
-                    print(f"Extended verification disabled by argument, disabling extended verification")
-                else:
-                    print(f"KL threshold no longer exceeded, disabling extended verification")
-            use_extended_verification = False
-        
-        last_kl_exceeded = kl_threshold_exceeded
         
         # Adjust position calculation based on verification length used
         positions_buffer = torch.arange(verify_tokens_count, device=DEVICE).view(1, -1).repeat(BATCH_SIZE, 1)
@@ -408,9 +385,11 @@ for step, batch in tqdm(enumerate(dataset), total=num_eval_steps):
         if condition.any() or (bonus_tokens == eot_1).any() or (bonus_tokens == eot_2).any():
             terminal = True
 
-        # get accepted token and re-decode to set draft cache
-        accepted_tokens = torch.concat((tokens_buffer[:, :1], draft_tokens[mask_buffer].view(1,-1)), dim=1)
-        engine.update_verified_kv(accepted_tokens)
+        if use_extended_verification:
+            accepted_tokens = draft_tokens[mask_buffer].view(1,-1)
+        else:
+            accepted_tokens = torch.concat((tokens_buffer[:, :1], draft_tokens[mask_buffer].view(1,-1)), dim=1)
+        engine.update_verified_kv_dynamic(accepted_tokens, use_extended_verification=use_extended_verification, previous_num_accepted=previous_num_accepted)
         tokens_buffer[:, :1] = bonus_tokens
 
         print(f"verification accepted tokens: {accept_nums.flatten().item()} + 1 bonus token")
@@ -419,6 +398,28 @@ for step, batch in tqdm(enumerate(dataset), total=num_eval_steps):
         # Record the last accepted token for extended verification
         previous_num_accepted = num_accepted  # Store for next verify stage
         previous_accepted_tokens = accepted_tokens[:,1:].clone() # Exclude bonus token from previous verify
+
+        # Update extended verification state for next cycle
+        kl_threshold_exceeded = kl_confidence_analyzer.analyze_all_tokens(num_accepted)
+        # kl_confidence_analyzer.accumulate_data_after_verify(num_accepted)
+        # print(f"Accumulated data now: {len(kl_confidence_analyzer.accumulated_draft_logits)} tokens")
+        if kl_threshold_exceeded and not terminal and args.enable_extended_verification:
+            # KL threshold exceeded, prepare for extended verification next time
+            if not use_extended_verification:
+                # First time exceeding threshold, start accumulating
+                use_extended_verification = True
+                print(f"KL threshold exceeded, enabling extended verification for next cycle")
+            else:
+                # Already in extended mode, continue accumulating but don't exceed buffer
+                use_extended_verification = False
+        else:
+            # KL threshold not exceeded, terminal condition, or extended verification disabled - reset extended verification
+            if use_extended_verification:
+                if not args.enable_extended_verification:
+                    print(f"Extended verification disabled by argument, disabling extended verification")
+                else:
+                    print(f"KL threshold no longer exceeded, disabling extended verification")
+            use_extended_verification = False
 
         # Now, after verify, check if we need to settle
         if num_unsettled_tokens >= args.gamma2 or called_verify > 2 * (args.gamma2 / args.gamma1) or terminal:

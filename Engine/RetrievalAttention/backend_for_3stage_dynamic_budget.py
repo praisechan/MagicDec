@@ -54,7 +54,6 @@ class LMBackend_Retro:
         # for Quest
         self.draft_past_key_values = None
         self.input_tokens = None
-        self.input_tokens_for_draft = None
         self.settled_input_tokens = None
 
         self.verified_cachelength = 0
@@ -239,11 +238,9 @@ class LMBackend_Retro:
 
     @torch.inference_mode()
     def speculate(self, input_ids: torch.LongTensor, gamma, profile_clustering=False, profile_hot_cluster_selection_ratio=False, generate_name=None):
-      # input_from_start = torch.concat((self.input_tokens_for_draft[:, :self.verified_cachelength], input_ids), dim=1)
-
       # NOTE: critical change! model.generate always do prefill, first token always use full kv cache. 
       # To fix this, exclude bonus token from input_from_start and check it is the same as the first generated token for sanity check.
-      input_from_start = self.input_tokens_for_draft[:, :self.verified_cachelength]
+      input_from_start = self.input_tokens[:, :self.verified_cachelength]
       outputs, logits, top1_top2_diff, top3_logits = self.model.generate_without_prefill_token(
           attention_type="RetroInfer",
           inputs_ids = input_from_start.to(self.model.layers[0].device),
@@ -280,12 +277,6 @@ class LMBackend_Retro:
       )
       
       return outputs, logits, top1_top2_diff
-    
-    @torch.inference_mode()
-    def update_draft_kv_only(self, input_ids: torch.LongTensor):
-        input_from_start = torch.concat((self.input_tokens[:, :self.verified_cachelength], input_ids), dim=1)
-        self.verified_cachelength += input_ids.shape[1]
-        self.input_tokens_for_draft[:,:self.verified_cachelength] = input_from_start.clone()
         
     @torch.inference_mode()
     def update_verified_kv(self, input_ids: torch.LongTensor):
@@ -293,8 +284,22 @@ class LMBackend_Retro:
         self.verified_cachelength += input_ids.shape[1]
         self.input_tokens[:,:self.verified_cachelength] = input_from_start
         
-        self.input_tokens_for_draft = self.input_tokens.clone()
+        # update for sharing cluster information
+        self.attn_config_speculation["RetroInfer"]["static_pattern_end"] = self.attn_config_speculation["RetroInfer"]["static_pattern_end"] + input_ids.shape[1]
+        self.attn_config_verification["RetroInfer"]["static_pattern_end"] = self.attn_config_verification["RetroInfer"]["static_pattern_end"] + input_ids.shape[1]
 
+    @torch.inference_mode()
+    def update_verified_kv_dynamic(self, input_ids: torch.LongTensor, use_extended_verification=False, previous_num_accepted=None):
+        if use_extended_verification is True:
+            if previous_num_accepted is None:
+                raise ValueError("previous_num_accepted must be specified for extended verification.")
+            # use extended verification, which truncates previous verified cache
+            self.verified_cachelength -= previous_num_accepted
+
+        input_from_start = torch.concat((self.input_tokens[:, :self.verified_cachelength], input_ids), dim=1)
+        self.verified_cachelength += input_ids.shape[1]
+        self.input_tokens[:,:self.verified_cachelength] = input_from_start
+        
         # update for sharing cluster information
         self.attn_config_speculation["RetroInfer"]["static_pattern_end"] = self.attn_config_speculation["RetroInfer"]["static_pattern_end"] + input_ids.shape[1]
         self.attn_config_verification["RetroInfer"]["static_pattern_end"] = self.attn_config_verification["RetroInfer"]["static_pattern_end"] + input_ids.shape[1]
@@ -307,7 +312,6 @@ class LMBackend_Retro:
 
         self.verified_cachelength = self.settled_cachelength
         self.input_tokens[:,:self.verified_cachelength] = input_from_start
-        self.input_tokens_for_draft = self.input_tokens.clone()
 
         # update for sharing cluster information
         self.static_pattern_end_after_settle = self.static_pattern_end_after_settle + input_ids.shape[1]
@@ -325,7 +329,6 @@ class LMBackend_Retro:
         )
 
         self.input_tokens[:,:input_ids.shape[1]] = input_ids
-        self.input_tokens_for_draft = self.input_tokens.clone()
         self.verified_cachelength = input_ids.shape[1]
 
         self.settled_input_tokens = self.input_tokens
