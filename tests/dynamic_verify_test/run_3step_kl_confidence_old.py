@@ -13,10 +13,11 @@ from transformers import AutoTokenizer
 from torch.utils.data.dataloader import DataLoader
 from tqdm import tqdm
 import argparse
+from datasets import load_dataset
 # from MagicDec.Engine.SnapKV.backend import LMBackend
 from MagicDec.Engine.RetrievalAttention.backend_for_3stage_dynamic_budget import LMBackend_Retro
 from datasets import load_dataset
-from confidence_analyzer import KLConfidenceAnalyzer, KLConfidenceAnalyzer_temp
+from confidence_analyzer import KLConfidenceAnalyzer
 
 import sys
 import os
@@ -25,7 +26,6 @@ from MagicDec.Engine.RetrievalAttention.benchmark.config import generate_config,
 import json
 import numpy as np
 import matplotlib.pyplot as plt
-
 
 parser = argparse.ArgumentParser(description='Process model configuration and partitions.')
 parser.add_argument('--model_name', type=str, default="llama-3.1-8b", help='model name')
@@ -47,10 +47,9 @@ parser.add_argument('--gamma2', type=int, default=20, help='start')
 parser.add_argument("--budget1", type=float, default=0.05, help="ratio of budget")
 parser.add_argument("--budget2", type=float, default=0.25, help="ratio of budget")
 parser.add_argument("--budget2_low", type=float, default=0.1, help="lower ratio of budget for verification when confidence is high")
-parser.add_argument("--budget2_high", type=float, default=0.4, help="upper ratio of budget for verification when confidence is high")
 parser.add_argument("--confidence_threshold", type=float, default=0.5, help="threshold for top1_top2_diff to use lower budget")
 parser.add_argument("--enable_dynamic_budget", action='store_true', help="enable dynamic budget adjustment based on confidence")
-parser.add_argument("--kl_threshold", type=float, default=0.1, help="threshold for KL divergence to trigger re-verification with larger budget")
+parser.add_argument("--kl_threshold", type=float, default=0.08, help="threshold for KL divergence to trigger re-verification with larger budget")
 parser.add_argument("--enable_extended_verification", action='store_true', help="enable extended verification mode when KL divergence exceeds threshold")
 parser.add_argument("--estimate_ratio", type=float, default=0.25, help="ratio of estimated clusters for RetriveInfer")
 
@@ -63,12 +62,10 @@ parser.add_argument("--hist_statistics_bins", type=int, default=50, help="number
 args = parser.parse_args()
 
 # Initialize KL confidence analyzer with configurable histogram parameters
-# kl_confidence_analyzer = KLConfidenceAnalyzer(
-kl_confidence_analyzer = KLConfidenceAnalyzer_temp(
+kl_confidence_analyzer = KLConfidenceAnalyzer(
     num_bins=args.hist_num_bins, 
     bin_width=args.hist_bin_width, 
-    center=args.hist_center,
-    kl_threshold = args.kl_threshold,
+    center=args.hist_center
 )
 
 # Init model parallelism
@@ -123,8 +120,7 @@ else:
 print(f"eot_1: {eot_1}, eot_2: {eot_2}")
 
 if args.dataset == "pg19":
-  dataset = convert_pg19_dataset(tokenizer=engine.model.tokenizer, seq_len=args.prefix_len)
-  # dataset = load_dataset('emozilla/pg19', split='test')
+  dataset = load_dataset('emozilla/pg19', split='test')
 elif args.dataset == "longbenchv1":
     dataset = load_dataset('THUDM/LongBench', TASK, split='test')
 else:
@@ -144,10 +140,7 @@ current_model_path = model_path
 current_attn_type = args.attn_type
 
 # CSV logging setup
-# log_dir = "logs"
-profile_dir = f"/home/juchanlee/MagicDec/profile/data_kl_conf/{MODEL}_{args.dataset}_{args.prefix_len}"
-log_dir = profile_dir
-
+log_dir = "logs_kl_confidence"
 os.makedirs(log_dir, exist_ok=True)
 
 # Simple filenames without timestamp/counter
@@ -221,9 +214,13 @@ for step, batch in tqdm(enumerate(dataset), total=num_eval_steps):
     step_settle_calls = 0
     step_budget_switches = 0
     step_confidences = []  # Store confidence values for this step
+    step_settle_call_number = 0  # Track settle calls within this step
     
+    # input_ids = batch[0].to(DEVICE)
     terminal = False
-    tokens_buffer= torch.zeros((BATCH_SIZE, args.gamma1+1), device=DEVICE).long()
+    # Expand buffer to handle extended verification (up to 2x gamma1)
+    max_verify_length = args.gamma1 * 2 + 1
+    tokens_buffer= torch.zeros((BATCH_SIZE, max_verify_length), device=DEVICE).long()
 
     num_nodes = torch.zeros(BATCH_SIZE,device=DEVICE).long()
     num_nodes += input_ids.shape[1]
@@ -237,25 +234,41 @@ for step, batch in tqdm(enumerate(dataset), total=num_eval_steps):
     num_unsettled_tokens = 0
     called_verify = 0
     # Extended verification state tracking
+    accumulated_draft_tokens = 0  # Number of drafted tokens accumulated for extended verification
     use_extended_verification = False  # Flag to use extended verification with higher budget
-    previous_num_accepted = 0  # Number of tokens accepted in the previous verify stage
-    previous_accepted_tokens = tokens_buffer[:, :1].clone()  # Store the last accepted token for extended verification
+    last_kl_exceeded = False  # Track if last verification exceeded KL threshold
     while not terminal:
         settled = False
         verified = False
 
         # Draft speculation
-        draft_outputs, draft_logits, top1_top2_diff = engine.speculate(tokens_buffer[:, :1], args.gamma1, profile_clustering=True, profile_hot_cluster_selection_ratio=False, generate_name=f"{profile_dir}/speculate_{step}_{step_speculate_calls}")
-        tokens_buffer[:,1:1+args.gamma1] = torch.LongTensor(draft_outputs)
+        draft_outputs, draft_logits, top1_top2_diff = engine.speculate(tokens_buffer[:, :1], args.gamma1)
+        
+        # Determine where to place new draft tokens in buffer
+        if use_extended_verification and accumulated_draft_tokens > 0:
+            # Place new drafts after accumulated ones
+            start_pos = accumulated_draft_tokens + 1
+            end_pos = start_pos + args.gamma1
+            tokens_buffer[:, start_pos:end_pos] = torch.LongTensor(draft_outputs)
+            print(f"Placed {args.gamma1} new draft tokens at positions {start_pos} to {end_pos-1}")
+        else:
+            # Normal placement
+            tokens_buffer[:,1:1+args.gamma1] = torch.LongTensor(draft_outputs)
+        
         step_speculate_calls += args.gamma1
         
         # Store draft data for KL analysis
-        kl_confidence_analyzer.store_draft_data(draft_logits, top1_top2_diff, use_extended_verification)
+        kl_confidence_analyzer.store_draft_data(draft_logits, top1_top2_diff)
         
         # Dynamic budget adjustment based on confidence
         # If all tokens have high confidence (top1_top2_diff > threshold), use lower budget
         current_budget = args.budget2  # default budget
         budget_switched = False  # Track if budget was switched for this speculation
+        
+        # Determine verification length and budget based on KL threshold from previous cycle
+        verify_length = args.gamma1 + 1  # Default verification length
+        verification_budget = current_budget  # Default budget
+
         if args.enable_dynamic_budget and top1_top2_diff is not None and len(top1_top2_diff) > 0:
             min_confidence = torch.min(torch.tensor(top1_top2_diff))
             avg_confidence = torch.mean(torch.tensor(top1_top2_diff))
@@ -264,9 +277,9 @@ for step, batch in tqdm(enumerate(dataset), total=num_eval_steps):
                         
             if use_extended_verification:
                 # Use extended verification with accumulated tokens and higher budget
-                verification_budget = args.budget2_high # Use higher budget
-                step_budget_switches += 1
-
+                verify_length = min(accumulated_draft_tokens + args.gamma1 + 1, args.gamma1 * 2 + 1)  # Cap at 2x gamma1
+                verification_budget = max(args.budget2, current_budget * 1.5)  # Use higher budget
+                
                 # Update engine with higher budget for extended verification
                 engine.update_verification_budget(
                     budget_ratio=verification_budget, 
@@ -275,22 +288,22 @@ for step, batch in tqdm(enumerate(dataset), total=num_eval_steps):
                     seq_len=input_ids.shape[1],
                     attn_type=current_attn_type
                 )
-                print(f"Extended verification: budget={verification_budget} (was {current_budget})")
+                print(f"Extended verification: length={verify_length}, budget={verification_budget} (was {current_budget})")
             else:
-                # if min_confidence > args.confidence_threshold:                
-                #     # High confidence: use lower budget for verification
-                #     current_budget = args.budget2_low
-                #     budget_switched = True
-                #     step_budget_switches += 1
-                #     engine.update_verification_budget(
-                #         budget_ratio=current_budget, 
-                #         estimate_ratio=args.estimate_ratio,
-                #         model_path=current_model_path,
-                #         seq_len=input_ids.shape[1],
-                #         attn_type=current_attn_type
-                #     )
-                #     print(f"High confidence detected (min_diff={min_confidence:.3f}), using lower verification budget: {current_budget}")
-                # else:
+                if min_confidence > args.confidence_threshold:                
+                    # High confidence: use lower budget for verification
+                    current_budget = args.budget2_low
+                    budget_switched = True
+                    step_budget_switches += 1
+                    engine.update_verification_budget(
+                        budget_ratio=current_budget, 
+                        estimate_ratio=args.estimate_ratio,
+                        model_path=current_model_path,
+                        seq_len=input_ids.shape[1],
+                        attn_type=current_attn_type
+                    )
+                    print(f"High confidence detected (min_diff={min_confidence:.3f}), using lower verification budget: {current_budget}")
+                else:
                     # Low confidence: use original budget for verification
                     engine.update_verification_budget(
                         budget_ratio=current_budget, 
@@ -321,9 +334,9 @@ for step, batch in tqdm(enumerate(dataset), total=num_eval_steps):
 
         # Always call verify after speculate
         if called_verify == 0:
-            cached_tokens_buffer = tokens_buffer[:, 0].clone() # bonus token from settle
-
-        verify_outputs, verify_logits, verify_top1_top2_diff = engine.verify_dynamic(tokens_buffer[:, :1], args.gamma1+1, use_first_kv=True, profile_clustering=True, profile_hot_cluster_selection_ratio=False, generate_name=f"{profile_dir}/verify_{step}_{step_verify_calls}", use_extended_verification=use_extended_verification, previous_num_accepted=previous_num_accepted)
+            cached_tokens_buffer = tokens_buffer[:, 0].clone()
+        
+        verify_outputs, verify_logits, verify_top1_top2_diff = engine.verify(tokens_buffer[:, :1], verify_length)
         target_tokens = torch.LongTensor(verify_outputs).to(DEVICE) #TODO: verify stage should be batch-fashion, but this verify() is auto-regressive.
 
         step_verify_calls += 1
@@ -331,23 +344,37 @@ for step, batch in tqdm(enumerate(dataset), total=num_eval_steps):
         
         # Store verify data for KL analysis
         kl_confidence_analyzer.store_verify_data(verify_logits, verify_top1_top2_diff)
+
+        # Check KL divergence values and determine if extended verification is needed for next cycle
+        max_kl_divergence = 0.0
+        kl_threshold_exceeded = False
         
+        if (kl_confidence_analyzer.current_draft_logits is not None and 
+            kl_confidence_analyzer.current_verify_logits is not None):
+            # Calculate KL divergences for all tokens
+            kl_divergences = []
+            min_len = min(len(kl_confidence_analyzer.current_draft_logits), 
+                         len(kl_confidence_analyzer.current_verify_logits))
+            
+            for i in range(min_len):
+                draft_logits = kl_confidence_analyzer.current_draft_logits[i]
+                verify_logits = kl_confidence_analyzer.current_verify_logits[i]
+                kl_div = kl_confidence_analyzer.compute_kl_divergence(draft_logits, verify_logits)
+                kl_divergences.append(kl_div)
+            
+            if kl_divergences:
+                max_kl_divergence = max(kl_divergences)
+                kl_threshold_exceeded = max_kl_divergence > args.kl_threshold
+                print(f"KL divergence check: max={max_kl_divergence:.4f}, threshold={args.kl_threshold}, exceeded={kl_threshold_exceeded}")
+
         # Handle verification results based on verification length used
         if use_extended_verification:
-            # Extended verification
-            #TODO: concatenate draft tokens with cached tokens
-            verify_tokens_count = previous_num_accepted + args.gamma1 + 1
-            draft_tokens = torch.concat((previous_accepted_tokens, tokens_buffer[:, 0:args.gamma1+1]), dim=1)
-            
-            # Ensure we don't slice beyond target_tokens bounds
-            actual_target_len = target_tokens.shape[1]
-            effective_verify_count = min(verify_tokens_count, actual_target_len, draft_tokens.shape[1])
-            
-            flag_accept_matrix = (target_tokens[:, :effective_verify_count] == draft_tokens[:, :effective_verify_count])
-            verify_tokens_count = effective_verify_count  # Update for later use
+            # Extended verification was used, process more tokens
+            draft_tokens = tokens_buffer[:, 1:verify_length]
+            flag_accept_matrix = (target_tokens[:, :verify_length-1] == draft_tokens)
+            print(f"Extended verification processed {verify_length-1} draft tokens")
         else:
             # Normal verification
-            verify_tokens_count = args.gamma1
             draft_tokens = tokens_buffer[:, 1:args.gamma1+1]
             flag_accept_matrix = (target_tokens[:, :args.gamma1] == draft_tokens)
         
@@ -357,26 +384,30 @@ for step, batch in tqdm(enumerate(dataset), total=num_eval_steps):
         accept_flags_cumprod = torch.cumprod(accept_flags_int, dim=1)
         accept_flags_matrix = accept_flags_cumprod.bool()
         accept_nums = accept_flags_matrix.sum(dim=1, keepdim=True)
-        # Analyze KL divergences for verify stage & Accumulate data for later settle analysis
-        num_accepted = accept_nums.flatten().item()
-        # print(f"Verify analysis: {num_accepted} tokens accepted, draft_logits_len={len(kl_confidence_analyzer.current_draft_logits) if kl_confidence_analyzer.current_draft_logits else 0}, verify_logits_len={len(kl_confidence_analyzer.current_verify_logits) if kl_confidence_analyzer.current_verify_logits else 0}")
-
         num_unsettled_tokens += accept_nums.flatten().item() + 1
 
-        kl_threshold_exceeded = kl_confidence_analyzer.analyze_all_tokens(num_accepted)
-        # kl_confidence_analyzer.accumulate_data_after_verify(num_accepted)
-        # print(f"Accumulated data now: {len(kl_confidence_analyzer.accumulated_draft_logits)} tokens")
+        verify_tokens_count = verify_length - 1 if use_extended_verification else args.gamma1
 
         # Update extended verification state for next cycle
         if kl_threshold_exceeded and not terminal and args.enable_extended_verification:
             # KL threshold exceeded, prepare for extended verification next time
             if not use_extended_verification:
                 # First time exceeding threshold, start accumulating
+                accumulated_draft_tokens = args.gamma1
                 use_extended_verification = True
                 print(f"KL threshold exceeded, enabling extended verification for next cycle")
             else:
                 # Already in extended mode, continue accumulating but don't exceed buffer
+                # max_additional = max_verify_length - accumulated_draft_tokens - 1 - args.gamma1
+                # if max_additional > 0:
+                #     accumulated_draft_tokens += args.gamma1
+                #     print(f"KL threshold still exceeded, accumulated tokens: {accumulated_draft_tokens}")
+                # else:
+                #     print(f"Cannot accumulate more tokens, buffer limit reached")
+                #     use_extended_verification = False
+                #     accumulated_draft_tokens = 0
                 use_extended_verification = False
+                accumulated_draft_tokens = 0
         else:
             # KL threshold not exceeded, terminal condition, or extended verification disabled - reset extended verification
             if use_extended_verification:
@@ -384,6 +415,7 @@ for step, batch in tqdm(enumerate(dataset), total=num_eval_steps):
                     print(f"Extended verification disabled by argument, disabling extended verification")
                 else:
                     print(f"KL threshold no longer exceeded, disabling extended verification")
+            accumulated_draft_tokens = 0
             use_extended_verification = False
         
         last_kl_exceeded = kl_threshold_exceeded
@@ -392,16 +424,15 @@ for step, batch in tqdm(enumerate(dataset), total=num_eval_steps):
         positions_buffer = torch.arange(verify_tokens_count, device=DEVICE).view(1, -1).repeat(BATCH_SIZE, 1)
         mask_buffer = positions_buffer < accept_nums.view(-1,1)
         indices = accept_nums
-        
-        # CRITICAL FIX: Ensure indices don't exceed target_tokens bounds
-        # The indices represent the position where we want to get the bonus token
-        # This position must be within the actual length of target_tokens
-        max_valid_index = target_tokens.shape[1] - 1
-        if indices.max() > max_valid_index:
-            print(f"WARNING: indices {indices} exceed target_tokens bounds {max_valid_index}, clamping to avoid CUDA error")
-            indices = torch.clamp(indices, 0, max_valid_index)
-        
         bonus_tokens = target_tokens.gather(1, indices)
+
+        # Analyze KL divergences for verify stage & Accumulate data for later settle analysis
+        num_accepted = accept_nums.flatten().item()
+        print(f"Verify analysis: {num_accepted} tokens accepted, draft_logits_len={len(kl_confidence_analyzer.current_draft_logits) if kl_confidence_analyzer.current_draft_logits else 0}, verify_logits_len={len(kl_confidence_analyzer.current_verify_logits) if kl_confidence_analyzer.current_verify_logits else 0}")
+        
+        kl_confidence_analyzer.analyze_all_tokens(num_accepted)
+        kl_confidence_analyzer.accumulate_data_after_verify(num_accepted)
+        print(f"Accumulated data now: {len(kl_confidence_analyzer.accumulated_draft_logits)} tokens")
 
         # Check for termination conditions
         condition = (eot_condition & accept_flags_matrix).any(dim=1, keepdim=True)
@@ -410,15 +441,19 @@ for step, batch in tqdm(enumerate(dataset), total=num_eval_steps):
 
         # get accepted token and re-decode to set draft cache
         accepted_tokens = torch.concat((tokens_buffer[:, :1], draft_tokens[mask_buffer].view(1,-1)), dim=1)
-        engine.update_verified_kv(accepted_tokens)
+
+        if num_unsettled_tokens >= args.gamma2 or called_verify > 2 * (args.gamma2 / args.gamma1) or terminal:
+            engine.update_verified_kv(accepted_tokens)
+        else:
+            if use_extended_verification:
+                engine.update_draft_kv_only(accepted_tokens)
+            else:
+                engine.update_verified_kv(accepted_tokens)
+  
         tokens_buffer[:, :1] = bonus_tokens
 
         print(f"verification accepted tokens: {accept_nums.flatten().item()} + 1 bonus token")
         print(f"total unsettled tokens: {num_unsettled_tokens}")
-        
-        # Record the last accepted token for extended verification
-        previous_num_accepted = num_accepted  # Store for next verify stage
-        previous_accepted_tokens = accepted_tokens[:,1:].clone() # Exclude bonus token from previous verify
 
         # Now, after verify, check if we need to settle
         if num_unsettled_tokens >= args.gamma2 or called_verify > 2 * (args.gamma2 / args.gamma1) or terminal:
@@ -427,6 +462,7 @@ for step, batch in tqdm(enumerate(dataset), total=num_eval_steps):
             
             # for sanity
             use_extended_verification = False
+            accumulated_draft_tokens = 0
 
             if not terminal:
                 # bonus tokens is the last token from verify
@@ -438,6 +474,7 @@ for step, batch in tqdm(enumerate(dataset), total=num_eval_steps):
             target_tokens = torch.LongTensor(settle_outputs).to(DEVICE) #TODO: verify stage should be batch-fashion, but this verify() is auto-regressive.
             
             step_settle_calls += 1
+            step_settle_call_number += 1
 
             # input_from_start = torch.concat((engine.input_tokens[:, :engine.verified_cachelength], tokens_buffer), dim=1)
             input_from_start = engine.input_tokens[:, :engine.verified_cachelength]
@@ -453,32 +490,25 @@ for step, batch in tqdm(enumerate(dataset), total=num_eval_steps):
             # We use the accumulated draft and verify data from the speculation cycles
             settle_accepted = accept_nums.flatten().item()
             
-            # # Analyze rejected tokens in settle stage using accumulated data
-            # kl_confidence_analyzer.analyze_rejected_tokens_settle(
-            #     settle_accepted, 
-            #     step=step, 
-            #     settle_call_number=step_settle_calls,
-            #     log_file_path=rejected_tokens_log_file,
-            #     dataset=args.dataset,
-            #     prefix_len=args.prefix_len,
-            #     gamma1=args.gamma1,
-            #     gamma2=args.gamma2,
-            #     budget1=args.budget1,
-            #     budget2=args.budget2
-            # )
+            # Analyze rejected tokens in settle stage using accumulated data
+            kl_confidence_analyzer.analyze_rejected_tokens_settle(
+                settle_accepted, 
+                step=step, 
+                settle_call_number=step_settle_call_number,
+                log_file_path=rejected_tokens_log_file,
+                dataset=args.dataset,
+                prefix_len=args.prefix_len,
+                gamma1=args.gamma1,
+                gamma2=args.gamma2,
+                budget1=args.budget1,
+                budget2=args.budget2
+            )
             
-            # print(f"Settle analysis: {settle_accepted} tokens accepted out of {len(kl_confidence_analyzer.accumulated_draft_logits)} accumulated tokens")
+            print(f"Settle analysis: {settle_accepted} tokens accepted out of {len(kl_confidence_analyzer.accumulated_draft_logits)} accumulated tokens")
             
             positions_buffer = torch.arange(num_unsettled_tokens, device=DEVICE).view(1, -1).repeat(BATCH_SIZE, 1)
             mask_buffer = positions_buffer < accept_nums.view(-1,1)
             indices = accept_nums
-            
-            # CRITICAL FIX: Ensure indices don't exceed target_tokens bounds in settle section
-            max_valid_index = target_tokens.shape[1] - 1
-            if indices.max() > max_valid_index:
-                print(f"WARNING: settle indices {indices} exceed target_tokens bounds {max_valid_index}, clamping to avoid CUDA error")
-                indices = torch.clamp(indices, 0, max_valid_index)
-            
             bonus_tokens = target_tokens.gather(1, indices)
             num_nodes += (accept_nums.flatten() + 1)
 
@@ -499,7 +529,7 @@ for step, batch in tqdm(enumerate(dataset), total=num_eval_steps):
             tokens_buffer[:, :1] = bonus_tokens
 
             # Reset accumulated data after settlement
-            # kl_confidence_analyzer.reset_accumulated_data()
+            kl_confidence_analyzer.reset_accumulated_data()
 
             print(f"settlement accepted tokens: {accept_nums.flatten().item()} + 1 bonus token")
             
@@ -578,31 +608,31 @@ print(f"Total settle calls: {total_settle_calls}")
 print(f"Total budget switches: {total_budget_switches}")
 print(f"Total tokens generated: {total_tokens_generated}")
 
-# # Save KL confidence analysis results
-# print(f"\n=== Saving KL Confidence Analysis Results ===")
+# Save KL confidence analysis results
+print(f"\n=== Saving KL Confidence Analysis Results ===")
 
-# # Create filename prefix with model configuration
-# filename_prefix = f"{MODEL}_{args.dataset}_prefix{args.prefix_len}_gamma1{args.gamma1}_budget1{args.budget1}_budget2{args.budget2}_klthresh{args.kl_threshold}_extverify{args.enable_extended_verification}"
+# Create filename prefix with model configuration
+filename_prefix = f"{MODEL}_{args.dataset}_prefix{args.prefix_len}_gamma1{args.gamma1}_budget1{args.budget1}_budget2{args.budget2}_klthresh{args.kl_threshold}_extverify{args.enable_extended_verification}"
 
-# kl_confidence_analyzer.save_histograms("kl_confidence_analysis", filename_prefix)
-# kl_confidence_analyzer.save_statistics("kl_confidence_analysis", filename_prefix, args.hist_statistics_bins)
-# print(f"KL confidence analysis saved to 'kl_confidence_analysis' directory with prefix: {filename_prefix}")
+kl_confidence_analyzer.save_histograms("kl_confidence_analysis", filename_prefix)
+kl_confidence_analyzer.save_statistics("kl_confidence_analysis", filename_prefix, args.hist_statistics_bins)
+print(f"KL confidence analysis saved to 'kl_confidence_analysis' directory with prefix: {filename_prefix}")
 
-# # Print summary of collected data
-# print(f"\n=== KL Confidence Analysis Summary ===")
-# print(f"Histogram configuration: {args.hist_num_bins} bins, width={args.hist_bin_width}, center={args.hist_center}")
-# print(f"Bin range: [{kl_confidence_analyzer.bin_ranges[0][0]:.2f}, {kl_confidence_analyzer.bin_ranges[-1][1]:.2f})")
-# total_all_tokens = sum(len(data) for data in kl_confidence_analyzer.all_tokens_kl_data.values())
-# total_rejected_tokens = sum(len(data) for data in kl_confidence_analyzer.rejected_tokens_kl_data.values())
-# print(f"Total tokens analyzed: {total_all_tokens}")
-# print(f"Total rejected tokens analyzed: {total_rejected_tokens}")
-# print(f"Total rejected token pairs recorded: {len(kl_confidence_analyzer.rejected_tokens_pairs)}")
+# Print summary of collected data
+print(f"\n=== KL Confidence Analysis Summary ===")
+print(f"Histogram configuration: {args.hist_num_bins} bins, width={args.hist_bin_width}, center={args.hist_center}")
+print(f"Bin range: [{kl_confidence_analyzer.bin_ranges[0][0]:.2f}, {kl_confidence_analyzer.bin_ranges[-1][1]:.2f})")
+total_all_tokens = sum(len(data) for data in kl_confidence_analyzer.all_tokens_kl_data.values())
+total_rejected_tokens = sum(len(data) for data in kl_confidence_analyzer.rejected_tokens_kl_data.values())
+print(f"Total tokens analyzed: {total_all_tokens}")
+print(f"Total rejected tokens analyzed: {total_rejected_tokens}")
+print(f"Total rejected token pairs recorded: {len(kl_confidence_analyzer.rejected_tokens_pairs)}")
 
-# for i in range(min(args.hist_num_bins, 20)):  # Limit output to first 20 bins for readability
-#     all_count = len(kl_confidence_analyzer.all_tokens_kl_data[f"bin_{i}"])
-#     rejected_count = len(kl_confidence_analyzer.rejected_tokens_kl_data[f"bin_{i}"])
-#     bin_start, bin_end = kl_confidence_analyzer.bin_ranges[i]
-#     print(f"Bin {i} ([{bin_start:.2f}, {bin_end:.2f})): All tokens: {all_count}, Rejected tokens: {rejected_count}")
+for i in range(min(args.hist_num_bins, 20)):  # Limit output to first 20 bins for readability
+    all_count = len(kl_confidence_analyzer.all_tokens_kl_data[f"bin_{i}"])
+    rejected_count = len(kl_confidence_analyzer.rejected_tokens_kl_data[f"bin_{i}"])
+    bin_start, bin_end = kl_confidence_analyzer.bin_ranges[i]
+    print(f"Bin {i} ([{bin_start:.2f}, {bin_end:.2f})): All tokens: {all_count}, Rejected tokens: {rejected_count}")
 
-# if args.hist_num_bins > 20:
-#     print(f"... (showing first 20 bins out of {args.hist_num_bins} total bins)")
+if args.hist_num_bins > 20:
+    print(f"... (showing first 20 bins out of {args.hist_num_bins} total bins)")

@@ -61,7 +61,7 @@ def convert_cnn_dataset(tokenizer, seq_len = 256):
     return TensorDataset(data)
 
 def convert_pg19_dataset(tokenizer, seq_len = 4096, end = 20):
-    raise ValueError("This function is deprecated. Use load_dataset('emozilla/pg19', split='test') instead.")
+    # raise ValueError("This function is deprecated. Use load_dataset('emozilla/pg19', split='test') instead.")
     datasetparent = "Data/pg19/"
     d_files = os.listdir(datasetparent)
     dataset = load_dataset("json", data_files = [datasetparent + name for name in d_files], split = "train")

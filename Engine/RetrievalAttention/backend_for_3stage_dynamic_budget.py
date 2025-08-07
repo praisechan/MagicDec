@@ -54,6 +54,7 @@ class LMBackend_Retro:
         # for Quest
         self.draft_past_key_values = None
         self.input_tokens = None
+        self.input_tokens_for_draft = None
         self.settled_input_tokens = None
 
         self.verified_cachelength = 0
@@ -89,21 +90,21 @@ class LMBackend_Retro:
           input_ids = inputs.input_ids
           self.attention_masks = inputs.attention_mask
 
-        if dataset == "pg19":
-          prompt_intro = "You are given an excerpt from a classic book published before 1919. Please provide a concise summary of the main events, characters, and themes in this passage.\n\nBook excerpt:\n"
-          prompt_outro = "\n\nNow, write a summary of this book excerpt.\n\nSummary:"
+        # if dataset == "pg19":
+        #   prompt_intro = "You are given an excerpt from a classic book published before 1919. Please provide a concise summary of the main events, characters, and themes in this passage.\n\nBook excerpt:\n"
+        #   prompt_outro = "\n\nNow, write a summary of this book excerpt.\n\nSummary:"
           
-          inputs = self.model.tokenizer(data["text"], return_tensors="pt", padding=True)
-          input_ids = inputs.input_ids[:,8000:]
-          self.attention_masks = inputs.attention_mask[:,8000:]
-          inputs_intro = self.model.tokenizer([prompt_intro], return_tensors="pt", padding=True)
-          inputs_outro = self.model.tokenizer([prompt_outro], return_tensors="pt", padding=True)
-          if input_ids.shape[1] > prefix_len - inputs_intro.input_ids.shape[1] - inputs_outro.input_ids.shape[1]:
-            actual_prefix_len = prefix_len - inputs_intro.input_ids.shape[1] - inputs_outro.input_ids.shape[1]
-            input_ids = torch.concat((inputs_intro.input_ids, input_ids.split(actual_prefix_len, dim=-1)[0], inputs_outro.input_ids), dim=-1)
-            self.attention_masks = torch.concat((inputs_intro.attention_mask, self.attention_masks.split(actual_prefix_len, dim=-1)[0], inputs_outro.attention_mask), dim=-1)
-          else:
-            return None
+        #   inputs = self.model.tokenizer(data["text"], return_tensors="pt", padding=True)
+        #   input_ids = inputs.input_ids[:,8000:]
+        #   self.attention_masks = inputs.attention_mask[:,8000:]
+        #   inputs_intro = self.model.tokenizer([prompt_intro], return_tensors="pt", padding=True)
+        #   inputs_outro = self.model.tokenizer([prompt_outro], return_tensors="pt", padding=True)
+        #   if input_ids.shape[1] > prefix_len - inputs_intro.input_ids.shape[1] - inputs_outro.input_ids.shape[1]:
+        #     actual_prefix_len = prefix_len - inputs_intro.input_ids.shape[1] - inputs_outro.input_ids.shape[1]
+        #     input_ids = torch.concat((inputs_intro.input_ids, input_ids.split(actual_prefix_len, dim=-1)[0], inputs_outro.input_ids), dim=-1)
+        #     self.attention_masks = torch.concat((inputs_intro.attention_mask, self.attention_masks.split(actual_prefix_len, dim=-1)[0], inputs_outro.attention_mask), dim=-1)
+        #   else:
+        #     return None
 
         # if dataset == "pg19":
         #   inputs = self.model.tokenizer(data['text'], return_tensors="pt", padding=True)
@@ -115,9 +116,9 @@ class LMBackend_Retro:
         #     return None
 
         # Below code is for using Data/pg19 and convert_pg19_dataset() in data_converter.py
-        # if dataset == "pg19":
-        #   input_ids = data[0].unsqueeze(0) # already preprocessed in convert_pg19_dataset()
-        #   self.attention_masks = torch.ones_like(input_ids)
+        if dataset == "pg19":
+          input_ids = data[0].unsqueeze(0) # already preprocessed in convert_pg19_dataset()
+          self.attention_masks = torch.ones_like(input_ids)
 
         self.attn_config_speculation = generate_config(
             model_path, 
@@ -171,11 +172,78 @@ class LMBackend_Retro:
 
       # return [outputs[0][1:]], logits[1:], top1_top2_diff[1:]
 
+    # Only used for target verification
+    @torch.inference_mode()
+    def verify_dynamic(self, input_ids: torch.LongTensor, gamma, use_first_kv = False, profile_clustering=False, profile_hot_cluster_selection_ratio=False, generate_name=None, use_extended_verification=False, previous_num_accepted=None):
+      if use_first_kv is None:
+          raise ValueError("use_first_kv must be specified for verification.")
+      # input_from_start = torch.concat((self.input_tokens[:, :self.verifiesd_cachelength], input_ids), dim=1)
+      if use_extended_verification is True:
+        if previous_num_accepted is None:
+          raise ValueError("previous_num_accepted must be specified for extended verification.")
+        # use extended verification, which truncates previous verified cache
+        
+        # Add bounds checking
+        cache_start = self.verified_cachelength-previous_num_accepted-1
+        cache_end = self.verified_cachelength-previous_num_accepted
+        
+        # Ensure bounds are valid
+        if cache_start < 0 or cache_end < 0 or cache_start >= self.input_tokens.shape[1] or cache_end > self.input_tokens.shape[1]:
+            print(f"WARNING: Invalid cache bounds in extended verification (cache_start={cache_start}, cache_end={cache_end}, input_tokens.shape={self.input_tokens.shape}), falling back to regular verification")
+            # Fallback to regular verification
+            input_from_start = self.input_tokens[:, :self.verified_cachelength]
+            bonus_token = input_ids[:, :1].to(self.model.layers[0].device)
+            max_new_length = gamma + 1
+        else:
+            input_from_start = self.input_tokens[:, :cache_start]
+            bonus_token = self.input_tokens[:, cache_start:cache_end]
+            max_new_length = previous_num_accepted + gamma + 1
+        
+        outputs, logits, top1_top2_diff, _ = self.model.generate_without_prefill_token(
+            attention_type="RetroInfer",
+            inputs_ids = input_from_start.to(self.model.layers[0].device),
+            bonus_token=bonus_token.to(self.model.layers[0].device),
+            attention_masks = self.attention_masks.to(self.model.layers[0].device),
+            max_new_length=max_new_length+1,
+            attn_config=self.attn_config_verification,
+            profile_clustering=profile_clustering,
+            profile_hot_cluster_selection_ratio=profile_hot_cluster_selection_ratio,
+            generate_name=generate_name,
+            use_first_kv=use_first_kv,
+            gamma1=gamma
+        )
+      else:
+        input_from_start = self.input_tokens[:, :self.verified_cachelength]
+        outputs, logits, top1_top2_diff, _ = self.model.generate_without_prefill_token(
+            attention_type="RetroInfer",
+            inputs_ids = input_from_start.to(self.model.layers[0].device),
+            bonus_token=input_ids[:, :1].to(self.model.layers[0].device),
+            attention_masks = self.attention_masks.to(self.model.layers[0].device),
+            max_new_length=gamma+1, 
+            attn_config=self.attn_config_verification,
+            profile_clustering=profile_clustering,
+            profile_hot_cluster_selection_ratio=profile_hot_cluster_selection_ratio,
+            generate_name=generate_name,
+            use_first_kv=use_first_kv,
+            gamma1=gamma
+        )
+
+
+      return outputs, logits, top1_top2_diff
+
+      # # sanity check
+      # if not outputs[0][0]==input_ids[0][0]:
+      #     raise ValueError("First token of generated output is not the same as the bonus token. This is unexpected behavior.")
+
+      # return [outputs[0][1:]], logits[1:], top1_top2_diff[1:]
+
     @torch.inference_mode()
     def speculate(self, input_ids: torch.LongTensor, gamma, profile_clustering=False, profile_hot_cluster_selection_ratio=False, generate_name=None):
+      # input_from_start = torch.concat((self.input_tokens_for_draft[:, :self.verified_cachelength], input_ids), dim=1)
+
       # NOTE: critical change! model.generate always do prefill, first token always use full kv cache. 
       # To fix this, exclude bonus token from input_from_start and check it is the same as the first generated token for sanity check.
-      input_from_start = self.input_tokens[:, :self.verified_cachelength]
+      input_from_start = self.input_tokens_for_draft[:, :self.verified_cachelength]
       outputs, logits, top1_top2_diff, top3_logits = self.model.generate_without_prefill_token(
           attention_type="RetroInfer",
           inputs_ids = input_from_start.to(self.model.layers[0].device),
@@ -212,13 +280,21 @@ class LMBackend_Retro:
       )
       
       return outputs, logits, top1_top2_diff
-            
+    
+    @torch.inference_mode()
+    def update_draft_kv_only(self, input_ids: torch.LongTensor):
+        input_from_start = torch.concat((self.input_tokens[:, :self.verified_cachelength], input_ids), dim=1)
+        self.verified_cachelength += input_ids.shape[1]
+        self.input_tokens_for_draft[:,:self.verified_cachelength] = input_from_start.clone()
+        
     @torch.inference_mode()
     def update_verified_kv(self, input_ids: torch.LongTensor):
         input_from_start = torch.concat((self.input_tokens[:, :self.verified_cachelength], input_ids), dim=1)
         self.verified_cachelength += input_ids.shape[1]
         self.input_tokens[:,:self.verified_cachelength] = input_from_start
         
+        self.input_tokens_for_draft = self.input_tokens.clone()
+
         # update for sharing cluster information
         self.attn_config_speculation["RetroInfer"]["static_pattern_end"] = self.attn_config_speculation["RetroInfer"]["static_pattern_end"] + input_ids.shape[1]
         self.attn_config_verification["RetroInfer"]["static_pattern_end"] = self.attn_config_verification["RetroInfer"]["static_pattern_end"] + input_ids.shape[1]
@@ -231,6 +307,7 @@ class LMBackend_Retro:
 
         self.verified_cachelength = self.settled_cachelength
         self.input_tokens[:,:self.verified_cachelength] = input_from_start
+        self.input_tokens_for_draft = self.input_tokens.clone()
 
         # update for sharing cluster information
         self.static_pattern_end_after_settle = self.static_pattern_end_after_settle + input_ids.shape[1]
@@ -248,6 +325,7 @@ class LMBackend_Retro:
         )
 
         self.input_tokens[:,:input_ids.shape[1]] = input_ids
+        self.input_tokens_for_draft = self.input_tokens.clone()
         self.verified_cachelength = input_ids.shape[1]
 
         self.settled_input_tokens = self.input_tokens
