@@ -649,11 +649,24 @@ class KLConfidenceAnalyzer:
 
 # Add KL divergence analysis class with confidence binning
 class KLConfidenceAnalyzer_temp:
-    def __init__(self, num_bins=10, bin_width=0.1, center=0.0, kl_threshold=0.1):
+    def __init__(self, num_bins=10, bin_width=0.1, center=0.0, kl_threshold=0.1, bin_kl_thresholds=None):
         self.num_bins = num_bins
         self.bin_width = bin_width
         self.center = center
         self.kl_threshold = kl_threshold
+        
+        # Set up bin-specific KL thresholds
+        if bin_kl_thresholds is not None:
+            if isinstance(bin_kl_thresholds, dict):
+                self.bin_kl_thresholds = bin_kl_thresholds
+            elif isinstance(bin_kl_thresholds, list):
+                # Convert list to dict with bin indices as keys
+                self.bin_kl_thresholds = {i: threshold for i, threshold in enumerate(bin_kl_thresholds)}
+            else:
+                raise ValueError("bin_kl_thresholds must be a dict or list")
+        else:
+            # Use default threshold for all bins
+            self.bin_kl_thresholds = {i: kl_threshold for i in range(num_bins)}
 
         # Calculate bin ranges centered around the center value
         # For example, with center=0.0, bin_width=0.1, num_bins=20:
@@ -722,17 +735,18 @@ class KLConfidenceAnalyzer_temp:
         else:
             return self.num_bins - 1  # Put in last bin
     
+    def get_bin_kl_threshold(self, bin_idx):
+        """Get the KL threshold for a specific bin"""
+        return self.bin_kl_thresholds.get(bin_idx, self.kl_threshold)
+    
     def store_draft_data(self, draft_logits, draft_top1_top2_diff, use_extended_verification=False):
         if not use_extended_verification:
             """Store logits and confidences from speculation"""
             if draft_logits is not None:
                 self.current_draft_logits = draft_logits
-            else:
-                self.current_draft_logits = None
-                
-            if draft_top1_top2_diff is not None:
                 self.current_draft_confidences = [float(x) for x in draft_top1_top2_diff]
             else:
+                self.current_draft_logits = None
                 self.current_draft_confidences = None
     
     def store_verify_data(self, verify_logits, verify_top1_top2_diff, use_extended_verification=False):
@@ -740,12 +754,9 @@ class KLConfidenceAnalyzer_temp:
           """Store logits and confidences from verification"""
           if verify_logits is not None:
               self.current_verify_logits = verify_logits
-          else:
-              self.current_verify_logits = None
-              
-          if verify_top1_top2_diff is not None:
               self.current_verify_confidences = [float(x) for x in verify_top1_top2_diff]
           else:
+              self.current_verify_logits = None
               self.current_verify_confidences = None
 
     def analyze_all_tokens(self, num_accepted_tokens, use_extended_verification=False):
@@ -763,6 +774,7 @@ class KLConfidenceAnalyzer_temp:
                         num_accepted_tokens)
 
             kl_divergences = []
+            bin_threshold_exceeded = []  # Track which bins exceeded their thresholds
             kl_threshold_exceeded = False
             if min_len > 0:
                 for i in range(min_len):
@@ -773,22 +785,26 @@ class KLConfidenceAnalyzer_temp:
                     # Get bin based on draft confidence
                     bin_idx = self.get_bin_index(draft_conf)
                     
+                    # Get bin-specific threshold
+                    bin_threshold = self.get_bin_kl_threshold(bin_idx)
+                    
                     # Compute KL divergence between draft and verify logits
                     kl_div = self.compute_kl_divergence(draft_logits, verify_logits)
                     
                     self.all_tokens_kl_data[f"bin_{bin_idx}"].append(kl_div)
                     
                     kl_divergences.append(kl_div)
-                    if kl_div > self.kl_threshold:
-                        print(f"KL divergence exceeded threshold: {kl_div:.4f} > {self.kl_threshold:.4f} (draft_conf={draft_conf:.4f})")
+                    # Use bin-specific thresholds instead of global threshold
+                    # The threshold is exceeded if any token exceeds its bin-specific threshold
+                    if kl_div > bin_threshold:
+                        print(f"KL divergence exceeded bin threshold: {kl_div:.4f} > {bin_threshold:.4f} (draft_conf={draft_conf:.4f}, bin={bin_idx})")
+                        bin_threshold_exceeded.append(True)
+                    else:
+                        bin_threshold_exceeded.append(False)
                 
                 max_kl_divergence = max(kl_divergences)
-                kl_threshold_exceeded = max_kl_divergence > self.kl_threshold
-                print(f"KL divergence check: max={max_kl_divergence:.4f}, threshold={self.kl_threshold}, exceeded={kl_threshold_exceeded}")
-
-            #TODO: decide kl_threshold_exceeded based kl_divergence and draft confidence
-            #TODO: you should set each kl threshold for each bin
-            #TODO: this is done by calibration set
+                kl_threshold_exceeded = any(bin_threshold_exceeded)  # True if any bin threshold was exceeded
+                print(f"KL divergence check: max={max_kl_divergence:.4f}, any_bin_threshold_exceeded={kl_threshold_exceeded}")
             
             return kl_threshold_exceeded
         else:

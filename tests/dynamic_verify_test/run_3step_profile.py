@@ -119,8 +119,8 @@ else:
 print(f"eot_1: {eot_1}, eot_2: {eot_2}")
 
 if args.dataset == "pg19":
-  # dataset = convert_pg19_dataset(tokenizer=engine.model.tokenizer, seq_len=args.prefix_len)
-  dataset = load_dataset('emozilla/pg19', split='test')
+  dataset = convert_pg19_dataset(tokenizer=engine.model.tokenizer, seq_len=args.prefix_len)
+  # dataset = load_dataset('emozilla/pg19', split='test')
 elif args.dataset == "longbenchv1":
     dataset = load_dataset('THUDM/LongBench', TASK, split='test')
 else:
@@ -141,7 +141,7 @@ current_attn_type = args.attn_type
 
 # CSV logging setup
 # log_dir = "logs"
-profile_dir = f"/home/juchanlee/MagicDec/profile/data_temp/{MODEL}_{args.dataset}_{args.prefix_len}"
+profile_dir = f"/home/juchanlee/MagicDec/profile/data_40verify/{MODEL}_{args.dataset}_{args.prefix_len}"
 log_dir = profile_dir
 
 os.makedirs(log_dir, exist_ok=True)
@@ -196,6 +196,9 @@ for step, batch in tqdm(enumerate(dataset), total=num_eval_steps):
         print(f"Skipping step {step} due to empty input_ids.")
         continue
     actual_step += 1 # increment actual step count only if input_ids is valid
+
+    if actual_step < 8:
+      continue
     
     # Initialize step-wise counters
     step_speculate_calls = 0

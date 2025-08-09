@@ -2,6 +2,9 @@ import itertools
 import os
 import glob
 
+# Base profiling directory
+PROFILING_BASE_DIR = "/home/juchanlee/MagicDec/profile/data_40verify/"
+
 # Define fixed options and their possible values
 fixed_option_values = {
     "--num_channels": [1],
@@ -15,14 +18,14 @@ fixed_option_values = {
     "--window_size": [64],
     "--layer_num": [48],
     "--profiling_dir": [
-        "/home/juchanlee/MagicDec/profile/data/",
+        PROFILING_BASE_DIR
     ],
 }
 
 # Define variable options and their possible values
 option_values = {
     "--num_replica": [4],
-    "--prefix_len": ["65568"],
+    "--prefix_len": ["32800"],
     "--hot_cluster_ratio": [0.08],
     "--planes_per_die": [32],
     "--model_name": ["qwen2.5-14b"],
@@ -31,9 +34,6 @@ option_values = {
 
 # Boolean flags
 store_true_flags = ["--hot_cluster_duplicate"]
-
-# Base profiling directory
-PROFILING_BASE_DIR = "/home/juchanlee/MagicDec/profile/data"
 
 def sort_directories_numerically(dirs):
     """Sort directories with pattern 'type_X_Y' in numerical order."""
@@ -58,7 +58,6 @@ def discover_data_folders():
     
     # Look for model_dataset_prefix folders
     model_dataset_dirs = glob.glob(os.path.join(PROFILING_BASE_DIR, "*_*_*"))
-    
     for model_dataset_dir in model_dataset_dirs:
         if os.path.isdir(model_dataset_dir):
             dir_name = os.path.basename(model_dataset_dir)
@@ -71,14 +70,14 @@ def discover_data_folders():
             speculate_dirs = sort_directories_numerically(speculate_dirs)
             verify_dirs = sort_directories_numerically(verify_dirs)
             
-            for spec_dir in speculate_dirs:
-                if os.path.isdir(spec_dir):
-                    spec_name = os.path.basename(spec_dir)
-                    data_folders.append({
-                        'model_dataset_dir': dir_name,
-                        'generate_name': spec_name,
-                        'type': 'speculate'
-                    })
+            # for spec_dir in speculate_dirs:
+            #     if os.path.isdir(spec_dir):
+            #         spec_name = os.path.basename(spec_dir)
+            #         data_folders.append({
+            #             'model_dataset_dir': dir_name,
+            #             'generate_name': spec_name,
+            #             'type': 'speculate'
+            #         })
             
             for ver_dir in verify_dirs:
                 if os.path.isdir(ver_dir):
@@ -118,7 +117,8 @@ def build_command(var_keys, var_tuple, flags, generate_name, model_name, dataset
     
     # Set budget_ratio based on folder type
     if folder_type == "verify":
-        budget_ratio = "0.25"
+        # budget_ratio = "0.25"
+        budget_ratio = "0.40"
     else:  # speculate
         budget_ratio = "0.02"
     
