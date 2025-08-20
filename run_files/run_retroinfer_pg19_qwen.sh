@@ -1,11 +1,13 @@
-python tests/RetrievalAttention/selfspec_benchmark.py --model_name qwen2.5-14b  --gamma 32 --B 1 --attn_type RetroInfer --budget_ratio 0.25 --dataset pg19 --prefix_len 8224
-python tests/RetrievalAttention/selfspec_benchmark.py --model_name qwen2.5-14b  --gamma 32 --B 1 --attn_type RetroInfer --budget_ratio 0.12 --dataset pg19 --prefix_len 8224
-python tests/RetrievalAttention/selfspec_benchmark.py --model_name qwen2.5-14b  --gamma 32 --B 1 --attn_type RetroInfer --budget_ratio 0.06 --dataset pg19 --prefix_len 8224
-python tests/RetrievalAttention/selfspec_benchmark.py --model_name qwen2.5-14b  --gamma 32 --B 1 --attn_type RetroInfer --budget_ratio 0.03 --dataset pg19 --prefix_len 8224
-python tests/RetrievalAttention/selfspec_benchmark.py --model_name qwen2.5-14b  --gamma 32 --B 1 --attn_type RetroInfer --budget_ratio 0.25 --dataset pg19 --prefix_len 16416
-python tests/RetrievalAttention/selfspec_benchmark.py --model_name qwen2.5-14b  --gamma 32 --B 1 --attn_type RetroInfer --budget_ratio 0.12 --dataset pg19 --prefix_len 16416
-python tests/RetrievalAttention/selfspec_benchmark.py --model_name qwen2.5-14b  --gamma 32 --B 1 --attn_type RetroInfer --budget_ratio 0.06 --dataset pg19 --prefix_len 16416
-python tests/RetrievalAttention/selfspec_benchmark.py --model_name qwen2.5-14b  --gamma 32 --B 1 --attn_type RetroInfer --budget_ratio 0.03 --dataset pg19 --prefix_len 16416
+python tests/RetrievalAttention/selfspec_benchmark.py --model_name qwen2.5-14b  --gamma 32 --B 1 --attn_type RetroInfer --budget_ratio 0.40 --dataset pg19 --prefix_len 8224
+# python tests/RetrievalAttention/selfspec_benchmark.py --model_name qwen2.5-14b  --gamma 32 --B 1 --attn_type RetroInfer --budget_ratio 0.25 --dataset pg19 --prefix_len 8224
+# python tests/RetrievalAttention/selfspec_benchmark.py --model_name qwen2.5-14b  --gamma 32 --B 1 --attn_type RetroInfer --budget_ratio 0.12 --dataset pg19 --prefix_len 8224
+# python tests/RetrievalAttention/selfspec_benchmark.py --model_name qwen2.5-14b  --gamma 32 --B 1 --attn_type RetroInfer --budget_ratio 0.06 --dataset pg19 --prefix_len 8224
+# python tests/RetrievalAttention/selfspec_benchmark.py --model_name qwen2.5-14b  --gamma 32 --B 1 --attn_type RetroInfer --budget_ratio 0.03 --dataset pg19 --prefix_len 8224
+python tests/RetrievalAttention/selfspec_benchmark.py --model_name qwen2.5-14b  --gamma 32 --B 1 --attn_type RetroInfer --budget_ratio 0.40 --dataset pg19 --prefix_len 16416
+# python tests/RetrievalAttention/selfspec_benchmark.py --model_name qwen2.5-14b  --gamma 32 --B 1 --attn_type RetroInfer --budget_ratio 0.25 --dataset pg19 --prefix_len 16416
+# python tests/RetrievalAttention/selfspec_benchmark.py --model_name qwen2.5-14b  --gamma 32 --B 1 --attn_type RetroInfer --budget_ratio 0.12 --dataset pg19 --prefix_len 16416
+# python tests/RetrievalAttention/selfspec_benchmark.py --model_name qwen2.5-14b  --gamma 32 --B 1 --attn_type RetroInfer --budget_ratio 0.06 --dataset pg19 --prefix_len 16416
+# python tests/RetrievalAttention/selfspec_benchmark.py --model_name qwen2.5-14b  --gamma 32 --B 1 --attn_type RetroInfer --budget_ratio 0.03 --dataset pg19 --prefix_len 16416
 python tests/RetrievalAttention/selfspec_benchmark.py --model_name qwen2.5-14b  --gamma 32 --B 1 --attn_type RetroInfer --budget_ratio 0.25 --dataset pg19 --prefix_len 32800
 python tests/RetrievalAttention/selfspec_benchmark.py --model_name qwen2.5-14b  --gamma 32 --B 1 --attn_type RetroInfer --budget_ratio 0.12 --dataset pg19 --prefix_len 32800
 python tests/RetrievalAttention/selfspec_benchmark.py --model_name qwen2.5-14b  --gamma 32 --B 1 --attn_type RetroInfer --budget_ratio 0.06 --dataset pg19 --prefix_len 32800

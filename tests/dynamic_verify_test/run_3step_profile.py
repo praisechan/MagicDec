@@ -196,9 +196,6 @@ for step, batch in tqdm(enumerate(dataset), total=num_eval_steps):
         print(f"Skipping step {step} due to empty input_ids.")
         continue
     actual_step += 1 # increment actual step count only if input_ids is valid
-
-    if actual_step < 8:
-      continue
     
     # Initialize step-wise counters
     step_speculate_calls = 0

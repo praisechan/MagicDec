@@ -40,7 +40,7 @@ class KLThresholdOptimizer:
     def setup_optimization_logging(self):
         """Setup logging for optimization results"""
         MODEL = self.base_args.model_name.split("/")[-1]
-        self.opt_log_dir = f"/home/juchanlee/MagicDec/profile/kl_threshold_optimization/{MODEL}_{self.base_args.dataset}_{self.base_args.prefix_len}"
+        self.opt_log_dir = f"/home/juchanlee/MagicDec/profile/kl_threshold_optimization_cluster32/{MODEL}_{self.base_args.dataset}_{self.base_args.prefix_len}"
         os.makedirs(self.opt_log_dir, exist_ok=True)
         
         self.opt_log_file = os.path.join(self.opt_log_dir, "kl_threshold_optimization.csv")

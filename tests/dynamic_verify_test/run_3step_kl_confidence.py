@@ -64,42 +64,86 @@ args = parser.parse_args()
 
 # Initialize KL confidence analyzer with configurable histogram parameters
 bin_kl_thresholds_dict = {}
-bin_kl_thresholds_dict[8224] = {
-    0: 0.033,
-    1: 0.06,
-    2: 0.06,
-    3: 0.1,
-    4: 0.1,
-    5: 0.1,
-    6: 0.12,
-    7: 0.12,
-    8: 0.12,
-    9: 0.12,
-}
-bin_kl_thresholds_dict[16416] = {
-    0: 0.033,
-    1: 0.06,
-    2: 0.06,
-    3: 0.1,
-    4: 0.1,
-    5: 0.1,
-    6: 0.12,
-    7: 0.12,
-    8: 0.12,
-    9: 0.12,
-}
-bin_kl_thresholds_dict[32800] = {
-    0: 0.033,
-    1: 0.06,
-    2: 0.06,
-    3: 0.1,
-    4: 0.1,
-    5: 0.1,
-    6: 0.12,
-    7: 0.12,
-    8: 0.12,
-    9: 0.12,
-}
+if "qwen2.5-14b" in args.model_name:
+        bin_kl_thresholds_dict[8224] = {
+            0: 0.062,
+            1: 0.062,
+            2: 0.060,
+            3: 0.11,
+            4: 0.10,
+            5: 0.10,
+            6: 0.11,
+            7: 0.12,
+            8: 0.15,
+            9: 0.14
+        }
+
+        bin_kl_thresholds_dict[16416] = {
+            0: 0.062,
+            1: 0.062,
+            2: 0.06,
+            3: 0.11,
+            4: 0.10,
+            5: 0.10,
+            6: 0.11,
+            7: 0.12,
+            8: 0.15,
+            9: 0.14
+        }
+
+        bin_kl_thresholds_dict[32800] = {
+            0: 0.033,
+            1: 0.06,
+            2: 0.06,
+            3: 0.1,
+            4: 0.1,
+            5: 0.1,
+            6: 0.12,
+            7: 0.12,
+            8: 0.12,
+            9: 0.12,
+        }
+
+if "qwen2.5-32b" in args.model_name:
+        bin_kl_thresholds_dict[8224] = {
+            0: 0.108,
+            1: 0.096,
+            2: 0.110,
+            3: 0.126,
+            4: 0.131,
+            5: 0.133,
+            6: 0.130,
+            7: 0.125,
+            8: 0.135,
+            9: 0.139
+        }
+
+        bin_kl_thresholds_dict[16416] = {
+            0: 0.062,
+            1: 0.062,
+            2: 0.060,
+            3: 0.105,
+            4: 0.100,
+            5: 0.102,
+            6: 0.106,
+            7: 0.125,
+            8: 0.150,
+            9: 0.138
+        }
+
+        bin_kl_thresholds_dict[32800] = {
+            0: 0.068,
+            1: 0.060,
+            2: 0.053,
+            3: 0.067,
+            4: 0.067,
+            5: 0.063,
+            6: 0.108,
+            7: 0.102,
+            8: 0.115,
+            9: 0.113,
+        }
+
 # bin_kl_thresholds_dict[65568] = {
 #     0: 0.033,
 #     1: 0.06,
@@ -198,7 +242,7 @@ current_attn_type = args.attn_type
 
 # CSV logging setup
 # log_dir = "logs"
-profile_dir = f"/home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh/{MODEL}_{args.dataset}_{args.prefix_len}"
+profile_dir = f"/home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/{MODEL}_{args.dataset}_{args.prefix_len}"
 log_dir = profile_dir
 
 os.makedirs(log_dir, exist_ok=True)
@@ -300,7 +344,7 @@ for step, batch in tqdm(enumerate(dataset), total=num_eval_steps):
         verified = False
 
         # Draft speculation
-        draft_outputs, draft_logits, top1_top2_diff = engine.speculate(tokens_buffer[:, :1], args.gamma1, profile_clustering=False, profile_hot_cluster_selection_ratio=False, generate_name=f"{profile_dir}/speculate_{step}_{step_speculate_calls}")
+        draft_outputs, draft_logits, top1_top2_diff = engine.speculate(tokens_buffer[:, :1], args.gamma1, profile_clustering=True, profile_hot_cluster_selection_ratio=False, generate_name=f"{profile_dir}/speculate_{step}_{step_speculate_calls}")
         tokens_buffer[:,1:1+args.gamma1] = torch.LongTensor(draft_outputs)
         step_speculate_calls += args.gamma1
         
@@ -378,7 +422,7 @@ for step, batch in tqdm(enumerate(dataset), total=num_eval_steps):
         if called_verify == 0:
             cached_tokens_buffer = tokens_buffer[:, 0].clone() # bonus token from settle
 
-        verify_outputs, verify_logits, verify_top1_top2_diff = engine.verify_dynamic(tokens_buffer[:, :1], args.gamma1+1, use_first_kv=True, profile_clustering=False, profile_hot_cluster_selection_ratio=False, generate_name=f"{profile_dir}/verify_{step}_{step_verify_calls}", use_extended_verification=use_extended_verification, previous_num_accepted=previous_num_accepted)
+        verify_outputs, verify_logits, verify_top1_top2_diff = engine.verify_dynamic(tokens_buffer[:, :1], args.gamma1+1, use_first_kv=True, profile_clustering=True, profile_hot_cluster_selection_ratio=False, generate_name=f"{profile_dir}/verify_{step}_{step_verify_calls}", use_extended_verification=use_extended_verification, previous_num_accepted=previous_num_accepted)
         target_tokens = torch.LongTensor(verify_outputs).to(DEVICE) #TODO: verify stage should be batch-fashion, but this verify() is auto-regressive.
 
         step_verify_calls += 1
