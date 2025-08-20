@@ -26,7 +26,7 @@ fixed_option_values = {
 # Define variable options and their possible values
 option_values = {
     "--num_replica": [4],
-    "--prefix_len": ["8224"],
+    "--prefix_len": ["32800"],
     "--hot_cluster_ratio": [0.08],
     "--planes_per_die": [32],
     "--model_name": ["qwen2.5-14b"],
