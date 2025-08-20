@@ -119,8 +119,8 @@ else:
 print(f"eot_1: {eot_1}, eot_2: {eot_2}")
 
 if args.dataset == "pg19":
-  # dataset = convert_pg19_dataset(tokenizer=engine.model.tokenizer, seq_len=args.prefix_len)
-  dataset = load_dataset('emozilla/pg19', split='test')
+  dataset = convert_pg19_dataset(tokenizer=engine.model.tokenizer, seq_len=args.prefix_len)
+  # dataset = load_dataset('emozilla/pg19', split='test')
 elif args.dataset == "longbenchv1":
     dataset = load_dataset('THUDM/LongBench', TASK, split='test')
 else:
@@ -141,7 +141,7 @@ current_attn_type = args.attn_type
 
 # CSV logging setup
 # log_dir = "logs"
-profile_dir = f"/home/juchanlee/MagicDec/profile/data_2step/{MODEL}_{args.dataset}_{args.prefix_len}"
+profile_dir = f"/home/juchanlee/MagicDec/profile/data_2step_for_{args.budget1}/{MODEL}_{args.dataset}_{args.prefix_len}"
 log_dir = profile_dir
 
 os.makedirs(log_dir, exist_ok=True)
@@ -191,7 +191,7 @@ actual_step = 0
 for step, batch in tqdm(enumerate(dataset), total=num_eval_steps):
     if actual_step >= num_eval_steps:
         break
-    input_ids = engine.preprocess_input(batch, prompt_format, args.attn_type, model_path, args.budget_ratio, args.estimate_ratio, args.dataset, args.prefix_len)
+    input_ids = engine.preprocess_input(batch, prompt_format, args.attn_type, model_path, args.budget1, args.estimate_ratio, args.dataset, args.prefix_len)
     if input_ids is None:
         print(f"Skipping step {step} due to empty input_ids.")
         continue
