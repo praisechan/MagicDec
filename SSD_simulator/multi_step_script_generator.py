@@ -3,7 +3,7 @@ import os
 import glob
 
 # Base profiling directory
-PROFILING_BASE_DIR = "/home/juchanlee/MagicDec/profile/data_40verify/"
+PROFILING_BASE_DIR = "/home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/"
 
 # Define fixed options and their possible values
 fixed_option_values = {
@@ -14,7 +14,7 @@ fixed_option_values = {
     "--vector_bytes": [4],
     "--flash_read_latency_us": [50],
     "--num_heads": [8],
-    "--cluster_size": [16],
+    "--cluster_size": [32],
     "--window_size": [64],
     "--layer_num": [48],
     "--profiling_dir": [
@@ -70,14 +70,14 @@ def discover_data_folders():
             speculate_dirs = sort_directories_numerically(speculate_dirs)
             verify_dirs = sort_directories_numerically(verify_dirs)
             
-            # for spec_dir in speculate_dirs:
-            #     if os.path.isdir(spec_dir):
-            #         spec_name = os.path.basename(spec_dir)
-            #         data_folders.append({
-            #             'model_dataset_dir': dir_name,
-            #             'generate_name': spec_name,
-            #             'type': 'speculate'
-            #         })
+            for spec_dir in speculate_dirs:
+                if os.path.isdir(spec_dir):
+                    spec_name = os.path.basename(spec_dir)
+                    data_folders.append({
+                        'model_dataset_dir': dir_name,
+                        'generate_name': spec_name,
+                        'type': 'speculate'
+                    })
             
             for ver_dir in verify_dirs:
                 if os.path.isdir(ver_dir):
