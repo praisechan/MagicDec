@@ -3,7 +3,8 @@ import os
 import glob
 
 # Base profiling directory
-PROFILING_BASE_DIR = "/home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/"
+# PROFILING_BASE_DIR = "/home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/"
+PROFILING_BASE_DIR = "/home/juchanlee/MagicDec/profile/data/"
 
 # Define fixed options and their possible values
 fixed_option_values = {
@@ -25,7 +26,7 @@ fixed_option_values = {
 # Define variable options and their possible values
 option_values = {
     "--num_replica": [4],
-    "--prefix_len": ["32800"],
+    "--prefix_len": ["8224"],
     "--hot_cluster_ratio": [0.08],
     "--planes_per_die": [32],
     "--model_name": ["qwen2.5-14b"],
