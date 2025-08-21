@@ -1,40 +1,34 @@
+#!/usr/bin/env python
 import itertools
 import os
 import glob
 
 # Base profiling directory
-# PROFILING_BASE_DIR = "/home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/"
 PROFILING_BASE_DIR = "/home/juchanlee/MagicDec/profile/data/"
 
-# Define fixed options and their possible values
+# Define fixed options and their possible values for hot cluster hit ratio analysis
 fixed_option_values = {
-    "--num_channels": [1],
-    "--chips_per_channel": [1],
-    "--dies_per_chip": [1],
     "--page_size_bytes": [16384],
     "--vector_bytes": [4],
-    "--flash_read_latency_us": [50],
     "--num_heads": [8],
     "--cluster_size": [32],
-    "--window_size": [64],
     "--layer_num": [48],
-    "--profiling_dir": [
-        PROFILING_BASE_DIR
-    ],
+    "--head_dim": [128],
+    "--dram_capacity_gb": [128],
+    "--profiling_dir": [PROFILING_BASE_DIR],
 }
 
 # Define variable options and their possible values
 option_values = {
-    "--num_replica": [4],
-    "--prefix_len": ["32800"],
-    "--hot_cluster_ratio": [0.08],
-    "--planes_per_die": [32],
     "--model_name": ["qwen2.5-14b"],
     "--dataset": ["pg19"],
+    "--prefix_len": ["16416"],
+    "--batch_size": ["4", "16", "64", "128"],
+    # "--prefix_len": ["8224", "16416", "32800"],
 }
 
-# Boolean flags
-store_true_flags = ["--hot_cluster_duplicate"]
+# Boolean flags (hot cluster hit ratio analysis doesn't need many flags)
+store_true_flags = ["--constrained"]
 
 def sort_directories_numerically(dirs):
     """Sort directories with pattern 'type_X_Y' in numerical order."""
@@ -100,12 +94,12 @@ def make_script_filename(var_vals):
             parts.append(f"{clean}_{vals[0]}")
     return "_".join(parts)
 
-# Build a command line including fixed options, variable options, and flags
+# Build a command line for hot_cluster_hit_ratio.py
 def build_command(var_keys, var_tuple, flags, generate_name, model_name, dataset, prefix_len, folder_type):
-    cmd = ["python simulator.py"]
-    cmd.append("--max_latency_calculate")
+    cmd = ["python hot_cluster_hit_ratio.py"]
+        
     script_name = make_script_filename(option_values)
-    cmd.append(f"--csv_path {script_name}")
+    cmd.append(f"--csv_path {script_name}")    
     
     # include all fixed options
     for key, vals in fixed_option_values.items():
@@ -119,7 +113,6 @@ def build_command(var_keys, var_tuple, flags, generate_name, model_name, dataset
     # Set budget_ratio based on folder type
     if folder_type == "verify":
         budget_ratio = "0.25"
-        # budget_ratio = "0.40"
     else:  # speculate
         budget_ratio = "0.02"
     
@@ -155,33 +148,35 @@ def main():
     # Filter to specific model and dataset based on option values
     target_model_name = option_values["--model_name"][0]
     target_dataset = option_values["--dataset"][0] 
-    target_prefix_len = option_values["--prefix_len"][0]
-    target_dir_pattern = f"{target_model_name}_{target_dataset}_{target_prefix_len}"
     
     filtered_folders = []
     for folder in data_folders:
         model_dataset_dir = folder['model_dataset_dir']
-        if target_dir_pattern in model_dataset_dir:
-            # Extract model, dataset, prefix_len from the directory name
-            parts = model_dataset_dir.split('_')
-            if len(parts) >= 3:
-                model_name = parts[0]  # e.g., qwen2.5-14b
-                dataset = parts[1]  # e.g., pg19
-                prefix_len = parts[2]  # e.g., 8224
-                
-                filtered_folders.append({
-                    'generate_name': folder['generate_name'],
-                    'type': folder['type'],
-                    'model_name': model_name,
-                    'dataset': dataset,
-                    'prefix_len': prefix_len
-                })
+        # Check if this folder matches any of our target prefix lengths
+        for target_prefix_len in option_values["--prefix_len"]:
+            target_dir_pattern = f"{target_model_name}_{target_dataset}_{target_prefix_len}"
+            if target_dir_pattern in model_dataset_dir:
+                # Extract model, dataset, prefix_len from the directory name
+                parts = model_dataset_dir.split('_')
+                if len(parts) >= 3:
+                    model_name = parts[0]  # e.g., qwen2.5-14b
+                    dataset = parts[1]  # e.g., pg19
+                    prefix_len = parts[2]  # e.g., 8224
+                    
+                    filtered_folders.append({
+                        'generate_name': folder['generate_name'],
+                        'type': folder['type'],
+                        'model_name': model_name,
+                        'dataset': dataset,
+                        'prefix_len': prefix_len
+                    })
+                break
     
     if not filtered_folders:
-        print(f"No {target_dir_pattern} folders found!")
+        print(f"No matching folders found for model {target_model_name}, dataset {target_dataset}!")
         return
     
-    print(f"\nFiltered to {len(filtered_folders)} {target_dir_pattern} folders")
+    print(f"\nFiltered to {len(filtered_folders)} matching folders")
     
     # Generate all combinations of variable options
     keys, values = zip(*option_values.items())
@@ -190,11 +185,22 @@ def main():
     # Build the full list of commands
     generated_scripts = []
     for combo in combinations:
+        # Extract values from the combination
+        combo_dict = dict(zip(keys, combo))
+        
+        # Only process folders that match the current combination's model/dataset/prefix_len
+        matching_folders = [
+            folder for folder in filtered_folders
+            if (folder['model_name'] == combo_dict["--model_name"] and
+                folder['dataset'] == combo_dict["--dataset"] and
+                folder['prefix_len'] == combo_dict["--prefix_len"])
+        ]
+        
         for flag_mask in itertools.product([False, True], repeat=len(store_true_flags)):
             active_flags = [flag for flag, use in zip(store_true_flags, flag_mask) if use]
             
-            # Generate commands for each data folder
-            for folder in filtered_folders:
+            # Generate commands for each matching data folder
+            for folder in matching_folders:
                 cmd_script = build_command(
                     keys, combo, active_flags, 
                     folder['generate_name'],
@@ -206,15 +212,27 @@ def main():
                 generated_scripts.append(cmd_script)
     
     # Assemble script content
-    template = "#!/bin/bash\n\n" + "\n\necho \"Processing next configuration...\"\n\n".join(generated_scripts)
+    template = "#!/bin/bash\n\n" + "\n\necho \"Processing next hot cluster hit ratio configuration...\"\n\n".join(generated_scripts)
     
-    # Write to a file named for the single-valued variable options only
-    script_name = make_script_filename(option_values) + "_multi_step_verify"
+    # Write to a file named for the analysis type
+    script_name = make_script_filename(option_values)
     with open(script_name + ".sh", "w") as f:
         f.write(template)
     
     print(f"\nGenerated {script_name}.sh with {len(generated_scripts)} commands.")
-    print(f"This will process {len(filtered_folders)} data folders with {len(combinations)} parameter combinations and {2**len(store_true_flags)} flag combinations each.")
+    print(f"This will analyze hot cluster hit ratios for:")
+    print(f"  - {len(option_values['--prefix_len'])} prefix lengths: {option_values['--prefix_len']}")
+    print(f"  - {len(set(f['generate_name'] for f in filtered_folders))} unique generate patterns")
+    print(f"  - {2**len(store_true_flags)} flag combinations each")
+    
+    # Print summary of what will be analyzed
+    unique_patterns = set()
+    for folder in filtered_folders:
+        unique_patterns.add(f"{folder['generate_name']} ({folder['type']})")
+    
+    print(f"\nGenerate patterns to be analyzed:")
+    for pattern in sorted(unique_patterns):
+        print(f"  - {pattern}")
 
 if __name__ == "__main__":
     main()
