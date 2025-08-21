@@ -168,6 +168,8 @@ class LLM:
 
         if self.num_gpus > 1:
             for ldx in range(self.num_layers):
+                if intermediate_output:
+                    self.kv_cache.store_decoding_data=True
                 hidden_states = self.layer_decode(ldx, hidden_states)
                 hidden_states = self.parameter_move(hidden_states, ldx)
             hidden_states = hidden_states.to(self.layers[0].device)
