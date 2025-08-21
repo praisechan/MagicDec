@@ -1,0 +1,29 @@
+############PG19#############
+# dynamic budget
+# 30b
+export CLUSTER_SIZE=32
+python tests/dynamic_verify_test/run_3step_profile.py --model_name qwen2.5-32b --gamma1 4 --gamma2 28 --budget1 0.02 --budget2 0.25 --prefix_len 8224 --dataset pg19
+python tests/dynamic_verify_test/run_3step_profile.py --model_name qwen2.5-32b --gamma1 4 --gamma2 28 --budget1 0.02 --budget2 0.25 --prefix_len 16416 --dataset pg19
+python tests/dynamic_verify_test/run_3step_profile.py --model_name qwen2.5-32b --gamma1 4 --gamma2 28 --budget1 0.02 --budget2 0.25 --prefix_len 32800 --dataset pg19
+
+python tests/dynamic_verify_test/run_2step_profile.py --model_name qwen2.5-32b --gamma1 4 --gamma2 32 --budget1 0.10 --prefix_len 8224 --dataset pg19
+python tests/dynamic_verify_test/run_2step_profile.py --model_name qwen2.5-32b --gamma1 4 --gamma2 32 --budget1 0.10 --prefix_len 16416 --dataset pg19
+python tests/dynamic_verify_test/run_2step_profile.py --model_name qwen2.5-32b --gamma1 4 --gamma2 32 --budget1 0.10 --prefix_len 32800 --dataset pg19
+python tests/dynamic_verify_test/run_2step_profile.py --model_name qwen2.5-32b --gamma1 4 --gamma2 32 --budget1 0.40 --prefix_len 8224 --dataset pg19
+python tests/dynamic_verify_test/run_2step_profile.py --model_name qwen2.5-32b --gamma1 4 --gamma2 32 --budget1 0.40 --prefix_len 16416 --dataset pg19
+python tests/dynamic_verify_test/run_2step_profile.py --model_name qwen2.5-32b --gamma1 4 --gamma2 32 --budget1 0.40 --prefix_len 32800 --dataset pg19
+
+# 14b
+# python tests/dynamic_verify_test/run_3step_kl_confidence.py --model_name qwen2.5-14b --gamma1 4 --gamma2 28 --budget1 0.02 --budget2 0.25 --budget2_high 0.4 --confidence_threshold 0.4 --prefix_len 8224 --dataset pg19
+# python tests/dynamic_verify_test/run_3step_kl_confidence.py --model_name qwen2.5-14b --gamma1 4 --gamma2 28 --budget1 0.02 --budget2 0.25 --enable_dynamic_budget --enable_extended_verification --budget2_high 0.4 --confidence_threshold 0.4 --prefix_len 8224 --dataset pg19
+
+# python tests/dynamic_verify_test/run_3step_kl_confidence.py --model_name qwen2.5-14b --gamma1 4 --gamma2 28 --budget1 0.02 --budget2 0.25 --budget2_high 0.4 --confidence_threshold 0.4 --prefix_len 16416 --dataset pg19
+# python tests/dynamic_verify_test/run_3step_kl_confidence.py --model_name qwen2.5-14b --gamma1 4 --gamma2 28 --budget1 0.02 --budget2 0.25 --enable_dynamic_budget --enable_extended_verification --budget2_high 0.4 --confidence_threshold 0.4 --prefix_len 16416 --dataset pg19
+# # python tests/dynamic_verify_test/run_3step_kl_confidence.py --model_name qwen2.5-14b --gamma1 4 --gamma2 28 --budget1 0.02 --budget2 0.25 --prefix_len 16416 --dataset pg19
+# # python tests/dynamic_verify_test/run_3step_kl_confidence.py --model_name qwen2.5-14b --gamma1 4 --gamma2 28 --budget1 0.02 --budget2 0.25 --enable_dynamic_budget --budget2_high 0.4 --confidence_threshold 0.4 --prefix_len 32800 --dataset pg19
+# python tests/dynamic_verify_test/run_3step_kl_confidence.py --model_name qwen2.5-14b --gamma1 4 --gamma2 28 --budget1 0.02 --budget2 0.25 --budget2_high 0.4 --confidence_threshold 0.4 --prefix_len 32800 --dataset pg19
+# python tests/dynamic_verify_test/run_3step_kl_confidence.py --model_name qwen2.5-14b --gamma1 4 --gamma2 28 --budget1 0.02 --budget2 0.25 --enable_dynamic_budget --enable_extended_verification --budget2_high 0.4 --confidence_threshold 0.4 --prefix_len 32800 --dataset pg19
+# python tests/dynamic_verify_test/run_3step_kl_confidence.py --model_name qwen2.5-14b --gamma1 4 --gamma2 28 --budget1 0.02 --budget2 0.25 --prefix_len 32800 --dataset pg19
+# python tests/dynamic_verify_test/run_3step_kl_confidence.py --model_name qwen2.5-14b --gamma1 4 --gamma2 28 --budget1 0.02 --budget2 0.25 --enable_dynamic_budget --budget2_high 0.4 --confidence_threshold 0.4 --prefix_len 65568 --dataset pg19
+# python tests/dynamic_verify_test/run_3step_kl_confidence.py --model_name qwen2.5-14b --gamma1 4 --gamma2 28 --budget1 0.02 --budget2 0.25 --enable_dynamic_budget --enable_extended_verification --budget2_high 0.4 --confidence_threshold 0.4 --prefix_len 65568 --dataset pg19
+# python tests/dynamic_verify_test/run_3step_kl_confidence.py --model_name qwen2.5-14b --gamma1 4 --gamma2 28 --budget1 0.02 --budget2 0.25 --prefix_len 65568 --dataset pg19
