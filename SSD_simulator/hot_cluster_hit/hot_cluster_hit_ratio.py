@@ -55,83 +55,45 @@ def parse_args() -> argparse.Namespace:
     return parser.parse_args()
 
 
-def calculate_hot_cluster_count_from_dram(
+def calculate_dram_page_count(
     dram_capacity_gb: float,
     batch_size: int,
-    cluster_size: int,
-    page_size_bytes: int,
-    vector_bytes: int,
-    head_dim: int,
-    num_heads: int
+    page_size_bytes: int
 ) -> int:
     """
-    Calculate number of hot clusters that can fit in DRAM based on available DRAM capacity.
+    Calculate total number of pages available in DRAM.
     
     Args:
         dram_capacity_gb: DRAM capacity in GB
-        cluster_size: Number of tokens per cluster (fixed to 32 for calculation)
+        batch_size: Batch size for profiling
         page_size_bytes: Size of each page in bytes
-        vector_bytes: Bytes per vector element (e.g., 4 for float32, 2 for float16)
-        head_dim: Dimension per attention head
-        num_heads: Number of attention heads
     
     Returns:
-        hot_cluster_count: Number of hot clusters that can fit in DRAM per head
+        total_pages: Total number of pages available in DRAM
     """
-    print(f"\n=== CALCULATING HOT CLUSTER COUNT FROM DRAM CAPACITY ===")
-    
-    # Calculate bytes per token in KV cache
-    # Each token has K and V vectors, each of size head_dim
-    bytes_per_token_per_head = 2 * head_dim * vector_bytes  # 2 for K and V
-    bytes_per_token_all_heads = bytes_per_token_per_head * num_heads
-    
-    # Calculate bytes per cluster (using fixed cluster size)
-    bytes_per_cluster = cluster_size * bytes_per_token_all_heads
-    
-    # Calculate pages per cluster
-    pages_per_cluster = math.ceil(bytes_per_cluster / page_size_bytes)
+    print(f"\n=== CALCULATING DRAM PAGE COUNT ===")
     
     # Convert DRAM capacity to bytes
-    dram_capacity_bytes = dram_capacity_gb * (1024 ** 3) / batch_size  # GB to bytes
-
+    dram_capacity_bytes = dram_capacity_gb * (1024 ** 3) / batch_size  # GB to bytes, divided by batch size
+    
     # Calculate total available pages in DRAM
     total_available_pages = int(dram_capacity_bytes / page_size_bytes)
     
-    # Calculate how many clusters can fit in DRAM
-    max_clusters_in_dram = int(total_available_pages / pages_per_cluster)
-    
-    # Calculate hot clusters per head (assuming equal distribution across heads)
-    hot_clusters_per_head = max_clusters_in_dram // num_heads
-    
-    print(f"DRAM Capacity: {dram_capacity_gb} GB ({dram_capacity_bytes:,} bytes)")
+    print(f"DRAM Capacity: {dram_capacity_gb} GB")
+    print(f"Batch Size: {batch_size}")
+    print(f"Effective DRAM per batch: {dram_capacity_bytes:,} bytes")
     print(f"Page Size: {page_size_bytes:,} bytes")
     print(f"Total Available Pages: {total_available_pages:,}")
-    print(f"")
-    print(f"Cluster Configuration:")
-    print(f"  - Fixed Cluster Size for calculation: {cluster_size} tokens")
-    print(f"  - Head Dimension: {head_dim}")
-    print(f"  - Vector Bytes: {vector_bytes}")
-    print(f"  - Number of Heads: {num_heads}")
-    print(f"")
-    print(f"Memory Calculation:")
-    print(f"  - Bytes per token per head: {bytes_per_token_per_head} (K + V vectors)")
-    print(f"  - Bytes per token (all heads): {bytes_per_token_all_heads}")
-    print(f"  - Bytes per cluster: {bytes_per_cluster:,}")
-    print(f"  - Pages per cluster: {pages_per_cluster}")
-    print(f"")
-    print(f"Capacity Calculation:")
-    print(f"  - Max clusters in DRAM: {max_clusters_in_dram:,}")
-    print(f"  - Hot clusters per head: {hot_clusters_per_head:,}")
     print(f"==========================================")
     
-    return hot_clusters_per_head
+    return total_available_pages
 
 def load_profiling_layer(
     args,
     layer_idx: int,
     generate_name: str = None,
     step_idx: int = 0,
-    hot_cluster_count: int = 0
+    dram_page_count: int = 0
 ) -> LayerData:
     """Load profiling data for a specific layer, similar to simulator.py"""
     if generate_name is None:
@@ -184,31 +146,54 @@ def load_profiling_layer(
         os.path.join(profiling_dir, f"softmax_sum_{layer_idx}.pt"), map_location='cpu'
     )
 
-    # Calculate hot clusters based on softmax_sum scores using fixed hot_cluster_count
-    hot_cluster_list = []
-    for head_idx in range(args.num_heads):
-        head_softmax_scores = softmax_sum[head_idx]
-        num_clusters = len(head_softmax_scores)
-        # Use the fixed hot_cluster_count, but ensure it doesn't exceed total clusters
-        num_hot_clusters = min(hot_cluster_count, num_clusters)
-        
-        if num_hot_clusters > 0:
-            # Get indices of top hot clusters based on softmax scores
-            _, hot_cluster_indices = torch.topk(head_softmax_scores, num_hot_clusters, largest=True)
-            hot_cluster_list.append(hot_cluster_indices.tolist())
-        else:
-            hot_cluster_list.append([])
-
-    # Create HeadData objects
+    # Create HeadData objects first to use compute_pages_per_cluster
     heads: List[HeadData] = []
     for head_idx in range(args.num_heads):
         clusters = [ClusterData(cid, int(size.item()))
                     for cid, size in enumerate(cluster_sizes[head_idx])]
         superclusters = None
         selected = [int(cid.item()) for cid in selected_list[head_idx]]
-        hot_cluster = hot_cluster_list[head_idx]
         
-        heads.append(HeadData(head_idx, clusters, superclusters, selected, hot_cluster, softmax_sum[head_idx]))
+        # Create temporary HeadData to compute pages per cluster
+        temp_head = HeadData(head_idx, clusters, superclusters, selected, [], softmax_sum[head_idx])
+        
+        # Get pages per cluster for this head
+        pages_map = compute_pages_per_cluster(
+            temp_head,
+            args.page_size_bytes,
+            args.vector_bytes,
+            args.head_dim,
+            args.constrained,
+            args.cluster_size
+        )
+        
+        # Calculate hot clusters based on DRAM page budget and softmax scores
+        head_softmax_scores = softmax_sum[head_idx]
+        num_clusters = len(head_softmax_scores)
+        
+        # Create list of (cluster_id, softmax_score, pages) tuples
+        cluster_info = []
+        for cid in range(num_clusters):
+            cluster_info.append((cid, head_softmax_scores[cid].item(), pages_map.get(cid, 0)))
+        
+        # Sort by softmax score (descending)
+        cluster_info.sort(key=lambda x: x[1], reverse=True)
+        
+        # Greedily select clusters that fit within DRAM page budget
+        hot_cluster_ids = []
+        total_pages_used = 0
+        pages_per_head = dram_page_count // args.num_heads // args.layer_num  # Equal distribution across heads
+        
+        for cid, score, pages in cluster_info:
+            if total_pages_used + pages <= pages_per_head:
+                hot_cluster_ids.append(cid)
+                total_pages_used += pages
+            else:
+                break  # Can't fit any more clusters
+        
+        print(f"Head {head_idx}: Selected {len(hot_cluster_ids)} hot clusters using {total_pages_used}/{pages_per_head} pages")
+        
+        heads.append(HeadData(head_idx, clusters, superclusters, selected, hot_cluster_ids, softmax_sum[head_idx]))
     
     return LayerData(layer_idx, heads)
 
@@ -322,16 +307,19 @@ def compute_hot_cluster_hit_ratio(
 
 def main():
     args = parse_args()
-    
-    # Calculate hot cluster count from DRAM capacity (using fixed cluster size of 32)
-    hot_cluster_count = calculate_hot_cluster_count_from_dram(
+
+    if args.model_name =="qwen2.5-14b":
+        args.layer_num = 48
+    elif args.model_name =="qwen2.5-32b":
+        args.layer_num = 64
+    else:
+        raise ValueError(f"Unsupported model name: {args.model_name}")
+
+    # Calculate DRAM page count for hot cluster selection
+    dram_page_count = calculate_dram_page_count(
         dram_capacity_gb=args.dram_capacity_gb,
         batch_size=args.batch_size,
-        cluster_size=args.cluster_size,  # Fixed cluster size for calculation
         page_size_bytes=args.page_size_bytes,
-        vector_bytes=args.vector_bytes,
-        head_dim=args.head_dim,
-        num_heads=args.num_heads
     )
     
     # Determine the number of steps based on the generate_name pattern
@@ -350,7 +338,7 @@ def main():
         for layer_idx in tqdm(range(args.layer_num), desc=f"Processing layers for step {step_idx}"):
             try:
                 # Load layer data with the pre-calculated hot cluster count
-                layer = load_profiling_layer(args, layer_idx, args.generate_name, step_idx, hot_cluster_count)
+                layer = load_profiling_layer(args, layer_idx, args.generate_name, step_idx, dram_page_count)
                 
                 # Compute hot cluster hit ratio
                 head_stats, layer_stats = compute_hot_cluster_hit_ratio(args, layer)
@@ -434,7 +422,7 @@ def main():
     
     # Define fieldnames
     fieldnames = [
-        'step_name', 'step_idx', 'num_layers_processed', 'hot_cluster_count_param', 'dram_capacity_gb', 'budget_ratio', 'batch_size',
+        'step_name', 'step_idx', 'num_layers_processed', 'dram_page_count', 'dram_capacity_gb', 'budget_ratio', 'batch_size',
         'total_hot_clusters', 'total_selected_clusters', 'total_hot_selected',
         'avg_hot_hit_ratio', 'total_hot_pages', 'total_selected_pages', 
         'total_hot_selected_pages', 'total_all_pages', 'avg_hot_page_hit_ratio',
@@ -452,7 +440,7 @@ def main():
         
         for step_result in step_aggregated_results:
             row = {
-                'hot_cluster_count_param': hot_cluster_count,
+                'dram_page_count': dram_page_count,
                 'dram_capacity_gb': args.dram_capacity_gb,
                 'budget_ratio': args.budget_ratio,
                 'batch_size': args.batch_size,
@@ -469,7 +457,7 @@ def main():
         
         print(f"\n=== OVERALL SUMMARY ===")
         print(f"DRAM capacity: {args.dram_capacity_gb} GB")
-        print(f"Calculated hot cluster count per head: {hot_cluster_count}")
+        print(f"Calculated DRAM page count for hot clusters: {dram_page_count}")
         print(f"Budget ratio: {args.budget_ratio}")
         print(f"Processed {len(step_aggregated_results)} steps")
         print(f"Overall average hot cluster hit ratio: {overall_avg_hot_hit_ratio:.3f}")
