@@ -589,7 +589,12 @@ class KLThresholdOptimizer:
             total_budget_switches_low += step_budget_switches_low
             total_tokens_generated += num_gen_tokens
             all_confidences.extend(step_confidences)
-        
+
+            # Cleanup GPU memory after each step to prevent OOM
+            print(f"Step {step} completed. Cleaning up GPU memory...")
+            engine.cleanup()
+            torch.cuda.empty_cache()        
+            
         # Calculate final metrics
         avg_confidence = float(np.mean(all_confidences)) if all_confidences else 0.0
         std_confidence = float(np.std(all_confidences)) if all_confidences else 0.0

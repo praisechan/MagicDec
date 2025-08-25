@@ -169,6 +169,32 @@ class LMBackend_Retro:
         # update for sharing cluster information
         self.attn_config["RetroInfer"]["static_pattern_end"] = self.attn_config["RetroInfer"]["static_pattern_end"] + input_ids.shape[1]
 
+    def cleanup(self):
+        """Clean up GPU memory between steps."""
+        if hasattr(self.model, 'cleanup_kv_cache'):
+            self.model.cleanup_kv_cache()
+        
+        # # Clear input tokens and reset state
+        # if hasattr(self, 'input_tokens') and self.input_tokens is not None:
+        #     del self.input_tokens
+        
+        # if hasattr(self, 'cachelens') and self.cachelens is not None:
+        #     del self.cachelens
+        
+        # Reset cache length counter
+        # self.verified_cachelength = 0
+        
+        # Force garbage collection
+        import gc
+        gc.collect()
+        torch.cuda.empty_cache()
+        print("Backend cleanup completed")
+
+    def reinitialize_buffers(self, bsz, max_len):
+        """Reinitialize buffers after cleanup."""
+        self.input_tokens = torch.zeros(bsz, max_len+1, device="cuda").long()
+        self.cachelens = torch.zeros(bsz, dtype=torch.int32, device=self.device)
+
     @torch.inference_mode()
     def encode(self, input_ids: torch.LongTensor):        
         outputs, _, _, _ = self.model.generate(

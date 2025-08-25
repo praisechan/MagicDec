@@ -97,8 +97,8 @@ else:
 print(f"eot_1: {eot_1}, eot_2: {eot_2}")
 
 if args.dataset == "pg19":
-  # dataset = convert_pg19_dataset(tokenizer=engine.model.tokenizer, seq_len=args.prefix_len)
-    dataset = load_dataset('emozilla/pg19', split='test')
+  dataset = convert_pg19_dataset(tokenizer=engine.model.tokenizer, seq_len=args.prefix_len)
+    # dataset = load_dataset('emozilla/pg19', split='test')
 
 # elif args.dataset == "c4":
 #     dataset = convert_c4_dataset(tokenizer=tokenizer, seq_len=args.prefix_len)
@@ -296,6 +296,15 @@ for step, batch in tqdm(enumerate(dataset), total=num_eval_steps):
             verify_loop = 0.0
     # if use_tp:
     #     dist.barrier()
+
+    # Cleanup GPU memory after each step to prevent OOM
+    print(f"Step {step} completed. Cleaning up GPU memory...")
+    engine.cleanup()
+    torch.cuda.empty_cache()
+    
+    # # Reinitialize buffers for next step
+    # if actual_step < num_eval_steps - 1:  # Don't reinitialize on the last step
+    #     engine.reinitialize_buffers(BATCH_SIZE, max_length)
 
 print(f"Final tokens per second :{num_gen_tokens/total_time}")
 
