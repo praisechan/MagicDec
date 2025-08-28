@@ -379,6 +379,11 @@ for step, batch in tqdm(enumerate(dataset), total=num_eval_steps):
     if args.printoutput:
         print(f"Generated output: {decoded_output}")
 
+    # Cleanup GPU memory after each step to prevent OOM
+    print(f"Step {step} completed. Cleaning up GPU memory...")
+    engine.cleanup()
+    torch.cuda.empty_cache()
+
 # After all steps are completed, store the final accumulated data
 # Accumulated output should aggregate across all steps in this run only
 final_accumulated_data = [

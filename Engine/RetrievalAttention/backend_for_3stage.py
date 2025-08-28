@@ -237,6 +237,33 @@ class LMBackend_Retro:
         self.attn_config_speculation["RetroInfer"]["static_pattern_end"] = self.static_pattern_end_after_settle
         self.attn_config_verification["RetroInfer"]["static_pattern_end"] = self.static_pattern_end_after_settle
 
+    def cleanup(self):
+        """Clean up GPU memory between steps."""
+        if hasattr(self.model, 'cleanup_kv_cache'):
+            self.model.cleanup_kv_cache()
+        
+        # # Clear input tokens and reset state
+        # if hasattr(self, 'input_tokens') and self.input_tokens is not None:
+        #     del self.input_tokens
+        
+        # if hasattr(self, 'cachelens') and self.cachelens is not None:
+        #     del self.cachelens
+        
+        # Reset cache length counter
+        # self.verified_cachelength = 0
+        
+        # Force garbage collection
+        import gc
+        gc.collect()
+        torch.cuda.empty_cache()
+        print("Backend cleanup completed")
+
+    def reinitialize_buffers(self, bsz, max_len):
+        """Reinitialize buffers after cleanup."""
+        self.input_tokens = torch.zeros(bsz, max_len+1, device="cuda").long()
+        self.cachelens = torch.zeros(bsz, dtype=torch.int32, device=self.device)
+
+
     @torch.inference_mode()
     def encode(self, input_ids: torch.LongTensor):        
         outputs = self.model.generate(
@@ -260,10 +287,22 @@ class LMBackend_Retro:
     @torch.inference_mode()
     def update_verification_budget(self, budget_ratio, estimate_ratio, model_path, seq_len, attn_type):
         """Update the verification attention config with new budget ratio"""
-        self.attn_config_verification = generate_config(
+        temp_config = generate_config(
             model_path, 
             seq_len, 
             attn_type,
             budget_ratio=budget_ratio,
             estimate_ratio=estimate_ratio,
         )
+
+        self.attn_config_verification["RetroInfer"]["nprobe"] = temp_config["RetroInfer"]["nprobe"]
+        self.attn_config_verification["RetroInfer"]["cache_cluster_num"] = temp_config["RetroInfer"]["cache_cluster_num"]
+        self.attn_config_verification["RetroInfer"]["max_compute_cluster_num"] = temp_config["RetroInfer"]["max_compute_cluster_num"]
+        
+        # self.attn_config_verification = generate_config(
+        #     model_path, 
+        #     seq_len, 
+        #     attn_type,
+        #     budget_ratio=budget_ratio,
+        #     estimate_ratio=estimate_ratio,
+        # )

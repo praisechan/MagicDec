@@ -142,6 +142,7 @@ current_attn_type = args.attn_type
 # CSV logging setup
 # log_dir = "logs"
 profile_dir = f"/home/juchanlee/MagicDec/profile/data_{args.budget1}/{MODEL}_{args.dataset}_{args.prefix_len}"
+# profile_dir = f"/home/juchanlee/MagicDec/profile/temp/{MODEL}_{args.dataset}_{args.prefix_len}"
 log_dir = profile_dir
 
 os.makedirs(log_dir, exist_ok=True)
@@ -462,6 +463,11 @@ for step, batch in tqdm(enumerate(dataset), total=num_eval_steps):
     
     if args.printoutput:
         print(f"Generated output: {decoded_output}")
+
+    # Cleanup GPU memory after each step to prevent OOM
+    print(f"Step {step} completed. Cleaning up GPU memory...")
+    engine.cleanup()
+    torch.cuda.empty_cache()
 
 # After all steps are completed, store the final accumulated data
 # Accumulated output should aggregate across all steps in this run only

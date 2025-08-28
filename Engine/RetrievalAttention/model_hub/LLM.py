@@ -490,3 +490,39 @@ class LLM:
         outputs, top3_logits, top1_top2_diff, logit_list = self.inference_without_prefill_token(inputs_ids, bonus_token=bonus_token)
 
         return outputs, logit_list, top1_top2_diff, top3_logits
+
+    def cleanup_kv_cache(self):
+        """Clean up KV cache to free GPU memory."""
+        if hasattr(self, 'kv_cache') and self.kv_cache is not None:
+            # Delete key and value caches if they exist
+            if hasattr(self.kv_cache, 'key_cache') and self.kv_cache.key_cache is not None:
+                for cache in self.kv_cache.key_cache:
+                    if cache is not None:
+                        del cache
+                del self.kv_cache.key_cache
+                self.kv_cache.key_cache = None
+            
+            if hasattr(self.kv_cache, 'value_cache') and self.kv_cache.value_cache is not None:
+                for cache in self.kv_cache.value_cache:
+                    if cache is not None:
+                        del cache
+                del self.kv_cache.value_cache
+                self.kv_cache.value_cache = None
+            
+            # Delete any other cache-related tensors
+            if hasattr(self.kv_cache, 'cluster_centers') and self.kv_cache.cluster_centers is not None:
+                for centers in self.kv_cache.cluster_centers:
+                    if centers is not None:
+                        del centers
+                del self.kv_cache.cluster_centers
+                self.kv_cache.cluster_centers = None
+            
+            # Delete the cache object itself
+            del self.kv_cache
+            self.kv_cache = None
+        
+        # Force garbage collection and empty CUDA cache
+        import gc
+        gc.collect()
+        torch.cuda.empty_cache()
+        print("KV cache cleaned up successfully")
