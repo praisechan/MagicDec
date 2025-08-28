@@ -142,8 +142,17 @@ def load_profiling_layer(
     selected_list = torch.load(
         os.path.join(profiling_dir, f"selected_cI_step{step_idx}_layer{layer_idx}.pt"), map_location='cpu'
     )
+
+    # softmax sum should be <train_step_idx>_0, because hot cluster is selected only for decoding step 0.
+    # Extract number after first underscore from generate_name (e.g., "speculate_0_84" -> 0)
+    generate_parts = generate_name.split('_')
+    if len(generate_parts) >= 2:
+      train_step_idx = int(generate_parts[1])
+    else:
+      train_step_idx = 0
+    profiling_dir_for_softmax = args.profiling_dir + f"{args.model_name}_{args.dataset}_{args.prefix_len}/speculate_{train_step_idx}_0/data_{args.budget_ratio}KV_clustersize_{cluster_size_attempt}"
     softmax_sum = torch.load(
-        os.path.join(profiling_dir, f"softmax_sum_{layer_idx}.pt"), map_location='cpu'
+        os.path.join(profiling_dir_for_softmax, f"softmax_sum_{layer_idx}.pt"), map_location='cpu'
     )
 
     # Create HeadData objects first to use compute_pages_per_cluster
