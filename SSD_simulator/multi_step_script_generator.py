@@ -1,9 +1,12 @@
 import itertools
 import os
 import glob
+import argparse
 
 # Base profiling directory
 # PROFILING_BASE_DIR = "/home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/"
+# PROFILING_BASE_DIR = "/home/juchanlee/MagicDec/profile/data_2step_for_0.1/"
+# Default value - can be overridden by command line argument
 PROFILING_BASE_DIR = "/home/juchanlee/MagicDec/profile/data/"
 
 # Define fixed options and their possible values
@@ -26,7 +29,7 @@ fixed_option_values = {
 # Define variable options and their possible values
 option_values = {
     "--num_replica": [4],
-    "--prefix_len": ["32800"],
+    "--prefix_len": ["65568"],
     "--hot_cluster_ratio": [0.08],
     "--planes_per_die": [32],
     "--model_name": ["qwen2.5-14b"],
@@ -101,7 +104,7 @@ def make_script_filename(var_vals):
     return "_".join(parts)
 
 # Build a command line including fixed options, variable options, and flags
-def build_command(var_keys, var_tuple, flags, generate_name, model_name, dataset, prefix_len, folder_type):
+def build_command(var_keys, var_tuple, flags, generate_name, model_name, dataset, prefix_len, folder_type, verify_budget_ratio=0.25):
     cmd = ["python simulator.py"]
     cmd.append("--max_latency_calculate")
     script_name = make_script_filename(option_values)
@@ -118,8 +121,8 @@ def build_command(var_keys, var_tuple, flags, generate_name, model_name, dataset
     
     # Set budget_ratio based on folder type
     if folder_type == "verify":
-        budget_ratio = "0.25"
-        # budget_ratio = "0.40"
+        budget_ratio = str(verify_budget_ratio)
+        # budget_ratio = "0.10"
     else:  # speculate
         budget_ratio = "0.02"
     
@@ -138,7 +141,31 @@ def build_command(var_keys, var_tuple, flags, generate_name, model_name, dataset
     # join with backslashes for multiline readability
     return " \\\n".join(cmd)
 
+def parse_arguments():
+    """Parse command line arguments."""
+    parser = argparse.ArgumentParser(description='Generate multi-step SSD simulator scripts')
+    parser.add_argument('--profiling_base_dir', 
+                        type=str,
+                        default="/home/juchanlee/MagicDec/profile/data/",
+                        help='Base directory for profiling data (default: /home/juchanlee/MagicDec/profile/data/)')
+    parser.add_argument('--verify_budget_ratio',
+                        type=float,
+                        default=0.25,
+                        help='Budget ratio for verify folder type (default: 0.25)')
+    return parser.parse_args()
+
 def main():
+    global PROFILING_BASE_DIR
+    
+    # Parse command line arguments
+    args = parse_arguments()
+    PROFILING_BASE_DIR = args.profiling_base_dir
+    
+    # Update the fixed_option_values with the new profiling directory
+    fixed_option_values["--profiling_dir"] = [PROFILING_BASE_DIR]
+    
+    print(f"Using profiling base directory: {PROFILING_BASE_DIR}")
+    
     # Discover all available data folders
     data_folders = discover_data_folders()
     
@@ -201,7 +228,8 @@ def main():
                     folder['model_name'],
                     folder['dataset'],
                     folder['prefix_len'],
-                    folder['type']  # Pass the folder type (speculate or verify)
+                    folder['type'],  # Pass the folder type (speculate or verify)
+                    args.verify_budget_ratio  # Pass the verify budget ratio
                 )
                 generated_scripts.append(cmd_script)
     
@@ -209,7 +237,7 @@ def main():
     template = "#!/bin/bash\n\n" + "\n\necho \"Processing next configuration...\"\n\n".join(generated_scripts)
     
     # Write to a file named for the single-valued variable options only
-    script_name = make_script_filename(option_values) + "_multi_step_verify"
+    script_name = make_script_filename(option_values) + "_multi_step"
     with open(script_name + ".sh", "w") as f:
         f.write(template)
     
