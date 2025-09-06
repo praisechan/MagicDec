@@ -4,7 +4,8 @@ import seaborn as sns
 import numpy as np
 
 # Read the CSV file
-df = pd.read_csv('test.csv')
+csv_file_name ='16K_Qwen2.5-14b.csv'
+df = pd.read_csv(csv_file_name)
 
 # Clean up the data
 # Forward fill the case names and method names
@@ -89,9 +90,9 @@ for j, case in enumerate(unique_cases_without_batch):
            label=f'CPU (avg)' if j == 0 else "", color=cpu_color, alpha=0.8)
 
 # Customize the plot
-plt.xlabel('Cases', fontsize=18, fontweight='bold')
-plt.ylabel('Throughput', fontsize=18, fontweight='bold')
-plt.title('Seq.len 32K', fontsize=24, fontweight='bold')
+# plt.xlabel('Cases', fontsize=18, fontweight='bold')
+plt.ylabel('Throughput (token/s)', fontsize=18, fontweight='bold')
+plt.title('Qwen2.5-14B Seq.len 16K', fontsize=24, fontweight='bold')
 
 # Set x-axis labels
 case_labels = []
@@ -108,18 +109,18 @@ for case in unique_cases_without_batch:
 
 # Set x-tick positions (middle of grouped bars for batch cases, center for CPU cases)
 x_tick_positions = list(x_with_batch + width) + list(x_without_batch)
-plt.xticks(x_tick_positions, case_labels, fontsize=14)
-plt.yticks(fontsize=14)
-plt.legend(fontsize=16)
+plt.xticks(x_tick_positions, case_labels, fontsize=18)
+plt.yticks(fontsize=16)
+plt.legend(fontsize=18)
 plt.grid(True, alpha=0.3, axis='y')
 
 # Adjust layout to prevent label cutoff
 plt.tight_layout()
 
 # Save the plot
-plt.savefig('throughput_bar_graph.png', dpi=300, bbox_inches='tight')
+plt.savefig(f'{csv_file_name}_throughput_bar_graph.png', dpi=300, bbox_inches='tight')
 plt.show()
 
-print("Grouped bar graph saved as 'throughput_bar_graph.png'")
+print(f"Grouped bar graph saved as '{csv_file_name}_throughput_bar_graph.png'")
 print("\nData summary:")
 print(df.groupby('method_label')[['batch', 'throughput']].describe())
