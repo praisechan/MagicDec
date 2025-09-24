@@ -12,8 +12,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -37,8 +37,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -62,8 +62,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -87,8 +87,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -112,8 +112,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -137,8 +137,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -162,8 +162,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -187,8 +187,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -212,8 +212,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -237,8 +237,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -262,8 +262,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -287,8 +287,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -312,8 +312,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -337,8 +337,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -362,8 +362,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -387,8 +387,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -412,8 +412,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -437,8 +437,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -462,8 +462,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -487,8 +487,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -512,8 +512,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -537,8 +537,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -562,8 +562,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -587,8 +587,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -612,8 +612,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -637,8 +637,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -662,8 +662,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -687,8 +687,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -712,8 +712,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -737,8 +737,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -762,8 +762,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -787,8 +787,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -812,8 +812,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -837,8 +837,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -862,8 +862,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -887,8 +887,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -912,8 +912,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -937,8 +937,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -962,8 +962,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -987,8 +987,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -1012,8 +1012,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -1037,8 +1037,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -1062,8 +1062,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -1087,8 +1087,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -1112,8 +1112,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -1137,8 +1137,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -1162,8 +1162,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -1187,8 +1187,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -1212,8 +1212,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -1237,8 +1237,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -1262,8 +1262,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -1287,8 +1287,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -1312,8 +1312,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -1337,8 +1337,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -1362,8 +1362,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -1387,8 +1387,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -1412,8 +1412,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -1437,8 +1437,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -1462,8 +1462,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -1487,8 +1487,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -1512,8 +1512,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -1537,8 +1537,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -1562,8 +1562,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -1587,8 +1587,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -1612,8 +1612,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -1637,8 +1637,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -1662,8 +1662,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -1687,8 +1687,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -1712,8 +1712,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -1737,8 +1737,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -1762,8 +1762,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -1787,8 +1787,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -1812,8 +1812,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -1837,8 +1837,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -1862,8 +1862,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -1887,8 +1887,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -1912,8 +1912,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -1937,8 +1937,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -1962,8 +1962,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -1987,8 +1987,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -2012,8 +2012,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -2037,8 +2037,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -2062,8 +2062,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -2087,8 +2087,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -2112,8 +2112,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -2137,8 +2137,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -2162,8 +2162,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -2187,8 +2187,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -2212,8 +2212,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -2237,8 +2237,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -2262,8 +2262,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -2287,8 +2287,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -2312,8 +2312,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -2337,8 +2337,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -2362,8 +2362,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -2387,8 +2387,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -2412,8 +2412,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -2437,8 +2437,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -2462,8 +2462,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -2487,8 +2487,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -2512,8 +2512,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -2537,8 +2537,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -2562,8 +2562,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -2587,8 +2587,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -2612,8 +2612,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -2637,8 +2637,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -2662,8 +2662,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -2687,8 +2687,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -2712,8 +2712,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -2737,8 +2737,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -2762,8 +2762,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -2787,8 +2787,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -2812,408 +2812,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-32b \
---dataset pg19 \
---generate_name speculate_3_152 \
---prefix_len 32800
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 32 \
---window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-32b \
---dataset pg19 \
---generate_name speculate_3_156 \
---prefix_len 32800
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 32 \
---window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-32b \
---dataset pg19 \
---generate_name speculate_3_160 \
---prefix_len 32800
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 32 \
---window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-32b \
---dataset pg19 \
---generate_name speculate_3_164 \
---prefix_len 32800
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 32 \
---window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-32b \
---dataset pg19 \
---generate_name speculate_3_168 \
---prefix_len 32800
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 32 \
---window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-32b \
---dataset pg19 \
---generate_name speculate_3_172 \
---prefix_len 32800
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 32 \
---window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-32b \
---dataset pg19 \
---generate_name speculate_3_176 \
---prefix_len 32800
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 32 \
---window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-32b \
---dataset pg19 \
---generate_name speculate_3_180 \
---prefix_len 32800
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 32 \
---window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-32b \
---dataset pg19 \
---generate_name speculate_3_184 \
---prefix_len 32800
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 32 \
---window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-32b \
---dataset pg19 \
---generate_name speculate_3_188 \
---prefix_len 32800
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 32 \
---window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-32b \
---dataset pg19 \
---generate_name speculate_3_192 \
---prefix_len 32800
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 32 \
---window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-32b \
---dataset pg19 \
---generate_name speculate_3_196 \
---prefix_len 32800
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 32 \
---window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-32b \
---dataset pg19 \
---generate_name speculate_3_200 \
---prefix_len 32800
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 32 \
---window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-32b \
---dataset pg19 \
---generate_name speculate_3_204 \
---prefix_len 32800
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 32 \
---window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-32b \
---dataset pg19 \
---generate_name speculate_3_208 \
---prefix_len 32800
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 32 \
---window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-32b \
---dataset pg19 \
---generate_name speculate_3_212 \
---prefix_len 32800
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 32 \
---window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -3237,8 +2837,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -3262,8 +2862,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -3287,8 +2887,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -3312,8 +2912,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -3337,8 +2937,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -3362,8 +2962,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -3387,8 +2987,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -3412,8 +3012,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -3437,8 +3037,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -3462,8 +3062,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -3487,8 +3087,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -3512,8 +3112,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -3537,8 +3137,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -3562,8 +3162,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -3587,8 +3187,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -3612,8 +3212,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -3637,8 +3237,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -3662,8 +3262,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -3687,8 +3287,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -3712,8 +3312,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -3737,8 +3337,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -3762,8 +3362,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -3787,8 +3387,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -3812,8 +3412,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -3837,8 +3437,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -3862,8 +3462,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -3887,8 +3487,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -3912,8 +3512,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -3937,8 +3537,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -3962,8 +3562,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -3987,8 +3587,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -4012,8 +3612,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -4037,8 +3637,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -4062,8 +3662,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -4087,8 +3687,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -4112,8 +3712,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -4137,8 +3737,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -4162,8 +3762,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -4187,8 +3787,633 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
+--num_replica 4 \
+--hot_cluster_ratio 0.08 \
+--planes_per_die 32 \
+--budget_ratio 0.02 \
+--model_name qwen2.5-32b \
+--dataset pg19 \
+--generate_name speculate_4_156 \
+--prefix_len 32800
+
+echo "Processing next configuration..."
+
+python simulator.py \
+--max_latency_calculate \
+--csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
+--num_channels 1 \
+--chips_per_channel 1 \
+--dies_per_chip 1 \
+--page_size_bytes 16384 \
+--vector_bytes 4 \
+--flash_read_latency_us 50 \
+--num_heads 8 \
+--cluster_size 32 \
+--window_size 64 \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
+--num_replica 4 \
+--hot_cluster_ratio 0.08 \
+--planes_per_die 32 \
+--budget_ratio 0.02 \
+--model_name qwen2.5-32b \
+--dataset pg19 \
+--generate_name speculate_4_160 \
+--prefix_len 32800
+
+echo "Processing next configuration..."
+
+python simulator.py \
+--max_latency_calculate \
+--csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
+--num_channels 1 \
+--chips_per_channel 1 \
+--dies_per_chip 1 \
+--page_size_bytes 16384 \
+--vector_bytes 4 \
+--flash_read_latency_us 50 \
+--num_heads 8 \
+--cluster_size 32 \
+--window_size 64 \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
+--num_replica 4 \
+--hot_cluster_ratio 0.08 \
+--planes_per_die 32 \
+--budget_ratio 0.02 \
+--model_name qwen2.5-32b \
+--dataset pg19 \
+--generate_name speculate_4_164 \
+--prefix_len 32800
+
+echo "Processing next configuration..."
+
+python simulator.py \
+--max_latency_calculate \
+--csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
+--num_channels 1 \
+--chips_per_channel 1 \
+--dies_per_chip 1 \
+--page_size_bytes 16384 \
+--vector_bytes 4 \
+--flash_read_latency_us 50 \
+--num_heads 8 \
+--cluster_size 32 \
+--window_size 64 \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
+--num_replica 4 \
+--hot_cluster_ratio 0.08 \
+--planes_per_die 32 \
+--budget_ratio 0.02 \
+--model_name qwen2.5-32b \
+--dataset pg19 \
+--generate_name speculate_4_168 \
+--prefix_len 32800
+
+echo "Processing next configuration..."
+
+python simulator.py \
+--max_latency_calculate \
+--csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
+--num_channels 1 \
+--chips_per_channel 1 \
+--dies_per_chip 1 \
+--page_size_bytes 16384 \
+--vector_bytes 4 \
+--flash_read_latency_us 50 \
+--num_heads 8 \
+--cluster_size 32 \
+--window_size 64 \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
+--num_replica 4 \
+--hot_cluster_ratio 0.08 \
+--planes_per_die 32 \
+--budget_ratio 0.02 \
+--model_name qwen2.5-32b \
+--dataset pg19 \
+--generate_name speculate_4_172 \
+--prefix_len 32800
+
+echo "Processing next configuration..."
+
+python simulator.py \
+--max_latency_calculate \
+--csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
+--num_channels 1 \
+--chips_per_channel 1 \
+--dies_per_chip 1 \
+--page_size_bytes 16384 \
+--vector_bytes 4 \
+--flash_read_latency_us 50 \
+--num_heads 8 \
+--cluster_size 32 \
+--window_size 64 \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
+--num_replica 4 \
+--hot_cluster_ratio 0.08 \
+--planes_per_die 32 \
+--budget_ratio 0.02 \
+--model_name qwen2.5-32b \
+--dataset pg19 \
+--generate_name speculate_4_176 \
+--prefix_len 32800
+
+echo "Processing next configuration..."
+
+python simulator.py \
+--max_latency_calculate \
+--csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
+--num_channels 1 \
+--chips_per_channel 1 \
+--dies_per_chip 1 \
+--page_size_bytes 16384 \
+--vector_bytes 4 \
+--flash_read_latency_us 50 \
+--num_heads 8 \
+--cluster_size 32 \
+--window_size 64 \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
+--num_replica 4 \
+--hot_cluster_ratio 0.08 \
+--planes_per_die 32 \
+--budget_ratio 0.02 \
+--model_name qwen2.5-32b \
+--dataset pg19 \
+--generate_name speculate_4_180 \
+--prefix_len 32800
+
+echo "Processing next configuration..."
+
+python simulator.py \
+--max_latency_calculate \
+--csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
+--num_channels 1 \
+--chips_per_channel 1 \
+--dies_per_chip 1 \
+--page_size_bytes 16384 \
+--vector_bytes 4 \
+--flash_read_latency_us 50 \
+--num_heads 8 \
+--cluster_size 32 \
+--window_size 64 \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
+--num_replica 4 \
+--hot_cluster_ratio 0.08 \
+--planes_per_die 32 \
+--budget_ratio 0.02 \
+--model_name qwen2.5-32b \
+--dataset pg19 \
+--generate_name speculate_4_184 \
+--prefix_len 32800
+
+echo "Processing next configuration..."
+
+python simulator.py \
+--max_latency_calculate \
+--csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
+--num_channels 1 \
+--chips_per_channel 1 \
+--dies_per_chip 1 \
+--page_size_bytes 16384 \
+--vector_bytes 4 \
+--flash_read_latency_us 50 \
+--num_heads 8 \
+--cluster_size 32 \
+--window_size 64 \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
+--num_replica 4 \
+--hot_cluster_ratio 0.08 \
+--planes_per_die 32 \
+--budget_ratio 0.02 \
+--model_name qwen2.5-32b \
+--dataset pg19 \
+--generate_name speculate_4_188 \
+--prefix_len 32800
+
+echo "Processing next configuration..."
+
+python simulator.py \
+--max_latency_calculate \
+--csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
+--num_channels 1 \
+--chips_per_channel 1 \
+--dies_per_chip 1 \
+--page_size_bytes 16384 \
+--vector_bytes 4 \
+--flash_read_latency_us 50 \
+--num_heads 8 \
+--cluster_size 32 \
+--window_size 64 \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
+--num_replica 4 \
+--hot_cluster_ratio 0.08 \
+--planes_per_die 32 \
+--budget_ratio 0.02 \
+--model_name qwen2.5-32b \
+--dataset pg19 \
+--generate_name speculate_4_192 \
+--prefix_len 32800
+
+echo "Processing next configuration..."
+
+python simulator.py \
+--max_latency_calculate \
+--csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
+--num_channels 1 \
+--chips_per_channel 1 \
+--dies_per_chip 1 \
+--page_size_bytes 16384 \
+--vector_bytes 4 \
+--flash_read_latency_us 50 \
+--num_heads 8 \
+--cluster_size 32 \
+--window_size 64 \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
+--num_replica 4 \
+--hot_cluster_ratio 0.08 \
+--planes_per_die 32 \
+--budget_ratio 0.02 \
+--model_name qwen2.5-32b \
+--dataset pg19 \
+--generate_name speculate_4_196 \
+--prefix_len 32800
+
+echo "Processing next configuration..."
+
+python simulator.py \
+--max_latency_calculate \
+--csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
+--num_channels 1 \
+--chips_per_channel 1 \
+--dies_per_chip 1 \
+--page_size_bytes 16384 \
+--vector_bytes 4 \
+--flash_read_latency_us 50 \
+--num_heads 8 \
+--cluster_size 32 \
+--window_size 64 \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
+--num_replica 4 \
+--hot_cluster_ratio 0.08 \
+--planes_per_die 32 \
+--budget_ratio 0.02 \
+--model_name qwen2.5-32b \
+--dataset pg19 \
+--generate_name speculate_4_200 \
+--prefix_len 32800
+
+echo "Processing next configuration..."
+
+python simulator.py \
+--max_latency_calculate \
+--csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
+--num_channels 1 \
+--chips_per_channel 1 \
+--dies_per_chip 1 \
+--page_size_bytes 16384 \
+--vector_bytes 4 \
+--flash_read_latency_us 50 \
+--num_heads 8 \
+--cluster_size 32 \
+--window_size 64 \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
+--num_replica 4 \
+--hot_cluster_ratio 0.08 \
+--planes_per_die 32 \
+--budget_ratio 0.02 \
+--model_name qwen2.5-32b \
+--dataset pg19 \
+--generate_name speculate_4_204 \
+--prefix_len 32800
+
+echo "Processing next configuration..."
+
+python simulator.py \
+--max_latency_calculate \
+--csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
+--num_channels 1 \
+--chips_per_channel 1 \
+--dies_per_chip 1 \
+--page_size_bytes 16384 \
+--vector_bytes 4 \
+--flash_read_latency_us 50 \
+--num_heads 8 \
+--cluster_size 32 \
+--window_size 64 \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
+--num_replica 4 \
+--hot_cluster_ratio 0.08 \
+--planes_per_die 32 \
+--budget_ratio 0.02 \
+--model_name qwen2.5-32b \
+--dataset pg19 \
+--generate_name speculate_4_208 \
+--prefix_len 32800
+
+echo "Processing next configuration..."
+
+python simulator.py \
+--max_latency_calculate \
+--csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
+--num_channels 1 \
+--chips_per_channel 1 \
+--dies_per_chip 1 \
+--page_size_bytes 16384 \
+--vector_bytes 4 \
+--flash_read_latency_us 50 \
+--num_heads 8 \
+--cluster_size 32 \
+--window_size 64 \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
+--num_replica 4 \
+--hot_cluster_ratio 0.08 \
+--planes_per_die 32 \
+--budget_ratio 0.02 \
+--model_name qwen2.5-32b \
+--dataset pg19 \
+--generate_name speculate_4_212 \
+--prefix_len 32800
+
+echo "Processing next configuration..."
+
+python simulator.py \
+--max_latency_calculate \
+--csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
+--num_channels 1 \
+--chips_per_channel 1 \
+--dies_per_chip 1 \
+--page_size_bytes 16384 \
+--vector_bytes 4 \
+--flash_read_latency_us 50 \
+--num_heads 8 \
+--cluster_size 32 \
+--window_size 64 \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
+--num_replica 4 \
+--hot_cluster_ratio 0.08 \
+--planes_per_die 32 \
+--budget_ratio 0.02 \
+--model_name qwen2.5-32b \
+--dataset pg19 \
+--generate_name speculate_4_216 \
+--prefix_len 32800
+
+echo "Processing next configuration..."
+
+python simulator.py \
+--max_latency_calculate \
+--csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
+--num_channels 1 \
+--chips_per_channel 1 \
+--dies_per_chip 1 \
+--page_size_bytes 16384 \
+--vector_bytes 4 \
+--flash_read_latency_us 50 \
+--num_heads 8 \
+--cluster_size 32 \
+--window_size 64 \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
+--num_replica 4 \
+--hot_cluster_ratio 0.08 \
+--planes_per_die 32 \
+--budget_ratio 0.02 \
+--model_name qwen2.5-32b \
+--dataset pg19 \
+--generate_name speculate_4_220 \
+--prefix_len 32800
+
+echo "Processing next configuration..."
+
+python simulator.py \
+--max_latency_calculate \
+--csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
+--num_channels 1 \
+--chips_per_channel 1 \
+--dies_per_chip 1 \
+--page_size_bytes 16384 \
+--vector_bytes 4 \
+--flash_read_latency_us 50 \
+--num_heads 8 \
+--cluster_size 32 \
+--window_size 64 \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
+--num_replica 4 \
+--hot_cluster_ratio 0.08 \
+--planes_per_die 32 \
+--budget_ratio 0.02 \
+--model_name qwen2.5-32b \
+--dataset pg19 \
+--generate_name speculate_4_224 \
+--prefix_len 32800
+
+echo "Processing next configuration..."
+
+python simulator.py \
+--max_latency_calculate \
+--csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
+--num_channels 1 \
+--chips_per_channel 1 \
+--dies_per_chip 1 \
+--page_size_bytes 16384 \
+--vector_bytes 4 \
+--flash_read_latency_us 50 \
+--num_heads 8 \
+--cluster_size 32 \
+--window_size 64 \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
+--num_replica 4 \
+--hot_cluster_ratio 0.08 \
+--planes_per_die 32 \
+--budget_ratio 0.02 \
+--model_name qwen2.5-32b \
+--dataset pg19 \
+--generate_name speculate_4_228 \
+--prefix_len 32800
+
+echo "Processing next configuration..."
+
+python simulator.py \
+--max_latency_calculate \
+--csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
+--num_channels 1 \
+--chips_per_channel 1 \
+--dies_per_chip 1 \
+--page_size_bytes 16384 \
+--vector_bytes 4 \
+--flash_read_latency_us 50 \
+--num_heads 8 \
+--cluster_size 32 \
+--window_size 64 \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
+--num_replica 4 \
+--hot_cluster_ratio 0.08 \
+--planes_per_die 32 \
+--budget_ratio 0.02 \
+--model_name qwen2.5-32b \
+--dataset pg19 \
+--generate_name speculate_4_232 \
+--prefix_len 32800
+
+echo "Processing next configuration..."
+
+python simulator.py \
+--max_latency_calculate \
+--csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
+--num_channels 1 \
+--chips_per_channel 1 \
+--dies_per_chip 1 \
+--page_size_bytes 16384 \
+--vector_bytes 4 \
+--flash_read_latency_us 50 \
+--num_heads 8 \
+--cluster_size 32 \
+--window_size 64 \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
+--num_replica 4 \
+--hot_cluster_ratio 0.08 \
+--planes_per_die 32 \
+--budget_ratio 0.02 \
+--model_name qwen2.5-32b \
+--dataset pg19 \
+--generate_name speculate_4_236 \
+--prefix_len 32800
+
+echo "Processing next configuration..."
+
+python simulator.py \
+--max_latency_calculate \
+--csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
+--num_channels 1 \
+--chips_per_channel 1 \
+--dies_per_chip 1 \
+--page_size_bytes 16384 \
+--vector_bytes 4 \
+--flash_read_latency_us 50 \
+--num_heads 8 \
+--cluster_size 32 \
+--window_size 64 \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
+--num_replica 4 \
+--hot_cluster_ratio 0.08 \
+--planes_per_die 32 \
+--budget_ratio 0.02 \
+--model_name qwen2.5-32b \
+--dataset pg19 \
+--generate_name speculate_4_240 \
+--prefix_len 32800
+
+echo "Processing next configuration..."
+
+python simulator.py \
+--max_latency_calculate \
+--csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
+--num_channels 1 \
+--chips_per_channel 1 \
+--dies_per_chip 1 \
+--page_size_bytes 16384 \
+--vector_bytes 4 \
+--flash_read_latency_us 50 \
+--num_heads 8 \
+--cluster_size 32 \
+--window_size 64 \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
+--num_replica 4 \
+--hot_cluster_ratio 0.08 \
+--planes_per_die 32 \
+--budget_ratio 0.02 \
+--model_name qwen2.5-32b \
+--dataset pg19 \
+--generate_name speculate_4_244 \
+--prefix_len 32800
+
+echo "Processing next configuration..."
+
+python simulator.py \
+--max_latency_calculate \
+--csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
+--num_channels 1 \
+--chips_per_channel 1 \
+--dies_per_chip 1 \
+--page_size_bytes 16384 \
+--vector_bytes 4 \
+--flash_read_latency_us 50 \
+--num_heads 8 \
+--cluster_size 32 \
+--window_size 64 \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
+--num_replica 4 \
+--hot_cluster_ratio 0.08 \
+--planes_per_die 32 \
+--budget_ratio 0.02 \
+--model_name qwen2.5-32b \
+--dataset pg19 \
+--generate_name speculate_4_248 \
+--prefix_len 32800
+
+echo "Processing next configuration..."
+
+python simulator.py \
+--max_latency_calculate \
+--csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
+--num_channels 1 \
+--chips_per_channel 1 \
+--dies_per_chip 1 \
+--page_size_bytes 16384 \
+--vector_bytes 4 \
+--flash_read_latency_us 50 \
+--num_heads 8 \
+--cluster_size 32 \
+--window_size 64 \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
+--num_replica 4 \
+--hot_cluster_ratio 0.08 \
+--planes_per_die 32 \
+--budget_ratio 0.02 \
+--model_name qwen2.5-32b \
+--dataset pg19 \
+--generate_name speculate_4_252 \
+--prefix_len 32800
+
+echo "Processing next configuration..."
+
+python simulator.py \
+--max_latency_calculate \
+--csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
+--num_channels 1 \
+--chips_per_channel 1 \
+--dies_per_chip 1 \
+--page_size_bytes 16384 \
+--vector_bytes 4 \
+--flash_read_latency_us 50 \
+--num_heads 8 \
+--cluster_size 32 \
+--window_size 64 \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -4212,8 +4437,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -4237,8 +4462,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -4262,8 +4487,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -4287,8 +4512,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -4312,8 +4537,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -4337,8 +4562,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -4362,8 +4587,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -4387,8 +4612,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -4412,8 +4637,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -4437,8 +4662,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -4462,8 +4687,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -4487,8 +4712,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -4512,8 +4737,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -4537,8 +4762,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -4562,8 +4787,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -4587,8 +4812,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -4612,8 +4837,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -4637,8 +4862,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -4662,8 +4887,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -4687,8 +4912,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -4712,8 +4937,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -4737,8 +4962,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -4762,8 +4987,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -4787,8 +5012,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -4812,8 +5037,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -4837,8 +5062,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -4862,8 +5087,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -4887,8 +5112,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -4912,8 +5137,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -4937,8 +5162,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -4962,8 +5187,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -4987,8 +5212,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -5012,8 +5237,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -5037,8 +5262,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -5062,8 +5287,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -5087,8 +5312,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -5112,8 +5337,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -5137,8 +5362,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -5162,8 +5387,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -5187,8 +5412,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -5212,8 +5437,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -5237,8 +5462,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -5262,8 +5487,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -5287,8 +5512,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -5312,8 +5537,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -5337,8 +5562,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -5362,8 +5587,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -5387,8 +5612,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -5412,8 +5637,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -5437,8 +5662,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -5462,8 +5687,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -5487,8 +5712,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -5512,8 +5737,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -5537,8 +5762,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -5562,8 +5787,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -5587,8 +5812,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -5612,8 +5837,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -5637,8 +5862,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -5662,8 +5887,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -5687,8 +5912,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -5712,8 +5937,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -5737,8 +5962,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -5762,8 +5987,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -5787,8 +6012,33 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
+--num_replica 4 \
+--hot_cluster_ratio 0.08 \
+--planes_per_die 32 \
+--budget_ratio 0.02 \
+--model_name qwen2.5-32b \
+--dataset pg19 \
+--generate_name speculate_5_256 \
+--prefix_len 32800
+
+echo "Processing next configuration..."
+
+python simulator.py \
+--max_latency_calculate \
+--csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
+--num_channels 1 \
+--chips_per_channel 1 \
+--dies_per_chip 1 \
+--page_size_bytes 16384 \
+--vector_bytes 4 \
+--flash_read_latency_us 50 \
+--num_heads 8 \
+--cluster_size 32 \
+--window_size 64 \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -5812,8 +6062,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -5837,8 +6087,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -5862,8 +6112,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -5887,8 +6137,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -5912,8 +6162,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -5937,8 +6187,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -5962,8 +6212,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -5987,8 +6237,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -6012,8 +6262,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -6037,8 +6287,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -6062,8 +6312,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -6087,8 +6337,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -6112,8 +6362,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -6137,8 +6387,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -6162,8 +6412,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -6187,8 +6437,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -6212,8 +6462,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -6237,8 +6487,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -6262,8 +6512,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -6287,8 +6537,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -6312,8 +6562,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -6337,8 +6587,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -6362,8 +6612,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -6387,8 +6637,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -6412,8 +6662,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -6437,8 +6687,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -6462,8 +6712,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -6487,8 +6737,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -6512,8 +6762,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -6537,8 +6787,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -6562,8 +6812,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -6587,8 +6837,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -6612,8 +6862,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -6637,8 +6887,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -6662,8 +6912,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -6687,8 +6937,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -6712,8 +6962,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -6737,8 +6987,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -6762,8 +7012,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -6787,8 +7037,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -6812,8 +7062,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -6837,208 +7087,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-32b \
---dataset pg19 \
---generate_name speculate_6_168 \
---prefix_len 32800
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 32 \
---window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-32b \
---dataset pg19 \
---generate_name speculate_6_172 \
---prefix_len 32800
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 32 \
---window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-32b \
---dataset pg19 \
---generate_name speculate_6_176 \
---prefix_len 32800
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 32 \
---window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-32b \
---dataset pg19 \
---generate_name speculate_6_180 \
---prefix_len 32800
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 32 \
---window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-32b \
---dataset pg19 \
---generate_name speculate_6_184 \
---prefix_len 32800
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 32 \
---window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-32b \
---dataset pg19 \
---generate_name speculate_6_188 \
---prefix_len 32800
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 32 \
---window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-32b \
---dataset pg19 \
---generate_name speculate_6_192 \
---prefix_len 32800
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 32 \
---window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-32b \
---dataset pg19 \
---generate_name speculate_6_196 \
---prefix_len 32800
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 32 \
---window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -7062,8 +7112,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -7087,8 +7137,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -7112,8 +7162,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -7137,8 +7187,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -7162,8 +7212,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -7187,8 +7237,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -7212,8 +7262,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -7237,8 +7287,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -7262,8 +7312,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -7287,8 +7337,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -7312,8 +7362,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -7337,8 +7387,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -7362,8 +7412,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -7387,8 +7437,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -7412,8 +7462,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -7437,8 +7487,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -7462,8 +7512,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -7487,8 +7537,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -7512,8 +7562,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -7537,8 +7587,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -7562,8 +7612,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -7587,8 +7637,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -7612,8 +7662,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -7637,8 +7687,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -7662,8 +7712,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -7687,8 +7737,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -7712,8 +7762,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -7737,8 +7787,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -7762,8 +7812,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -7787,8 +7837,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -7812,8 +7862,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -7837,8 +7887,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -7862,8 +7912,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -7887,8 +7937,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -7912,8 +7962,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -7937,8 +7987,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -7962,8 +8012,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -7987,8 +8037,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -8012,8 +8062,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -8037,8 +8087,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -8062,8 +8112,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -8087,8 +8137,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -8112,8 +8162,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -8137,8 +8187,283 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
+--num_replica 4 \
+--hot_cluster_ratio 0.08 \
+--planes_per_die 32 \
+--budget_ratio 0.02 \
+--model_name qwen2.5-32b \
+--dataset pg19 \
+--generate_name speculate_7_176 \
+--prefix_len 32800
+
+echo "Processing next configuration..."
+
+python simulator.py \
+--max_latency_calculate \
+--csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
+--num_channels 1 \
+--chips_per_channel 1 \
+--dies_per_chip 1 \
+--page_size_bytes 16384 \
+--vector_bytes 4 \
+--flash_read_latency_us 50 \
+--num_heads 8 \
+--cluster_size 32 \
+--window_size 64 \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
+--num_replica 4 \
+--hot_cluster_ratio 0.08 \
+--planes_per_die 32 \
+--budget_ratio 0.02 \
+--model_name qwen2.5-32b \
+--dataset pg19 \
+--generate_name speculate_7_180 \
+--prefix_len 32800
+
+echo "Processing next configuration..."
+
+python simulator.py \
+--max_latency_calculate \
+--csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
+--num_channels 1 \
+--chips_per_channel 1 \
+--dies_per_chip 1 \
+--page_size_bytes 16384 \
+--vector_bytes 4 \
+--flash_read_latency_us 50 \
+--num_heads 8 \
+--cluster_size 32 \
+--window_size 64 \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
+--num_replica 4 \
+--hot_cluster_ratio 0.08 \
+--planes_per_die 32 \
+--budget_ratio 0.02 \
+--model_name qwen2.5-32b \
+--dataset pg19 \
+--generate_name speculate_7_184 \
+--prefix_len 32800
+
+echo "Processing next configuration..."
+
+python simulator.py \
+--max_latency_calculate \
+--csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
+--num_channels 1 \
+--chips_per_channel 1 \
+--dies_per_chip 1 \
+--page_size_bytes 16384 \
+--vector_bytes 4 \
+--flash_read_latency_us 50 \
+--num_heads 8 \
+--cluster_size 32 \
+--window_size 64 \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
+--num_replica 4 \
+--hot_cluster_ratio 0.08 \
+--planes_per_die 32 \
+--budget_ratio 0.02 \
+--model_name qwen2.5-32b \
+--dataset pg19 \
+--generate_name speculate_7_188 \
+--prefix_len 32800
+
+echo "Processing next configuration..."
+
+python simulator.py \
+--max_latency_calculate \
+--csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
+--num_channels 1 \
+--chips_per_channel 1 \
+--dies_per_chip 1 \
+--page_size_bytes 16384 \
+--vector_bytes 4 \
+--flash_read_latency_us 50 \
+--num_heads 8 \
+--cluster_size 32 \
+--window_size 64 \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
+--num_replica 4 \
+--hot_cluster_ratio 0.08 \
+--planes_per_die 32 \
+--budget_ratio 0.02 \
+--model_name qwen2.5-32b \
+--dataset pg19 \
+--generate_name speculate_7_192 \
+--prefix_len 32800
+
+echo "Processing next configuration..."
+
+python simulator.py \
+--max_latency_calculate \
+--csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
+--num_channels 1 \
+--chips_per_channel 1 \
+--dies_per_chip 1 \
+--page_size_bytes 16384 \
+--vector_bytes 4 \
+--flash_read_latency_us 50 \
+--num_heads 8 \
+--cluster_size 32 \
+--window_size 64 \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
+--num_replica 4 \
+--hot_cluster_ratio 0.08 \
+--planes_per_die 32 \
+--budget_ratio 0.02 \
+--model_name qwen2.5-32b \
+--dataset pg19 \
+--generate_name speculate_7_196 \
+--prefix_len 32800
+
+echo "Processing next configuration..."
+
+python simulator.py \
+--max_latency_calculate \
+--csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
+--num_channels 1 \
+--chips_per_channel 1 \
+--dies_per_chip 1 \
+--page_size_bytes 16384 \
+--vector_bytes 4 \
+--flash_read_latency_us 50 \
+--num_heads 8 \
+--cluster_size 32 \
+--window_size 64 \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
+--num_replica 4 \
+--hot_cluster_ratio 0.08 \
+--planes_per_die 32 \
+--budget_ratio 0.02 \
+--model_name qwen2.5-32b \
+--dataset pg19 \
+--generate_name speculate_7_200 \
+--prefix_len 32800
+
+echo "Processing next configuration..."
+
+python simulator.py \
+--max_latency_calculate \
+--csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
+--num_channels 1 \
+--chips_per_channel 1 \
+--dies_per_chip 1 \
+--page_size_bytes 16384 \
+--vector_bytes 4 \
+--flash_read_latency_us 50 \
+--num_heads 8 \
+--cluster_size 32 \
+--window_size 64 \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
+--num_replica 4 \
+--hot_cluster_ratio 0.08 \
+--planes_per_die 32 \
+--budget_ratio 0.02 \
+--model_name qwen2.5-32b \
+--dataset pg19 \
+--generate_name speculate_7_204 \
+--prefix_len 32800
+
+echo "Processing next configuration..."
+
+python simulator.py \
+--max_latency_calculate \
+--csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
+--num_channels 1 \
+--chips_per_channel 1 \
+--dies_per_chip 1 \
+--page_size_bytes 16384 \
+--vector_bytes 4 \
+--flash_read_latency_us 50 \
+--num_heads 8 \
+--cluster_size 32 \
+--window_size 64 \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
+--num_replica 4 \
+--hot_cluster_ratio 0.08 \
+--planes_per_die 32 \
+--budget_ratio 0.02 \
+--model_name qwen2.5-32b \
+--dataset pg19 \
+--generate_name speculate_7_208 \
+--prefix_len 32800
+
+echo "Processing next configuration..."
+
+python simulator.py \
+--max_latency_calculate \
+--csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
+--num_channels 1 \
+--chips_per_channel 1 \
+--dies_per_chip 1 \
+--page_size_bytes 16384 \
+--vector_bytes 4 \
+--flash_read_latency_us 50 \
+--num_heads 8 \
+--cluster_size 32 \
+--window_size 64 \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
+--num_replica 4 \
+--hot_cluster_ratio 0.08 \
+--planes_per_die 32 \
+--budget_ratio 0.02 \
+--model_name qwen2.5-32b \
+--dataset pg19 \
+--generate_name speculate_7_212 \
+--prefix_len 32800
+
+echo "Processing next configuration..."
+
+python simulator.py \
+--max_latency_calculate \
+--csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
+--num_channels 1 \
+--chips_per_channel 1 \
+--dies_per_chip 1 \
+--page_size_bytes 16384 \
+--vector_bytes 4 \
+--flash_read_latency_us 50 \
+--num_heads 8 \
+--cluster_size 32 \
+--window_size 64 \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
+--num_replica 4 \
+--hot_cluster_ratio 0.08 \
+--planes_per_die 32 \
+--budget_ratio 0.02 \
+--model_name qwen2.5-32b \
+--dataset pg19 \
+--generate_name speculate_7_216 \
+--prefix_len 32800
+
+echo "Processing next configuration..."
+
+python simulator.py \
+--max_latency_calculate \
+--csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
+--num_channels 1 \
+--chips_per_channel 1 \
+--dies_per_chip 1 \
+--page_size_bytes 16384 \
+--vector_bytes 4 \
+--flash_read_latency_us 50 \
+--num_heads 8 \
+--cluster_size 32 \
+--window_size 64 \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -8162,8 +8487,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -8187,8 +8512,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -8212,8 +8537,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -8237,8 +8562,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -8262,8 +8587,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -8287,8 +8612,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -8312,8 +8637,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -8337,8 +8662,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -8362,8 +8687,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -8387,8 +8712,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -8412,8 +8737,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -8437,8 +8762,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -8462,8 +8787,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -8487,8 +8812,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -8512,8 +8837,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -8537,8 +8862,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -8562,8 +8887,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -8587,8 +8912,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -8612,8 +8937,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -8637,8 +8962,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -8662,8 +8987,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -8687,8 +9012,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -8712,8 +9037,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -8737,8 +9062,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -8762,8 +9087,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -8787,8 +9112,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -8812,8 +9137,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -8837,8 +9162,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -8862,8 +9187,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -8887,8 +9212,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -8912,8 +9237,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -8937,8 +9262,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -8962,8 +9287,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -8987,8 +9312,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -9012,8 +9337,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -9037,8 +9362,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -9062,8 +9387,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -9087,8 +9412,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -9112,8 +9437,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -9137,8 +9462,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -9162,8 +9487,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -9187,8 +9512,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -9212,8 +9537,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -9237,8 +9562,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -9262,8 +9587,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -9287,8 +9612,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -9312,8 +9637,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -9337,8 +9662,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -9362,8 +9687,333 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
+--num_replica 4 \
+--hot_cluster_ratio 0.08 \
+--planes_per_die 32 \
+--budget_ratio 0.02 \
+--model_name qwen2.5-32b \
+--dataset pg19 \
+--generate_name speculate_8_196 \
+--prefix_len 32800
+
+echo "Processing next configuration..."
+
+python simulator.py \
+--max_latency_calculate \
+--csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
+--num_channels 1 \
+--chips_per_channel 1 \
+--dies_per_chip 1 \
+--page_size_bytes 16384 \
+--vector_bytes 4 \
+--flash_read_latency_us 50 \
+--num_heads 8 \
+--cluster_size 32 \
+--window_size 64 \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
+--num_replica 4 \
+--hot_cluster_ratio 0.08 \
+--planes_per_die 32 \
+--budget_ratio 0.02 \
+--model_name qwen2.5-32b \
+--dataset pg19 \
+--generate_name speculate_8_200 \
+--prefix_len 32800
+
+echo "Processing next configuration..."
+
+python simulator.py \
+--max_latency_calculate \
+--csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
+--num_channels 1 \
+--chips_per_channel 1 \
+--dies_per_chip 1 \
+--page_size_bytes 16384 \
+--vector_bytes 4 \
+--flash_read_latency_us 50 \
+--num_heads 8 \
+--cluster_size 32 \
+--window_size 64 \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
+--num_replica 4 \
+--hot_cluster_ratio 0.08 \
+--planes_per_die 32 \
+--budget_ratio 0.02 \
+--model_name qwen2.5-32b \
+--dataset pg19 \
+--generate_name speculate_8_204 \
+--prefix_len 32800
+
+echo "Processing next configuration..."
+
+python simulator.py \
+--max_latency_calculate \
+--csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
+--num_channels 1 \
+--chips_per_channel 1 \
+--dies_per_chip 1 \
+--page_size_bytes 16384 \
+--vector_bytes 4 \
+--flash_read_latency_us 50 \
+--num_heads 8 \
+--cluster_size 32 \
+--window_size 64 \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
+--num_replica 4 \
+--hot_cluster_ratio 0.08 \
+--planes_per_die 32 \
+--budget_ratio 0.02 \
+--model_name qwen2.5-32b \
+--dataset pg19 \
+--generate_name speculate_8_208 \
+--prefix_len 32800
+
+echo "Processing next configuration..."
+
+python simulator.py \
+--max_latency_calculate \
+--csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
+--num_channels 1 \
+--chips_per_channel 1 \
+--dies_per_chip 1 \
+--page_size_bytes 16384 \
+--vector_bytes 4 \
+--flash_read_latency_us 50 \
+--num_heads 8 \
+--cluster_size 32 \
+--window_size 64 \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
+--num_replica 4 \
+--hot_cluster_ratio 0.08 \
+--planes_per_die 32 \
+--budget_ratio 0.02 \
+--model_name qwen2.5-32b \
+--dataset pg19 \
+--generate_name speculate_8_212 \
+--prefix_len 32800
+
+echo "Processing next configuration..."
+
+python simulator.py \
+--max_latency_calculate \
+--csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
+--num_channels 1 \
+--chips_per_channel 1 \
+--dies_per_chip 1 \
+--page_size_bytes 16384 \
+--vector_bytes 4 \
+--flash_read_latency_us 50 \
+--num_heads 8 \
+--cluster_size 32 \
+--window_size 64 \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
+--num_replica 4 \
+--hot_cluster_ratio 0.08 \
+--planes_per_die 32 \
+--budget_ratio 0.02 \
+--model_name qwen2.5-32b \
+--dataset pg19 \
+--generate_name speculate_8_216 \
+--prefix_len 32800
+
+echo "Processing next configuration..."
+
+python simulator.py \
+--max_latency_calculate \
+--csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
+--num_channels 1 \
+--chips_per_channel 1 \
+--dies_per_chip 1 \
+--page_size_bytes 16384 \
+--vector_bytes 4 \
+--flash_read_latency_us 50 \
+--num_heads 8 \
+--cluster_size 32 \
+--window_size 64 \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
+--num_replica 4 \
+--hot_cluster_ratio 0.08 \
+--planes_per_die 32 \
+--budget_ratio 0.02 \
+--model_name qwen2.5-32b \
+--dataset pg19 \
+--generate_name speculate_8_220 \
+--prefix_len 32800
+
+echo "Processing next configuration..."
+
+python simulator.py \
+--max_latency_calculate \
+--csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
+--num_channels 1 \
+--chips_per_channel 1 \
+--dies_per_chip 1 \
+--page_size_bytes 16384 \
+--vector_bytes 4 \
+--flash_read_latency_us 50 \
+--num_heads 8 \
+--cluster_size 32 \
+--window_size 64 \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
+--num_replica 4 \
+--hot_cluster_ratio 0.08 \
+--planes_per_die 32 \
+--budget_ratio 0.02 \
+--model_name qwen2.5-32b \
+--dataset pg19 \
+--generate_name speculate_8_224 \
+--prefix_len 32800
+
+echo "Processing next configuration..."
+
+python simulator.py \
+--max_latency_calculate \
+--csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
+--num_channels 1 \
+--chips_per_channel 1 \
+--dies_per_chip 1 \
+--page_size_bytes 16384 \
+--vector_bytes 4 \
+--flash_read_latency_us 50 \
+--num_heads 8 \
+--cluster_size 32 \
+--window_size 64 \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
+--num_replica 4 \
+--hot_cluster_ratio 0.08 \
+--planes_per_die 32 \
+--budget_ratio 0.02 \
+--model_name qwen2.5-32b \
+--dataset pg19 \
+--generate_name speculate_8_228 \
+--prefix_len 32800
+
+echo "Processing next configuration..."
+
+python simulator.py \
+--max_latency_calculate \
+--csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
+--num_channels 1 \
+--chips_per_channel 1 \
+--dies_per_chip 1 \
+--page_size_bytes 16384 \
+--vector_bytes 4 \
+--flash_read_latency_us 50 \
+--num_heads 8 \
+--cluster_size 32 \
+--window_size 64 \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
+--num_replica 4 \
+--hot_cluster_ratio 0.08 \
+--planes_per_die 32 \
+--budget_ratio 0.02 \
+--model_name qwen2.5-32b \
+--dataset pg19 \
+--generate_name speculate_8_232 \
+--prefix_len 32800
+
+echo "Processing next configuration..."
+
+python simulator.py \
+--max_latency_calculate \
+--csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
+--num_channels 1 \
+--chips_per_channel 1 \
+--dies_per_chip 1 \
+--page_size_bytes 16384 \
+--vector_bytes 4 \
+--flash_read_latency_us 50 \
+--num_heads 8 \
+--cluster_size 32 \
+--window_size 64 \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
+--num_replica 4 \
+--hot_cluster_ratio 0.08 \
+--planes_per_die 32 \
+--budget_ratio 0.02 \
+--model_name qwen2.5-32b \
+--dataset pg19 \
+--generate_name speculate_8_236 \
+--prefix_len 32800
+
+echo "Processing next configuration..."
+
+python simulator.py \
+--max_latency_calculate \
+--csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
+--num_channels 1 \
+--chips_per_channel 1 \
+--dies_per_chip 1 \
+--page_size_bytes 16384 \
+--vector_bytes 4 \
+--flash_read_latency_us 50 \
+--num_heads 8 \
+--cluster_size 32 \
+--window_size 64 \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
+--num_replica 4 \
+--hot_cluster_ratio 0.08 \
+--planes_per_die 32 \
+--budget_ratio 0.02 \
+--model_name qwen2.5-32b \
+--dataset pg19 \
+--generate_name speculate_8_240 \
+--prefix_len 32800
+
+echo "Processing next configuration..."
+
+python simulator.py \
+--max_latency_calculate \
+--csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
+--num_channels 1 \
+--chips_per_channel 1 \
+--dies_per_chip 1 \
+--page_size_bytes 16384 \
+--vector_bytes 4 \
+--flash_read_latency_us 50 \
+--num_heads 8 \
+--cluster_size 32 \
+--window_size 64 \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
+--num_replica 4 \
+--hot_cluster_ratio 0.08 \
+--planes_per_die 32 \
+--budget_ratio 0.02 \
+--model_name qwen2.5-32b \
+--dataset pg19 \
+--generate_name speculate_8_244 \
+--prefix_len 32800
+
+echo "Processing next configuration..."
+
+python simulator.py \
+--max_latency_calculate \
+--csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
+--num_channels 1 \
+--chips_per_channel 1 \
+--dies_per_chip 1 \
+--page_size_bytes 16384 \
+--vector_bytes 4 \
+--flash_read_latency_us 50 \
+--num_heads 8 \
+--cluster_size 32 \
+--window_size 64 \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -9387,8 +10037,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -9412,8 +10062,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -9437,8 +10087,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -9462,8 +10112,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -9487,8 +10137,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -9512,8 +10162,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -9537,8 +10187,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -9562,8 +10212,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -9587,8 +10237,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -9612,8 +10262,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -9637,8 +10287,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -9662,8 +10312,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -9687,8 +10337,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -9712,8 +10362,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -9737,8 +10387,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -9762,8 +10412,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -9787,8 +10437,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -9812,8 +10462,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -9837,8 +10487,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -9862,8 +10512,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -9887,8 +10537,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -9912,8 +10562,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -9937,8 +10587,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -9962,8 +10612,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -9987,8 +10637,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -10012,8 +10662,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -10037,12 +10687,212 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.02 \
+--model_name qwen2.5-32b \
+--dataset pg19 \
+--generate_name speculate_9_108 \
+--prefix_len 32800
+
+echo "Processing next configuration..."
+
+python simulator.py \
+--max_latency_calculate \
+--csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
+--num_channels 1 \
+--chips_per_channel 1 \
+--dies_per_chip 1 \
+--page_size_bytes 16384 \
+--vector_bytes 4 \
+--flash_read_latency_us 50 \
+--num_heads 8 \
+--cluster_size 32 \
+--window_size 64 \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
+--num_replica 4 \
+--hot_cluster_ratio 0.08 \
+--planes_per_die 32 \
+--budget_ratio 0.02 \
+--model_name qwen2.5-32b \
+--dataset pg19 \
+--generate_name speculate_9_112 \
+--prefix_len 32800
+
+echo "Processing next configuration..."
+
+python simulator.py \
+--max_latency_calculate \
+--csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
+--num_channels 1 \
+--chips_per_channel 1 \
+--dies_per_chip 1 \
+--page_size_bytes 16384 \
+--vector_bytes 4 \
+--flash_read_latency_us 50 \
+--num_heads 8 \
+--cluster_size 32 \
+--window_size 64 \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
+--num_replica 4 \
+--hot_cluster_ratio 0.08 \
+--planes_per_die 32 \
+--budget_ratio 0.02 \
+--model_name qwen2.5-32b \
+--dataset pg19 \
+--generate_name speculate_9_116 \
+--prefix_len 32800
+
+echo "Processing next configuration..."
+
+python simulator.py \
+--max_latency_calculate \
+--csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
+--num_channels 1 \
+--chips_per_channel 1 \
+--dies_per_chip 1 \
+--page_size_bytes 16384 \
+--vector_bytes 4 \
+--flash_read_latency_us 50 \
+--num_heads 8 \
+--cluster_size 32 \
+--window_size 64 \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
+--num_replica 4 \
+--hot_cluster_ratio 0.08 \
+--planes_per_die 32 \
+--budget_ratio 0.02 \
+--model_name qwen2.5-32b \
+--dataset pg19 \
+--generate_name speculate_9_120 \
+--prefix_len 32800
+
+echo "Processing next configuration..."
+
+python simulator.py \
+--max_latency_calculate \
+--csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
+--num_channels 1 \
+--chips_per_channel 1 \
+--dies_per_chip 1 \
+--page_size_bytes 16384 \
+--vector_bytes 4 \
+--flash_read_latency_us 50 \
+--num_heads 8 \
+--cluster_size 32 \
+--window_size 64 \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
+--num_replica 4 \
+--hot_cluster_ratio 0.08 \
+--planes_per_die 32 \
+--budget_ratio 0.02 \
+--model_name qwen2.5-32b \
+--dataset pg19 \
+--generate_name speculate_9_124 \
+--prefix_len 32800
+
+echo "Processing next configuration..."
+
+python simulator.py \
+--max_latency_calculate \
+--csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
+--num_channels 1 \
+--chips_per_channel 1 \
+--dies_per_chip 1 \
+--page_size_bytes 16384 \
+--vector_bytes 4 \
+--flash_read_latency_us 50 \
+--num_heads 8 \
+--cluster_size 32 \
+--window_size 64 \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
+--num_replica 4 \
+--hot_cluster_ratio 0.08 \
+--planes_per_die 32 \
+--budget_ratio 0.02 \
+--model_name qwen2.5-32b \
+--dataset pg19 \
+--generate_name speculate_9_128 \
+--prefix_len 32800
+
+echo "Processing next configuration..."
+
+python simulator.py \
+--max_latency_calculate \
+--csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
+--num_channels 1 \
+--chips_per_channel 1 \
+--dies_per_chip 1 \
+--page_size_bytes 16384 \
+--vector_bytes 4 \
+--flash_read_latency_us 50 \
+--num_heads 8 \
+--cluster_size 32 \
+--window_size 64 \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
+--num_replica 4 \
+--hot_cluster_ratio 0.08 \
+--planes_per_die 32 \
+--budget_ratio 0.02 \
+--model_name qwen2.5-32b \
+--dataset pg19 \
+--generate_name speculate_9_132 \
+--prefix_len 32800
+
+echo "Processing next configuration..."
+
+python simulator.py \
+--max_latency_calculate \
+--csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
+--num_channels 1 \
+--chips_per_channel 1 \
+--dies_per_chip 1 \
+--page_size_bytes 16384 \
+--vector_bytes 4 \
+--flash_read_latency_us 50 \
+--num_heads 8 \
+--cluster_size 32 \
+--window_size 64 \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
+--num_replica 4 \
+--hot_cluster_ratio 0.08 \
+--planes_per_die 32 \
+--budget_ratio 0.02 \
+--model_name qwen2.5-32b \
+--dataset pg19 \
+--generate_name speculate_9_136 \
+--prefix_len 32800
+
+echo "Processing next configuration..."
+
+python simulator.py \
+--max_latency_calculate \
+--csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
+--num_channels 1 \
+--chips_per_channel 1 \
+--dies_per_chip 1 \
+--page_size_bytes 16384 \
+--vector_bytes 4 \
+--flash_read_latency_us 50 \
+--num_heads 8 \
+--cluster_size 32 \
+--window_size 64 \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
+--num_replica 4 \
+--hot_cluster_ratio 0.08 \
+--planes_per_die 32 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_0_0 \
@@ -10062,12 +10912,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_0_1 \
@@ -10087,12 +10937,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_0_2 \
@@ -10112,12 +10962,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_0_3 \
@@ -10137,12 +10987,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_0_4 \
@@ -10162,12 +11012,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_0_5 \
@@ -10187,12 +11037,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_0_6 \
@@ -10212,12 +11062,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_0_7 \
@@ -10237,12 +11087,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_0_8 \
@@ -10262,12 +11112,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_0_9 \
@@ -10287,12 +11137,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_0_10 \
@@ -10312,12 +11162,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_0_11 \
@@ -10337,12 +11187,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_0_12 \
@@ -10362,12 +11212,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_0_13 \
@@ -10387,12 +11237,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_0_14 \
@@ -10412,12 +11262,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_0_15 \
@@ -10437,12 +11287,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_0_16 \
@@ -10462,12 +11312,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_0_17 \
@@ -10487,12 +11337,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_0_18 \
@@ -10512,12 +11362,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_0_19 \
@@ -10537,12 +11387,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_0_20 \
@@ -10562,12 +11412,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_0_21 \
@@ -10587,12 +11437,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_0_22 \
@@ -10612,12 +11462,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_0_23 \
@@ -10637,12 +11487,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_0_24 \
@@ -10662,12 +11512,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_1_0 \
@@ -10687,12 +11537,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_1_1 \
@@ -10712,12 +11562,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_1_2 \
@@ -10737,12 +11587,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_1_3 \
@@ -10762,12 +11612,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_1_4 \
@@ -10787,12 +11637,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_1_5 \
@@ -10812,12 +11662,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_1_6 \
@@ -10837,12 +11687,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_1_7 \
@@ -10862,12 +11712,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_1_8 \
@@ -10887,12 +11737,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_1_9 \
@@ -10912,12 +11762,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_1_10 \
@@ -10937,12 +11787,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_1_11 \
@@ -10962,12 +11812,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_1_12 \
@@ -10987,12 +11837,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_1_13 \
@@ -11012,12 +11862,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_1_14 \
@@ -11037,12 +11887,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_1_15 \
@@ -11062,12 +11912,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_1_16 \
@@ -11087,12 +11937,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_1_17 \
@@ -11112,12 +11962,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_1_18 \
@@ -11137,12 +11987,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_1_19 \
@@ -11162,12 +12012,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_1_20 \
@@ -11187,12 +12037,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_1_21 \
@@ -11212,12 +12062,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_1_22 \
@@ -11237,12 +12087,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_1_23 \
@@ -11262,12 +12112,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_2_0 \
@@ -11287,12 +12137,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_2_1 \
@@ -11312,12 +12162,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_2_2 \
@@ -11337,12 +12187,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_2_3 \
@@ -11362,12 +12212,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_2_4 \
@@ -11387,12 +12237,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_2_5 \
@@ -11412,12 +12262,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_2_6 \
@@ -11437,12 +12287,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_2_7 \
@@ -11462,12 +12312,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_2_8 \
@@ -11487,12 +12337,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_2_9 \
@@ -11512,12 +12362,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_2_10 \
@@ -11537,12 +12387,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_2_11 \
@@ -11562,12 +12412,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_2_12 \
@@ -11587,12 +12437,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_2_13 \
@@ -11612,12 +12462,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_2_14 \
@@ -11637,12 +12487,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_2_15 \
@@ -11662,12 +12512,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_2_16 \
@@ -11687,12 +12537,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_2_17 \
@@ -11712,12 +12562,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_2_18 \
@@ -11737,12 +12587,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_2_19 \
@@ -11762,12 +12612,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_2_20 \
@@ -11787,12 +12637,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_2_21 \
@@ -11812,12 +12662,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_2_22 \
@@ -11837,12 +12687,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_2_23 \
@@ -11862,12 +12712,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_2_24 \
@@ -11887,12 +12737,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_3_0 \
@@ -11912,12 +12762,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_3_1 \
@@ -11937,12 +12787,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_3_2 \
@@ -11962,12 +12812,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_3_3 \
@@ -11987,12 +12837,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_3_4 \
@@ -12012,12 +12862,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_3_5 \
@@ -12037,12 +12887,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_3_6 \
@@ -12062,12 +12912,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_3_7 \
@@ -12087,12 +12937,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_3_8 \
@@ -12112,12 +12962,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_3_9 \
@@ -12137,12 +12987,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_3_10 \
@@ -12162,12 +13012,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_3_11 \
@@ -12187,12 +13037,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_3_12 \
@@ -12212,12 +13062,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_3_13 \
@@ -12237,12 +13087,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_3_14 \
@@ -12262,12 +13112,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_3_15 \
@@ -12287,12 +13137,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_3_16 \
@@ -12312,12 +13162,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_3_17 \
@@ -12337,12 +13187,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_3_18 \
@@ -12362,12 +13212,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_3_19 \
@@ -12387,12 +13237,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_3_20 \
@@ -12412,12 +13262,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_3_21 \
@@ -12437,12 +13287,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_3_22 \
@@ -12462,12 +13312,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_3_23 \
@@ -12487,12 +13337,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_3_24 \
@@ -12512,12 +13362,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_3_25 \
@@ -12537,12 +13387,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_3_26 \
@@ -12562,12 +13412,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_3_27 \
@@ -12587,12 +13437,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_3_28 \
@@ -12612,12 +13462,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_3_29 \
@@ -12637,12 +13487,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_3_30 \
@@ -12662,12 +13512,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_3_31 \
@@ -12687,12 +13537,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_3_32 \
@@ -12712,12 +13562,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_3_33 \
@@ -12737,12 +13587,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_3_34 \
@@ -12762,12 +13612,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_3_35 \
@@ -12787,12 +13637,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_3_36 \
@@ -12812,12 +13662,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_3_37 \
@@ -12837,412 +13687,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
---model_name qwen2.5-32b \
---dataset pg19 \
---generate_name verify_3_38 \
---prefix_len 32800
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 32 \
---window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.25 \
---model_name qwen2.5-32b \
---dataset pg19 \
---generate_name verify_3_39 \
---prefix_len 32800
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 32 \
---window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.25 \
---model_name qwen2.5-32b \
---dataset pg19 \
---generate_name verify_3_40 \
---prefix_len 32800
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 32 \
---window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.25 \
---model_name qwen2.5-32b \
---dataset pg19 \
---generate_name verify_3_41 \
---prefix_len 32800
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 32 \
---window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.25 \
---model_name qwen2.5-32b \
---dataset pg19 \
---generate_name verify_3_42 \
---prefix_len 32800
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 32 \
---window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.25 \
---model_name qwen2.5-32b \
---dataset pg19 \
---generate_name verify_3_43 \
---prefix_len 32800
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 32 \
---window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.25 \
---model_name qwen2.5-32b \
---dataset pg19 \
---generate_name verify_3_44 \
---prefix_len 32800
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 32 \
---window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.25 \
---model_name qwen2.5-32b \
---dataset pg19 \
---generate_name verify_3_45 \
---prefix_len 32800
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 32 \
---window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.25 \
---model_name qwen2.5-32b \
---dataset pg19 \
---generate_name verify_3_46 \
---prefix_len 32800
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 32 \
---window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.25 \
---model_name qwen2.5-32b \
---dataset pg19 \
---generate_name verify_3_47 \
---prefix_len 32800
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 32 \
---window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.25 \
---model_name qwen2.5-32b \
---dataset pg19 \
---generate_name verify_3_48 \
---prefix_len 32800
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 32 \
---window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.25 \
---model_name qwen2.5-32b \
---dataset pg19 \
---generate_name verify_3_49 \
---prefix_len 32800
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 32 \
---window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.25 \
---model_name qwen2.5-32b \
---dataset pg19 \
---generate_name verify_3_50 \
---prefix_len 32800
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 32 \
---window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.25 \
---model_name qwen2.5-32b \
---dataset pg19 \
---generate_name verify_3_51 \
---prefix_len 32800
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 32 \
---window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.25 \
---model_name qwen2.5-32b \
---dataset pg19 \
---generate_name verify_3_52 \
---prefix_len 32800
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 32 \
---window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.25 \
---model_name qwen2.5-32b \
---dataset pg19 \
---generate_name verify_3_53 \
---prefix_len 32800
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 32 \
---window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_4_0 \
@@ -13262,12 +13712,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_4_1 \
@@ -13287,12 +13737,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_4_2 \
@@ -13312,12 +13762,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_4_3 \
@@ -13337,12 +13787,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_4_4 \
@@ -13362,12 +13812,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_4_5 \
@@ -13387,12 +13837,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_4_6 \
@@ -13412,12 +13862,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_4_7 \
@@ -13437,12 +13887,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_4_8 \
@@ -13462,12 +13912,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_4_9 \
@@ -13487,12 +13937,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_4_10 \
@@ -13512,12 +13962,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_4_11 \
@@ -13537,12 +13987,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_4_12 \
@@ -13562,12 +14012,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_4_13 \
@@ -13587,12 +14037,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_4_14 \
@@ -13612,12 +14062,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_4_15 \
@@ -13637,12 +14087,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_4_16 \
@@ -13662,12 +14112,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_4_17 \
@@ -13687,12 +14137,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_4_18 \
@@ -13712,12 +14162,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_4_19 \
@@ -13737,12 +14187,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_4_20 \
@@ -13762,12 +14212,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_4_21 \
@@ -13787,12 +14237,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_4_22 \
@@ -13812,12 +14262,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_4_23 \
@@ -13837,12 +14287,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_4_24 \
@@ -13862,12 +14312,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_4_25 \
@@ -13887,12 +14337,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_4_26 \
@@ -13912,12 +14362,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_4_27 \
@@ -13937,12 +14387,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_4_28 \
@@ -13962,12 +14412,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_4_29 \
@@ -13987,12 +14437,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_4_30 \
@@ -14012,12 +14462,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_4_31 \
@@ -14037,12 +14487,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_4_32 \
@@ -14062,12 +14512,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_4_33 \
@@ -14087,12 +14537,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_4_34 \
@@ -14112,12 +14562,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_4_35 \
@@ -14137,12 +14587,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_4_36 \
@@ -14162,12 +14612,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_4_37 \
@@ -14187,12 +14637,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_4_38 \
@@ -14212,12 +14662,637 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
+--model_name qwen2.5-32b \
+--dataset pg19 \
+--generate_name verify_4_39 \
+--prefix_len 32800
+
+echo "Processing next configuration..."
+
+python simulator.py \
+--max_latency_calculate \
+--csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
+--num_channels 1 \
+--chips_per_channel 1 \
+--dies_per_chip 1 \
+--page_size_bytes 16384 \
+--vector_bytes 4 \
+--flash_read_latency_us 50 \
+--num_heads 8 \
+--cluster_size 32 \
+--window_size 64 \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
+--num_replica 4 \
+--hot_cluster_ratio 0.08 \
+--planes_per_die 32 \
+--budget_ratio 0.40 \
+--model_name qwen2.5-32b \
+--dataset pg19 \
+--generate_name verify_4_40 \
+--prefix_len 32800
+
+echo "Processing next configuration..."
+
+python simulator.py \
+--max_latency_calculate \
+--csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
+--num_channels 1 \
+--chips_per_channel 1 \
+--dies_per_chip 1 \
+--page_size_bytes 16384 \
+--vector_bytes 4 \
+--flash_read_latency_us 50 \
+--num_heads 8 \
+--cluster_size 32 \
+--window_size 64 \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
+--num_replica 4 \
+--hot_cluster_ratio 0.08 \
+--planes_per_die 32 \
+--budget_ratio 0.40 \
+--model_name qwen2.5-32b \
+--dataset pg19 \
+--generate_name verify_4_41 \
+--prefix_len 32800
+
+echo "Processing next configuration..."
+
+python simulator.py \
+--max_latency_calculate \
+--csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
+--num_channels 1 \
+--chips_per_channel 1 \
+--dies_per_chip 1 \
+--page_size_bytes 16384 \
+--vector_bytes 4 \
+--flash_read_latency_us 50 \
+--num_heads 8 \
+--cluster_size 32 \
+--window_size 64 \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
+--num_replica 4 \
+--hot_cluster_ratio 0.08 \
+--planes_per_die 32 \
+--budget_ratio 0.40 \
+--model_name qwen2.5-32b \
+--dataset pg19 \
+--generate_name verify_4_42 \
+--prefix_len 32800
+
+echo "Processing next configuration..."
+
+python simulator.py \
+--max_latency_calculate \
+--csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
+--num_channels 1 \
+--chips_per_channel 1 \
+--dies_per_chip 1 \
+--page_size_bytes 16384 \
+--vector_bytes 4 \
+--flash_read_latency_us 50 \
+--num_heads 8 \
+--cluster_size 32 \
+--window_size 64 \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
+--num_replica 4 \
+--hot_cluster_ratio 0.08 \
+--planes_per_die 32 \
+--budget_ratio 0.40 \
+--model_name qwen2.5-32b \
+--dataset pg19 \
+--generate_name verify_4_43 \
+--prefix_len 32800
+
+echo "Processing next configuration..."
+
+python simulator.py \
+--max_latency_calculate \
+--csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
+--num_channels 1 \
+--chips_per_channel 1 \
+--dies_per_chip 1 \
+--page_size_bytes 16384 \
+--vector_bytes 4 \
+--flash_read_latency_us 50 \
+--num_heads 8 \
+--cluster_size 32 \
+--window_size 64 \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
+--num_replica 4 \
+--hot_cluster_ratio 0.08 \
+--planes_per_die 32 \
+--budget_ratio 0.40 \
+--model_name qwen2.5-32b \
+--dataset pg19 \
+--generate_name verify_4_44 \
+--prefix_len 32800
+
+echo "Processing next configuration..."
+
+python simulator.py \
+--max_latency_calculate \
+--csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
+--num_channels 1 \
+--chips_per_channel 1 \
+--dies_per_chip 1 \
+--page_size_bytes 16384 \
+--vector_bytes 4 \
+--flash_read_latency_us 50 \
+--num_heads 8 \
+--cluster_size 32 \
+--window_size 64 \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
+--num_replica 4 \
+--hot_cluster_ratio 0.08 \
+--planes_per_die 32 \
+--budget_ratio 0.40 \
+--model_name qwen2.5-32b \
+--dataset pg19 \
+--generate_name verify_4_45 \
+--prefix_len 32800
+
+echo "Processing next configuration..."
+
+python simulator.py \
+--max_latency_calculate \
+--csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
+--num_channels 1 \
+--chips_per_channel 1 \
+--dies_per_chip 1 \
+--page_size_bytes 16384 \
+--vector_bytes 4 \
+--flash_read_latency_us 50 \
+--num_heads 8 \
+--cluster_size 32 \
+--window_size 64 \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
+--num_replica 4 \
+--hot_cluster_ratio 0.08 \
+--planes_per_die 32 \
+--budget_ratio 0.40 \
+--model_name qwen2.5-32b \
+--dataset pg19 \
+--generate_name verify_4_46 \
+--prefix_len 32800
+
+echo "Processing next configuration..."
+
+python simulator.py \
+--max_latency_calculate \
+--csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
+--num_channels 1 \
+--chips_per_channel 1 \
+--dies_per_chip 1 \
+--page_size_bytes 16384 \
+--vector_bytes 4 \
+--flash_read_latency_us 50 \
+--num_heads 8 \
+--cluster_size 32 \
+--window_size 64 \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
+--num_replica 4 \
+--hot_cluster_ratio 0.08 \
+--planes_per_die 32 \
+--budget_ratio 0.40 \
+--model_name qwen2.5-32b \
+--dataset pg19 \
+--generate_name verify_4_47 \
+--prefix_len 32800
+
+echo "Processing next configuration..."
+
+python simulator.py \
+--max_latency_calculate \
+--csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
+--num_channels 1 \
+--chips_per_channel 1 \
+--dies_per_chip 1 \
+--page_size_bytes 16384 \
+--vector_bytes 4 \
+--flash_read_latency_us 50 \
+--num_heads 8 \
+--cluster_size 32 \
+--window_size 64 \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
+--num_replica 4 \
+--hot_cluster_ratio 0.08 \
+--planes_per_die 32 \
+--budget_ratio 0.40 \
+--model_name qwen2.5-32b \
+--dataset pg19 \
+--generate_name verify_4_48 \
+--prefix_len 32800
+
+echo "Processing next configuration..."
+
+python simulator.py \
+--max_latency_calculate \
+--csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
+--num_channels 1 \
+--chips_per_channel 1 \
+--dies_per_chip 1 \
+--page_size_bytes 16384 \
+--vector_bytes 4 \
+--flash_read_latency_us 50 \
+--num_heads 8 \
+--cluster_size 32 \
+--window_size 64 \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
+--num_replica 4 \
+--hot_cluster_ratio 0.08 \
+--planes_per_die 32 \
+--budget_ratio 0.40 \
+--model_name qwen2.5-32b \
+--dataset pg19 \
+--generate_name verify_4_49 \
+--prefix_len 32800
+
+echo "Processing next configuration..."
+
+python simulator.py \
+--max_latency_calculate \
+--csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
+--num_channels 1 \
+--chips_per_channel 1 \
+--dies_per_chip 1 \
+--page_size_bytes 16384 \
+--vector_bytes 4 \
+--flash_read_latency_us 50 \
+--num_heads 8 \
+--cluster_size 32 \
+--window_size 64 \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
+--num_replica 4 \
+--hot_cluster_ratio 0.08 \
+--planes_per_die 32 \
+--budget_ratio 0.40 \
+--model_name qwen2.5-32b \
+--dataset pg19 \
+--generate_name verify_4_50 \
+--prefix_len 32800
+
+echo "Processing next configuration..."
+
+python simulator.py \
+--max_latency_calculate \
+--csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
+--num_channels 1 \
+--chips_per_channel 1 \
+--dies_per_chip 1 \
+--page_size_bytes 16384 \
+--vector_bytes 4 \
+--flash_read_latency_us 50 \
+--num_heads 8 \
+--cluster_size 32 \
+--window_size 64 \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
+--num_replica 4 \
+--hot_cluster_ratio 0.08 \
+--planes_per_die 32 \
+--budget_ratio 0.40 \
+--model_name qwen2.5-32b \
+--dataset pg19 \
+--generate_name verify_4_51 \
+--prefix_len 32800
+
+echo "Processing next configuration..."
+
+python simulator.py \
+--max_latency_calculate \
+--csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
+--num_channels 1 \
+--chips_per_channel 1 \
+--dies_per_chip 1 \
+--page_size_bytes 16384 \
+--vector_bytes 4 \
+--flash_read_latency_us 50 \
+--num_heads 8 \
+--cluster_size 32 \
+--window_size 64 \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
+--num_replica 4 \
+--hot_cluster_ratio 0.08 \
+--planes_per_die 32 \
+--budget_ratio 0.40 \
+--model_name qwen2.5-32b \
+--dataset pg19 \
+--generate_name verify_4_52 \
+--prefix_len 32800
+
+echo "Processing next configuration..."
+
+python simulator.py \
+--max_latency_calculate \
+--csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
+--num_channels 1 \
+--chips_per_channel 1 \
+--dies_per_chip 1 \
+--page_size_bytes 16384 \
+--vector_bytes 4 \
+--flash_read_latency_us 50 \
+--num_heads 8 \
+--cluster_size 32 \
+--window_size 64 \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
+--num_replica 4 \
+--hot_cluster_ratio 0.08 \
+--planes_per_die 32 \
+--budget_ratio 0.40 \
+--model_name qwen2.5-32b \
+--dataset pg19 \
+--generate_name verify_4_53 \
+--prefix_len 32800
+
+echo "Processing next configuration..."
+
+python simulator.py \
+--max_latency_calculate \
+--csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
+--num_channels 1 \
+--chips_per_channel 1 \
+--dies_per_chip 1 \
+--page_size_bytes 16384 \
+--vector_bytes 4 \
+--flash_read_latency_us 50 \
+--num_heads 8 \
+--cluster_size 32 \
+--window_size 64 \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
+--num_replica 4 \
+--hot_cluster_ratio 0.08 \
+--planes_per_die 32 \
+--budget_ratio 0.40 \
+--model_name qwen2.5-32b \
+--dataset pg19 \
+--generate_name verify_4_54 \
+--prefix_len 32800
+
+echo "Processing next configuration..."
+
+python simulator.py \
+--max_latency_calculate \
+--csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
+--num_channels 1 \
+--chips_per_channel 1 \
+--dies_per_chip 1 \
+--page_size_bytes 16384 \
+--vector_bytes 4 \
+--flash_read_latency_us 50 \
+--num_heads 8 \
+--cluster_size 32 \
+--window_size 64 \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
+--num_replica 4 \
+--hot_cluster_ratio 0.08 \
+--planes_per_die 32 \
+--budget_ratio 0.40 \
+--model_name qwen2.5-32b \
+--dataset pg19 \
+--generate_name verify_4_55 \
+--prefix_len 32800
+
+echo "Processing next configuration..."
+
+python simulator.py \
+--max_latency_calculate \
+--csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
+--num_channels 1 \
+--chips_per_channel 1 \
+--dies_per_chip 1 \
+--page_size_bytes 16384 \
+--vector_bytes 4 \
+--flash_read_latency_us 50 \
+--num_heads 8 \
+--cluster_size 32 \
+--window_size 64 \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
+--num_replica 4 \
+--hot_cluster_ratio 0.08 \
+--planes_per_die 32 \
+--budget_ratio 0.40 \
+--model_name qwen2.5-32b \
+--dataset pg19 \
+--generate_name verify_4_56 \
+--prefix_len 32800
+
+echo "Processing next configuration..."
+
+python simulator.py \
+--max_latency_calculate \
+--csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
+--num_channels 1 \
+--chips_per_channel 1 \
+--dies_per_chip 1 \
+--page_size_bytes 16384 \
+--vector_bytes 4 \
+--flash_read_latency_us 50 \
+--num_heads 8 \
+--cluster_size 32 \
+--window_size 64 \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
+--num_replica 4 \
+--hot_cluster_ratio 0.08 \
+--planes_per_die 32 \
+--budget_ratio 0.40 \
+--model_name qwen2.5-32b \
+--dataset pg19 \
+--generate_name verify_4_57 \
+--prefix_len 32800
+
+echo "Processing next configuration..."
+
+python simulator.py \
+--max_latency_calculate \
+--csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
+--num_channels 1 \
+--chips_per_channel 1 \
+--dies_per_chip 1 \
+--page_size_bytes 16384 \
+--vector_bytes 4 \
+--flash_read_latency_us 50 \
+--num_heads 8 \
+--cluster_size 32 \
+--window_size 64 \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
+--num_replica 4 \
+--hot_cluster_ratio 0.08 \
+--planes_per_die 32 \
+--budget_ratio 0.40 \
+--model_name qwen2.5-32b \
+--dataset pg19 \
+--generate_name verify_4_58 \
+--prefix_len 32800
+
+echo "Processing next configuration..."
+
+python simulator.py \
+--max_latency_calculate \
+--csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
+--num_channels 1 \
+--chips_per_channel 1 \
+--dies_per_chip 1 \
+--page_size_bytes 16384 \
+--vector_bytes 4 \
+--flash_read_latency_us 50 \
+--num_heads 8 \
+--cluster_size 32 \
+--window_size 64 \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
+--num_replica 4 \
+--hot_cluster_ratio 0.08 \
+--planes_per_die 32 \
+--budget_ratio 0.40 \
+--model_name qwen2.5-32b \
+--dataset pg19 \
+--generate_name verify_4_59 \
+--prefix_len 32800
+
+echo "Processing next configuration..."
+
+python simulator.py \
+--max_latency_calculate \
+--csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
+--num_channels 1 \
+--chips_per_channel 1 \
+--dies_per_chip 1 \
+--page_size_bytes 16384 \
+--vector_bytes 4 \
+--flash_read_latency_us 50 \
+--num_heads 8 \
+--cluster_size 32 \
+--window_size 64 \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
+--num_replica 4 \
+--hot_cluster_ratio 0.08 \
+--planes_per_die 32 \
+--budget_ratio 0.40 \
+--model_name qwen2.5-32b \
+--dataset pg19 \
+--generate_name verify_4_60 \
+--prefix_len 32800
+
+echo "Processing next configuration..."
+
+python simulator.py \
+--max_latency_calculate \
+--csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
+--num_channels 1 \
+--chips_per_channel 1 \
+--dies_per_chip 1 \
+--page_size_bytes 16384 \
+--vector_bytes 4 \
+--flash_read_latency_us 50 \
+--num_heads 8 \
+--cluster_size 32 \
+--window_size 64 \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
+--num_replica 4 \
+--hot_cluster_ratio 0.08 \
+--planes_per_die 32 \
+--budget_ratio 0.40 \
+--model_name qwen2.5-32b \
+--dataset pg19 \
+--generate_name verify_4_61 \
+--prefix_len 32800
+
+echo "Processing next configuration..."
+
+python simulator.py \
+--max_latency_calculate \
+--csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
+--num_channels 1 \
+--chips_per_channel 1 \
+--dies_per_chip 1 \
+--page_size_bytes 16384 \
+--vector_bytes 4 \
+--flash_read_latency_us 50 \
+--num_heads 8 \
+--cluster_size 32 \
+--window_size 64 \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
+--num_replica 4 \
+--hot_cluster_ratio 0.08 \
+--planes_per_die 32 \
+--budget_ratio 0.40 \
+--model_name qwen2.5-32b \
+--dataset pg19 \
+--generate_name verify_4_62 \
+--prefix_len 32800
+
+echo "Processing next configuration..."
+
+python simulator.py \
+--max_latency_calculate \
+--csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
+--num_channels 1 \
+--chips_per_channel 1 \
+--dies_per_chip 1 \
+--page_size_bytes 16384 \
+--vector_bytes 4 \
+--flash_read_latency_us 50 \
+--num_heads 8 \
+--cluster_size 32 \
+--window_size 64 \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
+--num_replica 4 \
+--hot_cluster_ratio 0.08 \
+--planes_per_die 32 \
+--budget_ratio 0.40 \
+--model_name qwen2.5-32b \
+--dataset pg19 \
+--generate_name verify_4_63 \
+--prefix_len 32800
+
+echo "Processing next configuration..."
+
+python simulator.py \
+--max_latency_calculate \
+--csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
+--num_channels 1 \
+--chips_per_channel 1 \
+--dies_per_chip 1 \
+--page_size_bytes 16384 \
+--vector_bytes 4 \
+--flash_read_latency_us 50 \
+--num_heads 8 \
+--cluster_size 32 \
+--window_size 64 \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
+--num_replica 4 \
+--hot_cluster_ratio 0.08 \
+--planes_per_die 32 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_5_0 \
@@ -14237,12 +15312,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_5_1 \
@@ -14262,12 +15337,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_5_2 \
@@ -14287,12 +15362,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_5_3 \
@@ -14312,12 +15387,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_5_4 \
@@ -14337,12 +15412,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_5_5 \
@@ -14362,12 +15437,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_5_6 \
@@ -14387,12 +15462,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_5_7 \
@@ -14412,12 +15487,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_5_8 \
@@ -14437,12 +15512,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_5_9 \
@@ -14462,12 +15537,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_5_10 \
@@ -14487,12 +15562,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_5_11 \
@@ -14512,12 +15587,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_5_12 \
@@ -14537,12 +15612,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_5_13 \
@@ -14562,12 +15637,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_5_14 \
@@ -14587,12 +15662,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_5_15 \
@@ -14612,12 +15687,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_5_16 \
@@ -14637,12 +15712,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_5_17 \
@@ -14662,12 +15737,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_5_18 \
@@ -14687,12 +15762,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_5_19 \
@@ -14712,12 +15787,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_5_20 \
@@ -14737,12 +15812,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_5_21 \
@@ -14762,12 +15837,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_5_22 \
@@ -14787,12 +15862,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_5_23 \
@@ -14812,12 +15887,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_5_24 \
@@ -14837,12 +15912,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_5_25 \
@@ -14862,12 +15937,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_5_26 \
@@ -14887,12 +15962,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_5_27 \
@@ -14912,12 +15987,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_5_28 \
@@ -14937,12 +16012,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_5_29 \
@@ -14962,12 +16037,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_5_30 \
@@ -14987,12 +16062,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_5_31 \
@@ -15012,12 +16087,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_5_32 \
@@ -15037,12 +16112,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_5_33 \
@@ -15062,12 +16137,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_5_34 \
@@ -15087,12 +16162,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_5_35 \
@@ -15112,12 +16187,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_5_36 \
@@ -15137,12 +16212,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_5_37 \
@@ -15162,12 +16237,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_5_38 \
@@ -15187,12 +16262,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_5_39 \
@@ -15212,12 +16287,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_5_40 \
@@ -15237,12 +16312,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_5_41 \
@@ -15262,12 +16337,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_5_42 \
@@ -15287,12 +16362,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_5_43 \
@@ -15312,12 +16387,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_5_44 \
@@ -15337,12 +16412,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_5_45 \
@@ -15362,12 +16437,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_5_46 \
@@ -15387,12 +16462,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_5_47 \
@@ -15412,12 +16487,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_5_48 \
@@ -15437,12 +16512,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_5_49 \
@@ -15462,12 +16537,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_5_50 \
@@ -15487,12 +16562,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_5_51 \
@@ -15512,12 +16587,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_5_52 \
@@ -15537,12 +16612,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_5_53 \
@@ -15562,12 +16637,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_5_54 \
@@ -15587,12 +16662,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_5_55 \
@@ -15612,12 +16687,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_5_56 \
@@ -15637,12 +16712,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_5_57 \
@@ -15662,12 +16737,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_5_58 \
@@ -15687,12 +16762,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_5_59 \
@@ -15712,12 +16787,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_5_60 \
@@ -15737,12 +16812,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_5_61 \
@@ -15762,12 +16837,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_5_62 \
@@ -15787,12 +16862,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_5_63 \
@@ -15812,12 +16887,37 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
+--model_name qwen2.5-32b \
+--dataset pg19 \
+--generate_name verify_5_64 \
+--prefix_len 32800
+
+echo "Processing next configuration..."
+
+python simulator.py \
+--max_latency_calculate \
+--csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
+--num_channels 1 \
+--chips_per_channel 1 \
+--dies_per_chip 1 \
+--page_size_bytes 16384 \
+--vector_bytes 4 \
+--flash_read_latency_us 50 \
+--num_heads 8 \
+--cluster_size 32 \
+--window_size 64 \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
+--num_replica 4 \
+--hot_cluster_ratio 0.08 \
+--planes_per_die 32 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_6_0 \
@@ -15837,12 +16937,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_6_1 \
@@ -15862,12 +16962,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_6_2 \
@@ -15887,12 +16987,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_6_3 \
@@ -15912,12 +17012,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_6_4 \
@@ -15937,12 +17037,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_6_5 \
@@ -15962,12 +17062,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_6_6 \
@@ -15987,12 +17087,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_6_7 \
@@ -16012,12 +17112,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_6_8 \
@@ -16037,12 +17137,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_6_9 \
@@ -16062,12 +17162,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_6_10 \
@@ -16087,12 +17187,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_6_11 \
@@ -16112,12 +17212,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_6_12 \
@@ -16137,12 +17237,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_6_13 \
@@ -16162,12 +17262,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_6_14 \
@@ -16187,12 +17287,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_6_15 \
@@ -16212,12 +17312,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_6_16 \
@@ -16237,12 +17337,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_6_17 \
@@ -16262,12 +17362,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_6_18 \
@@ -16287,12 +17387,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_6_19 \
@@ -16312,12 +17412,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_6_20 \
@@ -16337,12 +17437,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_6_21 \
@@ -16362,12 +17462,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_6_22 \
@@ -16387,12 +17487,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_6_23 \
@@ -16412,12 +17512,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_6_24 \
@@ -16437,12 +17537,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_6_25 \
@@ -16462,12 +17562,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_6_26 \
@@ -16487,12 +17587,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_6_27 \
@@ -16512,12 +17612,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_6_28 \
@@ -16537,12 +17637,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_6_29 \
@@ -16562,12 +17662,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_6_30 \
@@ -16587,12 +17687,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_6_31 \
@@ -16612,12 +17712,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_6_32 \
@@ -16637,12 +17737,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_6_33 \
@@ -16662,12 +17762,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_6_34 \
@@ -16687,12 +17787,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_6_35 \
@@ -16712,12 +17812,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_6_36 \
@@ -16737,12 +17837,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_6_37 \
@@ -16762,12 +17862,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_6_38 \
@@ -16787,12 +17887,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_6_39 \
@@ -16812,12 +17912,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_6_40 \
@@ -16837,12 +17937,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_6_41 \
@@ -16862,212 +17962,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
---model_name qwen2.5-32b \
---dataset pg19 \
---generate_name verify_6_42 \
---prefix_len 32800
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 32 \
---window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.25 \
---model_name qwen2.5-32b \
---dataset pg19 \
---generate_name verify_6_43 \
---prefix_len 32800
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 32 \
---window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.25 \
---model_name qwen2.5-32b \
---dataset pg19 \
---generate_name verify_6_44 \
---prefix_len 32800
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 32 \
---window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.25 \
---model_name qwen2.5-32b \
---dataset pg19 \
---generate_name verify_6_45 \
---prefix_len 32800
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 32 \
---window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.25 \
---model_name qwen2.5-32b \
---dataset pg19 \
---generate_name verify_6_46 \
---prefix_len 32800
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 32 \
---window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.25 \
---model_name qwen2.5-32b \
---dataset pg19 \
---generate_name verify_6_47 \
---prefix_len 32800
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 32 \
---window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.25 \
---model_name qwen2.5-32b \
---dataset pg19 \
---generate_name verify_6_48 \
---prefix_len 32800
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 32 \
---window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.25 \
---model_name qwen2.5-32b \
---dataset pg19 \
---generate_name verify_6_49 \
---prefix_len 32800
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 32 \
---window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_7_0 \
@@ -17087,12 +17987,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_7_1 \
@@ -17112,12 +18012,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_7_2 \
@@ -17137,12 +18037,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_7_3 \
@@ -17162,12 +18062,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_7_4 \
@@ -17187,12 +18087,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_7_5 \
@@ -17212,12 +18112,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_7_6 \
@@ -17237,12 +18137,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_7_7 \
@@ -17262,12 +18162,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_7_8 \
@@ -17287,12 +18187,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_7_9 \
@@ -17312,12 +18212,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_7_10 \
@@ -17337,12 +18237,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_7_11 \
@@ -17362,12 +18262,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_7_12 \
@@ -17387,12 +18287,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_7_13 \
@@ -17412,12 +18312,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_7_14 \
@@ -17437,12 +18337,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_7_15 \
@@ -17462,12 +18362,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_7_16 \
@@ -17487,12 +18387,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_7_17 \
@@ -17512,12 +18412,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_7_18 \
@@ -17537,12 +18437,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_7_19 \
@@ -17562,12 +18462,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_7_20 \
@@ -17587,12 +18487,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_7_21 \
@@ -17612,12 +18512,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_7_22 \
@@ -17637,12 +18537,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_7_23 \
@@ -17662,12 +18562,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_7_24 \
@@ -17687,12 +18587,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_7_25 \
@@ -17712,12 +18612,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_7_26 \
@@ -17737,12 +18637,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_7_27 \
@@ -17762,12 +18662,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_7_28 \
@@ -17787,12 +18687,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_7_29 \
@@ -17812,12 +18712,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_7_30 \
@@ -17837,12 +18737,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_7_31 \
@@ -17862,12 +18762,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_7_32 \
@@ -17887,12 +18787,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_7_33 \
@@ -17912,12 +18812,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_7_34 \
@@ -17937,12 +18837,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_7_35 \
@@ -17962,12 +18862,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_7_36 \
@@ -17987,12 +18887,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_7_37 \
@@ -18012,12 +18912,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_7_38 \
@@ -18037,12 +18937,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_7_39 \
@@ -18062,12 +18962,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_7_40 \
@@ -18087,12 +18987,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_7_41 \
@@ -18112,12 +19012,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_7_42 \
@@ -18137,12 +19037,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_7_43 \
@@ -18162,12 +19062,287 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
+--model_name qwen2.5-32b \
+--dataset pg19 \
+--generate_name verify_7_44 \
+--prefix_len 32800
+
+echo "Processing next configuration..."
+
+python simulator.py \
+--max_latency_calculate \
+--csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
+--num_channels 1 \
+--chips_per_channel 1 \
+--dies_per_chip 1 \
+--page_size_bytes 16384 \
+--vector_bytes 4 \
+--flash_read_latency_us 50 \
+--num_heads 8 \
+--cluster_size 32 \
+--window_size 64 \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
+--num_replica 4 \
+--hot_cluster_ratio 0.08 \
+--planes_per_die 32 \
+--budget_ratio 0.40 \
+--model_name qwen2.5-32b \
+--dataset pg19 \
+--generate_name verify_7_45 \
+--prefix_len 32800
+
+echo "Processing next configuration..."
+
+python simulator.py \
+--max_latency_calculate \
+--csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
+--num_channels 1 \
+--chips_per_channel 1 \
+--dies_per_chip 1 \
+--page_size_bytes 16384 \
+--vector_bytes 4 \
+--flash_read_latency_us 50 \
+--num_heads 8 \
+--cluster_size 32 \
+--window_size 64 \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
+--num_replica 4 \
+--hot_cluster_ratio 0.08 \
+--planes_per_die 32 \
+--budget_ratio 0.40 \
+--model_name qwen2.5-32b \
+--dataset pg19 \
+--generate_name verify_7_46 \
+--prefix_len 32800
+
+echo "Processing next configuration..."
+
+python simulator.py \
+--max_latency_calculate \
+--csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
+--num_channels 1 \
+--chips_per_channel 1 \
+--dies_per_chip 1 \
+--page_size_bytes 16384 \
+--vector_bytes 4 \
+--flash_read_latency_us 50 \
+--num_heads 8 \
+--cluster_size 32 \
+--window_size 64 \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
+--num_replica 4 \
+--hot_cluster_ratio 0.08 \
+--planes_per_die 32 \
+--budget_ratio 0.40 \
+--model_name qwen2.5-32b \
+--dataset pg19 \
+--generate_name verify_7_47 \
+--prefix_len 32800
+
+echo "Processing next configuration..."
+
+python simulator.py \
+--max_latency_calculate \
+--csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
+--num_channels 1 \
+--chips_per_channel 1 \
+--dies_per_chip 1 \
+--page_size_bytes 16384 \
+--vector_bytes 4 \
+--flash_read_latency_us 50 \
+--num_heads 8 \
+--cluster_size 32 \
+--window_size 64 \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
+--num_replica 4 \
+--hot_cluster_ratio 0.08 \
+--planes_per_die 32 \
+--budget_ratio 0.40 \
+--model_name qwen2.5-32b \
+--dataset pg19 \
+--generate_name verify_7_48 \
+--prefix_len 32800
+
+echo "Processing next configuration..."
+
+python simulator.py \
+--max_latency_calculate \
+--csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
+--num_channels 1 \
+--chips_per_channel 1 \
+--dies_per_chip 1 \
+--page_size_bytes 16384 \
+--vector_bytes 4 \
+--flash_read_latency_us 50 \
+--num_heads 8 \
+--cluster_size 32 \
+--window_size 64 \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
+--num_replica 4 \
+--hot_cluster_ratio 0.08 \
+--planes_per_die 32 \
+--budget_ratio 0.40 \
+--model_name qwen2.5-32b \
+--dataset pg19 \
+--generate_name verify_7_49 \
+--prefix_len 32800
+
+echo "Processing next configuration..."
+
+python simulator.py \
+--max_latency_calculate \
+--csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
+--num_channels 1 \
+--chips_per_channel 1 \
+--dies_per_chip 1 \
+--page_size_bytes 16384 \
+--vector_bytes 4 \
+--flash_read_latency_us 50 \
+--num_heads 8 \
+--cluster_size 32 \
+--window_size 64 \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
+--num_replica 4 \
+--hot_cluster_ratio 0.08 \
+--planes_per_die 32 \
+--budget_ratio 0.40 \
+--model_name qwen2.5-32b \
+--dataset pg19 \
+--generate_name verify_7_50 \
+--prefix_len 32800
+
+echo "Processing next configuration..."
+
+python simulator.py \
+--max_latency_calculate \
+--csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
+--num_channels 1 \
+--chips_per_channel 1 \
+--dies_per_chip 1 \
+--page_size_bytes 16384 \
+--vector_bytes 4 \
+--flash_read_latency_us 50 \
+--num_heads 8 \
+--cluster_size 32 \
+--window_size 64 \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
+--num_replica 4 \
+--hot_cluster_ratio 0.08 \
+--planes_per_die 32 \
+--budget_ratio 0.40 \
+--model_name qwen2.5-32b \
+--dataset pg19 \
+--generate_name verify_7_51 \
+--prefix_len 32800
+
+echo "Processing next configuration..."
+
+python simulator.py \
+--max_latency_calculate \
+--csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
+--num_channels 1 \
+--chips_per_channel 1 \
+--dies_per_chip 1 \
+--page_size_bytes 16384 \
+--vector_bytes 4 \
+--flash_read_latency_us 50 \
+--num_heads 8 \
+--cluster_size 32 \
+--window_size 64 \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
+--num_replica 4 \
+--hot_cluster_ratio 0.08 \
+--planes_per_die 32 \
+--budget_ratio 0.40 \
+--model_name qwen2.5-32b \
+--dataset pg19 \
+--generate_name verify_7_52 \
+--prefix_len 32800
+
+echo "Processing next configuration..."
+
+python simulator.py \
+--max_latency_calculate \
+--csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
+--num_channels 1 \
+--chips_per_channel 1 \
+--dies_per_chip 1 \
+--page_size_bytes 16384 \
+--vector_bytes 4 \
+--flash_read_latency_us 50 \
+--num_heads 8 \
+--cluster_size 32 \
+--window_size 64 \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
+--num_replica 4 \
+--hot_cluster_ratio 0.08 \
+--planes_per_die 32 \
+--budget_ratio 0.40 \
+--model_name qwen2.5-32b \
+--dataset pg19 \
+--generate_name verify_7_53 \
+--prefix_len 32800
+
+echo "Processing next configuration..."
+
+python simulator.py \
+--max_latency_calculate \
+--csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
+--num_channels 1 \
+--chips_per_channel 1 \
+--dies_per_chip 1 \
+--page_size_bytes 16384 \
+--vector_bytes 4 \
+--flash_read_latency_us 50 \
+--num_heads 8 \
+--cluster_size 32 \
+--window_size 64 \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
+--num_replica 4 \
+--hot_cluster_ratio 0.08 \
+--planes_per_die 32 \
+--budget_ratio 0.40 \
+--model_name qwen2.5-32b \
+--dataset pg19 \
+--generate_name verify_7_54 \
+--prefix_len 32800
+
+echo "Processing next configuration..."
+
+python simulator.py \
+--max_latency_calculate \
+--csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
+--num_channels 1 \
+--chips_per_channel 1 \
+--dies_per_chip 1 \
+--page_size_bytes 16384 \
+--vector_bytes 4 \
+--flash_read_latency_us 50 \
+--num_heads 8 \
+--cluster_size 32 \
+--window_size 64 \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
+--num_replica 4 \
+--hot_cluster_ratio 0.08 \
+--planes_per_die 32 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_8_0 \
@@ -18187,12 +19362,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_8_1 \
@@ -18212,12 +19387,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_8_2 \
@@ -18237,12 +19412,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_8_3 \
@@ -18262,12 +19437,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_8_4 \
@@ -18287,12 +19462,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_8_5 \
@@ -18312,12 +19487,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_8_6 \
@@ -18337,12 +19512,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_8_7 \
@@ -18362,12 +19537,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_8_8 \
@@ -18387,12 +19562,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_8_9 \
@@ -18412,12 +19587,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_8_10 \
@@ -18437,12 +19612,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_8_11 \
@@ -18462,12 +19637,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_8_12 \
@@ -18487,12 +19662,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_8_13 \
@@ -18512,12 +19687,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_8_14 \
@@ -18537,12 +19712,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_8_15 \
@@ -18562,12 +19737,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_8_16 \
@@ -18587,12 +19762,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_8_17 \
@@ -18612,12 +19787,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_8_18 \
@@ -18637,12 +19812,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_8_19 \
@@ -18662,12 +19837,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_8_20 \
@@ -18687,12 +19862,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_8_21 \
@@ -18712,12 +19887,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_8_22 \
@@ -18737,12 +19912,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_8_23 \
@@ -18762,12 +19937,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_8_24 \
@@ -18787,12 +19962,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_8_25 \
@@ -18812,12 +19987,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_8_26 \
@@ -18837,12 +20012,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_8_27 \
@@ -18862,12 +20037,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_8_28 \
@@ -18887,12 +20062,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_8_29 \
@@ -18912,12 +20087,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_8_30 \
@@ -18937,12 +20112,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_8_31 \
@@ -18962,12 +20137,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_8_32 \
@@ -18987,12 +20162,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_8_33 \
@@ -19012,12 +20187,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_8_34 \
@@ -19037,12 +20212,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_8_35 \
@@ -19062,12 +20237,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_8_36 \
@@ -19087,12 +20262,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_8_37 \
@@ -19112,12 +20287,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_8_38 \
@@ -19137,12 +20312,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_8_39 \
@@ -19162,12 +20337,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_8_40 \
@@ -19187,12 +20362,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_8_41 \
@@ -19212,12 +20387,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_8_42 \
@@ -19237,12 +20412,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_8_43 \
@@ -19262,12 +20437,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_8_44 \
@@ -19287,12 +20462,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_8_45 \
@@ -19312,12 +20487,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_8_46 \
@@ -19337,12 +20512,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_8_47 \
@@ -19362,12 +20537,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_8_48 \
@@ -19387,12 +20562,337 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
+--model_name qwen2.5-32b \
+--dataset pg19 \
+--generate_name verify_8_49 \
+--prefix_len 32800
+
+echo "Processing next configuration..."
+
+python simulator.py \
+--max_latency_calculate \
+--csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
+--num_channels 1 \
+--chips_per_channel 1 \
+--dies_per_chip 1 \
+--page_size_bytes 16384 \
+--vector_bytes 4 \
+--flash_read_latency_us 50 \
+--num_heads 8 \
+--cluster_size 32 \
+--window_size 64 \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
+--num_replica 4 \
+--hot_cluster_ratio 0.08 \
+--planes_per_die 32 \
+--budget_ratio 0.40 \
+--model_name qwen2.5-32b \
+--dataset pg19 \
+--generate_name verify_8_50 \
+--prefix_len 32800
+
+echo "Processing next configuration..."
+
+python simulator.py \
+--max_latency_calculate \
+--csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
+--num_channels 1 \
+--chips_per_channel 1 \
+--dies_per_chip 1 \
+--page_size_bytes 16384 \
+--vector_bytes 4 \
+--flash_read_latency_us 50 \
+--num_heads 8 \
+--cluster_size 32 \
+--window_size 64 \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
+--num_replica 4 \
+--hot_cluster_ratio 0.08 \
+--planes_per_die 32 \
+--budget_ratio 0.40 \
+--model_name qwen2.5-32b \
+--dataset pg19 \
+--generate_name verify_8_51 \
+--prefix_len 32800
+
+echo "Processing next configuration..."
+
+python simulator.py \
+--max_latency_calculate \
+--csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
+--num_channels 1 \
+--chips_per_channel 1 \
+--dies_per_chip 1 \
+--page_size_bytes 16384 \
+--vector_bytes 4 \
+--flash_read_latency_us 50 \
+--num_heads 8 \
+--cluster_size 32 \
+--window_size 64 \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
+--num_replica 4 \
+--hot_cluster_ratio 0.08 \
+--planes_per_die 32 \
+--budget_ratio 0.40 \
+--model_name qwen2.5-32b \
+--dataset pg19 \
+--generate_name verify_8_52 \
+--prefix_len 32800
+
+echo "Processing next configuration..."
+
+python simulator.py \
+--max_latency_calculate \
+--csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
+--num_channels 1 \
+--chips_per_channel 1 \
+--dies_per_chip 1 \
+--page_size_bytes 16384 \
+--vector_bytes 4 \
+--flash_read_latency_us 50 \
+--num_heads 8 \
+--cluster_size 32 \
+--window_size 64 \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
+--num_replica 4 \
+--hot_cluster_ratio 0.08 \
+--planes_per_die 32 \
+--budget_ratio 0.40 \
+--model_name qwen2.5-32b \
+--dataset pg19 \
+--generate_name verify_8_53 \
+--prefix_len 32800
+
+echo "Processing next configuration..."
+
+python simulator.py \
+--max_latency_calculate \
+--csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
+--num_channels 1 \
+--chips_per_channel 1 \
+--dies_per_chip 1 \
+--page_size_bytes 16384 \
+--vector_bytes 4 \
+--flash_read_latency_us 50 \
+--num_heads 8 \
+--cluster_size 32 \
+--window_size 64 \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
+--num_replica 4 \
+--hot_cluster_ratio 0.08 \
+--planes_per_die 32 \
+--budget_ratio 0.40 \
+--model_name qwen2.5-32b \
+--dataset pg19 \
+--generate_name verify_8_54 \
+--prefix_len 32800
+
+echo "Processing next configuration..."
+
+python simulator.py \
+--max_latency_calculate \
+--csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
+--num_channels 1 \
+--chips_per_channel 1 \
+--dies_per_chip 1 \
+--page_size_bytes 16384 \
+--vector_bytes 4 \
+--flash_read_latency_us 50 \
+--num_heads 8 \
+--cluster_size 32 \
+--window_size 64 \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
+--num_replica 4 \
+--hot_cluster_ratio 0.08 \
+--planes_per_die 32 \
+--budget_ratio 0.40 \
+--model_name qwen2.5-32b \
+--dataset pg19 \
+--generate_name verify_8_55 \
+--prefix_len 32800
+
+echo "Processing next configuration..."
+
+python simulator.py \
+--max_latency_calculate \
+--csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
+--num_channels 1 \
+--chips_per_channel 1 \
+--dies_per_chip 1 \
+--page_size_bytes 16384 \
+--vector_bytes 4 \
+--flash_read_latency_us 50 \
+--num_heads 8 \
+--cluster_size 32 \
+--window_size 64 \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
+--num_replica 4 \
+--hot_cluster_ratio 0.08 \
+--planes_per_die 32 \
+--budget_ratio 0.40 \
+--model_name qwen2.5-32b \
+--dataset pg19 \
+--generate_name verify_8_56 \
+--prefix_len 32800
+
+echo "Processing next configuration..."
+
+python simulator.py \
+--max_latency_calculate \
+--csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
+--num_channels 1 \
+--chips_per_channel 1 \
+--dies_per_chip 1 \
+--page_size_bytes 16384 \
+--vector_bytes 4 \
+--flash_read_latency_us 50 \
+--num_heads 8 \
+--cluster_size 32 \
+--window_size 64 \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
+--num_replica 4 \
+--hot_cluster_ratio 0.08 \
+--planes_per_die 32 \
+--budget_ratio 0.40 \
+--model_name qwen2.5-32b \
+--dataset pg19 \
+--generate_name verify_8_57 \
+--prefix_len 32800
+
+echo "Processing next configuration..."
+
+python simulator.py \
+--max_latency_calculate \
+--csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
+--num_channels 1 \
+--chips_per_channel 1 \
+--dies_per_chip 1 \
+--page_size_bytes 16384 \
+--vector_bytes 4 \
+--flash_read_latency_us 50 \
+--num_heads 8 \
+--cluster_size 32 \
+--window_size 64 \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
+--num_replica 4 \
+--hot_cluster_ratio 0.08 \
+--planes_per_die 32 \
+--budget_ratio 0.40 \
+--model_name qwen2.5-32b \
+--dataset pg19 \
+--generate_name verify_8_58 \
+--prefix_len 32800
+
+echo "Processing next configuration..."
+
+python simulator.py \
+--max_latency_calculate \
+--csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
+--num_channels 1 \
+--chips_per_channel 1 \
+--dies_per_chip 1 \
+--page_size_bytes 16384 \
+--vector_bytes 4 \
+--flash_read_latency_us 50 \
+--num_heads 8 \
+--cluster_size 32 \
+--window_size 64 \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
+--num_replica 4 \
+--hot_cluster_ratio 0.08 \
+--planes_per_die 32 \
+--budget_ratio 0.40 \
+--model_name qwen2.5-32b \
+--dataset pg19 \
+--generate_name verify_8_59 \
+--prefix_len 32800
+
+echo "Processing next configuration..."
+
+python simulator.py \
+--max_latency_calculate \
+--csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
+--num_channels 1 \
+--chips_per_channel 1 \
+--dies_per_chip 1 \
+--page_size_bytes 16384 \
+--vector_bytes 4 \
+--flash_read_latency_us 50 \
+--num_heads 8 \
+--cluster_size 32 \
+--window_size 64 \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
+--num_replica 4 \
+--hot_cluster_ratio 0.08 \
+--planes_per_die 32 \
+--budget_ratio 0.40 \
+--model_name qwen2.5-32b \
+--dataset pg19 \
+--generate_name verify_8_60 \
+--prefix_len 32800
+
+echo "Processing next configuration..."
+
+python simulator.py \
+--max_latency_calculate \
+--csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
+--num_channels 1 \
+--chips_per_channel 1 \
+--dies_per_chip 1 \
+--page_size_bytes 16384 \
+--vector_bytes 4 \
+--flash_read_latency_us 50 \
+--num_heads 8 \
+--cluster_size 32 \
+--window_size 64 \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
+--num_replica 4 \
+--hot_cluster_ratio 0.08 \
+--planes_per_die 32 \
+--budget_ratio 0.40 \
+--model_name qwen2.5-32b \
+--dataset pg19 \
+--generate_name verify_8_61 \
+--prefix_len 32800
+
+echo "Processing next configuration..."
+
+python simulator.py \
+--max_latency_calculate \
+--csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
+--num_channels 1 \
+--chips_per_channel 1 \
+--dies_per_chip 1 \
+--page_size_bytes 16384 \
+--vector_bytes 4 \
+--flash_read_latency_us 50 \
+--num_heads 8 \
+--cluster_size 32 \
+--window_size 64 \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
+--num_replica 4 \
+--hot_cluster_ratio 0.08 \
+--planes_per_die 32 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_9_0 \
@@ -19412,12 +20912,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_9_1 \
@@ -19437,12 +20937,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_9_2 \
@@ -19462,12 +20962,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_9_3 \
@@ -19487,12 +20987,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_9_4 \
@@ -19512,12 +21012,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_9_5 \
@@ -19537,12 +21037,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_9_6 \
@@ -19562,12 +21062,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_9_7 \
@@ -19587,12 +21087,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_9_8 \
@@ -19612,12 +21112,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_9_9 \
@@ -19637,12 +21137,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_9_10 \
@@ -19662,12 +21162,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_9_11 \
@@ -19687,12 +21187,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_9_12 \
@@ -19712,12 +21212,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_9_13 \
@@ -19737,12 +21237,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_9_14 \
@@ -19762,12 +21262,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_9_15 \
@@ -19787,12 +21287,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_9_16 \
@@ -19812,12 +21312,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_9_17 \
@@ -19837,12 +21337,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_9_18 \
@@ -19862,12 +21362,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_9_19 \
@@ -19887,12 +21387,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_9_20 \
@@ -19912,12 +21412,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_9_21 \
@@ -19937,12 +21437,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_9_22 \
@@ -19962,12 +21462,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_9_23 \
@@ -19987,12 +21487,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_9_24 \
@@ -20012,12 +21512,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_9_25 \
@@ -20037,12 +21537,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_9_26 \
@@ -20062,8 +21562,208 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
+--num_replica 4 \
+--hot_cluster_ratio 0.08 \
+--planes_per_die 32 \
+--budget_ratio 0.40 \
+--model_name qwen2.5-32b \
+--dataset pg19 \
+--generate_name verify_9_27 \
+--prefix_len 32800
+
+echo "Processing next configuration..."
+
+python simulator.py \
+--max_latency_calculate \
+--csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
+--num_channels 1 \
+--chips_per_channel 1 \
+--dies_per_chip 1 \
+--page_size_bytes 16384 \
+--vector_bytes 4 \
+--flash_read_latency_us 50 \
+--num_heads 8 \
+--cluster_size 32 \
+--window_size 64 \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
+--num_replica 4 \
+--hot_cluster_ratio 0.08 \
+--planes_per_die 32 \
+--budget_ratio 0.40 \
+--model_name qwen2.5-32b \
+--dataset pg19 \
+--generate_name verify_9_28 \
+--prefix_len 32800
+
+echo "Processing next configuration..."
+
+python simulator.py \
+--max_latency_calculate \
+--csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
+--num_channels 1 \
+--chips_per_channel 1 \
+--dies_per_chip 1 \
+--page_size_bytes 16384 \
+--vector_bytes 4 \
+--flash_read_latency_us 50 \
+--num_heads 8 \
+--cluster_size 32 \
+--window_size 64 \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
+--num_replica 4 \
+--hot_cluster_ratio 0.08 \
+--planes_per_die 32 \
+--budget_ratio 0.40 \
+--model_name qwen2.5-32b \
+--dataset pg19 \
+--generate_name verify_9_29 \
+--prefix_len 32800
+
+echo "Processing next configuration..."
+
+python simulator.py \
+--max_latency_calculate \
+--csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
+--num_channels 1 \
+--chips_per_channel 1 \
+--dies_per_chip 1 \
+--page_size_bytes 16384 \
+--vector_bytes 4 \
+--flash_read_latency_us 50 \
+--num_heads 8 \
+--cluster_size 32 \
+--window_size 64 \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
+--num_replica 4 \
+--hot_cluster_ratio 0.08 \
+--planes_per_die 32 \
+--budget_ratio 0.40 \
+--model_name qwen2.5-32b \
+--dataset pg19 \
+--generate_name verify_9_30 \
+--prefix_len 32800
+
+echo "Processing next configuration..."
+
+python simulator.py \
+--max_latency_calculate \
+--csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
+--num_channels 1 \
+--chips_per_channel 1 \
+--dies_per_chip 1 \
+--page_size_bytes 16384 \
+--vector_bytes 4 \
+--flash_read_latency_us 50 \
+--num_heads 8 \
+--cluster_size 32 \
+--window_size 64 \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
+--num_replica 4 \
+--hot_cluster_ratio 0.08 \
+--planes_per_die 32 \
+--budget_ratio 0.40 \
+--model_name qwen2.5-32b \
+--dataset pg19 \
+--generate_name verify_9_31 \
+--prefix_len 32800
+
+echo "Processing next configuration..."
+
+python simulator.py \
+--max_latency_calculate \
+--csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
+--num_channels 1 \
+--chips_per_channel 1 \
+--dies_per_chip 1 \
+--page_size_bytes 16384 \
+--vector_bytes 4 \
+--flash_read_latency_us 50 \
+--num_heads 8 \
+--cluster_size 32 \
+--window_size 64 \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
+--num_replica 4 \
+--hot_cluster_ratio 0.08 \
+--planes_per_die 32 \
+--budget_ratio 0.40 \
+--model_name qwen2.5-32b \
+--dataset pg19 \
+--generate_name verify_9_32 \
+--prefix_len 32800
+
+echo "Processing next configuration..."
+
+python simulator.py \
+--max_latency_calculate \
+--csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
+--num_channels 1 \
+--chips_per_channel 1 \
+--dies_per_chip 1 \
+--page_size_bytes 16384 \
+--vector_bytes 4 \
+--flash_read_latency_us 50 \
+--num_heads 8 \
+--cluster_size 32 \
+--window_size 64 \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
+--num_replica 4 \
+--hot_cluster_ratio 0.08 \
+--planes_per_die 32 \
+--budget_ratio 0.40 \
+--model_name qwen2.5-32b \
+--dataset pg19 \
+--generate_name verify_9_33 \
+--prefix_len 32800
+
+echo "Processing next configuration..."
+
+python simulator.py \
+--max_latency_calculate \
+--csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
+--num_channels 1 \
+--chips_per_channel 1 \
+--dies_per_chip 1 \
+--page_size_bytes 16384 \
+--vector_bytes 4 \
+--flash_read_latency_us 50 \
+--num_heads 8 \
+--cluster_size 32 \
+--window_size 64 \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
+--num_replica 4 \
+--hot_cluster_ratio 0.08 \
+--planes_per_die 32 \
+--budget_ratio 0.40 \
+--model_name qwen2.5-32b \
+--dataset pg19 \
+--generate_name verify_9_34 \
+--prefix_len 32800
+
+echo "Processing next configuration..."
+
+python simulator.py \
+--max_latency_calculate \
+--csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
+--num_channels 1 \
+--chips_per_channel 1 \
+--dies_per_chip 1 \
+--page_size_bytes 16384 \
+--vector_bytes 4 \
+--flash_read_latency_us 50 \
+--num_heads 8 \
+--cluster_size 32 \
+--window_size 64 \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -20088,8 +21788,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -20114,8 +21814,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -20140,8 +21840,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -20166,8 +21866,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -20192,8 +21892,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -20218,8 +21918,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -20244,8 +21944,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -20270,8 +21970,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -20296,8 +21996,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -20322,8 +22022,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -20348,8 +22048,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -20374,8 +22074,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -20400,8 +22100,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -20426,8 +22126,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -20452,8 +22152,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -20478,8 +22178,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -20504,8 +22204,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -20530,8 +22230,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -20556,8 +22256,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -20582,8 +22282,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -20608,8 +22308,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -20634,8 +22334,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -20660,8 +22360,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -20686,8 +22386,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -20712,8 +22412,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -20738,8 +22438,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -20764,8 +22464,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -20790,8 +22490,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -20816,8 +22516,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -20842,8 +22542,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -20868,8 +22568,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -20894,8 +22594,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -20920,8 +22620,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -20946,8 +22646,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -20972,8 +22672,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -20998,8 +22698,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -21024,8 +22724,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -21050,8 +22750,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -21076,8 +22776,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -21102,8 +22802,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -21128,8 +22828,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -21154,8 +22854,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -21180,8 +22880,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -21206,8 +22906,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -21232,8 +22932,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -21258,8 +22958,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -21284,8 +22984,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -21310,8 +23010,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -21336,8 +23036,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -21362,8 +23062,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -21388,8 +23088,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -21414,8 +23114,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -21440,8 +23140,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -21466,8 +23166,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -21492,8 +23192,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -21518,8 +23218,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -21544,8 +23244,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -21570,8 +23270,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -21596,8 +23296,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -21622,8 +23322,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -21648,8 +23348,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -21674,8 +23374,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -21700,8 +23400,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -21726,8 +23426,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -21752,8 +23452,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -21778,8 +23478,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -21804,8 +23504,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -21830,8 +23530,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -21856,8 +23556,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -21882,8 +23582,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -21908,8 +23608,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -21934,8 +23634,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -21960,8 +23660,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -21986,8 +23686,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -22012,8 +23712,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -22038,8 +23738,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -22064,8 +23764,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -22090,8 +23790,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -22116,8 +23816,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -22142,8 +23842,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -22168,8 +23868,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -22194,8 +23894,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -22220,8 +23920,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -22246,8 +23946,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -22272,8 +23972,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -22298,8 +23998,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -22324,8 +24024,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -22350,8 +24050,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -22376,8 +24076,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -22402,8 +24102,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -22428,8 +24128,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -22454,8 +24154,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -22480,8 +24180,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -22506,8 +24206,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -22532,8 +24232,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -22558,8 +24258,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -22584,8 +24284,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -22610,8 +24310,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -22636,8 +24336,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -22662,8 +24362,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -22688,8 +24388,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -22714,8 +24414,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -22740,8 +24440,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -22766,8 +24466,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -22792,8 +24492,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -22818,8 +24518,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -22844,8 +24544,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -22870,8 +24570,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -22896,8 +24596,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -22922,8 +24622,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -22948,8 +24648,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -22974,424 +24674,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-32b \
---dataset pg19 \
---generate_name speculate_3_152 \
---prefix_len 32800 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 32 \
---window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-32b \
---dataset pg19 \
---generate_name speculate_3_156 \
---prefix_len 32800 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 32 \
---window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-32b \
---dataset pg19 \
---generate_name speculate_3_160 \
---prefix_len 32800 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 32 \
---window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-32b \
---dataset pg19 \
---generate_name speculate_3_164 \
---prefix_len 32800 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 32 \
---window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-32b \
---dataset pg19 \
---generate_name speculate_3_168 \
---prefix_len 32800 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 32 \
---window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-32b \
---dataset pg19 \
---generate_name speculate_3_172 \
---prefix_len 32800 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 32 \
---window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-32b \
---dataset pg19 \
---generate_name speculate_3_176 \
---prefix_len 32800 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 32 \
---window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-32b \
---dataset pg19 \
---generate_name speculate_3_180 \
---prefix_len 32800 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 32 \
---window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-32b \
---dataset pg19 \
---generate_name speculate_3_184 \
---prefix_len 32800 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 32 \
---window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-32b \
---dataset pg19 \
---generate_name speculate_3_188 \
---prefix_len 32800 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 32 \
---window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-32b \
---dataset pg19 \
---generate_name speculate_3_192 \
---prefix_len 32800 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 32 \
---window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-32b \
---dataset pg19 \
---generate_name speculate_3_196 \
---prefix_len 32800 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 32 \
---window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-32b \
---dataset pg19 \
---generate_name speculate_3_200 \
---prefix_len 32800 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 32 \
---window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-32b \
---dataset pg19 \
---generate_name speculate_3_204 \
---prefix_len 32800 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 32 \
---window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-32b \
---dataset pg19 \
---generate_name speculate_3_208 \
---prefix_len 32800 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 32 \
---window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-32b \
---dataset pg19 \
---generate_name speculate_3_212 \
---prefix_len 32800 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 32 \
---window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -23416,8 +24700,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -23442,8 +24726,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -23468,8 +24752,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -23494,8 +24778,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -23520,8 +24804,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -23546,8 +24830,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -23572,8 +24856,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -23598,8 +24882,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -23624,8 +24908,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -23650,8 +24934,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -23676,8 +24960,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -23702,8 +24986,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -23728,8 +25012,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -23754,8 +25038,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -23780,8 +25064,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -23806,8 +25090,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -23832,8 +25116,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -23858,8 +25142,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -23884,8 +25168,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -23910,8 +25194,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -23936,8 +25220,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -23962,8 +25246,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -23988,8 +25272,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -24014,8 +25298,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -24040,8 +25324,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -24066,8 +25350,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -24092,8 +25376,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -24118,8 +25402,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -24144,8 +25428,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -24170,8 +25454,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -24196,8 +25480,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -24222,8 +25506,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -24248,8 +25532,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -24274,8 +25558,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -24300,8 +25584,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -24326,8 +25610,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -24352,8 +25636,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -24378,8 +25662,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -24404,8 +25688,658 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
+--num_replica 4 \
+--hot_cluster_ratio 0.08 \
+--planes_per_die 32 \
+--budget_ratio 0.02 \
+--model_name qwen2.5-32b \
+--dataset pg19 \
+--generate_name speculate_4_156 \
+--prefix_len 32800 \
+--hot_cluster_duplicate
+
+echo "Processing next configuration..."
+
+python simulator.py \
+--max_latency_calculate \
+--csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
+--num_channels 1 \
+--chips_per_channel 1 \
+--dies_per_chip 1 \
+--page_size_bytes 16384 \
+--vector_bytes 4 \
+--flash_read_latency_us 50 \
+--num_heads 8 \
+--cluster_size 32 \
+--window_size 64 \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
+--num_replica 4 \
+--hot_cluster_ratio 0.08 \
+--planes_per_die 32 \
+--budget_ratio 0.02 \
+--model_name qwen2.5-32b \
+--dataset pg19 \
+--generate_name speculate_4_160 \
+--prefix_len 32800 \
+--hot_cluster_duplicate
+
+echo "Processing next configuration..."
+
+python simulator.py \
+--max_latency_calculate \
+--csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
+--num_channels 1 \
+--chips_per_channel 1 \
+--dies_per_chip 1 \
+--page_size_bytes 16384 \
+--vector_bytes 4 \
+--flash_read_latency_us 50 \
+--num_heads 8 \
+--cluster_size 32 \
+--window_size 64 \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
+--num_replica 4 \
+--hot_cluster_ratio 0.08 \
+--planes_per_die 32 \
+--budget_ratio 0.02 \
+--model_name qwen2.5-32b \
+--dataset pg19 \
+--generate_name speculate_4_164 \
+--prefix_len 32800 \
+--hot_cluster_duplicate
+
+echo "Processing next configuration..."
+
+python simulator.py \
+--max_latency_calculate \
+--csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
+--num_channels 1 \
+--chips_per_channel 1 \
+--dies_per_chip 1 \
+--page_size_bytes 16384 \
+--vector_bytes 4 \
+--flash_read_latency_us 50 \
+--num_heads 8 \
+--cluster_size 32 \
+--window_size 64 \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
+--num_replica 4 \
+--hot_cluster_ratio 0.08 \
+--planes_per_die 32 \
+--budget_ratio 0.02 \
+--model_name qwen2.5-32b \
+--dataset pg19 \
+--generate_name speculate_4_168 \
+--prefix_len 32800 \
+--hot_cluster_duplicate
+
+echo "Processing next configuration..."
+
+python simulator.py \
+--max_latency_calculate \
+--csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
+--num_channels 1 \
+--chips_per_channel 1 \
+--dies_per_chip 1 \
+--page_size_bytes 16384 \
+--vector_bytes 4 \
+--flash_read_latency_us 50 \
+--num_heads 8 \
+--cluster_size 32 \
+--window_size 64 \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
+--num_replica 4 \
+--hot_cluster_ratio 0.08 \
+--planes_per_die 32 \
+--budget_ratio 0.02 \
+--model_name qwen2.5-32b \
+--dataset pg19 \
+--generate_name speculate_4_172 \
+--prefix_len 32800 \
+--hot_cluster_duplicate
+
+echo "Processing next configuration..."
+
+python simulator.py \
+--max_latency_calculate \
+--csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
+--num_channels 1 \
+--chips_per_channel 1 \
+--dies_per_chip 1 \
+--page_size_bytes 16384 \
+--vector_bytes 4 \
+--flash_read_latency_us 50 \
+--num_heads 8 \
+--cluster_size 32 \
+--window_size 64 \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
+--num_replica 4 \
+--hot_cluster_ratio 0.08 \
+--planes_per_die 32 \
+--budget_ratio 0.02 \
+--model_name qwen2.5-32b \
+--dataset pg19 \
+--generate_name speculate_4_176 \
+--prefix_len 32800 \
+--hot_cluster_duplicate
+
+echo "Processing next configuration..."
+
+python simulator.py \
+--max_latency_calculate \
+--csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
+--num_channels 1 \
+--chips_per_channel 1 \
+--dies_per_chip 1 \
+--page_size_bytes 16384 \
+--vector_bytes 4 \
+--flash_read_latency_us 50 \
+--num_heads 8 \
+--cluster_size 32 \
+--window_size 64 \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
+--num_replica 4 \
+--hot_cluster_ratio 0.08 \
+--planes_per_die 32 \
+--budget_ratio 0.02 \
+--model_name qwen2.5-32b \
+--dataset pg19 \
+--generate_name speculate_4_180 \
+--prefix_len 32800 \
+--hot_cluster_duplicate
+
+echo "Processing next configuration..."
+
+python simulator.py \
+--max_latency_calculate \
+--csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
+--num_channels 1 \
+--chips_per_channel 1 \
+--dies_per_chip 1 \
+--page_size_bytes 16384 \
+--vector_bytes 4 \
+--flash_read_latency_us 50 \
+--num_heads 8 \
+--cluster_size 32 \
+--window_size 64 \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
+--num_replica 4 \
+--hot_cluster_ratio 0.08 \
+--planes_per_die 32 \
+--budget_ratio 0.02 \
+--model_name qwen2.5-32b \
+--dataset pg19 \
+--generate_name speculate_4_184 \
+--prefix_len 32800 \
+--hot_cluster_duplicate
+
+echo "Processing next configuration..."
+
+python simulator.py \
+--max_latency_calculate \
+--csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
+--num_channels 1 \
+--chips_per_channel 1 \
+--dies_per_chip 1 \
+--page_size_bytes 16384 \
+--vector_bytes 4 \
+--flash_read_latency_us 50 \
+--num_heads 8 \
+--cluster_size 32 \
+--window_size 64 \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
+--num_replica 4 \
+--hot_cluster_ratio 0.08 \
+--planes_per_die 32 \
+--budget_ratio 0.02 \
+--model_name qwen2.5-32b \
+--dataset pg19 \
+--generate_name speculate_4_188 \
+--prefix_len 32800 \
+--hot_cluster_duplicate
+
+echo "Processing next configuration..."
+
+python simulator.py \
+--max_latency_calculate \
+--csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
+--num_channels 1 \
+--chips_per_channel 1 \
+--dies_per_chip 1 \
+--page_size_bytes 16384 \
+--vector_bytes 4 \
+--flash_read_latency_us 50 \
+--num_heads 8 \
+--cluster_size 32 \
+--window_size 64 \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
+--num_replica 4 \
+--hot_cluster_ratio 0.08 \
+--planes_per_die 32 \
+--budget_ratio 0.02 \
+--model_name qwen2.5-32b \
+--dataset pg19 \
+--generate_name speculate_4_192 \
+--prefix_len 32800 \
+--hot_cluster_duplicate
+
+echo "Processing next configuration..."
+
+python simulator.py \
+--max_latency_calculate \
+--csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
+--num_channels 1 \
+--chips_per_channel 1 \
+--dies_per_chip 1 \
+--page_size_bytes 16384 \
+--vector_bytes 4 \
+--flash_read_latency_us 50 \
+--num_heads 8 \
+--cluster_size 32 \
+--window_size 64 \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
+--num_replica 4 \
+--hot_cluster_ratio 0.08 \
+--planes_per_die 32 \
+--budget_ratio 0.02 \
+--model_name qwen2.5-32b \
+--dataset pg19 \
+--generate_name speculate_4_196 \
+--prefix_len 32800 \
+--hot_cluster_duplicate
+
+echo "Processing next configuration..."
+
+python simulator.py \
+--max_latency_calculate \
+--csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
+--num_channels 1 \
+--chips_per_channel 1 \
+--dies_per_chip 1 \
+--page_size_bytes 16384 \
+--vector_bytes 4 \
+--flash_read_latency_us 50 \
+--num_heads 8 \
+--cluster_size 32 \
+--window_size 64 \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
+--num_replica 4 \
+--hot_cluster_ratio 0.08 \
+--planes_per_die 32 \
+--budget_ratio 0.02 \
+--model_name qwen2.5-32b \
+--dataset pg19 \
+--generate_name speculate_4_200 \
+--prefix_len 32800 \
+--hot_cluster_duplicate
+
+echo "Processing next configuration..."
+
+python simulator.py \
+--max_latency_calculate \
+--csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
+--num_channels 1 \
+--chips_per_channel 1 \
+--dies_per_chip 1 \
+--page_size_bytes 16384 \
+--vector_bytes 4 \
+--flash_read_latency_us 50 \
+--num_heads 8 \
+--cluster_size 32 \
+--window_size 64 \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
+--num_replica 4 \
+--hot_cluster_ratio 0.08 \
+--planes_per_die 32 \
+--budget_ratio 0.02 \
+--model_name qwen2.5-32b \
+--dataset pg19 \
+--generate_name speculate_4_204 \
+--prefix_len 32800 \
+--hot_cluster_duplicate
+
+echo "Processing next configuration..."
+
+python simulator.py \
+--max_latency_calculate \
+--csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
+--num_channels 1 \
+--chips_per_channel 1 \
+--dies_per_chip 1 \
+--page_size_bytes 16384 \
+--vector_bytes 4 \
+--flash_read_latency_us 50 \
+--num_heads 8 \
+--cluster_size 32 \
+--window_size 64 \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
+--num_replica 4 \
+--hot_cluster_ratio 0.08 \
+--planes_per_die 32 \
+--budget_ratio 0.02 \
+--model_name qwen2.5-32b \
+--dataset pg19 \
+--generate_name speculate_4_208 \
+--prefix_len 32800 \
+--hot_cluster_duplicate
+
+echo "Processing next configuration..."
+
+python simulator.py \
+--max_latency_calculate \
+--csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
+--num_channels 1 \
+--chips_per_channel 1 \
+--dies_per_chip 1 \
+--page_size_bytes 16384 \
+--vector_bytes 4 \
+--flash_read_latency_us 50 \
+--num_heads 8 \
+--cluster_size 32 \
+--window_size 64 \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
+--num_replica 4 \
+--hot_cluster_ratio 0.08 \
+--planes_per_die 32 \
+--budget_ratio 0.02 \
+--model_name qwen2.5-32b \
+--dataset pg19 \
+--generate_name speculate_4_212 \
+--prefix_len 32800 \
+--hot_cluster_duplicate
+
+echo "Processing next configuration..."
+
+python simulator.py \
+--max_latency_calculate \
+--csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
+--num_channels 1 \
+--chips_per_channel 1 \
+--dies_per_chip 1 \
+--page_size_bytes 16384 \
+--vector_bytes 4 \
+--flash_read_latency_us 50 \
+--num_heads 8 \
+--cluster_size 32 \
+--window_size 64 \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
+--num_replica 4 \
+--hot_cluster_ratio 0.08 \
+--planes_per_die 32 \
+--budget_ratio 0.02 \
+--model_name qwen2.5-32b \
+--dataset pg19 \
+--generate_name speculate_4_216 \
+--prefix_len 32800 \
+--hot_cluster_duplicate
+
+echo "Processing next configuration..."
+
+python simulator.py \
+--max_latency_calculate \
+--csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
+--num_channels 1 \
+--chips_per_channel 1 \
+--dies_per_chip 1 \
+--page_size_bytes 16384 \
+--vector_bytes 4 \
+--flash_read_latency_us 50 \
+--num_heads 8 \
+--cluster_size 32 \
+--window_size 64 \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
+--num_replica 4 \
+--hot_cluster_ratio 0.08 \
+--planes_per_die 32 \
+--budget_ratio 0.02 \
+--model_name qwen2.5-32b \
+--dataset pg19 \
+--generate_name speculate_4_220 \
+--prefix_len 32800 \
+--hot_cluster_duplicate
+
+echo "Processing next configuration..."
+
+python simulator.py \
+--max_latency_calculate \
+--csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
+--num_channels 1 \
+--chips_per_channel 1 \
+--dies_per_chip 1 \
+--page_size_bytes 16384 \
+--vector_bytes 4 \
+--flash_read_latency_us 50 \
+--num_heads 8 \
+--cluster_size 32 \
+--window_size 64 \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
+--num_replica 4 \
+--hot_cluster_ratio 0.08 \
+--planes_per_die 32 \
+--budget_ratio 0.02 \
+--model_name qwen2.5-32b \
+--dataset pg19 \
+--generate_name speculate_4_224 \
+--prefix_len 32800 \
+--hot_cluster_duplicate
+
+echo "Processing next configuration..."
+
+python simulator.py \
+--max_latency_calculate \
+--csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
+--num_channels 1 \
+--chips_per_channel 1 \
+--dies_per_chip 1 \
+--page_size_bytes 16384 \
+--vector_bytes 4 \
+--flash_read_latency_us 50 \
+--num_heads 8 \
+--cluster_size 32 \
+--window_size 64 \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
+--num_replica 4 \
+--hot_cluster_ratio 0.08 \
+--planes_per_die 32 \
+--budget_ratio 0.02 \
+--model_name qwen2.5-32b \
+--dataset pg19 \
+--generate_name speculate_4_228 \
+--prefix_len 32800 \
+--hot_cluster_duplicate
+
+echo "Processing next configuration..."
+
+python simulator.py \
+--max_latency_calculate \
+--csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
+--num_channels 1 \
+--chips_per_channel 1 \
+--dies_per_chip 1 \
+--page_size_bytes 16384 \
+--vector_bytes 4 \
+--flash_read_latency_us 50 \
+--num_heads 8 \
+--cluster_size 32 \
+--window_size 64 \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
+--num_replica 4 \
+--hot_cluster_ratio 0.08 \
+--planes_per_die 32 \
+--budget_ratio 0.02 \
+--model_name qwen2.5-32b \
+--dataset pg19 \
+--generate_name speculate_4_232 \
+--prefix_len 32800 \
+--hot_cluster_duplicate
+
+echo "Processing next configuration..."
+
+python simulator.py \
+--max_latency_calculate \
+--csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
+--num_channels 1 \
+--chips_per_channel 1 \
+--dies_per_chip 1 \
+--page_size_bytes 16384 \
+--vector_bytes 4 \
+--flash_read_latency_us 50 \
+--num_heads 8 \
+--cluster_size 32 \
+--window_size 64 \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
+--num_replica 4 \
+--hot_cluster_ratio 0.08 \
+--planes_per_die 32 \
+--budget_ratio 0.02 \
+--model_name qwen2.5-32b \
+--dataset pg19 \
+--generate_name speculate_4_236 \
+--prefix_len 32800 \
+--hot_cluster_duplicate
+
+echo "Processing next configuration..."
+
+python simulator.py \
+--max_latency_calculate \
+--csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
+--num_channels 1 \
+--chips_per_channel 1 \
+--dies_per_chip 1 \
+--page_size_bytes 16384 \
+--vector_bytes 4 \
+--flash_read_latency_us 50 \
+--num_heads 8 \
+--cluster_size 32 \
+--window_size 64 \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
+--num_replica 4 \
+--hot_cluster_ratio 0.08 \
+--planes_per_die 32 \
+--budget_ratio 0.02 \
+--model_name qwen2.5-32b \
+--dataset pg19 \
+--generate_name speculate_4_240 \
+--prefix_len 32800 \
+--hot_cluster_duplicate
+
+echo "Processing next configuration..."
+
+python simulator.py \
+--max_latency_calculate \
+--csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
+--num_channels 1 \
+--chips_per_channel 1 \
+--dies_per_chip 1 \
+--page_size_bytes 16384 \
+--vector_bytes 4 \
+--flash_read_latency_us 50 \
+--num_heads 8 \
+--cluster_size 32 \
+--window_size 64 \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
+--num_replica 4 \
+--hot_cluster_ratio 0.08 \
+--planes_per_die 32 \
+--budget_ratio 0.02 \
+--model_name qwen2.5-32b \
+--dataset pg19 \
+--generate_name speculate_4_244 \
+--prefix_len 32800 \
+--hot_cluster_duplicate
+
+echo "Processing next configuration..."
+
+python simulator.py \
+--max_latency_calculate \
+--csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
+--num_channels 1 \
+--chips_per_channel 1 \
+--dies_per_chip 1 \
+--page_size_bytes 16384 \
+--vector_bytes 4 \
+--flash_read_latency_us 50 \
+--num_heads 8 \
+--cluster_size 32 \
+--window_size 64 \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
+--num_replica 4 \
+--hot_cluster_ratio 0.08 \
+--planes_per_die 32 \
+--budget_ratio 0.02 \
+--model_name qwen2.5-32b \
+--dataset pg19 \
+--generate_name speculate_4_248 \
+--prefix_len 32800 \
+--hot_cluster_duplicate
+
+echo "Processing next configuration..."
+
+python simulator.py \
+--max_latency_calculate \
+--csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
+--num_channels 1 \
+--chips_per_channel 1 \
+--dies_per_chip 1 \
+--page_size_bytes 16384 \
+--vector_bytes 4 \
+--flash_read_latency_us 50 \
+--num_heads 8 \
+--cluster_size 32 \
+--window_size 64 \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
+--num_replica 4 \
+--hot_cluster_ratio 0.08 \
+--planes_per_die 32 \
+--budget_ratio 0.02 \
+--model_name qwen2.5-32b \
+--dataset pg19 \
+--generate_name speculate_4_252 \
+--prefix_len 32800 \
+--hot_cluster_duplicate
+
+echo "Processing next configuration..."
+
+python simulator.py \
+--max_latency_calculate \
+--csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
+--num_channels 1 \
+--chips_per_channel 1 \
+--dies_per_chip 1 \
+--page_size_bytes 16384 \
+--vector_bytes 4 \
+--flash_read_latency_us 50 \
+--num_heads 8 \
+--cluster_size 32 \
+--window_size 64 \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -24430,8 +26364,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -24456,8 +26390,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -24482,8 +26416,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -24508,8 +26442,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -24534,8 +26468,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -24560,8 +26494,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -24586,8 +26520,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -24612,8 +26546,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -24638,8 +26572,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -24664,8 +26598,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -24690,8 +26624,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -24716,8 +26650,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -24742,8 +26676,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -24768,8 +26702,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -24794,8 +26728,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -24820,8 +26754,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -24846,8 +26780,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -24872,8 +26806,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -24898,8 +26832,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -24924,8 +26858,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -24950,8 +26884,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -24976,8 +26910,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -25002,8 +26936,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -25028,8 +26962,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -25054,8 +26988,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -25080,8 +27014,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -25106,8 +27040,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -25132,8 +27066,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -25158,8 +27092,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -25184,8 +27118,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -25210,8 +27144,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -25236,8 +27170,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -25262,8 +27196,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -25288,8 +27222,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -25314,8 +27248,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -25340,8 +27274,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -25366,8 +27300,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -25392,8 +27326,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -25418,8 +27352,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -25444,8 +27378,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -25470,8 +27404,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -25496,8 +27430,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -25522,8 +27456,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -25548,8 +27482,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -25574,8 +27508,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -25600,8 +27534,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -25626,8 +27560,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -25652,8 +27586,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -25678,8 +27612,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -25704,8 +27638,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -25730,8 +27664,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -25756,8 +27690,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -25782,8 +27716,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -25808,8 +27742,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -25834,8 +27768,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -25860,8 +27794,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -25886,8 +27820,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -25912,8 +27846,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -25938,8 +27872,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -25964,8 +27898,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -25990,8 +27924,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -26016,8 +27950,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -26042,8 +27976,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -26068,8 +28002,34 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
+--num_replica 4 \
+--hot_cluster_ratio 0.08 \
+--planes_per_die 32 \
+--budget_ratio 0.02 \
+--model_name qwen2.5-32b \
+--dataset pg19 \
+--generate_name speculate_5_256 \
+--prefix_len 32800 \
+--hot_cluster_duplicate
+
+echo "Processing next configuration..."
+
+python simulator.py \
+--max_latency_calculate \
+--csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
+--num_channels 1 \
+--chips_per_channel 1 \
+--dies_per_chip 1 \
+--page_size_bytes 16384 \
+--vector_bytes 4 \
+--flash_read_latency_us 50 \
+--num_heads 8 \
+--cluster_size 32 \
+--window_size 64 \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -26094,8 +28054,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -26120,8 +28080,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -26146,8 +28106,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -26172,8 +28132,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -26198,8 +28158,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -26224,8 +28184,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -26250,8 +28210,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -26276,8 +28236,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -26302,8 +28262,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -26328,8 +28288,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -26354,8 +28314,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -26380,8 +28340,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -26406,8 +28366,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -26432,8 +28392,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -26458,8 +28418,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -26484,8 +28444,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -26510,8 +28470,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -26536,8 +28496,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -26562,8 +28522,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -26588,8 +28548,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -26614,8 +28574,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -26640,8 +28600,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -26666,8 +28626,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -26692,8 +28652,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -26718,8 +28678,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -26744,8 +28704,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -26770,8 +28730,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -26796,8 +28756,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -26822,8 +28782,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -26848,8 +28808,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -26874,8 +28834,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -26900,8 +28860,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -26926,8 +28886,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -26952,8 +28912,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -26978,8 +28938,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -27004,8 +28964,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -27030,8 +28990,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -27056,8 +29016,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -27082,8 +29042,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -27108,8 +29068,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -27134,8 +29094,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -27160,216 +29120,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-32b \
---dataset pg19 \
---generate_name speculate_6_168 \
---prefix_len 32800 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 32 \
---window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-32b \
---dataset pg19 \
---generate_name speculate_6_172 \
---prefix_len 32800 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 32 \
---window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-32b \
---dataset pg19 \
---generate_name speculate_6_176 \
---prefix_len 32800 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 32 \
---window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-32b \
---dataset pg19 \
---generate_name speculate_6_180 \
---prefix_len 32800 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 32 \
---window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-32b \
---dataset pg19 \
---generate_name speculate_6_184 \
---prefix_len 32800 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 32 \
---window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-32b \
---dataset pg19 \
---generate_name speculate_6_188 \
---prefix_len 32800 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 32 \
---window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-32b \
---dataset pg19 \
---generate_name speculate_6_192 \
---prefix_len 32800 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 32 \
---window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-32b \
---dataset pg19 \
---generate_name speculate_6_196 \
---prefix_len 32800 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 32 \
---window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -27394,8 +29146,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -27420,8 +29172,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -27446,8 +29198,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -27472,8 +29224,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -27498,8 +29250,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -27524,8 +29276,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -27550,8 +29302,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -27576,8 +29328,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -27602,8 +29354,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -27628,8 +29380,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -27654,8 +29406,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -27680,8 +29432,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -27706,8 +29458,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -27732,8 +29484,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -27758,8 +29510,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -27784,8 +29536,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -27810,8 +29562,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -27836,8 +29588,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -27862,8 +29614,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -27888,8 +29640,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -27914,8 +29666,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -27940,8 +29692,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -27966,8 +29718,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -27992,8 +29744,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -28018,8 +29770,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -28044,8 +29796,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -28070,8 +29822,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -28096,8 +29848,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -28122,8 +29874,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -28148,8 +29900,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -28174,8 +29926,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -28200,8 +29952,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -28226,8 +29978,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -28252,8 +30004,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -28278,8 +30030,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -28304,8 +30056,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -28330,8 +30082,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -28356,8 +30108,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -28382,8 +30134,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -28408,8 +30160,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -28434,8 +30186,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -28460,8 +30212,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -28486,8 +30238,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -28512,8 +30264,294 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
+--num_replica 4 \
+--hot_cluster_ratio 0.08 \
+--planes_per_die 32 \
+--budget_ratio 0.02 \
+--model_name qwen2.5-32b \
+--dataset pg19 \
+--generate_name speculate_7_176 \
+--prefix_len 32800 \
+--hot_cluster_duplicate
+
+echo "Processing next configuration..."
+
+python simulator.py \
+--max_latency_calculate \
+--csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
+--num_channels 1 \
+--chips_per_channel 1 \
+--dies_per_chip 1 \
+--page_size_bytes 16384 \
+--vector_bytes 4 \
+--flash_read_latency_us 50 \
+--num_heads 8 \
+--cluster_size 32 \
+--window_size 64 \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
+--num_replica 4 \
+--hot_cluster_ratio 0.08 \
+--planes_per_die 32 \
+--budget_ratio 0.02 \
+--model_name qwen2.5-32b \
+--dataset pg19 \
+--generate_name speculate_7_180 \
+--prefix_len 32800 \
+--hot_cluster_duplicate
+
+echo "Processing next configuration..."
+
+python simulator.py \
+--max_latency_calculate \
+--csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
+--num_channels 1 \
+--chips_per_channel 1 \
+--dies_per_chip 1 \
+--page_size_bytes 16384 \
+--vector_bytes 4 \
+--flash_read_latency_us 50 \
+--num_heads 8 \
+--cluster_size 32 \
+--window_size 64 \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
+--num_replica 4 \
+--hot_cluster_ratio 0.08 \
+--planes_per_die 32 \
+--budget_ratio 0.02 \
+--model_name qwen2.5-32b \
+--dataset pg19 \
+--generate_name speculate_7_184 \
+--prefix_len 32800 \
+--hot_cluster_duplicate
+
+echo "Processing next configuration..."
+
+python simulator.py \
+--max_latency_calculate \
+--csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
+--num_channels 1 \
+--chips_per_channel 1 \
+--dies_per_chip 1 \
+--page_size_bytes 16384 \
+--vector_bytes 4 \
+--flash_read_latency_us 50 \
+--num_heads 8 \
+--cluster_size 32 \
+--window_size 64 \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
+--num_replica 4 \
+--hot_cluster_ratio 0.08 \
+--planes_per_die 32 \
+--budget_ratio 0.02 \
+--model_name qwen2.5-32b \
+--dataset pg19 \
+--generate_name speculate_7_188 \
+--prefix_len 32800 \
+--hot_cluster_duplicate
+
+echo "Processing next configuration..."
+
+python simulator.py \
+--max_latency_calculate \
+--csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
+--num_channels 1 \
+--chips_per_channel 1 \
+--dies_per_chip 1 \
+--page_size_bytes 16384 \
+--vector_bytes 4 \
+--flash_read_latency_us 50 \
+--num_heads 8 \
+--cluster_size 32 \
+--window_size 64 \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
+--num_replica 4 \
+--hot_cluster_ratio 0.08 \
+--planes_per_die 32 \
+--budget_ratio 0.02 \
+--model_name qwen2.5-32b \
+--dataset pg19 \
+--generate_name speculate_7_192 \
+--prefix_len 32800 \
+--hot_cluster_duplicate
+
+echo "Processing next configuration..."
+
+python simulator.py \
+--max_latency_calculate \
+--csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
+--num_channels 1 \
+--chips_per_channel 1 \
+--dies_per_chip 1 \
+--page_size_bytes 16384 \
+--vector_bytes 4 \
+--flash_read_latency_us 50 \
+--num_heads 8 \
+--cluster_size 32 \
+--window_size 64 \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
+--num_replica 4 \
+--hot_cluster_ratio 0.08 \
+--planes_per_die 32 \
+--budget_ratio 0.02 \
+--model_name qwen2.5-32b \
+--dataset pg19 \
+--generate_name speculate_7_196 \
+--prefix_len 32800 \
+--hot_cluster_duplicate
+
+echo "Processing next configuration..."
+
+python simulator.py \
+--max_latency_calculate \
+--csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
+--num_channels 1 \
+--chips_per_channel 1 \
+--dies_per_chip 1 \
+--page_size_bytes 16384 \
+--vector_bytes 4 \
+--flash_read_latency_us 50 \
+--num_heads 8 \
+--cluster_size 32 \
+--window_size 64 \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
+--num_replica 4 \
+--hot_cluster_ratio 0.08 \
+--planes_per_die 32 \
+--budget_ratio 0.02 \
+--model_name qwen2.5-32b \
+--dataset pg19 \
+--generate_name speculate_7_200 \
+--prefix_len 32800 \
+--hot_cluster_duplicate
+
+echo "Processing next configuration..."
+
+python simulator.py \
+--max_latency_calculate \
+--csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
+--num_channels 1 \
+--chips_per_channel 1 \
+--dies_per_chip 1 \
+--page_size_bytes 16384 \
+--vector_bytes 4 \
+--flash_read_latency_us 50 \
+--num_heads 8 \
+--cluster_size 32 \
+--window_size 64 \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
+--num_replica 4 \
+--hot_cluster_ratio 0.08 \
+--planes_per_die 32 \
+--budget_ratio 0.02 \
+--model_name qwen2.5-32b \
+--dataset pg19 \
+--generate_name speculate_7_204 \
+--prefix_len 32800 \
+--hot_cluster_duplicate
+
+echo "Processing next configuration..."
+
+python simulator.py \
+--max_latency_calculate \
+--csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
+--num_channels 1 \
+--chips_per_channel 1 \
+--dies_per_chip 1 \
+--page_size_bytes 16384 \
+--vector_bytes 4 \
+--flash_read_latency_us 50 \
+--num_heads 8 \
+--cluster_size 32 \
+--window_size 64 \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
+--num_replica 4 \
+--hot_cluster_ratio 0.08 \
+--planes_per_die 32 \
+--budget_ratio 0.02 \
+--model_name qwen2.5-32b \
+--dataset pg19 \
+--generate_name speculate_7_208 \
+--prefix_len 32800 \
+--hot_cluster_duplicate
+
+echo "Processing next configuration..."
+
+python simulator.py \
+--max_latency_calculate \
+--csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
+--num_channels 1 \
+--chips_per_channel 1 \
+--dies_per_chip 1 \
+--page_size_bytes 16384 \
+--vector_bytes 4 \
+--flash_read_latency_us 50 \
+--num_heads 8 \
+--cluster_size 32 \
+--window_size 64 \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
+--num_replica 4 \
+--hot_cluster_ratio 0.08 \
+--planes_per_die 32 \
+--budget_ratio 0.02 \
+--model_name qwen2.5-32b \
+--dataset pg19 \
+--generate_name speculate_7_212 \
+--prefix_len 32800 \
+--hot_cluster_duplicate
+
+echo "Processing next configuration..."
+
+python simulator.py \
+--max_latency_calculate \
+--csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
+--num_channels 1 \
+--chips_per_channel 1 \
+--dies_per_chip 1 \
+--page_size_bytes 16384 \
+--vector_bytes 4 \
+--flash_read_latency_us 50 \
+--num_heads 8 \
+--cluster_size 32 \
+--window_size 64 \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
+--num_replica 4 \
+--hot_cluster_ratio 0.08 \
+--planes_per_die 32 \
+--budget_ratio 0.02 \
+--model_name qwen2.5-32b \
+--dataset pg19 \
+--generate_name speculate_7_216 \
+--prefix_len 32800 \
+--hot_cluster_duplicate
+
+echo "Processing next configuration..."
+
+python simulator.py \
+--max_latency_calculate \
+--csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
+--num_channels 1 \
+--chips_per_channel 1 \
+--dies_per_chip 1 \
+--page_size_bytes 16384 \
+--vector_bytes 4 \
+--flash_read_latency_us 50 \
+--num_heads 8 \
+--cluster_size 32 \
+--window_size 64 \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -28538,8 +30576,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -28564,8 +30602,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -28590,8 +30628,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -28616,8 +30654,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -28642,8 +30680,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -28668,8 +30706,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -28694,8 +30732,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -28720,8 +30758,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -28746,8 +30784,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -28772,8 +30810,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -28798,8 +30836,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -28824,8 +30862,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -28850,8 +30888,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -28876,8 +30914,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -28902,8 +30940,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -28928,8 +30966,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -28954,8 +30992,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -28980,8 +31018,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -29006,8 +31044,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -29032,8 +31070,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -29058,8 +31096,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -29084,8 +31122,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -29110,8 +31148,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -29136,8 +31174,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -29162,8 +31200,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -29188,8 +31226,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -29214,8 +31252,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -29240,8 +31278,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -29266,8 +31304,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -29292,8 +31330,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -29318,8 +31356,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -29344,8 +31382,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -29370,8 +31408,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -29396,8 +31434,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -29422,8 +31460,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -29448,8 +31486,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -29474,8 +31512,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -29500,8 +31538,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -29526,8 +31564,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -29552,8 +31590,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -29578,8 +31616,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -29604,8 +31642,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -29630,8 +31668,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -29656,8 +31694,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -29682,8 +31720,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -29708,8 +31746,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -29734,8 +31772,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -29760,8 +31798,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -29786,8 +31824,346 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
+--num_replica 4 \
+--hot_cluster_ratio 0.08 \
+--planes_per_die 32 \
+--budget_ratio 0.02 \
+--model_name qwen2.5-32b \
+--dataset pg19 \
+--generate_name speculate_8_196 \
+--prefix_len 32800 \
+--hot_cluster_duplicate
+
+echo "Processing next configuration..."
+
+python simulator.py \
+--max_latency_calculate \
+--csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
+--num_channels 1 \
+--chips_per_channel 1 \
+--dies_per_chip 1 \
+--page_size_bytes 16384 \
+--vector_bytes 4 \
+--flash_read_latency_us 50 \
+--num_heads 8 \
+--cluster_size 32 \
+--window_size 64 \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
+--num_replica 4 \
+--hot_cluster_ratio 0.08 \
+--planes_per_die 32 \
+--budget_ratio 0.02 \
+--model_name qwen2.5-32b \
+--dataset pg19 \
+--generate_name speculate_8_200 \
+--prefix_len 32800 \
+--hot_cluster_duplicate
+
+echo "Processing next configuration..."
+
+python simulator.py \
+--max_latency_calculate \
+--csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
+--num_channels 1 \
+--chips_per_channel 1 \
+--dies_per_chip 1 \
+--page_size_bytes 16384 \
+--vector_bytes 4 \
+--flash_read_latency_us 50 \
+--num_heads 8 \
+--cluster_size 32 \
+--window_size 64 \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
+--num_replica 4 \
+--hot_cluster_ratio 0.08 \
+--planes_per_die 32 \
+--budget_ratio 0.02 \
+--model_name qwen2.5-32b \
+--dataset pg19 \
+--generate_name speculate_8_204 \
+--prefix_len 32800 \
+--hot_cluster_duplicate
+
+echo "Processing next configuration..."
+
+python simulator.py \
+--max_latency_calculate \
+--csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
+--num_channels 1 \
+--chips_per_channel 1 \
+--dies_per_chip 1 \
+--page_size_bytes 16384 \
+--vector_bytes 4 \
+--flash_read_latency_us 50 \
+--num_heads 8 \
+--cluster_size 32 \
+--window_size 64 \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
+--num_replica 4 \
+--hot_cluster_ratio 0.08 \
+--planes_per_die 32 \
+--budget_ratio 0.02 \
+--model_name qwen2.5-32b \
+--dataset pg19 \
+--generate_name speculate_8_208 \
+--prefix_len 32800 \
+--hot_cluster_duplicate
+
+echo "Processing next configuration..."
+
+python simulator.py \
+--max_latency_calculate \
+--csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
+--num_channels 1 \
+--chips_per_channel 1 \
+--dies_per_chip 1 \
+--page_size_bytes 16384 \
+--vector_bytes 4 \
+--flash_read_latency_us 50 \
+--num_heads 8 \
+--cluster_size 32 \
+--window_size 64 \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
+--num_replica 4 \
+--hot_cluster_ratio 0.08 \
+--planes_per_die 32 \
+--budget_ratio 0.02 \
+--model_name qwen2.5-32b \
+--dataset pg19 \
+--generate_name speculate_8_212 \
+--prefix_len 32800 \
+--hot_cluster_duplicate
+
+echo "Processing next configuration..."
+
+python simulator.py \
+--max_latency_calculate \
+--csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
+--num_channels 1 \
+--chips_per_channel 1 \
+--dies_per_chip 1 \
+--page_size_bytes 16384 \
+--vector_bytes 4 \
+--flash_read_latency_us 50 \
+--num_heads 8 \
+--cluster_size 32 \
+--window_size 64 \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
+--num_replica 4 \
+--hot_cluster_ratio 0.08 \
+--planes_per_die 32 \
+--budget_ratio 0.02 \
+--model_name qwen2.5-32b \
+--dataset pg19 \
+--generate_name speculate_8_216 \
+--prefix_len 32800 \
+--hot_cluster_duplicate
+
+echo "Processing next configuration..."
+
+python simulator.py \
+--max_latency_calculate \
+--csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
+--num_channels 1 \
+--chips_per_channel 1 \
+--dies_per_chip 1 \
+--page_size_bytes 16384 \
+--vector_bytes 4 \
+--flash_read_latency_us 50 \
+--num_heads 8 \
+--cluster_size 32 \
+--window_size 64 \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
+--num_replica 4 \
+--hot_cluster_ratio 0.08 \
+--planes_per_die 32 \
+--budget_ratio 0.02 \
+--model_name qwen2.5-32b \
+--dataset pg19 \
+--generate_name speculate_8_220 \
+--prefix_len 32800 \
+--hot_cluster_duplicate
+
+echo "Processing next configuration..."
+
+python simulator.py \
+--max_latency_calculate \
+--csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
+--num_channels 1 \
+--chips_per_channel 1 \
+--dies_per_chip 1 \
+--page_size_bytes 16384 \
+--vector_bytes 4 \
+--flash_read_latency_us 50 \
+--num_heads 8 \
+--cluster_size 32 \
+--window_size 64 \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
+--num_replica 4 \
+--hot_cluster_ratio 0.08 \
+--planes_per_die 32 \
+--budget_ratio 0.02 \
+--model_name qwen2.5-32b \
+--dataset pg19 \
+--generate_name speculate_8_224 \
+--prefix_len 32800 \
+--hot_cluster_duplicate
+
+echo "Processing next configuration..."
+
+python simulator.py \
+--max_latency_calculate \
+--csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
+--num_channels 1 \
+--chips_per_channel 1 \
+--dies_per_chip 1 \
+--page_size_bytes 16384 \
+--vector_bytes 4 \
+--flash_read_latency_us 50 \
+--num_heads 8 \
+--cluster_size 32 \
+--window_size 64 \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
+--num_replica 4 \
+--hot_cluster_ratio 0.08 \
+--planes_per_die 32 \
+--budget_ratio 0.02 \
+--model_name qwen2.5-32b \
+--dataset pg19 \
+--generate_name speculate_8_228 \
+--prefix_len 32800 \
+--hot_cluster_duplicate
+
+echo "Processing next configuration..."
+
+python simulator.py \
+--max_latency_calculate \
+--csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
+--num_channels 1 \
+--chips_per_channel 1 \
+--dies_per_chip 1 \
+--page_size_bytes 16384 \
+--vector_bytes 4 \
+--flash_read_latency_us 50 \
+--num_heads 8 \
+--cluster_size 32 \
+--window_size 64 \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
+--num_replica 4 \
+--hot_cluster_ratio 0.08 \
+--planes_per_die 32 \
+--budget_ratio 0.02 \
+--model_name qwen2.5-32b \
+--dataset pg19 \
+--generate_name speculate_8_232 \
+--prefix_len 32800 \
+--hot_cluster_duplicate
+
+echo "Processing next configuration..."
+
+python simulator.py \
+--max_latency_calculate \
+--csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
+--num_channels 1 \
+--chips_per_channel 1 \
+--dies_per_chip 1 \
+--page_size_bytes 16384 \
+--vector_bytes 4 \
+--flash_read_latency_us 50 \
+--num_heads 8 \
+--cluster_size 32 \
+--window_size 64 \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
+--num_replica 4 \
+--hot_cluster_ratio 0.08 \
+--planes_per_die 32 \
+--budget_ratio 0.02 \
+--model_name qwen2.5-32b \
+--dataset pg19 \
+--generate_name speculate_8_236 \
+--prefix_len 32800 \
+--hot_cluster_duplicate
+
+echo "Processing next configuration..."
+
+python simulator.py \
+--max_latency_calculate \
+--csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
+--num_channels 1 \
+--chips_per_channel 1 \
+--dies_per_chip 1 \
+--page_size_bytes 16384 \
+--vector_bytes 4 \
+--flash_read_latency_us 50 \
+--num_heads 8 \
+--cluster_size 32 \
+--window_size 64 \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
+--num_replica 4 \
+--hot_cluster_ratio 0.08 \
+--planes_per_die 32 \
+--budget_ratio 0.02 \
+--model_name qwen2.5-32b \
+--dataset pg19 \
+--generate_name speculate_8_240 \
+--prefix_len 32800 \
+--hot_cluster_duplicate
+
+echo "Processing next configuration..."
+
+python simulator.py \
+--max_latency_calculate \
+--csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
+--num_channels 1 \
+--chips_per_channel 1 \
+--dies_per_chip 1 \
+--page_size_bytes 16384 \
+--vector_bytes 4 \
+--flash_read_latency_us 50 \
+--num_heads 8 \
+--cluster_size 32 \
+--window_size 64 \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
+--num_replica 4 \
+--hot_cluster_ratio 0.08 \
+--planes_per_die 32 \
+--budget_ratio 0.02 \
+--model_name qwen2.5-32b \
+--dataset pg19 \
+--generate_name speculate_8_244 \
+--prefix_len 32800 \
+--hot_cluster_duplicate
+
+echo "Processing next configuration..."
+
+python simulator.py \
+--max_latency_calculate \
+--csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
+--num_channels 1 \
+--chips_per_channel 1 \
+--dies_per_chip 1 \
+--page_size_bytes 16384 \
+--vector_bytes 4 \
+--flash_read_latency_us 50 \
+--num_heads 8 \
+--cluster_size 32 \
+--window_size 64 \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -29812,8 +32188,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -29838,8 +32214,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -29864,8 +32240,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -29890,8 +32266,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -29916,8 +32292,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -29942,8 +32318,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -29968,8 +32344,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -29994,8 +32370,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -30020,8 +32396,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -30046,8 +32422,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -30072,8 +32448,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -30098,8 +32474,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -30124,8 +32500,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -30150,8 +32526,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -30176,8 +32552,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -30202,8 +32578,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -30228,8 +32604,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -30254,8 +32630,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -30280,8 +32656,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -30306,8 +32682,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -30332,8 +32708,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -30358,8 +32734,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -30384,8 +32760,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -30410,8 +32786,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -30436,8 +32812,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -30462,8 +32838,8 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -30488,12 +32864,220 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.02 \
+--model_name qwen2.5-32b \
+--dataset pg19 \
+--generate_name speculate_9_108 \
+--prefix_len 32800 \
+--hot_cluster_duplicate
+
+echo "Processing next configuration..."
+
+python simulator.py \
+--max_latency_calculate \
+--csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
+--num_channels 1 \
+--chips_per_channel 1 \
+--dies_per_chip 1 \
+--page_size_bytes 16384 \
+--vector_bytes 4 \
+--flash_read_latency_us 50 \
+--num_heads 8 \
+--cluster_size 32 \
+--window_size 64 \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
+--num_replica 4 \
+--hot_cluster_ratio 0.08 \
+--planes_per_die 32 \
+--budget_ratio 0.02 \
+--model_name qwen2.5-32b \
+--dataset pg19 \
+--generate_name speculate_9_112 \
+--prefix_len 32800 \
+--hot_cluster_duplicate
+
+echo "Processing next configuration..."
+
+python simulator.py \
+--max_latency_calculate \
+--csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
+--num_channels 1 \
+--chips_per_channel 1 \
+--dies_per_chip 1 \
+--page_size_bytes 16384 \
+--vector_bytes 4 \
+--flash_read_latency_us 50 \
+--num_heads 8 \
+--cluster_size 32 \
+--window_size 64 \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
+--num_replica 4 \
+--hot_cluster_ratio 0.08 \
+--planes_per_die 32 \
+--budget_ratio 0.02 \
+--model_name qwen2.5-32b \
+--dataset pg19 \
+--generate_name speculate_9_116 \
+--prefix_len 32800 \
+--hot_cluster_duplicate
+
+echo "Processing next configuration..."
+
+python simulator.py \
+--max_latency_calculate \
+--csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
+--num_channels 1 \
+--chips_per_channel 1 \
+--dies_per_chip 1 \
+--page_size_bytes 16384 \
+--vector_bytes 4 \
+--flash_read_latency_us 50 \
+--num_heads 8 \
+--cluster_size 32 \
+--window_size 64 \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
+--num_replica 4 \
+--hot_cluster_ratio 0.08 \
+--planes_per_die 32 \
+--budget_ratio 0.02 \
+--model_name qwen2.5-32b \
+--dataset pg19 \
+--generate_name speculate_9_120 \
+--prefix_len 32800 \
+--hot_cluster_duplicate
+
+echo "Processing next configuration..."
+
+python simulator.py \
+--max_latency_calculate \
+--csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
+--num_channels 1 \
+--chips_per_channel 1 \
+--dies_per_chip 1 \
+--page_size_bytes 16384 \
+--vector_bytes 4 \
+--flash_read_latency_us 50 \
+--num_heads 8 \
+--cluster_size 32 \
+--window_size 64 \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
+--num_replica 4 \
+--hot_cluster_ratio 0.08 \
+--planes_per_die 32 \
+--budget_ratio 0.02 \
+--model_name qwen2.5-32b \
+--dataset pg19 \
+--generate_name speculate_9_124 \
+--prefix_len 32800 \
+--hot_cluster_duplicate
+
+echo "Processing next configuration..."
+
+python simulator.py \
+--max_latency_calculate \
+--csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
+--num_channels 1 \
+--chips_per_channel 1 \
+--dies_per_chip 1 \
+--page_size_bytes 16384 \
+--vector_bytes 4 \
+--flash_read_latency_us 50 \
+--num_heads 8 \
+--cluster_size 32 \
+--window_size 64 \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
+--num_replica 4 \
+--hot_cluster_ratio 0.08 \
+--planes_per_die 32 \
+--budget_ratio 0.02 \
+--model_name qwen2.5-32b \
+--dataset pg19 \
+--generate_name speculate_9_128 \
+--prefix_len 32800 \
+--hot_cluster_duplicate
+
+echo "Processing next configuration..."
+
+python simulator.py \
+--max_latency_calculate \
+--csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
+--num_channels 1 \
+--chips_per_channel 1 \
+--dies_per_chip 1 \
+--page_size_bytes 16384 \
+--vector_bytes 4 \
+--flash_read_latency_us 50 \
+--num_heads 8 \
+--cluster_size 32 \
+--window_size 64 \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
+--num_replica 4 \
+--hot_cluster_ratio 0.08 \
+--planes_per_die 32 \
+--budget_ratio 0.02 \
+--model_name qwen2.5-32b \
+--dataset pg19 \
+--generate_name speculate_9_132 \
+--prefix_len 32800 \
+--hot_cluster_duplicate
+
+echo "Processing next configuration..."
+
+python simulator.py \
+--max_latency_calculate \
+--csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
+--num_channels 1 \
+--chips_per_channel 1 \
+--dies_per_chip 1 \
+--page_size_bytes 16384 \
+--vector_bytes 4 \
+--flash_read_latency_us 50 \
+--num_heads 8 \
+--cluster_size 32 \
+--window_size 64 \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
+--num_replica 4 \
+--hot_cluster_ratio 0.08 \
+--planes_per_die 32 \
+--budget_ratio 0.02 \
+--model_name qwen2.5-32b \
+--dataset pg19 \
+--generate_name speculate_9_136 \
+--prefix_len 32800 \
+--hot_cluster_duplicate
+
+echo "Processing next configuration..."
+
+python simulator.py \
+--max_latency_calculate \
+--csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
+--num_channels 1 \
+--chips_per_channel 1 \
+--dies_per_chip 1 \
+--page_size_bytes 16384 \
+--vector_bytes 4 \
+--flash_read_latency_us 50 \
+--num_heads 8 \
+--cluster_size 32 \
+--window_size 64 \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
+--num_replica 4 \
+--hot_cluster_ratio 0.08 \
+--planes_per_die 32 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_0_0 \
@@ -30514,12 +33098,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_0_1 \
@@ -30540,12 +33124,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_0_2 \
@@ -30566,12 +33150,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_0_3 \
@@ -30592,12 +33176,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_0_4 \
@@ -30618,12 +33202,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_0_5 \
@@ -30644,12 +33228,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_0_6 \
@@ -30670,12 +33254,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_0_7 \
@@ -30696,12 +33280,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_0_8 \
@@ -30722,12 +33306,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_0_9 \
@@ -30748,12 +33332,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_0_10 \
@@ -30774,12 +33358,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_0_11 \
@@ -30800,12 +33384,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_0_12 \
@@ -30826,12 +33410,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_0_13 \
@@ -30852,12 +33436,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_0_14 \
@@ -30878,12 +33462,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_0_15 \
@@ -30904,12 +33488,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_0_16 \
@@ -30930,12 +33514,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_0_17 \
@@ -30956,12 +33540,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_0_18 \
@@ -30982,12 +33566,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_0_19 \
@@ -31008,12 +33592,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_0_20 \
@@ -31034,12 +33618,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_0_21 \
@@ -31060,12 +33644,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_0_22 \
@@ -31086,12 +33670,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_0_23 \
@@ -31112,12 +33696,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_0_24 \
@@ -31138,12 +33722,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_1_0 \
@@ -31164,12 +33748,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_1_1 \
@@ -31190,12 +33774,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_1_2 \
@@ -31216,12 +33800,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_1_3 \
@@ -31242,12 +33826,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_1_4 \
@@ -31268,12 +33852,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_1_5 \
@@ -31294,12 +33878,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_1_6 \
@@ -31320,12 +33904,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_1_7 \
@@ -31346,12 +33930,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_1_8 \
@@ -31372,12 +33956,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_1_9 \
@@ -31398,12 +33982,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_1_10 \
@@ -31424,12 +34008,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_1_11 \
@@ -31450,12 +34034,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_1_12 \
@@ -31476,12 +34060,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_1_13 \
@@ -31502,12 +34086,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_1_14 \
@@ -31528,12 +34112,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_1_15 \
@@ -31554,12 +34138,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_1_16 \
@@ -31580,12 +34164,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_1_17 \
@@ -31606,12 +34190,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_1_18 \
@@ -31632,12 +34216,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_1_19 \
@@ -31658,12 +34242,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_1_20 \
@@ -31684,12 +34268,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_1_21 \
@@ -31710,12 +34294,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_1_22 \
@@ -31736,12 +34320,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_1_23 \
@@ -31762,12 +34346,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_2_0 \
@@ -31788,12 +34372,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_2_1 \
@@ -31814,12 +34398,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_2_2 \
@@ -31840,12 +34424,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_2_3 \
@@ -31866,12 +34450,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_2_4 \
@@ -31892,12 +34476,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_2_5 \
@@ -31918,12 +34502,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_2_6 \
@@ -31944,12 +34528,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_2_7 \
@@ -31970,12 +34554,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_2_8 \
@@ -31996,12 +34580,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_2_9 \
@@ -32022,12 +34606,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_2_10 \
@@ -32048,12 +34632,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_2_11 \
@@ -32074,12 +34658,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_2_12 \
@@ -32100,12 +34684,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_2_13 \
@@ -32126,12 +34710,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_2_14 \
@@ -32152,12 +34736,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_2_15 \
@@ -32178,12 +34762,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_2_16 \
@@ -32204,12 +34788,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_2_17 \
@@ -32230,12 +34814,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_2_18 \
@@ -32256,12 +34840,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_2_19 \
@@ -32282,12 +34866,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_2_20 \
@@ -32308,12 +34892,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_2_21 \
@@ -32334,12 +34918,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_2_22 \
@@ -32360,12 +34944,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_2_23 \
@@ -32386,12 +34970,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_2_24 \
@@ -32412,12 +34996,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_3_0 \
@@ -32438,12 +35022,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_3_1 \
@@ -32464,12 +35048,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_3_2 \
@@ -32490,12 +35074,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_3_3 \
@@ -32516,12 +35100,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_3_4 \
@@ -32542,12 +35126,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_3_5 \
@@ -32568,12 +35152,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_3_6 \
@@ -32594,12 +35178,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_3_7 \
@@ -32620,12 +35204,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_3_8 \
@@ -32646,12 +35230,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_3_9 \
@@ -32672,12 +35256,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_3_10 \
@@ -32698,12 +35282,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_3_11 \
@@ -32724,12 +35308,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_3_12 \
@@ -32750,12 +35334,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_3_13 \
@@ -32776,12 +35360,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_3_14 \
@@ -32802,12 +35386,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_3_15 \
@@ -32828,12 +35412,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_3_16 \
@@ -32854,12 +35438,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_3_17 \
@@ -32880,12 +35464,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_3_18 \
@@ -32906,12 +35490,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_3_19 \
@@ -32932,12 +35516,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_3_20 \
@@ -32958,12 +35542,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_3_21 \
@@ -32984,12 +35568,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_3_22 \
@@ -33010,12 +35594,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_3_23 \
@@ -33036,12 +35620,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_3_24 \
@@ -33062,12 +35646,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_3_25 \
@@ -33088,12 +35672,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_3_26 \
@@ -33114,12 +35698,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_3_27 \
@@ -33140,12 +35724,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_3_28 \
@@ -33166,12 +35750,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_3_29 \
@@ -33192,12 +35776,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_3_30 \
@@ -33218,12 +35802,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_3_31 \
@@ -33244,12 +35828,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_3_32 \
@@ -33270,12 +35854,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_3_33 \
@@ -33296,12 +35880,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_3_34 \
@@ -33322,12 +35906,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_3_35 \
@@ -33348,12 +35932,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_3_36 \
@@ -33374,12 +35958,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_3_37 \
@@ -33400,428 +35984,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
---model_name qwen2.5-32b \
---dataset pg19 \
---generate_name verify_3_38 \
---prefix_len 32800 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 32 \
---window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.25 \
---model_name qwen2.5-32b \
---dataset pg19 \
---generate_name verify_3_39 \
---prefix_len 32800 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 32 \
---window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.25 \
---model_name qwen2.5-32b \
---dataset pg19 \
---generate_name verify_3_40 \
---prefix_len 32800 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 32 \
---window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.25 \
---model_name qwen2.5-32b \
---dataset pg19 \
---generate_name verify_3_41 \
---prefix_len 32800 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 32 \
---window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.25 \
---model_name qwen2.5-32b \
---dataset pg19 \
---generate_name verify_3_42 \
---prefix_len 32800 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 32 \
---window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.25 \
---model_name qwen2.5-32b \
---dataset pg19 \
---generate_name verify_3_43 \
---prefix_len 32800 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 32 \
---window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.25 \
---model_name qwen2.5-32b \
---dataset pg19 \
---generate_name verify_3_44 \
---prefix_len 32800 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 32 \
---window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.25 \
---model_name qwen2.5-32b \
---dataset pg19 \
---generate_name verify_3_45 \
---prefix_len 32800 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 32 \
---window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.25 \
---model_name qwen2.5-32b \
---dataset pg19 \
---generate_name verify_3_46 \
---prefix_len 32800 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 32 \
---window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.25 \
---model_name qwen2.5-32b \
---dataset pg19 \
---generate_name verify_3_47 \
---prefix_len 32800 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 32 \
---window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.25 \
---model_name qwen2.5-32b \
---dataset pg19 \
---generate_name verify_3_48 \
---prefix_len 32800 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 32 \
---window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.25 \
---model_name qwen2.5-32b \
---dataset pg19 \
---generate_name verify_3_49 \
---prefix_len 32800 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 32 \
---window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.25 \
---model_name qwen2.5-32b \
---dataset pg19 \
---generate_name verify_3_50 \
---prefix_len 32800 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 32 \
---window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.25 \
---model_name qwen2.5-32b \
---dataset pg19 \
---generate_name verify_3_51 \
---prefix_len 32800 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 32 \
---window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.25 \
---model_name qwen2.5-32b \
---dataset pg19 \
---generate_name verify_3_52 \
---prefix_len 32800 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 32 \
---window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.25 \
---model_name qwen2.5-32b \
---dataset pg19 \
---generate_name verify_3_53 \
---prefix_len 32800 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 32 \
---window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_4_0 \
@@ -33842,12 +36010,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_4_1 \
@@ -33868,12 +36036,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_4_2 \
@@ -33894,12 +36062,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_4_3 \
@@ -33920,12 +36088,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_4_4 \
@@ -33946,12 +36114,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_4_5 \
@@ -33972,12 +36140,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_4_6 \
@@ -33998,12 +36166,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_4_7 \
@@ -34024,12 +36192,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_4_8 \
@@ -34050,12 +36218,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_4_9 \
@@ -34076,12 +36244,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_4_10 \
@@ -34102,12 +36270,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_4_11 \
@@ -34128,12 +36296,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_4_12 \
@@ -34154,12 +36322,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_4_13 \
@@ -34180,12 +36348,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_4_14 \
@@ -34206,12 +36374,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_4_15 \
@@ -34232,12 +36400,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_4_16 \
@@ -34258,12 +36426,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_4_17 \
@@ -34284,12 +36452,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_4_18 \
@@ -34310,12 +36478,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_4_19 \
@@ -34336,12 +36504,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_4_20 \
@@ -34362,12 +36530,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_4_21 \
@@ -34388,12 +36556,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_4_22 \
@@ -34414,12 +36582,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_4_23 \
@@ -34440,12 +36608,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_4_24 \
@@ -34466,12 +36634,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_4_25 \
@@ -34492,12 +36660,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_4_26 \
@@ -34518,12 +36686,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_4_27 \
@@ -34544,12 +36712,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_4_28 \
@@ -34570,12 +36738,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_4_29 \
@@ -34596,12 +36764,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_4_30 \
@@ -34622,12 +36790,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_4_31 \
@@ -34648,12 +36816,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_4_32 \
@@ -34674,12 +36842,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_4_33 \
@@ -34700,12 +36868,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_4_34 \
@@ -34726,12 +36894,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_4_35 \
@@ -34752,12 +36920,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_4_36 \
@@ -34778,12 +36946,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_4_37 \
@@ -34804,12 +36972,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_4_38 \
@@ -34830,12 +36998,662 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
+--model_name qwen2.5-32b \
+--dataset pg19 \
+--generate_name verify_4_39 \
+--prefix_len 32800 \
+--hot_cluster_duplicate
+
+echo "Processing next configuration..."
+
+python simulator.py \
+--max_latency_calculate \
+--csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
+--num_channels 1 \
+--chips_per_channel 1 \
+--dies_per_chip 1 \
+--page_size_bytes 16384 \
+--vector_bytes 4 \
+--flash_read_latency_us 50 \
+--num_heads 8 \
+--cluster_size 32 \
+--window_size 64 \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
+--num_replica 4 \
+--hot_cluster_ratio 0.08 \
+--planes_per_die 32 \
+--budget_ratio 0.40 \
+--model_name qwen2.5-32b \
+--dataset pg19 \
+--generate_name verify_4_40 \
+--prefix_len 32800 \
+--hot_cluster_duplicate
+
+echo "Processing next configuration..."
+
+python simulator.py \
+--max_latency_calculate \
+--csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
+--num_channels 1 \
+--chips_per_channel 1 \
+--dies_per_chip 1 \
+--page_size_bytes 16384 \
+--vector_bytes 4 \
+--flash_read_latency_us 50 \
+--num_heads 8 \
+--cluster_size 32 \
+--window_size 64 \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
+--num_replica 4 \
+--hot_cluster_ratio 0.08 \
+--planes_per_die 32 \
+--budget_ratio 0.40 \
+--model_name qwen2.5-32b \
+--dataset pg19 \
+--generate_name verify_4_41 \
+--prefix_len 32800 \
+--hot_cluster_duplicate
+
+echo "Processing next configuration..."
+
+python simulator.py \
+--max_latency_calculate \
+--csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
+--num_channels 1 \
+--chips_per_channel 1 \
+--dies_per_chip 1 \
+--page_size_bytes 16384 \
+--vector_bytes 4 \
+--flash_read_latency_us 50 \
+--num_heads 8 \
+--cluster_size 32 \
+--window_size 64 \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
+--num_replica 4 \
+--hot_cluster_ratio 0.08 \
+--planes_per_die 32 \
+--budget_ratio 0.40 \
+--model_name qwen2.5-32b \
+--dataset pg19 \
+--generate_name verify_4_42 \
+--prefix_len 32800 \
+--hot_cluster_duplicate
+
+echo "Processing next configuration..."
+
+python simulator.py \
+--max_latency_calculate \
+--csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
+--num_channels 1 \
+--chips_per_channel 1 \
+--dies_per_chip 1 \
+--page_size_bytes 16384 \
+--vector_bytes 4 \
+--flash_read_latency_us 50 \
+--num_heads 8 \
+--cluster_size 32 \
+--window_size 64 \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
+--num_replica 4 \
+--hot_cluster_ratio 0.08 \
+--planes_per_die 32 \
+--budget_ratio 0.40 \
+--model_name qwen2.5-32b \
+--dataset pg19 \
+--generate_name verify_4_43 \
+--prefix_len 32800 \
+--hot_cluster_duplicate
+
+echo "Processing next configuration..."
+
+python simulator.py \
+--max_latency_calculate \
+--csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
+--num_channels 1 \
+--chips_per_channel 1 \
+--dies_per_chip 1 \
+--page_size_bytes 16384 \
+--vector_bytes 4 \
+--flash_read_latency_us 50 \
+--num_heads 8 \
+--cluster_size 32 \
+--window_size 64 \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
+--num_replica 4 \
+--hot_cluster_ratio 0.08 \
+--planes_per_die 32 \
+--budget_ratio 0.40 \
+--model_name qwen2.5-32b \
+--dataset pg19 \
+--generate_name verify_4_44 \
+--prefix_len 32800 \
+--hot_cluster_duplicate
+
+echo "Processing next configuration..."
+
+python simulator.py \
+--max_latency_calculate \
+--csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
+--num_channels 1 \
+--chips_per_channel 1 \
+--dies_per_chip 1 \
+--page_size_bytes 16384 \
+--vector_bytes 4 \
+--flash_read_latency_us 50 \
+--num_heads 8 \
+--cluster_size 32 \
+--window_size 64 \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
+--num_replica 4 \
+--hot_cluster_ratio 0.08 \
+--planes_per_die 32 \
+--budget_ratio 0.40 \
+--model_name qwen2.5-32b \
+--dataset pg19 \
+--generate_name verify_4_45 \
+--prefix_len 32800 \
+--hot_cluster_duplicate
+
+echo "Processing next configuration..."
+
+python simulator.py \
+--max_latency_calculate \
+--csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
+--num_channels 1 \
+--chips_per_channel 1 \
+--dies_per_chip 1 \
+--page_size_bytes 16384 \
+--vector_bytes 4 \
+--flash_read_latency_us 50 \
+--num_heads 8 \
+--cluster_size 32 \
+--window_size 64 \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
+--num_replica 4 \
+--hot_cluster_ratio 0.08 \
+--planes_per_die 32 \
+--budget_ratio 0.40 \
+--model_name qwen2.5-32b \
+--dataset pg19 \
+--generate_name verify_4_46 \
+--prefix_len 32800 \
+--hot_cluster_duplicate
+
+echo "Processing next configuration..."
+
+python simulator.py \
+--max_latency_calculate \
+--csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
+--num_channels 1 \
+--chips_per_channel 1 \
+--dies_per_chip 1 \
+--page_size_bytes 16384 \
+--vector_bytes 4 \
+--flash_read_latency_us 50 \
+--num_heads 8 \
+--cluster_size 32 \
+--window_size 64 \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
+--num_replica 4 \
+--hot_cluster_ratio 0.08 \
+--planes_per_die 32 \
+--budget_ratio 0.40 \
+--model_name qwen2.5-32b \
+--dataset pg19 \
+--generate_name verify_4_47 \
+--prefix_len 32800 \
+--hot_cluster_duplicate
+
+echo "Processing next configuration..."
+
+python simulator.py \
+--max_latency_calculate \
+--csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
+--num_channels 1 \
+--chips_per_channel 1 \
+--dies_per_chip 1 \
+--page_size_bytes 16384 \
+--vector_bytes 4 \
+--flash_read_latency_us 50 \
+--num_heads 8 \
+--cluster_size 32 \
+--window_size 64 \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
+--num_replica 4 \
+--hot_cluster_ratio 0.08 \
+--planes_per_die 32 \
+--budget_ratio 0.40 \
+--model_name qwen2.5-32b \
+--dataset pg19 \
+--generate_name verify_4_48 \
+--prefix_len 32800 \
+--hot_cluster_duplicate
+
+echo "Processing next configuration..."
+
+python simulator.py \
+--max_latency_calculate \
+--csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
+--num_channels 1 \
+--chips_per_channel 1 \
+--dies_per_chip 1 \
+--page_size_bytes 16384 \
+--vector_bytes 4 \
+--flash_read_latency_us 50 \
+--num_heads 8 \
+--cluster_size 32 \
+--window_size 64 \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
+--num_replica 4 \
+--hot_cluster_ratio 0.08 \
+--planes_per_die 32 \
+--budget_ratio 0.40 \
+--model_name qwen2.5-32b \
+--dataset pg19 \
+--generate_name verify_4_49 \
+--prefix_len 32800 \
+--hot_cluster_duplicate
+
+echo "Processing next configuration..."
+
+python simulator.py \
+--max_latency_calculate \
+--csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
+--num_channels 1 \
+--chips_per_channel 1 \
+--dies_per_chip 1 \
+--page_size_bytes 16384 \
+--vector_bytes 4 \
+--flash_read_latency_us 50 \
+--num_heads 8 \
+--cluster_size 32 \
+--window_size 64 \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
+--num_replica 4 \
+--hot_cluster_ratio 0.08 \
+--planes_per_die 32 \
+--budget_ratio 0.40 \
+--model_name qwen2.5-32b \
+--dataset pg19 \
+--generate_name verify_4_50 \
+--prefix_len 32800 \
+--hot_cluster_duplicate
+
+echo "Processing next configuration..."
+
+python simulator.py \
+--max_latency_calculate \
+--csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
+--num_channels 1 \
+--chips_per_channel 1 \
+--dies_per_chip 1 \
+--page_size_bytes 16384 \
+--vector_bytes 4 \
+--flash_read_latency_us 50 \
+--num_heads 8 \
+--cluster_size 32 \
+--window_size 64 \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
+--num_replica 4 \
+--hot_cluster_ratio 0.08 \
+--planes_per_die 32 \
+--budget_ratio 0.40 \
+--model_name qwen2.5-32b \
+--dataset pg19 \
+--generate_name verify_4_51 \
+--prefix_len 32800 \
+--hot_cluster_duplicate
+
+echo "Processing next configuration..."
+
+python simulator.py \
+--max_latency_calculate \
+--csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
+--num_channels 1 \
+--chips_per_channel 1 \
+--dies_per_chip 1 \
+--page_size_bytes 16384 \
+--vector_bytes 4 \
+--flash_read_latency_us 50 \
+--num_heads 8 \
+--cluster_size 32 \
+--window_size 64 \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
+--num_replica 4 \
+--hot_cluster_ratio 0.08 \
+--planes_per_die 32 \
+--budget_ratio 0.40 \
+--model_name qwen2.5-32b \
+--dataset pg19 \
+--generate_name verify_4_52 \
+--prefix_len 32800 \
+--hot_cluster_duplicate
+
+echo "Processing next configuration..."
+
+python simulator.py \
+--max_latency_calculate \
+--csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
+--num_channels 1 \
+--chips_per_channel 1 \
+--dies_per_chip 1 \
+--page_size_bytes 16384 \
+--vector_bytes 4 \
+--flash_read_latency_us 50 \
+--num_heads 8 \
+--cluster_size 32 \
+--window_size 64 \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
+--num_replica 4 \
+--hot_cluster_ratio 0.08 \
+--planes_per_die 32 \
+--budget_ratio 0.40 \
+--model_name qwen2.5-32b \
+--dataset pg19 \
+--generate_name verify_4_53 \
+--prefix_len 32800 \
+--hot_cluster_duplicate
+
+echo "Processing next configuration..."
+
+python simulator.py \
+--max_latency_calculate \
+--csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
+--num_channels 1 \
+--chips_per_channel 1 \
+--dies_per_chip 1 \
+--page_size_bytes 16384 \
+--vector_bytes 4 \
+--flash_read_latency_us 50 \
+--num_heads 8 \
+--cluster_size 32 \
+--window_size 64 \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
+--num_replica 4 \
+--hot_cluster_ratio 0.08 \
+--planes_per_die 32 \
+--budget_ratio 0.40 \
+--model_name qwen2.5-32b \
+--dataset pg19 \
+--generate_name verify_4_54 \
+--prefix_len 32800 \
+--hot_cluster_duplicate
+
+echo "Processing next configuration..."
+
+python simulator.py \
+--max_latency_calculate \
+--csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
+--num_channels 1 \
+--chips_per_channel 1 \
+--dies_per_chip 1 \
+--page_size_bytes 16384 \
+--vector_bytes 4 \
+--flash_read_latency_us 50 \
+--num_heads 8 \
+--cluster_size 32 \
+--window_size 64 \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
+--num_replica 4 \
+--hot_cluster_ratio 0.08 \
+--planes_per_die 32 \
+--budget_ratio 0.40 \
+--model_name qwen2.5-32b \
+--dataset pg19 \
+--generate_name verify_4_55 \
+--prefix_len 32800 \
+--hot_cluster_duplicate
+
+echo "Processing next configuration..."
+
+python simulator.py \
+--max_latency_calculate \
+--csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
+--num_channels 1 \
+--chips_per_channel 1 \
+--dies_per_chip 1 \
+--page_size_bytes 16384 \
+--vector_bytes 4 \
+--flash_read_latency_us 50 \
+--num_heads 8 \
+--cluster_size 32 \
+--window_size 64 \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
+--num_replica 4 \
+--hot_cluster_ratio 0.08 \
+--planes_per_die 32 \
+--budget_ratio 0.40 \
+--model_name qwen2.5-32b \
+--dataset pg19 \
+--generate_name verify_4_56 \
+--prefix_len 32800 \
+--hot_cluster_duplicate
+
+echo "Processing next configuration..."
+
+python simulator.py \
+--max_latency_calculate \
+--csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
+--num_channels 1 \
+--chips_per_channel 1 \
+--dies_per_chip 1 \
+--page_size_bytes 16384 \
+--vector_bytes 4 \
+--flash_read_latency_us 50 \
+--num_heads 8 \
+--cluster_size 32 \
+--window_size 64 \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
+--num_replica 4 \
+--hot_cluster_ratio 0.08 \
+--planes_per_die 32 \
+--budget_ratio 0.40 \
+--model_name qwen2.5-32b \
+--dataset pg19 \
+--generate_name verify_4_57 \
+--prefix_len 32800 \
+--hot_cluster_duplicate
+
+echo "Processing next configuration..."
+
+python simulator.py \
+--max_latency_calculate \
+--csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
+--num_channels 1 \
+--chips_per_channel 1 \
+--dies_per_chip 1 \
+--page_size_bytes 16384 \
+--vector_bytes 4 \
+--flash_read_latency_us 50 \
+--num_heads 8 \
+--cluster_size 32 \
+--window_size 64 \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
+--num_replica 4 \
+--hot_cluster_ratio 0.08 \
+--planes_per_die 32 \
+--budget_ratio 0.40 \
+--model_name qwen2.5-32b \
+--dataset pg19 \
+--generate_name verify_4_58 \
+--prefix_len 32800 \
+--hot_cluster_duplicate
+
+echo "Processing next configuration..."
+
+python simulator.py \
+--max_latency_calculate \
+--csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
+--num_channels 1 \
+--chips_per_channel 1 \
+--dies_per_chip 1 \
+--page_size_bytes 16384 \
+--vector_bytes 4 \
+--flash_read_latency_us 50 \
+--num_heads 8 \
+--cluster_size 32 \
+--window_size 64 \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
+--num_replica 4 \
+--hot_cluster_ratio 0.08 \
+--planes_per_die 32 \
+--budget_ratio 0.40 \
+--model_name qwen2.5-32b \
+--dataset pg19 \
+--generate_name verify_4_59 \
+--prefix_len 32800 \
+--hot_cluster_duplicate
+
+echo "Processing next configuration..."
+
+python simulator.py \
+--max_latency_calculate \
+--csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
+--num_channels 1 \
+--chips_per_channel 1 \
+--dies_per_chip 1 \
+--page_size_bytes 16384 \
+--vector_bytes 4 \
+--flash_read_latency_us 50 \
+--num_heads 8 \
+--cluster_size 32 \
+--window_size 64 \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
+--num_replica 4 \
+--hot_cluster_ratio 0.08 \
+--planes_per_die 32 \
+--budget_ratio 0.40 \
+--model_name qwen2.5-32b \
+--dataset pg19 \
+--generate_name verify_4_60 \
+--prefix_len 32800 \
+--hot_cluster_duplicate
+
+echo "Processing next configuration..."
+
+python simulator.py \
+--max_latency_calculate \
+--csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
+--num_channels 1 \
+--chips_per_channel 1 \
+--dies_per_chip 1 \
+--page_size_bytes 16384 \
+--vector_bytes 4 \
+--flash_read_latency_us 50 \
+--num_heads 8 \
+--cluster_size 32 \
+--window_size 64 \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
+--num_replica 4 \
+--hot_cluster_ratio 0.08 \
+--planes_per_die 32 \
+--budget_ratio 0.40 \
+--model_name qwen2.5-32b \
+--dataset pg19 \
+--generate_name verify_4_61 \
+--prefix_len 32800 \
+--hot_cluster_duplicate
+
+echo "Processing next configuration..."
+
+python simulator.py \
+--max_latency_calculate \
+--csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
+--num_channels 1 \
+--chips_per_channel 1 \
+--dies_per_chip 1 \
+--page_size_bytes 16384 \
+--vector_bytes 4 \
+--flash_read_latency_us 50 \
+--num_heads 8 \
+--cluster_size 32 \
+--window_size 64 \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
+--num_replica 4 \
+--hot_cluster_ratio 0.08 \
+--planes_per_die 32 \
+--budget_ratio 0.40 \
+--model_name qwen2.5-32b \
+--dataset pg19 \
+--generate_name verify_4_62 \
+--prefix_len 32800 \
+--hot_cluster_duplicate
+
+echo "Processing next configuration..."
+
+python simulator.py \
+--max_latency_calculate \
+--csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
+--num_channels 1 \
+--chips_per_channel 1 \
+--dies_per_chip 1 \
+--page_size_bytes 16384 \
+--vector_bytes 4 \
+--flash_read_latency_us 50 \
+--num_heads 8 \
+--cluster_size 32 \
+--window_size 64 \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
+--num_replica 4 \
+--hot_cluster_ratio 0.08 \
+--planes_per_die 32 \
+--budget_ratio 0.40 \
+--model_name qwen2.5-32b \
+--dataset pg19 \
+--generate_name verify_4_63 \
+--prefix_len 32800 \
+--hot_cluster_duplicate
+
+echo "Processing next configuration..."
+
+python simulator.py \
+--max_latency_calculate \
+--csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
+--num_channels 1 \
+--chips_per_channel 1 \
+--dies_per_chip 1 \
+--page_size_bytes 16384 \
+--vector_bytes 4 \
+--flash_read_latency_us 50 \
+--num_heads 8 \
+--cluster_size 32 \
+--window_size 64 \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
+--num_replica 4 \
+--hot_cluster_ratio 0.08 \
+--planes_per_die 32 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_5_0 \
@@ -34856,12 +37674,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_5_1 \
@@ -34882,12 +37700,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_5_2 \
@@ -34908,12 +37726,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_5_3 \
@@ -34934,12 +37752,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_5_4 \
@@ -34960,12 +37778,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_5_5 \
@@ -34986,12 +37804,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_5_6 \
@@ -35012,12 +37830,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_5_7 \
@@ -35038,12 +37856,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_5_8 \
@@ -35064,12 +37882,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_5_9 \
@@ -35090,12 +37908,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_5_10 \
@@ -35116,12 +37934,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_5_11 \
@@ -35142,12 +37960,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_5_12 \
@@ -35168,12 +37986,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_5_13 \
@@ -35194,12 +38012,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_5_14 \
@@ -35220,12 +38038,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_5_15 \
@@ -35246,12 +38064,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_5_16 \
@@ -35272,12 +38090,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_5_17 \
@@ -35298,12 +38116,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_5_18 \
@@ -35324,12 +38142,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_5_19 \
@@ -35350,12 +38168,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_5_20 \
@@ -35376,12 +38194,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_5_21 \
@@ -35402,12 +38220,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_5_22 \
@@ -35428,12 +38246,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_5_23 \
@@ -35454,12 +38272,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_5_24 \
@@ -35480,12 +38298,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_5_25 \
@@ -35506,12 +38324,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_5_26 \
@@ -35532,12 +38350,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_5_27 \
@@ -35558,12 +38376,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_5_28 \
@@ -35584,12 +38402,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_5_29 \
@@ -35610,12 +38428,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_5_30 \
@@ -35636,12 +38454,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_5_31 \
@@ -35662,12 +38480,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_5_32 \
@@ -35688,12 +38506,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_5_33 \
@@ -35714,12 +38532,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_5_34 \
@@ -35740,12 +38558,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_5_35 \
@@ -35766,12 +38584,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_5_36 \
@@ -35792,12 +38610,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_5_37 \
@@ -35818,12 +38636,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_5_38 \
@@ -35844,12 +38662,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_5_39 \
@@ -35870,12 +38688,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_5_40 \
@@ -35896,12 +38714,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_5_41 \
@@ -35922,12 +38740,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_5_42 \
@@ -35948,12 +38766,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_5_43 \
@@ -35974,12 +38792,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_5_44 \
@@ -36000,12 +38818,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_5_45 \
@@ -36026,12 +38844,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_5_46 \
@@ -36052,12 +38870,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_5_47 \
@@ -36078,12 +38896,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_5_48 \
@@ -36104,12 +38922,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_5_49 \
@@ -36130,12 +38948,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_5_50 \
@@ -36156,12 +38974,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_5_51 \
@@ -36182,12 +39000,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_5_52 \
@@ -36208,12 +39026,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_5_53 \
@@ -36234,12 +39052,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_5_54 \
@@ -36260,12 +39078,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_5_55 \
@@ -36286,12 +39104,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_5_56 \
@@ -36312,12 +39130,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_5_57 \
@@ -36338,12 +39156,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_5_58 \
@@ -36364,12 +39182,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_5_59 \
@@ -36390,12 +39208,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_5_60 \
@@ -36416,12 +39234,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_5_61 \
@@ -36442,12 +39260,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_5_62 \
@@ -36468,12 +39286,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_5_63 \
@@ -36494,12 +39312,38 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
+--model_name qwen2.5-32b \
+--dataset pg19 \
+--generate_name verify_5_64 \
+--prefix_len 32800 \
+--hot_cluster_duplicate
+
+echo "Processing next configuration..."
+
+python simulator.py \
+--max_latency_calculate \
+--csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
+--num_channels 1 \
+--chips_per_channel 1 \
+--dies_per_chip 1 \
+--page_size_bytes 16384 \
+--vector_bytes 4 \
+--flash_read_latency_us 50 \
+--num_heads 8 \
+--cluster_size 32 \
+--window_size 64 \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
+--num_replica 4 \
+--hot_cluster_ratio 0.08 \
+--planes_per_die 32 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_6_0 \
@@ -36520,12 +39364,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_6_1 \
@@ -36546,12 +39390,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_6_2 \
@@ -36572,12 +39416,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_6_3 \
@@ -36598,12 +39442,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_6_4 \
@@ -36624,12 +39468,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_6_5 \
@@ -36650,12 +39494,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_6_6 \
@@ -36676,12 +39520,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_6_7 \
@@ -36702,12 +39546,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_6_8 \
@@ -36728,12 +39572,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_6_9 \
@@ -36754,12 +39598,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_6_10 \
@@ -36780,12 +39624,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_6_11 \
@@ -36806,12 +39650,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_6_12 \
@@ -36832,12 +39676,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_6_13 \
@@ -36858,12 +39702,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_6_14 \
@@ -36884,12 +39728,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_6_15 \
@@ -36910,12 +39754,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_6_16 \
@@ -36936,12 +39780,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_6_17 \
@@ -36962,12 +39806,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_6_18 \
@@ -36988,12 +39832,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_6_19 \
@@ -37014,12 +39858,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_6_20 \
@@ -37040,12 +39884,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_6_21 \
@@ -37066,12 +39910,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_6_22 \
@@ -37092,12 +39936,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_6_23 \
@@ -37118,12 +39962,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_6_24 \
@@ -37144,12 +39988,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_6_25 \
@@ -37170,12 +40014,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_6_26 \
@@ -37196,12 +40040,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_6_27 \
@@ -37222,12 +40066,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_6_28 \
@@ -37248,12 +40092,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_6_29 \
@@ -37274,12 +40118,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_6_30 \
@@ -37300,12 +40144,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_6_31 \
@@ -37326,12 +40170,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_6_32 \
@@ -37352,12 +40196,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_6_33 \
@@ -37378,12 +40222,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_6_34 \
@@ -37404,12 +40248,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_6_35 \
@@ -37430,12 +40274,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_6_36 \
@@ -37456,12 +40300,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_6_37 \
@@ -37482,12 +40326,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_6_38 \
@@ -37508,12 +40352,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_6_39 \
@@ -37534,12 +40378,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_6_40 \
@@ -37560,12 +40404,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_6_41 \
@@ -37586,220 +40430,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
---model_name qwen2.5-32b \
---dataset pg19 \
---generate_name verify_6_42 \
---prefix_len 32800 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 32 \
---window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.25 \
---model_name qwen2.5-32b \
---dataset pg19 \
---generate_name verify_6_43 \
---prefix_len 32800 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 32 \
---window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.25 \
---model_name qwen2.5-32b \
---dataset pg19 \
---generate_name verify_6_44 \
---prefix_len 32800 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 32 \
---window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.25 \
---model_name qwen2.5-32b \
---dataset pg19 \
---generate_name verify_6_45 \
---prefix_len 32800 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 32 \
---window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.25 \
---model_name qwen2.5-32b \
---dataset pg19 \
---generate_name verify_6_46 \
---prefix_len 32800 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 32 \
---window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.25 \
---model_name qwen2.5-32b \
---dataset pg19 \
---generate_name verify_6_47 \
---prefix_len 32800 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 32 \
---window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.25 \
---model_name qwen2.5-32b \
---dataset pg19 \
---generate_name verify_6_48 \
---prefix_len 32800 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 32 \
---window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.25 \
---model_name qwen2.5-32b \
---dataset pg19 \
---generate_name verify_6_49 \
---prefix_len 32800 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 32 \
---window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_7_0 \
@@ -37820,12 +40456,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_7_1 \
@@ -37846,12 +40482,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_7_2 \
@@ -37872,12 +40508,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_7_3 \
@@ -37898,12 +40534,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_7_4 \
@@ -37924,12 +40560,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_7_5 \
@@ -37950,12 +40586,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_7_6 \
@@ -37976,12 +40612,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_7_7 \
@@ -38002,12 +40638,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_7_8 \
@@ -38028,12 +40664,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_7_9 \
@@ -38054,12 +40690,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_7_10 \
@@ -38080,12 +40716,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_7_11 \
@@ -38106,12 +40742,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_7_12 \
@@ -38132,12 +40768,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_7_13 \
@@ -38158,12 +40794,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_7_14 \
@@ -38184,12 +40820,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_7_15 \
@@ -38210,12 +40846,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_7_16 \
@@ -38236,12 +40872,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_7_17 \
@@ -38262,12 +40898,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_7_18 \
@@ -38288,12 +40924,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_7_19 \
@@ -38314,12 +40950,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_7_20 \
@@ -38340,12 +40976,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_7_21 \
@@ -38366,12 +41002,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_7_22 \
@@ -38392,12 +41028,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_7_23 \
@@ -38418,12 +41054,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_7_24 \
@@ -38444,12 +41080,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_7_25 \
@@ -38470,12 +41106,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_7_26 \
@@ -38496,12 +41132,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_7_27 \
@@ -38522,12 +41158,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_7_28 \
@@ -38548,12 +41184,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_7_29 \
@@ -38574,12 +41210,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_7_30 \
@@ -38600,12 +41236,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_7_31 \
@@ -38626,12 +41262,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_7_32 \
@@ -38652,12 +41288,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_7_33 \
@@ -38678,12 +41314,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_7_34 \
@@ -38704,12 +41340,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_7_35 \
@@ -38730,12 +41366,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_7_36 \
@@ -38756,12 +41392,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_7_37 \
@@ -38782,12 +41418,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_7_38 \
@@ -38808,12 +41444,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_7_39 \
@@ -38834,12 +41470,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_7_40 \
@@ -38860,12 +41496,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_7_41 \
@@ -38886,12 +41522,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_7_42 \
@@ -38912,12 +41548,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_7_43 \
@@ -38938,12 +41574,298 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
+--model_name qwen2.5-32b \
+--dataset pg19 \
+--generate_name verify_7_44 \
+--prefix_len 32800 \
+--hot_cluster_duplicate
+
+echo "Processing next configuration..."
+
+python simulator.py \
+--max_latency_calculate \
+--csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
+--num_channels 1 \
+--chips_per_channel 1 \
+--dies_per_chip 1 \
+--page_size_bytes 16384 \
+--vector_bytes 4 \
+--flash_read_latency_us 50 \
+--num_heads 8 \
+--cluster_size 32 \
+--window_size 64 \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
+--num_replica 4 \
+--hot_cluster_ratio 0.08 \
+--planes_per_die 32 \
+--budget_ratio 0.40 \
+--model_name qwen2.5-32b \
+--dataset pg19 \
+--generate_name verify_7_45 \
+--prefix_len 32800 \
+--hot_cluster_duplicate
+
+echo "Processing next configuration..."
+
+python simulator.py \
+--max_latency_calculate \
+--csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
+--num_channels 1 \
+--chips_per_channel 1 \
+--dies_per_chip 1 \
+--page_size_bytes 16384 \
+--vector_bytes 4 \
+--flash_read_latency_us 50 \
+--num_heads 8 \
+--cluster_size 32 \
+--window_size 64 \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
+--num_replica 4 \
+--hot_cluster_ratio 0.08 \
+--planes_per_die 32 \
+--budget_ratio 0.40 \
+--model_name qwen2.5-32b \
+--dataset pg19 \
+--generate_name verify_7_46 \
+--prefix_len 32800 \
+--hot_cluster_duplicate
+
+echo "Processing next configuration..."
+
+python simulator.py \
+--max_latency_calculate \
+--csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
+--num_channels 1 \
+--chips_per_channel 1 \
+--dies_per_chip 1 \
+--page_size_bytes 16384 \
+--vector_bytes 4 \
+--flash_read_latency_us 50 \
+--num_heads 8 \
+--cluster_size 32 \
+--window_size 64 \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
+--num_replica 4 \
+--hot_cluster_ratio 0.08 \
+--planes_per_die 32 \
+--budget_ratio 0.40 \
+--model_name qwen2.5-32b \
+--dataset pg19 \
+--generate_name verify_7_47 \
+--prefix_len 32800 \
+--hot_cluster_duplicate
+
+echo "Processing next configuration..."
+
+python simulator.py \
+--max_latency_calculate \
+--csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
+--num_channels 1 \
+--chips_per_channel 1 \
+--dies_per_chip 1 \
+--page_size_bytes 16384 \
+--vector_bytes 4 \
+--flash_read_latency_us 50 \
+--num_heads 8 \
+--cluster_size 32 \
+--window_size 64 \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
+--num_replica 4 \
+--hot_cluster_ratio 0.08 \
+--planes_per_die 32 \
+--budget_ratio 0.40 \
+--model_name qwen2.5-32b \
+--dataset pg19 \
+--generate_name verify_7_48 \
+--prefix_len 32800 \
+--hot_cluster_duplicate
+
+echo "Processing next configuration..."
+
+python simulator.py \
+--max_latency_calculate \
+--csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
+--num_channels 1 \
+--chips_per_channel 1 \
+--dies_per_chip 1 \
+--page_size_bytes 16384 \
+--vector_bytes 4 \
+--flash_read_latency_us 50 \
+--num_heads 8 \
+--cluster_size 32 \
+--window_size 64 \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
+--num_replica 4 \
+--hot_cluster_ratio 0.08 \
+--planes_per_die 32 \
+--budget_ratio 0.40 \
+--model_name qwen2.5-32b \
+--dataset pg19 \
+--generate_name verify_7_49 \
+--prefix_len 32800 \
+--hot_cluster_duplicate
+
+echo "Processing next configuration..."
+
+python simulator.py \
+--max_latency_calculate \
+--csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
+--num_channels 1 \
+--chips_per_channel 1 \
+--dies_per_chip 1 \
+--page_size_bytes 16384 \
+--vector_bytes 4 \
+--flash_read_latency_us 50 \
+--num_heads 8 \
+--cluster_size 32 \
+--window_size 64 \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
+--num_replica 4 \
+--hot_cluster_ratio 0.08 \
+--planes_per_die 32 \
+--budget_ratio 0.40 \
+--model_name qwen2.5-32b \
+--dataset pg19 \
+--generate_name verify_7_50 \
+--prefix_len 32800 \
+--hot_cluster_duplicate
+
+echo "Processing next configuration..."
+
+python simulator.py \
+--max_latency_calculate \
+--csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
+--num_channels 1 \
+--chips_per_channel 1 \
+--dies_per_chip 1 \
+--page_size_bytes 16384 \
+--vector_bytes 4 \
+--flash_read_latency_us 50 \
+--num_heads 8 \
+--cluster_size 32 \
+--window_size 64 \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
+--num_replica 4 \
+--hot_cluster_ratio 0.08 \
+--planes_per_die 32 \
+--budget_ratio 0.40 \
+--model_name qwen2.5-32b \
+--dataset pg19 \
+--generate_name verify_7_51 \
+--prefix_len 32800 \
+--hot_cluster_duplicate
+
+echo "Processing next configuration..."
+
+python simulator.py \
+--max_latency_calculate \
+--csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
+--num_channels 1 \
+--chips_per_channel 1 \
+--dies_per_chip 1 \
+--page_size_bytes 16384 \
+--vector_bytes 4 \
+--flash_read_latency_us 50 \
+--num_heads 8 \
+--cluster_size 32 \
+--window_size 64 \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
+--num_replica 4 \
+--hot_cluster_ratio 0.08 \
+--planes_per_die 32 \
+--budget_ratio 0.40 \
+--model_name qwen2.5-32b \
+--dataset pg19 \
+--generate_name verify_7_52 \
+--prefix_len 32800 \
+--hot_cluster_duplicate
+
+echo "Processing next configuration..."
+
+python simulator.py \
+--max_latency_calculate \
+--csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
+--num_channels 1 \
+--chips_per_channel 1 \
+--dies_per_chip 1 \
+--page_size_bytes 16384 \
+--vector_bytes 4 \
+--flash_read_latency_us 50 \
+--num_heads 8 \
+--cluster_size 32 \
+--window_size 64 \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
+--num_replica 4 \
+--hot_cluster_ratio 0.08 \
+--planes_per_die 32 \
+--budget_ratio 0.40 \
+--model_name qwen2.5-32b \
+--dataset pg19 \
+--generate_name verify_7_53 \
+--prefix_len 32800 \
+--hot_cluster_duplicate
+
+echo "Processing next configuration..."
+
+python simulator.py \
+--max_latency_calculate \
+--csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
+--num_channels 1 \
+--chips_per_channel 1 \
+--dies_per_chip 1 \
+--page_size_bytes 16384 \
+--vector_bytes 4 \
+--flash_read_latency_us 50 \
+--num_heads 8 \
+--cluster_size 32 \
+--window_size 64 \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
+--num_replica 4 \
+--hot_cluster_ratio 0.08 \
+--planes_per_die 32 \
+--budget_ratio 0.40 \
+--model_name qwen2.5-32b \
+--dataset pg19 \
+--generate_name verify_7_54 \
+--prefix_len 32800 \
+--hot_cluster_duplicate
+
+echo "Processing next configuration..."
+
+python simulator.py \
+--max_latency_calculate \
+--csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
+--num_channels 1 \
+--chips_per_channel 1 \
+--dies_per_chip 1 \
+--page_size_bytes 16384 \
+--vector_bytes 4 \
+--flash_read_latency_us 50 \
+--num_heads 8 \
+--cluster_size 32 \
+--window_size 64 \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
+--num_replica 4 \
+--hot_cluster_ratio 0.08 \
+--planes_per_die 32 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_8_0 \
@@ -38964,12 +41886,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_8_1 \
@@ -38990,12 +41912,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_8_2 \
@@ -39016,12 +41938,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_8_3 \
@@ -39042,12 +41964,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_8_4 \
@@ -39068,12 +41990,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_8_5 \
@@ -39094,12 +42016,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_8_6 \
@@ -39120,12 +42042,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_8_7 \
@@ -39146,12 +42068,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_8_8 \
@@ -39172,12 +42094,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_8_9 \
@@ -39198,12 +42120,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_8_10 \
@@ -39224,12 +42146,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_8_11 \
@@ -39250,12 +42172,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_8_12 \
@@ -39276,12 +42198,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_8_13 \
@@ -39302,12 +42224,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_8_14 \
@@ -39328,12 +42250,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_8_15 \
@@ -39354,12 +42276,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_8_16 \
@@ -39380,12 +42302,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_8_17 \
@@ -39406,12 +42328,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_8_18 \
@@ -39432,12 +42354,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_8_19 \
@@ -39458,12 +42380,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_8_20 \
@@ -39484,12 +42406,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_8_21 \
@@ -39510,12 +42432,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_8_22 \
@@ -39536,12 +42458,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_8_23 \
@@ -39562,12 +42484,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_8_24 \
@@ -39588,12 +42510,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_8_25 \
@@ -39614,12 +42536,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_8_26 \
@@ -39640,12 +42562,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_8_27 \
@@ -39666,12 +42588,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_8_28 \
@@ -39692,12 +42614,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_8_29 \
@@ -39718,12 +42640,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_8_30 \
@@ -39744,12 +42666,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_8_31 \
@@ -39770,12 +42692,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_8_32 \
@@ -39796,12 +42718,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_8_33 \
@@ -39822,12 +42744,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_8_34 \
@@ -39848,12 +42770,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_8_35 \
@@ -39874,12 +42796,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_8_36 \
@@ -39900,12 +42822,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_8_37 \
@@ -39926,12 +42848,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_8_38 \
@@ -39952,12 +42874,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_8_39 \
@@ -39978,12 +42900,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_8_40 \
@@ -40004,12 +42926,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_8_41 \
@@ -40030,12 +42952,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_8_42 \
@@ -40056,12 +42978,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_8_43 \
@@ -40082,12 +43004,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_8_44 \
@@ -40108,12 +43030,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_8_45 \
@@ -40134,12 +43056,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_8_46 \
@@ -40160,12 +43082,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_8_47 \
@@ -40186,12 +43108,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_8_48 \
@@ -40212,12 +43134,350 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
+--model_name qwen2.5-32b \
+--dataset pg19 \
+--generate_name verify_8_49 \
+--prefix_len 32800 \
+--hot_cluster_duplicate
+
+echo "Processing next configuration..."
+
+python simulator.py \
+--max_latency_calculate \
+--csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
+--num_channels 1 \
+--chips_per_channel 1 \
+--dies_per_chip 1 \
+--page_size_bytes 16384 \
+--vector_bytes 4 \
+--flash_read_latency_us 50 \
+--num_heads 8 \
+--cluster_size 32 \
+--window_size 64 \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
+--num_replica 4 \
+--hot_cluster_ratio 0.08 \
+--planes_per_die 32 \
+--budget_ratio 0.40 \
+--model_name qwen2.5-32b \
+--dataset pg19 \
+--generate_name verify_8_50 \
+--prefix_len 32800 \
+--hot_cluster_duplicate
+
+echo "Processing next configuration..."
+
+python simulator.py \
+--max_latency_calculate \
+--csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
+--num_channels 1 \
+--chips_per_channel 1 \
+--dies_per_chip 1 \
+--page_size_bytes 16384 \
+--vector_bytes 4 \
+--flash_read_latency_us 50 \
+--num_heads 8 \
+--cluster_size 32 \
+--window_size 64 \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
+--num_replica 4 \
+--hot_cluster_ratio 0.08 \
+--planes_per_die 32 \
+--budget_ratio 0.40 \
+--model_name qwen2.5-32b \
+--dataset pg19 \
+--generate_name verify_8_51 \
+--prefix_len 32800 \
+--hot_cluster_duplicate
+
+echo "Processing next configuration..."
+
+python simulator.py \
+--max_latency_calculate \
+--csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
+--num_channels 1 \
+--chips_per_channel 1 \
+--dies_per_chip 1 \
+--page_size_bytes 16384 \
+--vector_bytes 4 \
+--flash_read_latency_us 50 \
+--num_heads 8 \
+--cluster_size 32 \
+--window_size 64 \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
+--num_replica 4 \
+--hot_cluster_ratio 0.08 \
+--planes_per_die 32 \
+--budget_ratio 0.40 \
+--model_name qwen2.5-32b \
+--dataset pg19 \
+--generate_name verify_8_52 \
+--prefix_len 32800 \
+--hot_cluster_duplicate
+
+echo "Processing next configuration..."
+
+python simulator.py \
+--max_latency_calculate \
+--csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
+--num_channels 1 \
+--chips_per_channel 1 \
+--dies_per_chip 1 \
+--page_size_bytes 16384 \
+--vector_bytes 4 \
+--flash_read_latency_us 50 \
+--num_heads 8 \
+--cluster_size 32 \
+--window_size 64 \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
+--num_replica 4 \
+--hot_cluster_ratio 0.08 \
+--planes_per_die 32 \
+--budget_ratio 0.40 \
+--model_name qwen2.5-32b \
+--dataset pg19 \
+--generate_name verify_8_53 \
+--prefix_len 32800 \
+--hot_cluster_duplicate
+
+echo "Processing next configuration..."
+
+python simulator.py \
+--max_latency_calculate \
+--csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
+--num_channels 1 \
+--chips_per_channel 1 \
+--dies_per_chip 1 \
+--page_size_bytes 16384 \
+--vector_bytes 4 \
+--flash_read_latency_us 50 \
+--num_heads 8 \
+--cluster_size 32 \
+--window_size 64 \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
+--num_replica 4 \
+--hot_cluster_ratio 0.08 \
+--planes_per_die 32 \
+--budget_ratio 0.40 \
+--model_name qwen2.5-32b \
+--dataset pg19 \
+--generate_name verify_8_54 \
+--prefix_len 32800 \
+--hot_cluster_duplicate
+
+echo "Processing next configuration..."
+
+python simulator.py \
+--max_latency_calculate \
+--csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
+--num_channels 1 \
+--chips_per_channel 1 \
+--dies_per_chip 1 \
+--page_size_bytes 16384 \
+--vector_bytes 4 \
+--flash_read_latency_us 50 \
+--num_heads 8 \
+--cluster_size 32 \
+--window_size 64 \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
+--num_replica 4 \
+--hot_cluster_ratio 0.08 \
+--planes_per_die 32 \
+--budget_ratio 0.40 \
+--model_name qwen2.5-32b \
+--dataset pg19 \
+--generate_name verify_8_55 \
+--prefix_len 32800 \
+--hot_cluster_duplicate
+
+echo "Processing next configuration..."
+
+python simulator.py \
+--max_latency_calculate \
+--csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
+--num_channels 1 \
+--chips_per_channel 1 \
+--dies_per_chip 1 \
+--page_size_bytes 16384 \
+--vector_bytes 4 \
+--flash_read_latency_us 50 \
+--num_heads 8 \
+--cluster_size 32 \
+--window_size 64 \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
+--num_replica 4 \
+--hot_cluster_ratio 0.08 \
+--planes_per_die 32 \
+--budget_ratio 0.40 \
+--model_name qwen2.5-32b \
+--dataset pg19 \
+--generate_name verify_8_56 \
+--prefix_len 32800 \
+--hot_cluster_duplicate
+
+echo "Processing next configuration..."
+
+python simulator.py \
+--max_latency_calculate \
+--csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
+--num_channels 1 \
+--chips_per_channel 1 \
+--dies_per_chip 1 \
+--page_size_bytes 16384 \
+--vector_bytes 4 \
+--flash_read_latency_us 50 \
+--num_heads 8 \
+--cluster_size 32 \
+--window_size 64 \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
+--num_replica 4 \
+--hot_cluster_ratio 0.08 \
+--planes_per_die 32 \
+--budget_ratio 0.40 \
+--model_name qwen2.5-32b \
+--dataset pg19 \
+--generate_name verify_8_57 \
+--prefix_len 32800 \
+--hot_cluster_duplicate
+
+echo "Processing next configuration..."
+
+python simulator.py \
+--max_latency_calculate \
+--csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
+--num_channels 1 \
+--chips_per_channel 1 \
+--dies_per_chip 1 \
+--page_size_bytes 16384 \
+--vector_bytes 4 \
+--flash_read_latency_us 50 \
+--num_heads 8 \
+--cluster_size 32 \
+--window_size 64 \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
+--num_replica 4 \
+--hot_cluster_ratio 0.08 \
+--planes_per_die 32 \
+--budget_ratio 0.40 \
+--model_name qwen2.5-32b \
+--dataset pg19 \
+--generate_name verify_8_58 \
+--prefix_len 32800 \
+--hot_cluster_duplicate
+
+echo "Processing next configuration..."
+
+python simulator.py \
+--max_latency_calculate \
+--csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
+--num_channels 1 \
+--chips_per_channel 1 \
+--dies_per_chip 1 \
+--page_size_bytes 16384 \
+--vector_bytes 4 \
+--flash_read_latency_us 50 \
+--num_heads 8 \
+--cluster_size 32 \
+--window_size 64 \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
+--num_replica 4 \
+--hot_cluster_ratio 0.08 \
+--planes_per_die 32 \
+--budget_ratio 0.40 \
+--model_name qwen2.5-32b \
+--dataset pg19 \
+--generate_name verify_8_59 \
+--prefix_len 32800 \
+--hot_cluster_duplicate
+
+echo "Processing next configuration..."
+
+python simulator.py \
+--max_latency_calculate \
+--csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
+--num_channels 1 \
+--chips_per_channel 1 \
+--dies_per_chip 1 \
+--page_size_bytes 16384 \
+--vector_bytes 4 \
+--flash_read_latency_us 50 \
+--num_heads 8 \
+--cluster_size 32 \
+--window_size 64 \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
+--num_replica 4 \
+--hot_cluster_ratio 0.08 \
+--planes_per_die 32 \
+--budget_ratio 0.40 \
+--model_name qwen2.5-32b \
+--dataset pg19 \
+--generate_name verify_8_60 \
+--prefix_len 32800 \
+--hot_cluster_duplicate
+
+echo "Processing next configuration..."
+
+python simulator.py \
+--max_latency_calculate \
+--csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
+--num_channels 1 \
+--chips_per_channel 1 \
+--dies_per_chip 1 \
+--page_size_bytes 16384 \
+--vector_bytes 4 \
+--flash_read_latency_us 50 \
+--num_heads 8 \
+--cluster_size 32 \
+--window_size 64 \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
+--num_replica 4 \
+--hot_cluster_ratio 0.08 \
+--planes_per_die 32 \
+--budget_ratio 0.40 \
+--model_name qwen2.5-32b \
+--dataset pg19 \
+--generate_name verify_8_61 \
+--prefix_len 32800 \
+--hot_cluster_duplicate
+
+echo "Processing next configuration..."
+
+python simulator.py \
+--max_latency_calculate \
+--csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
+--num_channels 1 \
+--chips_per_channel 1 \
+--dies_per_chip 1 \
+--page_size_bytes 16384 \
+--vector_bytes 4 \
+--flash_read_latency_us 50 \
+--num_heads 8 \
+--cluster_size 32 \
+--window_size 64 \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
+--num_replica 4 \
+--hot_cluster_ratio 0.08 \
+--planes_per_die 32 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_9_0 \
@@ -40238,12 +43498,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_9_1 \
@@ -40264,12 +43524,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_9_2 \
@@ -40290,12 +43550,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_9_3 \
@@ -40316,12 +43576,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_9_4 \
@@ -40342,12 +43602,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_9_5 \
@@ -40368,12 +43628,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_9_6 \
@@ -40394,12 +43654,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_9_7 \
@@ -40420,12 +43680,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_9_8 \
@@ -40446,12 +43706,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_9_9 \
@@ -40472,12 +43732,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_9_10 \
@@ -40498,12 +43758,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_9_11 \
@@ -40524,12 +43784,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_9_12 \
@@ -40550,12 +43810,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_9_13 \
@@ -40576,12 +43836,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_9_14 \
@@ -40602,12 +43862,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_9_15 \
@@ -40628,12 +43888,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_9_16 \
@@ -40654,12 +43914,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_9_17 \
@@ -40680,12 +43940,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_9_18 \
@@ -40706,12 +43966,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_9_19 \
@@ -40732,12 +43992,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_9_20 \
@@ -40758,12 +44018,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_9_21 \
@@ -40784,12 +44044,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_9_22 \
@@ -40810,12 +44070,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_9_23 \
@@ -40836,12 +44096,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_9_24 \
@@ -40862,12 +44122,12 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_9_25 \
@@ -40888,14 +44148,222 @@ python simulator.py \
 --num_heads 8 \
 --cluster_size 32 \
 --window_size 64 \
---layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.25 \
+--budget_ratio 0.40 \
 --model_name qwen2.5-32b \
 --dataset pg19 \
 --generate_name verify_9_26 \
+--prefix_len 32800 \
+--hot_cluster_duplicate
+
+echo "Processing next configuration..."
+
+python simulator.py \
+--max_latency_calculate \
+--csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
+--num_channels 1 \
+--chips_per_channel 1 \
+--dies_per_chip 1 \
+--page_size_bytes 16384 \
+--vector_bytes 4 \
+--flash_read_latency_us 50 \
+--num_heads 8 \
+--cluster_size 32 \
+--window_size 64 \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
+--num_replica 4 \
+--hot_cluster_ratio 0.08 \
+--planes_per_die 32 \
+--budget_ratio 0.40 \
+--model_name qwen2.5-32b \
+--dataset pg19 \
+--generate_name verify_9_27 \
+--prefix_len 32800 \
+--hot_cluster_duplicate
+
+echo "Processing next configuration..."
+
+python simulator.py \
+--max_latency_calculate \
+--csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
+--num_channels 1 \
+--chips_per_channel 1 \
+--dies_per_chip 1 \
+--page_size_bytes 16384 \
+--vector_bytes 4 \
+--flash_read_latency_us 50 \
+--num_heads 8 \
+--cluster_size 32 \
+--window_size 64 \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
+--num_replica 4 \
+--hot_cluster_ratio 0.08 \
+--planes_per_die 32 \
+--budget_ratio 0.40 \
+--model_name qwen2.5-32b \
+--dataset pg19 \
+--generate_name verify_9_28 \
+--prefix_len 32800 \
+--hot_cluster_duplicate
+
+echo "Processing next configuration..."
+
+python simulator.py \
+--max_latency_calculate \
+--csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
+--num_channels 1 \
+--chips_per_channel 1 \
+--dies_per_chip 1 \
+--page_size_bytes 16384 \
+--vector_bytes 4 \
+--flash_read_latency_us 50 \
+--num_heads 8 \
+--cluster_size 32 \
+--window_size 64 \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
+--num_replica 4 \
+--hot_cluster_ratio 0.08 \
+--planes_per_die 32 \
+--budget_ratio 0.40 \
+--model_name qwen2.5-32b \
+--dataset pg19 \
+--generate_name verify_9_29 \
+--prefix_len 32800 \
+--hot_cluster_duplicate
+
+echo "Processing next configuration..."
+
+python simulator.py \
+--max_latency_calculate \
+--csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
+--num_channels 1 \
+--chips_per_channel 1 \
+--dies_per_chip 1 \
+--page_size_bytes 16384 \
+--vector_bytes 4 \
+--flash_read_latency_us 50 \
+--num_heads 8 \
+--cluster_size 32 \
+--window_size 64 \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
+--num_replica 4 \
+--hot_cluster_ratio 0.08 \
+--planes_per_die 32 \
+--budget_ratio 0.40 \
+--model_name qwen2.5-32b \
+--dataset pg19 \
+--generate_name verify_9_30 \
+--prefix_len 32800 \
+--hot_cluster_duplicate
+
+echo "Processing next configuration..."
+
+python simulator.py \
+--max_latency_calculate \
+--csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
+--num_channels 1 \
+--chips_per_channel 1 \
+--dies_per_chip 1 \
+--page_size_bytes 16384 \
+--vector_bytes 4 \
+--flash_read_latency_us 50 \
+--num_heads 8 \
+--cluster_size 32 \
+--window_size 64 \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
+--num_replica 4 \
+--hot_cluster_ratio 0.08 \
+--planes_per_die 32 \
+--budget_ratio 0.40 \
+--model_name qwen2.5-32b \
+--dataset pg19 \
+--generate_name verify_9_31 \
+--prefix_len 32800 \
+--hot_cluster_duplicate
+
+echo "Processing next configuration..."
+
+python simulator.py \
+--max_latency_calculate \
+--csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
+--num_channels 1 \
+--chips_per_channel 1 \
+--dies_per_chip 1 \
+--page_size_bytes 16384 \
+--vector_bytes 4 \
+--flash_read_latency_us 50 \
+--num_heads 8 \
+--cluster_size 32 \
+--window_size 64 \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
+--num_replica 4 \
+--hot_cluster_ratio 0.08 \
+--planes_per_die 32 \
+--budget_ratio 0.40 \
+--model_name qwen2.5-32b \
+--dataset pg19 \
+--generate_name verify_9_32 \
+--prefix_len 32800 \
+--hot_cluster_duplicate
+
+echo "Processing next configuration..."
+
+python simulator.py \
+--max_latency_calculate \
+--csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
+--num_channels 1 \
+--chips_per_channel 1 \
+--dies_per_chip 1 \
+--page_size_bytes 16384 \
+--vector_bytes 4 \
+--flash_read_latency_us 50 \
+--num_heads 8 \
+--cluster_size 32 \
+--window_size 64 \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
+--num_replica 4 \
+--hot_cluster_ratio 0.08 \
+--planes_per_die 32 \
+--budget_ratio 0.40 \
+--model_name qwen2.5-32b \
+--dataset pg19 \
+--generate_name verify_9_33 \
+--prefix_len 32800 \
+--hot_cluster_duplicate
+
+echo "Processing next configuration..."
+
+python simulator.py \
+--max_latency_calculate \
+--csv_path num_replica_4_prefix_len_32800_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-32b_dataset_pg19 \
+--num_channels 1 \
+--chips_per_channel 1 \
+--dies_per_chip 1 \
+--page_size_bytes 16384 \
+--vector_bytes 4 \
+--flash_read_latency_us 50 \
+--num_heads 8 \
+--cluster_size 32 \
+--window_size 64 \
+--layer_num 48 \
+--profiling_dir /home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/ \
+--num_replica 4 \
+--hot_cluster_ratio 0.08 \
+--planes_per_die 32 \
+--budget_ratio 0.40 \
+--model_name qwen2.5-32b \
+--dataset pg19 \
+--generate_name verify_9_34 \
 --prefix_len 32800 \
 --hot_cluster_duplicate

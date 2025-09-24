@@ -2,7 +2,7 @@
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -10,8657 +10,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_0_0 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_0_4 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_0_8 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_0_12 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_0_16 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_0_20 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_0_24 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_0_28 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_0_32 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_0_36 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_0_40 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_0_44 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_0_48 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_0_52 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_0_56 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_0_60 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_0_64 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_0_68 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_0_72 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_0_76 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_0_80 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_1_0 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_1_4 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_1_8 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_1_12 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_1_16 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_1_20 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_1_24 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_1_28 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_1_32 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_1_36 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_1_40 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_1_44 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_1_48 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_1_52 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_1_56 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_1_60 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_1_64 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_1_68 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_1_72 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_1_76 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_1_80 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_2_0 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_2_4 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_2_8 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_2_12 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_2_16 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_2_20 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_2_24 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_2_28 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_2_32 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_2_36 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_2_40 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_2_44 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_2_48 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_2_52 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_2_56 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_2_60 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_2_64 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_2_68 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_2_72 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_2_76 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_2_80 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_3_0 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_3_4 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_3_8 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_3_12 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_3_16 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_3_20 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_3_24 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_3_28 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_3_32 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_3_36 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_3_40 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_3_44 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_3_48 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_3_52 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_3_56 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_3_60 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_3_64 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_3_68 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_3_72 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_3_76 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_3_80 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_3_84 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_3_88 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_3_92 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_3_96 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_3_100 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_3_104 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_3_108 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_3_112 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_3_116 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_3_120 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_3_124 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_3_128 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_3_132 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_3_136 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_4_0 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_4_4 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_4_8 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_4_12 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_4_16 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_4_20 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_4_24 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_4_28 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_4_32 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_4_36 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_4_40 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_4_44 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_4_48 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_4_52 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_4_56 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_4_60 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_4_64 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_4_68 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_4_72 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_4_76 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_4_80 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_4_84 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_5_0 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_5_4 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_5_8 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_5_12 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_5_16 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_5_20 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_5_24 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_5_28 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_5_32 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_5_36 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_5_40 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_5_44 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_5_48 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_5_52 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_5_56 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_5_60 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_5_64 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_5_68 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_5_72 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_5_76 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_5_80 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_6_0 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_6_4 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_6_8 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_6_12 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_6_16 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_6_20 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_6_24 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_6_28 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_6_32 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_6_36 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_6_40 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_6_44 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_6_48 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_6_52 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_6_56 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_6_60 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_6_64 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_6_68 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_6_72 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_6_76 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_6_80 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_6_84 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_6_88 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_6_92 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_6_96 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_6_100 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_6_104 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_6_108 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_7_0 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_7_4 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_7_8 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_7_12 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_7_16 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_7_20 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_7_24 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_7_28 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_7_32 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_7_36 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_7_40 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_7_44 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_7_48 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_7_52 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_7_56 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_7_60 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_7_64 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_7_68 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_7_72 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_7_76 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_7_80 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_7_84 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_7_88 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_7_92 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_7_96 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_7_100 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_7_104 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_7_108 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_7_112 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_7_116 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_7_120 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_7_124 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_7_128 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_7_132 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_7_136 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_7_140 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_7_144 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_7_148 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_7_152 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_7_156 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_7_160 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_7_164 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_7_168 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_7_172 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_7_176 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_7_180 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_7_184 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_7_188 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_7_192 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_7_196 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_7_200 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_7_204 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_7_208 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_7_212 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_7_216 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_7_220 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_7_224 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_7_228 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_8_0 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_8_4 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_8_8 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_8_12 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_8_16 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_8_20 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_8_24 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_8_28 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_8_32 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_8_36 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_8_40 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_8_44 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_8_48 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_8_52 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_8_56 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_8_60 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_8_64 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_8_68 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_8_72 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_8_76 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_8_80 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_8_84 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_8_88 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_8_92 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_8_96 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_8_100 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_8_104 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_8_108 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_8_112 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_8_116 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_8_120 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_8_124 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_8_128 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_8_132 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_8_136 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_8_140 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_8_144 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_8_148 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_8_152 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_8_156 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_8_160 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_8_164 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_8_168 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_8_172 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_8_176 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_9_0 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_9_4 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_9_8 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_9_12 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_9_16 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_9_20 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_9_24 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_9_28 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_9_32 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_9_36 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_9_40 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_9_44 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_9_48 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_9_52 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_9_56 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_9_60 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_9_64 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_9_68 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_9_72 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_9_76 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_9_80 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_9_84 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_9_88 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_9_92 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_9_96 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_9_100 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_9_104 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_9_108 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_9_112 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_9_116 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_9_120 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_9_124 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_9_128 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_9_132 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_9_136 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_9_140 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_9_144 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_9_148 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_9_152 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_9_156 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_9_160 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_9_164 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_9_168 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_9_172 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_9_176 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_9_180 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_9_184 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_9_188 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_9_192 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_9_196 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_9_200 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_9_204 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_9_208 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_9_212 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_9_216 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_9_220 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_9_224 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_9_228 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_9_232 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_9_236 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_9_240 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_9_244 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_9_248 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_9_252 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_9_256 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_9_260 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_9_264 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_9_268 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_9_272 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_9_276 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_9_280 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_9_284 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_9_288 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_9_292 \
---prefix_len 16416
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -8677,7 +27,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -8685,7 +35,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -8702,7 +52,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -8710,7 +60,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -8727,7 +77,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -8735,7 +85,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -8752,7 +102,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -8760,7 +110,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -8777,7 +127,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -8785,7 +135,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -8802,7 +152,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -8810,7 +160,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -8827,7 +177,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -8835,7 +185,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -8852,7 +202,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -8860,7 +210,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -8877,7 +227,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -8885,7 +235,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -8902,7 +252,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -8910,7 +260,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -8927,7 +277,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -8935,7 +285,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -8952,7 +302,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -8960,7 +310,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -8977,7 +327,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -8985,7 +335,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -9002,7 +352,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -9010,7 +360,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -9027,7 +377,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -9035,7 +385,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -9052,7 +402,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -9060,7 +410,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -9077,7 +427,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -9085,7 +435,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -9102,7 +452,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -9110,7 +460,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -9127,7 +477,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -9135,7 +485,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -9152,7 +502,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -9160,7 +510,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -9177,7 +527,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -9185,7 +535,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -9202,7 +552,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -9210,7 +560,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -9227,7 +577,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -9235,7 +585,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -9252,7 +602,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -9260,7 +610,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -9277,7 +627,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -9285,7 +635,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -9302,7 +652,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -9310,7 +660,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -9327,7 +677,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -9335,7 +685,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -9352,7 +702,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -9360,7 +710,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -9377,7 +727,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -9385,7 +735,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -9402,7 +752,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -9410,7 +760,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -9427,7 +777,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -9435,7 +785,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -9452,7 +802,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -9460,7 +810,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -9477,7 +827,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -9485,7 +835,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -9502,7 +852,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -9510,7 +860,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -9527,7 +877,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -9535,7 +885,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -9552,7 +902,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -9560,7 +910,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -9577,7 +927,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -9585,7 +935,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -9602,7 +952,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -9610,7 +960,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -9627,7 +977,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -9635,7 +985,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -9652,7 +1002,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -9660,7 +1010,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -9677,7 +1027,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -9685,7 +1035,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -9702,7 +1052,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -9710,7 +1060,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -9727,7 +1077,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -9735,7 +1085,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -9752,7 +1102,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -9760,7 +1110,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -9777,7 +1127,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -9785,7 +1135,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -9802,7 +1152,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -9810,7 +1160,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -9827,7 +1177,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -9835,7 +1185,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -9852,7 +1202,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -9860,7 +1210,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -9877,7 +1227,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -9885,7 +1235,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -9902,7 +1252,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -9910,7 +1260,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -9927,7 +1277,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -9935,7 +1285,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -9952,7 +1302,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -9960,7 +1310,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -9977,7 +1327,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -9985,7 +1335,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -10002,7 +1352,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -10010,7 +1360,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -10027,7 +1377,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -10035,7 +1385,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -10052,7 +1402,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -10060,7 +1410,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -10077,7 +1427,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -10085,7 +1435,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -10102,7 +1452,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -10110,7 +1460,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -10127,7 +1477,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -10135,7 +1485,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -10152,7 +1502,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -10160,7 +1510,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -10177,7 +1527,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -10185,7 +1535,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -10202,7 +1552,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -10210,7 +1560,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -10227,7 +1577,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -10235,7 +1585,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -10252,7 +1602,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -10260,7 +1610,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -10277,7 +1627,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -10285,7 +1635,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -10302,7 +1652,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -10310,7 +1660,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -10327,7 +1677,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -10335,7 +1685,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -10352,7 +1702,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -10360,7 +1710,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -10377,7 +1727,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -10385,7 +1735,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -10402,7 +1752,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -10410,7 +1760,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -10427,7 +1777,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -10435,7 +1785,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -10452,7 +1802,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -10460,7 +1810,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -10477,7 +1827,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -10485,7 +1835,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -10502,7 +1852,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -10510,7 +1860,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -10527,7 +1877,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -10535,7 +1885,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -10552,7 +1902,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -10560,7 +1910,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -10577,7 +1927,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -10585,7 +1935,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -10602,7 +1952,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -10610,7 +1960,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -10627,7 +1977,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -10635,7 +1985,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -10652,7 +2002,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -10660,7 +2010,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -10677,7 +2027,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -10685,7 +2035,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -10702,7 +2052,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -10710,7 +2060,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -10727,7 +2077,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -10735,7 +2085,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -10752,7 +2102,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -10760,7 +2110,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -10777,7 +2127,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -10785,7 +2135,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -10802,7 +2152,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -10810,7 +2160,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -10827,7 +2177,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -10835,7 +2185,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -10852,7 +2202,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -10860,7 +2210,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -10877,7 +2227,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -10885,7 +2235,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -10902,7 +2252,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -10910,7 +2260,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -10927,7 +2277,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -10935,7 +2285,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -10952,7 +2302,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -10960,7 +2310,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -10977,7 +2327,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -10985,7 +2335,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -11002,7 +2352,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -11010,7 +2360,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -11027,7 +2377,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -11035,7 +2385,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -11052,7 +2402,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -11060,7 +2410,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -11077,7 +2427,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -11085,7 +2435,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -11102,7 +2452,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -11110,7 +2460,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -11127,7 +2477,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -11135,7 +2485,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -11152,7 +2502,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -11160,7 +2510,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -11177,7 +2527,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -11185,7 +2535,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -11202,7 +2552,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -11210,7 +2560,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -11227,7 +2577,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -11235,7 +2585,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -11252,7 +2602,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -11260,7 +2610,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -11277,7 +2627,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -11285,7 +2635,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -11302,7 +2652,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -11310,7 +2660,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -11327,7 +2677,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -11335,7 +2685,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -11352,7 +2702,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -11360,7 +2710,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -11377,7 +2727,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -11385,7 +2735,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -11402,7 +2752,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -11410,7 +2760,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -11427,7 +2777,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -11435,7 +2785,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -11452,7 +2802,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -11460,7 +2810,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -11477,7 +2827,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -11485,7 +2835,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -11502,7 +2852,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -11510,7 +2860,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -11527,7 +2877,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -11535,7 +2885,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -11552,7 +2902,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -11560,7 +2910,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -11577,7 +2927,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -11585,7 +2935,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -11602,7 +2952,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -11610,7 +2960,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -11627,7 +2977,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -11635,7 +2985,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -11652,7 +3002,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -11660,7 +3010,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -11677,7 +3027,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -11685,7 +3035,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -11702,7 +3052,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -11710,7 +3060,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -11727,7 +3077,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -11735,7 +3085,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -11752,7 +3102,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -11760,7 +3110,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -11777,7 +3127,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -11785,7 +3135,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -11802,7 +3152,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -11810,7 +3160,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -11827,7 +3177,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -11835,7 +3185,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -11852,7 +3202,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -11860,7 +3210,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -11877,7 +3227,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -11885,7 +3235,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -11902,7 +3252,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -11910,7 +3260,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -11927,7 +3277,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -11935,7 +3285,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -11952,7 +3302,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -11960,7 +3310,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -11977,7 +3327,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -11985,7 +3335,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -12002,7 +3352,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -12010,7 +3360,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -12027,7 +3377,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -12035,7 +3385,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -12052,7 +3402,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -12060,7 +3410,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -12077,7 +3427,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -12085,7 +3435,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -12102,7 +3452,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -12110,7 +3460,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -12127,7 +3477,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -12135,7 +3485,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -12152,7 +3502,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -12160,7 +3510,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -12177,7 +3527,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -12185,7 +3535,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -12202,7 +3552,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -12210,7 +3560,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -12227,7 +3577,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -12235,7 +3585,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -12252,7 +3602,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -12260,7 +3610,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -12277,7 +3627,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -12285,7 +3635,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -12302,7 +3652,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -12310,7 +3660,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -12327,7 +3677,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -12335,7 +3685,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -12352,7 +3702,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -12360,7 +3710,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -12377,7 +3727,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -12385,7 +3735,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -12402,7 +3752,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -12410,7 +3760,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -12427,7 +3777,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -12435,7 +3785,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -12452,7 +3802,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -12460,7 +3810,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -12477,7 +3827,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -12485,7 +3835,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -12502,7 +3852,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -12510,7 +3860,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -12527,7 +3877,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -12535,7 +3885,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -12552,7 +3902,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -12560,7 +3910,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -12577,7 +3927,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -12585,7 +3935,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -12602,7 +3952,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -12610,7 +3960,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -12627,7 +3977,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -12635,7 +3985,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -12652,7 +4002,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -12660,7 +4010,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -12677,7 +4027,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -12685,7 +4035,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -12702,7 +4052,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -12710,7 +4060,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -12727,7 +4077,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -12735,7 +4085,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -12752,7 +4102,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -12760,7 +4110,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -12777,7 +4127,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -12785,7 +4135,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -12802,7 +4152,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -12810,7 +4160,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -12827,7 +4177,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -12835,7 +4185,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -12852,7 +4202,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -12860,7 +4210,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -12877,7 +4227,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -12885,7 +4235,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -12902,7 +4252,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -12910,7 +4260,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -12927,7 +4277,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -12935,7 +4285,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -12952,7 +4302,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -12960,7 +4310,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -12977,7 +4327,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -12985,7 +4335,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -13002,7 +4352,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -13010,7 +4360,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -13027,7 +4377,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -13035,7 +4385,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -13052,7 +4402,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -13060,7 +4410,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -13077,7 +4427,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -13085,7 +4435,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -13102,7 +4452,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -13110,7 +4460,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -13127,7 +4477,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -13135,7 +4485,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -13152,7 +4502,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -13160,7 +4510,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -13177,7 +4527,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -13185,7 +4535,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -13202,7 +4552,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -13210,7 +4560,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -13227,7 +4577,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -13235,7 +4585,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -13252,7 +4602,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -13260,7 +4610,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -13277,7 +4627,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -13285,7 +4635,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -13302,7 +4652,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -13310,7 +4660,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -13327,7 +4677,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -13335,7 +4685,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -13352,7 +4702,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -13360,7 +4710,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -13377,7 +4727,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -13385,7 +4735,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -13402,7 +4752,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -13410,7 +4760,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -13427,7 +4777,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -13435,7 +4785,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -13452,7 +4802,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -13460,7 +4810,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -13477,7 +4827,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -13485,7 +4835,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -13502,7 +4852,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -13510,7 +4860,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -13527,7 +4877,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -13535,7 +4885,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -13552,7 +4902,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -13560,7 +4910,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -13577,7 +4927,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -13585,7 +4935,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -13602,7 +4952,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -13610,7 +4960,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -13627,7 +4977,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -13635,7 +4985,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -13652,7 +5002,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -13660,7 +5010,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -13677,7 +5027,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -13685,7 +5035,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -13702,7 +5052,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -13710,7 +5060,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -13727,7 +5077,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -13735,7 +5085,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -13752,7 +5102,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -13760,7 +5110,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -13777,7 +5127,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -13785,7 +5135,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -13802,7 +5152,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -13810,7 +5160,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -13827,7 +5177,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -13835,7 +5185,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -13852,7 +5202,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -13860,7 +5210,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -13877,7 +5227,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -13885,7 +5235,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -13902,7 +5252,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -13910,7 +5260,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -13927,7 +5277,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -13935,7 +5285,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -13952,7 +5302,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -13960,7 +5310,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -13977,7 +5327,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -13985,7 +5335,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -14002,7 +5352,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -14010,7 +5360,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -14027,7 +5377,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -14035,7 +5385,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -14052,7 +5402,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -14060,7 +5410,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -14077,7 +5427,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -14085,7 +5435,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -14102,7 +5452,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -14110,7 +5460,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -14127,7 +5477,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -14135,7 +5485,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -14152,7 +5502,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -14160,7 +5510,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -14177,7 +5527,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -14185,7 +5535,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -14202,7 +5552,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -14210,7 +5560,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -14227,7 +5577,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -14235,7 +5585,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -14252,7 +5602,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -14260,7 +5610,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -14277,7 +5627,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -14285,7 +5635,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -14302,7 +5652,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -14310,7 +5660,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -14327,7 +5677,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -14335,7 +5685,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -14352,7 +5702,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -14360,7 +5710,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -14377,7 +5727,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -14385,7 +5735,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -14402,7 +5752,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -14410,7 +5760,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -14427,7 +5777,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -14435,7 +5785,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -14452,7 +5802,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -14460,7 +5810,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -14477,7 +5827,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -14485,7 +5835,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -14502,7 +5852,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -14510,7 +5860,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -14527,7 +5877,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -14535,7 +5885,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -14552,7 +5902,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -14560,7 +5910,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -14577,7 +5927,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -14585,7 +5935,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -14602,7 +5952,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -14610,7 +5960,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -14627,7 +5977,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -14635,7 +5985,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -14652,7 +6002,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -14660,7 +6010,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -14677,7 +6027,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -14685,7 +6035,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -14702,7 +6052,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -14710,7 +6060,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -14727,7 +6077,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -14735,7 +6085,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -14752,7 +6102,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -14760,7 +6110,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -14777,7 +6127,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -14785,7 +6135,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -14802,7 +6152,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -14810,7 +6160,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -14827,7 +6177,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -14835,7 +6185,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -14852,7 +6202,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -14860,7 +6210,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -14877,7 +6227,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -14885,7 +6235,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -14902,7 +6252,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -14910,7 +6260,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -14927,7 +6277,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -14935,7 +6285,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -14952,7 +6302,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -14960,7 +6310,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -14977,7 +6327,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -14985,7 +6335,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -15002,7 +6352,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -15010,7 +6360,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -15027,7 +6377,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -15035,7 +6385,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -15052,7 +6402,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -15060,7 +6410,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -15077,7 +6427,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -15085,7 +6435,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -15102,7 +6452,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -15110,7 +6460,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -15127,7 +6477,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -15135,7 +6485,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -15152,7 +6502,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -15160,7 +6510,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -15177,7 +6527,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -15185,7 +6535,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -15202,7 +6552,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -15210,7 +6560,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -15227,7 +6577,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -15235,7 +6585,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -15252,7 +6602,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -15260,7 +6610,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -15277,7 +6627,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -15285,7 +6635,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -15302,7 +6652,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -15310,7 +6660,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -15327,7 +6677,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -15335,7 +6685,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -15352,7 +6702,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -15360,7 +6710,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -15377,7 +6727,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -15385,7 +6735,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -15402,7 +6752,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -15410,7 +6760,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -15427,7 +6777,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -15435,7 +6785,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -15452,7 +6802,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -15460,7 +6810,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -15477,7 +6827,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -15485,7 +6835,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -15502,7 +6852,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -15510,7 +6860,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -15527,7 +6877,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -15535,7 +6885,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -15552,7 +6902,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -15560,7 +6910,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -15577,7 +6927,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -15585,7 +6935,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -15602,7 +6952,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -15610,7 +6960,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -15627,7 +6977,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -15635,7 +6985,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -15652,7 +7002,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -15660,7 +7010,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -15677,7 +7027,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -15685,7 +7035,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -15702,7 +7052,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -15710,7 +7060,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -15727,7 +7077,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -15735,7 +7085,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -15752,7 +7102,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -15760,7 +7110,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -15777,7 +7127,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -15785,7 +7135,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -15802,7 +7152,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -15810,7 +7160,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -15827,7 +7177,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -15835,7 +7185,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -15852,7 +7202,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -15860,7 +7210,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -15877,7 +7227,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -15885,7 +7235,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -15902,7 +7252,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -15910,7 +7260,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -15927,7 +7277,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -15935,7 +7285,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -15952,7 +7302,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -15960,7 +7310,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -15977,7 +7327,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -15985,7 +7335,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -16002,7 +7352,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -16010,7 +7360,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -16027,7 +7377,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -16035,7 +7385,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -16052,7 +7402,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -16060,7 +7410,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -16077,7 +7427,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -16085,7 +7435,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -16102,7 +7452,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -16110,7 +7460,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -16127,7 +7477,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -16135,7 +7485,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -16152,7 +7502,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -16160,7 +7510,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -16177,7 +7527,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -16185,7 +7535,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -16202,7 +7552,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -16210,7 +7560,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -16227,7 +7577,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -16235,7 +7585,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -16252,7 +7602,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -16260,7 +7610,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -16277,7 +7627,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -16285,7 +7635,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -16302,7 +7652,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -16310,7 +7660,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -16327,7 +7677,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -16335,7 +7685,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -16352,7 +7702,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -16360,7 +7710,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -16377,7 +7727,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -16385,7 +7735,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -16402,7 +7752,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -16410,7 +7760,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -16427,7 +7777,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -16435,7 +7785,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -16452,7 +7802,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -16460,7 +7810,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -16477,7 +7827,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -16485,7 +7835,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -16502,7 +7852,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -16510,7 +7860,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -16527,7 +7877,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -16535,7 +7885,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -16552,7 +7902,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -16560,7 +7910,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -16577,7 +7927,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -16585,7 +7935,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -16602,7 +7952,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -16610,7 +7960,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -16627,7 +7977,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -16635,7 +7985,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -16652,7 +8002,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -16660,7 +8010,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -16677,7 +8027,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -16685,7 +8035,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -16702,7 +8052,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -16710,7 +8060,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -16727,7 +8077,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -16735,7 +8085,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -16752,7 +8102,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -16760,7 +8110,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -16777,7 +8127,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -16785,7 +8135,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -16802,7 +8152,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -16810,7 +8160,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -16827,7 +8177,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -16835,7 +8185,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -16852,7 +8202,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -16860,7 +8210,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -16877,7 +8227,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -16885,7 +8235,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -16902,7 +8252,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -16910,7 +8260,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -16927,7 +8277,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -16935,7 +8285,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -16952,7 +8302,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -16960,7 +8310,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -16977,7 +8327,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -16985,7 +8335,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -17002,7 +8352,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -17010,7 +8360,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -17027,7 +8377,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -17035,7 +8385,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -17052,7 +8402,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -17060,7 +8410,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -17077,7 +8427,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -17085,7 +8435,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -17102,7 +8452,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -17110,7 +8460,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -17127,7 +8477,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -17135,7 +8485,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -17152,7 +8502,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -17160,7 +8510,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -17177,7 +8527,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -17185,7 +8535,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -17202,7 +8552,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -17210,7 +8560,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -17227,7 +8577,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -17235,7 +8585,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -17252,7 +8602,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -17260,7 +8610,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -17277,7 +8627,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -17285,7 +8635,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -17302,7 +8652,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -17310,9003 +8660,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_0_0 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_0_4 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_0_8 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_0_12 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_0_16 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_0_20 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_0_24 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_0_28 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_0_32 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_0_36 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_0_40 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_0_44 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_0_48 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_0_52 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_0_56 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_0_60 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_0_64 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_0_68 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_0_72 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_0_76 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_0_80 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_1_0 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_1_4 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_1_8 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_1_12 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_1_16 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_1_20 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_1_24 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_1_28 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_1_32 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_1_36 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_1_40 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_1_44 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_1_48 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_1_52 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_1_56 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_1_60 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_1_64 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_1_68 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_1_72 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_1_76 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_1_80 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_2_0 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_2_4 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_2_8 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_2_12 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_2_16 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_2_20 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_2_24 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_2_28 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_2_32 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_2_36 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_2_40 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_2_44 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_2_48 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_2_52 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_2_56 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_2_60 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_2_64 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_2_68 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_2_72 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_2_76 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_2_80 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_3_0 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_3_4 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_3_8 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_3_12 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_3_16 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_3_20 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_3_24 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_3_28 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_3_32 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_3_36 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_3_40 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_3_44 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_3_48 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_3_52 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_3_56 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_3_60 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_3_64 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_3_68 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_3_72 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_3_76 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_3_80 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_3_84 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_3_88 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_3_92 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_3_96 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_3_100 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_3_104 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_3_108 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_3_112 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_3_116 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_3_120 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_3_124 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_3_128 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_3_132 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_3_136 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_4_0 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_4_4 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_4_8 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_4_12 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_4_16 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_4_20 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_4_24 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_4_28 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_4_32 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_4_36 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_4_40 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_4_44 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_4_48 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_4_52 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_4_56 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_4_60 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_4_64 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_4_68 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_4_72 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_4_76 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_4_80 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_4_84 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_5_0 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_5_4 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_5_8 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_5_12 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_5_16 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_5_20 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_5_24 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_5_28 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_5_32 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_5_36 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_5_40 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_5_44 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_5_48 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_5_52 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_5_56 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_5_60 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_5_64 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_5_68 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_5_72 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_5_76 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_5_80 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_6_0 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_6_4 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_6_8 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_6_12 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_6_16 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_6_20 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_6_24 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_6_28 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_6_32 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_6_36 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_6_40 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_6_44 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_6_48 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_6_52 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_6_56 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_6_60 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_6_64 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_6_68 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_6_72 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_6_76 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_6_80 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_6_84 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_6_88 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_6_92 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_6_96 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_6_100 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_6_104 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_6_108 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_7_0 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_7_4 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_7_8 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_7_12 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_7_16 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_7_20 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_7_24 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_7_28 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_7_32 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_7_36 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_7_40 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_7_44 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_7_48 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_7_52 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_7_56 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_7_60 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_7_64 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_7_68 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_7_72 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_7_76 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_7_80 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_7_84 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_7_88 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_7_92 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_7_96 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_7_100 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_7_104 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_7_108 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_7_112 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_7_116 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_7_120 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_7_124 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_7_128 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_7_132 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_7_136 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_7_140 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_7_144 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_7_148 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_7_152 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_7_156 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_7_160 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_7_164 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_7_168 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_7_172 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_7_176 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_7_180 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_7_184 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_7_188 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_7_192 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_7_196 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_7_200 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_7_204 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_7_208 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_7_212 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_7_216 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_7_220 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_7_224 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_7_228 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_8_0 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_8_4 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_8_8 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_8_12 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_8_16 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_8_20 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_8_24 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_8_28 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_8_32 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_8_36 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_8_40 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_8_44 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_8_48 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_8_52 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_8_56 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_8_60 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_8_64 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_8_68 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_8_72 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_8_76 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_8_80 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_8_84 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_8_88 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_8_92 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_8_96 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_8_100 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_8_104 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_8_108 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_8_112 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_8_116 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_8_120 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_8_124 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_8_128 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_8_132 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_8_136 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_8_140 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_8_144 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_8_148 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_8_152 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_8_156 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_8_160 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_8_164 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_8_168 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_8_172 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_8_176 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_9_0 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_9_4 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_9_8 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_9_12 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_9_16 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_9_20 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_9_24 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_9_28 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_9_32 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_9_36 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_9_40 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_9_44 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_9_48 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_9_52 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_9_56 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_9_60 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_9_64 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_9_68 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_9_72 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_9_76 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_9_80 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_9_84 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_9_88 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_9_92 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_9_96 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_9_100 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_9_104 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_9_108 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_9_112 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_9_116 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_9_120 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_9_124 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_9_128 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_9_132 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_9_136 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_9_140 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_9_144 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_9_148 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_9_152 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_9_156 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_9_160 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_9_164 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_9_168 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_9_172 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_9_176 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_9_180 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_9_184 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_9_188 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_9_192 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_9_196 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_9_200 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_9_204 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_9_208 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_9_212 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_9_216 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_9_220 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_9_224 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_9_228 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_9_232 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_9_236 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_9_240 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_9_244 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_9_248 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_9_252 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_9_256 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_9_260 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_9_264 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_9_268 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_9_272 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_9_276 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_9_280 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_9_284 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_9_288 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
---window_size 64 \
---layer_num 48 \
---profiling_dir /home/juchanlee/MagicDec/profile/data/ \
---num_replica 4 \
---hot_cluster_ratio 0.08 \
---planes_per_die 32 \
---budget_ratio 0.02 \
---model_name qwen2.5-14b \
---dataset pg19 \
---generate_name speculate_9_292 \
---prefix_len 16416 \
---hot_cluster_duplicate
-
-echo "Processing next configuration..."
-
-python simulator.py \
---max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
---num_channels 1 \
---chips_per_channel 1 \
---dies_per_chip 1 \
---page_size_bytes 16384 \
---vector_bytes 4 \
---flash_read_latency_us 50 \
---num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -26324,7 +8678,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -26332,7 +8686,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -26350,7 +8704,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -26358,7 +8712,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -26376,7 +8730,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -26384,7 +8738,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -26402,7 +8756,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -26410,7 +8764,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -26428,7 +8782,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -26436,7 +8790,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -26454,7 +8808,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -26462,7 +8816,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -26480,7 +8834,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -26488,7 +8842,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -26506,7 +8860,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -26514,7 +8868,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -26532,7 +8886,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -26540,7 +8894,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -26558,7 +8912,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -26566,7 +8920,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -26584,7 +8938,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -26592,7 +8946,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -26610,7 +8964,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -26618,7 +8972,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -26636,7 +8990,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -26644,7 +8998,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -26662,7 +9016,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -26670,7 +9024,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -26688,7 +9042,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -26696,7 +9050,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -26714,7 +9068,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -26722,7 +9076,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -26740,7 +9094,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -26748,7 +9102,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -26766,7 +9120,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -26774,7 +9128,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -26792,7 +9146,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -26800,7 +9154,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -26818,7 +9172,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -26826,7 +9180,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -26844,7 +9198,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -26852,7 +9206,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -26870,7 +9224,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -26878,7 +9232,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -26896,7 +9250,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -26904,7 +9258,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -26922,7 +9276,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -26930,7 +9284,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -26948,7 +9302,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -26956,7 +9310,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -26974,7 +9328,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -26982,7 +9336,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -27000,7 +9354,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -27008,7 +9362,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -27026,7 +9380,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -27034,7 +9388,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -27052,7 +9406,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -27060,7 +9414,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -27078,7 +9432,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -27086,7 +9440,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -27104,7 +9458,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -27112,7 +9466,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -27130,7 +9484,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -27138,7 +9492,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -27156,7 +9510,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -27164,7 +9518,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -27182,7 +9536,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -27190,7 +9544,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -27208,7 +9562,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -27216,7 +9570,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -27234,7 +9588,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -27242,7 +9596,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -27260,7 +9614,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -27268,7 +9622,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -27286,7 +9640,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -27294,7 +9648,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -27312,7 +9666,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -27320,7 +9674,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -27338,7 +9692,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -27346,7 +9700,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -27364,7 +9718,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -27372,7 +9726,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -27390,7 +9744,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -27398,7 +9752,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -27416,7 +9770,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -27424,7 +9778,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -27442,7 +9796,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -27450,7 +9804,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -27468,7 +9822,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -27476,7 +9830,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -27494,7 +9848,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -27502,7 +9856,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -27520,7 +9874,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -27528,7 +9882,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -27546,7 +9900,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -27554,7 +9908,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -27572,7 +9926,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -27580,7 +9934,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -27598,7 +9952,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -27606,7 +9960,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -27624,7 +9978,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -27632,7 +9986,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -27650,7 +10004,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -27658,7 +10012,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -27676,7 +10030,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -27684,7 +10038,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -27702,7 +10056,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -27710,7 +10064,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -27728,7 +10082,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -27736,7 +10090,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -27754,7 +10108,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -27762,7 +10116,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -27780,7 +10134,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -27788,7 +10142,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -27806,7 +10160,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -27814,7 +10168,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -27832,7 +10186,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -27840,7 +10194,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -27858,7 +10212,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -27866,7 +10220,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -27884,7 +10238,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -27892,7 +10246,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -27910,7 +10264,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -27918,7 +10272,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -27936,7 +10290,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -27944,7 +10298,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -27962,7 +10316,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -27970,7 +10324,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -27988,7 +10342,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -27996,7 +10350,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -28014,7 +10368,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -28022,7 +10376,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -28040,7 +10394,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -28048,7 +10402,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -28066,7 +10420,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -28074,7 +10428,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -28092,7 +10446,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -28100,7 +10454,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -28118,7 +10472,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -28126,7 +10480,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -28144,7 +10498,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -28152,7 +10506,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -28170,7 +10524,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -28178,7 +10532,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -28196,7 +10550,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -28204,7 +10558,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -28222,7 +10576,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -28230,7 +10584,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -28248,7 +10602,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -28256,7 +10610,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -28274,7 +10628,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -28282,7 +10636,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -28300,7 +10654,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -28308,7 +10662,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -28326,7 +10680,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -28334,7 +10688,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -28352,7 +10706,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -28360,7 +10714,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -28378,7 +10732,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -28386,7 +10740,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -28404,7 +10758,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -28412,7 +10766,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -28430,7 +10784,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -28438,7 +10792,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -28456,7 +10810,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -28464,7 +10818,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -28482,7 +10836,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -28490,7 +10844,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -28508,7 +10862,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -28516,7 +10870,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -28534,7 +10888,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -28542,7 +10896,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -28560,7 +10914,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -28568,7 +10922,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -28586,7 +10940,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -28594,7 +10948,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -28612,7 +10966,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -28620,7 +10974,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -28638,7 +10992,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -28646,7 +11000,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -28664,7 +11018,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -28672,7 +11026,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -28690,7 +11044,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -28698,7 +11052,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -28716,7 +11070,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -28724,7 +11078,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -28742,7 +11096,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -28750,7 +11104,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -28768,7 +11122,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -28776,7 +11130,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -28794,7 +11148,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -28802,7 +11156,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -28820,7 +11174,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -28828,7 +11182,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -28846,7 +11200,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -28854,7 +11208,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -28872,7 +11226,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -28880,7 +11234,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -28898,7 +11252,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -28906,7 +11260,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -28924,7 +11278,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -28932,7 +11286,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -28950,7 +11304,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -28958,7 +11312,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -28976,7 +11330,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -28984,7 +11338,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -29002,7 +11356,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -29010,7 +11364,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -29028,7 +11382,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -29036,7 +11390,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -29054,7 +11408,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -29062,7 +11416,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -29080,7 +11434,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -29088,7 +11442,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -29106,7 +11460,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -29114,7 +11468,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -29132,7 +11486,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -29140,7 +11494,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -29158,7 +11512,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -29166,7 +11520,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -29184,7 +11538,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -29192,7 +11546,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -29210,7 +11564,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -29218,7 +11572,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -29236,7 +11590,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -29244,7 +11598,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -29262,7 +11616,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -29270,7 +11624,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -29288,7 +11642,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -29296,7 +11650,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -29314,7 +11668,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -29322,7 +11676,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -29340,7 +11694,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -29348,7 +11702,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -29366,7 +11720,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -29374,7 +11728,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -29392,7 +11746,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -29400,7 +11754,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -29418,7 +11772,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -29426,7 +11780,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -29444,7 +11798,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -29452,7 +11806,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -29470,7 +11824,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -29478,7 +11832,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -29496,7 +11850,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -29504,7 +11858,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -29522,7 +11876,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -29530,7 +11884,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -29548,7 +11902,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -29556,7 +11910,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -29574,7 +11928,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -29582,7 +11936,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -29600,7 +11954,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -29608,7 +11962,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -29626,7 +11980,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -29634,7 +11988,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -29652,7 +12006,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -29660,7 +12014,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -29678,7 +12032,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -29686,7 +12040,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -29704,7 +12058,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -29712,7 +12066,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -29730,7 +12084,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -29738,7 +12092,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -29756,7 +12110,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -29764,7 +12118,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -29782,7 +12136,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -29790,7 +12144,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -29808,7 +12162,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -29816,7 +12170,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -29834,7 +12188,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -29842,7 +12196,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -29860,7 +12214,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -29868,7 +12222,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -29886,7 +12240,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -29894,7 +12248,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -29912,7 +12266,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -29920,7 +12274,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -29938,7 +12292,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -29946,7 +12300,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -29964,7 +12318,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -29972,7 +12326,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -29990,7 +12344,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -29998,7 +12352,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -30016,7 +12370,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -30024,7 +12378,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -30042,7 +12396,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -30050,7 +12404,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -30068,7 +12422,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -30076,7 +12430,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -30094,7 +12448,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -30102,7 +12456,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -30120,7 +12474,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -30128,7 +12482,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -30146,7 +12500,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -30154,7 +12508,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -30172,7 +12526,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -30180,7 +12534,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -30198,7 +12552,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -30206,7 +12560,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -30224,7 +12578,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -30232,7 +12586,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -30250,7 +12604,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -30258,7 +12612,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -30276,7 +12630,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -30284,7 +12638,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -30302,7 +12656,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -30310,7 +12664,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -30328,7 +12682,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -30336,7 +12690,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -30354,7 +12708,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -30362,7 +12716,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -30380,7 +12734,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -30388,7 +12742,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -30406,7 +12760,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -30414,7 +12768,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -30432,7 +12786,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -30440,7 +12794,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -30458,7 +12812,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -30466,7 +12820,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -30484,7 +12838,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -30492,7 +12846,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -30510,7 +12864,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -30518,7 +12872,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -30536,7 +12890,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -30544,7 +12898,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -30562,7 +12916,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -30570,7 +12924,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -30588,7 +12942,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -30596,7 +12950,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -30614,7 +12968,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -30622,7 +12976,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -30640,7 +12994,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -30648,7 +13002,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -30666,7 +13020,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -30674,7 +13028,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -30692,7 +13046,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -30700,7 +13054,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -30718,7 +13072,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -30726,7 +13080,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -30744,7 +13098,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -30752,7 +13106,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -30770,7 +13124,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -30778,7 +13132,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -30796,7 +13150,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -30804,7 +13158,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -30822,7 +13176,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -30830,7 +13184,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -30848,7 +13202,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -30856,7 +13210,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -30874,7 +13228,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -30882,7 +13236,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -30900,7 +13254,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -30908,7 +13262,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -30926,7 +13280,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -30934,7 +13288,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -30952,7 +13306,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -30960,7 +13314,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -30978,7 +13332,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -30986,7 +13340,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -31004,7 +13358,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -31012,7 +13366,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -31030,7 +13384,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -31038,7 +13392,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -31056,7 +13410,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -31064,7 +13418,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -31082,7 +13436,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -31090,7 +13444,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -31108,7 +13462,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -31116,7 +13470,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -31134,7 +13488,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -31142,7 +13496,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -31160,7 +13514,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -31168,7 +13522,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -31186,7 +13540,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -31194,7 +13548,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -31212,7 +13566,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -31220,7 +13574,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -31238,7 +13592,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -31246,7 +13600,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -31264,7 +13618,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -31272,7 +13626,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -31290,7 +13644,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -31298,7 +13652,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -31316,7 +13670,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -31324,7 +13678,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -31342,7 +13696,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -31350,7 +13704,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -31368,7 +13722,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -31376,7 +13730,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -31394,7 +13748,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -31402,7 +13756,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -31420,7 +13774,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -31428,7 +13782,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -31446,7 +13800,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -31454,7 +13808,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -31472,7 +13826,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -31480,7 +13834,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -31498,7 +13852,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -31506,7 +13860,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -31524,7 +13878,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -31532,7 +13886,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -31550,7 +13904,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -31558,7 +13912,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -31576,7 +13930,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -31584,7 +13938,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -31602,7 +13956,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -31610,7 +13964,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -31628,7 +13982,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -31636,7 +13990,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -31654,7 +14008,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -31662,7 +14016,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -31680,7 +14034,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -31688,7 +14042,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -31706,7 +14060,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -31714,7 +14068,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -31732,7 +14086,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -31740,7 +14094,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -31758,7 +14112,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -31766,7 +14120,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -31784,7 +14138,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -31792,7 +14146,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -31810,7 +14164,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -31818,7 +14172,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -31836,7 +14190,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -31844,7 +14198,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -31862,7 +14216,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -31870,7 +14224,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -31888,7 +14242,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -31896,7 +14250,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -31914,7 +14268,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -31922,7 +14276,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -31940,7 +14294,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -31948,7 +14302,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -31966,7 +14320,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -31974,7 +14328,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -31992,7 +14346,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -32000,7 +14354,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -32018,7 +14372,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -32026,7 +14380,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -32044,7 +14398,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -32052,7 +14406,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -32070,7 +14424,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -32078,7 +14432,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -32096,7 +14450,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -32104,7 +14458,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -32122,7 +14476,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -32130,7 +14484,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -32148,7 +14502,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -32156,7 +14510,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -32174,7 +14528,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -32182,7 +14536,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -32200,7 +14554,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -32208,7 +14562,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -32226,7 +14580,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -32234,7 +14588,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -32252,7 +14606,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -32260,7 +14614,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -32278,7 +14632,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -32286,7 +14640,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -32304,7 +14658,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -32312,7 +14666,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -32330,7 +14684,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -32338,7 +14692,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -32356,7 +14710,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -32364,7 +14718,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -32382,7 +14736,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -32390,7 +14744,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -32408,7 +14762,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -32416,7 +14770,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -32434,7 +14788,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -32442,7 +14796,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -32460,7 +14814,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -32468,7 +14822,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -32486,7 +14840,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -32494,7 +14848,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -32512,7 +14866,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -32520,7 +14874,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -32538,7 +14892,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -32546,7 +14900,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -32564,7 +14918,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -32572,7 +14926,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -32590,7 +14944,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -32598,7 +14952,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -32616,7 +14970,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -32624,7 +14978,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -32642,7 +14996,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -32650,7 +15004,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -32668,7 +15022,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -32676,7 +15030,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -32694,7 +15048,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -32702,7 +15056,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -32720,7 +15074,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -32728,7 +15082,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -32746,7 +15100,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -32754,7 +15108,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -32772,7 +15126,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -32780,7 +15134,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -32798,7 +15152,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -32806,7 +15160,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -32824,7 +15178,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -32832,7 +15186,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -32850,7 +15204,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -32858,7 +15212,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -32876,7 +15230,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -32884,7 +15238,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -32902,7 +15256,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -32910,7 +15264,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -32928,7 +15282,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -32936,7 +15290,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -32954,7 +15308,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -32962,7 +15316,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -32980,7 +15334,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -32988,7 +15342,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -33006,7 +15360,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -33014,7 +15368,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -33032,7 +15386,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -33040,7 +15394,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -33058,7 +15412,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -33066,7 +15420,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -33084,7 +15438,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -33092,7 +15446,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -33110,7 +15464,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -33118,7 +15472,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -33136,7 +15490,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -33144,7 +15498,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -33162,7 +15516,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -33170,7 +15524,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -33188,7 +15542,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -33196,7 +15550,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -33214,7 +15568,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -33222,7 +15576,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -33240,7 +15594,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -33248,7 +15602,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -33266,7 +15620,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -33274,7 +15628,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -33292,7 +15646,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -33300,7 +15654,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -33318,7 +15672,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -33326,7 +15680,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -33344,7 +15698,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -33352,7 +15706,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -33370,7 +15724,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -33378,7 +15732,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -33396,7 +15750,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -33404,7 +15758,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -33422,7 +15776,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -33430,7 +15784,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -33448,7 +15802,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -33456,7 +15810,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -33474,7 +15828,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -33482,7 +15836,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -33500,7 +15854,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -33508,7 +15862,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -33526,7 +15880,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -33534,7 +15888,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -33552,7 +15906,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -33560,7 +15914,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -33578,7 +15932,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -33586,7 +15940,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -33604,7 +15958,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -33612,7 +15966,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -33630,7 +15984,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -33638,7 +15992,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -33656,7 +16010,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -33664,7 +16018,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -33682,7 +16036,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -33690,7 +16044,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -33708,7 +16062,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -33716,7 +16070,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -33734,7 +16088,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -33742,7 +16096,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -33760,7 +16114,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -33768,7 +16122,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -33786,7 +16140,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -33794,7 +16148,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -33812,7 +16166,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -33820,7 +16174,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -33838,7 +16192,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -33846,7 +16200,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -33864,7 +16218,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -33872,7 +16226,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -33890,7 +16244,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -33898,7 +16252,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -33916,7 +16270,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -33924,7 +16278,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -33942,7 +16296,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -33950,7 +16304,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -33968,7 +16322,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -33976,7 +16330,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -33994,7 +16348,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -34002,7 +16356,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -34020,7 +16374,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -34028,7 +16382,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -34046,7 +16400,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -34054,7 +16408,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -34072,7 +16426,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -34080,7 +16434,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -34098,7 +16452,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -34106,7 +16460,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -34124,7 +16478,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -34132,7 +16486,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -34150,7 +16504,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -34158,7 +16512,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -34176,7 +16530,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -34184,7 +16538,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -34202,7 +16556,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -34210,7 +16564,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -34228,7 +16582,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -34236,7 +16590,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -34254,7 +16608,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -34262,7 +16616,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -34280,7 +16634,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -34288,7 +16642,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -34306,7 +16660,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -34314,7 +16668,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -34332,7 +16686,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -34340,7 +16694,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -34358,7 +16712,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -34366,7 +16720,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -34384,7 +16738,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -34392,7 +16746,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -34410,7 +16764,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -34418,7 +16772,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -34436,7 +16790,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -34444,7 +16798,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -34462,7 +16816,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -34470,7 +16824,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -34488,7 +16842,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -34496,7 +16850,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -34514,7 +16868,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -34522,7 +16876,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -34540,7 +16894,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -34548,7 +16902,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -34566,7 +16920,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -34574,7 +16928,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -34592,7 +16946,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -34600,7 +16954,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -34618,7 +16972,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -34626,7 +16980,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -34644,7 +16998,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -34652,7 +17006,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -34670,7 +17024,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -34678,7 +17032,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -34696,7 +17050,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -34704,7 +17058,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -34722,7 +17076,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -34730,7 +17084,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -34748,7 +17102,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -34756,7 +17110,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -34774,7 +17128,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -34782,7 +17136,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -34800,7 +17154,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -34808,7 +17162,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -34826,7 +17180,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -34834,7 +17188,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -34852,7 +17206,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -34860,7 +17214,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -34878,7 +17232,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -34886,7 +17240,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -34904,7 +17258,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -34912,7 +17266,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -34930,7 +17284,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -34938,7 +17292,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -34956,7 +17310,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -34964,7 +17318,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -34982,7 +17336,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -34990,7 +17344,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -35008,7 +17362,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -35016,7 +17370,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -35034,7 +17388,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -35042,7 +17396,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -35060,7 +17414,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -35068,7 +17422,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -35086,7 +17440,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -35094,7 +17448,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -35112,7 +17466,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -35120,7 +17474,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -35138,7 +17492,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -35146,7 +17500,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -35164,7 +17518,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -35172,7 +17526,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -35190,7 +17544,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -35198,7 +17552,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -35216,7 +17570,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -35224,7 +17578,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -35242,7 +17596,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -35250,7 +17604,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \
@@ -35268,7 +17622,7 @@ echo "Processing next configuration..."
 
 python simulator.py \
 --max_latency_calculate \
---csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19_optimal \
+--csv_path num_replica_4_prefix_len_16416_hot_cluster_ratio_0.08_planes_per_die_32_model_name_qwen2.5-14b_dataset_pg19 \
 --num_channels 1 \
 --chips_per_channel 1 \
 --dies_per_chip 1 \
@@ -35276,7 +17630,7 @@ python simulator.py \
 --vector_bytes 4 \
 --flash_read_latency_us 50 \
 --num_heads 8 \
---cluster_size 16 \
+--cluster_size 32 \
 --window_size 64 \
 --layer_num 48 \
 --profiling_dir /home/juchanlee/MagicDec/profile/data/ \

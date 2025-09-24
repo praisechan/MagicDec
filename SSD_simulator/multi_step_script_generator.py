@@ -5,9 +5,12 @@ import argparse
 
 # Base profiling directory
 # PROFILING_BASE_DIR = "/home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/"
-# PROFILING_BASE_DIR = "/home/juchanlee/MagicDec/profile/data_2step_for_0.1/"
+PROFILING_BASE_DIR = "/home/juchanlee/MagicDec/profile/data_kl_no_optimized_cluster32_gamma32"
 # Default value - can be overridden by command line argument
-PROFILING_BASE_DIR = "/home/juchanlee/MagicDec/profile/data/"
+# PROFILING_BASE_DIR = "/home/juchanlee/MagicDec/profile/data_0.02/"
+
+ADDITIONAL_COMMENT = ""
+# ADDITIONAL_COMMENT = "for_0.1"
 
 # Define fixed options and their possible values
 fixed_option_values = {
@@ -20,7 +23,7 @@ fixed_option_values = {
     "--num_heads": [8],
     "--cluster_size": [32],
     "--window_size": [64],
-    "--layer_num": [48],
+    "--layer_num": [32],
     "--profiling_dir": [
         PROFILING_BASE_DIR
     ],
@@ -29,10 +32,10 @@ fixed_option_values = {
 # Define variable options and their possible values
 option_values = {
     "--num_replica": [4],
-    "--prefix_len": ["65568"],
+    "--prefix_len": ["8224"],
     "--hot_cluster_ratio": [0.08],
     "--planes_per_die": [32],
-    "--model_name": ["qwen2.5-14b"],
+    "--model_name": ["Meta-Llama-3.1-8B"],
     "--dataset": ["pg19"],
 }
 
@@ -101,7 +104,7 @@ def make_script_filename(var_vals):
         if len(vals) == 1:
             clean = opt.lstrip('-').replace('-', '_')
             parts.append(f"{clean}_{vals[0]}")
-    return "_".join(parts)
+    return "_".join(parts)+f"_{ADDITIONAL_COMMENT}"
 
 # Build a command line including fixed options, variable options, and flags
 def build_command(var_keys, var_tuple, flags, generate_name, model_name, dataset, prefix_len, folder_type, verify_budget_ratio=0.25):
@@ -159,7 +162,7 @@ def main():
     
     # Parse command line arguments
     args = parse_arguments()
-    PROFILING_BASE_DIR = args.profiling_base_dir
+    # PROFILING_BASE_DIR = args.profiling_base_dir
     
     # Update the fixed_option_values with the new profiling directory
     fixed_option_values["--profiling_dir"] = [PROFILING_BASE_DIR]
