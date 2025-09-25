@@ -8,3 +8,4 @@ profile/data/*
 profile/*
 *.png
 *.csv
+*.sh

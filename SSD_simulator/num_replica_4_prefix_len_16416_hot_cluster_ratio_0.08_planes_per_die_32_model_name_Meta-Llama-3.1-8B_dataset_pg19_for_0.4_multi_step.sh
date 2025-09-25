@@ -17,7 +17,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_0_0 \
@@ -42,7 +42,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_0_4 \
@@ -67,7 +67,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_0_8 \
@@ -92,7 +92,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_0_12 \
@@ -117,7 +117,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_0_16 \
@@ -142,7 +142,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_0_20 \
@@ -167,7 +167,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_0_24 \
@@ -192,7 +192,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_0_28 \
@@ -217,7 +217,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_0_32 \
@@ -242,7 +242,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_0_36 \
@@ -267,7 +267,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_0_40 \
@@ -292,7 +292,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_0_44 \
@@ -317,7 +317,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_0_48 \
@@ -342,7 +342,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_0_52 \
@@ -367,7 +367,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_0_56 \
@@ -392,7 +392,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_0_60 \
@@ -417,7 +417,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_0_64 \
@@ -442,7 +442,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_0_68 \
@@ -467,7 +467,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_0_72 \
@@ -492,7 +492,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_0_76 \
@@ -517,7 +517,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_1_0 \
@@ -542,7 +542,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_1_4 \
@@ -567,7 +567,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_1_8 \
@@ -592,7 +592,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_1_12 \
@@ -617,7 +617,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_1_16 \
@@ -642,7 +642,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_1_20 \
@@ -667,7 +667,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_1_24 \
@@ -692,7 +692,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_1_28 \
@@ -717,7 +717,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_1_32 \
@@ -742,7 +742,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_1_36 \
@@ -767,7 +767,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_1_40 \
@@ -792,7 +792,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_1_44 \
@@ -817,7 +817,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_1_48 \
@@ -842,7 +842,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_1_52 \
@@ -867,7 +867,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_1_56 \
@@ -892,7 +892,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_1_60 \
@@ -917,7 +917,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_1_64 \
@@ -942,7 +942,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_1_68 \
@@ -967,7 +967,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_1_72 \
@@ -992,7 +992,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_1_76 \
@@ -1017,7 +1017,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_2_0 \
@@ -1042,7 +1042,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_2_4 \
@@ -1067,7 +1067,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_2_8 \
@@ -1092,7 +1092,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_2_12 \
@@ -1117,7 +1117,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_2_16 \
@@ -1142,7 +1142,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_2_20 \
@@ -1167,7 +1167,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_2_24 \
@@ -1192,7 +1192,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_2_28 \
@@ -1217,7 +1217,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_2_32 \
@@ -1242,7 +1242,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_2_36 \
@@ -1267,7 +1267,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_2_40 \
@@ -1292,7 +1292,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_2_44 \
@@ -1317,7 +1317,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_2_48 \
@@ -1342,7 +1342,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_2_52 \
@@ -1367,7 +1367,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_2_56 \
@@ -1392,7 +1392,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_2_60 \
@@ -1417,7 +1417,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_2_64 \
@@ -1442,7 +1442,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_2_68 \
@@ -1467,7 +1467,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_2_72 \
@@ -1492,7 +1492,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_2_76 \
@@ -1517,7 +1517,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_3_0 \
@@ -1542,7 +1542,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_3_4 \
@@ -1567,7 +1567,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_3_8 \
@@ -1592,7 +1592,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_3_12 \
@@ -1617,7 +1617,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_3_16 \
@@ -1642,7 +1642,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_3_20 \
@@ -1667,7 +1667,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_3_24 \
@@ -1692,7 +1692,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_3_28 \
@@ -1717,7 +1717,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_3_32 \
@@ -1742,7 +1742,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_3_36 \
@@ -1767,7 +1767,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_3_40 \
@@ -1792,7 +1792,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_3_44 \
@@ -1817,7 +1817,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_3_48 \
@@ -1842,7 +1842,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_3_52 \
@@ -1867,7 +1867,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_3_56 \
@@ -1892,7 +1892,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_3_60 \
@@ -1917,7 +1917,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_3_64 \
@@ -1942,7 +1942,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_3_68 \
@@ -1967,7 +1967,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_3_72 \
@@ -1992,7 +1992,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_3_76 \
@@ -2017,7 +2017,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_4_0 \
@@ -2042,7 +2042,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_4_4 \
@@ -2067,7 +2067,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_4_8 \
@@ -2092,7 +2092,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_4_12 \
@@ -2117,7 +2117,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_4_16 \
@@ -2142,7 +2142,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_4_20 \
@@ -2167,7 +2167,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_4_24 \
@@ -2192,7 +2192,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_4_28 \
@@ -2217,7 +2217,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_4_32 \
@@ -2242,7 +2242,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_4_36 \
@@ -2267,7 +2267,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_4_40 \
@@ -2292,7 +2292,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_4_44 \
@@ -2317,7 +2317,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_4_48 \
@@ -2342,7 +2342,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_4_52 \
@@ -2367,7 +2367,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_4_56 \
@@ -2392,7 +2392,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_4_60 \
@@ -2417,7 +2417,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_4_64 \
@@ -2442,7 +2442,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_4_68 \
@@ -2467,7 +2467,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_4_72 \
@@ -2492,7 +2492,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_4_76 \
@@ -2517,7 +2517,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_5_0 \
@@ -2542,7 +2542,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_5_4 \
@@ -2567,7 +2567,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_5_8 \
@@ -2592,7 +2592,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_5_12 \
@@ -2617,7 +2617,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_5_16 \
@@ -2642,7 +2642,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_5_20 \
@@ -2667,7 +2667,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_5_24 \
@@ -2692,7 +2692,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_5_28 \
@@ -2717,7 +2717,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_5_32 \
@@ -2742,7 +2742,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_5_36 \
@@ -2767,7 +2767,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_5_40 \
@@ -2792,7 +2792,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_5_44 \
@@ -2817,7 +2817,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_5_48 \
@@ -2842,7 +2842,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_5_52 \
@@ -2867,7 +2867,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_5_56 \
@@ -2892,7 +2892,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_5_60 \
@@ -2917,7 +2917,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_5_64 \
@@ -2942,7 +2942,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_5_68 \
@@ -2967,7 +2967,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_5_72 \
@@ -2992,7 +2992,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_5_76 \
@@ -3017,7 +3017,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_6_0 \
@@ -3042,7 +3042,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_6_4 \
@@ -3067,7 +3067,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_6_8 \
@@ -3092,7 +3092,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_6_12 \
@@ -3117,7 +3117,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_6_16 \
@@ -3142,7 +3142,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_6_20 \
@@ -3167,7 +3167,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_6_24 \
@@ -3192,7 +3192,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_6_28 \
@@ -3217,7 +3217,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_6_32 \
@@ -3242,7 +3242,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_6_36 \
@@ -3267,7 +3267,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_6_40 \
@@ -3292,7 +3292,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_6_44 \
@@ -3317,7 +3317,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_6_48 \
@@ -3342,7 +3342,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_6_52 \
@@ -3367,7 +3367,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_6_56 \
@@ -3392,7 +3392,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_6_60 \
@@ -3417,7 +3417,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_6_64 \
@@ -3442,7 +3442,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_6_68 \
@@ -3467,7 +3467,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_6_72 \
@@ -3492,7 +3492,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_6_76 \
@@ -3517,7 +3517,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_7_0 \
@@ -3542,7 +3542,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_7_4 \
@@ -3567,7 +3567,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_7_8 \
@@ -3592,7 +3592,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_7_12 \
@@ -3617,7 +3617,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_7_16 \
@@ -3642,7 +3642,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_7_20 \
@@ -3667,7 +3667,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_7_24 \
@@ -3692,7 +3692,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_7_28 \
@@ -3717,7 +3717,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_7_32 \
@@ -3742,7 +3742,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_7_36 \
@@ -3767,7 +3767,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_7_40 \
@@ -3792,7 +3792,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_7_44 \
@@ -3817,7 +3817,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_7_48 \
@@ -3842,7 +3842,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_7_52 \
@@ -3867,7 +3867,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_7_56 \
@@ -3892,7 +3892,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_7_60 \
@@ -3917,7 +3917,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_7_64 \
@@ -3942,7 +3942,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_7_68 \
@@ -3967,7 +3967,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_7_72 \
@@ -3992,7 +3992,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_7_76 \
@@ -4017,7 +4017,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_8_0 \
@@ -4042,7 +4042,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_8_4 \
@@ -4067,7 +4067,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_8_8 \
@@ -4092,7 +4092,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_8_12 \
@@ -4117,7 +4117,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_8_16 \
@@ -4142,7 +4142,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_8_20 \
@@ -4167,7 +4167,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_8_24 \
@@ -4192,7 +4192,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_8_28 \
@@ -4217,7 +4217,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_8_32 \
@@ -4242,7 +4242,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_8_36 \
@@ -4267,7 +4267,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_8_40 \
@@ -4292,7 +4292,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_8_44 \
@@ -4317,7 +4317,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_8_48 \
@@ -4342,7 +4342,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_8_52 \
@@ -4367,7 +4367,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_8_56 \
@@ -4392,7 +4392,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_8_60 \
@@ -4417,7 +4417,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_8_64 \
@@ -4442,7 +4442,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_8_68 \
@@ -4467,7 +4467,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_8_72 \
@@ -4492,7 +4492,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_8_76 \
@@ -4517,7 +4517,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_8_80 \
@@ -4542,7 +4542,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_9_0 \
@@ -4567,7 +4567,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_9_4 \
@@ -4592,7 +4592,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_9_8 \
@@ -4617,7 +4617,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_9_12 \
@@ -4642,7 +4642,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_9_16 \
@@ -4667,7 +4667,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_9_20 \
@@ -4692,7 +4692,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_9_24 \
@@ -4717,7 +4717,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_9_28 \
@@ -4742,7 +4742,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_9_32 \
@@ -4767,7 +4767,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_9_36 \
@@ -4792,7 +4792,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_9_40 \
@@ -4817,7 +4817,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_9_44 \
@@ -4842,7 +4842,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_9_48 \
@@ -4867,7 +4867,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_9_52 \
@@ -4892,7 +4892,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_9_56 \
@@ -4917,7 +4917,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_9_60 \
@@ -4942,7 +4942,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_9_64 \
@@ -4967,7 +4967,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_9_68 \
@@ -4992,7 +4992,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_9_72 \
@@ -5017,7 +5017,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_9_76 \
@@ -5042,7 +5042,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_9_80 \
@@ -5067,7 +5067,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_9_84 \
@@ -5092,7 +5092,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_9_88 \
@@ -5117,7 +5117,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_9_92 \
@@ -5142,7 +5142,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_0_0 \
@@ -5168,7 +5168,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_0_4 \
@@ -5194,7 +5194,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_0_8 \
@@ -5220,7 +5220,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_0_12 \
@@ -5246,7 +5246,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_0_16 \
@@ -5272,7 +5272,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_0_20 \
@@ -5298,7 +5298,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_0_24 \
@@ -5324,7 +5324,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_0_28 \
@@ -5350,7 +5350,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_0_32 \
@@ -5376,7 +5376,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_0_36 \
@@ -5402,7 +5402,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_0_40 \
@@ -5428,7 +5428,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_0_44 \
@@ -5454,7 +5454,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_0_48 \
@@ -5480,7 +5480,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_0_52 \
@@ -5506,7 +5506,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_0_56 \
@@ -5532,7 +5532,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_0_60 \
@@ -5558,7 +5558,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_0_64 \
@@ -5584,7 +5584,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_0_68 \
@@ -5610,7 +5610,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_0_72 \
@@ -5636,7 +5636,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_0_76 \
@@ -5662,7 +5662,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_1_0 \
@@ -5688,7 +5688,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_1_4 \
@@ -5714,7 +5714,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_1_8 \
@@ -5740,7 +5740,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_1_12 \
@@ -5766,7 +5766,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_1_16 \
@@ -5792,7 +5792,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_1_20 \
@@ -5818,7 +5818,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_1_24 \
@@ -5844,7 +5844,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_1_28 \
@@ -5870,7 +5870,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_1_32 \
@@ -5896,7 +5896,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_1_36 \
@@ -5922,7 +5922,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_1_40 \
@@ -5948,7 +5948,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_1_44 \
@@ -5974,7 +5974,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_1_48 \
@@ -6000,7 +6000,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_1_52 \
@@ -6026,7 +6026,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_1_56 \
@@ -6052,7 +6052,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_1_60 \
@@ -6078,7 +6078,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_1_64 \
@@ -6104,7 +6104,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_1_68 \
@@ -6130,7 +6130,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_1_72 \
@@ -6156,7 +6156,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_1_76 \
@@ -6182,7 +6182,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_2_0 \
@@ -6208,7 +6208,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_2_4 \
@@ -6234,7 +6234,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_2_8 \
@@ -6260,7 +6260,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_2_12 \
@@ -6286,7 +6286,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_2_16 \
@@ -6312,7 +6312,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_2_20 \
@@ -6338,7 +6338,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_2_24 \
@@ -6364,7 +6364,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_2_28 \
@@ -6390,7 +6390,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_2_32 \
@@ -6416,7 +6416,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_2_36 \
@@ -6442,7 +6442,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_2_40 \
@@ -6468,7 +6468,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_2_44 \
@@ -6494,7 +6494,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_2_48 \
@@ -6520,7 +6520,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_2_52 \
@@ -6546,7 +6546,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_2_56 \
@@ -6572,7 +6572,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_2_60 \
@@ -6598,7 +6598,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_2_64 \
@@ -6624,7 +6624,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_2_68 \
@@ -6650,7 +6650,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_2_72 \
@@ -6676,7 +6676,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_2_76 \
@@ -6702,7 +6702,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_3_0 \
@@ -6728,7 +6728,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_3_4 \
@@ -6754,7 +6754,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_3_8 \
@@ -6780,7 +6780,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_3_12 \
@@ -6806,7 +6806,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_3_16 \
@@ -6832,7 +6832,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_3_20 \
@@ -6858,7 +6858,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_3_24 \
@@ -6884,7 +6884,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_3_28 \
@@ -6910,7 +6910,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_3_32 \
@@ -6936,7 +6936,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_3_36 \
@@ -6962,7 +6962,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_3_40 \
@@ -6988,7 +6988,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_3_44 \
@@ -7014,7 +7014,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_3_48 \
@@ -7040,7 +7040,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_3_52 \
@@ -7066,7 +7066,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_3_56 \
@@ -7092,7 +7092,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_3_60 \
@@ -7118,7 +7118,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_3_64 \
@@ -7144,7 +7144,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_3_68 \
@@ -7170,7 +7170,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_3_72 \
@@ -7196,7 +7196,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_3_76 \
@@ -7222,7 +7222,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_4_0 \
@@ -7248,7 +7248,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_4_4 \
@@ -7274,7 +7274,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_4_8 \
@@ -7300,7 +7300,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_4_12 \
@@ -7326,7 +7326,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_4_16 \
@@ -7352,7 +7352,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_4_20 \
@@ -7378,7 +7378,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_4_24 \
@@ -7404,7 +7404,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_4_28 \
@@ -7430,7 +7430,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_4_32 \
@@ -7456,7 +7456,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_4_36 \
@@ -7482,7 +7482,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_4_40 \
@@ -7508,7 +7508,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_4_44 \
@@ -7534,7 +7534,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_4_48 \
@@ -7560,7 +7560,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_4_52 \
@@ -7586,7 +7586,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_4_56 \
@@ -7612,7 +7612,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_4_60 \
@@ -7638,7 +7638,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_4_64 \
@@ -7664,7 +7664,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_4_68 \
@@ -7690,7 +7690,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_4_72 \
@@ -7716,7 +7716,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_4_76 \
@@ -7742,7 +7742,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_5_0 \
@@ -7768,7 +7768,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_5_4 \
@@ -7794,7 +7794,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_5_8 \
@@ -7820,7 +7820,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_5_12 \
@@ -7846,7 +7846,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_5_16 \
@@ -7872,7 +7872,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_5_20 \
@@ -7898,7 +7898,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_5_24 \
@@ -7924,7 +7924,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_5_28 \
@@ -7950,7 +7950,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_5_32 \
@@ -7976,7 +7976,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_5_36 \
@@ -8002,7 +8002,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_5_40 \
@@ -8028,7 +8028,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_5_44 \
@@ -8054,7 +8054,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_5_48 \
@@ -8080,7 +8080,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_5_52 \
@@ -8106,7 +8106,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_5_56 \
@@ -8132,7 +8132,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_5_60 \
@@ -8158,7 +8158,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_5_64 \
@@ -8184,7 +8184,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_5_68 \
@@ -8210,7 +8210,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_5_72 \
@@ -8236,7 +8236,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_5_76 \
@@ -8262,7 +8262,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_6_0 \
@@ -8288,7 +8288,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_6_4 \
@@ -8314,7 +8314,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_6_8 \
@@ -8340,7 +8340,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_6_12 \
@@ -8366,7 +8366,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_6_16 \
@@ -8392,7 +8392,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_6_20 \
@@ -8418,7 +8418,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_6_24 \
@@ -8444,7 +8444,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_6_28 \
@@ -8470,7 +8470,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_6_32 \
@@ -8496,7 +8496,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_6_36 \
@@ -8522,7 +8522,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_6_40 \
@@ -8548,7 +8548,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_6_44 \
@@ -8574,7 +8574,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_6_48 \
@@ -8600,7 +8600,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_6_52 \
@@ -8626,7 +8626,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_6_56 \
@@ -8652,7 +8652,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_6_60 \
@@ -8678,7 +8678,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_6_64 \
@@ -8704,7 +8704,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_6_68 \
@@ -8730,7 +8730,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_6_72 \
@@ -8756,7 +8756,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_6_76 \
@@ -8782,7 +8782,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_7_0 \
@@ -8808,7 +8808,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_7_4 \
@@ -8834,7 +8834,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_7_8 \
@@ -8860,7 +8860,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_7_12 \
@@ -8886,7 +8886,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_7_16 \
@@ -8912,7 +8912,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_7_20 \
@@ -8938,7 +8938,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_7_24 \
@@ -8964,7 +8964,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_7_28 \
@@ -8990,7 +8990,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_7_32 \
@@ -9016,7 +9016,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_7_36 \
@@ -9042,7 +9042,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_7_40 \
@@ -9068,7 +9068,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_7_44 \
@@ -9094,7 +9094,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_7_48 \
@@ -9120,7 +9120,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_7_52 \
@@ -9146,7 +9146,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_7_56 \
@@ -9172,7 +9172,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_7_60 \
@@ -9198,7 +9198,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_7_64 \
@@ -9224,7 +9224,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_7_68 \
@@ -9250,7 +9250,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_7_72 \
@@ -9276,7 +9276,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_7_76 \
@@ -9302,7 +9302,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_8_0 \
@@ -9328,7 +9328,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_8_4 \
@@ -9354,7 +9354,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_8_8 \
@@ -9380,7 +9380,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_8_12 \
@@ -9406,7 +9406,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_8_16 \
@@ -9432,7 +9432,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_8_20 \
@@ -9458,7 +9458,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_8_24 \
@@ -9484,7 +9484,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_8_28 \
@@ -9510,7 +9510,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_8_32 \
@@ -9536,7 +9536,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_8_36 \
@@ -9562,7 +9562,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_8_40 \
@@ -9588,7 +9588,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_8_44 \
@@ -9614,7 +9614,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_8_48 \
@@ -9640,7 +9640,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_8_52 \
@@ -9666,7 +9666,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_8_56 \
@@ -9692,7 +9692,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_8_60 \
@@ -9718,7 +9718,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_8_64 \
@@ -9744,7 +9744,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_8_68 \
@@ -9770,7 +9770,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_8_72 \
@@ -9796,7 +9796,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_8_76 \
@@ -9822,7 +9822,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_8_80 \
@@ -9848,7 +9848,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_9_0 \
@@ -9874,7 +9874,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_9_4 \
@@ -9900,7 +9900,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_9_8 \
@@ -9926,7 +9926,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_9_12 \
@@ -9952,7 +9952,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_9_16 \
@@ -9978,7 +9978,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_9_20 \
@@ -10004,7 +10004,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_9_24 \
@@ -10030,7 +10030,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_9_28 \
@@ -10056,7 +10056,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_9_32 \
@@ -10082,7 +10082,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_9_36 \
@@ -10108,7 +10108,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_9_40 \
@@ -10134,7 +10134,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_9_44 \
@@ -10160,7 +10160,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_9_48 \
@@ -10186,7 +10186,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_9_52 \
@@ -10212,7 +10212,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_9_56 \
@@ -10238,7 +10238,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_9_60 \
@@ -10264,7 +10264,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_9_64 \
@@ -10290,7 +10290,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_9_68 \
@@ -10316,7 +10316,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_9_72 \
@@ -10342,7 +10342,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_9_76 \
@@ -10368,7 +10368,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_9_80 \
@@ -10394,7 +10394,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_9_84 \
@@ -10420,7 +10420,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_9_88 \
@@ -10446,7 +10446,7 @@ python simulator.py \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
---budget_ratio 0.02 \
+--budget_ratio 0.40 \
 --model_name Meta-Llama-3.1-8B \
 --dataset pg19 \
 --generate_name speculate_9_92 \

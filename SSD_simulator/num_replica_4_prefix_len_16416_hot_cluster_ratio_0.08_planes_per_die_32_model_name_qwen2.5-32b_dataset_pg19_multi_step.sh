@@ -13,7 +13,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -38,7 +38,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -63,7 +63,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -88,7 +88,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -113,7 +113,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -138,7 +138,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -163,7 +163,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -188,7 +188,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -213,7 +213,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -238,7 +238,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -263,7 +263,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -288,7 +288,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -313,7 +313,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -338,7 +338,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -363,7 +363,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -388,7 +388,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -413,7 +413,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -438,7 +438,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -463,7 +463,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -488,7 +488,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -513,7 +513,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -538,7 +538,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -563,7 +563,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -588,7 +588,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -613,7 +613,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -638,7 +638,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -663,7 +663,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -688,7 +688,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -713,7 +713,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -738,7 +738,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -763,7 +763,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -788,7 +788,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -813,7 +813,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -838,7 +838,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -863,7 +863,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -888,7 +888,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -913,7 +913,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -938,7 +938,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -963,7 +963,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -988,7 +988,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -1013,7 +1013,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -1038,7 +1038,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -1063,7 +1063,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -1088,7 +1088,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -1113,7 +1113,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -1138,7 +1138,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -1163,7 +1163,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -1188,7 +1188,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -1213,7 +1213,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -1238,7 +1238,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -1263,7 +1263,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -1288,7 +1288,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -1313,7 +1313,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -1338,7 +1338,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -1363,7 +1363,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -1388,7 +1388,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -1413,7 +1413,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -1438,7 +1438,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -1463,7 +1463,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -1488,7 +1488,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -1513,7 +1513,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -1538,7 +1538,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -1563,7 +1563,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -1588,7 +1588,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -1613,7 +1613,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -1638,7 +1638,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -1663,7 +1663,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -1688,7 +1688,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -1713,7 +1713,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -1738,7 +1738,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -1763,7 +1763,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -1788,7 +1788,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -1813,7 +1813,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -1838,7 +1838,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -1863,7 +1863,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -1888,7 +1888,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -1913,7 +1913,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -1938,7 +1938,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -1963,7 +1963,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -1988,7 +1988,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -2013,7 +2013,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -2038,7 +2038,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -2063,7 +2063,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -2088,7 +2088,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -2113,7 +2113,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -2138,7 +2138,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -2163,7 +2163,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -2188,7 +2188,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -2213,7 +2213,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -2238,7 +2238,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -2263,7 +2263,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -2288,7 +2288,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -2313,7 +2313,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -2338,7 +2338,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -2363,7 +2363,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -2388,7 +2388,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -2413,7 +2413,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -2438,7 +2438,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -2463,7 +2463,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -2488,7 +2488,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -2513,7 +2513,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -2538,7 +2538,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -2563,7 +2563,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -2588,7 +2588,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -2613,7 +2613,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -2638,7 +2638,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -2663,7 +2663,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -2688,7 +2688,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -2713,7 +2713,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -2738,7 +2738,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -2763,7 +2763,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -2788,7 +2788,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -2813,7 +2813,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -2838,7 +2838,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -2863,7 +2863,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -2888,7 +2888,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -2913,7 +2913,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -2938,7 +2938,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -2963,7 +2963,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -2988,7 +2988,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -3013,7 +3013,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -3038,7 +3038,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -3063,7 +3063,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -3088,7 +3088,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -3113,7 +3113,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -3138,7 +3138,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -3163,7 +3163,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -3188,7 +3188,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -3213,7 +3213,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -3238,7 +3238,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -3263,7 +3263,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -3288,7 +3288,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -3313,7 +3313,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -3338,7 +3338,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -3363,7 +3363,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -3388,7 +3388,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -3413,7 +3413,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -3438,7 +3438,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -3463,7 +3463,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -3488,7 +3488,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -3513,7 +3513,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -3538,7 +3538,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -3563,7 +3563,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -3588,7 +3588,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -3613,7 +3613,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -3638,7 +3638,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -3663,7 +3663,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -3688,7 +3688,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -3713,7 +3713,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -3738,7 +3738,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -3763,7 +3763,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -3788,7 +3788,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -3813,7 +3813,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -3838,7 +3838,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -3863,7 +3863,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -3888,7 +3888,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -3913,7 +3913,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -3938,7 +3938,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -3963,7 +3963,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -3988,7 +3988,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -4013,7 +4013,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -4038,7 +4038,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -4063,7 +4063,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -4088,7 +4088,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -4113,7 +4113,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -4138,7 +4138,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -4163,7 +4163,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -4188,7 +4188,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -4213,7 +4213,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -4238,7 +4238,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -4263,7 +4263,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -4288,7 +4288,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -4313,7 +4313,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -4338,7 +4338,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -4363,7 +4363,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -4388,7 +4388,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -4413,7 +4413,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -4438,7 +4438,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -4463,7 +4463,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -4488,7 +4488,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -4513,7 +4513,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -4538,7 +4538,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -4563,7 +4563,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -4588,7 +4588,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -4613,7 +4613,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -4638,7 +4638,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -4663,7 +4663,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -4688,7 +4688,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -4713,7 +4713,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -4738,7 +4738,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -4763,7 +4763,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -4788,7 +4788,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -4813,7 +4813,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -4838,7 +4838,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -4863,7 +4863,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -4888,7 +4888,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -4913,7 +4913,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -4938,7 +4938,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -4963,7 +4963,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -4988,7 +4988,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -5013,7 +5013,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -5038,7 +5038,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -5063,7 +5063,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -5088,7 +5088,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -5113,7 +5113,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -5138,7 +5138,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -5163,7 +5163,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -5188,7 +5188,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -5213,7 +5213,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -5238,7 +5238,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -5263,7 +5263,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -5288,7 +5288,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -5313,7 +5313,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -5338,7 +5338,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -5363,7 +5363,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -5388,7 +5388,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -5413,7 +5413,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -5438,7 +5438,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -5463,7 +5463,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -5488,7 +5488,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -5513,7 +5513,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -5538,7 +5538,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -5563,7 +5563,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -5588,7 +5588,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -5613,7 +5613,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -5638,7 +5638,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -5663,7 +5663,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -5688,7 +5688,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -5713,7 +5713,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -5738,7 +5738,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -5763,7 +5763,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -5788,7 +5788,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -5813,7 +5813,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -5838,7 +5838,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -5863,7 +5863,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -5888,7 +5888,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -5913,7 +5913,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -5938,7 +5938,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -5963,7 +5963,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -5988,7 +5988,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -6013,7 +6013,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -6038,7 +6038,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -6063,7 +6063,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -6088,7 +6088,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -6113,7 +6113,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -6138,7 +6138,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -6163,7 +6163,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -6188,7 +6188,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -6213,7 +6213,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -6238,7 +6238,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -6263,7 +6263,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -6288,7 +6288,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -6313,7 +6313,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -6338,7 +6338,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -6363,7 +6363,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -6388,7 +6388,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -6413,7 +6413,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -6438,7 +6438,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -6463,7 +6463,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -6488,7 +6488,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -6513,7 +6513,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -6538,7 +6538,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -6563,7 +6563,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -6588,7 +6588,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -6613,7 +6613,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -6638,7 +6638,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -6663,7 +6663,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -6688,7 +6688,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -6713,7 +6713,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -6738,7 +6738,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -6763,7 +6763,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -6788,7 +6788,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -6813,7 +6813,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -6838,7 +6838,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -6863,7 +6863,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -6888,7 +6888,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -6913,7 +6913,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -6938,7 +6938,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -6963,7 +6963,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -6988,7 +6988,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -7013,7 +7013,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -7038,7 +7038,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -7063,7 +7063,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -7088,7 +7088,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -7113,7 +7113,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -7138,7 +7138,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -7163,7 +7163,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -7188,7 +7188,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -7213,7 +7213,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -7238,7 +7238,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -7263,7 +7263,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -7288,7 +7288,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -7313,7 +7313,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -7338,7 +7338,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -7363,7 +7363,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -7388,7 +7388,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -7413,7 +7413,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -7438,7 +7438,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -7463,7 +7463,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -7488,7 +7488,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -7513,7 +7513,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -7538,7 +7538,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -7563,7 +7563,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -7588,7 +7588,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -7613,7 +7613,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -7638,7 +7638,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -7663,7 +7663,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -7688,7 +7688,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -7713,7 +7713,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -7738,7 +7738,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -7763,7 +7763,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -7788,7 +7788,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -7813,7 +7813,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -7838,7 +7838,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -7863,7 +7863,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -7888,7 +7888,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -7913,7 +7913,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -7938,7 +7938,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -7963,7 +7963,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -7988,7 +7988,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -8013,7 +8013,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -8038,7 +8038,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -8063,7 +8063,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -8088,7 +8088,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -8113,7 +8113,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -8138,7 +8138,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -8163,7 +8163,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -8188,7 +8188,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -8213,7 +8213,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -8238,7 +8238,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -8263,7 +8263,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -8288,7 +8288,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -8313,7 +8313,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -8338,7 +8338,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -8363,7 +8363,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -8388,7 +8388,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -8413,7 +8413,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -8438,7 +8438,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -8463,7 +8463,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -8488,7 +8488,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -8513,7 +8513,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -8538,7 +8538,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -8563,7 +8563,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -8588,7 +8588,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -8613,7 +8613,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -8638,7 +8638,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -8663,7 +8663,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -8688,7 +8688,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -8713,7 +8713,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -8738,7 +8738,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -8763,7 +8763,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -8788,7 +8788,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -8813,7 +8813,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -8838,7 +8838,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -8863,7 +8863,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -8888,7 +8888,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -8913,7 +8913,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -8938,7 +8938,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -8963,7 +8963,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -8988,7 +8988,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -9013,7 +9013,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -9038,7 +9038,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -9063,7 +9063,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -9088,7 +9088,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -9113,7 +9113,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -9138,7 +9138,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -9163,7 +9163,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -9188,7 +9188,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -9213,7 +9213,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -9238,7 +9238,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -9263,7 +9263,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -9288,7 +9288,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -9313,7 +9313,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -9338,7 +9338,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -9363,7 +9363,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -9388,7 +9388,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -9413,7 +9413,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -9438,7 +9438,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -9463,7 +9463,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -9488,7 +9488,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -9513,7 +9513,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -9538,7 +9538,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -9563,7 +9563,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -9588,7 +9588,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -9613,7 +9613,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -9638,7 +9638,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -9663,7 +9663,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -9688,7 +9688,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -9713,7 +9713,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -9738,7 +9738,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -9763,7 +9763,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -9788,7 +9788,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -9813,7 +9813,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -9838,7 +9838,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -9863,7 +9863,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -9888,7 +9888,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -9913,7 +9913,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -9938,7 +9938,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -9963,7 +9963,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -9988,7 +9988,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -10013,7 +10013,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -10038,7 +10038,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -10063,7 +10063,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -10088,7 +10088,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -10113,7 +10113,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -10138,7 +10138,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -10163,7 +10163,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -10188,7 +10188,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -10213,7 +10213,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -10238,7 +10238,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -10263,7 +10263,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -10288,7 +10288,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -10313,7 +10313,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -10338,7 +10338,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -10363,7 +10363,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -10388,7 +10388,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -10413,7 +10413,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -10438,7 +10438,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -10463,7 +10463,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -10488,7 +10488,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -10513,7 +10513,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -10538,7 +10538,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -10563,7 +10563,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -10588,7 +10588,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -10613,7 +10613,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -10638,7 +10638,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -10663,7 +10663,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -10688,7 +10688,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -10713,7 +10713,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -10738,7 +10738,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -10763,7 +10763,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -10788,7 +10788,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -10813,7 +10813,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -10838,7 +10838,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -10863,7 +10863,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -10888,7 +10888,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -10913,7 +10913,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -10938,7 +10938,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -10963,7 +10963,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -10988,7 +10988,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -11013,7 +11013,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -11038,7 +11038,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -11063,7 +11063,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -11088,7 +11088,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -11113,7 +11113,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -11138,7 +11138,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -11163,7 +11163,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -11188,7 +11188,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -11213,7 +11213,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -11238,7 +11238,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -11263,7 +11263,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -11288,7 +11288,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -11313,7 +11313,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -11338,7 +11338,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -11363,7 +11363,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -11388,7 +11388,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -11413,7 +11413,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -11438,7 +11438,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -11463,7 +11463,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -11488,7 +11488,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -11513,7 +11513,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -11538,7 +11538,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -11563,7 +11563,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -11588,7 +11588,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -11613,7 +11613,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -11638,7 +11638,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -11663,7 +11663,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -11688,7 +11688,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -11713,7 +11713,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -11738,7 +11738,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -11763,7 +11763,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -11788,7 +11788,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -11813,7 +11813,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -11838,7 +11838,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -11863,7 +11863,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -11888,7 +11888,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -11913,7 +11913,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -11938,7 +11938,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -11963,7 +11963,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -11988,7 +11988,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -12013,7 +12013,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -12038,7 +12038,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -12063,7 +12063,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -12088,7 +12088,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -12113,7 +12113,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -12138,7 +12138,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -12163,7 +12163,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -12188,7 +12188,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -12213,7 +12213,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -12238,7 +12238,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -12263,7 +12263,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -12288,7 +12288,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -12313,7 +12313,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -12338,7 +12338,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -12363,7 +12363,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -12388,7 +12388,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -12413,7 +12413,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -12438,7 +12438,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -12463,7 +12463,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -12488,7 +12488,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -12513,7 +12513,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -12538,7 +12538,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -12563,7 +12563,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -12588,7 +12588,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -12613,7 +12613,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -12638,7 +12638,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -12663,7 +12663,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -12688,7 +12688,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -12713,7 +12713,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -12738,7 +12738,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -12763,7 +12763,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -12788,7 +12788,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -12813,7 +12813,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -12838,7 +12838,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -12863,7 +12863,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -12888,7 +12888,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -12913,7 +12913,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -12938,7 +12938,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -12963,7 +12963,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -12988,7 +12988,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -13013,7 +13013,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -13038,7 +13038,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -13063,7 +13063,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -13088,7 +13088,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -13113,7 +13113,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -13138,7 +13138,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -13163,7 +13163,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -13188,7 +13188,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -13213,7 +13213,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -13238,7 +13238,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -13263,7 +13263,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -13288,7 +13288,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -13313,7 +13313,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -13338,7 +13338,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -13363,7 +13363,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -13388,7 +13388,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -13413,7 +13413,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -13438,7 +13438,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -13463,7 +13463,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -13488,7 +13488,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -13513,7 +13513,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -13538,7 +13538,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -13563,7 +13563,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -13588,7 +13588,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -13613,7 +13613,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -13638,7 +13638,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -13663,7 +13663,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -13688,7 +13688,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -13713,7 +13713,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -13738,7 +13738,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -13763,7 +13763,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -13788,7 +13788,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -13813,7 +13813,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -13838,7 +13838,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -13863,7 +13863,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -13888,7 +13888,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -13913,7 +13913,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -13938,7 +13938,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -13963,7 +13963,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -13988,7 +13988,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -14013,7 +14013,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -14038,7 +14038,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -14063,7 +14063,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -14088,7 +14088,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -14113,7 +14113,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -14138,7 +14138,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -14163,7 +14163,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -14188,7 +14188,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -14213,7 +14213,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -14238,7 +14238,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -14263,7 +14263,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -14288,7 +14288,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -14313,7 +14313,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -14338,7 +14338,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -14363,7 +14363,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -14388,7 +14388,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -14413,7 +14413,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -14438,7 +14438,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -14463,7 +14463,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -14488,7 +14488,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -14513,7 +14513,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -14538,7 +14538,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -14563,7 +14563,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -14588,7 +14588,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -14613,7 +14613,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -14638,7 +14638,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -14663,7 +14663,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -14688,7 +14688,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -14713,7 +14713,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -14738,7 +14738,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -14763,7 +14763,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -14788,7 +14788,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -14813,7 +14813,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -14838,7 +14838,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -14863,7 +14863,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -14888,7 +14888,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -14913,7 +14913,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -14938,7 +14938,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -14963,7 +14963,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -14988,7 +14988,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -15013,7 +15013,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -15038,7 +15038,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -15063,7 +15063,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -15088,7 +15088,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -15113,7 +15113,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -15138,7 +15138,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -15163,7 +15163,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -15188,7 +15188,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -15213,7 +15213,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -15238,7 +15238,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -15263,7 +15263,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -15288,7 +15288,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -15313,7 +15313,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -15338,7 +15338,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -15363,7 +15363,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -15388,7 +15388,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -15413,7 +15413,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -15438,7 +15438,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -15463,7 +15463,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -15488,7 +15488,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -15513,7 +15513,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -15538,7 +15538,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -15563,7 +15563,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -15588,7 +15588,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -15613,7 +15613,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -15638,7 +15638,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -15663,7 +15663,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -15689,7 +15689,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -15715,7 +15715,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -15741,7 +15741,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -15767,7 +15767,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -15793,7 +15793,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -15819,7 +15819,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -15845,7 +15845,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -15871,7 +15871,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -15897,7 +15897,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -15923,7 +15923,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -15949,7 +15949,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -15975,7 +15975,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -16001,7 +16001,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -16027,7 +16027,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -16053,7 +16053,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -16079,7 +16079,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -16105,7 +16105,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -16131,7 +16131,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -16157,7 +16157,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -16183,7 +16183,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -16209,7 +16209,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -16235,7 +16235,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -16261,7 +16261,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -16287,7 +16287,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -16313,7 +16313,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -16339,7 +16339,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -16365,7 +16365,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -16391,7 +16391,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -16417,7 +16417,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -16443,7 +16443,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -16469,7 +16469,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -16495,7 +16495,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -16521,7 +16521,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -16547,7 +16547,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -16573,7 +16573,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -16599,7 +16599,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -16625,7 +16625,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -16651,7 +16651,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -16677,7 +16677,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -16703,7 +16703,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -16729,7 +16729,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -16755,7 +16755,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -16781,7 +16781,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -16807,7 +16807,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -16833,7 +16833,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -16859,7 +16859,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -16885,7 +16885,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -16911,7 +16911,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -16937,7 +16937,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -16963,7 +16963,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -16989,7 +16989,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -17015,7 +17015,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -17041,7 +17041,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -17067,7 +17067,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -17093,7 +17093,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -17119,7 +17119,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -17145,7 +17145,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -17171,7 +17171,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -17197,7 +17197,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -17223,7 +17223,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -17249,7 +17249,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -17275,7 +17275,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -17301,7 +17301,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -17327,7 +17327,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -17353,7 +17353,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -17379,7 +17379,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -17405,7 +17405,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -17431,7 +17431,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -17457,7 +17457,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -17483,7 +17483,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -17509,7 +17509,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -17535,7 +17535,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -17561,7 +17561,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -17587,7 +17587,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -17613,7 +17613,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -17639,7 +17639,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -17665,7 +17665,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -17691,7 +17691,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -17717,7 +17717,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -17743,7 +17743,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -17769,7 +17769,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -17795,7 +17795,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -17821,7 +17821,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -17847,7 +17847,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -17873,7 +17873,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -17899,7 +17899,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -17925,7 +17925,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -17951,7 +17951,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -17977,7 +17977,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -18003,7 +18003,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -18029,7 +18029,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -18055,7 +18055,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -18081,7 +18081,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -18107,7 +18107,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -18133,7 +18133,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -18159,7 +18159,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -18185,7 +18185,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -18211,7 +18211,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -18237,7 +18237,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -18263,7 +18263,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -18289,7 +18289,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -18315,7 +18315,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -18341,7 +18341,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -18367,7 +18367,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -18393,7 +18393,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -18419,7 +18419,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -18445,7 +18445,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -18471,7 +18471,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -18497,7 +18497,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -18523,7 +18523,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -18549,7 +18549,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -18575,7 +18575,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -18601,7 +18601,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -18627,7 +18627,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -18653,7 +18653,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -18679,7 +18679,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -18705,7 +18705,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -18731,7 +18731,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -18757,7 +18757,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -18783,7 +18783,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -18809,7 +18809,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -18835,7 +18835,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -18861,7 +18861,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -18887,7 +18887,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -18913,7 +18913,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -18939,7 +18939,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -18965,7 +18965,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -18991,7 +18991,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -19017,7 +19017,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -19043,7 +19043,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -19069,7 +19069,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -19095,7 +19095,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -19121,7 +19121,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -19147,7 +19147,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -19173,7 +19173,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -19199,7 +19199,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -19225,7 +19225,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -19251,7 +19251,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -19277,7 +19277,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -19303,7 +19303,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -19329,7 +19329,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -19355,7 +19355,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -19381,7 +19381,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -19407,7 +19407,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -19433,7 +19433,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -19459,7 +19459,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -19485,7 +19485,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -19511,7 +19511,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -19537,7 +19537,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -19563,7 +19563,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -19589,7 +19589,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -19615,7 +19615,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -19641,7 +19641,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -19667,7 +19667,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -19693,7 +19693,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -19719,7 +19719,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -19745,7 +19745,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -19771,7 +19771,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -19797,7 +19797,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -19823,7 +19823,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -19849,7 +19849,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -19875,7 +19875,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -19901,7 +19901,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -19927,7 +19927,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -19953,7 +19953,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -19979,7 +19979,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -20005,7 +20005,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -20031,7 +20031,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -20057,7 +20057,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -20083,7 +20083,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -20109,7 +20109,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -20135,7 +20135,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -20161,7 +20161,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -20187,7 +20187,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -20213,7 +20213,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -20239,7 +20239,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -20265,7 +20265,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -20291,7 +20291,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -20317,7 +20317,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -20343,7 +20343,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -20369,7 +20369,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -20395,7 +20395,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -20421,7 +20421,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -20447,7 +20447,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -20473,7 +20473,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -20499,7 +20499,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -20525,7 +20525,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -20551,7 +20551,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -20577,7 +20577,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -20603,7 +20603,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -20629,7 +20629,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -20655,7 +20655,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -20681,7 +20681,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -20707,7 +20707,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -20733,7 +20733,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -20759,7 +20759,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -20785,7 +20785,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -20811,7 +20811,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -20837,7 +20837,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -20863,7 +20863,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -20889,7 +20889,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -20915,7 +20915,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -20941,7 +20941,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -20967,7 +20967,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -20993,7 +20993,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -21019,7 +21019,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -21045,7 +21045,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -21071,7 +21071,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -21097,7 +21097,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -21123,7 +21123,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -21149,7 +21149,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -21175,7 +21175,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -21201,7 +21201,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -21227,7 +21227,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -21253,7 +21253,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -21279,7 +21279,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -21305,7 +21305,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -21331,7 +21331,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -21357,7 +21357,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -21383,7 +21383,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -21409,7 +21409,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -21435,7 +21435,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -21461,7 +21461,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -21487,7 +21487,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -21513,7 +21513,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -21539,7 +21539,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -21565,7 +21565,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -21591,7 +21591,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -21617,7 +21617,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -21643,7 +21643,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -21669,7 +21669,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -21695,7 +21695,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -21721,7 +21721,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -21747,7 +21747,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -21773,7 +21773,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -21799,7 +21799,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -21825,7 +21825,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -21851,7 +21851,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -21877,7 +21877,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -21903,7 +21903,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -21929,7 +21929,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -21955,7 +21955,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -21981,7 +21981,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -22007,7 +22007,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -22033,7 +22033,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -22059,7 +22059,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -22085,7 +22085,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -22111,7 +22111,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -22137,7 +22137,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -22163,7 +22163,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -22189,7 +22189,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -22215,7 +22215,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -22241,7 +22241,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -22267,7 +22267,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -22293,7 +22293,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -22319,7 +22319,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -22345,7 +22345,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -22371,7 +22371,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -22397,7 +22397,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -22423,7 +22423,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -22449,7 +22449,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -22475,7 +22475,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -22501,7 +22501,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -22527,7 +22527,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -22553,7 +22553,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -22579,7 +22579,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -22605,7 +22605,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -22631,7 +22631,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -22657,7 +22657,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -22683,7 +22683,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -22709,7 +22709,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -22735,7 +22735,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -22761,7 +22761,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -22787,7 +22787,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -22813,7 +22813,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -22839,7 +22839,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -22865,7 +22865,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -22891,7 +22891,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -22917,7 +22917,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -22943,7 +22943,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -22969,7 +22969,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -22995,7 +22995,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -23021,7 +23021,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -23047,7 +23047,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -23073,7 +23073,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -23099,7 +23099,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -23125,7 +23125,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -23151,7 +23151,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -23177,7 +23177,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -23203,7 +23203,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -23229,7 +23229,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -23255,7 +23255,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -23281,7 +23281,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -23307,7 +23307,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -23333,7 +23333,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -23359,7 +23359,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -23385,7 +23385,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -23411,7 +23411,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -23437,7 +23437,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -23463,7 +23463,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -23489,7 +23489,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -23515,7 +23515,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -23541,7 +23541,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -23567,7 +23567,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -23593,7 +23593,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -23619,7 +23619,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -23645,7 +23645,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -23671,7 +23671,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -23697,7 +23697,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -23723,7 +23723,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -23749,7 +23749,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -23775,7 +23775,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -23801,7 +23801,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -23827,7 +23827,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -23853,7 +23853,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -23879,7 +23879,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -23905,7 +23905,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -23931,7 +23931,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -23957,7 +23957,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -23983,7 +23983,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -24009,7 +24009,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -24035,7 +24035,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -24061,7 +24061,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -24087,7 +24087,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -24113,7 +24113,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -24139,7 +24139,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -24165,7 +24165,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -24191,7 +24191,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -24217,7 +24217,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -24243,7 +24243,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -24269,7 +24269,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -24295,7 +24295,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -24321,7 +24321,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -24347,7 +24347,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -24373,7 +24373,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -24399,7 +24399,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -24425,7 +24425,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -24451,7 +24451,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -24477,7 +24477,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -24503,7 +24503,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -24529,7 +24529,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -24555,7 +24555,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -24581,7 +24581,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -24607,7 +24607,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -24633,7 +24633,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -24659,7 +24659,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -24685,7 +24685,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -24711,7 +24711,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -24737,7 +24737,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -24763,7 +24763,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -24789,7 +24789,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -24815,7 +24815,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -24841,7 +24841,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -24867,7 +24867,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -24893,7 +24893,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -24919,7 +24919,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -24945,7 +24945,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -24971,7 +24971,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -24997,7 +24997,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -25023,7 +25023,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -25049,7 +25049,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -25075,7 +25075,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -25101,7 +25101,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -25127,7 +25127,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -25153,7 +25153,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -25179,7 +25179,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -25205,7 +25205,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -25231,7 +25231,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -25257,7 +25257,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -25283,7 +25283,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -25309,7 +25309,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -25335,7 +25335,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -25361,7 +25361,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -25387,7 +25387,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -25413,7 +25413,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -25439,7 +25439,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -25465,7 +25465,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -25491,7 +25491,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -25517,7 +25517,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -25543,7 +25543,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -25569,7 +25569,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -25595,7 +25595,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -25621,7 +25621,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -25647,7 +25647,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -25673,7 +25673,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -25699,7 +25699,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -25725,7 +25725,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -25751,7 +25751,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -25777,7 +25777,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -25803,7 +25803,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -25829,7 +25829,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -25855,7 +25855,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -25881,7 +25881,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -25907,7 +25907,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -25933,7 +25933,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -25959,7 +25959,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -25985,7 +25985,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -26011,7 +26011,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -26037,7 +26037,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -26063,7 +26063,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -26089,7 +26089,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -26115,7 +26115,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -26141,7 +26141,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -26167,7 +26167,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -26193,7 +26193,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -26219,7 +26219,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -26245,7 +26245,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -26271,7 +26271,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -26297,7 +26297,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -26323,7 +26323,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -26349,7 +26349,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -26375,7 +26375,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -26401,7 +26401,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -26427,7 +26427,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -26453,7 +26453,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -26479,7 +26479,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -26505,7 +26505,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -26531,7 +26531,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -26557,7 +26557,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -26583,7 +26583,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -26609,7 +26609,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -26635,7 +26635,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -26661,7 +26661,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -26687,7 +26687,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -26713,7 +26713,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -26739,7 +26739,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -26765,7 +26765,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -26791,7 +26791,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -26817,7 +26817,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -26843,7 +26843,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -26869,7 +26869,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -26895,7 +26895,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -26921,7 +26921,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -26947,7 +26947,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -26973,7 +26973,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -26999,7 +26999,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -27025,7 +27025,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -27051,7 +27051,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -27077,7 +27077,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -27103,7 +27103,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -27129,7 +27129,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -27155,7 +27155,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -27181,7 +27181,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -27207,7 +27207,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -27233,7 +27233,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -27259,7 +27259,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -27285,7 +27285,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -27311,7 +27311,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -27337,7 +27337,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -27363,7 +27363,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -27389,7 +27389,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -27415,7 +27415,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -27441,7 +27441,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -27467,7 +27467,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -27493,7 +27493,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -27519,7 +27519,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -27545,7 +27545,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -27571,7 +27571,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -27597,7 +27597,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -27623,7 +27623,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -27649,7 +27649,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -27675,7 +27675,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -27701,7 +27701,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -27727,7 +27727,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -27753,7 +27753,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -27779,7 +27779,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -27805,7 +27805,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -27831,7 +27831,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -27857,7 +27857,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -27883,7 +27883,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -27909,7 +27909,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -27935,7 +27935,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -27961,7 +27961,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -27987,7 +27987,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -28013,7 +28013,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -28039,7 +28039,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -28065,7 +28065,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -28091,7 +28091,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -28117,7 +28117,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -28143,7 +28143,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -28169,7 +28169,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -28195,7 +28195,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -28221,7 +28221,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -28247,7 +28247,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -28273,7 +28273,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -28299,7 +28299,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -28325,7 +28325,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -28351,7 +28351,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -28377,7 +28377,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -28403,7 +28403,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -28429,7 +28429,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -28455,7 +28455,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -28481,7 +28481,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -28507,7 +28507,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -28533,7 +28533,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -28559,7 +28559,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -28585,7 +28585,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -28611,7 +28611,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -28637,7 +28637,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -28663,7 +28663,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -28689,7 +28689,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -28715,7 +28715,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -28741,7 +28741,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -28767,7 +28767,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -28793,7 +28793,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -28819,7 +28819,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -28845,7 +28845,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -28871,7 +28871,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -28897,7 +28897,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -28923,7 +28923,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -28949,7 +28949,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -28975,7 +28975,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -29001,7 +29001,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -29027,7 +29027,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -29053,7 +29053,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -29079,7 +29079,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -29105,7 +29105,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -29131,7 +29131,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -29157,7 +29157,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -29183,7 +29183,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -29209,7 +29209,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -29235,7 +29235,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -29261,7 +29261,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -29287,7 +29287,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -29313,7 +29313,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -29339,7 +29339,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -29365,7 +29365,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -29391,7 +29391,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -29417,7 +29417,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -29443,7 +29443,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -29469,7 +29469,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -29495,7 +29495,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -29521,7 +29521,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -29547,7 +29547,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -29573,7 +29573,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -29599,7 +29599,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -29625,7 +29625,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -29651,7 +29651,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -29677,7 +29677,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -29703,7 +29703,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -29729,7 +29729,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -29755,7 +29755,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -29781,7 +29781,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -29807,7 +29807,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -29833,7 +29833,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -29859,7 +29859,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -29885,7 +29885,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -29911,7 +29911,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -29937,7 +29937,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -29963,7 +29963,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -29989,7 +29989,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -30015,7 +30015,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -30041,7 +30041,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -30067,7 +30067,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -30093,7 +30093,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -30119,7 +30119,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -30145,7 +30145,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -30171,7 +30171,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -30197,7 +30197,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -30223,7 +30223,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -30249,7 +30249,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -30275,7 +30275,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -30301,7 +30301,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -30327,7 +30327,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -30353,7 +30353,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -30379,7 +30379,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -30405,7 +30405,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -30431,7 +30431,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -30457,7 +30457,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -30483,7 +30483,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -30509,7 +30509,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -30535,7 +30535,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -30561,7 +30561,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -30587,7 +30587,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -30613,7 +30613,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -30639,7 +30639,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -30665,7 +30665,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -30691,7 +30691,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -30717,7 +30717,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -30743,7 +30743,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -30769,7 +30769,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -30795,7 +30795,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -30821,7 +30821,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -30847,7 +30847,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -30873,7 +30873,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -30899,7 +30899,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -30925,7 +30925,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -30951,7 +30951,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -30977,7 +30977,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -31003,7 +31003,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -31029,7 +31029,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -31055,7 +31055,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -31081,7 +31081,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -31107,7 +31107,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -31133,7 +31133,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -31159,7 +31159,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -31185,7 +31185,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -31211,7 +31211,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -31237,7 +31237,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -31263,7 +31263,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -31289,7 +31289,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -31315,7 +31315,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -31341,7 +31341,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -31367,7 +31367,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -31393,7 +31393,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -31419,7 +31419,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -31445,7 +31445,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -31471,7 +31471,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -31497,7 +31497,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -31523,7 +31523,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -31549,7 +31549,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -31575,7 +31575,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -31601,7 +31601,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -31627,7 +31627,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -31653,7 +31653,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -31679,7 +31679,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -31705,7 +31705,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -31731,7 +31731,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -31757,7 +31757,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -31783,7 +31783,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -31809,7 +31809,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -31835,7 +31835,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -31861,7 +31861,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -31887,7 +31887,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \
@@ -31913,7 +31913,7 @@ python simulator.py \
 --cluster_size 32 \
 --window_size 64 \
 --layer_num 64 \
---profiling_dir /home/juchanlee/MagicDec/profile/data_0.02/ \
+--profiling_dir /mnt/nfs-vlsi/juchanlee/profile_data/data_0.02/ \
 --num_replica 4 \
 --hot_cluster_ratio 0.08 \
 --planes_per_die 32 \

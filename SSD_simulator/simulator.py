@@ -102,7 +102,6 @@ def load_profiling_layer(
     profiling_dir = None
     cluster_sizes = None
     successful_cluster_size = None
-    
     # Try each cluster size until one works
     for cluster_size_attempt in cluster_sizes_to_try:
         try:
@@ -143,9 +142,12 @@ def load_profiling_layer(
       train_step_idx = int(generate_parts[1])
     else:
       train_step_idx = 0
-    profiling_dir_for_softmax = args.profiling_dir + f"{args.model_name}_{args.dataset}_{args.prefix_len}/speculate_{train_step_idx}_0/data_{args.budget_ratio}KV_clustersize_{cluster_size_attempt}"
+    # profiling_dir_for_softmax = args.profiling_dir + f"{args.model_name}_{args.dataset}_{args.prefix_len}/speculate_{train_step_idx}_0/data_{args.budget_ratio}KV_clustersize_{cluster_size_attempt}"
+    # softmax_sum = torch.load(
+    #     os.path.join(profiling_dir_for_softmax, f"softmax_sum_{layer_idx}.pt"), map_location='cpu'
+    # )
     softmax_sum = torch.load(
-        os.path.join(profiling_dir_for_softmax, f"softmax_sum_{layer_idx}.pt"), map_location='cpu'
+        os.path.join(profiling_dir, f"softmax_sum_{layer_idx}.pt"), map_location='cpu'
     )
 
     # Calculate hot clusters based on softmax_sum scores

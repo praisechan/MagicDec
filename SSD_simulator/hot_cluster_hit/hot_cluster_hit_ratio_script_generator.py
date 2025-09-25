@@ -23,8 +23,8 @@ option_values = {
     "--model_name": ["qwen2.5-14b"],
     "--dataset": ["pg19"],
     "--prefix_len": ["32800"],
-    # "--batch_size": ["4", "16", "64", "128"],
-    "--batch_size": ["64", "128"],
+    "--batch_size": ["128"],
+    # "--batch_size": ["64", "128"],
     # "--prefix_len": ["8224", "16416", "32800"],
 }
 
@@ -217,7 +217,7 @@ def main():
     
     # Write to a file named for the analysis type
     script_name = make_script_filename(option_values)
-    with open(script_name + "batch16_64_only.sh", "w") as f:
+    with open(script_name + ".sh", "w") as f:
         f.write(template)
     
     print(f"\nGenerated {script_name}.sh with {len(generated_scripts)} commands.")
