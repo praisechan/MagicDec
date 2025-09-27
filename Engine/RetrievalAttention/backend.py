@@ -115,6 +115,14 @@ class LMBackend_Retro:
         )
                 
         return input_ids
+    def reset_attn_config_for_speculate(self, model_path, input_len, attn_type, budget_ratio, estimate_ratio):
+        self.attn_config = generate_config(
+            model_path,
+            input_len,
+            attn_type,
+            budget_ratio=budget_ratio,
+            estimate_ratio=estimate_ratio,
+        )
 
     # Only used for target verification
     @torch.inference_mode()

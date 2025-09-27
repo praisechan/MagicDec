@@ -188,6 +188,7 @@ class LMBackend_Retro:
         
         # Ensure bounds are valid
         if cache_start < 0 or cache_end < 0 or cache_start >= self.input_tokens.shape[1] or cache_end > self.input_tokens.shape[1]:
+            raise ValueError(f"Invalid cache bounds in extended verification (cache_start={cache_start}, cache_end={cache_end}, input_tokens.shape={self.input_tokens.shape})")
             print(f"WARNING: Invalid cache bounds in extended verification (cache_start={cache_start}, cache_end={cache_end}, input_tokens.shape={self.input_tokens.shape}), falling back to regular verification")
             # Fallback to regular verification
             input_from_start = self.input_tokens[:, :self.verified_cachelength]

@@ -67,6 +67,9 @@ confidence_analyzer = ConfidenceAnalyzer(
     center=args.hist_center
 )
 
+# Initialize stage outputs recording
+stage_outputs_data = []
+
 # Init model parallelism
 DEVICE = 'cuda' if torch.cuda.is_available() else 'cpu'
 global print
@@ -141,7 +144,8 @@ current_attn_type = args.attn_type
 
 # CSV logging setup
 # log_dir = "logs"
-profile_dir = f"/home/juchanlee/MagicDec/profile/data_{args.budget1}/{MODEL}_{args.dataset}_{args.prefix_len}"
+# profile_dir = f"/home/juchanlee/MagicDec/profile/data_{args.budget1}/{MODEL}_{args.dataset}_{args.prefix_len}"
+profile_dir = f"/home/juchanlee/MagicDec/profile/data_kl_no_optimized_cluster32_gamma{args.gamma2}/{MODEL}_{args.dataset}_{args.prefix_len}"
 # profile_dir = f"/home/juchanlee/MagicDec/profile/temp/{MODEL}_{args.dataset}_{args.prefix_len}"
 log_dir = profile_dir
 
@@ -228,6 +232,12 @@ for step, batch in tqdm(enumerate(dataset), total=num_eval_steps):
         tokens_buffer[:,1:1+args.gamma1] = torch.LongTensor(draft_outputs)
         step_speculate_calls += args.gamma1
         
+        # Record draft outputs
+        stage_outputs_data.append({
+            "stage": "draft",
+            "outputs": draft_outputs.tolist() if hasattr(draft_outputs, 'tolist') else list(draft_outputs)
+        })
+        
         # Store draft confidences for analysis
         confidence_analyzer.store_draft_confidences(top1_top2_diff)
         
@@ -235,7 +245,8 @@ for step, batch in tqdm(enumerate(dataset), total=num_eval_steps):
         # If all tokens have high confidence (top1_top2_diff > threshold), use lower budget
         current_budget = args.budget2  # default budget
         budget_switched = False  # Track if budget was switched for this speculation
-        
+        verify_budget = None
+
         if args.enable_dynamic_budget and top1_top2_diff is not None and len(top1_top2_diff) > 0:
             min_confidence = torch.min(torch.tensor(top1_top2_diff))
             avg_confidence = torch.mean(torch.tensor(top1_top2_diff))
@@ -244,45 +255,31 @@ for step, batch in tqdm(enumerate(dataset), total=num_eval_steps):
             
             if min_confidence > args.confidence_threshold:
                 # High confidence: use lower budget for verification
-                current_budget = args.budget2_low
                 budget_switched = True
                 step_budget_switches += 1
-                engine.update_verification_budget(
-                    budget_ratio=current_budget, 
-                    estimate_ratio=args.estimate_ratio,
-                    model_path=current_model_path,
-                    seq_len=input_ids.shape[1],
-                    attn_type=current_attn_type
-                )
-                print(f"High confidence detected (min_diff={min_confidence:.3f}), using lower verification budget: {current_budget}")
+                verify_budget = args.budget2_low
+                print(f"High confidence detected (min_diff={min_confidence:.3f}), using lower verification budget: {verify_budget}")
             else:
-                # Low confidence: use original budget for verification
-                engine.update_verification_budget(
-                    budget_ratio=current_budget, 
-                    estimate_ratio=args.estimate_ratio,
-                    model_path=current_model_path,
-                    seq_len=input_ids.shape[1],
-                    attn_type=current_attn_type
-                )
-                print(f"Low confidence detected (min_diff={min_confidence:.3f}), using original verification budget: {current_budget}")
+                verify_budget = args.budget2
+                print(f"Low confidence detected (min_diff={min_confidence:.3f}), using original verification budget: {verify_budget}")
         else:
             # Dynamic budget disabled or no confidence data available - use original budget
             if args.enable_dynamic_budget:
                 print("No confidence data available, using default budget")
             else:
                 print("Dynamic budget disabled, using default budget")
-            
+            verify_budget = args.budget2            
             # Still collect confidence data for logging if available
             if top1_top2_diff is not None and len(top1_top2_diff) > 0:
                 step_confidences.extend([float(x) for x in top1_top2_diff])
             
-            engine.update_verification_budget(
-                budget_ratio=current_budget, 
-                estimate_ratio=args.estimate_ratio,
-                model_path=current_model_path,
-                seq_len=input_ids.shape[1],
-                attn_type=current_attn_type
-            )
+        engine.update_verification_budget(
+            budget_ratio=verify_budget,
+            estimate_ratio=args.estimate_ratio,
+            model_path=current_model_path,
+            seq_len=input_ids.shape[1],
+            attn_type=current_attn_type
+        )
 
         # Always call verify after speculate
         if called_verify == 0:
@@ -290,6 +287,12 @@ for step, batch in tqdm(enumerate(dataset), total=num_eval_steps):
 
         verify_outputs, verify_logits, verify_top1_top2_diff = engine.verify(tokens_buffer[:, :1], args.gamma1+1, use_first_kv=True, profile_clustering=True, profile_hot_cluster_selection_ratio=False, generate_name=f"{profile_dir}/verify_{step}_{step_verify_calls}")
         target_tokens = torch.LongTensor(verify_outputs).to(DEVICE) #TODO: verify stage should be batch-fashion, but this verify() is auto-regressive.
+
+        # Record verify outputs
+        stage_outputs_data.append({
+            "stage": "verify",
+            "outputs": verify_outputs.tolist() if hasattr(verify_outputs, 'tolist') else list(verify_outputs)
+        })
 
         step_verify_calls += 1
         called_verify += 1
@@ -355,6 +358,12 @@ for step, batch in tqdm(enumerate(dataset), total=num_eval_steps):
 
             settle_outputs, settle_logits, settle_top1_top2_diff = engine.settle(cached_tokens_buffer.view(-1,1), num_unsettled_tokens+1)
             target_tokens = torch.LongTensor(settle_outputs).to(DEVICE) #TODO: verify stage should be batch-fashion, but this verify() is auto-regressive.
+            
+            # Record settle outputs
+            stage_outputs_data.append({
+                "stage": "settle",
+                "outputs": settle_outputs.tolist() if hasattr(settle_outputs, 'tolist') else list(settle_outputs)
+            })
             
             step_settle_calls += 1
 
@@ -516,3 +525,11 @@ for i in range(min(args.hist_num_bins, 20)):  # Limit output to first 20 bins fo
 
 if args.hist_num_bins > 20:
     print(f"... (showing first 20 bins out of {args.hist_num_bins} total bins)")
+
+# Save stage outputs data to JSON file
+print(f"\n=== Saving Stage Outputs Data ===")
+stage_outputs_file = os.path.join(log_dir, "stage_outputs.json")
+with open(stage_outputs_file, 'w') as f:
+    json.dump(stage_outputs_data, f, indent=2)
+print(f"Stage outputs saved to: {stage_outputs_file}")
+print(f"Total stage entries recorded: {len(stage_outputs_data)}")

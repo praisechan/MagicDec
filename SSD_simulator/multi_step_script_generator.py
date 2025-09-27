@@ -5,11 +5,11 @@ import argparse
 
 # Base profiling directory
 # PROFILING_BASE_DIR = "/home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/"
-PROFILING_BASE_DIR = "/home/juchanlee/MagicDec/profile/data_kl_no_optimized_cluster32_gamma32"
+# PROFILING_BASE_DIR = "/home/juchanlee/MagicDec/profile/data_kl_no_optimized_cluster32_gamma32"
 # Default value - can be overridden by command line argument
-# PROFILING_BASE_DIR = "/home/juchanlee/MagicDec/profile/data_0.02/"
+PROFILING_BASE_DIR = "/home/juchanlee/MagicDec/profile/data_0.02/"
 
-ADDITIONAL_COMMENT = ""
+ADDITIONAL_COMMENT = "_verify"
 # ADDITIONAL_COMMENT = "for_0.1"
 
 # Define fixed options and their possible values
@@ -23,7 +23,7 @@ fixed_option_values = {
     "--num_heads": [8],
     "--cluster_size": [32],
     "--window_size": [64],
-    "--layer_num": [32],
+    "--layer_num": [64],
     "--profiling_dir": [
         PROFILING_BASE_DIR
     ],
@@ -32,10 +32,10 @@ fixed_option_values = {
 # Define variable options and their possible values
 option_values = {
     "--num_replica": [4],
-    "--prefix_len": ["8224"],
+    "--prefix_len": ["32800"],
     "--hot_cluster_ratio": [0.08],
     "--planes_per_die": [32],
-    "--model_name": ["Meta-Llama-3.1-8B"],
+    "--model_name": ["qwen2.5-32b"],
     "--dataset": ["pg19"],
 }
 
