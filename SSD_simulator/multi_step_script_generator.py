@@ -7,9 +7,10 @@ import argparse
 # PROFILING_BASE_DIR = "/home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/"
 # PROFILING_BASE_DIR = "/home/juchanlee/MagicDec/profile/data_kl_no_optimized_cluster32_gamma32"
 # Default value - can be overridden by command line argument
-PROFILING_BASE_DIR = "/home/juchanlee/MagicDec/profile/data_0.02/"
+PROFILING_BASE_DIR = "/home/juchanlee/MagicDec/profile/data_confonly_lowhigh_cluster32_gamma32/"
 
-ADDITIONAL_COMMENT = "_verify"
+ADDITIONAL_COMMENT = ""
+# ADDITIONAL_COMMENT = "_verify"
 # ADDITIONAL_COMMENT = "for_0.1"
 
 # Define fixed options and their possible values
@@ -23,7 +24,7 @@ fixed_option_values = {
     "--num_heads": [8],
     "--cluster_size": [32],
     "--window_size": [64],
-    "--layer_num": [64],
+    "--layer_num": [48],
     "--profiling_dir": [
         PROFILING_BASE_DIR
     ],
@@ -32,15 +33,16 @@ fixed_option_values = {
 # Define variable options and their possible values
 option_values = {
     "--num_replica": [4],
-    "--prefix_len": ["32800"],
+    "--prefix_len": ["24576"],
     "--hot_cluster_ratio": [0.08],
-    "--planes_per_die": [32],
-    "--model_name": ["qwen2.5-32b"],
+    "--planes_per_die": [512],
+    "--model_name": ["qwen2.5-14b"],
     "--dataset": ["pg19"],
 }
 
 # Boolean flags
-store_true_flags = ["--hot_cluster_duplicate"]
+# store_true_flags = ["--hot_cluster_duplicate"]
+store_true_flags = []
 
 def sort_directories_numerically(dirs):
     """Sort directories with pattern 'type_X_Y' in numerical order."""
@@ -128,6 +130,7 @@ def build_command(var_keys, var_tuple, flags, generate_name, model_name, dataset
         # budget_ratio = "0.10"
     else:  # speculate
         budget_ratio = "0.02"
+        # budget_ratio = "0.10"
     
     cmd.append(f"--budget_ratio {budget_ratio}")
     

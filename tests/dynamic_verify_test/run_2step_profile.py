@@ -26,7 +26,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 # Import confidence analysis class
-from confidence_analyzer import ConfidenceAnalyzer
+# from confidence_analyzer import ConfidenceAnalyzer
 
 parser = argparse.ArgumentParser(description='Process model configuration and partitions.')
 parser.add_argument('--model_name', type=str, default="llama-3.1-8b", help='model name')
@@ -61,11 +61,11 @@ parser.add_argument("--hist_statistics_bins", type=int, default=50, help="number
 args = parser.parse_args()
 
 # Initialize confidence analyzer with configurable histogram parameters
-confidence_analyzer = ConfidenceAnalyzer(
-    num_bins=args.hist_num_bins, 
-    bin_width=args.hist_bin_width, 
-    center=args.hist_center
-)
+# confidence_analyzer = ConfidenceAnalyzer(
+#     num_bins=args.hist_num_bins, 
+#     bin_width=args.hist_bin_width, 
+#     center=args.hist_center
+# )
 
 # Init model parallelism
 DEVICE = 'cuda' if torch.cuda.is_available() else 'cpu'

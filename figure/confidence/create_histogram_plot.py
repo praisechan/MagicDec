@@ -10,7 +10,7 @@ import numpy as np
 import os
 
 # Read the CSV data
-csv_path = "/home/juchanlee/MagicDec/figure/confidence/run2step_Meta-Llama-3.1-8B_pg19_histogram_data_16416.csv"
+csv_path = "/home/juchanlee/MagicDec/figure/confidence/run2step_Meta-Llama-3.1-8B_pg19_histogram_data_16416_new.csv"
 df = pd.read_csv(csv_path)
 
 # Extract draft and reject data

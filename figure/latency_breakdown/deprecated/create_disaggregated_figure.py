@@ -2,7 +2,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import numpy as np
 
-def load_data_from_csv(csv_file='latency_breakdown_16K.csv'):
+def load_data_from_csv(csv_file='simulation_latency_breakdown_qwen14b_16K.CSV'):
     """Load latency data from CSV file and convert to the expected format"""
     
     # Read the CSV file
