@@ -147,7 +147,7 @@ current_attn_type = args.attn_type
 # CSV logging setup
 # log_dir = "logs"
 # profile_dir = f"/home/juchanlee/MagicDec/profile/data_{args.budget1}/{MODEL}_{args.dataset}_{args.prefix_len}"
-profile_dir = f"/home/juchanlee/MagicDec/profile/data_confonly_lowhigh_cluster32_gamma{args.gamma2}/{MODEL}_{args.dataset}_{args.prefix_len}"
+profile_dir = f"/home/juchanlee/MagicDec/profile/data_confonly_lowhigh_cluster32_gamma{args.gamma2}/{MODEL}_{args.dataset}_{args.task}{args.prefix_len}"
 # profile_dir = f"/home/juchanlee/MagicDec/profile/temp/{MODEL}_{args.dataset}_{args.prefix_len}"
 log_dir = profile_dir
 
@@ -266,7 +266,6 @@ for step, batch in tqdm(enumerate(dataset), total=num_eval_steps):
                 step_budget_switches += 1
                 step_budget_switches_high += 1
                 verify_budget = args.budget2_high
-                pass_verify = True
                 print(f"Very low confidence detected (min_diff={min_confidence:.3f}), using higher verification budget: {verify_budget}")
             elif min_confidence > args.confidence_threshold:
                 # High confidence: use lower budget for verification
@@ -274,6 +273,7 @@ for step, batch in tqdm(enumerate(dataset), total=num_eval_steps):
                 step_budget_switches += 1
                 step_budget_switches_low += 1
                 verify_budget = args.budget2_low
+                pass_verify = True
                 print(f"High confidence detected (min_diff={min_confidence:.3f}), using lower verification budget: {verify_budget}")
             else:
                 verify_budget = args.budget2
@@ -302,16 +302,10 @@ for step, batch in tqdm(enumerate(dataset), total=num_eval_steps):
             cached_tokens_buffer = tokens_buffer[:, 0].clone() # bonus token from settle
 
         if pass_verify:
-            # If we passed verification, we can use the cached tokens
-            # verify_outputs, _, _ = engine.verify(tokens_buffer[:, :1], args.gamma1+1, use_first_kv=True, profile_clustering=False, profile_hot_cluster_selection_ratio=False, generate_name=f"{profile_dir}/verify_{step}_{step_verify_calls}")
-            # target_tokens = torch.LongTensor(verify_outputs).to(DEVICE) #TODO: verify stage should be batch-fashion, but this verify() is auto-regressive.
-
+            # Skip verification and accept all drafted tokens
             step_verify_calls += 1
             called_verify += 1
             
-            # Store verify confidences for analysis
-            # confidence_analyzer.store_verify_confidences(verify_top1_top2_diff)
-
             target_tokens = tokens_buffer[:, 1:args.gamma1+1]
             draft_tokens = tokens_buffer[:, 1:args.gamma1]
 
@@ -324,7 +318,7 @@ for step, batch in tqdm(enumerate(dataset), total=num_eval_steps):
             accept_nums = accept_flags_matrix.sum(dim=1, keepdim=True)
             num_unsettled_tokens += accept_nums.flatten().item() + 1
 
-            bonus_tokens = draft_tokens[:,-1]
+            bonus_tokens = target_tokens[:,-1]
 
             # Check for termination conditions
             condition = (eot_condition & accept_flags_matrix).any(dim=1, keepdim=True)
