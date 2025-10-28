@@ -141,7 +141,7 @@ current_attn_type = args.attn_type
 
 # CSV logging setup
 # log_dir = "logs"
-profile_dir = f"/home/juchanlee/MagicDec/profile/data_2step_for_{args.budget1}/{MODEL}_{args.dataset}_{args.prefix_len}"
+profile_dir = f"/home/juchanlee/MagicDec/profile/data_2step_for_{args.budget1}/{MODEL}_{args.dataset}_{args.task}_{args.prefix_len}"
 log_dir = profile_dir
 
 os.makedirs(log_dir, exist_ok=True)
@@ -220,7 +220,7 @@ for step, batch in tqdm(enumerate(dataset), total=num_eval_steps):
         verified = False
 
         # Draft speculation
-        draft_outputs, draft_logits, top1_top2_diff = engine.speculate(tokens_buffer[:, :1], args.gamma1, profile_clustering=True, profile_hot_cluster_selection_ratio=False, generate_name=f"{profile_dir}/speculate_{step}_{step_speculate_calls}")
+        draft_outputs, draft_logits, top1_top2_diff = engine.speculate(tokens_buffer[:, :1], args.gamma1, profile_clustering=False, profile_hot_cluster_selection_ratio=False, generate_name=f"{profile_dir}/speculate_{step}_{step_speculate_calls}")
         tokens_buffer[:,1:1+args.gamma1] = torch.LongTensor(draft_outputs)
         step_speculate_calls += args.gamma1
                 
