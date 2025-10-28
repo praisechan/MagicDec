@@ -221,6 +221,7 @@ for step, batch in tqdm(enumerate(dataset), total=num_eval_steps):
     num_nodes = torch.zeros(BATCH_SIZE,device=DEVICE).long()
     num_nodes += input_ids.shape[1]
     input_len = num_nodes.max()
+    breakpoint()
 
     tokens_buffer[:, 0] = torch.LongTensor(engine.encode(input_ids)[0])
     torch.cuda.synchronize()
@@ -471,8 +472,8 @@ for step, batch in tqdm(enumerate(dataset), total=num_eval_steps):
             eot_condition = ((target_tokens == eot_1) | (target_tokens == eot_2))
             if True in eot_condition:
                 eot_index = (eot_condition.view(-1) == True).nonzero(as_tuple=True)[0].item()
-                engine.settled_cachelength = engine.settled_cachelength - accept_nums + eot_index
-                num_nodes = num_nodes - accept_nums + eot_index
+                engine.settled_cachelength = engine.settled_cachelength - accept_nums.flatten().item() + eot_index
+                num_nodes = num_nodes - accept_nums.flatten().item() + eot_index
 
     num_gen_tokens = engine.settled_cachelength - input_len
 

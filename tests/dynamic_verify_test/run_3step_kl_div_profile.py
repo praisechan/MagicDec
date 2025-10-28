@@ -529,8 +529,8 @@ for step, batch in tqdm(enumerate(dataset), total=num_eval_steps):
             eot_condition = ((target_tokens == eot_1) | (target_tokens == eot_2))
             if True in eot_condition:
                 eot_index = (eot_condition.view(-1) == True).nonzero(as_tuple=True)[0].item()
-                engine.settled_cachelength = engine.settled_cachelength - accept_nums + eot_index
-                num_nodes = num_nodes - accept_nums + eot_index
+                engine.settled_cachelength = engine.settled_cachelength - accept_nums.flatten().item() + eot_index
+                num_nodes = num_nodes - accept_nums.flatten().item() + eot_index
 
             # Analyze all tokens and rejected tokens in settle stage using accumulated data
             kl_confidence_analyzer.analyze_rejected_tokens_settle(settle_accepted, target_tokens[0][settle_accepted-1])
