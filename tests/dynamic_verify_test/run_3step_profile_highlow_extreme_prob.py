@@ -147,7 +147,7 @@ current_attn_type = args.attn_type
 # CSV logging setup
 # log_dir = "logs"
 # profile_dir = f"/home/juchanlee/MagicDec/profile/data_{args.budget1}/{MODEL}_{args.dataset}_{args.prefix_len}"
-profile_dir = f"/home/juchanlee/MagicDec/profile/data_confonly_lowhigh_cluster32_gamma{args.gamma2}/{MODEL}_{args.dataset}_{args.task}{args.prefix_len}"
+profile_dir = f"/home/juchanlee/MagicDec/profile/pure_logit/{MODEL}_{args.dataset}_{args.task}_{args.prefix_len}"
 # profile_dir = f"/home/juchanlee/MagicDec/profile/temp/{MODEL}_{args.dataset}_{args.prefix_len}"
 log_dir = profile_dir
 
@@ -234,7 +234,7 @@ for step, batch in tqdm(enumerate(dataset), total=num_eval_steps):
         verified = False
 
         # Draft speculation
-        draft_outputs, draft_logits, top1_top2_diff = engine.speculate(tokens_buffer[:, :1], args.gamma1, profile_clustering=False, profile_hot_cluster_selection_ratio=False, generate_name=f"{profile_dir}/speculate_{step}_{step_speculate_calls}")
+        draft_outputs, top3_logits, top1_top2_diff = engine.speculate(tokens_buffer[:, :1], args.gamma1, profile_clustering=False, profile_hot_cluster_selection_ratio=False, generate_name=f"{profile_dir}/speculate_{step}_{step_speculate_calls}")
         tokens_buffer[:,1:1+args.gamma1] = torch.LongTensor(draft_outputs)
         step_speculate_calls += args.gamma1
         
@@ -255,11 +255,13 @@ for step, batch in tqdm(enumerate(dataset), total=num_eval_steps):
         verify_budget = None
 
         if args.enable_dynamic_budget and top1_top2_diff is not None and len(top1_top2_diff) > 0:
-            min_confidence = torch.min(torch.tensor(top1_top2_diff))
-            avg_confidence = torch.mean(torch.tensor(top1_top2_diff))
+            top1_logits_tensor = torch.tensor([logits[0][0][0] for logits in top3_logits])
+
+            min_confidence = torch.min(torch.tensor(top1_logits_tensor))
+            avg_confidence = torch.mean(torch.tensor(top1_logits_tensor))
             # Convert tensor values to floats for storage
-            step_confidences.extend([float(x) for x in top1_top2_diff])  # Store all confidence values as floats
-            
+            step_confidences.extend([float(x) for x in top1_logits_tensor])  # Store all confidence values as floats
+
             if min_confidence < args.confidence_threshold_low:
                 # Very low confidence: use higher budget for verification
                 budget_switched = True

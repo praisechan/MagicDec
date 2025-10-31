@@ -188,7 +188,7 @@ class LMBackend_Retro:
           generate_name=generate_name
       )
 
-      return outputs, logits, top1_top2_diff
+      return outputs, top3_logits, top1_top2_diff
 
       # # sanity check
       # if not outputs[0][0]==input_ids[0][0]:
