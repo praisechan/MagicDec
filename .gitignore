@@ -9,3 +9,5 @@ profile/*
 *.png
 *.csv
 *.sh
+!figure/*.csv
+!figure/*.png

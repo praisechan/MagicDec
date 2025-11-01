@@ -159,7 +159,7 @@ class LMBackend_Retro:
       )
 
 
-      return outputs, logits, top1_top2_diff
+      return outputs, top3_logits, top1_top2_diff
     
     @torch.inference_mode()
     def draft_kv_update(self, input_ids: torch.LongTensor):

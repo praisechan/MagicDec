@@ -163,7 +163,7 @@ else:
 dataloader = DataLoader(dataset, batch_size=BATCH_SIZE, shuffle=False, drop_last=True)
 if args.dataset == "pg19":
 #   num_eval_steps = min(10, len(dataloader))
-  num_eval_steps = min(200, len(dataloader))
+  num_eval_steps = min(100, len(dataloader))
 else:
   num_eval_steps = len(dataloader)
 
@@ -225,18 +225,20 @@ total_tokens_generated = 0
 # Initialize data storage for histogram analysis
 draft_top1_top2_diff_data = []
 reject_token_top1_top2_diff_data = []
+draft_top1_logits_data = []
+reject_token_top1_logits_data = []
 
 # Initialize intermediate verify data storage
 intermediate_reject_data = {}
+intermediate_reject_top1_logits_data = {}
 if args.enable_intermediate_verify:
     for budget in args.intermediate_budgets:
         intermediate_reject_data[f"budget_{budget:.2f}"] = []
+        intermediate_reject_top1_logits_data[f"budget_{budget:.2f}"] = []
 actual_step = 0
 for step, batch in tqdm(enumerate(dataset), total=num_eval_steps):
     if actual_step >= num_eval_steps:
         break
-    if step < 60:
-      continue
     input_ids = engine.preprocess_input(batch, prompt_format, args.attn_type, model_path, args.budget1, args.estimate_ratio, args.dataset, args.prefix_len)
     if input_ids is None:
         print(f"Skipping step {step} due to empty input_ids.")
@@ -266,17 +268,28 @@ for step, batch in tqdm(enumerate(dataset), total=num_eval_steps):
         verified = False
 
         # Draft speculation
-        draft_outputs, draft_logits, top1_top2_diff = engine.speculate(tokens_buffer[:, :1], args.gamma1, profile_clustering=False, profile_hot_cluster_selection_ratio=False, generate_name=f"{profile_dir}/speculate_{step}_{step_speculate_calls}")
+        draft_outputs, top3_logits, top1_top2_diff = engine.speculate(tokens_buffer[:, :1], args.gamma1, profile_clustering=False, profile_hot_cluster_selection_ratio=False, generate_name=f"{profile_dir}/speculate_{step}_{step_speculate_calls}")
         tokens_buffer[:,1:1+args.gamma1] = torch.LongTensor(draft_outputs)
         step_speculate_calls += args.gamma1
         
         # Store draft confidences for histogram analysis
+        top1_logits_tensor = [torch.tensor([logits[0][0][0]]) for logits in top3_logits]
+        min_confidence = torch.min(torch.tensor(top1_logits_tensor))
+        avg_confidence = torch.mean(torch.tensor(top1_logits_tensor))
+
         if top1_top2_diff is not None:
             # Convert to list of tensors or values for compatibility with create_histogram_data
             if isinstance(top1_top2_diff, (list, tuple)):
                 draft_top1_top2_diff_data.extend(top1_top2_diff)
             else:
                 draft_top1_top2_diff_data.append(top1_top2_diff)
+        
+        # Store draft top1_logits for histogram analysis
+        if top1_logits_tensor is not None:
+            if isinstance(top1_logits_tensor, (list, tuple)):
+                draft_top1_logits_data.extend(top1_logits_tensor)
+            else:
+                draft_top1_logits_data.append(top1_logits_tensor)
         
         # Settle
         # in run_2step, settle is always called after speculate
@@ -302,6 +315,11 @@ for step, batch in tqdm(enumerate(dataset), total=num_eval_steps):
             # If not all tokens were accepted, record the reject token's confidence
             if isinstance(top1_top2_diff, (list, tuple)) and len(top1_top2_diff) > reject_token_idx:
                 reject_token_top1_top2_diff_data.append(top1_top2_diff[reject_token_idx])
+        
+        # Record reject token's top1_logits for histogram analysis
+        if reject_token_idx < args.gamma1 and top1_logits_tensor is not None:
+            if isinstance(top1_logits_tensor, (list, tuple)) and len(top1_logits_tensor) > reject_token_idx:
+                reject_token_top1_logits_data.append(top1_logits_tensor[reject_token_idx])
 
         # Intermediate verification with multiple budgets
         if args.enable_intermediate_verify and reject_token_idx < args.gamma1:
@@ -348,6 +366,13 @@ for step, batch in tqdm(enumerate(dataset), total=num_eval_steps):
                         
                         budget_key = f"budget_{budget:.2f}"
                         intermediate_reject_data[budget_key].append(top1_top2_diff[reject_token_idx])
+                        
+                        # Store intermediate top1_logits if available
+                        if (intermediate_logits is not None and 
+                            len(intermediate_logits) > reject_token_idx):
+                            intermediate_top1_logits_tensor = [torch.tensor([logits[0][0][0]]) for logits in intermediate_logits]
+                            if len(intermediate_top1_logits_tensor) > reject_token_idx:
+                                intermediate_reject_top1_logits_data[budget_key].append(intermediate_top1_logits_tensor[reject_token_idx])
                         
                 except Exception as e:
                     print(f"Warning: Intermediate verify failed for budget {budget}: {e}")
@@ -477,13 +502,17 @@ if save_histogram_history:
 
     print(f"Creating histograms for draft_top1_top2_diff_data (length: {len(draft_top1_top2_diff_data)})")
     print(f"Creating histograms for reject_token_top1_top2_diff_data (length: {len(reject_token_top1_top2_diff_data)})")
+    print(f"Creating histograms for draft_top1_logits_data (length: {len(draft_top1_logits_data)})")
+    print(f"Creating histograms for reject_token_top1_logits_data (length: {len(reject_token_top1_logits_data)})")
     
     # Print intermediate verify data statistics
     if args.enable_intermediate_verify:
         for budget_key, data in intermediate_reject_data.items():
             print(f"Creating histograms for {budget_key}_reject_data (length: {len(data)})")
+        for budget_key, data in intermediate_reject_top1_logits_data.items():
+            print(f"Creating histograms for {budget_key}_reject_top1_logits_data (length: {len(data)})")
 
-    # Create histogram data
+    # Create histogram data for top1_top2_diff
     draft_hist, range_labels = create_histogram_data(
         draft_top1_top2_diff_data, 
         bins=HIST_BINS, 
@@ -498,11 +527,34 @@ if save_histogram_history:
         range_max=HIST_RANGE_MAX
     )
 
+    # Create histogram data for top1_logits
+    draft_top1_logits_hist, range_labels_logits = create_histogram_data(
+        draft_top1_logits_data, 
+        bins=HIST_BINS, 
+        range_min=HIST_RANGE_MIN, 
+        range_max=HIST_RANGE_MAX
+    )
+
+    reject_top1_logits_hist, _ = create_histogram_data(
+        reject_token_top1_logits_data, 
+        bins=HIST_BINS, 
+        range_min=HIST_RANGE_MIN, 
+        range_max=HIST_RANGE_MAX
+    )
+
     # Create intermediate verify histograms
     intermediate_hists = {}
+    intermediate_top1_logits_hists = {}
     if args.enable_intermediate_verify:
         for budget_key, data in intermediate_reject_data.items():
             intermediate_hists[budget_key], _ = create_histogram_data(
+                data, 
+                bins=HIST_BINS, 
+                range_min=HIST_RANGE_MIN, 
+                range_max=HIST_RANGE_MAX
+            )
+        for budget_key, data in intermediate_reject_top1_logits_data.items():
+            intermediate_top1_logits_hists[budget_key], _ = create_histogram_data(
                 data, 
                 bins=HIST_BINS, 
                 range_min=HIST_RANGE_MIN, 
@@ -514,22 +566,37 @@ if save_histogram_history:
     if args.task:
         experiment_info += f"_task{args.task}"
 
-    # Create data for CSV - Draft histogram
+    # Create data for CSV - Draft histogram (top1_top2_diff)
     draft_row = {'experiment': f"{experiment_info}_draft"}
     for i, range_label in enumerate(range_labels):
         draft_row[range_label] = draft_hist[i]
 
-    # Create data for CSV - Reject histogram  
+    # Create data for CSV - Reject histogram (top1_top2_diff)
     reject_row = {'experiment': f"{experiment_info}_reject"}
     for i, range_label in enumerate(range_labels):
         reject_row[range_label] = reject_hist[i]
 
+    # Create data for CSV - Draft histogram (top1_logits)
+    draft_top1_logits_row = {'experiment': f"{experiment_info}_draft_top1_logits"}
+    for i, range_label in enumerate(range_labels_logits):
+        draft_top1_logits_row[range_label] = draft_top1_logits_hist[i]
+
+    # Create data for CSV - Reject histogram (top1_logits)
+    reject_top1_logits_row = {'experiment': f"{experiment_info}_reject_top1_logits"}
+    for i, range_label in enumerate(range_labels_logits):
+        reject_top1_logits_row[range_label] = reject_top1_logits_hist[i]
+
     # Create data for intermediate verify histograms
-    rows_list = [draft_row, reject_row]
+    rows_list = [draft_row, reject_row, draft_top1_logits_row, reject_top1_logits_row]
     if args.enable_intermediate_verify:
         for budget_key, hist_data in intermediate_hists.items():
             intermediate_row = {'experiment': f"{experiment_info}_{budget_key}_reject"}
             for i, range_label in enumerate(range_labels):
+                intermediate_row[range_label] = hist_data[i]
+            rows_list.append(intermediate_row)
+        for budget_key, hist_data in intermediate_top1_logits_hists.items():
+            intermediate_row = {'experiment': f"{experiment_info}_{budget_key}_reject_top1_logits"}
+            for i, range_label in enumerate(range_labels_logits):
                 intermediate_row[range_label] = hist_data[i]
             rows_list.append(intermediate_row)
 
@@ -537,7 +604,8 @@ if save_histogram_history:
     df_new = pd.DataFrame(rows_list)
 
     # Save histogram data to CSV (append mode)
-    HISTOGRAM_CSV_PATH = f"/home/juchanlee/MagicDec/figure/confidence/run2step_{MODEL}_{args.dataset}_histogram_data_{args.prefix_len}_new_step60to200.csv"
+    # HISTOGRAM_CSV_PATH = f"/home/juchanlee/MagicDec/figure/confidence/run2step_{MODEL}_{args.dataset}_histogram_data_{args.prefix_len}_new_step60to200.csv"
+    HISTOGRAM_CSV_PATH = f"/home/juchanlee/MagicDec/profile/confidence/run2step_{MODEL}_{args.dataset}_histogram_data_{args.prefix_len}.csv"
 
     # Create output directory if it doesn't exist
     os.makedirs(os.path.dirname(HISTOGRAM_CSV_PATH), exist_ok=True)
@@ -570,16 +638,21 @@ if save_histogram_history:
     print(f"Histogram data saved to: {HISTOGRAM_CSV_PATH}")
 
     # Print summary
-    total_rows_added = 2  # draft and reject
-    print(f"\nAdded {total_rows_added} rows (draft and reject) to CSV")
-    print(f"Draft total count: {draft_hist.sum()}")
-    print(f"Reject total count: {reject_hist.sum()}")
+    total_rows_added = 4  # draft, reject, draft_top1_logits, reject_top1_logits
+    print(f"\nAdded {total_rows_added} rows (draft, reject, draft_top1_logits, reject_top1_logits) to CSV")
+    print(f"Draft top1_top2_diff total count: {draft_hist.sum()}")
+    print(f"Reject top1_top2_diff total count: {reject_hist.sum()}")
+    print(f"Draft top1_logits total count: {draft_top1_logits_hist.sum()}")
+    print(f"Reject top1_logits total count: {reject_top1_logits_hist.sum()}")
     
     # Print intermediate verify summaries
     if args.enable_intermediate_verify:
         for budget_key, hist_data in intermediate_hists.items():
             total_rows_added += 1
             print(f"{budget_key}_reject total count: {hist_data.sum()}")
+        for budget_key, hist_data in intermediate_top1_logits_hists.items():
+            total_rows_added += 1
+            print(f"{budget_key}_reject_top1_logits total count: {hist_data.sum()}")
         print(f"Total rows added including intermediate verify: {total_rows_added}")
     
     print(f"Column headers: {range_labels}")

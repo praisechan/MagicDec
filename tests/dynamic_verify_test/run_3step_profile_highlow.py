@@ -434,7 +434,7 @@ for step, batch in tqdm(enumerate(dataset), total=num_eval_steps):
 
             eot_condition = ((target_tokens == eot_1) | (target_tokens == eot_2))
             if True in eot_condition:
-                eot_index = (eot_condition.view(-1) == True).nonzero(as_tuple=True)[0].item()
+                eot_index = (eot_condition.view(-1) == True).nonzero(as_tuple=True)[0][0].item()
                 engine.settled_cachelength = engine.settled_cachelength - accept_nums.flatten().item() + eot_index
                 num_nodes = num_nodes - accept_nums.flatten().item() + eot_index
 
