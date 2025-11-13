@@ -11,9 +11,18 @@ import seaborn as sns
 import warnings
 warnings.filterwarnings('ignore')
 
-# Set plotting style
-plt.style.use('default')
-sns.set_palette("husl")
+# ISCA-style plot configuration
+plt.rcParams['font.family'] = 'sans-serif'
+plt.rcParams['font.sans-serif'] = ['Arial', 'Helvetica', 'DejaVu Sans']
+plt.rcParams['font.size'] = 10
+plt.rcParams['axes.linewidth'] = 1.5
+plt.rcParams['grid.linewidth'] = 0.5
+plt.rcParams['lines.linewidth'] = 2.0
+plt.rcParams['patch.linewidth'] = 1.0
+plt.rcParams['xtick.major.width'] = 1.5
+plt.rcParams['ytick.major.width'] = 1.5
+plt.rcParams['xtick.major.size'] = 5
+plt.rcParams['ytick.major.size'] = 5
 
 # Configuration
 SAMPLE_NUM = 50  # Number of columns to display (0 to SAMPLE_NUM-1)
@@ -22,7 +31,7 @@ def load_data(filename):
     """Load the reorganized CSV data."""
     return pd.read_csv(filename)
 
-def create_boxplot(df, figsize=(8, 6)):
+def create_boxplot(df, figsize=(4.5, 3)):
     """
     Create box plots for reads count data.
     
@@ -38,15 +47,27 @@ def create_boxplot(df, figsize=(8, 6)):
     for col in reads_columns:
         x = int(col.split('_')[-1])  # Extract the number from reads_count_x
         layer = x // 8  # 8 heads per layer
-        if layer > 33:  # Limit to first step for clarity
+        if layer > 31:  # Limit to first step for clarity
             continue
 
         head = x % 8
         # Select only head 0 from layers 0, 4, 8, 12, 16, 20, 24, 28, etc.
-        if head == 0 and layer % 4 == 1:
+        if head == 0 and layer % 3 == 0:
             selected_columns.append(col)
+        # if head == 0 and layer % 4 == 2:
+        #     selected_columns.append(col)
     
     reads_columns = selected_columns
+    
+    # Calculate max value for normalization from ALL reads_count columns (not just selected)
+    # This ensures consistent normalization regardless of layer selection
+    all_reads_columns = [col for col in df.columns if col.startswith('reads_count_')]
+    max_value = 0
+    for col in all_reads_columns:
+        values = df[col].values
+        max_value = max(max_value, np.max(values))
+    max_value = max_value *0.77
+    print(f"Global max value for normalization: {max_value}")
     
     # Prepare data for box plot
     data_for_boxplot = []
@@ -57,7 +78,7 @@ def create_boxplot(df, figsize=(8, 6)):
         x = int(col.split('_')[-1])
         layer = x // 8  # 8 heads per layer
         head = x % 8
-        label = f'{layer+1}'
+        label = f'{layer}'
         # label = f'L{layer}H{head}'
         
         # Get all values for this column (across all plane groups)
@@ -66,46 +87,67 @@ def create_boxplot(df, figsize=(8, 6)):
         data_for_boxplot.append(values)
         labels.append(label)
     
-    # Create the plot
-    plt.figure(figsize=figsize)
+    # Normalize all data by the maximum value
+    data_for_boxplot_normalized = [data / max_value for data in data_for_boxplot]
     
-    # Create box plot
-    box_plot = plt.boxplot(data_for_boxplot, 
+    # Create the plot
+    fig, ax = plt.subplots(figsize=figsize)
+    
+    # ISCA-style color (colorblind-friendly)
+    color_box = "#FFC000"
+    # color_box = "#2C5AA0"
+    # color_box = "#83A6E2"
+    
+    # Create box plot with normalized data
+    box_plot = plt.boxplot(data_for_boxplot_normalized, 
                           labels=labels,
                           patch_artist=True,
                           showfliers=False,  # Don't show outliers as dots
-                          notch=False)
+                          notch=False,
+                          widths=0.6)
     
-    # Customize box plot colors
-    # colors = plt.cm.viridis(np.linspace(0, 1, len(data_for_boxplot)))
-    colors = ["#FFC000"] * len(data_for_boxplot)  # Uniform color
-    for patch, color in zip(box_plot['boxes'], colors):
-        patch.set_facecolor(color)
-        patch.set_alpha(0.7)
+    # Customize box plot colors with ISCA style
+    for patch in box_plot['boxes']:
+        patch.set_facecolor(color_box)
+        patch.set_alpha(0.9)
+        patch.set_edgecolor('black')
+        patch.set_linewidth(1.2)
     
-    # Customize the plot
-    plt.xlabel('Layer', fontsize=24)
-    plt.ylabel('Num. Reads per Plane', fontsize=24)
-    # plt.title('Distribution of Reads Count Across Plane Groups for Each Attention Head', fontsize=14, pad=20)
+    # Style the whiskers, caps, and medians
+    for whisker in box_plot['whiskers']:
+        whisker.set_color('black')
+        whisker.set_linewidth(1.2)
+    
+    for cap in box_plot['caps']:
+        cap.set_color('black')
+        cap.set_linewidth(1.2)
+    
+    for median in box_plot['medians']:
+        median.set_color("red")
+        median.set_linewidth(1.5)
+    
+    # Customize the plot with ISCA style
+    ax.set_xlabel('Layer', fontsize=12)
+    ax.set_ylabel('Norm. Reads per Plane', fontsize=12)
     
     # Rotate x-axis labels for better readability and center align
     plt.xticks(rotation=0, ha='center')
     
     # Increase font size of tick labels
-    plt.tick_params(axis='both', which='major', labelsize=24)
+    ax.tick_params(axis='both', which='major', labelsize=12, width=1.5)
     
     # Add grid for better readability - set zorder to draw below box plot
-    ax = plt.gca()
     ax.set_axisbelow(True)  # This makes grid lines appear below the plot elements
-    plt.grid(True, alpha=0.5, axis='y')
+    ax.grid(True, alpha=0.25, axis='y', linestyle='--', linewidth=0.8)
     
-    # Control ytick frequency separately
-    # Get current y-axis limits
-    y_min, y_max = ax.get_ylim()
-    # Set custom ytick frequency (adjust the step value as needed)
-    ytick_step = 2  # Change this value to control frequency
-    yticks = np.arange(0, y_max + ytick_step, ytick_step)
-    ax.set_yticks(yticks)
+    # Set y-axis to show normalized scale (0 to 1)
+    ax.set_ylim(0, 1.0)
+    
+    # Set spine linewidths for ISCA style
+    ax.spines['right'].set_linewidth(1.5)
+    ax.spines['left'].set_linewidth(1.5)
+    ax.spines['top'].set_linewidth(1.5)
+    ax.spines['bottom'].set_linewidth(1.5)
     
     # Show only every nth label to avoid overcrowding
     if len(labels) > 20:
@@ -146,6 +188,9 @@ def main():
     print("Creating box plot...")
     fig_box = create_boxplot(df)
     plt.savefig("reads_boxplot.png", dpi=300, bbox_inches='tight')
+    plt.savefig("reads_boxplot.pdf", bbox_inches='tight')
+    print("Saved: reads_boxplot.png")
+    print("Saved: reads_boxplot.pdf")
     plt.show()
     
 if __name__ == "__main__":

@@ -59,6 +59,7 @@ parser.add_argument("--hist_num_bins", type=int, default=10, help="number of bin
 parser.add_argument("--hist_bin_width", type=float, default=0.1, help="width of each bin for confidence change histogram")
 parser.add_argument("--hist_center", type=float, default=0.5, help="center value for histogram ranges (typically 0.0)")
 parser.add_argument("--hist_statistics_bins", type=int, default=50, help="number of bins for histogram data in statistics CSV files")
+parser.add_argument("--num_eval_steps", type=int, default=None, help="number of evaluation steps to run. If not provided, uses dataset-specific defaults.")
 
 args = parser.parse_args()
 
@@ -132,7 +133,9 @@ else:
     raise ValueError(f"Unknown dataset {args.dataset}")
 
 dataloader = DataLoader(dataset, batch_size=BATCH_SIZE, shuffle=False, drop_last=True)
-if args.dataset == "pg19":
+if args.num_eval_steps is not None:
+  num_eval_steps = args.num_eval_steps
+elif args.dataset == "pg19":
   num_eval_steps = min(10, len(dataloader))
 else:
   num_eval_steps = len(dataloader)

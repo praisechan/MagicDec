@@ -163,7 +163,7 @@ else:
 dataloader = DataLoader(dataset, batch_size=BATCH_SIZE, shuffle=False, drop_last=True)
 if args.dataset == "pg19":
 #   num_eval_steps = min(10, len(dataloader))
-  num_eval_steps = min(100, len(dataloader))
+  num_eval_steps = min(300, len(dataloader))
 else:
   num_eval_steps = len(dataloader)
 

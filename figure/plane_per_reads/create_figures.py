@@ -86,6 +86,116 @@ def create_heatmap(df, title="Reads Count Heatmap", figsize=(16, 8), sample_cols
     
     return plt.gcf()
 
+def create_single_layer_plot(df, layer=0, title=None, figsize=(8, 3.5)):
+    """
+    Create a stacked bar chart showing reads per plane for a single layer's 8 heads.
+    This visualization clearly shows:
+    1. Load imbalance within individual heads (varying bar heights)
+    2. Even distribution across heads (similar total heights when summed)
+    
+    Publication-quality style for ISCA/top-tier architecture conferences.
+    
+    Args:
+        df: DataFrame with reorganized data
+        layer: Layer index (0-based)
+        title: Title for the plot (auto-generated if None)
+        figsize: Figure size tuple (default 7x3.5 for column width)
+    """
+    # Get columns for the specified layer (8 heads per layer)
+    start_idx = layer * 8
+    end_idx = start_idx + 8
+    reads_columns = [f'reads_count_{i}' for i in range(start_idx, end_idx)]
+    
+    # Verify columns exist
+    available_cols = [col for col in reads_columns if col in df.columns]
+    if not available_cols:
+        print(f"Warning: No data found for layer {layer}")
+        return None
+    
+    # ISCA-style plot configuration
+    plt.rcParams.update({
+        'font.family': 'sans-serif',
+        'font.sans-serif': ['Arial', 'Helvetica', 'DejaVu Sans'],
+        'font.size': 10,
+        'axes.labelsize': 12,
+        'axes.titlesize': 14,
+        'xtick.labelsize': 12,
+        'ytick.labelsize': 12,
+        'legend.fontsize': 12,
+        'figure.dpi': 300,
+        'savefig.dpi': 300,
+        'savefig.bbox': 'tight',
+        'savefig.pad_inches': 0.05,
+        'axes.linewidth': 1.5,
+        'grid.linewidth': 0.8,
+        'xtick.major.width': 1.5,
+        'ytick.major.width': 1.5,
+        'xtick.major.size': 5,
+        'ytick.major.size': 5,
+        'lines.linewidth': 2.0,
+        'patch.linewidth': 1.0,
+    })
+    
+    fig, ax = plt.subplots(figsize=figsize)
+    
+    # Define 8-color gradient by interpolating between the 4 base colors
+    colors = ["#1B345F", "#3F58A0", "#5D7DBB", "#7399DD", 
+              "#89BEFF", "#AFCFFB", "#D6E1F8", "#E5EBF9"]
+    
+    # Prepare data for stacked bar chart
+    plane_indices = df['plane_group'].values
+    bar_width = 0.8
+    
+    # Create stacked bars
+    bottom = np.zeros(len(plane_indices))
+    
+    for head_idx, col in enumerate(available_cols):
+        reads_values = df[col].values
+        
+        ax.bar(plane_indices, reads_values, bar_width,
+               bottom=bottom,
+               label=f'Head {head_idx}',
+               color=colors[head_idx % len(colors)],
+               edgecolor='black',
+               linewidth=1.2,
+               alpha=0.9)
+        
+        bottom += reads_values
+    
+    # ISCA-style formatting
+    ax.set_xlabel('Plane Index', fontsize=12)
+    ax.set_ylabel('# Reads (Stacked)', fontsize=12)
+    ax.tick_params(axis='both', labelsize=12, width=1.5)
+    
+    # Clean grid (horizontal only for bar charts)
+    ax.yaxis.grid(True, alpha=0.25, linestyle='--', linewidth=0.8)
+    ax.set_axisbelow(True)  # Grid behind data
+    
+    # Set all spines to ISCA standard width
+    ax.spines['top'].set_linewidth(1.5)
+    ax.spines['bottom'].set_linewidth(1.5)
+    ax.spines['left'].set_linewidth(1.5)
+    ax.spines['right'].set_linewidth(1.5)
+    
+    # Set x-axis ticks to show every nth plane for readability
+    if len(plane_indices) > 20:
+        tick_freq = len(plane_indices) // 10
+        ax.set_xticks(plane_indices[::tick_freq])
+    
+    # Set title (typically omitted in conference papers, caption used instead)
+    if title:
+        ax.set_title(title, fontsize=14, fontweight='bold', pad=10)
+    
+    # ISCA-style legend
+    ax.legend(loc='upper center', bbox_to_anchor=(0.5, 1.27), 
+              frameon=False, fontsize=12, ncol=4,
+              columnspacing=1.0, handlelength=2.0, handletextpad=0.5,
+              fancybox=False, edgecolor='black', framealpha=0.95)
+    
+    # Tight layout with minimal padding
+    plt.tight_layout()
+    return fig
+
 def create_minmax_plot(df, title="Reads Count Min/Max by Attention Head", figsize=(8, 6), window_size=8):
 
     reads_columns = [col for col in df.columns if col.startswith('reads_count_')]
@@ -279,6 +389,13 @@ def main():
     plt.savefig("reads_minmax.png", dpi=300, bbox_inches='tight')
     plt.show()
 
+    print("Creating single layer plot (Layer 11)...")
+    for layer in range(32):
+        figures['single_layer'] = create_single_layer_plot(df, layer=layer)
+        if figures['single_layer'] is not None:
+            plt.savefig(f"reads_single_layer_{layer}.png", dpi=300, bbox_inches='tight')
+            plt.show()
+
     # print("Creating line plot...")
     # figures['lineplot'] = create_line_plot(df, 
     #                                       sample_planes=8,  # Sample 8 plane groups
@@ -304,10 +421,12 @@ def main():
     print("All plots created successfully!")
     print("Saved files:")
     print("- reads_heatmap.png")
-    print("- reads_lineplot.png") 
-    print("- reads_statistics.png")
-    print("- reads_correlation.png")
-    print("- reads_temporal.png")
+    print("- reads_minmax.png")
+    print("- reads_single_layer_0.png")
+    # print("- reads_lineplot.png") 
+    # print("- reads_statistics.png")
+    # print("- reads_correlation.png")
+    # print("- reads_temporal.png")
     
     return figures
 
