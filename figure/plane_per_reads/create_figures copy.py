@@ -196,117 +196,6 @@ def create_single_layer_plot(df, layer=0, title=None, figsize=(4.7, 3.5)):
     plt.tight_layout()
     return fig
 
-def create_single_layer_plot_16_planes(df, layer=0, title=None, figsize=(4.7, 3.5), num_planes=16):
-    """
-    Create a stacked bar chart showing reads per plane for a single layer's 8 heads,
-    displaying only the first num_planes planes.
-    
-    Publication-quality style for ISCA/top-tier architecture conferences.
-    
-    Args:
-        df: DataFrame with reorganized data
-        layer: Layer index (0-based)
-        title: Title for the plot (auto-generated if None)
-        figsize: Figure size tuple (default 4.7x3.5 for column width)
-        num_planes: Number of planes to display (default 16)
-    """
-    # Get columns for the specified layer (8 heads per layer)
-    start_idx = layer * 8
-    end_idx = start_idx + 8
-    reads_columns = [f'reads_count_{i}' for i in range(start_idx, end_idx)]
-    
-    # Verify columns exist
-    available_cols = [col for col in reads_columns if col in df.columns]
-    if not available_cols:
-        print(f"Warning: No data found for layer {layer}")
-        return None
-    
-    # Filter to only the first num_planes planes
-    df_filtered = df.head(num_planes)
-    
-    # ISCA-style plot configuration
-    plt.rcParams.update({
-        'font.family': 'sans-serif',
-        'font.sans-serif': ['Arial', 'Helvetica', 'DejaVu Sans'],
-        'font.size': 10,
-        'axes.labelsize': 12,
-        'axes.titlesize': 14,
-        'xtick.labelsize': 12,
-        'ytick.labelsize': 12,
-        'legend.fontsize': 12,
-        'figure.dpi': 300,
-        'savefig.dpi': 300,
-        'savefig.bbox': 'tight',
-        'savefig.pad_inches': 0.05,
-        'axes.linewidth': 1.5,
-        'grid.linewidth': 0.8,
-        'xtick.major.width': 1.5,
-        'ytick.major.width': 1.5,
-        'xtick.major.size': 5,
-        'ytick.major.size': 5,
-        'lines.linewidth': 2.0,
-        'patch.linewidth': 1.0,
-    })
-    
-    fig, ax = plt.subplots(figsize=figsize)
-    
-    # Define 8-color gradient by interpolating between the 4 base colors
-    colors = ["#1B345F", "#3F58A0", "#5D7DBB", "#7399DD", 
-              "#89BEFF", "#AFCFFB", "#D6E1F8", "#E5EBF9"]
-    
-    # Prepare data for stacked bar chart
-    plane_indices = df_filtered['plane_group'].values
-    bar_width = 0.8
-    
-    # Create stacked bars
-    bottom = np.zeros(len(plane_indices))
-    
-    for head_idx, col in enumerate(available_cols):
-        reads_values = df_filtered[col].values
-        
-        ax.bar(plane_indices, reads_values, bar_width,
-               bottom=bottom,
-               label=f'Head {head_idx}',
-               color=colors[head_idx % len(colors)],
-               edgecolor='black',
-               linewidth=1.2,
-               alpha=0.9)
-        
-        bottom += reads_values
-    
-    # ISCA-style formatting
-    ax.set_xlabel('Plane Index', fontsize=13)
-    ax.set_ylabel('# Reads (Stacked)', fontsize=13)
-    ax.tick_params(axis='both', labelsize=13, width=1.5)
-    
-    # Clean grid (horizontal only for bar charts)
-    ax.yaxis.grid(True, alpha=0.25, linestyle='--', linewidth=0.8)
-    ax.set_axisbelow(True)  # Grid behind data
-    
-    # Set all spines to ISCA standard width
-    ax.spines['top'].set_linewidth(1.5)
-    ax.spines['bottom'].set_linewidth(1.5)
-    ax.spines['left'].set_linewidth(1.5)
-    ax.spines['right'].set_linewidth(1.5)
-    
-    # Set x-axis ticks to show only even plane indices (2, 4, 6, etc.)
-    even_plane_indices = plane_indices[plane_indices % 2 == 0]
-    ax.set_xticks(even_plane_indices)
-    
-    # Set title (typically omitted in conference papers, caption used instead)
-    if title:
-        ax.set_title(title, fontsize=14, fontweight='bold', pad=10)
-    
-    # ISCA-style legend
-    ax.legend(loc='upper center', bbox_to_anchor=(0.5, 1.32), 
-              frameon=False, fontsize=13, ncol=4,
-              columnspacing=1.0, handlelength=1.0, handletextpad=0.2,
-              fancybox=False, edgecolor='black', framealpha=0.95)
-    
-    # Tight layout with minimal padding
-    plt.tight_layout()
-    return fig
-
 def create_minmax_plot(df, title="Reads Count Min/Max by Attention Head", figsize=(8, 6), window_size=8):
 
     reads_columns = [col for col in df.columns if col.startswith('reads_count_')]
@@ -502,7 +391,7 @@ def main():
 
     print("Creating single layer plot (Layer 11)...")
     for layer in range(32):
-        figures['single_layer'] = create_single_layer_plot_16_planes(df, layer=layer)
+        figures['single_layer'] = create_single_layer_plot(df, layer=layer)
         if figures['single_layer'] is not None:
             plt.savefig(f"reads_single_layer_{layer}.png", dpi=300, bbox_inches='tight')
             plt.show()

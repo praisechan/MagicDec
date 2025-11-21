@@ -32,7 +32,7 @@ def create_throughput_figure(csv_path, output_path=None):
     seqlens = ['8K', '16K', '24K', '32K', '40K']
     
     # Set up the figure with single plot - academic style
-    fig, ax = plt.subplots(1, 1, figsize=(6, 3))  # Single model plot
+    fig, ax = plt.subplots(1, 1, figsize=(6, 2.7))  # Single model plot
     
     # Academic color palette - professional and colorblind-friendly
     # Based on scientific publication standards (blues, grays, accent colors)
@@ -82,7 +82,7 @@ def create_throughput_figure(csv_path, output_path=None):
     
     # Customize plot - academic style
     # ax.set_title(f'{model}', fontsize=15, pad=10)
-    ax.set_ylabel('Throughput (Normalized)', fontsize=11, fontweight='normal')
+    ax.set_ylabel('Throughput (Normalized)', fontsize=10, fontweight='normal')
     
     # Set x-axis labels - academic style
     ax.set_xticks(x_positions + bar_width * (len(cases) - 1) / 2)
@@ -90,8 +90,8 @@ def create_throughput_figure(csv_path, output_path=None):
     ax.set_xlabel('Sequence Length', fontsize=11, fontweight='normal')
     
     # Set y-axis tick fontsize - academic style
-    ax.tick_params(axis='y', labelsize=11)
-    ax.tick_params(axis='x', labelsize=11)
+    ax.tick_params(axis='y', labelsize=10)
+    ax.tick_params(axis='x', labelsize=10)
 
     # Academic-style grid - more subtle
     ax.grid(True, alpha=0.2, axis='y', linestyle='-', linewidth=0.5)
@@ -112,7 +112,7 @@ def create_throughput_figure(csv_path, output_path=None):
     
     # Create legend above the plot - academic style
     handles, labels = ax.get_legend_handles_labels()
-    ax.legend(handles, labels, loc='upper center', bbox_to_anchor=(0.5, 1.3), 
+    ax.legend(handles, labels, loc='upper center', bbox_to_anchor=(0.5, 1.40), 
               ncol=3, fontsize=10, frameon=False, columnspacing=0.3, handletextpad=0.5, handlelength=1.0)
     
     # Adjust layout to prevent overlap - academic spacing

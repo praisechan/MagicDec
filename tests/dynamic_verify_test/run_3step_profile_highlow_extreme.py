@@ -201,6 +201,8 @@ total_tokens_generated = 0
 
 actual_step = 0
 for step, batch in tqdm(enumerate(dataset), total=num_eval_steps):
+    if step < 100:
+      continue  
     if actual_step >= num_eval_steps:
         break
     input_ids = engine.preprocess_input(batch, prompt_format, args.attn_type, model_path, args.budget1, args.budget2, args.estimate_ratio, args.dataset, args.prefix_len)

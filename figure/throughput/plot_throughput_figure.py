@@ -32,7 +32,7 @@ def create_throughput_figure(csv_path, output_path=None):
     batch_sizes = ['batch8', 'batch16', 'batch32', 'batch64', 'batch128']
     
     # Set up the figure with subplots - academic style
-    fig, axes = plt.subplots(1, 3, figsize=(18, 3))  # Wider to accommodate 5 batches
+    fig, axes = plt.subplots(1, 3, figsize=(18, 2.7))  # Wider to accommodate 5 batches
     
     # Academic color palette - professional and colorblind-friendly
     # Based on scientific publication standards (blues, grays, accent colors)
@@ -89,7 +89,7 @@ def create_throughput_figure(csv_path, output_path=None):
                 #             f'{values[k]:.1f}', ha='center', va='bottom', fontsize=8)
         
         # Customize subplot - academic style
-        ax.set_title(f'{model}', fontsize=15, pad=0)
+        # ax.set_title(f'{model}', fontsize=15, pad=0)
         if i == 0:
             ax.set_ylabel('Throughput (token/s)', fontsize=13, fontweight='normal')
         
@@ -118,10 +118,14 @@ def create_throughput_figure(csv_path, output_path=None):
         
         # Set y-axis to start from 0
         ax.set_ylim(bottom=0)
+        
+        # Add title inside the plot at upper center
+        ax.text(0.5, 0.95, f'{model}', transform=ax.transAxes, 
+                fontsize=15, ha='center', va='top')
     
     # Create a single legend above all subplots - academic style
     handles, labels = axes[0].get_legend_handles_labels()
-    fig.legend(handles, labels, loc='upper center', bbox_to_anchor=(0.5, 1.02), 
+    fig.legend(handles, labels, loc='upper center', bbox_to_anchor=(0.5, 0.95), 
                ncol=7, fontsize=13, frameon=False, columnspacing=2, handletextpad=0.5)
     
     # Adjust layout to prevent overlap - academic spacing
@@ -165,7 +169,7 @@ def create_throughput_figure(csv_path, output_path=None):
                                 edgecolor=edge_color, linewidth=edge_linewidth)
         
         # Customize subplot - academic style with log scale
-        ax.set_title(f'{model}', fontsize=15, pad=0)
+        # ax.set_title(f'{model}', fontsize=15, pad=0)
         if i == 0:
             ax.set_ylabel('Throughput (tokens/s, log scale)', fontsize=13, fontweight='normal')
         
@@ -194,10 +198,14 @@ def create_throughput_figure(csv_path, output_path=None):
         ax.spines['right'].set_linewidth(0.8)
         ax.spines['left'].set_linewidth(0.8)
         ax.spines['bottom'].set_linewidth(0.8)
+        
+        # Add title inside the plot at upper center
+        ax.text(0.5, 0.95, f'{model}', transform=ax.transAxes, 
+                fontsize=15, ha='center', va='top')
     
     # Create a single legend above all subplots - academic style
     handles, labels = axes_log[0].get_legend_handles_labels()
-    fig_log.legend(handles, labels, loc='upper center', bbox_to_anchor=(0.5, 1.02), 
+    fig_log.legend(handles, labels, loc='upper center', bbox_to_anchor=(0.5, 1.03), 
                    ncol=7, fontsize=13, frameon=False, columnspacing=2, handletextpad=0.5)
     
     # Adjust layout to prevent overlap - academic spacing
