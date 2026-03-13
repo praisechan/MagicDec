@@ -150,7 +150,7 @@ current_attn_type = args.attn_type
 # CSV logging setup
 # log_dir = "logs"
 # profile_dir = f"/home/juchanlee/MagicDec/profile/data_{args.budget1}/{MODEL}_{args.dataset}_{args.prefix_len}"
-profile_dir = f"/home/juchanlee/MagicDec/profile/data_confonly_lowhigh_cluster32_gamma{args.gamma2}/{MODEL}_{args.dataset}_{args.task}{args.prefix_len}"
+profile_dir = f"/home/juchanlee/MagicDec/profile/ICCAD/static_profile"
 # profile_dir = f"/home/juchanlee/MagicDec/profile/temp/{MODEL}_{args.dataset}_{args.prefix_len}"
 log_dir = profile_dir
 
@@ -201,8 +201,8 @@ total_tokens_generated = 0
 
 actual_step = 0
 for step, batch in tqdm(enumerate(dataset), total=num_eval_steps):
-    if step < 100:
-      continue  
+    # if step < 100:
+    #   continue  
     if actual_step >= num_eval_steps:
         break
     input_ids = engine.preprocess_input(batch, prompt_format, args.attn_type, model_path, args.budget1, args.budget2, args.estimate_ratio, args.dataset, args.prefix_len)
