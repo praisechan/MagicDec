@@ -1,27 +1,6 @@
 import time
-from dataclasses import dataclass
-from typing import Any, Optional
-
 import torch
 from termcolor import colored
-
-
-@dataclass
-class LLMSession:
-    attention_type: str
-    attention_masks: torch.Tensor
-    batch_size: int
-    input_length: int
-    max_new_length: int
-    valid_start: Any
-    attn_config: Optional[dict] = None
-    kv_cache: Any = None
-    current_length: int = 0
-    profile_clustering: bool = False
-    profile_hot_cluster_selection_ratio: bool = False
-    use_first_kv: bool = False
-    gamma1: Optional[int] = None
-    generate_name: Optional[str] = None
 
 
 class LLM:
@@ -49,8 +28,6 @@ class LLM:
         self.dtype = dtype
         self.device_map = device_map
         self.profile_clustering=False
-        self.last_inference_profile = {}
-        self.last_session_profile = {}
 
 
     def layer_prefill(self, layer_idx, start_bdx, hidden_states):
@@ -214,259 +191,6 @@ class LLM:
         
         return logits
 
-    def _prefill_logits_to_outputs(self, logits):
-        output_ids = logits.argmax(dim=-1)
-        softmax_logits = torch.nn.functional.softmax(logits, dim=-1)
-        topk_vals, topk_indices = torch.topk(softmax_logits, k=3, dim=-1)
-        batch_top3 = []
-        for i in range(3):
-            batch_top3.append((topk_vals[0][:, i], topk_indices[0][:, i]))
-
-        return output_ids.tolist(), [logits], [topk_vals[0][:, 0] - topk_vals[0][:, 1]], [batch_top3]
-
-    def _activate_session(self, session: LLMSession):
-        self.batch_size = session.batch_size
-        self.input_length = session.input_length
-        self.max_new_length = session.max_new_length
-        self.attention_type = session.attention_type
-        self.profile_clustering = session.profile_clustering
-        self.profile_hot_cluster_selection_ratio = session.profile_hot_cluster_selection_ratio
-        self.generate_name = session.generate_name
-        self.kv_cache = session.kv_cache
-
-    def begin_session(
-        self,
-        attention_type,
-        inputs_ids,
-        attention_masks,
-        max_new_length,
-        attn_config=None,
-        profile_clustering=False,
-        profile_hot_cluster_selection_ratio=False,
-        use_first_kv=False,
-        gamma1=None,
-        generate_name=None,
-    ):
-        bs, input_length = inputs_ids.shape
-        assert input_length + max_new_length <= self.max_length, (
-            f"Error: input_length({input_length}) + max_new_length({max_new_length}) exceeds max_length({self.max_length})"
-        )
-
-        valid_start = attention_masks.shape[1] - torch.sum(attention_masks, dim=-1).detach().cpu().numpy()
-        session = LLMSession(
-            attention_type=attention_type,
-            attention_masks=attention_masks,
-            batch_size=bs,
-            input_length=input_length,
-            max_new_length=max_new_length,
-            valid_start=valid_start,
-            attn_config=attn_config,
-            current_length=input_length,
-            profile_clustering=profile_clustering,
-            profile_hot_cluster_selection_ratio=profile_hot_cluster_selection_ratio,
-            use_first_kv=use_first_kv,
-            gamma1=gamma1,
-            generate_name=generate_name,
-        )
-
-        self.attention_type = attention_type
-        self.batch_size = bs
-        self.input_length = input_length
-        self.max_new_length = max_new_length
-        self.profile_clustering = profile_clustering
-        self.profile_hot_cluster_selection_ratio = profile_hot_cluster_selection_ratio
-        self.generate_name = generate_name
-
-        self.init_kv_cache(
-            input_length,
-            valid_start,
-            attn_config,
-            profile_clustering=profile_clustering,
-            use_first_kv=use_first_kv,
-            gamma1=gamma1,
-            generate_name=generate_name,
-        )
-        session.kv_cache = self.kv_cache
-
-        torch.cuda.synchronize()
-        prefill_start = time.time()
-        logits = self.prefill_forward(inputs_ids=inputs_ids)
-        torch.cuda.synchronize()
-        prefill_end = time.time()
-        outputs, logit_list, top1_top2_diff, top3_logits = self._prefill_logits_to_outputs(logits)
-        self.move()
-        self.last_session_profile = {
-            "mode": "begin_session",
-            "prefill_seconds": prefill_end - prefill_start,
-            "decode_seconds": 0.0,
-        }
-
-        return session, outputs, logit_list, top1_top2_diff, top3_logits
-
-    def update_session_attn_config(
-        self,
-        session: LLMSession,
-        attn_config=None,
-        use_first_kv=None,
-        gamma1=None,
-        generate_name=None,
-    ):
-        if attn_config is not None:
-            session.attn_config = attn_config
-        if use_first_kv is not None:
-            session.use_first_kv = use_first_kv
-        if gamma1 is not None:
-            session.gamma1 = gamma1
-        if generate_name is not None:
-            session.generate_name = generate_name
-
-        if session.kv_cache is None:
-            raise RuntimeError("Cannot update attention config for a session without a KV cache.")
-
-        self._activate_session(session)
-        retroinfer_config = None
-        if session.attention_type == "RetroInfer" and session.attn_config is not None:
-            retroinfer_config = session.attn_config.get("RetroInfer")
-
-        if hasattr(session.kv_cache, "update_runtime_config"):
-            session.kv_cache.update_runtime_config(
-                retroinfer_config,
-                use_first_kv=session.use_first_kv,
-                gamma1=session.gamma1,
-                generate_name=session.generate_name,
-            )
-
-    def snapshot_session(self, session: LLMSession):
-        if session.kv_cache is None:
-            raise RuntimeError("Cannot snapshot a session before KV cache initialization.")
-        if not hasattr(session.kv_cache, "snapshot_state"):
-            raise RuntimeError(f"KV cache for {session.attention_type} does not support snapshot_state().")
-
-        return {
-            "current_length": session.current_length,
-            "kv_cache": session.kv_cache.snapshot_state(),
-        }
-
-    def restore_session(self, session: LLMSession, snapshot):
-        if snapshot is None:
-            raise ValueError("snapshot must be provided for restore_session.")
-        if session.kv_cache is None:
-            raise RuntimeError("Cannot restore a session before KV cache initialization.")
-        if "kv_cache" not in snapshot or "current_length" not in snapshot:
-            raise ValueError("Invalid session snapshot.")
-
-        self._activate_session(session)
-        session.kv_cache.restore_state(snapshot["kv_cache"])
-        session.current_length = int(snapshot["current_length"])
-
-    def decode_session(
-        self,
-        session: LLMSession,
-        bonus_token,
-        num_new_tokens,
-        use_first_kv=None,
-        gamma1=None,
-        generate_name=None,
-    ):
-        if bonus_token is None:
-            raise ValueError("bonus_token must be provided for decode_session.")
-        if num_new_tokens < 0:
-            raise ValueError(f"num_new_tokens must be non-negative, got {num_new_tokens}.")
-        if num_new_tokens == 0:
-            return [[] for _ in range(session.batch_size)], [], [], []
-
-        if use_first_kv is not None:
-            session.use_first_kv = use_first_kv
-        if gamma1 is not None:
-            session.gamma1 = gamma1
-        if generate_name is not None:
-            session.generate_name = generate_name
-
-        self._activate_session(session)
-        if hasattr(session.kv_cache, "begin_decode_call"):
-            session.kv_cache.begin_decode_call(
-                use_first_kv=session.use_first_kv,
-                gamma1=session.gamma1,
-                generate_name=session.generate_name,
-            )
-
-        output_ids_list = []
-        top3_logits = []
-        top1_top2_diff = []
-        logit_list = []
-        output_ids = bonus_token
-
-        torch.cuda.synchronize()
-        decode_start = time.time()
-        for step in range(num_new_tokens):
-            self.kv_cache.decoding_step = step
-
-            intermediate_output = False
-            if self.profile_clustering:
-                if self.generate_name and "verify" in self.generate_name:
-                    if step == 0:
-                        intermediate_output = True
-                else:
-                    intermediate_output = True
-
-            logits = self.decode_forward(inputs_ids=output_ids, intermediate_output=intermediate_output)
-            output_ids = logits.argmax(dim=-1)
-            output_ids_list.append(output_ids)
-
-            softmax_logits = torch.nn.functional.softmax(logits, dim=-1)
-            topk_vals, topk_indices = torch.topk(softmax_logits, k=3, dim=-1)
-            batch_top3 = [[] for _ in range(topk_vals.shape[-2])]
-            for i in range(topk_vals.shape[-2]):
-                batch_top3[i].append((topk_vals[0][i][0], topk_indices[0][i][0]))
-                batch_top3[i].append((topk_vals[0][i][1], topk_indices[0][i][1]))
-                batch_top3[i].append((topk_vals[0][i][2], topk_indices[0][i][2]))
-
-            top3_logits.append(batch_top3)
-            top1_top2_diff.append(topk_vals[0][:, 0] - topk_vals[0][:, 1])
-            logit_list.append(logits)
-
-        torch.cuda.synchronize()
-        decode_end = time.time()
-        session.current_length += num_new_tokens
-        self.last_session_profile = {
-            "mode": "decode_session",
-            "prefill_seconds": 0.0,
-            "decode_seconds": decode_end - decode_start,
-        }
-        output_ids_list = torch.cat(output_ids_list, dim=-1).tolist()
-        return output_ids_list, logit_list, top1_top2_diff, top3_logits
-
-    def append_tokens(self, session: LLMSession, tokens, generate_name=None):
-        if tokens is None:
-            raise ValueError("tokens must be provided for append_tokens.")
-        if tokens.ndim != 2:
-            raise ValueError(f"tokens must have shape [batch, seq], got {tuple(tokens.shape)}.")
-        if tokens.shape[1] == 0:
-            return
-
-        self._activate_session(session)
-        if generate_name is not None:
-            session.generate_name = generate_name
-            self.generate_name = generate_name
-        if hasattr(session.kv_cache, "begin_decode_call"):
-            session.kv_cache.begin_decode_call(use_first_kv=False, gamma1=None, generate_name=session.generate_name)
-
-        for step in range(tokens.shape[1]):
-            self.kv_cache.decoding_step = step
-            self.decode_forward(inputs_ids=tokens[:, step:step+1], intermediate_output=False)
-
-        session.current_length += tokens.shape[1]
-
-    def end_session(self, session: LLMSession):
-        if session is None or session.kv_cache is None:
-            return
-
-        kv_cache = session.kv_cache
-        session.kv_cache = None
-        if self.kv_cache is kv_cache:
-            self.kv_cache = None
-        del kv_cache
-
 
     def inference(self, inputs_ids):
         output_ids_list = []    # multi iteration, multi request
@@ -548,11 +272,6 @@ class LLM:
 
         decode_end = time.time()
         print(colored(f"Decoding latency: {round((decode_end - decode_start), 8)} s\n", 'green'))
-        self.last_inference_profile = {
-            "mode": "generate",
-            "prefill_seconds": prefill_end - prefill_start,
-            "decode_seconds": decode_end - decode_start,
-        }
 
         # print(colored(
         #     f"Decoding latency: {round((decode_end - decode_start) * 1000 / (self.max_new_length - 1), 2)} ms/step, "
@@ -666,11 +385,6 @@ class LLM:
 
         decode_end = time.time()
         print(colored(f"Decoding latency: {round((decode_end - decode_start), 8)} s\n", 'green'))
-        self.last_inference_profile = {
-            "mode": "generate_without_prefill_token",
-            "prefill_seconds": prefill_end - prefill_start,
-            "decode_seconds": decode_end - decode_start,
-        }
 
         # print(colored(
         #     f"Decoding latency: {round((decode_end - decode_start) * 1000 / (self.max_new_length - 1), 2)} ms/step, "
