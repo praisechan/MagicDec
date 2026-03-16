@@ -5,8 +5,22 @@ You are working in the MagicDec codebase. Implement a performance optimization f
 ## Environment setup
 - Use the `retroinfer` conda environment before running code:
    - `conda activate retroinfer`
+- Use GPU 3 only for all run/benchmark/regression commands:
+   - Always prefix execution commands with `CUDA_VISIBLE_DEVICES=3`
+   - Do not run this task on other GPUs because they are in use.
 - If you modify `library/retroinfer`, reinstall it so changes are reflected:
    - `cd library/retroinfer && pip install .`
+
+## Execution protocol (must follow)
+1. GPU pinning is mandatory:
+   - Every command that executes model code must include `CUDA_VISIBLE_DEVICES=3`.
+2. Terminal visibility is mandatory:
+   - Print clear progress messages in the terminal while running (what step is running, why, and pass/fail/result summary).
+   - Do not run long silent commands without progress context.
+3. Verification must start small and scale up gradually:
+   - Begin with smoke checks (for example: prefill only, then prefill + one draft step).
+   - Then run partial parity checks (single-cycle draft/verify).
+   - Only after those pass, run multi-cycle and full settle benchmarks.
 
 ## Context
 Current runner:
@@ -132,6 +146,8 @@ Add explicit instrumentation and execute verification in this exact sequence:
 5. Final settle-stage comparison:
    - Compare final verification/settle outputs between old and new paths.
    - Report where outputs are identical and where they diverge.
+
+Before Step 1 above, explicitly run the smallest possible smoke execution first (prefill-only or prefill + one decode step) and confirm basic token/cache sanity before entering full parity flow.
 
 ### F. Handling and explaining non-identical results
 When results differ, follow this policy:
