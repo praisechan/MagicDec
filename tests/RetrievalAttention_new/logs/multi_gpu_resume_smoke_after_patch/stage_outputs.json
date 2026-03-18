@@ -1,0 +1,66 @@
+[
+  {
+    "stage": "draft",
+    "outputs": [
+      13,
+      578
+    ]
+  },
+  {
+    "stage": "early verify",
+    "outputs": [
+      13,
+      578,
+      14351
+    ]
+  },
+  {
+    "stage": "draft",
+    "outputs": [
+      574,
+      9277
+    ]
+  },
+  {
+    "stage": "early verify",
+    "outputs": [
+      574,
+      9277,
+      389
+    ]
+  },
+  {
+    "stage": "final verify",
+    "outputs": [
+      13,
+      578,
+      14351,
+      574,
+      9277,
+      389,
+      279
+    ]
+  },
+  {
+    "stage": "draft",
+    "outputs": [
+      2007,
+      11
+    ]
+  },
+  {
+    "stage": "early verify",
+    "outputs": [
+      2007,
+      11,
+      323
+    ]
+  },
+  {
+    "stage": "final verify",
+    "outputs": [
+      2007,
+      11
+    ]
+  }
+]

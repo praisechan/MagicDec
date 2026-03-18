@@ -43,7 +43,8 @@ def generate_config(
     with open(CONFIG_FILE, "r") as f:
         _config = json.load(f)
     
-    avg_cluster_size = 16
+    # avg_cluster_size = 16
+    avg_cluster_size = 32 # to match page size of NAND Flash = 16KB
     n_segments = max(round(context_len/8192), 1)
     
     # compute the nearest multiple of lcm(8, n_segments) due to the kernel limitation

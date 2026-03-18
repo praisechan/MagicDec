@@ -1,0 +1,42 @@
+[
+  {
+    "stage": "draft",
+    "outputs": [
+      279,
+      198
+    ]
+  },
+  {
+    "stage": "early verify",
+    "outputs": [
+      279,
+      198,
+      25030
+    ]
+  },
+  {
+    "stage": "draft",
+    "outputs": [
+      5895,
+      13
+    ]
+  },
+  {
+    "stage": "early verify",
+    "outputs": [
+      5895,
+      13,
+      578
+    ]
+  },
+  {
+    "stage": "final verify",
+    "outputs": [
+      279,
+      198,
+      25030,
+      5895,
+      13
+    ]
+  }
+]

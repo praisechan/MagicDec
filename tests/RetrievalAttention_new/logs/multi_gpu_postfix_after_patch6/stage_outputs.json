@@ -1,0 +1,442 @@
+[
+  {
+    "stage": "draft",
+    "outputs": [
+      2266,
+      7009,
+      4024,
+      704
+    ]
+  },
+  {
+    "stage": "early verify",
+    "outputs": [
+      311,
+      7009,
+      4024,
+      704,
+      1139
+    ]
+  },
+  {
+    "stage": "draft",
+    "outputs": [
+      3371,
+      2266,
+      7009,
+      4024
+    ]
+  },
+  {
+    "stage": "early verify",
+    "outputs": [
+      2230,
+      1461,
+      7009,
+      15203,
+      704
+    ]
+  },
+  {
+    "stage": "draft",
+    "outputs": [
+      311,
+      10552,
+      433,
+      2266
+    ]
+  },
+  {
+    "stage": "early verify",
+    "outputs": [
+      311,
+      10552,
+      433,
+      2266,
+      7009
+    ]
+  },
+  {
+    "stage": "draft",
+    "outputs": [
+      4024,
+      704,
+      3871,
+      11
+    ]
+  },
+  {
+    "stage": "early verify",
+    "outputs": [
+      4024,
+      704,
+      3871,
+      11,
+      323
+    ]
+  },
+  {
+    "stage": "final verify",
+    "outputs": [
+      430,
+      279,
+      311,
+      10552,
+      433,
+      382,
+      7009,
+      4024,
+      704,
+      3871,
+      11,
+      323,
+      279
+    ]
+  },
+  {
+    "stage": "draft",
+    "outputs": [
+      1253,
+      387,
+      315,
+      904
+    ]
+  },
+  {
+    "stage": "early verify",
+    "outputs": [
+      7138,
+      387,
+      315,
+      904,
+      1005
+    ]
+  },
+  {
+    "stage": "draft",
+    "outputs": [
+      706,
+      10675,
+      311,
+      757
+    ]
+  },
+  {
+    "stage": "early verify",
+    "outputs": [
+      2266,
+      10675,
+      311,
+      757,
+      2266
+    ]
+  },
+  {
+    "stage": "draft",
+    "outputs": [
+      7009,
+      4024,
+      704,
+      3871
+    ]
+  },
+  {
+    "stage": "early verify",
+    "outputs": [
+      1,
+      4024,
+      704,
+      11,
+      11
+    ]
+  },
+  {
+    "stage": "draft",
+    "outputs": [
+      3957,
+      433,
+      3284,
+      430
+    ]
+  },
+  {
+    "stage": "early verify",
+    "outputs": [
+      1071,
+      433,
+      3284,
+      430,
+      358
+    ]
+  },
+  {
+    "stage": "draft",
+    "outputs": [
+      88002,
+      18732,
+      1215,
+      11
+    ]
+  },
+  {
+    "stage": "early verify",
+    "outputs": [
+      11,
+      18732,
+      1215,
+      1071,
+      313
+    ]
+  },
+  {
+    "stage": "draft",
+    "outputs": [
+      313,
+      1,
+      40,
+      690
+    ]
+  },
+  {
+    "stage": "early verify",
+    "outputs": [
+      2288,
+      40,
+      40,
+      11,
+      3371
+    ]
+  },
+  {
+    "stage": "draft",
+    "outputs": [
+      11,
+      430,
+      279,
+      4251
+    ]
+  },
+  {
+    "stage": "early verify",
+    "outputs": [
+      11,
+      430,
+      279,
+      2288,
+      24767
+    ]
+  },
+  {
+    "stage": "final verify",
+    "outputs": [
+      279,
+      198,
+      1,
+      1071,
+      11,
+      2288,
+      11,
+      430,
+      279,
+      430,
+      11
+    ]
+  },
+  {
+    "stage": "draft",
+    "outputs": [
+      1917,
+      8964,
+      922,
+      420
+    ]
+  },
+  {
+    "stage": "early verify",
+    "outputs": [
+      549,
+      596,
+      922,
+      279,
+      198
+    ]
+  },
+  {
+    "stage": "draft",
+    "outputs": [
+      23797,
+      20695,
+      617,
+      2884
+    ]
+  },
+  {
+    "stage": "early verify",
+    "outputs": [
+      23797,
+      61399,
+      311,
+      549,
+      311
+    ]
+  },
+  {
+    "stage": "draft",
+    "outputs": [
+      617,
+      15972,
+      757,
+      2266
+    ]
+  },
+  {
+    "stage": "early verify",
+    "outputs": [
+      315,
+      198,
+      198,
+      2266,
+      7009
+    ]
+  },
+  {
+    "stage": "draft",
+    "outputs": [
+      279,
+      1917,
+      617,
+      3463
+    ]
+  },
+  {
+    "stage": "early verify",
+    "outputs": [
+      420,
+      5030,
+      596,
+      198,
+      198
+    ]
+  },
+  {
+    "stage": "draft",
+    "outputs": [
+      1917,
+      617,
+      3596,
+      1027
+    ]
+  },
+  {
+    "stage": "early verify",
+    "outputs": [
+      198,
+      198,
+      3596,
+      198,
+      3025
+    ]
+  },
+  {
+    "stage": "draft",
+    "outputs": [
+      14957,
+      617,
+      3596,
+      11352
+    ]
+  },
+  {
+    "stage": "early verify",
+    "outputs": [
+      61665,
+      617,
+      3596,
+      198,
+      922
+    ]
+  },
+  {
+    "stage": "draft",
+    "outputs": [
+      1285,
+      1917,
+      617,
+      1027
+    ]
+  },
+  {
+    "stage": "early verify",
+    "outputs": [
+      704,
+      1917,
+      617,
+      3463,
+      3025
+    ]
+  },
+  {
+    "stage": "final verify",
+    "outputs": [
+      549,
+      23797,
+      61399,
+      315,
+      420,
+      198,
+      61665,
+      279,
+      315
+    ]
+  },
+  {
+    "stage": "draft",
+    "outputs": [
+      549,
+      23797,
+      61399,
+      315
+    ]
+  },
+  {
+    "stage": "early verify",
+    "outputs": [
+      549,
+      23797,
+      61399,
+      315,
+      420
+    ]
+  },
+  {
+    "stage": "draft",
+    "outputs": [
+      198,
+      61665,
+      279,
+      549
+    ]
+  },
+  {
+    "stage": "early verify",
+    "outputs": [
+      198,
+      61665,
+      279,
+      420,
+      23797
+    ]
+  },
+  {
+    "stage": "final verify",
+    "outputs": [
+      549,
+      23797,
+      61399,
+      315,
+      420,
+      198,
+      61665
+    ]
+  }
+]

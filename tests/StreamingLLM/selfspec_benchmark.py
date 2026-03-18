@@ -61,13 +61,28 @@ MAX_LEN_TARGET = args.max_len
 DTYPE = torch.bfloat16
 BATCH_SIZE = args.B
 benchmark = args.benchmark
-checkpoint_path = args.model
+# checkpoint_path = args.model
+
+MODEL = args.model_name.split("/")[-1]
+TASK = args.task
+
+import json
+model2path = json.load(open("Engine/RetrievalAttention/benchmark/LongBench/config/model2path.json", "r"))
+model2maxlen = json.load(open("Engine/RetrievalAttention/benchmark/LongBench/config/model2maxlen.json", "r"))
+dataset2prompt = json.load(open("Engine/RetrievalAttention/benchmark/LongBench/config/dataset2prompt.json", "r"))
+dataset2maxlen = json.load(open("Engine/RetrievalAttention/benchmark/LongBench/config/dataset2maxlen.json", "r"))
+
+device = "auto"
+dtype = torch.bfloat16
+model_path = model2path[MODEL]
+max_length = model2maxlen[MODEL]
+prompt_format = dataset2prompt[TASK]
 
 target_dec_len = args.gamma + 1
 
 # Load target model
 engine = LMBackend(dtype=DTYPE, device=DEVICE, dec_len=target_dec_len)
-engine.load_model(checkpoint_path, use_tp=use_tp, rank_group = args.rank_group, group=global_group)
+engine.load_model(model_path, max_length, dtype, device, BATCH_SIZE)
 vocab_size = engine.model.config.vocab_size
 if args.compile:
     engine.compile()
@@ -84,7 +99,10 @@ else:
 print(f"eot_1: {eot_1}, eot_2: {eot_2}")
 
 if args.dataset == "pg19":
-    dataset = load_dataset('emozilla/pg19', split='test')
+    dataset = convert_pg19_dataset(tokenizer=engine.model.tokenizer, seq_len=args.prefix_len)
+    # dataset = load_dataset('emozilla/pg19', split='test')
+elif args.dataset == "longbenchv1":
+    dataset = load_dataset('THUDM/LongBench', TASK, split='test', trust_remote_code=True)
 # elif args.dataset.startswith("ruler"):
 #     dataset = convert_ruler_dataset(tokenizer=tokenizer, task=args.dataset.split(":")[1], model_name=args.model_name, seq_len=args.prefix_len)
 else:
@@ -100,7 +118,7 @@ if benchmark:
     target_time = 0.0
     verify_loop = 0.0
 
-for step, batch in tqdm(enumerate(dataloader), total=num_eval_steps):
+for step, batch in tqdm(enumerate(dataset), total=num_eval_steps):
     if step >= num_eval_steps:
         break
     input_ids = batch[0].to(DEVICE)
@@ -110,6 +128,8 @@ for step, batch in tqdm(enumerate(dataloader), total=num_eval_steps):
     output[:, :input_ids.shape[1]] = input_ids
     num_nodes = torch.zeros(BATCH_SIZE,device=DEVICE).long()
     num_nodes += input_ids.shape[1]
+
+    input_ids = engine.preprocess_input(batch, prompt_format, args.attn_type, model_path, args.budget1, args.budget2, args.estimate_ratio, args.dataset, args.prefix_len)
 
     tokens_buffer[:, :1] = engine.encode(input_ids=input_ids)[:,-1:]
     engine.draft_encode(input_ids=input_ids)

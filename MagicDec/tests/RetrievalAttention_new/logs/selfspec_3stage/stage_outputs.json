@@ -1,0 +1,25 @@
+[
+  {
+    "stage": "draft",
+    "outputs": [
+      11,
+      323
+    ]
+  },
+  {
+    "stage": "early verify",
+    "outputs": [
+      11,
+      323,
+      539
+    ]
+  },
+  {
+    "stage": "final verify",
+    "outputs": [
+      11,
+      323,
+      539
+    ]
+  }
+]
