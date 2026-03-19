@@ -10,6 +10,16 @@ Latest Amendment (must follow in current version):
 - For `engine.commit_prefix("draft", ...)`, use budget2 behavior during replay only, then continue normal `engine.speculate(...)` with budget1 behavior.
 - Do not directly rely on Python-side runtime mutation of `nprobe`/related values as a standalone mechanism, because low-level WaveBuffer state can diverge; if budget switching is needed, use a safe backend routing/synchronization strategy or implement explicit low-level setter support.
 - When synchronizing committed growth across RetroInfer caches, include retrieval metadata (centroids/value_sum/centroids_mask/cluster_size) in addition to steady-zone KV/length state when shapes are compatible.
+- Add dynamic early verification budget routing based on draft confidence margins:
+  - Confidence for each drafted token: `softmax(top1_logit) - softmax(top2_logit)`.
+  - Use minimum confidence over `gamma1` drafted tokens as the routing signal.
+  - Stage-2 routing categories:
+    - skip: if `min_conf > T_high`, skip early verify call and directly commit drafted tokens.
+    - high: if `min_conf < T_low`, run early verify with `budget2_high`.
+    - normal: otherwise run early verify with `budget2`.
+  - Keep dynamic routing cache-safe by using an additional stage-2 cache configured with `budget2_high` (do not mutate nprobe live in Python).
+  - In skip case, draft commit replay must use budget1 draft path (not stage-2 replay path).
+  - Track dynamic mode behavior in console stats (`skip/high/normal` counters and min confidence).
 
 Critical Rules:
 1. Do not reuse or reference any previous text prompt.
@@ -68,9 +78,10 @@ Stage API contract:
 2. Stage 2 Early Verify:
    - engine.early_verify(...)
    - attention type: RetroInfer
-   - KV budget: budget2 (with optional dynamic adjustments if you keep that feature)
+  - KV budget: budget2 by default, or budget2_high for low-confidence dynamic route
   - verify gamma1 drafted tokens in one step and compute accepted span
   - this stage produces a bonus token at the end; bonus-token cache/token accounting is required
+  - dynamic skip path: when all drafted tokens are high confidence (`min_conf > T_high`), skip this stage call and commit drafted block directly
 3. Stage 3 Final Verify (Settle):
    - engine.final_verify(...)
    - attention type: Full_Flash_Attn
@@ -105,6 +116,7 @@ Detailed implementation guideline (must follow):
     - Revert draft/early/final caches to chunk-start snapshots.
     - Commit authoritative accepted span from final verify to final cache, then synchronize into early and draft caches.
     - Ensure synchronized replay carries retrieval metadata where applicable.
+    - If dynamic routing is enabled, maintain two early-verify caches in parallel (`early_verify` with budget2 and `early_verify_high` with budget2_high) and keep both synchronized after commit/settlement.
 
 3. Bonus token handling (strict):
   - Bonus token is always present from a verify call output shape, regardless of full acceptance.
@@ -156,6 +168,7 @@ Required implementation behavior:
 - Ensure EOS handling is consistent and does not leave cache/state inconsistent.
 - Ensure rollback/re-advance logic for cache lengths is mathematically consistent after partial acceptance.
 - Ensure cache revert operations are executed for both draft and early-verify caches whenever discarded tokens occur.
+- Ensure dynamic routing does not create source/target cache context divergence during replay/synchronization (no duplicate source replay and no stale skip markers).
 
 Output files and logging format (must match run_3step_profile_highlow_extreme.py style)
 Create logging directory and output files:

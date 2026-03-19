@@ -1,0 +1,303 @@
+[
+  {
+    "stage": "draft",
+    "outputs": [
+      1866,
+      1715,
+      13,
+      578
+    ]
+  },
+  {
+    "stage": "early verify",
+    "outputs": [
+      1866,
+      1715,
+      13,
+      1283,
+      2362
+    ]
+  },
+  {
+    "stage": "draft",
+    "outputs": [
+      198,
+      32345,
+      539,
+      1027
+    ]
+  },
+  {
+    "stage": "early verify",
+    "outputs": [
+      198,
+      32345,
+      539,
+      1027,
+      3025
+    ]
+  },
+  {
+    "stage": "final verify",
+    "outputs": [
+      1866,
+      1715,
+      13,
+      1283,
+      1047,
+      16514,
+      539,
+      1027,
+      3025,
+      311
+    ]
+  },
+  {
+    "stage": "final verify groundtruth",
+    "outputs": [
+      1866,
+      1715,
+      13,
+      1283,
+      1047,
+      1027,
+      198,
+      359,
+      86,
+      9585
+    ]
+  },
+  {
+    "stage": "draft",
+    "outputs": [
+      539,
+      1027,
+      198,
+      481
+    ]
+  },
+  {
+    "stage": "early verify",
+    "outputs": [
+      539,
+      1027,
+      198,
+      481,
+      311
+    ]
+  },
+  {
+    "stage": "draft",
+    "outputs": [
+      10894,
+      279,
+      35044,
+      6237
+    ]
+  },
+  {
+    "stage": "early verify",
+    "outputs": [
+      636,
+      279,
+      35044,
+      6237,
+      304
+    ]
+  },
+  {
+    "stage": "draft",
+    "outputs": [
+      9463,
+      315,
+      279,
+      21455
+    ]
+  },
+  {
+    "stage": "early verify",
+    "outputs": [
+      927,
+      315,
+      279,
+      21455,
+      430
+    ]
+  },
+  {
+    "stage": "draft",
+    "outputs": [
+      927,
+      279,
+      279,
+      35044
+    ]
+  },
+  {
+    "stage": "early verify",
+    "outputs": [
+      927,
+      279,
+      279,
+      35044,
+      35044
+    ]
+  },
+  {
+    "stage": "final verify",
+    "outputs": [
+      1027,
+      1027,
+      198,
+      481,
+      311,
+      10894,
+      927,
+      279,
+      279,
+      21455,
+      21455,
+      21455
+    ]
+  },
+  {
+    "stage": "final verify groundtruth",
+    "outputs": [
+      1027,
+      198,
+      359,
+      86,
+      9585,
+      311,
+      1935,
+      279,
+      12014,
+      315,
+      264
+    ]
+  },
+  {
+    "stage": "draft",
+    "outputs": [
+      198,
+      359,
+      86,
+      9585
+    ]
+  },
+  {
+    "stage": "early verify",
+    "outputs": [
+      198,
+      359,
+      86,
+      9585,
+      311
+    ]
+  },
+  {
+    "stage": "draft",
+    "outputs": [
+      1935,
+      961,
+      304,
+      279
+    ]
+  },
+  {
+    "stage": "early verify",
+    "outputs": [
+      1935,
+      904,
+      304,
+      279,
+      32079
+    ]
+  },
+  {
+    "stage": "draft",
+    "outputs": [
+      961,
+      304,
+      279,
+      32079
+    ]
+  },
+  {
+    "stage": "early verify",
+    "outputs": [
+      961,
+      304,
+      279,
+      32079,
+      60283
+    ]
+  },
+  {
+    "stage": "final verify",
+    "outputs": [
+      198,
+      359,
+      86,
+      9585,
+      311,
+      1935,
+      279,
+      961,
+      304,
+      279,
+      32079
+    ]
+  },
+  {
+    "stage": "final verify groundtruth",
+    "outputs": [
+      198,
+      359,
+      86,
+      9585,
+      311,
+      1935,
+      279,
+      12014,
+      315,
+      264
+    ]
+  },
+  {
+    "stage": "draft",
+    "outputs": [
+      12014,
+      315,
+      264,
+      32079
+    ]
+  },
+  {
+    "stage": "early verify",
+    "outputs": [
+      12014,
+      315,
+      264,
+      32079,
+      2532
+    ]
+  },
+  {
+    "stage": "final verify",
+    "outputs": [
+      12014,
+      315,
+      264,
+      32079
+    ]
+  },
+  {
+    "stage": "final verify groundtruth",
+    "outputs": [
+      12014,
+      315,
+      264
+    ]
+  }
+]

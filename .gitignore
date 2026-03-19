@@ -4,6 +4,7 @@
 checkpoints/*
 output/*
 Engine/RetrievalAttention/profile/data/*
+Engine/RetrievalAttention_new/logs/*
 profile/data/*
 profile/*
 *.png
