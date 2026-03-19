@@ -41,6 +41,11 @@ class LMBackend:
         self.prefill_tokens = {}
         self._skip_next_early_commit = False
 
+    def _softmax_top2_margin(self, logits):
+        probs = torch.softmax(logits.float(), dim=-1)
+        top2 = torch.topk(probs, k=2, dim=-1).values
+        return top2[..., 0] - top2[..., 1]
+
     def _synchronize_cuda(self):
         if not torch.cuda.is_available():
             return
@@ -156,6 +161,7 @@ class LMBackend:
         budget2,
         estimate_ratio,
         max_new_tokens,
+        budget2_high=None,
     ):
         self.input_ids = input_ids.to(self.runtime_device)
         self.attention_masks = attention_masks.to(self.runtime_device)
@@ -174,6 +180,13 @@ class LMBackend:
             cache_name="early_verify",
             attention_type="RetroInfer",
             retrieval_budget=budget2,
+            estimation_budget=estimate_ratio,
+            max_new_tokens=max_new_tokens,
+        )
+        self._init_single_cache(
+            cache_name="early_verify_high",
+            attention_type="RetroInfer",
+            retrieval_budget=budget2 if budget2_high is None else budget2_high,
             estimation_budget=estimate_ratio,
             max_new_tokens=max_new_tokens,
         )
@@ -311,15 +324,18 @@ class LMBackend:
             self.input_ids = input_ids.to(self.runtime_device)
         return self.prefill_tokens["draft"]
 
-    def _decode_steps(self, cache_name, start_token, steps, forced_inputs=None):
+    def _decode_steps(self, cache_name, start_token, steps, forced_inputs=None, return_confidence=False):
         self._activate_cache(cache_name)
         cur = start_token
         outputs = []
+        margins = []
 
         for step_idx in range(steps):
             logits = self.model.decode_forward(cur)
             out = self.model.sampling(logits, do_sample=False)
             outputs.append(out)
+            if return_confidence:
+                margins.append(self._softmax_top2_margin(logits))
 
             if forced_inputs is not None and step_idx < forced_inputs.shape[1]:
                 cur = forced_inputs[:, step_idx:step_idx + 1]
@@ -331,17 +347,33 @@ class LMBackend:
         else:
             outputs = torch.empty((start_token.shape[0], 0), dtype=start_token.dtype, device=start_token.device)
 
+        if return_confidence:
+            if margins:
+                confidence = torch.cat(margins, dim=1)
+                min_conf = torch.min(confidence).item()
+            else:
+                confidence = torch.empty((start_token.shape[0], 0), dtype=torch.float32, device=start_token.device)
+                min_conf = float("inf")
+            return outputs, confidence, min_conf
+
         return outputs
 
     def speculate(self, current_token, gamma):
         return self._decode_steps("draft", current_token, gamma)
 
+    def speculate_with_confidence(self, current_token, gamma):
+        return self._decode_steps("draft", current_token, gamma, return_confidence=True)
+
     def verify(self, current_token, draft_tokens):
         return self.early_verify(current_token, draft_tokens)
 
-    def early_verify(self, current_token, draft_tokens):
+    def early_verify(self, current_token, draft_tokens, mode="normal"):
+        if mode == "high":
+            cache_name = "early_verify_high"
+        else:
+            cache_name = "early_verify"
         return self._decode_steps(
-            cache_name="early_verify",
+            cache_name=cache_name,
             start_token=current_token,
             steps=draft_tokens.shape[1] + 1,
             forced_inputs=draft_tokens,
@@ -399,7 +431,16 @@ class LMBackend:
                 cache.valid_length_dict[dev].clamp_(min=0)
             cache.valid_length = cache.valid_length_dict[cache.layer_mapping[str(0)]]
 
-    def commit_prefix(self, cache_name, current_token, accepted_prefix, sync_source=None):
+    def commit_prefix(
+        self,
+        cache_name,
+        current_token,
+        accepted_prefix,
+        sync_source=None,
+        replay_source=None,
+        prefer_draft_replay=False,
+        source_replayed=False,
+    ):
         if cache_name == "early_verify" and self._skip_next_early_commit:
             self._skip_next_early_commit = False
             return
@@ -416,7 +457,8 @@ class LMBackend:
                 and hasattr(self.caches[cache_name], "steady_zone_keys")
             ):
                 old_target_context = int(self.caches[cache_name].context)
-                self._replay_tokens(sync_source, replay)
+                if not source_replayed:
+                    self._replay_tokens(sync_source, replay)
                 self._sync_committed_growth(sync_source, cache_name, old_target_context)
                 return
 
@@ -425,15 +467,19 @@ class LMBackend:
 
         # For draft commit replay, use early_verify budget path then synchronize growth to draft.
         if (
+            not prefer_draft_replay
+            and
             cache_name == "draft"
-            and "early_verify" in self.caches
+            and (replay_source in self.caches if replay_source is not None else "early_verify" in self.caches)
             and self.cache_meta.get("draft", {}).get("attention_type") == "RetroInfer"
-            and self.cache_meta.get("early_verify", {}).get("attention_type") == "RetroInfer"
+            and self.cache_meta.get(replay_source or "early_verify", {}).get("attention_type") == "RetroInfer"
         ):
+            source_name = replay_source or "early_verify"
             old_draft_context = int(self.caches["draft"].context)
-            self._replay_tokens("early_verify", replay)
-            self._sync_committed_growth("early_verify", "draft", old_draft_context)
-            self._skip_next_early_commit = True
+            self._replay_tokens(source_name, replay)
+            self._sync_committed_growth(source_name, "draft", old_draft_context)
+            # Legacy flow calls commit_prefix("early_verify", ...) immediately after draft commit.
+            self._skip_next_early_commit = replay_source is None and source_name == "early_verify"
             return
 
         self._replay_tokens(cache_name, replay)

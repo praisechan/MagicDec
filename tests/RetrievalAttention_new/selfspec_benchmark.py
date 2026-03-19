@@ -33,11 +33,14 @@ def parse_args():
     parser.add_argument("--gamma2", type=int, default=16)
     parser.add_argument("--budget1", type=float, default=0.05)
     parser.add_argument("--budget2", type=float, default=0.25)
+    parser.add_argument("--budget2_high", type=float, default=0.5)
     parser.add_argument("--estimate_ratio", type=float, default=0.25)
     parser.add_argument("--num_max_token", type=int, default=64)
     parser.add_argument("--num_eval_steps", type=int, default=1)
     parser.add_argument("--seed", type=int, default=123)
     parser.add_argument("--enable_dynamic_budget", action="store_true")
+    parser.add_argument("--T_low", type=float, default=0.05)
+    parser.add_argument("--T_high", type=float, default=0.20)
     parser.add_argument("--logs_dir", type=str, default="MagicDec/tests/RetrievalAttention_new/logs/selfspec_3stage")
     return parser.parse_args()
 
@@ -73,6 +76,8 @@ def init_logs(log_dir):
         "speculate_calls",
         "early_verify_calls",
         "final_verify_calls",
+        "skip_switches",
+        "high_switches",
         "tokens_generated",
     ]
     acc_headers = [
@@ -86,6 +91,8 @@ def init_logs(log_dir):
         "total_speculate_calls",
         "total_early_verify_calls",
         "total_final_verify_calls",
+        "total_skip_switches",
+        "total_high_switches",
         "total_tokens_generated",
     ]
 
@@ -114,6 +121,13 @@ def append_csv(path, row):
 
 def empty_like_tokens(ref_token):
     return torch.empty((ref_token.shape[0], 0), dtype=ref_token.dtype, device=ref_token.device)
+
+
+def first_eos_idx(tokens, eos_id):
+    for idx in range(tokens.shape[1]):
+        if int(tokens[0, idx]) == eos_id:
+            return idx
+    return -1
 
 
 def load_longbench_config():
@@ -160,6 +174,8 @@ def main():
     total_speculate_calls = 0
     total_early_verify_calls = 0
     total_final_verify_calls = 0
+    total_skip_switches = 0
+    total_high_switches = 0
     total_tokens_generated = 0
 
     total_steps = min(args.num_eval_steps, len(dataset))
@@ -186,6 +202,10 @@ def main():
         final_authoritative_bonus_count = 0
         final_settled_tokens_count = 0
         unsettled_total = 0
+        dynamic_skip_count = 0
+        dynamic_high_count = 0
+        dynamic_normal_count = 0
+        dynamic_min_conf_values = []
 
         final_prerun_calls = 0
 
@@ -194,6 +214,7 @@ def main():
             attention_masks=attention_masks,
             budget1=args.budget1,
             budget2=args.budget2,
+            budget2_high=args.budget2_high,
             estimate_ratio=args.estimate_ratio,
             max_new_tokens=args.num_max_token + args.gamma2 + args.gamma1 + 8,
         )
@@ -213,56 +234,118 @@ def main():
         chunk_start_final_token = final_current_token.clone()
         chunk_start_draft_snapshot = engine.snapshot_state("draft")
         chunk_start_early_snapshot = engine.snapshot_state("early_verify")
+        chunk_start_early_high_snapshot = engine.snapshot_state("early_verify_high")
         chunk_start_final_snapshot = engine.snapshot_state("final_verify")
 
         while len(emitted_tokens) < args.num_max_token:
             draft_snapshot = engine.snapshot_state("draft")
             early_snapshot = engine.snapshot_state("early_verify")
+            early_high_snapshot = engine.snapshot_state("early_verify_high")
 
             t_draft = time.perf_counter()
-            draft_tokens = engine.speculate(current_token, args.gamma1)
+            draft_tokens, draft_confidence, min_conf = engine.speculate_with_confidence(current_token, args.gamma1)
             elapsed_draft = time.perf_counter() - t_draft
             step_speculate_calls += 1
             drafted_tokens_count += draft_tokens.shape[1]
             stage_entries.append({"stage": "draft", "outputs": draft_tokens[0].detach().cpu().tolist()})
 
-            t_early = time.perf_counter()
-            early_outputs = engine.early_verify(current_token, draft_tokens)
-            elapsed_early = time.perf_counter() - t_early
-            step_early_verify_calls += 1
-            stage_entries.append({"stage": "early verify", "outputs": early_outputs[0].detach().cpu().tolist()})
-
-            accepted_len = 0
-            for idx in range(args.gamma1):
-                if int(draft_tokens[0, idx]) == int(early_outputs[0, idx]) and int(draft_tokens[0, idx]) != eos_id:
-                    accepted_len += 1
+            dynamic_mode = "normal"
+            if args.enable_dynamic_budget:
+                dynamic_min_conf_values.append(min_conf)
+                if min_conf > args.T_high:
+                    dynamic_mode = "skip"
+                    dynamic_skip_count += 1
+                elif min_conf < args.T_low:
+                    dynamic_mode = "high"
+                    dynamic_high_count += 1
                 else:
+                    dynamic_mode = "normal"
+                    dynamic_normal_count += 1
+            else:
+                dynamic_normal_count += 1
+
+            if dynamic_mode == "skip":
+                eos_idx = first_eos_idx(draft_tokens, eos_id)
+                accepted_len = (eos_idx + 1) if eos_idx >= 0 else draft_tokens.shape[1]
+                rejected_len = draft_tokens.shape[1] - accepted_len
+                committed_online = draft_tokens[:, :accepted_len]
+
+                if committed_online.numel() == 0:
                     break
 
-            rejected_len = args.gamma1 - accepted_len
-            early_bonus = early_outputs[:, accepted_len:accepted_len + 1]
-            committed_online = torch.cat([draft_tokens[:, :accepted_len], early_bonus], dim=1)
-            early_verified_accepted_count += accepted_len
-            early_bonus_count += 1
+                elapsed_early = 0.0
 
-            engine.revert_to("draft", draft_snapshot)
-            engine.revert_to("early_verify", early_snapshot)
+                engine.revert_to("draft", draft_snapshot)
+                engine.revert_to("early_verify", early_snapshot)
+                engine.revert_to("early_verify_high", early_high_snapshot)
 
-            accepted_prefix = committed_online[:, :-1]
-            engine.commit_prefix("draft", current_token, accepted_prefix)
-            engine.commit_prefix("early_verify", current_token, accepted_prefix)
+                accepted_prefix = committed_online[:, :-1]
+                engine.commit_prefix("draft", current_token, accepted_prefix, prefer_draft_replay=True)
+                engine.commit_prefix("early_verify", current_token, accepted_prefix)
+                engine.commit_prefix("early_verify_high", current_token, accepted_prefix)
+            else:
+                t_early = time.perf_counter()
+                early_outputs = engine.early_verify(current_token, draft_tokens, mode=dynamic_mode)
+                elapsed_early = time.perf_counter() - t_early
+                step_early_verify_calls += 1
+                stage_entries.append({"stage": "early verify", "outputs": early_outputs[0].detach().cpu().tolist()})
+
+                accepted_len = 0
+                for idx in range(args.gamma1):
+                    if int(draft_tokens[0, idx]) == int(early_outputs[0, idx]) and int(draft_tokens[0, idx]) != eos_id:
+                        accepted_len += 1
+                    else:
+                        break
+
+                rejected_len = args.gamma1 - accepted_len
+                early_bonus = early_outputs[:, accepted_len:accepted_len + 1]
+                committed_online = torch.cat([draft_tokens[:, :accepted_len], early_bonus], dim=1)
+                early_verified_accepted_count += accepted_len
+                early_bonus_count += 1
+
+                engine.revert_to("draft", draft_snapshot)
+                engine.revert_to("early_verify", early_snapshot)
+                engine.revert_to("early_verify_high", early_high_snapshot)
+
+                accepted_prefix = committed_online[:, :-1]
+                replay_source = "early_verify_high" if dynamic_mode == "high" else "early_verify"
+                engine.commit_prefix("draft", current_token, accepted_prefix, replay_source=replay_source)
+                if replay_source == "early_verify":
+                    engine.commit_prefix(
+                        "early_verify_high",
+                        current_token,
+                        accepted_prefix,
+                        sync_source="early_verify",
+                        source_replayed=True,
+                    )
+                else:
+                    engine.commit_prefix(
+                        "early_verify",
+                        current_token,
+                        accepted_prefix,
+                        sync_source="early_verify_high",
+                        source_replayed=True,
+                    )
 
             current_token = committed_online[:, -1:]
             pending_online_tokens = torch.cat([pending_online_tokens, committed_online], dim=1)
 
             print(
                 f"[Stage Draft] elapsed={elapsed_draft:.4f}s accepted={accepted_len} rejected={rejected_len} "
-                f"unsettled={unsettled_total} budget={args.budget1} text={to_text(tokenizer, draft_tokens)}"
+                f"unsettled={unsettled_total} budget={args.budget1} min_conf={min_conf:.6f} mode={dynamic_mode} "
+                f"text={to_text(tokenizer, draft_tokens)}"
             )
-            print(
-                f"[Stage Early Verify] elapsed={elapsed_early:.4f}s accepted={accepted_len} rejected={rejected_len} "
-                f"unsettled={unsettled_total} budget={args.budget2} text={to_text(tokenizer, early_outputs)}"
-            )
+            if dynamic_mode == "skip":
+                print(
+                    f"[Stage Early Verify] elapsed={elapsed_early:.4f}s accepted={accepted_len} rejected={rejected_len} "
+                    f"unsettled={unsettled_total} budget=0.0 mode=skip text=<skipped>"
+                )
+            else:
+                used_budget = args.budget2_high if dynamic_mode == "high" else args.budget2
+                print(
+                    f"[Stage Early Verify] elapsed={elapsed_early:.4f}s accepted={accepted_len} rejected={rejected_len} "
+                    f"unsettled={unsettled_total} budget={used_budget} mode={dynamic_mode} text={to_text(tokenizer, early_outputs)}"
+                )
 
             should_settle = (
                 pending_online_tokens.shape[1] >= args.gamma2
@@ -302,6 +385,7 @@ def main():
 
                 engine.revert_to("draft", chunk_start_draft_snapshot)
                 engine.revert_to("early_verify", chunk_start_early_snapshot)
+                engine.revert_to("early_verify_high", chunk_start_early_high_snapshot)
                 engine.revert_to("final_verify", chunk_start_final_snapshot)
 
                 if authoritative_tokens.numel() == 0:
@@ -309,8 +393,27 @@ def main():
 
                 final_prefix = authoritative_tokens[:, :-1]
                 engine.commit_prefix("final_verify", chunk_start_final_token, final_prefix)
-                engine.commit_prefix("early_verify", chunk_start_token, final_prefix, sync_source="final_verify")
-                engine.commit_prefix("draft", chunk_start_token, final_prefix, sync_source="final_verify")
+                engine.commit_prefix(
+                    "early_verify",
+                    chunk_start_token,
+                    final_prefix,
+                    sync_source="final_verify",
+                    source_replayed=True,
+                )
+                engine.commit_prefix(
+                    "early_verify_high",
+                    chunk_start_token,
+                    final_prefix,
+                    sync_source="final_verify",
+                    source_replayed=True,
+                )
+                engine.commit_prefix(
+                    "draft",
+                    chunk_start_token,
+                    final_prefix,
+                    sync_source="final_verify",
+                    source_replayed=True,
+                )
                 current_token = authoritative_tokens[:, -1:]
                 final_current_token = authoritative_tokens[:, -1:]
 
@@ -332,6 +435,7 @@ def main():
                 chunk_start_final_token = final_current_token.clone()
                 chunk_start_draft_snapshot = engine.snapshot_state("draft")
                 chunk_start_early_snapshot = engine.snapshot_state("early_verify")
+                chunk_start_early_high_snapshot = engine.snapshot_state("early_verify_high")
                 chunk_start_final_snapshot = engine.snapshot_state("final_verify")
 
             if int(current_token[0, 0]) == eos_id:
@@ -340,10 +444,16 @@ def main():
         total_speculate_calls += step_speculate_calls
         total_early_verify_calls += step_early_verify_calls
         total_final_verify_calls += step_final_verify_calls
+        total_skip_switches += dynamic_skip_count
+        total_high_switches += dynamic_high_count
         total_tokens_generated += step_tokens_generated
 
         print(f"=== Step {step} Statistics ===")
         print(f"Dynamic budget enabled: {args.enable_dynamic_budget}")
+        if args.enable_dynamic_budget:
+            min_conf_stat = min(dynamic_min_conf_values) if dynamic_min_conf_values else float("inf")
+            print(f"Dynamic route counters: skip={dynamic_skip_count}, high={dynamic_high_count}, normal={dynamic_normal_count}")
+            print(f"Minimum confidence observed: {min_conf_stat:.6f}")
         print(f"Speculate calls: {step_speculate_calls}")
         print(f"Early Verify calls: {step_early_verify_calls}")
         print(f"Final Verify calls: {step_final_verify_calls}")
@@ -357,12 +467,15 @@ def main():
         print(f"Emitted tokens: {step_tokens_generated}")
         print(f"Draft cache state: {engine.cache_state_report('draft')}")
         print(f"Early verify cache state: {engine.cache_state_report('early_verify')}")
+        print(f"Early verify high cache state: {engine.cache_state_report('early_verify_high')}")
         print(f"Final verify cache state: {engine.cache_state_report('final_verify')}")
 
         print(f"=== Accumulated Statistics (up to step {step}) ===")
         print(f"Total speculate calls: {total_speculate_calls}")
         print(f"Total early verify calls: {total_early_verify_calls}")
         print(f"Total final verify calls: {total_final_verify_calls}")
+        print(f"Total skip switches: {total_skip_switches}")
+        print(f"Total high switches: {total_high_switches}")
         print(f"Total tokens generated: {total_tokens_generated}")
 
         append_csv(
@@ -378,26 +491,30 @@ def main():
                 step_speculate_calls,
                 step_early_verify_calls,
                 step_final_verify_calls,
+                dynamic_skip_count,
+                dynamic_high_count,
                 step_tokens_generated,
             ],
         )
 
-        append_csv(
-            acc_path,
-            [
-                step,
-                args.dataset,
-                args.prefix_len,
-                args.gamma1,
-                args.gamma2,
-                args.budget1,
-                args.budget2,
-                total_speculate_calls,
-                total_early_verify_calls,
-                total_final_verify_calls,
-                total_tokens_generated,
-            ],
-        )
+        # append_csv(
+        #     acc_path,
+        #     [
+        #         step,
+        #         args.dataset,
+        #         args.prefix_len,
+        #         args.gamma1,
+        #         args.gamma2,
+        #         args.budget1,
+        #         args.budget2,
+        #         total_speculate_calls,
+        #         total_early_verify_calls,
+        #         total_final_verify_calls,
+        #         total_skip_switches,
+        #         total_high_switches,
+        #         total_tokens_generated,
+        #     ],
+        # )
 
         append_stage_outputs(stage_path, stage_entries)
         engine.clear_kv()
@@ -415,6 +532,8 @@ def main():
             total_speculate_calls,
             total_early_verify_calls,
             total_final_verify_calls,
+            total_skip_switches,
+            total_high_switches,
             total_tokens_generated,
         ],
     )
@@ -423,6 +542,8 @@ def main():
     print(f"Total speculate calls: {total_speculate_calls}")
     print(f"Total early verify calls: {total_early_verify_calls}")
     print(f"Total final verify calls: {total_final_verify_calls}")
+    print(f"Total skip switches: {total_skip_switches}")
+    print(f"Total high switches: {total_high_switches}")
     print(f"Total tokens generated: {total_tokens_generated}")
 
 

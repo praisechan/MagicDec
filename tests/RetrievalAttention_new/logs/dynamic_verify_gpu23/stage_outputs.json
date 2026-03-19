@@ -1,0 +1,217 @@
+[
+  {
+    "stage": "draft",
+    "outputs": [
+      39943,
+      13,
+      3005,
+      198
+    ]
+  },
+  {
+    "stage": "early verify",
+    "outputs": [
+      39943,
+      13,
+      3005,
+      198,
+      32345
+    ]
+  },
+  {
+    "stage": "draft",
+    "outputs": [
+      1027,
+      14324,
+      433,
+      369
+    ]
+  },
+  {
+    "stage": "early verify",
+    "outputs": [
+      1027,
+      14324,
+      433,
+      369,
+      264
+    ]
+  },
+  {
+    "stage": "draft",
+    "outputs": [
+      4040,
+      7580,
+      11,
+      323
+    ]
+  },
+  {
+    "stage": "early verify",
+    "outputs": [
+      4040,
+      7580,
+      11,
+      323,
+      1047
+    ]
+  },
+  {
+    "stage": "draft",
+    "outputs": [
+      912,
+      4059,
+      311,
+      617
+    ]
+  },
+  {
+    "stage": "early verify",
+    "outputs": [
+      539,
+      4059,
+      311,
+      617,
+      433
+    ]
+  },
+  {
+    "stage": "final verify",
+    "outputs": [
+      39943,
+      13,
+      3005,
+      198,
+      32345,
+      1027,
+      14324,
+      433,
+      369,
+      264,
+      4040,
+      7580,
+      11,
+      323,
+      1047,
+      539,
+      1027
+    ]
+  },
+  {
+    "stage": "draft",
+    "outputs": [
+      3025,
+      311,
+      198,
+      7072
+    ]
+  },
+  {
+    "stage": "early verify",
+    "outputs": [
+      3025,
+      311,
+      198,
+      6766,
+      709
+    ]
+  },
+  {
+    "stage": "draft",
+    "outputs": [
+      433,
+      11,
+      1606,
+      315
+    ]
+  },
+  {
+    "stage": "early verify",
+    "outputs": [
+      433,
+      11,
+      439,
+      4491,
+      279
+    ]
+  },
+  {
+    "stage": "final verify",
+    "outputs": [
+      3025,
+      311,
+      198,
+      2203,
+      433,
+      11,
+      439,
+      1364
+    ]
+  },
+  {
+    "stage": "draft",
+    "outputs": [
+      408,
+      433,
+      369,
+      430
+    ]
+  },
+  {
+    "stage": "early verify",
+    "outputs": [
+      548,
+      433,
+      304,
+      430,
+      7580
+    ]
+  },
+  {
+    "stage": "draft",
+    "outputs": [
+      264,
+      2960,
+      315,
+      433
+    ]
+  },
+  {
+    "stage": "early verify",
+    "outputs": [
+      433,
+      2960,
+      315,
+      433,
+      369
+    ]
+  },
+  {
+    "stage": "draft",
+    "outputs": [
+      369,
+      279,
+      1566,
+      8502
+    ]
+  },
+  {
+    "stage": "early verify",
+    "outputs": [
+      369,
+      904,
+      1566,
+      1403,
+      13
+    ]
+  },
+  {
+    "stage": "final verify",
+    "outputs": [
+      548,
+      433,
+      369,
+      904
+    ]
+  }
+]
