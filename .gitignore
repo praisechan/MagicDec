@@ -10,3 +10,5 @@ profile/*
 *.png
 *.csv
 *.sh
+
+tests/RetrievalAttention_new/logs/*

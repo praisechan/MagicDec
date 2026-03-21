@@ -94,14 +94,23 @@ def init_logs(log_dir):
         "total_skip_switches",
         "total_high_switches",
         "total_tokens_generated",
+        "model_name",
+        "task",
+        "budget2_high",
+        "enable_dynamic_budget",
+        "T_high",
+        "T_low",
     ]
 
-    with open(step_path, "w", newline="") as f:
-        csv.writer(f).writerow(step_headers)
-    with open(acc_path, "w", newline="") as f:
-        csv.writer(f).writerow(acc_headers)
-    with open(stage_path, "w", encoding="utf-8") as f:
-        json.dump([], f, ensure_ascii=False, indent=2)
+    if not os.path.exists(step_path):
+        with open(step_path, "w", newline="") as f:
+            csv.writer(f).writerow(step_headers)
+    if not os.path.exists(acc_path):
+        with open(acc_path, "w", newline="") as f:
+            csv.writer(f).writerow(acc_headers)
+    if not os.path.exists(stage_path):
+        with open(stage_path, "w", encoding="utf-8") as f:
+            json.dump([], f, ensure_ascii=False, indent=2)
 
     return step_path, acc_path, stage_path
 
@@ -245,7 +254,7 @@ def main():
             t_draft = time.perf_counter()
             draft_tokens, draft_confidence, min_conf = engine.speculate_with_confidence(current_token, args.gamma1)
             elapsed_draft = time.perf_counter() - t_draft
-            step_speculate_calls += 1
+            step_speculate_calls += args.gamma1
             drafted_tokens_count += draft_tokens.shape[1]
             stage_entries.append({"stage": "draft", "outputs": draft_tokens[0].detach().cpu().tolist()})
 
@@ -494,27 +503,14 @@ def main():
                 dynamic_skip_count,
                 dynamic_high_count,
                 step_tokens_generated,
+                args.model_name,
+                args.task,
+                args.budget2_high,
+                args.enable_dynamic_budget,
+                args.T_high,
+                args.T_low,
             ],
         )
-
-        # append_csv(
-        #     acc_path,
-        #     [
-        #         step,
-        #         args.dataset,
-        #         args.prefix_len,
-        #         args.gamma1,
-        #         args.gamma2,
-        #         args.budget1,
-        #         args.budget2,
-        #         total_speculate_calls,
-        #         total_early_verify_calls,
-        #         total_final_verify_calls,
-        #         total_skip_switches,
-        #         total_high_switches,
-        #         total_tokens_generated,
-        #     ],
-        # )
 
         append_stage_outputs(stage_path, stage_entries)
         engine.clear_kv()
@@ -522,7 +518,7 @@ def main():
     append_csv(
         acc_path,
         [
-            "final",
+            args.num_eval_steps,
             args.dataset,
             args.prefix_len,
             args.gamma1,
@@ -535,6 +531,12 @@ def main():
             total_skip_switches,
             total_high_switches,
             total_tokens_generated,
+            args.model_name,
+            args.task,
+            args.budget2_high,
+            args.enable_dynamic_budget,
+            args.T_high,
+            args.T_low,
         ],
     )
 
