@@ -1,0 +1,297 @@
+# RetrievalAttention_new 3-Stage Hierarchical Self-Spec Implementation Summary
+
+## 1. Purpose of this document
+This document explains:
+- how the original codebase worked before this implementation,
+- how the new 3-stage hierarchical speculative decoding system works now,
+- exactly which files and code paths were added or changed.
+
+This is intended as a handoff reference for GPT-Codex to continue development safely.
+
+---
+
+## 2. Baseline architecture before this work
+
+### 2.1 RetrievalAttention_new baseline (non self-spec path)
+The original RetrievalAttention_new runtime was primarily a single-model generation pipeline:
+- Entry benchmark: Engine/RetrievalAttention_new/benchmark/longbench/pred.py
+- Model abstraction: Engine/RetrievalAttention_new/model_hub/LLM.py
+- Model implementation: Engine/RetrievalAttention_new/model_hub/llama.py
+- KV cache backends:
+  - Engine/RetrievalAttention_new/cache_hub/flash_attn_cache.py (full attention)
+  - Engine/RetrievalAttention_new/cache_hub/retroinfer_cache.py (retrieval attention)
+
+High-level flow in pred.py:
+1. Load dataset and prompt format.
+2. Build attention config with generate_config(...).
+3. Call llm.generate(...), where attention_type is either Full_Flash_Attn or RetroInfer.
+4. generate() allocates one KV cache, runs prefill once, then decode loop.
+
+Important properties of the baseline:
+- It was not a hierarchical 3-stage speculate/verify/settle loop.
+- It did not maintain separate live caches for draft, early verify, and final verify in one online decoding session.
+- It did not include per-step speculative acceptance accounting and stage-level replay/synchronization logic.
+
+### 2.2 Existing self-spec reference style (StreamingLLM)
+Reference self-spec behavior existed in tests/StreamingLLM/selfspec_benchmark.py with Draft + Verify mechanics:
+- Draft stage autoregressively proposes gamma tokens.
+- Verify stage checks them and computes accepted span plus bonus token.
+- Cache lengths are manually rolled back/advanced.
+
+This served as interface inspiration, but the RetrievalAttention_new integration required new backend logic because its cache internals and metadata synchronization needs are different.
+
+---
+
+## 3. New implementation overview
+
+The new system introduces:
+1. A dedicated RetrievalAttention_new backend API for self-spec:
+   - Engine/RetrievalAttention_new/backend.py
+2. A dedicated 3-stage benchmark driver:
+   - tests/RetrievalAttention_new/selfspec_benchmark.py
+
+Core design:
+- Stage 1 Draft: RetroInfer with budget1
+- Stage 2 Early Verify: RetroInfer with budget2 (or budget2_high for low-confidence routing)
+- Stage 3 Final Verify: Full_Flash_Attn authoritative settlement with a persistent live cache
+
+The loop is hierarchical:
+- repeatedly run Draft + Early Verify to grow pending online tokens,
+- when pending length reaches gamma2 (or EOS/max-token boundary), run one authoritative Final Verify call,
+- settle the chunk and synchronize all stage caches to authoritative state.
+
+---
+
+## 4. How the 3-stage system works now
+
+### 4.1 Stage cache layout
+The backend maintains four active caches:
+- draft
+- early_verify
+- early_verify_high
+- final_verify
+
+Why four caches:
+- draft: fast speculation under budget1
+- early_verify: normal verification under budget2
+- early_verify_high: stricter verification under budget2_high for low-confidence cases
+- final_verify: full attention authoritative reference used online at each settlement boundary
+
+### 4.2 Setup and prefill
+In tests/RetrievalAttention_new/selfspec_benchmark.py:
+1. preprocess input (pg19 or longbenchv1)
+2. engine.setup_caches(...) initializes draft/early_verify/early_verify_high via RetroInfer
+3. engine.setup_final_verify_cache(...) initializes final_verify via Full_Flash_Attn
+4. engine.encode(...) gets first token from draft prefill state
+
+All stage caches are initialized with the same prefix context but different attention mode/budget configuration.
+
+### 4.3 Iterative online loop
+Per iteration:
+1. Snapshot cache states for draft and both early-verify caches.
+2. Draft stage:
+   - speculate gamma1 tokens using draft cache
+   - also compute token confidence margins from logits
+3. Dynamic routing decision (if enabled):
+   - min_conf > T_high => skip early verify
+   - min_conf < T_low => high mode (budget2_high cache)
+   - otherwise normal mode (budget2 cache)
+4. Early verify behavior:
+   - skip mode: commit drafted tokens directly (subject to EOS truncation)
+   - verify modes: run one early_verify call over drafted block, compute accepted prefix, append one bonus token
+5. Revert stage caches to snapshots and replay committed prefix appropriately.
+6. Append committed tokens to pending_online_tokens.
+7. If settlement boundary reached (gamma2/EOS/max-token):
+   - run final_verify once over current pending span,
+   - compare pending tokens to final outputs,
+   - build authoritative committed span as accepted prefix + final authoritative bonus,
+   - revert all three stage families (draft/early/final) to chunk start snapshots,
+   - replay authoritative prefix on final cache and synchronize growth into early and draft caches,
+   - emit settled tokens and reset pending buffer.
+
+Termination:
+- EOS or max token budget.
+
+### 4.4 Bonus-token contract
+Early verify and final verify both return proposed span plus one additional next-token prediction.
+- On mismatch, accepted span stops before mismatch.
+- The token at mismatch position from verifier output becomes authoritative bonus extension.
+- Accounting counts verify calls even when only bonus extension is effectively committed.
+
+### 4.5 Dynamic budget routing
+Dynamic routing signal:
+- per drafted token margin = softmax(top1) - softmax(top2)
+- routing uses minimum margin across drafted block
+
+Routing:
+- skip: no early verify call, direct draft commit path
+- high: verify with early_verify_high cache (budget2_high)
+- normal: verify with early_verify cache (budget2)
+
+Safety note:
+- no in-place Python-side nprobe mutation during runtime
+- budget switching is cache-based routing, not low-level mutable state mutation
+
+---
+
+## 5. Cache consistency and synchronization mechanics
+
+Implemented in Engine/RetrievalAttention_new/backend.py.
+
+### 5.1 Snapshot/revert/truncate
+Backend provides:
+- snapshot_state(cache_name)
+- revert_to(cache_name, snapshot)
+- truncate_to(cache_name, target_context)
+
+Snapshot captures:
+- context length
+- static_pattern_total (when present)
+- valid_length_dict per device (when present)
+
+### 5.2 Commit and replay
+commit_prefix(...) supports:
+- direct replay in target cache
+- replay in source cache plus synchronized growth copy into target cache
+- source/target synchronization for stage alignment after settlement
+
+### 5.3 Cross-cache growth sync
+_sync_committed_growth(...) synchronizes:
+- context
+- steady-zone KV region (when available)
+- valid lengths
+- RetroInfer retrieval metadata tensors when compatible:
+  - centroids
+  - value_sum
+  - centroids_mask
+  - cluster_size
+
+This reduces divergence risk between stage caches after authoritative settlement.
+
+### 5.4 Multi-GPU lifecycle hardening
+Added CUDA synchronization boundaries in backend cache lifecycle:
+- before each stage cache init
+- after prefill forward
+- after model.move()
+- after RetroInfer graph capture
+- before clear_kv teardown
+
+Goal:
+- avoid async overlap hazards during multi-cache setup/teardown in multi-GPU mode.
+
+---
+
+## 6. What changed, file by file
+
+## 6.1 Added: Engine/RetrievalAttention_new/backend.py
+New LMBackend API for RetrievalAttention_new self-spec integration.
+
+Major methods:
+- load_model
+- preprocess_input
+- setup_caches
+- setup_final_verify_cache
+- encode
+- speculate / speculate_with_confidence
+- verify / early_verify / final_verify
+- snapshot_state / revert_to / truncate_to
+- commit_prefix / cache_state_report
+- clear_kv / delete_cache
+
+Key implementation points:
+- multi-cache stage orchestration
+- dynamic confidence-based stage-2 routing
+- cache replay and synchronization helpers
+- retrieval metadata synchronization
+- multi-GPU synchronization barriers
+
+## 6.2 Added: tests/RetrievalAttention_new/selfspec_benchmark.py
+Dedicated benchmark runner for 3-stage hierarchical self-spec.
+
+Major behavior:
+- dataset/model config loading for RetrievalAttention_new
+- per-step online Draft -> Early Verify -> Final Verify settlement
+- dynamic routing with skip/high/normal stage-2 decisions
+- stage output logging and CSV accumulation
+- per-step and final console statistics
+
+Outputs:
+- step_log.csv
+- accumulated_log.csv
+- stage_outputs.json
+
+## 6.3 Existing core internals reused (not replaced)
+The new backend relies on existing RetrievalAttention_new internals:
+- Engine/RetrievalAttention_new/model_hub/LLM.py
+- Engine/RetrievalAttention_new/model_hub/llama.py
+- Engine/RetrievalAttention_new/cache_hub/retroinfer_cache.py
+- Engine/RetrievalAttention_new/cache_hub/flash_attn_cache.py
+
+No old RetrievalAttention path is used for this implementation path.
+
+---
+
+## 7. Control-flow comparison: original vs new
+
+Original RetrievalAttention_new benchmark path:
+- one attention mode per run
+- one KV cache lifecycle per generate call
+- no speculative hierarchy
+
+New self-spec path:
+- concurrent stage-specific cache families
+- hierarchical online decoding with gamma1 drafting and gamma2 settlement
+- explicit cache snapshot/revert/replay/sync operations
+- dynamic early-verify budget routing
+- authoritative final settlement with live full-attention cache
+
+---
+
+## 8. Metrics and logging map
+
+In tests/RetrievalAttention_new/selfspec_benchmark.py:
+- per-iteration stage timing and accepted/rejected counts are printed
+- dynamic routing counters tracked (skip/high/normal)
+- min confidence tracked when dynamic mode enabled
+- speculative/verify/final call counts accumulated
+- generated token counts accumulated
+- stage outputs appended to JSON
+- step and accumulated CSV rows written
+
+Practical meaning of call counters:
+- speculate_calls counts draft decode steps
+- early_verify_calls counts actual early verify invocations (skip does not increment)
+- final_verify_calls counts chunk-level settlement events
+
+---
+
+## 9. Key invariants for future modifications
+
+1. Stage cache coherence
+- After any authoritative settlement, draft/early/final caches must represent the same committed prefix state.
+
+2. Bonus token semantics
+- Verify stages are compared on prefix and contribute one bonus token; mismatch handling must preserve this rule.
+
+3. Settlement granularity
+- final_verify_calls must correspond to settlement boundaries (gamma2/EOS/max-token), not every early verify iteration.
+
+4. Dynamic routing safety
+- Keep budget switching as explicit cache routing, not ad-hoc mutable low-level cache parameter mutation.
+
+5. Multi-GPU ordering
+- Preserve CUDA synchronization boundaries around cache init/move/capture/teardown operations.
+
+---
+
+## 10. Suggested reading order for next GPT-Codex step
+
+1. Engine/RetrievalAttention_new/backend.py
+2. tests/RetrievalAttention_new/selfspec_benchmark.py
+3. Engine/RetrievalAttention_new/model_hub/llama.py
+4. Engine/RetrievalAttention_new/model_hub/LLM.py
+5. Engine/RetrievalAttention_new/cache_hub/retroinfer_cache.py
+6. Engine/RetrievalAttention_new/cache_hub/flash_attn_cache.py
+7. Engine/RetrievalAttention_new/benchmark/longbench/pred.py
+
+This order gives the fastest path from high-level orchestration to low-level cache/attention behavior.
