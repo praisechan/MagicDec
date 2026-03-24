@@ -2,6 +2,21 @@ import os
 from setuptools import setup
 from torch.utils.cpp_extension import CUDAExtension, CppExtension, BuildExtension
 
+# Conda's x86_64-conda-linux-gnu toolchain can fail on <ctime>/timespec_get in
+# some environments. Force system host compilers when those wrappers are active.
+if os.environ.get("CONDA_PREFIX") and os.path.exists("/usr/bin/gcc") and os.path.exists("/usr/bin/g++"):
+    current_cc = os.environ.get("CC", "")
+    current_cxx = os.environ.get("CXX", "")
+    if (
+        "x86_64-conda-linux-gnu" in current_cc
+        or "compiler_compat" in current_cc
+        or "x86_64-conda-linux-gnu" in current_cxx
+        or "compiler_compat" in current_cxx
+    ):
+        os.environ["CC"] = "/usr/bin/gcc"
+        os.environ["CXX"] = "/usr/bin/g++"
+        os.environ["CUDAHOSTCXX"] = os.environ["CXX"]
+
 src_dir = "retroinfer_kernels/src"
 cutlass_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), f"../cutlass")
 
