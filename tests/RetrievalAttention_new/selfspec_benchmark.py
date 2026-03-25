@@ -16,7 +16,6 @@ WORKSPACE_ROOT = os.path.abspath(os.path.join(PROJECT_ROOT, ".."))
 if WORKSPACE_ROOT not in sys.path:
     sys.path.insert(0, WORKSPACE_ROOT)
 
-from MagicDec.Data.data_converter import convert_pg19_dataset
 from MagicDec.Engine.RetrievalAttention_new.backend import LMBackend
 from MagicDec.Engine.utils import setup_seed
 
@@ -150,6 +149,19 @@ def load_longbench_config():
     return model2path, model2maxlen, dataset2prompt
 
 
+def load_pg19_dataset():
+    return load_dataset("emozilla/pg19", split="test")
+
+
+def get_pg19_prompt_format():
+    return (
+        "You are given a passage from a book. Read the passage carefully.\n\n"
+        "Passage:\n{text}\n\n"
+        "Now, continue the text naturally and coherently based on the passage above.\n\n"
+        "Continuation:"
+    )
+
+
 def main():
     args = parse_args()
     setup_seed(args.seed)
@@ -160,7 +172,10 @@ def main():
     model_device = "auto" if torch.cuda.device_count() > 1 else ("cuda:0" if torch.cuda.is_available() else "cpu")
     model_path = model2path[args.model_name]
     max_length = model2maxlen[args.model_name]
-    prompt_format = dataset2prompt[args.task]
+    if args.dataset == "pg19":
+        prompt_format = get_pg19_prompt_format()
+    else:
+        prompt_format = dataset2prompt[args.task]
 
     print(f"Using runtime_device={runtime_device}, model_device={model_device}")
 
@@ -171,7 +186,7 @@ def main():
     eos_id = tokenizer.eos_token_id
 
     if args.dataset == "pg19":
-        dataset = convert_pg19_dataset(tokenizer=tokenizer, seq_len=args.prefix_len)
+        dataset = load_pg19_dataset()
     else:
         dataset = load_dataset("THUDM/LongBench", args.task, split="test", trust_remote_code=True)
 
@@ -195,6 +210,7 @@ def main():
             batch,
             prompt_format,
             args.dataset,
+            args.prefix_len,
         )
 
         attention_masks = engine.attention_masks

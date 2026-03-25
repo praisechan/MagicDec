@@ -87,19 +87,37 @@ class LMBackend:
         data,
         prompt_format,
         dataset="pg19",
+        seq_len=None,
     ):
-        if dataset == "longbenchv1":
+        if dataset not in {"longbenchv1", "pg19"}:
+            raise ValueError(f"Unsupported dataset: {dataset}")
+
+        if dataset == "pg19" and "{text}" in prompt_format:
+            prefix, _, suffix = prompt_format.partition("{text}")
+            raw_text = data.get("text", "")
+
+            # Keep a single special-token prefix, then append raw spans without extra specials.
+            prefix_ids = self.model.tokenizer.encode(prefix, return_tensors="pt", add_special_tokens=True)
+            text_ids = self.model.tokenizer.encode(raw_text, return_tensors="pt", add_special_tokens=False)
+            suffix_ids = self.model.tokenizer.encode(suffix, return_tensors="pt", add_special_tokens=False)
+
+            if seq_len is not None:
+                reserve_for_suffix = suffix_ids.shape[1]
+                max_prefix_text = max(seq_len - reserve_for_suffix, 0)
+                prefix_text_ids = torch.cat([prefix_ids, text_ids], dim=1)
+                prefix_text_ids = prefix_text_ids[:, :max_prefix_text]
+                input_ids = torch.cat([prefix_text_ids, suffix_ids], dim=1)
+                if input_ids.shape[1] > seq_len:
+                    input_ids = input_ids[:, -seq_len:]
+            else:
+                input_ids = torch.cat([prefix_ids, text_ids, suffix_ids], dim=1)
+        else:
             prompt = prompt_format.format(**data)
             inputs = self.model.tokenizer([prompt], return_tensors="pt", padding=True)
-            self.attention_masks = inputs.attention_mask.to(self.runtime_device)
-            input_ids = inputs.input_ids.to(self.runtime_device)
-        elif dataset == "pg19":
-            # convert_pg19_dataset already returns tokenized fixed-length chunks.
-            input_ids = data[0].unsqueeze(0)
-            self.attention_masks = torch.ones_like(input_ids, device=input_ids.device)
-            input_ids = input_ids.to(self.runtime_device)
-        else:
-            raise ValueError(f"Unsupported dataset: {dataset}")
+            input_ids = inputs.input_ids
+
+        self.attention_masks = torch.ones_like(input_ids, device=input_ids.device).to(self.runtime_device)
+        input_ids = input_ids.to(self.runtime_device)
 
         return input_ids
 
