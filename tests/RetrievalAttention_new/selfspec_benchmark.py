@@ -300,8 +300,6 @@ def main():
         skip_accounted_draft_len = 0
 
         while len(emitted_tokens) < args.num_max_token:
-            force_settle_after_skip_safety = False
-
             # During a skip streak, always re-draft from the same committed anchor and
             # increase the drafted span length (gamma1, 2*gamma1, 3*gamma1, ...).
             if consecutive_skip_count > 0:
@@ -416,7 +414,6 @@ def main():
                     ) = reset_skip_buffer(current_token)
 
                     dynamic_mode = "normal"
-                    force_settle_after_skip_safety = True
             else:
                 # Normal/high after skips: verify the full stacked span in one pass.
                 verify_start_token = skip_anchor_token if consecutive_skip_count > 0 else current_token
@@ -466,7 +463,6 @@ def main():
                 next_online_len >= args.gamma2
                 or proposed_last_token == eos_id
                 or next_total_generated >= args.num_max_token
-                or force_settle_after_skip_safety
             )
 
             # In normal/high mode we materialize immediately.

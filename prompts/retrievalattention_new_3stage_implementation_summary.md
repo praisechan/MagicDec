@@ -102,6 +102,7 @@ Per iteration:
      - keep early_verify, early_verify_high, and final_verify caches unchanged
      - anchor on the most recent committed token before first skip
      - re-draft from the same anchor with expanding span length gamma1 * n for consecutive skips
+       - when skip-buffered span reaches settlement boundary, run one safety early_verify in normal mode first
    - normal/high mode:
      - if there was a skip streak, run one early_verify over the full stacked span from the same anchor
      - apply accepted-prefix + one bonus-token semantics over that full span
@@ -111,6 +112,7 @@ Per iteration:
 6. Pending span handling:
    - normal/high mode appends proposed online span immediately
    - skip mode appends only when settlement condition is reached
+   - safety early_verify does not force immediate final settlement; decoding continues until verified committed accumulation satisfies settlement boundary
 7. If settlement boundary reached (gamma2/EOS/max-token):
    - run final_verify once over current pending span,
    - compare pending tokens to final outputs,
@@ -137,6 +139,10 @@ Routing:
 - skip: no early verify call, no immediate commit, and buffered anchor-based re-draft growth
 - high: verify with early_verify_high cache (budget2_high)
 - normal: verify with early_verify cache (budget2)
+
+Safety routing note:
+- if skip-buffered span hits boundary (gamma2/EOS/max-token), run one normal early_verify on buffered span before any final settlement decision.
+- final_verify is still gated by the same settlement condition on committed pending tokens (not just by executing safety early_verify).
 
 Safety note:
 - no in-place Python-side nprobe mutation during runtime
@@ -222,13 +228,13 @@ Major behavior:
 - dataset/model config loading for RetrievalAttention_new
 - per-step online Draft -> Early Verify -> Final Verify settlement
 - dynamic routing with skip/high/normal stage-2 decisions
-- stage output logging and CSV accumulation
+- helper-based refactor for repeated verify/commit/replay/skip-reset flows
+- CSV accumulation logging (stage output JSON logging removed)
 - per-step and final console statistics
 
 Outputs:
 - step_log.csv
 - accumulated_log.csv
-- stage_outputs.json
 
 ## 6.3 Existing core internals reused (not replaced)
 The new backend relies on existing RetrievalAttention_new internals:
@@ -265,7 +271,6 @@ In tests/RetrievalAttention_new/selfspec_benchmark.py:
 - min confidence tracked when dynamic mode enabled
 - speculative/verify/final call counts accumulated
 - generated token counts accumulated
-- stage outputs appended to JSON
 - step and accumulated CSV rows written
 
 Practical meaning of call counters:
