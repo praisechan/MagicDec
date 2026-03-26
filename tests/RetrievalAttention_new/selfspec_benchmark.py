@@ -62,7 +62,6 @@ def init_logs(log_dir):
     os.makedirs(log_dir, exist_ok=True)
     step_path = os.path.join(log_dir, "step_log.csv")
     acc_path = os.path.join(log_dir, "accumulated_log.csv")
-    stage_path = os.path.join(log_dir, "stage_outputs.json")
 
     step_headers = [
         "step",
@@ -107,19 +106,7 @@ def init_logs(log_dir):
     if not os.path.exists(acc_path):
         with open(acc_path, "w", newline="") as f:
             csv.writer(f).writerow(acc_headers)
-    if not os.path.exists(stage_path):
-        with open(stage_path, "w", encoding="utf-8") as f:
-            json.dump([], f, ensure_ascii=False, indent=2)
-
-    return step_path, acc_path, stage_path
-
-
-def append_stage_outputs(stage_path, entries):
-    with open(stage_path, "r", encoding="utf-8") as f:
-        payload = json.load(f)
-    payload.extend(entries)
-    with open(stage_path, "w", encoding="utf-8") as f:
-        json.dump(payload, f, ensure_ascii=False, indent=2)
+    return step_path, acc_path
 
 
 def append_csv(path, row):
@@ -136,6 +123,51 @@ def first_eos_idx(tokens, eos_id):
         if int(tokens[0, idx]) == eos_id:
             return idx
     return -1
+
+
+def build_verified_commit(verify_tokens, verify_outputs, eos_id):
+    accepted_len = 0
+    verify_len = verify_tokens.shape[1]
+    for idx in range(verify_len):
+        if int(verify_tokens[0, idx]) == int(verify_outputs[0, idx]) and int(verify_tokens[0, idx]) != eos_id:
+            accepted_len += 1
+        else:
+            break
+
+    rejected_len = verify_len - accepted_len
+    verify_bonus = verify_outputs[:, accepted_len:accepted_len + 1]
+    committed_online = torch.cat([verify_tokens[:, :accepted_len], verify_bonus], dim=1)
+    return accepted_len, rejected_len, committed_online
+
+
+def replay_verified_prefix(engine, draft_snapshot, early_snapshot, early_high_snapshot, verify_start_token, committed_online, mode):
+    engine.revert_to("draft", draft_snapshot)
+    engine.revert_to("early_verify", early_snapshot)
+    engine.revert_to("early_verify_high", early_high_snapshot)
+
+    accepted_prefix = committed_online[:, :-1]
+    replay_source = "early_verify_high" if mode == "high" else "early_verify"
+    engine.commit_prefix("draft", verify_start_token, accepted_prefix, replay_source=replay_source)
+    if replay_source == "early_verify":
+        engine.commit_prefix(
+            "early_verify_high",
+            verify_start_token,
+            accepted_prefix,
+            sync_source="early_verify",
+            source_replayed=True,
+        )
+    else:
+        engine.commit_prefix(
+            "early_verify",
+            verify_start_token,
+            accepted_prefix,
+            sync_source="early_verify_high",
+            source_replayed=True,
+        )
+
+
+def reset_skip_buffer(current_token):
+    return None, None, empty_like_tokens(current_token), 0, 0
 
 
 def load_longbench_config():
@@ -193,7 +225,7 @@ def main():
     log_dir = args.logs_dir
     if not os.path.isabs(log_dir):
         log_dir = os.path.join(PROJECT_ROOT, log_dir)
-    step_path, acc_path, stage_path = init_logs(log_dir)
+    step_path, acc_path = init_logs(log_dir)
 
     total_speculate_calls = 0
     total_early_verify_calls = 0
@@ -219,7 +251,6 @@ def main():
         step_early_verify_calls = 0
         step_final_verify_calls = 0
         step_tokens_generated = 0
-        stage_entries = []
 
         drafted_tokens_count = 0
         early_verified_accepted_count = 0
@@ -262,17 +293,31 @@ def main():
         chunk_start_early_high_snapshot = engine.snapshot_state("early_verify_high")
         chunk_start_final_snapshot = engine.snapshot_state("final_verify")
 
+        skip_anchor_token = None
+        skip_anchor_draft_snapshot = None
+        skip_stacked_draft_tokens = empty_like_tokens(current_token)
+        consecutive_skip_count = 0
+        skip_accounted_draft_len = 0
+
         while len(emitted_tokens) < args.num_max_token:
-            draft_snapshot = engine.snapshot_state("draft")
-            early_snapshot = engine.snapshot_state("early_verify")
-            early_high_snapshot = engine.snapshot_state("early_verify_high")
+            force_settle_after_skip_safety = False
+
+            # During a skip streak, always re-draft from the same committed anchor and
+            # increase the drafted span length (gamma1, 2*gamma1, 3*gamma1, ...).
+            if consecutive_skip_count > 0:
+                draft_decode_len = args.gamma1 * (consecutive_skip_count + 1)
+                draft_start_token = skip_anchor_token
+                engine.revert_to("draft", skip_anchor_draft_snapshot)
+                draft_snapshot = skip_anchor_draft_snapshot
+            else:
+                draft_decode_len = args.gamma1
+                draft_start_token = current_token
+                draft_snapshot = engine.snapshot_state("draft")
 
             t_draft = time.perf_counter()
-            draft_tokens, draft_confidence, min_conf = engine.speculate_with_confidence(current_token, args.gamma1)
+            draft_tokens, draft_confidence, min_conf = engine.speculate_with_confidence(draft_start_token, draft_decode_len)
             elapsed_draft = time.perf_counter() - t_draft
-            step_speculate_calls += args.gamma1
             drafted_tokens_count += draft_tokens.shape[1]
-            stage_entries.append({"stage": "draft", "outputs": draft_tokens[0].detach().cpu().tolist()})
 
             dynamic_mode = "normal"
             if args.enable_dynamic_budget:
@@ -289,94 +334,155 @@ def main():
             else:
                 dynamic_normal_count += 1
 
+            # For skip streaks we repeatedly re-draft from the same anchor, so count only
+            # the final stacked span length (replace prior counted length, do not accumulate).
             if dynamic_mode == "skip":
+                step_speculate_calls += draft_decode_len - skip_accounted_draft_len
+                skip_accounted_draft_len = draft_decode_len
+            else:
+                if consecutive_skip_count > 0:
+                    step_speculate_calls += draft_decode_len - skip_accounted_draft_len
+                else:
+                    step_speculate_calls += draft_decode_len
+                skip_accounted_draft_len = 0
+
+            committed_online = None
+            accepted_len = 0
+            rejected_len = 0
+            elapsed_early = 0.0
+
+            if dynamic_mode == "skip":
+                if consecutive_skip_count == 0:
+                    # First skip in this buffered sequence: lock anchor state.
+                    skip_anchor_token = current_token.clone()
+                    skip_anchor_draft_snapshot = draft_snapshot
+
                 eos_idx = first_eos_idx(draft_tokens, eos_id)
                 accepted_len = (eos_idx + 1) if eos_idx >= 0 else draft_tokens.shape[1]
                 rejected_len = draft_tokens.shape[1] - accepted_len
-                committed_online = draft_tokens[:, :accepted_len]
+                skip_stacked_draft_tokens = draft_tokens[:, :accepted_len]
+                consecutive_skip_count += 1
 
-                if committed_online.numel() == 0:
+                if skip_stacked_draft_tokens.numel() == 0:
                     break
-
-                elapsed_early = 0.0
-
+                # Skip mode must not commit to verifier caches; keep only draft rewound.
                 engine.revert_to("draft", draft_snapshot)
-                engine.revert_to("early_verify", early_snapshot)
-                engine.revert_to("early_verify_high", early_high_snapshot)
 
-                accepted_prefix = committed_online[:, :-1]
-                engine.commit_prefix("draft", current_token, accepted_prefix, prefer_draft_replay=True)
-                engine.commit_prefix("early_verify", current_token, accepted_prefix)
-                engine.commit_prefix("early_verify_high", current_token, accepted_prefix)
+                # Safety gate: if buffered skip span reaches settlement boundary,
+                # run one normal early-verify pass before final settlement.
+                skip_next_online_len = pending_online_tokens.shape[1] + skip_stacked_draft_tokens.shape[1]
+                skip_next_total_generated = step_tokens_generated + skip_next_online_len
+                skip_last_token = int(skip_stacked_draft_tokens[0, -1])
+                should_force_skip_safety_verify = (
+                    skip_next_online_len >= args.gamma2
+                    or skip_last_token == eos_id
+                    or skip_next_total_generated >= args.num_max_token
+                )
+
+                if should_force_skip_safety_verify:
+                    verify_start_token = skip_anchor_token
+                    verify_tokens = skip_stacked_draft_tokens
+                    early_snapshot = engine.snapshot_state("early_verify")
+                    early_high_snapshot = engine.snapshot_state("early_verify_high")
+                    t_early = time.perf_counter()
+                    early_outputs = engine.early_verify(verify_start_token, verify_tokens, mode="normal")
+                    elapsed_early = time.perf_counter() - t_early
+                    step_early_verify_calls += 1
+
+                    accepted_len, rejected_len, committed_online = build_verified_commit(
+                        verify_tokens,
+                        early_outputs,
+                        eos_id,
+                    )
+                    early_verified_accepted_count += accepted_len
+                    early_bonus_count += 1
+
+                    replay_verified_prefix(
+                        engine,
+                        skip_anchor_draft_snapshot,
+                        early_snapshot,
+                        early_high_snapshot,
+                        verify_start_token,
+                        committed_online,
+                        "normal",
+                    )
+
+                    (
+                        skip_anchor_token,
+                        skip_anchor_draft_snapshot,
+                        skip_stacked_draft_tokens,
+                        consecutive_skip_count,
+                        skip_accounted_draft_len,
+                    ) = reset_skip_buffer(current_token)
+
+                    dynamic_mode = "normal"
+                    force_settle_after_skip_safety = True
             else:
+                # Normal/high after skips: verify the full stacked span in one pass.
+                verify_start_token = skip_anchor_token if consecutive_skip_count > 0 else current_token
+                verify_tokens = draft_tokens
+                early_snapshot = engine.snapshot_state("early_verify")
+                early_high_snapshot = engine.snapshot_state("early_verify_high")
                 t_early = time.perf_counter()
-                early_outputs = engine.early_verify(current_token, draft_tokens, mode=dynamic_mode)
+                early_outputs = engine.early_verify(verify_start_token, verify_tokens, mode=dynamic_mode)
                 elapsed_early = time.perf_counter() - t_early
                 step_early_verify_calls += 1
-                stage_entries.append({"stage": "early verify", "outputs": early_outputs[0].detach().cpu().tolist()})
 
-                accepted_len = 0
-                for idx in range(args.gamma1):
-                    if int(draft_tokens[0, idx]) == int(early_outputs[0, idx]) and int(draft_tokens[0, idx]) != eos_id:
-                        accepted_len += 1
-                    else:
-                        break
-
-                rejected_len = args.gamma1 - accepted_len
-                early_bonus = early_outputs[:, accepted_len:accepted_len + 1]
-                committed_online = torch.cat([draft_tokens[:, :accepted_len], early_bonus], dim=1)
+                accepted_len, rejected_len, committed_online = build_verified_commit(
+                    verify_tokens,
+                    early_outputs,
+                    eos_id,
+                )
                 early_verified_accepted_count += accepted_len
                 early_bonus_count += 1
 
-                engine.revert_to("draft", draft_snapshot)
-                engine.revert_to("early_verify", early_snapshot)
-                engine.revert_to("early_verify_high", early_high_snapshot)
-
-                accepted_prefix = committed_online[:, :-1]
-                replay_source = "early_verify_high" if dynamic_mode == "high" else "early_verify"
-                engine.commit_prefix("draft", current_token, accepted_prefix, replay_source=replay_source)
-                if replay_source == "early_verify":
-                    engine.commit_prefix(
-                        "early_verify_high",
-                        current_token,
-                        accepted_prefix,
-                        sync_source="early_verify",
-                        source_replayed=True,
-                    )
-                else:
-                    engine.commit_prefix(
-                        "early_verify",
-                        current_token,
-                        accepted_prefix,
-                        sync_source="early_verify_high",
-                        source_replayed=True,
-                    )
-
-            current_token = committed_online[:, -1:]
-            pending_online_tokens = torch.cat([pending_online_tokens, committed_online], dim=1)
-
-            print(
-                f"[Stage Draft] elapsed={elapsed_draft:.4f}s accepted={accepted_len} rejected={rejected_len} "
-                f"unsettled={unsettled_total} budget={args.budget1} min_conf={min_conf:.6f} mode={dynamic_mode} "
-                f"text={to_text(tokenizer, draft_tokens)}"
-            )
-            if dynamic_mode == "skip":
-                print(
-                    f"[Stage Early Verify] elapsed={elapsed_early:.4f}s accepted={accepted_len} rejected={rejected_len} "
-                    f"unsettled={unsettled_total} budget=0.0 mode=skip text=<skipped>"
+                # Commit only after batched verify decides accepted-prefix + bonus token.
+                replay_verified_prefix(
+                    engine,
+                    skip_anchor_draft_snapshot if consecutive_skip_count > 0 else draft_snapshot,
+                    early_snapshot,
+                    early_high_snapshot,
+                    verify_start_token,
+                    committed_online,
+                    dynamic_mode,
                 )
-            else:
-                used_budget = args.budget2_high if dynamic_mode == "high" else args.budget2
-                print(
-                    f"[Stage Early Verify] elapsed={elapsed_early:.4f}s accepted={accepted_len} rejected={rejected_len} "
-                    f"unsettled={unsettled_total} budget={used_budget} mode={dynamic_mode} text={to_text(tokenizer, early_outputs)}"
-                )
+                (
+                    skip_anchor_token,
+                    skip_anchor_draft_snapshot,
+                    skip_stacked_draft_tokens,
+                    consecutive_skip_count,
+                    skip_accounted_draft_len,
+                ) = reset_skip_buffer(current_token)
 
+            proposed_online_tokens = skip_stacked_draft_tokens if dynamic_mode == "skip" else committed_online
+            if proposed_online_tokens is None or proposed_online_tokens.numel() == 0:
+                break
+
+            # Evaluate settlement is needed
+            next_online_len = pending_online_tokens.shape[1] + proposed_online_tokens.shape[1]
+            next_total_generated = step_tokens_generated + next_online_len
+            proposed_last_token = int(proposed_online_tokens[0, -1])
             should_settle = (
-                pending_online_tokens.shape[1] >= args.gamma2
-                or int(current_token[0, 0]) == eos_id
-                or (step_tokens_generated + pending_online_tokens.shape[1]) >= args.num_max_token
+                next_online_len >= args.gamma2
+                or proposed_last_token == eos_id
+                or next_total_generated >= args.num_max_token
+                or force_settle_after_skip_safety
             )
+
+            # In normal/high mode we materialize immediately.
+            # In skip mode we materialize only at settlement boundary.
+            should_materialize_pending = (dynamic_mode != "skip") or should_settle
+            if should_materialize_pending:
+                pending_online_tokens = torch.cat([pending_online_tokens, proposed_online_tokens], dim=1)
+                current_token = proposed_online_tokens[:, -1:]
+                if dynamic_mode == "skip":
+                    (
+                        skip_anchor_token,
+                        skip_anchor_draft_snapshot,
+                        skip_stacked_draft_tokens,
+                        consecutive_skip_count,
+                        skip_accounted_draft_len,
+                    ) = reset_skip_buffer(current_token)
 
             if should_settle:
                 remaining_budget = args.num_max_token - step_tokens_generated
@@ -390,12 +496,6 @@ def main():
 
                 final_outputs = engine.final_verify(final_current_token, online_span)
                 step_final_verify_calls += 1
-                stage_entries.append(
-                    {
-                        "stage": "final verify",
-                        "outputs": final_outputs[0].detach().cpu().tolist(),
-                    }
-                )
 
                 mismatch = first_mismatch_idx(online_span, final_outputs[:, :online_span.shape[1]])
                 accepted_len = online_span.shape[1] if mismatch < 0 else mismatch
@@ -528,7 +628,6 @@ def main():
             ],
         )
 
-        append_stage_outputs(stage_path, stage_entries)
         engine.clear_kv()
 
     append_csv(

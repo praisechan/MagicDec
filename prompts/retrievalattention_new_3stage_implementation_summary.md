@@ -90,17 +90,27 @@ All stage caches are initialized with the same prefix context but different atte
 Per iteration:
 1. Snapshot cache states for draft and both early-verify caches.
 2. Draft stage:
-   - speculate gamma1 tokens using draft cache
+   - speculate tokens using draft cache
    - also compute token confidence margins from logits
 3. Dynamic routing decision (if enabled):
    - min_conf > T_high => skip early verify
    - min_conf < T_low => high mode (budget2_high cache)
    - otherwise normal mode (budget2 cache)
 4. Early verify behavior:
-   - skip mode: commit drafted tokens directly (subject to EOS truncation)
-   - verify modes: run one early_verify call over drafted block, compute accepted prefix, append one bonus token
-5. Revert stage caches to snapshots and replay committed prefix appropriately.
-6. Append committed tokens to pending_online_tokens.
+   - skip mode:
+     - do not commit immediately
+     - keep early_verify, early_verify_high, and final_verify caches unchanged
+     - anchor on the most recent committed token before first skip
+     - re-draft from the same anchor with expanding span length gamma1 * n for consecutive skips
+   - normal/high mode:
+     - if there was a skip streak, run one early_verify over the full stacked span from the same anchor
+     - apply accepted-prefix + one bonus-token semantics over that full span
+5. Revert/replay:
+   - skip mode: revert only draft to the skip anchor snapshot for the next re-draft
+   - normal/high mode: revert snapshots and replay committed prefix to keep stage caches aligned
+6. Pending span handling:
+   - normal/high mode appends proposed online span immediately
+   - skip mode appends only when settlement condition is reached
 7. If settlement boundary reached (gamma2/EOS/max-token):
    - run final_verify once over current pending span,
    - compare pending tokens to final outputs,
@@ -124,7 +134,7 @@ Dynamic routing signal:
 - routing uses minimum margin across drafted block
 
 Routing:
-- skip: no early verify call, direct draft commit path
+- skip: no early verify call, no immediate commit, and buffered anchor-based re-draft growth
 - high: verify with early_verify_high cache (budget2_high)
 - normal: verify with early_verify cache (budget2)
 
@@ -259,7 +269,8 @@ In tests/RetrievalAttention_new/selfspec_benchmark.py:
 - step and accumulated CSV rows written
 
 Practical meaning of call counters:
-- speculate_calls counts draft decode steps
+- speculate_calls counts effective draft decode span per decision point
+   - for consecutive skip re-drafts from the same anchor, counting is replacement-style (latest gamma1 * n), not cumulative sum across rewinds
 - early_verify_calls counts actual early verify invocations (skip does not increment)
 - final_verify_calls counts chunk-level settlement events
 
@@ -276,10 +287,14 @@ Practical meaning of call counters:
 3. Settlement granularity
 - final_verify_calls must correspond to settlement boundaries (gamma2/EOS/max-token), not every early verify iteration.
 
-4. Dynamic routing safety
+4. Skip buffering semantics
+- skip mode must not mutate verifier caches through immediate commit/replay.
+- consecutive skip decisions must preserve anchor-token continuity and expanding re-draft span behavior.
+
+5. Dynamic routing safety
 - Keep budget switching as explicit cache routing, not ad-hoc mutable low-level cache parameter mutation.
 
-5. Multi-GPU ordering
+6. Multi-GPU ordering
 - Preserve CUDA synchronization boundaries around cache init/move/capture/teardown operations.
 
 ---
