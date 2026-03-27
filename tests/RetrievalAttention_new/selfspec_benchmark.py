@@ -146,17 +146,11 @@ def replay_verified_prefix(engine, draft_snapshot, early_snapshot, early_high_sn
     engine.revert_to("early_verify_high", early_high_snapshot)
 
     accepted_prefix = committed_online[:, :-1]
-    # Keep one canonical replay path for cache growth. In high mode we still use
-    # early_verify_high for acceptance decisions, but we replay committed prefix
-    # through early_verify and synchronize to other caches to avoid stage drift.
-    engine.commit_prefix("draft", verify_start_token, accepted_prefix, replay_source="early_verify")
-    engine.commit_prefix(
-        "early_verify_high",
-        verify_start_token,
-        accepted_prefix,
-        sync_source="early_verify",
-        source_replayed=True,
-    )
+    # Each cache must replay the committed prefix under its own budget so later
+    # mode switches do not inherit another verifier's approximation trajectory.
+    engine.commit_prefix("draft", verify_start_token, accepted_prefix, prefer_draft_replay=True)
+    engine.commit_prefix("early_verify", verify_start_token, accepted_prefix)
+    engine.commit_prefix("early_verify_high", verify_start_token, accepted_prefix)
 
 
 def reset_skip_buffer(current_token):
