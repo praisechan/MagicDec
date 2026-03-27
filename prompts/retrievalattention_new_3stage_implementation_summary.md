@@ -109,6 +109,7 @@ Per iteration:
 5. Revert/replay:
    - skip mode: revert only draft to the skip anchor snapshot for the next re-draft
    - normal/high mode: revert snapshots and replay committed prefix to keep stage caches aligned
+   - canonical replay policy: regardless of normal/high routing decision, committed-prefix replay is applied through early_verify (budget2) as the canonical source, then synchronized to draft and early_verify_high
 6. Pending span handling:
    - normal/high mode appends proposed online span immediately
    - skip mode appends only when settlement condition is reached
@@ -139,6 +140,10 @@ Routing:
 - skip: no early verify call, no immediate commit, and buffered anchor-based re-draft growth
 - high: verify with early_verify_high cache (budget2_high)
 - normal: verify with early_verify cache (budget2)
+
+Replay/sync note:
+- high mode affects acceptance decision only (which verifier output is trusted for accepted-prefix + bonus at that step)
+- post-verify cache growth replay uses a single canonical source path (early_verify) to reduce cross-cache drift risk
 
 Safety routing note:
 - if skip-buffered span hits boundary (gamma2/EOS/max-token), run one normal early_verify on buffered span before any final settlement decision.
@@ -229,6 +234,7 @@ Major behavior:
 - per-step online Draft -> Early Verify -> Final Verify settlement
 - dynamic routing with skip/high/normal stage-2 decisions
 - helper-based refactor for repeated verify/commit/replay/skip-reset flows
+- canonical replay-source policy after verification to keep draft/normal/high verifier caches consistent when high mode is selected
 - CSV accumulation logging (stage output JSON logging removed)
 - per-step and final console statistics
 
@@ -298,6 +304,7 @@ Practical meaning of call counters:
 
 5. Dynamic routing safety
 - Keep budget switching as explicit cache routing, not ad-hoc mutable low-level cache parameter mutation.
+- Keep post-verify replay on a canonical source path so high-mode routing does not introduce separate replay semantics.
 
 6. Multi-GPU ordering
 - Preserve CUDA synchronization boundaries around cache init/move/capture/teardown operations.
@@ -315,3 +322,18 @@ Practical meaning of call counters:
 7. Engine/RetrievalAttention_new/benchmark/longbench/pred.py
 
 This order gives the fastest path from high-level orchestration to low-level cache/attention behavior.
+
+---
+
+## 11. Current version notes (latest)
+
+1. High-budget replay consistency update
+- In tests/RetrievalAttention_new/selfspec_benchmark.py, replay_verified_prefix now uses early_verify as canonical replay source for committed-prefix growth synchronization, including when dynamic mode chooses high verification.
+
+2. Why this was changed
+- High mode should increase or preserve verification quality, not worsen final settlement consistency due to divergent replay-source behavior.
+- Canonical replay semantics reduce the chance that routing choice itself changes cache synchronization behavior.
+
+3. Debugging caveat for reproduction
+- If runtime logs show Initial n_centroids: 0, RetroInfer retrieval-index behavior may not be active in that run configuration, and normal/high differences can appear minimal.
+- To evaluate budget2 vs budget2_high impact, use settings where retrieval indexing is active.
