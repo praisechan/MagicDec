@@ -122,7 +122,7 @@ class LMBackend:
         return input_ids
 
     def _build_attn_config(self, seq_len, attention_type, retrieval_budget, estimation_budget):
-        if seq_len > 16284 and seq_len < 16500:
+        if seq_len > 16100 and seq_len < 16500:
             gpu_only = False # Monkey patch to avoid crash due to BUILD_SEGMENT threshold error related to static pattern total..
         else:
             gpu_only = True
