@@ -183,6 +183,11 @@ def get_pg19_prompt_format():
 
 def main():
     args = parse_args()
+
+    # threshold sanity check
+    if args.T_low > args.T_high:
+        raise ValueError("T_low should not be greater than T_high")
+
     setup_seed(args.seed)
 
     model2path, model2maxlen, dataset2prompt = load_longbench_config()
