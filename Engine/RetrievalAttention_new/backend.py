@@ -46,6 +46,26 @@ class LMBackend:
         top2 = torch.topk(probs, k=2, dim=-1).values
         return top2[..., 0] - top2[..., 1]
 
+    def _ensure_feature_axis(self, tensor):
+        if tensor.dim() == 1:
+            return tensor.unsqueeze(1)
+        return tensor
+
+    def _confidence_feature_dict(self, logits):
+        probs = torch.softmax(logits.float(), dim=-1)
+        top2 = torch.topk(probs, k=2, dim=-1).values
+        top1_prob = self._ensure_feature_axis(top2[..., 0])
+        top2_prob = self._ensure_feature_axis(top2[..., 1])
+        entropy = self._ensure_feature_axis(
+            -(probs * torch.log(probs.clamp_min(1e-12))).sum(dim=-1)
+        )
+        return {
+            "top1_prob": top1_prob,
+            "top2_prob": top2_prob,
+            "margin": top1_prob - top2_prob,
+            "entropy": entropy,
+        }
+
     def _synchronize_cuda(self):
         if not torch.cuda.is_available():
             return
@@ -347,11 +367,28 @@ class LMBackend:
             self.input_ids = input_ids.to(self.runtime_device)
         return self.prefill_tokens["draft"]
 
-    def _decode_steps(self, cache_name, start_token, steps, forced_inputs=None, return_confidence=False):
+    def _decode_steps(
+        self,
+        cache_name,
+        start_token,
+        steps,
+        forced_inputs=None,
+        return_confidence=False,
+        return_features=False,
+    ):
         self._activate_cache(cache_name)
         cur = start_token
         outputs = []
         margins = []
+        feature_lists = None
+
+        if return_features:
+            feature_lists = {
+                "top1_prob": [],
+                "top2_prob": [],
+                "margin": [],
+                "entropy": [],
+            }
 
         for step_idx in range(steps):
             logits = self.model.decode_forward(cur)
@@ -359,6 +396,10 @@ class LMBackend:
             outputs.append(out)
             if return_confidence:
                 margins.append(self._softmax_top2_margin(logits))
+            if return_features:
+                features = self._confidence_feature_dict(logits)
+                for name, value in features.items():
+                    feature_lists[name].append(value)
 
             if forced_inputs is not None and step_idx < forced_inputs.shape[1]:
                 cur = forced_inputs[:, step_idx:step_idx + 1]
@@ -379,6 +420,19 @@ class LMBackend:
                 min_conf = float("inf")
             return outputs, confidence, min_conf
 
+        if return_features:
+            feature_dict = {}
+            for name, values in feature_lists.items():
+                if values:
+                    feature_dict[name] = torch.cat(values, dim=1)
+                else:
+                    feature_dict[name] = torch.empty(
+                        (start_token.shape[0], 0),
+                        dtype=torch.float32,
+                        device=start_token.device,
+                    )
+            return outputs, feature_dict
+
         return outputs
 
     def speculate(self, current_token, gamma):
@@ -386,6 +440,9 @@ class LMBackend:
 
     def speculate_with_confidence(self, current_token, gamma):
         return self._decode_steps("draft", current_token, gamma, return_confidence=True)
+
+    def speculate_with_features(self, current_token, gamma):
+        return self._decode_steps("draft", current_token, gamma, return_features=True)
 
     def verify(self, current_token, draft_tokens):
         return self.early_verify(current_token, draft_tokens)
