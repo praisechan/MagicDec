@@ -53,9 +53,11 @@ class LMBackend:
 
     def _confidence_feature_dict(self, logits):
         probs = torch.softmax(logits.float(), dim=-1)
-        top2 = torch.topk(probs, k=2, dim=-1).values
-        top1_prob = self._ensure_feature_axis(top2[..., 0])
-        top2_prob = self._ensure_feature_axis(top2[..., 1])
+        top2 = torch.topk(probs, k=2, dim=-1)
+        top1_prob = self._ensure_feature_axis(top2.values[..., 0])
+        top2_prob = self._ensure_feature_axis(top2.values[..., 1])
+        top1_token_id = self._ensure_feature_axis(top2.indices[..., 0])
+        top2_token_id = self._ensure_feature_axis(top2.indices[..., 1])
         entropy = self._ensure_feature_axis(
             -(probs * torch.log(probs.clamp_min(1e-12))).sum(dim=-1)
         )
@@ -64,6 +66,8 @@ class LMBackend:
             "top2_prob": top2_prob,
             "margin": top1_prob - top2_prob,
             "entropy": entropy,
+            "top1_token_id": top1_token_id,
+            "top2_token_id": top2_token_id,
         }
 
     def _synchronize_cuda(self):
@@ -375,12 +379,14 @@ class LMBackend:
         forced_inputs=None,
         return_confidence=False,
         return_features=False,
+        return_logits=False,
     ):
         self._activate_cache(cache_name)
         cur = start_token
         outputs = []
         margins = []
         feature_lists = None
+        logits_list = [] if return_logits else None
 
         if return_features:
             feature_lists = {
@@ -388,12 +394,16 @@ class LMBackend:
                 "top2_prob": [],
                 "margin": [],
                 "entropy": [],
+                "top1_token_id": [],
+                "top2_token_id": [],
             }
 
         for step_idx in range(steps):
             logits = self.model.decode_forward(cur)
             out = self.model.sampling(logits, do_sample=False)
             outputs.append(out)
+            if return_logits:
+                logits_list.append(logits.detach().to(dtype=torch.float32))
             if return_confidence:
                 margins.append(self._softmax_top2_margin(logits))
             if return_features:
@@ -420,6 +430,27 @@ class LMBackend:
                 min_conf = float("inf")
             return outputs, confidence, min_conf
 
+        if return_features and return_logits:
+            feature_dict = {}
+            for name, values in feature_lists.items():
+                if values:
+                    feature_dict[name] = torch.cat(values, dim=1)
+                else:
+                    feature_dict[name] = torch.empty(
+                        (start_token.shape[0], 0),
+                        dtype=torch.float32,
+                        device=start_token.device,
+                    )
+            if logits_list:
+                logits_tensor = torch.cat(logits_list, dim=0).unsqueeze(0)
+            else:
+                logits_tensor = torch.empty(
+                    (start_token.shape[0], 0, 0),
+                    dtype=torch.float32,
+                    device=start_token.device,
+                )
+            return outputs, feature_dict, logits_tensor
+
         if return_features:
             feature_dict = {}
             for name, values in feature_lists.items():
@@ -444,6 +475,9 @@ class LMBackend:
     def speculate_with_features(self, current_token, gamma):
         return self._decode_steps("draft", current_token, gamma, return_features=True)
 
+    def speculate_with_features_and_logits(self, current_token, gamma):
+        return self._decode_steps("draft", current_token, gamma, return_features=True, return_logits=True)
+
     def verify(self, current_token, draft_tokens):
         return self.early_verify(current_token, draft_tokens)
 
@@ -459,12 +493,48 @@ class LMBackend:
             forced_inputs=draft_tokens,
         )
 
+    def early_verify_with_features(self, current_token, draft_tokens, mode="normal"):
+        if mode == "high":
+            cache_name = "early_verify_high"
+        else:
+            cache_name = "early_verify"
+        return self._decode_steps(
+            cache_name=cache_name,
+            start_token=current_token,
+            steps=draft_tokens.shape[1] + 1,
+            forced_inputs=draft_tokens,
+            return_features=True,
+        )
+
+    def early_verify_with_features_and_logits(self, current_token, draft_tokens, mode="normal"):
+        if mode == "high":
+            cache_name = "early_verify_high"
+        else:
+            cache_name = "early_verify"
+        return self._decode_steps(
+            cache_name=cache_name,
+            start_token=current_token,
+            steps=draft_tokens.shape[1] + 1,
+            forced_inputs=draft_tokens,
+            return_features=True,
+            return_logits=True,
+        )
+
     def final_verify(self, current_token, proposed_tokens):
         return self._decode_steps(
             cache_name="final_verify",
             start_token=current_token,
             steps=proposed_tokens.shape[1] + 1,
             forced_inputs=proposed_tokens,
+        )
+
+    def final_verify_with_features(self, current_token, proposed_tokens):
+        return self._decode_steps(
+            cache_name="final_verify",
+            start_token=current_token,
+            steps=proposed_tokens.shape[1] + 1,
+            forced_inputs=proposed_tokens,
+            return_features=True,
         )
 
     def snapshot_state(self, cache_name):
