@@ -165,7 +165,7 @@ def main():
             next_total_generated = step_tokens_generated + next_online_len
             proposed_last_token = int(proposed_online_tokens[0, -1])
             should_settle = (
-                next_online_len >= args.gamma2
+                next_online_len >= args.gamma1
                 or proposed_last_token == eos_id
                 or next_total_generated >= args.num_max_token
             )
