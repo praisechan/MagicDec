@@ -4,6 +4,7 @@ import json
 import os
 import sys
 import time
+from typing import Optional
 
 import torch
 from datasets import load_dataset
@@ -41,6 +42,39 @@ def parse_args():
     parser.add_argument("--T_low", type=float, default=0.05)
     parser.add_argument("--T_high", type=float, default=0.20)
     parser.add_argument("--logs_dir", type=str, default="MagicDec/tests/RetrievalAttention_new/logs/selfspec_3stage")
+    parser.add_argument(
+        "--rejection_indicator",
+        type=str,
+        default="disabled",
+        choices=[
+            "disabled",
+            "phase4_precision",
+            "phase4_recall",
+            "accepted_only_drift_count",
+            "accepted_only_high_count",
+            "accepted_only_weighted",
+            "custom",
+        ],
+        help="Optional pre-final rejection indicator policy. Defaults to disabled for backward compatibility.",
+    )
+    parser.add_argument(
+        "--rejection_indicator_action",
+        type=str,
+        default="force_settle",
+        choices=["force_settle", "log_only"],
+        help="What to do when the rejection indicator triggers.",
+    )
+    parser.add_argument("--ri_margin_threshold", type=float, default=0.05)
+    parser.add_argument("--ri_accepted_high_kl_threshold", type=float, default=0.03)
+    parser.add_argument("--ri_accepted_mod_kl_threshold", type=float, default=0.01)
+    parser.add_argument("--ri_accepted_high_count", type=int, default=2)
+    parser.add_argument("--ri_accepted_drift_count", type=int, default=1)
+    parser.add_argument("--ri_accepted_weighted_score_threshold", type=int, default=3)
+    parser.add_argument("--ri_accepted_high_weight", type=int, default=2)
+    parser.add_argument("--ri_bonus_margin_threshold", type=float, default=0.05)
+    parser.add_argument("--ri_bonus_entropy_threshold", type=float, default=3.5)
+    parser.add_argument("--ri_bonus_position_ge", type=int, default=0)
+    parser.add_argument("--ri_bonus_count", type=int, default=2)
     return parser.parse_args()
 
 
@@ -77,6 +111,25 @@ def init_logs(log_dir):
         "skip_switches",
         "high_switches",
         "tokens_generated",
+        "model_name",
+        "task",
+        "budget2_high",
+        "enable_dynamic_budget",
+        "T_high",
+        "T_low",
+        "rejection_indicator",
+        "rejection_indicator_action",
+        "ri_margin_threshold",
+        "ri_accepted_high_kl_threshold",
+        "ri_accepted_mod_kl_threshold",
+        "ri_accepted_high_count",
+        "ri_accepted_drift_count",
+        "ri_accepted_weighted_score_threshold",
+        "ri_accepted_high_weight",
+        "ri_bonus_margin_threshold",
+        "ri_bonus_entropy_threshold",
+        "ri_bonus_position_ge",
+        "ri_bonus_count",
     ]
     acc_headers = [
         "step",
@@ -98,6 +151,19 @@ def init_logs(log_dir):
         "enable_dynamic_budget",
         "T_high",
         "T_low",
+        "rejection_indicator",
+        "rejection_indicator_action",
+        "ri_margin_threshold",
+        "ri_accepted_high_kl_threshold",
+        "ri_accepted_mod_kl_threshold",
+        "ri_accepted_high_count",
+        "ri_accepted_drift_count",
+        "ri_accepted_weighted_score_threshold",
+        "ri_accepted_high_weight",
+        "ri_bonus_margin_threshold",
+        "ri_bonus_entropy_threshold",
+        "ri_bonus_position_ge",
+        "ri_bonus_count",
     ]
 
     if not os.path.exists(step_path):
@@ -157,6 +223,75 @@ def reset_skip_buffer(current_token):
     return None, None, empty_like_tokens(current_token), 0, 0
 
 
+def kl_divergence_from_logits(lhs_logits: torch.Tensor, rhs_logits: torch.Tensor) -> float:
+    lhs_log_probs = torch.log_softmax(lhs_logits.float(), dim=-1)
+    rhs_log_probs = torch.log_softmax(rhs_logits.float(), dim=-1)
+    lhs_probs = torch.exp(lhs_log_probs)
+    return float((lhs_probs * (lhs_log_probs - rhs_log_probs)).sum().item())
+
+
+def indicator_state_template():
+    return {
+        "accepted_drift_count": 0,
+        "triggered": False,
+        "trigger_reason": "",
+    }
+
+
+def build_rejection_indicator_config(args):
+    if args.rejection_indicator == "disabled":
+        return None
+
+    # Keep the parser surface backward-compatible, but use one clean rejection
+    # path internally: accepted-prefix early_margin + KL with a count threshold.
+    if args.rejection_indicator != "accepted_only_drift_count":
+        print(
+            "Rejection indicator note: "
+            f"{args.rejection_indicator} is mapped to accepted_only_drift_count."
+        )
+
+    return {
+        "name": "accepted_only_drift_count",
+        "action": args.rejection_indicator_action,
+        "margin_threshold": args.ri_margin_threshold,
+        "kl_threshold": args.ri_accepted_mod_kl_threshold,
+        "accepted_drift_count": args.ri_accepted_drift_count,
+    }
+
+
+def validate_rejection_indicator_config(config):
+    if config["margin_threshold"] <= 0.0:
+        raise ValueError("ri_margin_threshold must be positive")
+    if config["kl_threshold"] < 0.0:
+        raise ValueError("ri_accepted_mod_kl_threshold must be non-negative")
+    if config["accepted_drift_count"] < 1:
+        raise ValueError("ri_accepted_drift_count must be >= 1")
+
+
+def update_rejection_indicator_state(
+    state,
+    config,
+    draft_logits: torch.Tensor,
+    early_logits: torch.Tensor,
+    early_features,
+    accepted_len: int,
+):
+    for pos in range(accepted_len):
+        early_margin = float(early_features["margin"][0, pos].item())
+        if early_margin >= config["margin_threshold"]:
+            continue
+
+        kl = kl_divergence_from_logits(early_logits[0, pos], draft_logits[0, pos])
+        if kl >= config["kl_threshold"]:
+            state["accepted_drift_count"] += 1
+
+
+def evaluate_rejection_indicator_state(state, config):
+    triggered = state["accepted_drift_count"] >= config["accepted_drift_count"]
+    reason = f"accepted_drift_count={state['accepted_drift_count']}"
+    return triggered, reason
+
+
 def load_longbench_config():
     base = os.path.join(PROJECT_ROOT, "Engine", "RetrievalAttention_new", "benchmark", "longbench", "config")
     with open(os.path.join(base, "model2path.json"), "r", encoding="utf-8") as f:
@@ -188,6 +323,10 @@ def main():
     if args.T_low > args.T_high:
         raise ValueError("T_low should not be greater than T_high")
 
+    rejection_indicator = build_rejection_indicator_config(args)
+    if rejection_indicator is not None:
+        validate_rejection_indicator_config(rejection_indicator)
+
     setup_seed(args.seed)
 
     model2path, model2maxlen, dataset2prompt = load_longbench_config()
@@ -202,6 +341,11 @@ def main():
         prompt_format = dataset2prompt[args.task]
 
     print(f"Using runtime_device={runtime_device}, model_device={model_device}")
+    if rejection_indicator is not None:
+        print(
+            "Rejection indicator enabled: "
+            f"name={rejection_indicator['name']} action={rejection_indicator['action']}"
+        )
 
     engine = LMBackend(dtype=torch.bfloat16, device=runtime_device, dec_len=args.gamma1 + 1)
     engine.load_model(model_path, max_length, torch.bfloat16, model_device, args.B)
@@ -225,6 +369,8 @@ def main():
     total_skip_switches = 0
     total_high_switches = 0
     total_tokens_generated = 0
+    total_indicator_triggers = 0
+    total_indicator_forced_settles = 0
 
     total_steps = min(args.num_eval_steps, len(dataset))
 
@@ -254,6 +400,8 @@ def main():
         dynamic_high_count = 0
         dynamic_normal_count = 0
         dynamic_min_conf_values = []
+        indicator_trigger_count = 0
+        indicator_forced_settle_count = 0
 
         final_prerun_calls = 0
 
@@ -290,6 +438,7 @@ def main():
         skip_stacked_draft_tokens = empty_like_tokens(current_token)
         consecutive_skip_count = 0
         skip_accounted_draft_len = 0
+        indicator_state = indicator_state_template()
 
         while len(emitted_tokens) < args.num_max_token:
             # During a skip streak, always re-draft from the same committed anchor and
@@ -305,7 +454,20 @@ def main():
                 draft_snapshot = engine.snapshot_state("draft")
 
             t_draft = time.perf_counter()
-            draft_tokens, draft_confidence, min_conf = engine.speculate_with_confidence(draft_start_token, draft_decode_len)
+            draft_features = None
+            draft_logits = None
+            if rejection_indicator is not None:
+                draft_tokens, draft_features, draft_logits = engine.speculate_with_features_and_logits(
+                    draft_start_token,
+                    draft_decode_len,
+                )
+                draft_confidence = draft_features["margin"]
+                min_conf = float(torch.min(draft_confidence).item()) if draft_confidence.numel() > 0 else 1.0
+            else:
+                draft_tokens, draft_confidence, min_conf = engine.speculate_with_confidence(
+                    draft_start_token,
+                    draft_decode_len,
+                )
             elapsed_draft = time.perf_counter() - t_draft
             drafted_tokens_count += draft_tokens.shape[1]
 
@@ -340,6 +502,8 @@ def main():
             accepted_len = 0
             rejected_len = 0
             elapsed_early = 0.0
+            early_features = None
+            early_logits = None
 
             if dynamic_mode == "skip":
                 if consecutive_skip_count == 0:
@@ -375,7 +539,14 @@ def main():
                     early_snapshot = engine.snapshot_state("early_verify")
                     early_high_snapshot = engine.snapshot_state("early_verify_high")
                     t_early = time.perf_counter()
-                    early_outputs = engine.early_verify(verify_start_token, verify_tokens, mode="normal")
+                    if rejection_indicator is not None:
+                        early_outputs, early_features, early_logits = engine.early_verify_with_features_and_logits(
+                            verify_start_token,
+                            verify_tokens,
+                            mode="normal",
+                        )
+                    else:
+                        early_outputs = engine.early_verify(verify_start_token, verify_tokens, mode="normal")
                     elapsed_early = time.perf_counter() - t_early
                     step_early_verify_calls += 1
 
@@ -413,7 +584,14 @@ def main():
                 early_snapshot = engine.snapshot_state("early_verify")
                 early_high_snapshot = engine.snapshot_state("early_verify_high")
                 t_early = time.perf_counter()
-                early_outputs = engine.early_verify(verify_start_token, verify_tokens, mode=dynamic_mode)
+                if rejection_indicator is not None:
+                    early_outputs, early_features, early_logits = engine.early_verify_with_features_and_logits(
+                        verify_start_token,
+                        verify_tokens,
+                        mode=dynamic_mode,
+                    )
+                else:
+                    early_outputs = engine.early_verify(verify_start_token, verify_tokens, mode=dynamic_mode)
                 elapsed_early = time.perf_counter() - t_early
                 step_early_verify_calls += 1
 
@@ -447,6 +625,26 @@ def main():
             if proposed_online_tokens is None or proposed_online_tokens.numel() == 0:
                 break
 
+            indicator_triggered_now = False
+            indicator_reason = ""
+            if rejection_indicator is not None and early_features is not None and early_logits is not None:
+                update_rejection_indicator_state(
+                    indicator_state,
+                    rejection_indicator,
+                    draft_logits,
+                    early_logits,
+                    early_features,
+                    accepted_len,
+                )
+                indicator_triggered_now, indicator_reason = evaluate_rejection_indicator_state(
+                    indicator_state,
+                    rejection_indicator,
+                )
+                if indicator_triggered_now and not indicator_state["triggered"]:
+                    indicator_state["triggered"] = True
+                    indicator_state["trigger_reason"] = indicator_reason
+                    indicator_trigger_count += 1
+
             # Evaluate settlement is needed
             next_online_len = pending_online_tokens.shape[1] + proposed_online_tokens.shape[1]
             next_total_generated = step_tokens_generated + next_online_len
@@ -456,6 +654,13 @@ def main():
                 or proposed_last_token == eos_id
                 or next_total_generated >= args.num_max_token
             )
+            if (
+                rejection_indicator is not None
+                and indicator_triggered_now
+                and rejection_indicator["action"] == "force_settle"
+            ):
+                should_settle = True
+                indicator_forced_settle_count += 1
 
             # In normal/high mode we materialize immediately.
             # In skip mode we materialize only at settlement boundary.
@@ -542,6 +747,12 @@ def main():
                     f"rejected={final_rejected} unsettled={unsettled_total} budget=1.0 "
                     f"text={to_text(tokenizer, final_outputs)}"
                 )
+                if rejection_indicator is not None and indicator_state["triggered"]:
+                    print(
+                        "[Rejection Indicator] "
+                        f"name={rejection_indicator['name']} action={rejection_indicator['action']} "
+                        f"reason={indicator_state['trigger_reason']}"
+                    )
 
                 pending_online_tokens = empty_like_tokens(current_token)
                 chunk_start_token = current_token.clone()
@@ -550,6 +761,7 @@ def main():
                 chunk_start_early_snapshot = engine.snapshot_state("early_verify")
                 chunk_start_early_high_snapshot = engine.snapshot_state("early_verify_high")
                 chunk_start_final_snapshot = engine.snapshot_state("final_verify")
+                indicator_state = indicator_state_template()
 
             if int(current_token[0, 0]) == eos_id:
                 break
@@ -560,6 +772,8 @@ def main():
         total_skip_switches += dynamic_skip_count
         total_high_switches += dynamic_high_count
         total_tokens_generated += step_tokens_generated
+        total_indicator_triggers += indicator_trigger_count
+        total_indicator_forced_settles += indicator_forced_settle_count
 
         print(f"=== Step {step} Statistics ===")
         print(f"Dynamic budget enabled: {args.enable_dynamic_budget}")
@@ -571,6 +785,9 @@ def main():
         print(f"Early Verify calls: {step_early_verify_calls}")
         print(f"Final Verify calls: {step_final_verify_calls}")
         print(f"Final Verify pre-run calls: {final_prerun_calls}")
+        if rejection_indicator is not None:
+            print(f"Rejection indicator triggers: {indicator_trigger_count}")
+            print(f"Rejection indicator forced settles: {indicator_forced_settle_count}")
         print(f"Tokens generated: {step_tokens_generated}")
         print(f"Drafted tokens: {drafted_tokens_count}")
         print(f"Early verified accepted: {early_verified_accepted_count}")
@@ -589,6 +806,9 @@ def main():
         print(f"Total final verify calls: {total_final_verify_calls}")
         print(f"Total skip switches: {total_skip_switches}")
         print(f"Total high switches: {total_high_switches}")
+        if rejection_indicator is not None:
+            print(f"Total rejection indicator triggers: {total_indicator_triggers}")
+            print(f"Total rejection indicator forced settles: {total_indicator_forced_settles}")
         print(f"Total tokens generated: {total_tokens_generated}")
 
         append_csv(
@@ -613,6 +833,19 @@ def main():
                 args.enable_dynamic_budget,
                 args.T_high,
                 args.T_low,
+                args.rejection_indicator,
+                args.rejection_indicator_action,
+                args.ri_margin_threshold,
+                args.ri_accepted_high_kl_threshold,
+                args.ri_accepted_mod_kl_threshold,
+                args.ri_accepted_high_count,
+                args.ri_accepted_drift_count,
+                args.ri_accepted_weighted_score_threshold,
+                args.ri_accepted_high_weight,
+                args.ri_bonus_margin_threshold,
+                args.ri_bonus_entropy_threshold,
+                args.ri_bonus_position_ge,
+                args.ri_bonus_count,
             ],
         )
 
@@ -640,6 +873,19 @@ def main():
             args.enable_dynamic_budget,
             args.T_high,
             args.T_low,
+            args.rejection_indicator,
+            args.rejection_indicator_action,
+            args.ri_margin_threshold,
+            args.ri_accepted_high_kl_threshold,
+            args.ri_accepted_mod_kl_threshold,
+            args.ri_accepted_high_count,
+            args.ri_accepted_drift_count,
+            args.ri_accepted_weighted_score_threshold,
+            args.ri_accepted_high_weight,
+            args.ri_bonus_margin_threshold,
+            args.ri_bonus_entropy_threshold,
+            args.ri_bonus_position_ge,
+            args.ri_bonus_count,
         ],
     )
 
@@ -649,6 +895,9 @@ def main():
     print(f"Total final verify calls: {total_final_verify_calls}")
     print(f"Total skip switches: {total_skip_switches}")
     print(f"Total high switches: {total_high_switches}")
+    if rejection_indicator is not None:
+        print(f"Total rejection indicator triggers: {total_indicator_triggers}")
+        print(f"Total rejection indicator forced settles: {total_indicator_forced_settles}")
     print(f"Total tokens generated: {total_tokens_generated}")
 
 

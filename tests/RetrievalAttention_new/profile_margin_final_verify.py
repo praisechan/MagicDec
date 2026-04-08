@@ -195,6 +195,10 @@ def main():
         )
         attention_masks = engine.attention_masks
 
+        # # For Qwen2.5-32B
+        # if input_ids.shape[1] > 22000:
+        #     continue
+
         # We reuse setup_caches for draft cache lifecycle consistency. Early-verify caches are not used.
         engine.setup_caches(
             input_ids=input_ids,
