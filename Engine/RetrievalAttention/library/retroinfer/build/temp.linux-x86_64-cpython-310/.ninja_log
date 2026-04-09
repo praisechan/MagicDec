@@ -1,10 +1,4 @@
-# ninja log v5
-0	17852	1747618626603721660	/home/juchanlee/MagicDec/Engine/RetrievalAttention/library/retroinfer/build/temp.linux-x86_64-cpython-310/retroinfer_kernels/src/wave_buffer_cpu.o	c008075847ebc846
-3	43608	1747618670531762502	/home/juchanlee/MagicDec/Engine/RetrievalAttention/library/retroinfer/build/temp.linux-x86_64-cpython-310/retroinfer_kernels/src/gather_copy.o	a84a462665862bf9
-4	52754	1747618723587807473	/home/juchanlee/MagicDec/Engine/RetrievalAttention/library/retroinfer/build/temp.linux-x86_64-cpython-310/retroinfer_kernels/src/batch_gemm_softmax.o	308d58c90a1cd5d8
-4	19155	1747993173586945783	/home/juchanlee/MagicDec/Engine/RetrievalAttention/library/retroinfer/build/temp.linux-x86_64-cpython-310/retroinfer_kernels/src/wave_buffer_cpu.o	23f287b9163bc876
-6	53905	1747993227867761775	/home/juchanlee/MagicDec/Engine/RetrievalAttention/library/retroinfer/build/temp.linux-x86_64-cpython-310/retroinfer_kernels/src/gather_copy.o	e95c0df560368f92
-6	65817	1747993294024750348	/home/juchanlee/MagicDec/Engine/RetrievalAttention/library/retroinfer/build/temp.linux-x86_64-cpython-310/retroinfer_kernels/src/batch_gemm_softmax.o	9b30137565dd431d
-9	17958	1769773701399681517	/home/juchanlee/MagicDec/Engine/RetrievalAttention/library/retroinfer/build/temp.linux-x86_64-cpython-310/retroinfer_kernels/src/wave_buffer_cpu.o	23f287b9163bc876
-9	43173	1769773744911757719	/home/juchanlee/MagicDec/Engine/RetrievalAttention/library/retroinfer/build/temp.linux-x86_64-cpython-310/retroinfer_kernels/src/gather_copy.o	b9d653c09a74c5af
-9	53094	1769773798299855610	/home/juchanlee/MagicDec/Engine/RetrievalAttention/library/retroinfer/build/temp.linux-x86_64-cpython-310/retroinfer_kernels/src/batch_gemm_softmax.o	2881afa8f12323b8
+# ninja log v7
+0	20213	1775708716213517564	/home/juchanlee/MagicDec/Engine/RetrievalAttention/library/retroinfer/build/temp.linux-x86_64-cpython-310/retroinfer_kernels/src/wave_buffer_cpu.o	c6e6c818ee3da92c
+3	62392	1775708737205308532	/home/juchanlee/MagicDec/Engine/RetrievalAttention/library/retroinfer/build/temp.linux-x86_64-cpython-310/retroinfer_kernels/src/gather_copy.o	c01509f1a74b290c
+3	70287	1775708799904686750	/home/juchanlee/MagicDec/Engine/RetrievalAttention/library/retroinfer/build/temp.linux-x86_64-cpython-310/retroinfer_kernels/src/batch_gemm_softmax.o	915ea55121c1cf0b

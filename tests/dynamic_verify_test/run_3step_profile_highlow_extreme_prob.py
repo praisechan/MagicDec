@@ -150,8 +150,9 @@ current_attn_type = args.attn_type
 # CSV logging setup
 # log_dir = "logs"
 # profile_dir = f"/home/juchanlee/MagicDec/profile/data_{args.budget1}/{MODEL}_{args.dataset}_{args.prefix_len}"
-profile_dir = f"/home/juchanlee/MagicDec/profile/pure_logit/{MODEL}_{args.dataset}_{args.task}_{args.prefix_len}"
+# profile_dir = f"/home/juchanlee/MagicDec/profile/pure_logit/{MODEL}_{args.dataset}_{args.task}_{args.prefix_len}"
 # profile_dir = f"/home/juchanlee/MagicDec/profile/temp/{MODEL}_{args.dataset}_{args.prefix_len}"
+profile_dir = f"/home/juchanlee/MagicDec/profile/ssdsimulator/{MODEL}_{args.dataset}_{args.task}_{args.prefix_len}"
 log_dir = profile_dir
 
 os.makedirs(log_dir, exist_ok=True)
@@ -342,7 +343,7 @@ for step, batch in tqdm(enumerate(dataset), total=num_eval_steps):
             print(f"total unsettled tokens: {num_unsettled_tokens}")
 
         else:
-            verify_outputs, verify_logits, verify_top1_top2_diff = engine.verify(tokens_buffer[:, :1], args.gamma1+1, use_first_kv=True, profile_clustering=False, profile_hot_cluster_selection_ratio=False, generate_name=f"{profile_dir}/verify_{step}_{step_verify_calls}")
+            verify_outputs, verify_logits, verify_top1_top2_diff = engine.verify(tokens_buffer[:, :1], args.gamma1+1, use_first_kv=True, profile_clustering=True, profile_hot_cluster_selection_ratio=False, generate_name=f"{profile_dir}/verify_{step}_{step_verify_calls}")
             target_tokens = torch.LongTensor(verify_outputs).to(DEVICE) #TODO: verify stage should be batch-fashion, but this verify() is auto-regressive.
 
             # Record verify outputs
