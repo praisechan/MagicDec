@@ -24,12 +24,6 @@ from MagicDec.Engine.utils import setup_seed
 def parse_args():
     parser = argparse.ArgumentParser(description="RetrievalAttention_new 3-stage self-spec benchmark")
     parser.add_argument("--model_name", type=str, default="Meta-Llama-3.1-8B")
-    parser.add_argument(
-        "--model_device",
-        type=str,
-        default="cuda:0",
-        help="Model execution device. Use cuda:0 for stable single-device execution or auto for model-parallel.",
-    )
     parser.add_argument("--dataset", type=str, default="pg19", choices=["pg19", "longbenchv1"])
     parser.add_argument("--task", type=str, default="gov_report")
     parser.add_argument("--attn_type", type=str, default="RetroInfer")
@@ -297,12 +291,7 @@ def main():
     model2path, model2maxlen, dataset2prompt = load_longbench_config()
 
     runtime_device = "cuda" if torch.cuda.is_available() else "cpu"
-    if not torch.cuda.is_available():
-        model_device = "cpu"
-    elif args.model_device == "auto":
-        model_device = "auto" if torch.cuda.device_count() > 1 else "cuda:0"
-    else:
-        model_device = args.model_device
+    model_device = "auto" if torch.cuda.device_count() > 1 else ("cuda:0" if torch.cuda.is_available() else "cpu")
     model_path = model2path[args.model_name]
     max_length = model2maxlen[args.model_name]
     if args.dataset == "pg19":
@@ -311,11 +300,6 @@ def main():
         prompt_format = dataset2prompt[args.task]
 
     print(f"Using runtime_device={runtime_device}, model_device={model_device}")
-    if torch.cuda.is_available() and torch.cuda.device_count() > 1 and model_device != "auto":
-        print(
-            "Multiple visible GPUs detected; running model on a single device "
-            f"({model_device}) for deterministic behavior."
-        )
     if rejection_indicator is not None:
         print(
             "Rejection indicator enabled: "
