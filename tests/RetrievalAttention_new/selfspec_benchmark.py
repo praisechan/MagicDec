@@ -48,33 +48,14 @@ def parse_args():
         default="disabled",
         choices=[
             "disabled",
-            "phase4_precision",
-            "phase4_recall",
-            "accepted_only_drift_count",
-            "accepted_only_high_count",
-            "accepted_only_weighted",
-            "custom",
+            "margin_kl_threshold",
+            "margin_only",
         ],
         help="Optional pre-final rejection indicator policy. Defaults to disabled for backward compatibility.",
     )
-    parser.add_argument(
-        "--rejection_indicator_action",
-        type=str,
-        default="force_settle",
-        choices=["force_settle", "log_only"],
-        help="What to do when the rejection indicator triggers.",
-    )
     parser.add_argument("--ri_margin_threshold", type=float, default=0.05)
-    parser.add_argument("--ri_accepted_high_kl_threshold", type=float, default=0.03)
     parser.add_argument("--ri_accepted_mod_kl_threshold", type=float, default=0.01)
-    parser.add_argument("--ri_accepted_high_count", type=int, default=2)
     parser.add_argument("--ri_accepted_drift_count", type=int, default=1)
-    parser.add_argument("--ri_accepted_weighted_score_threshold", type=int, default=3)
-    parser.add_argument("--ri_accepted_high_weight", type=int, default=2)
-    parser.add_argument("--ri_bonus_margin_threshold", type=float, default=0.05)
-    parser.add_argument("--ri_bonus_entropy_threshold", type=float, default=3.5)
-    parser.add_argument("--ri_bonus_position_ge", type=int, default=0)
-    parser.add_argument("--ri_bonus_count", type=int, default=2)
     return parser.parse_args()
 
 
@@ -118,18 +99,9 @@ def init_logs(log_dir):
         "T_high",
         "T_low",
         "rejection_indicator",
-        "rejection_indicator_action",
         "ri_margin_threshold",
-        "ri_accepted_high_kl_threshold",
         "ri_accepted_mod_kl_threshold",
-        "ri_accepted_high_count",
         "ri_accepted_drift_count",
-        "ri_accepted_weighted_score_threshold",
-        "ri_accepted_high_weight",
-        "ri_bonus_margin_threshold",
-        "ri_bonus_entropy_threshold",
-        "ri_bonus_position_ge",
-        "ri_bonus_count",
     ]
     acc_headers = [
         "step",
@@ -152,18 +124,9 @@ def init_logs(log_dir):
         "T_high",
         "T_low",
         "rejection_indicator",
-        "rejection_indicator_action",
         "ri_margin_threshold",
-        "ri_accepted_high_kl_threshold",
         "ri_accepted_mod_kl_threshold",
-        "ri_accepted_high_count",
         "ri_accepted_drift_count",
-        "ri_accepted_weighted_score_threshold",
-        "ri_accepted_high_weight",
-        "ri_bonus_margin_threshold",
-        "ri_bonus_entropy_threshold",
-        "ri_bonus_position_ge",
-        "ri_bonus_count",
     ]
 
     if not os.path.exists(step_path):
@@ -242,17 +205,9 @@ def build_rejection_indicator_config(args):
     if args.rejection_indicator == "disabled":
         return None
 
-    # Keep the parser surface backward-compatible, but use one clean rejection
-    # path internally: accepted-prefix early_margin + KL with a count threshold.
-    if args.rejection_indicator != "accepted_only_drift_count":
-        print(
-            "Rejection indicator note: "
-            f"{args.rejection_indicator} is mapped to accepted_only_drift_count."
-        )
-
     return {
-        "name": "accepted_only_drift_count",
-        "action": args.rejection_indicator_action,
+        "name": args.rejection_indicator,
+        "mode": args.rejection_indicator,
         "margin_threshold": args.ri_margin_threshold,
         "kl_threshold": args.ri_accepted_mod_kl_threshold,
         "accepted_drift_count": args.ri_accepted_drift_count,
@@ -262,7 +217,7 @@ def build_rejection_indicator_config(args):
 def validate_rejection_indicator_config(config):
     if config["margin_threshold"] <= 0.0:
         raise ValueError("ri_margin_threshold must be positive")
-    if config["kl_threshold"] < 0.0:
+    if config["mode"] == "margin_kl_threshold" and config["kl_threshold"] < 0.0:
         raise ValueError("ri_accepted_mod_kl_threshold must be non-negative")
     if config["accepted_drift_count"] < 1:
         raise ValueError("ri_accepted_drift_count must be >= 1")
@@ -279,6 +234,10 @@ def update_rejection_indicator_state(
     for pos in range(accepted_len):
         early_margin = float(early_features["margin"][0, pos].item())
         if early_margin >= config["margin_threshold"]:
+            continue
+
+        if config["mode"] == "margin_only":
+            state["accepted_drift_count"] += 1
             continue
 
         kl = kl_divergence_from_logits(early_logits[0, pos], draft_logits[0, pos])
@@ -344,7 +303,7 @@ def main():
     if rejection_indicator is not None:
         print(
             "Rejection indicator enabled: "
-            f"name={rejection_indicator['name']} action={rejection_indicator['action']}"
+            f"name={rejection_indicator['name']}"
         )
 
     engine = LMBackend(dtype=torch.bfloat16, device=runtime_device, dec_len=args.gamma1 + 1)
@@ -657,7 +616,6 @@ def main():
             if (
                 rejection_indicator is not None
                 and indicator_triggered_now
-                and rejection_indicator["action"] == "force_settle"
             ):
                 should_settle = True
                 indicator_forced_settle_count += 1
@@ -750,7 +708,7 @@ def main():
                 if rejection_indicator is not None and indicator_state["triggered"]:
                     print(
                         "[Rejection Indicator] "
-                        f"name={rejection_indicator['name']} action={rejection_indicator['action']} "
+                        f"name={rejection_indicator['name']} "
                         f"reason={indicator_state['trigger_reason']}"
                     )
 
@@ -834,18 +792,9 @@ def main():
                 args.T_high,
                 args.T_low,
                 args.rejection_indicator,
-                args.rejection_indicator_action,
                 args.ri_margin_threshold,
-                args.ri_accepted_high_kl_threshold,
                 args.ri_accepted_mod_kl_threshold,
-                args.ri_accepted_high_count,
                 args.ri_accepted_drift_count,
-                args.ri_accepted_weighted_score_threshold,
-                args.ri_accepted_high_weight,
-                args.ri_bonus_margin_threshold,
-                args.ri_bonus_entropy_threshold,
-                args.ri_bonus_position_ge,
-                args.ri_bonus_count,
             ],
         )
 
@@ -874,18 +823,9 @@ def main():
             args.T_high,
             args.T_low,
             args.rejection_indicator,
-            args.rejection_indicator_action,
             args.ri_margin_threshold,
-            args.ri_accepted_high_kl_threshold,
             args.ri_accepted_mod_kl_threshold,
-            args.ri_accepted_high_count,
             args.ri_accepted_drift_count,
-            args.ri_accepted_weighted_score_threshold,
-            args.ri_accepted_high_weight,
-            args.ri_bonus_margin_threshold,
-            args.ri_bonus_entropy_threshold,
-            args.ri_bonus_position_ge,
-            args.ri_bonus_count,
         ],
     )
 
