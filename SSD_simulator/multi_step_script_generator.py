@@ -7,7 +7,7 @@ import argparse
 # PROFILING_BASE_DIR = "/home/juchanlee/MagicDec/profile/data_kl_conf_lowhigh_optimized_cluster32_gamma28_for_SSDsim/"
 # PROFILING_BASE_DIR = "/home/juchanlee/MagicDec/profile/data_kl_no_optimized_cluster32_gamma32"
 # Default value - can be overridden by command line argument
-PROFILING_BASE_DIR = "/home/juchanlee/MagicDec/profile/data_confonly_lowhigh_cluster32_gamma32/"
+PROFILING_BASE_DIR = "/home/juchanlee/MagicDec/profile/ssdsimulator"
 
 ADDITIONAL_COMMENT = ""
 # ADDITIONAL_COMMENT = "_verify"
@@ -24,7 +24,7 @@ fixed_option_values = {
     "--num_heads": [8],
     "--cluster_size": [32],
     "--window_size": [64],
-    "--layer_num": [48],
+    "--layer_num": [32],
     "--profiling_dir": [
         PROFILING_BASE_DIR
     ],
@@ -33,10 +33,10 @@ fixed_option_values = {
 # Define variable options and their possible values
 option_values = {
     "--num_replica": [4],
-    "--prefix_len": ["24576"],
+    "--prefix_len": ["40000"],
     "--hot_cluster_ratio": [0.08],
-    "--planes_per_die": [512],
-    "--model_name": ["qwen2.5-14b"],
+    "--planes_per_die": [32],
+    "--model_name": ["Meta-Llama-3.1-8B"],
     "--dataset": ["pg19"],
 }
 
@@ -126,8 +126,8 @@ def build_command(var_keys, var_tuple, flags, generate_name, model_name, dataset
     
     # Set budget_ratio based on folder type
     if folder_type == "verify":
-        budget_ratio = str(verify_budget_ratio)
-        # budget_ratio = "0.10"
+        # budget_ratio = str(verify_budget_ratio)
+        budget_ratio = "0.20"
     else:  # speculate
         budget_ratio = "0.02"
         # budget_ratio = "0.10"
@@ -156,8 +156,8 @@ def parse_arguments():
                         help='Base directory for profiling data (default: /home/juchanlee/MagicDec/profile/data/)')
     parser.add_argument('--verify_budget_ratio',
                         type=float,
-                        default=0.25,
-                        help='Budget ratio for verify folder type (default: 0.25)')
+                        default=0.20,
+                        help='Budget ratio for verify folder type (default: 0.20)')
     return parser.parse_args()
 
 def main():
