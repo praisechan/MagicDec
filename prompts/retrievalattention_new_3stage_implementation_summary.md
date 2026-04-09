@@ -114,6 +114,7 @@ Per iteration:
    - normal/high mode appends proposed online span immediately
    - skip mode appends only when settlement condition is reached
    - safety early_verify does not force immediate final settlement; decoding continues until verified committed accumulation satisfies settlement boundary
+   - if the optional rejection indicator is enabled and fires on the current accepted-prefix rows, settlement is forced immediately
 7. If settlement boundary reached (gamma2/EOS/max-token):
    - run final_verify once over current pending span,
    - compare pending tokens to final outputs,
@@ -152,6 +153,31 @@ Safety routing note:
 Safety note:
 - no in-place Python-side nprobe mutation during runtime
 - budget switching is cache-based routing, not low-level mutable state mutation
+
+### 4.6 Optional pre-final rejection indicator
+`tests/RetrievalAttention_new/selfspec_benchmark.py` now has an optional benchmark-side rejection indicator that can force earlier final settlement before the normal `gamma2` boundary.
+
+CLI surface:
+- `--rejection_indicator {disabled,margin_kl_threshold,margin_only}`
+- `--ri_margin_threshold`
+- `--ri_accepted_mod_kl_threshold`
+- `--ri_accepted_drift_count`
+
+How it is evaluated:
+- the indicator is only evaluated on accepted-prefix rows from the early-verify stage
+- it never uses final-verify outputs as an input signal
+- state is accumulated over the current unsettled block and reset after each final settlement
+
+Modes:
+- `disabled`: no indicator logic
+- `margin_kl_threshold`: count accepted-prefix rows where `early_margin < ri_margin_threshold` and `KL(early_verify || draft) >= ri_accepted_mod_kl_threshold`
+- `margin_only`: count accepted-prefix rows where `early_margin < ri_margin_threshold`
+
+Trigger rule:
+- force settlement when the counted accepted-prefix rows reach `ri_accepted_drift_count`
+
+Implementation note:
+- there is no separate action flag anymore; if the indicator is enabled and triggers, the runtime always takes the same action: immediate final settlement on the current pending span
 
 ---
 
@@ -233,6 +259,7 @@ Major behavior:
 - dataset/model config loading for RetrievalAttention_new
 - per-step online Draft -> Early Verify -> Final Verify settlement
 - dynamic routing with skip/high/normal stage-2 decisions
+- optional accepted-prefix rejection-indicator forcing early settlement
 - helper-based refactor for repeated verify/commit/replay/skip-reset flows
 - canonical replay-source policy after verification to keep draft/normal/high verifier caches consistent when high mode is selected
 - CSV accumulation logging (stage output JSON logging removed)
@@ -278,12 +305,19 @@ In tests/RetrievalAttention_new/selfspec_benchmark.py:
 - speculative/verify/final call counts accumulated
 - generated token counts accumulated
 - step and accumulated CSV rows written
+- rejection-indicator configuration is logged in CSV when present
 
 Practical meaning of call counters:
 - speculate_calls counts effective draft decode span per decision point
    - for consecutive skip re-drafts from the same anchor, counting is replacement-style (latest gamma1 * n), not cumulative sum across rewinds
 - early_verify_calls counts actual early verify invocations (skip does not increment)
 - final_verify_calls counts chunk-level settlement events
+
+Current rejection-indicator CSV fields:
+- `rejection_indicator`
+- `ri_margin_threshold`
+- `ri_accepted_mod_kl_threshold`
+- `ri_accepted_drift_count`
 
 ---
 
@@ -306,7 +340,11 @@ Practical meaning of call counters:
 - Keep budget switching as explicit cache routing, not ad-hoc mutable low-level cache parameter mutation.
 - Keep post-verify replay on a canonical source path so high-mode routing does not introduce separate replay semantics.
 
-6. Multi-GPU ordering
+6. Rejection-indicator scope
+- Keep rejection-indicator features limited to pre-final signals available before authoritative settlement.
+- Keep indicator state chunk-local so it resets after each final settlement.
+
+7. Multi-GPU ordering
 - Preserve CUDA synchronization boundaries around cache init/move/capture/teardown operations.
 
 ---
@@ -337,3 +375,10 @@ This order gives the fastest path from high-level orchestration to low-level cac
 3. Debugging caveat for reproduction
 - If runtime logs show Initial n_centroids: 0, RetroInfer retrieval-index behavior may not be active in that run configuration, and normal/high differences can appear minimal.
 - To evaluate budget2 vs budget2_high impact, use settings where retrieval indexing is active.
+
+4. Rejection-indicator implementation update
+- The benchmark now supports two implementation modes for pre-final forcing:
+  - `margin_kl_threshold`
+  - `margin_only`
+- The older action flag was removed from the implementation path; enabling the indicator now always means force settlement on trigger.
+- The documented CSV surface was reduced to the currently used indicator fields only.
