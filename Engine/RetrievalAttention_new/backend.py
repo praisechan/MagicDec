@@ -18,6 +18,7 @@ class CacheSnapshot:
     context: int
     static_pattern_total: Optional[int] = None
     valid_length_dict: Optional[Dict[str, torch.Tensor]] = None
+    valid_lengths_dict: Optional[Dict[str, torch.Tensor]] = None
 
 
 class LMBackend:
@@ -76,6 +77,38 @@ class LMBackend:
         device_count = torch.cuda.device_count()
         for didx in range(device_count):
             torch.cuda.synchronize(didx)
+
+    def _multi_gpu_barrier_if_needed(self):
+        if torch.cuda.is_available() and torch.cuda.device_count() > 1:
+            self._synchronize_cuda()
+
+    def _clone_valid_lengths(self, cache):
+        valid_length_dict = None
+        valid_lengths_dict = None
+
+        if hasattr(cache, "valid_length_dict"):
+            valid_length_dict = {
+                dev: tensor.clone() for dev, tensor in cache.valid_length_dict.items()
+            }
+        if hasattr(cache, "valid_lengths_dict"):
+            valid_lengths_dict = {
+                dev: tensor.clone() for dev, tensor in cache.valid_lengths_dict.items()
+            }
+
+        return valid_length_dict, valid_lengths_dict
+
+    def _restore_valid_lengths(self, cache, snapshot):
+        if snapshot.valid_length_dict is not None and hasattr(cache, "valid_length_dict"):
+            for dev, tensor in snapshot.valid_length_dict.items():
+                if dev in cache.valid_length_dict:
+                    cache.valid_length_dict[dev].copy_(tensor)
+            cache.valid_length = cache.valid_length_dict[cache.layer_mapping[str(0)]]
+
+        if snapshot.valid_lengths_dict is not None and hasattr(cache, "valid_lengths_dict"):
+            for dev, tensor in snapshot.valid_lengths_dict.items():
+                if dev in cache.valid_lengths_dict:
+                    cache.valid_lengths_dict[dev].copy_(tensor)
+            cache.valid_lengths = cache.valid_lengths_dict[cache.layer_mapping[str(0)]]
 
     def _normalize_runtime_device(self, device):
         if device in (None, "auto"):
@@ -261,6 +294,7 @@ class LMBackend:
         )
 
     def _activate_cache(self, cache_name):
+        self._multi_gpu_barrier_if_needed()
         meta = self.cache_meta[cache_name]
         self.model.attention_type = meta["attention_type"]
         self.model.kv_cache = self.caches[cache_name]
@@ -353,6 +387,12 @@ class LMBackend:
                     0,
                     src_centroids,
                 )
+                self._copy_tensor_list_growth(
+                    getattr(source, "cluster_size_cumsum", None),
+                    getattr(target, "cluster_size_cumsum", None),
+                    0,
+                    src_centroids,
+                )
             else:
                 # If index width diverges (e.g., update boundary), avoid stale skip behavior.
                 self._skip_next_early_commit = False
@@ -362,6 +402,12 @@ class LMBackend:
                 if dev in target.valid_length_dict:
                     target.valid_length_dict[dev].copy_(tensor)
             target.valid_length = target.valid_length_dict[target.layer_mapping[str(0)]]
+
+        if hasattr(source, "valid_lengths_dict") and hasattr(target, "valid_lengths_dict"):
+            for dev, tensor in source.valid_lengths_dict.items():
+                if dev in target.valid_lengths_dict:
+                    target.valid_lengths_dict[dev].copy_(tensor)
+            target.valid_lengths = target.valid_lengths_dict[target.layer_mapping[str(0)]]
 
         if new_context < old_target_context:
             raise RuntimeError("Committed replay sync produced a shorter target context")
@@ -381,6 +427,7 @@ class LMBackend:
         return_features=False,
         return_logits=False,
     ):
+        self._multi_gpu_barrier_if_needed()
         self._activate_cache(cache_name)
         cur = start_token
         outputs = []
@@ -415,6 +462,8 @@ class LMBackend:
                 cur = forced_inputs[:, step_idx:step_idx + 1]
             else:
                 cur = out
+
+        self._multi_gpu_barrier_if_needed()
 
         if outputs:
             outputs = torch.cat(outputs, dim=1)
@@ -538,30 +587,29 @@ class LMBackend:
         )
 
     def snapshot_state(self, cache_name):
+        self._multi_gpu_barrier_if_needed()
         cache = self.caches[cache_name]
         snapshot = CacheSnapshot(context=int(cache.context))
 
         if hasattr(cache, "static_pattern_total"):
             snapshot.static_pattern_total = int(cache.static_pattern_total)
 
-        if hasattr(cache, "valid_length_dict"):
-            snapshot.valid_length_dict = {
-                dev: tensor.clone() for dev, tensor in cache.valid_length_dict.items()
-            }
+        (
+            snapshot.valid_length_dict,
+            snapshot.valid_lengths_dict,
+        ) = self._clone_valid_lengths(cache)
 
         return snapshot
 
     def revert_to(self, cache_name, snapshot):
+        self._multi_gpu_barrier_if_needed()
         cache = self.caches[cache_name]
         cache.context = int(snapshot.context)
 
         if snapshot.static_pattern_total is not None and hasattr(cache, "static_pattern_total"):
             cache.static_pattern_total = int(snapshot.static_pattern_total)
 
-        if snapshot.valid_length_dict is not None and hasattr(cache, "valid_length_dict"):
-            for dev, tensor in snapshot.valid_length_dict.items():
-                cache.valid_length_dict[dev].copy_(tensor)
-            cache.valid_length = cache.valid_length_dict[cache.layer_mapping[str(0)]]
+        self._restore_valid_lengths(cache, snapshot)
 
     def truncate_to(self, cache_name, target_context):
         cache = self.caches[cache_name]
@@ -581,6 +629,12 @@ class LMBackend:
                 cache.valid_length_dict[dev].clamp_(min=0)
             cache.valid_length = cache.valid_length_dict[cache.layer_mapping[str(0)]]
 
+        if hasattr(cache, "valid_lengths_dict"):
+            for dev in cache.valid_lengths_dict:
+                cache.valid_lengths_dict[dev].sub_(delta)
+                cache.valid_lengths_dict[dev].clamp_(min=0)
+            cache.valid_lengths = cache.valid_lengths_dict[cache.layer_mapping[str(0)]]
+
     def commit_prefix(
         self,
         cache_name,
@@ -591,6 +645,7 @@ class LMBackend:
         prefer_draft_replay=False,
         source_replayed=False,
     ):
+        self._multi_gpu_barrier_if_needed()
         if cache_name == "early_verify" and self._skip_next_early_commit:
             self._skip_next_early_commit = False
             return
@@ -610,9 +665,11 @@ class LMBackend:
                 if not source_replayed:
                     self._replay_tokens(sync_source, replay)
                 self._sync_committed_growth(sync_source, cache_name, old_target_context)
+                self._multi_gpu_barrier_if_needed()
                 return
 
             self._replay_tokens(cache_name, replay)
+            self._multi_gpu_barrier_if_needed()
             return
 
         # For draft commit replay, use early_verify budget path then synchronize growth to draft.
@@ -630,9 +687,11 @@ class LMBackend:
             self._sync_committed_growth(source_name, "draft", old_draft_context)
             # Legacy flow calls commit_prefix("early_verify", ...) immediately after draft commit.
             self._skip_next_early_commit = replay_source is None and source_name == "early_verify"
+            self._multi_gpu_barrier_if_needed()
             return
 
         self._replay_tokens(cache_name, replay)
+        self._multi_gpu_barrier_if_needed()
 
     def cache_state_report(self, cache_name):
         cache = self.caches[cache_name]
@@ -645,6 +704,10 @@ class LMBackend:
         if hasattr(cache, "valid_length_dict"):
             report["valid_lengths"] = {
                 dev: tensor.detach().cpu().tolist() for dev, tensor in cache.valid_length_dict.items()
+            }
+        if hasattr(cache, "valid_lengths_dict"):
+            report["valid_lengths"] = {
+                dev: tensor.detach().cpu().tolist() for dev, tensor in cache.valid_lengths_dict.items()
             }
         return report
 
