@@ -250,6 +250,8 @@ def main():
         cycle_count = 0
         batch = dataset[step]
         input_ids = engine.preprocess_input(batch, prompt_format, args.dataset, args.prefix_len)
+        if input_ids.shape[1] > 40000:
+            continue
         attention_masks = engine.attention_masks
         init_stage_caches(engine, input_ids, attention_masks, args)
 
