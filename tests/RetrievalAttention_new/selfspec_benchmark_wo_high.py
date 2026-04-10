@@ -345,6 +345,10 @@ def main():
             args.dataset,
             args.prefix_len,
         )
+        
+        if "qwen" in args.model_name:
+            if args.task=="narrativeqa" and input_ids.shape[1] > 40000:
+                continue
 
         attention_masks = engine.attention_masks
 

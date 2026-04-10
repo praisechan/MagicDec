@@ -14,7 +14,7 @@ WORKSPACE_ROOT = os.path.abspath(os.path.join(PROJECT_ROOT, ".."))
 if WORKSPACE_ROOT not in sys.path:
     sys.path.insert(0, WORKSPACE_ROOT)
 
-from MagicDec.Engine.RetrievalAttention_new.backend import LMBackend
+from MagicDec.Engine.RetrievalAttention_new.backend_wo_high import LMBackend
 from MagicDec.Engine.utils import setup_seed
 from selfspec_benchmark import (
     append_csv,
@@ -103,8 +103,12 @@ def main():
             batch,
             prompt_format,
             args.dataset,
-            args.prefix_len,
+            args.prefix_len,""
         )
+
+        if "qwen" in args.model_name:
+            if args.task=="narrativeqa" and input_ids.shape[1] > 40000:
+                continue
 
         attention_masks = engine.attention_masks
 
