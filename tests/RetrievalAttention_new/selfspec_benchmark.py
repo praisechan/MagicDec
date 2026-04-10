@@ -326,7 +326,6 @@ def main():
 
     total_speculate_calls = 0
     total_early_verify_calls = 0
-    total_force_verify_calls = 0
     total_final_verify_calls = 0
     total_skip_switches = 0
     total_high_switches = 0
@@ -352,7 +351,6 @@ def main():
 
         step_speculate_calls = 0
         step_early_verify_calls = 0
-        step_force_verify_calls = 0
         step_final_verify_calls = 0
         step_tokens_generated = 0
 
@@ -498,7 +496,6 @@ def main():
                 )
 
                 if should_force_skip_safety_verify:
-                    step_force_verify_calls += 1
                     verify_start_token = skip_anchor_token
                     verify_tokens = skip_stacked_draft_tokens
                     early_snapshot = engine.snapshot_state("early_verify")
@@ -732,7 +729,6 @@ def main():
 
         total_speculate_calls += step_speculate_calls
         total_early_verify_calls += step_early_verify_calls
-        total_force_verify_calls += step_force_verify_calls
         total_final_verify_calls += step_final_verify_calls
         total_skip_switches += dynamic_skip_count
         total_high_switches += dynamic_high_count
@@ -748,7 +744,7 @@ def main():
             print(f"Minimum confidence observed: {min_conf_stat:.6f}")
         print(f"Speculate calls: {step_speculate_calls}")
         print(f"Early Verify calls: {step_early_verify_calls}")
-        print(f"Force Verify calls: {step_force_verify_calls}")
+        print(f"Force Verify calls: {indicator_forced_settle_count}")
         print(f"Final Verify calls: {step_final_verify_calls}")
         if rejection_indicator is not None:
             print(f"Rejection indicator triggers: {indicator_trigger_count}")
@@ -768,7 +764,7 @@ def main():
         print(f"=== Accumulated Statistics (up to step {step}) ===")
         print(f"Total speculate calls: {total_speculate_calls}")
         print(f"Total early verify calls: {total_early_verify_calls}")
-        print(f"Total force verify calls: {total_force_verify_calls}")
+        print(f"Total force verify calls: {total_indicator_forced_settles}")
         print(f"Total final verify calls: {total_final_verify_calls}")
         print(f"Total skip switches: {total_skip_switches}")
         print(f"Total high switches: {total_high_switches}")
@@ -793,7 +789,7 @@ def main():
                 dynamic_skip_count,
                 dynamic_high_count,
                 step_tokens_generated,
-                step_force_verify_calls,
+                indicator_forced_settle_count,
                 args.model_name,
                 args.task,
                 args.budget2_high,
@@ -825,7 +821,7 @@ def main():
             total_skip_switches,
             total_high_switches,
             total_tokens_generated,
-            total_force_verify_calls,
+            total_indicator_forced_settles,
             args.model_name,
             args.task,
             args.budget2_high,
@@ -842,7 +838,7 @@ def main():
     print("=== Final Accumulated Statistics ===")
     print(f"Total speculate calls: {total_speculate_calls}")
     print(f"Total early verify calls: {total_early_verify_calls}")
-    print(f"Total force verify calls: {total_force_verify_calls}")
+    print(f"Total force verify calls: {total_indicator_forced_settles}")
     print(f"Total final verify calls: {total_final_verify_calls}")
     print(f"Total skip switches: {total_skip_switches}")
     print(f"Total high switches: {total_high_switches}")
