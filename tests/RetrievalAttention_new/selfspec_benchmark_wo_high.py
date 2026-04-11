@@ -225,8 +225,8 @@ def build_rejection_indicator_config(args):
 
 
 def validate_rejection_indicator_config(config):
-    if config["margin_threshold"] <= 0.0:
-        raise ValueError("ri_margin_threshold must be positive")
+    if config["margin_threshold"] < 0.0:
+        raise ValueError("ri_margin_threshold must not be negative")
     if config["mode"] == "margin_kl_threshold" and config["kl_threshold"] < 0.0:
         raise ValueError("ri_accepted_mod_kl_threshold must be non-negative")
     if config["accepted_drift_count"] < 1:
