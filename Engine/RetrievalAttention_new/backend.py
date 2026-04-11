@@ -150,7 +150,7 @@ class LMBackend:
             gpu_only = False # Monkey patch to avoid crash due to BUILD_SEGMENT threshold error related to static pattern total..
         elif "qwen" in self.model_path:
             gpu_only = False # Monkey patch to avoid OOM on Qwen2.5.
-        elif seq_len > 50000:
+        elif seq_len > 30000:
             gpu_only = False # Monkey patch to avoid OOM on very long sequences, which may be related to a large static pattern total.
         else:
             gpu_only = True
