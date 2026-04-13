@@ -103,7 +103,7 @@ def main():
             batch,
             prompt_format,
             args.dataset,
-            args.prefix_len,""
+            args.prefix_len,
         )
 
         if "qwen" in args.model_name:
