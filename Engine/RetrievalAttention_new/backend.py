@@ -532,6 +532,13 @@ class LMBackend:
             forced_inputs=proposed_tokens,
         )
 
+    def final_generate(self, current_token, steps):
+        return self._decode_steps(
+            cache_name="final_verify",
+            start_token=current_token,
+            steps=steps,
+        )
+
     def final_verify_with_features(self, current_token, proposed_tokens):
         return self._decode_steps(
             cache_name="final_verify",
