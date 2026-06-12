@@ -1,0 +1,509 @@
+{
+  "version": "1.0.0",
+  "lastScanned": 1781260281832,
+  "projectRoot": "/home/juchanlee/MagicDec",
+  "techStack": {
+    "languages": [
+      {
+        "name": "Python",
+        "version": null,
+        "confidence": "high",
+        "markers": [
+          "requirements.txt"
+        ]
+      }
+    ],
+    "frameworks": [],
+    "packageManager": "pip",
+    "runtime": null
+  },
+  "build": {
+    "buildCommand": null,
+    "testCommand": null,
+    "lintCommand": null,
+    "devCommand": null,
+    "scripts": {}
+  },
+  "conventions": {
+    "namingStyle": null,
+    "importStyle": null,
+    "testPattern": null,
+    "fileOrganization": null
+  },
+  "structure": {
+    "isMonorepo": false,
+    "workspaces": [],
+    "mainDirectories": [
+      "pages",
+      "static",
+      "tests"
+    ],
+    "gitBranches": {
+      "defaultBranch": "main",
+      "branchingStrategy": null
+    }
+  },
+  "customNotes": [],
+  "directoryMap": {
+    "Data": {
+      "path": "Data",
+      "purpose": "Data files",
+      "fileCount": 5,
+      "lastAccessed": 1781260281825,
+      "keyFiles": [
+        "__init__.py",
+        "c4_small.json",
+        "data_converter.py",
+        "preprocess_longbench.py",
+        "prompt.py"
+      ]
+    },
+    "Engine": {
+      "path": "Engine",
+      "purpose": null,
+      "fileCount": 4,
+      "lastAccessed": 1781260281826,
+      "keyFiles": [
+        "__init__.py",
+        "quantize.py",
+        "tp.py",
+        "utils.py"
+      ]
+    },
+    "Quest": {
+      "path": "Quest",
+      "purpose": null,
+      "fileCount": 0,
+      "lastAccessed": 1781260281828,
+      "keyFiles": []
+    },
+    "SSD_simulator": {
+      "path": "SSD_simulator",
+      "purpose": null,
+      "fileCount": 9,
+      "lastAccessed": 1781260281828,
+      "keyFiles": [
+        "CONSTRAINED_OVERLAP_README.md",
+        "SSD_internal.py",
+        "figure_generator.py",
+        "multi_step_script_generator.py",
+        "simulator.py"
+      ]
+    },
+    "data": {
+      "path": "data",
+      "purpose": "Data files",
+      "fileCount": 33,
+      "lastAccessed": 1781260281829,
+      "keyFiles": [
+        "2wikimqa.jsonl",
+        "2wikimqa_e.jsonl",
+        "dureader.jsonl",
+        "gov_report.jsonl",
+        "gov_report_e.jsonl"
+      ]
+    },
+    "figure": {
+      "path": "figure",
+      "purpose": null,
+      "fileCount": 2,
+      "lastAccessed": 1781260281829,
+      "keyFiles": [
+        "test.csv"
+      ]
+    },
+    "logs": {
+      "path": "logs",
+      "purpose": null,
+      "fileCount": 1,
+      "lastAccessed": 1781260281829,
+      "keyFiles": [
+        "plot_dynamic_verify.py"
+      ]
+    },
+    "logs_called_verify_constraint": {
+      "path": "logs_called_verify_constraint",
+      "purpose": null,
+      "fileCount": 1,
+      "lastAccessed": 1781260281829,
+      "keyFiles": [
+        "plot_dynamic_verify.py"
+      ]
+    },
+    "pages": {
+      "path": "pages",
+      "purpose": "Page components",
+      "fileCount": 1,
+      "lastAccessed": 1781260281830,
+      "keyFiles": [
+        "index.html"
+      ]
+    },
+    "profile": {
+      "path": "profile",
+      "purpose": null,
+      "fileCount": 0,
+      "lastAccessed": 1781260281830,
+      "keyFiles": []
+    },
+    "profile_atlas1": {
+      "path": "profile_atlas1",
+      "purpose": null,
+      "fileCount": 0,
+      "lastAccessed": 1781260281830,
+      "keyFiles": []
+    },
+    "prompts": {
+      "path": "prompts",
+      "purpose": null,
+      "fileCount": 4,
+      "lastAccessed": 1781260281830,
+      "keyFiles": [
+        "chat_history.md",
+        "gpt_codex_prompt_retrievalattention_3stage.md",
+        "rejection_indicator_research_prompt.md",
+        "retrievalattention_new_3stage_implementation_summary.md"
+      ]
+    },
+    "reports": {
+      "path": "reports",
+      "purpose": null,
+      "fileCount": 1,
+      "lastAccessed": 1781260281830,
+      "keyFiles": [
+        "qwen3_30b_a3b_support.md"
+      ]
+    },
+    "static": {
+      "path": "static",
+      "purpose": "Static files",
+      "fileCount": 1,
+      "lastAccessed": 1781260281831,
+      "keyFiles": [
+        "Triforce.ttf"
+      ]
+    },
+    "tests": {
+      "path": "tests",
+      "purpose": "Test files",
+      "fileCount": 2,
+      "lastAccessed": 1781260281831,
+      "keyFiles": [
+        "baseline_benchmark.py",
+        "selfspec_benchmark_common.py"
+      ]
+    },
+    "pages/static": {
+      "path": "pages/static",
+      "purpose": "Static files",
+      "fileCount": 1,
+      "lastAccessed": 1781260281832,
+      "keyFiles": [
+        "Triforce.ttf"
+      ]
+    }
+  },
+  "hotPaths": [
+    {
+      "path": "Engine/RetrievalAttention_new/cache_hub/retroinfer_cache.py",
+      "accessCount": 22,
+      "lastAccessed": 1781255281937,
+      "type": "file"
+    },
+    {
+      "path": "Engine/RetrievalAttention_new/library/retroinfer/retroinfer_kernels/src/wave_buffer_cpu.cpp",
+      "accessCount": 16,
+      "lastAccessed": 1781254837229,
+      "type": "file"
+    },
+    {
+      "path": "Engine/RetrievalAttention_new/backend_wo_high.py",
+      "accessCount": 12,
+      "lastAccessed": 1781254334029,
+      "type": "file"
+    },
+    {
+      "path": "tests/RetrievalAttention_new/selfspec_benchmark_wo_high.py",
+      "accessCount": 9,
+      "lastAccessed": 1781254517346,
+      "type": "file"
+    },
+    {
+      "path": "Engine/RetrievalAttention_new/config/Qwen3-30B-A3B.json",
+      "accessCount": 9,
+      "lastAccessed": 1781255258015,
+      "type": "file"
+    },
+    {
+      "path": "Engine/RetrievalAttention_new/model_hub/__init__.py",
+      "accessCount": 8,
+      "lastAccessed": 1781254351098,
+      "type": "file"
+    },
+    {
+      "path": "",
+      "accessCount": 7,
+      "lastAccessed": 1781167785726,
+      "type": "directory"
+    },
+    {
+      "path": "Engine/RetrievalAttention_new",
+      "accessCount": 5,
+      "lastAccessed": 1781254260406,
+      "type": "directory"
+    },
+    {
+      "path": "Engine/RetrievalAttention_new/model_hub/qwen3_moe.py",
+      "accessCount": 5,
+      "lastAccessed": 1781254316962,
+      "type": "file"
+    },
+    {
+      "path": "Engine/RetrievalAttention_new/model_hub/qwen.py",
+      "accessCount": 5,
+      "lastAccessed": 1781254317367,
+      "type": "file"
+    },
+    {
+      "path": "Engine/RetrievalAttention_new/model_hub/LLM.py",
+      "accessCount": 5,
+      "lastAccessed": 1781254317786,
+      "type": "file"
+    },
+    {
+      "path": "Engine/RetrievalAttention_new/config/config.py",
+      "accessCount": 4,
+      "lastAccessed": 1781255282436,
+      "type": "file"
+    },
+    {
+      "path": "Engine/RetrievalAttention_new/model_hub/llama.py",
+      "accessCount": 3,
+      "lastAccessed": 1781167875445,
+      "type": "file"
+    },
+    {
+      "path": "Engine/RetrievalAttention_new/benchmark/longbench/config/model2path.json",
+      "accessCount": 3,
+      "lastAccessed": 1781254512213,
+      "type": "file"
+    },
+    {
+      "path": "Engine/RetrievalAttention_new/benchmark/longbench/config/model2maxlen.json",
+      "accessCount": 3,
+      "lastAccessed": 1781254635216,
+      "type": "file"
+    },
+    {
+      "path": "Engine/RetrievalAttention/backend.py",
+      "accessCount": 2,
+      "lastAccessed": 1781167789437,
+      "type": "file"
+    },
+    {
+      "path": "Engine/RetrievalAttention/model_hub/qwen.py",
+      "accessCount": 2,
+      "lastAccessed": 1781167795827,
+      "type": "file"
+    },
+    {
+      "path": "Engine/RetrievalAttention/model_hub/LLM.py",
+      "accessCount": 2,
+      "lastAccessed": 1781167798574,
+      "type": "file"
+    },
+    {
+      "path": "Engine/RetrievalAttention_new/backend.py",
+      "accessCount": 2,
+      "lastAccessed": 1781167810018,
+      "type": "file"
+    },
+    {
+      "path": "Engine/SnapKV/model.py",
+      "accessCount": 2,
+      "lastAccessed": 1781167816885,
+      "type": "file"
+    },
+    {
+      "path": "tests/RetrievalAttention_new/scripts/0411/qmsum_kl_32b.sh",
+      "accessCount": 2,
+      "lastAccessed": 1781167874510,
+      "type": "file"
+    },
+    {
+      "path": "Engine/RetrievalAttention_new/model_hub",
+      "accessCount": 2,
+      "lastAccessed": 1781168053348,
+      "type": "directory"
+    },
+    {
+      "path": "Engine/RetrievalAttention_new/config/Qwen2.5-7B-Instruct.json",
+      "accessCount": 2,
+      "lastAccessed": 1781254280209,
+      "type": "file"
+    },
+    {
+      "path": "Engine/RetrievalAttention_new/cache_hub",
+      "accessCount": 2,
+      "lastAccessed": 1781254378689,
+      "type": "directory"
+    },
+    {
+      "path": "tests/RetrievalAttention_new",
+      "accessCount": 2,
+      "lastAccessed": 1781254511742,
+      "type": "directory"
+    },
+    {
+      "path": "Engine/RetrievalAttention_new/config/Qwen2.5-14B.json",
+      "accessCount": 2,
+      "lastAccessed": 1781254711466,
+      "type": "file"
+    },
+    {
+      "path": "Engine/RetrievalAttention_new/config/Qwen2.5-32B.json",
+      "accessCount": 2,
+      "lastAccessed": 1781254711662,
+      "type": "file"
+    },
+    {
+      "path": "test.py",
+      "accessCount": 1,
+      "lastAccessed": 1781167785821,
+      "type": "file"
+    },
+    {
+      "path": "convert_hf_checkpoint.py",
+      "accessCount": 1,
+      "lastAccessed": 1781167786047,
+      "type": "file"
+    },
+    {
+      "path": "Engine/utils.py",
+      "accessCount": 1,
+      "lastAccessed": 1781167786260,
+      "type": "file"
+    },
+    {
+      "path": "Engine/tp.py",
+      "accessCount": 1,
+      "lastAccessed": 1781167786359,
+      "type": "file"
+    },
+    {
+      "path": "Engine/RetrievalAttention/model_hub/LLM_orig.py",
+      "accessCount": 1,
+      "lastAccessed": 1781167789070,
+      "type": "file"
+    },
+    {
+      "path": "Engine/StreamingLLM/model.py",
+      "accessCount": 1,
+      "lastAccessed": 1781167789240,
+      "type": "file"
+    },
+    {
+      "path": "Engine/RetrievalAttention/model_hub",
+      "accessCount": 1,
+      "lastAccessed": 1781167789779,
+      "type": "directory"
+    },
+    {
+      "path": "Engine/RetrievalAttention/model_hub/llama.py",
+      "accessCount": 1,
+      "lastAccessed": 1781167795490,
+      "type": "file"
+    },
+    {
+      "path": "Engine/RetrievalAttention_new/cache_hub/flash_attn_cache.py",
+      "accessCount": 1,
+      "lastAccessed": 1781167801126,
+      "type": "file"
+    },
+    {
+      "path": "Engine/RetrievalAttention_new/cache_hub/retroinfer_cache_gpu.py",
+      "accessCount": 1,
+      "lastAccessed": 1781167801656,
+      "type": "file"
+    },
+    {
+      "path": "Engine/SnapKV/backend.py",
+      "accessCount": 1,
+      "lastAccessed": 1781167801868,
+      "type": "file"
+    },
+    {
+      "path": "README.md",
+      "accessCount": 1,
+      "lastAccessed": 1781167822908,
+      "type": "file"
+    },
+    {
+      "path": "Engine/RetrievalAttention/benchmark/config.py",
+      "accessCount": 1,
+      "lastAccessed": 1781167826007,
+      "type": "file"
+    },
+    {
+      "path": "Engine/RetrievalAttention_new/attn_hub/full_attn.py",
+      "accessCount": 1,
+      "lastAccessed": 1781168273871,
+      "type": "file"
+    },
+    {
+      "path": "tests/RetrievalAttention_new/scripts/0411/qmsum_kl_qwen3_30b_a3b.sh",
+      "accessCount": 1,
+      "lastAccessed": 1781168439618,
+      "type": "file"
+    },
+    {
+      "path": "reports/qwen3_30b_a3b_support.md",
+      "accessCount": 1,
+      "lastAccessed": 1781175283226,
+      "type": "file"
+    },
+    {
+      "path": "tests/RetrievalAttention_new/scripts/0611/3stage_dynamic_qwen3_30b_a3b.sh",
+      "accessCount": 1,
+      "lastAccessed": 1781227661608,
+      "type": "file"
+    },
+    {
+      "path": "Engine/RetrievalAttention_new/library",
+      "accessCount": 1,
+      "lastAccessed": 1781230375946,
+      "type": "directory"
+    },
+    {
+      "path": "Engine/RetrievalAttention_new/library/retroinfer/retroinfer_kernels/src",
+      "accessCount": 1,
+      "lastAccessed": 1781254350566,
+      "type": "directory"
+    },
+    {
+      "path": "Engine/RetrievalAttention_new/cache_hub/cache.py",
+      "accessCount": 1,
+      "lastAccessed": 1781254475234,
+      "type": "file"
+    },
+    {
+      "path": "Engine/RetrievalAttention_new/config",
+      "accessCount": 1,
+      "lastAccessed": 1781254497431,
+      "type": "directory"
+    },
+    {
+      "path": "Engine/RetrievalAttention_new/library/retroinfer/retroinfer_kernels/src/gather_copy.cu",
+      "accessCount": 1,
+      "lastAccessed": 1781254679834,
+      "type": "file"
+    },
+    {
+      "path": "Engine/RetrievalAttention_new/library/retroinfer/retroinfer_kernels/src/copy_kernel.cuh",
+      "accessCount": 1,
+      "lastAccessed": 1781254892088,
+      "type": "file"
+    }
+  ],
+  "userDirectives": []
+}

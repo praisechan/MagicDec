@@ -1,6 +1,7 @@
 
 from .llama import LlamaModel
 from .qwen import QwenModel
+from .qwen3_moe import Qwen3MoeModel
 from transformers import AutoTokenizer
 
 
@@ -10,7 +11,8 @@ def add_model_args(parser):
     parser.add_argument("--model_name", type=str, default="gradientai/Llama-3-8B-Instruct-Gradient-1048k",
                         choices=["gradientai/Llama-3-8B-Instruct-Gradient-1048k", "Qwen/Qwen2.5-7B-Instruct",
                                  "Qwen/Qwen2.5-72B-Instruct", "meta-llama/Llama-3.1-8B-Instruct",
-                                 "deepseek-ai/DeepSeek-R1-Distill-Llama-8B", "deepseek-ai/DeepSeek-R1-Distill-Qwen-7B"], 
+                                 "deepseek-ai/DeepSeek-R1-Distill-Llama-8B", "deepseek-ai/DeepSeek-R1-Distill-Qwen-7B",
+                                 "Qwen/Qwen3-30B-A3B"],
                         help="Huggingface model name")
     return parser
 
@@ -29,6 +31,13 @@ def load_model(model_name, max_len, dtype, device, tokenizer=None):
                          dtype=dtype,
                          device_map=device,
                          tokenizer=tokenizer)
+    elif 'Qwen3' in model_name and 'A3B' in model_name:
+        # Qwen3 MoE models (e.g. Qwen3-30B-A3B) — check before generic Qwen
+        llm = Qwen3MoeModel(model_name,
+                            max_length=max_len,
+                            dtype=dtype,
+                            device_map=device,
+                            tokenizer=tokenizer)
     elif 'Qwen' in model_name:
         llm = QwenModel(model_name,
                         max_length=max_len,
@@ -37,5 +46,5 @@ def load_model(model_name, max_len, dtype, device, tokenizer=None):
                         tokenizer=tokenizer)
     else:
         raise ValueError(f"Unsupported model: {model_name}")
-    
+
     return llm
